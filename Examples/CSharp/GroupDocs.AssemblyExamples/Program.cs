@@ -14,8 +14,8 @@ namespace GroupDocs.AssemblyExamples
         {
             //CommonUtilities.ProductLicense();
 
-            string folderName = "ExcelTemplates";
-            string fileName = "Common List.xlsx";
+            string folderName = "WordTemplates";
+            string fileName = "Common List.docx";
             string dataSourceName = "customers";
             string updatedFileName = CommonUtilities.ChangeFileName(fileName);
 
