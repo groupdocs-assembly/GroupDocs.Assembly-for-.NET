@@ -12,8 +12,8 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
     {
         //ExStart:CommonUtilities
 
-        public const string sourceFolderPath = "../../../../Data/SourceFolder/";
-        public const string destinationFolderPath = "../../../../Data/DestinationFolder/";
+        public const string sourceFolderPath = "../../../../Data/Source/";
+        public const string destinationFolderPath = "../../../../Data/Destination/";
         public const string licensePath = "../../GroupDocs.Assembly Product Family.lic";
 
         #region DocumentDirectories
@@ -29,9 +29,9 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         /// <param name="sourceFolder">Source file's folder name</param>
         /// <returns>Returns explicit path by combining source folder path, source folder name and file name.</returns>
 
-        public static string DocumentSourceFolderPath(string sourceFileName, string sourceFolder)
+        public static string GetSourceDocument(string sourceFileName)
         {
-            return Path.Combine(Path.GetFullPath(sourceFolderPath), sourceFolder, sourceFileName);
+            return Path.Combine(Path.GetFullPath(sourceFolderPath), sourceFileName);
         }
 
         /// <summary>
@@ -41,9 +41,9 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         /// <param name="destinationFolder">output file's folder name</param>
         /// <returns>Returns explicit path by combining destination folder path, destination folder name and output file name.</returns>
 
-        public static string DocumentOutputFolderPath(string outputFileName, string destinationFolder)
+        public static string SetDestinationDocument(string outputFileName)
         {
-            return Path.Combine(Path.GetFullPath(destinationFolderPath), destinationFolder, outputFileName);
+            return Path.Combine(Path.GetFullPath(destinationFolderPath), outputFileName);
         }
 
         //ExEnd:DocumentDirectories
@@ -56,31 +56,10 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         /// Set product's license
         /// </summary>
 
-        public static void ProductLicense()
+        public static void ApplyLicense()
         {
             License lic = new License();
             lic.SetLicense(licensePath);
-        }
-
-        #endregion
-
-        #region ChangeFileName
-
-        /// <summary>
-        /// Takes source file name as argument and append it with datetime and "CS".
-        /// </summary>
-        /// <param name="sourceFileName">Source file name</param>
-        /// <returns>Appended file name</returns>
-        
-        public static string ChangeFileName(string sourceFileName)
-        {
-            string currentDateTime = DateTime.Now.ToString("dd-MM-yyyy-hh-mm-ss");
-            string nameWithoutExtension = Path.GetFileNameWithoutExtension(sourceFileName);
-            string extension = Path.GetExtension(sourceFileName);
-            string alterFileName = nameWithoutExtension + "-" + currentDateTime + "-CS";
-            string updatedFileName = alterFileName + extension;
-
-            return updatedFileName;
         }
 
         #endregion

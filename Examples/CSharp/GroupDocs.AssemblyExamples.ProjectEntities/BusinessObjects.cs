@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace GroupDocs.AssemblyExamples.ProjectEntities
+namespace GroupDocs.AssemblyExamples.ProjectBusinessObjects
 {
-    public class Entities
+    public class BusinessObjects
     {
         public static string imagePath = "../../../../Data/Images/";
 
