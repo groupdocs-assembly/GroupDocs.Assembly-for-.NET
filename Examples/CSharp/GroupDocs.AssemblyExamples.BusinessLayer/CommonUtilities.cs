@@ -10,7 +10,6 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
 {
     public class CommonUtilities
     {
-        //ExStart:CommonUtilities
 
         public const string sourceFolderPath = "../../../../Data/Source/";
         public const string destinationFolderPath = "../../../../Data/Destination/";
@@ -18,16 +17,13 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
 
         #region DocumentDirectories
 
-       
-
         //ExStart:DocumentDirectories
 
         /// <summary>
-        /// Takes file name and source folder name as arguments. 
+        /// Takes source file name as argument. 
         /// </summary>
         /// <param name="sourceFileName">Source file name</param>
-        /// <param name="sourceFolder">Source file's folder name</param>
-        /// <returns>Returns explicit path by combining source folder path, source folder name and file name.</returns>
+        /// <returns>Returns explicit path by combining source folder path and source file name.</returns>
 
         public static string GetSourceDocument(string sourceFileName)
         {
@@ -35,11 +31,10 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         }
 
         /// <summary>
-        /// Takes file name and destination folder name as arguments. 
+        /// Takes output file name as argument. 
         /// </summary>
         /// <param name="outputFileName">output file name</param>
-        /// <param name="destinationFolder">output file's folder name</param>
-        /// <returns>Returns explicit path by combining destination folder path, destination folder name and output file name.</returns>
+        /// <returns>Returns explicit path by combining destination folder path and output file name.</returns>
 
         public static string SetDestinationDocument(string outputFileName)
         {
@@ -63,7 +58,5 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         }
 
         #endregion
-
-        //ExEnd:CommonUtilities
     }
 }

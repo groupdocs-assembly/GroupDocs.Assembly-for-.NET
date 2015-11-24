@@ -13,10 +13,10 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #region DataInitialization
 
         /// <summary>
-        /// This function initialize/populate the data. 
-        /// It initialize Customer information, product information and order information
+        /// This function initializes/populates the data. 
+        /// Initialize Customer information, product information and order information
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Returns customer's complete information</returns>
         public static IEnumerable<BusinessObjects.Customer> PopulateData()
         {
 
@@ -44,7 +44,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #region GetOrders
 
         /// <summary>
-        /// It fetches order details from PopulateData
+        /// Fetches order details from PopulateData
         /// </summary>
         /// <returns>Returns order details, one data at a time</returns>
 
@@ -62,7 +62,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #region GetProducts
 
         /// <summary>
-        /// It fetches product details from PopulateData
+        /// Fetches product details from PopulateData
         /// </summary>
         /// <returns>Returns product details, one data at a time</returns>
         public static IEnumerable<BusinessObjects.Product> GetProductsData()
@@ -79,7 +79,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #region GetSingleCustomer
 
         /// <summary>
-        /// It fetches customer details of very first customer
+        /// Fetches customer details of very first customer
         /// </summary>
         /// <returns>Returns first customer's infromation</returns>
 

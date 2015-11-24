@@ -55,7 +55,7 @@ namespace GroupDocs.AssemblyExamples
                     {
                         Console.WriteLine(ex.Message);
                     }
-                    //ExEnd:GenerateBubbleChartinSpreadSheetFormat
+                    //ExEnd:GenerateBubbleChartinSpreadsheetFormat
                     break;
 
                 case "presentation":

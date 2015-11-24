@@ -16,7 +16,7 @@ namespace GroupDocs.AssemblyExamples
              *  Applying product license
              *  Please uncomment the statement if you do have license.
              */
-            CommonUtilities.ApplyLicense();
+            //CommonUtilities.ApplyLicense();
 
             #region Generating Bubble Chart Report
             //Generate a bubble chart report in document processing format
