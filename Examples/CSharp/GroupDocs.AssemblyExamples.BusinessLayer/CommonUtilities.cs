@@ -18,18 +18,15 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #region DocumentDirectories
 
         //ExStart:DocumentDirectories
-
         /// <summary>
         /// Takes source file name as argument. 
         /// </summary>
         /// <param name="sourceFileName">Source file name</param>
         /// <returns>Returns explicit path by combining source folder path and source file name.</returns>
-
         public static string GetSourceDocument(string sourceFileName)
         {
             return Path.Combine(Path.GetFullPath(sourceFolderPath), sourceFileName);
         }
-
         /// <summary>
         /// Takes output file name as argument. 
         /// </summary>
@@ -44,19 +41,15 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         //ExEnd:DocumentDirectories
         #endregion
 
-
         #region ProductLicense
-
         /// <summary>
         /// Set product's license
         /// </summary>
-
         public static void ApplyLicense()
         {
             License lic = new License();
             lic.SetLicense(licensePath);
         }
-
         #endregion
     }
 }

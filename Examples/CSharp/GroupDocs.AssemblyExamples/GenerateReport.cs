@@ -18,7 +18,6 @@ namespace GroupDocs.AssemblyExamples
             {
                 case "document":
                     //ExStart:GenerateBubbleChartinDocumentProcessingFormat
-
                     //Setting up source document template
                     const String strDocumentTemplate = "Word Templates/Bubble Chart.docx";
                     //Setting up destination document report 
@@ -39,7 +38,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "spreadsheet":
                     //ExStart:GenerateBubbleChartinSpreadsheetFormat
-
                     //Setting up source spreadsheet template
                     const String strSpreadsheetTemplate = "Spreadsheet Templates/Bubble Chart.xlsx";
                     //Setting up destination document report 
@@ -60,7 +58,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "presentation":
                     //ExStart:GenerateBubbleChartinPresentationFormat
-
                     //Setting up source spreadsheet template
                     const String strPresentationTemplate = "Presentation Templates/Bubble Chart.pptx";
                     //Setting up destination document report 
@@ -88,7 +85,6 @@ namespace GroupDocs.AssemblyExamples
             {
                 case "document":
                     //ExStart:GenerateBulletedListinDocumentProcessingFormat
-
                     //Setting up source document template
                     const String strDocumentTemplate = "Word Templates/Bulleted List.docx";
                     //Setting up destination document report 
@@ -109,7 +105,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "spreadsheet":
                     //ExStart:GenerateBulletedListinSpreadsheetFormat
-
                     //Setting up source spreadsheet template
                     const String strSpreadsheetTemplate = "Spreadsheet Templates/Bulleted List.xlsx";
                     //Setting up destination document report 
@@ -158,7 +153,6 @@ namespace GroupDocs.AssemblyExamples
             {
                 case "document":
                     //ExStart:GenerateChartWithFilteringGroupingAndOrderinginDocumentProcessingFormat
-
                     //Setting up source document template
                     const String strDocumentTemplate = "Word Templates/Chart with Filtering, Grouping, and Ordering.docx";
                     //Setting up destination document report 
@@ -179,7 +173,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "spreadsheet":
                     //ExStart:GenerateChartWithFilteringGroupingAndOrderinginSpreadsheetFormat
-
                     //Setting up source spreadsheet template
                     const String strSpreadsheetTemplate = "Spreadsheet Templates/Chart with Filtering, Grouping, and Ordering.xlsx";
                     //Setting up destination document report 
@@ -200,7 +193,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "presentation":
                     //ExStart:GenerateChartWithFilteringGroupingAndOrderinginPresentationFormat
-
                     //Setting up source spreadsheet template
                     const String strPresentationTemplate = "Presentation Templates/Chart with Filtering, Grouping, and Ordering.pptx";
                     //Setting up destination document report 
@@ -220,15 +212,12 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-
-        
         public static void GenerateCommonList(string strDocumentFormat)
         {
             switch (strDocumentFormat)
             {
                 case "document":
                     //ExStart:GenerateCommonListinDocumentProcessingFormat
-
                     //Setting up source document template
                     const String strDocumentTemplate = "Word Templates/Common List.docx";
                     //Setting up destination document report 
@@ -249,7 +238,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "spreadsheet":
                     //ExStart:GenerateCommonListinSpreadsheetFormat
-
                     //Setting up source spreadsheet template
                     const String strSpreadsheetTemplate = "Spreadsheet Templates/Common List.xlsx";
                     //Setting up destination document report 
@@ -270,7 +258,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "presentation":
                     //ExStart:GenerateCommonListinPresentationFormat
-
                     //Setting up source spreadsheet template
                     const String strPresentationTemplate = "Presentation Templates/Common List.pptx";
                     //Setting up destination document report 
@@ -298,7 +285,6 @@ namespace GroupDocs.AssemblyExamples
             {
                 case "document":
                     //ExStart:GenerateCommonMasterDetailinDocumentProcessingFormat
-
                     //Setting up source document template
                     const String strDocumentTemplate = "Word Templates/Common Master-Detail.docx";
                     //Setting up destination document report 
@@ -319,7 +305,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "spreadsheet":
                     //ExStart:GenerateCommonMasterDetailinSpreadsheetFormat
-
                     //Setting up source spreadsheet template
                     const String strSpreadsheetTemplate = "Spreadsheet Templates/Common Master-Detail.xlsx";
                     //Setting up destination document report 
@@ -340,7 +325,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "presentation":
                     //ExStart:GenerateCommonMasterDetailinPresentationFormat
-
                     //Setting up source spreadsheet template
                     const String strPresentationTemplate = "Presentation Templates/Common Master-Detail.pptx";
                     //Setting up destination document report 
@@ -368,7 +352,6 @@ namespace GroupDocs.AssemblyExamples
             {
                 case "document":
                     //ExStart:GenerateInParagraphListinDocumentProcessingFormat
-
                     //Setting up source document template
                     const String strDocumentTemplate = "Word Templates/In-Paragraph List.docx";
                     //Setting up destination document report 
@@ -389,7 +372,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "spreadsheet":
                     //ExStart:GenerateInParagraphListinSpreadsheetFormat
-
                     //Setting up source spreadsheet template
                     const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Paragraph List.xlsx";
                     //Setting up destination document report 
@@ -410,7 +392,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "presentation":
                     //ExStart:GenerateInParagraphListinPresentationFormat
-
                     //Setting up source spreadsheet template
                     const String strPresentationTemplate = "Presentation Templates/In-Paragraph List.pptx";
                     //Setting up destination document report 
@@ -430,15 +411,12 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-
-        
         public static void GenerateInTableListWithAlternateContent(string strDocumentFormat)
         {
             switch (strDocumentFormat)
             {
                 case "document":
                     //ExStart:GenerateInTableListWithAlternateContentinDocumentProcessingFormat
-
                     //Setting up source document template
                     const String strDocumentTemplate = "Word Templates/In-Table List with Alternate Content.docx";
                     //Setting up destination document report 
@@ -459,7 +437,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "spreadsheet":
                     //ExStart:GenerateInTableListWithAlternateContentinSpreadsheetFormat
-
                     //Setting up source spreadsheet template
                     const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List with Alternate Content.xlsx";
                     //Setting up destination document report 
@@ -480,7 +457,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "presentation":
                     //ExStart:GenerateInTableListWithAlternateContentinPresentationFormat
-
                     //Setting up source spreadsheet template
                     const String strPresentationTemplate = "Presentation Templates/In-Table List with Alternate Content.pptx";
                     //Setting up destination document report 
@@ -500,8 +476,6 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-
-        
         public static void GenerateInTableListWithFilteringGroupingAndOrdering(string strDocumentFormat)
         {
             switch (strDocumentFormat)
@@ -528,7 +502,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "spreadsheet":
                     //ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginSpreadsheetFormat
-
                     //Setting up source spreadsheet template
                     const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List with Filtering, Grouping, and Ordering.xlsx";
                     //Setting up destination document report 
@@ -549,7 +522,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "presentation":
                     //ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginPresentationFormat
-
                     //Setting up source spreadsheet template
                     const String strPresentationTemplate = "Presentation Templates/In-Table List with Filtering, Grouping, and Ordering.pptx";
                     //Setting up destination document report 
@@ -577,7 +549,6 @@ namespace GroupDocs.AssemblyExamples
             {
                 case "document":
                     //ExStart:GenerateInTableListWithHighlightedRowsinDocumentProcessingDocument
-
                     //Setting up source document template
                     const String strDocumentTemplate = "Word Templates/In-Table List with Highlighted Rows.docx";
                     //Setting up destination document report 
@@ -598,7 +569,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "spreadsheet":
                     //ExStart:GenerateInTableListWithHighlightedRowsinSpreadsheetDocument
-
                     //Setting up source spreadsheet template
                     const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List with Highlighted Rows.xlsx";
                     //Setting up destination document report 
@@ -619,7 +589,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "presentation":
                     //ExStart:GenerateInTableListWithHighlightedRowsinPresentationFormat
-
                     //Setting up source spreadsheet template
                     const String strPresentationTemplate = "Presentation Templates/In-Table List with Highlighted Rows.pptx";
                     //Setting up destination document report 
@@ -647,7 +616,6 @@ namespace GroupDocs.AssemblyExamples
             {
                 case "document":
                     //ExStart:GenerateInTableListinDocumentProcessingDocument
-
                     //Setting up source document template
                     const String strDocumentTemplate = "Word Templates/In-Table List.docx";
                     //Setting up destination document report 
@@ -668,7 +636,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "spreadsheet":
                     //ExStart:GenerateInTableListinSpreadsheetFormat
-
                     //Setting up source spreadsheet template
                     const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List.xlsx";
                     //Setting up destination document report 
@@ -689,7 +656,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "presentation":
                     //ExStart:GenerateInTableListinPresentationFormat
-
                     //Setting up source spreadsheet template
                     const String strPresentationTemplate = "Presentation Templates/In-Table List.pptx";
                     //Setting up destination document report 
@@ -717,7 +683,6 @@ namespace GroupDocs.AssemblyExamples
             {
                 case "document":
                     //ExStart:GenerateInTableMasterDetailinDocumentProcessingFormat
-
                     //Setting up source document template
                     const String strDocumentTemplate = "Word Templates/In-Table Master-Detail.docx";
                     //Setting up destination document report 
@@ -738,7 +703,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "spreadsheet":
                     //ExStart:GenerateInTableMasterDetailinSpreadsheetFormat
-
                     //Setting up source spreadsheet template
                     const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table Master-Detail.xlsx";
                     //Setting up destination document report 
@@ -759,7 +723,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "presentation":
                     //ExStart:GenerateInTableMasterDetailinPresentationFormat
-
                     //Setting up source spreadsheet template
                     const String strPresentationTemplate = "Presentation Templates/In-Table Master-Detail.pptx";
                     //Setting up destination document report 
@@ -787,7 +750,6 @@ namespace GroupDocs.AssemblyExamples
             {
                 case "document":
                     //ExStart:GenerateMulticoloredNumberedListinDocumentProcessingDocument
-
                     //Setting up source document template
                     const String strDocumentTemplate = "Word Templates/Multicolored Numbered List.docx";
                     //Setting up destination document report 
@@ -808,7 +770,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "spreadsheet":
                     //ExStart:GenerateMulticoloredNumberedListinSpreadsheetDocument
-
                     //Setting up source spreadsheet template
                     const String strSpreadsheetTemplate = "Spreadsheet Templates/Multicolored Numbered List.xlsx";
                     //Setting up destination document report 
@@ -829,7 +790,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "presentation":
                     //ExStart:GenerateMulticoloredNumberedListinPresentationFormat
-
                     //Setting up source spreadsheet template
                     const String strPresentationTemplate = "Presentation Templates/Multicolored Numbered List.pptx";
                     //Setting up destination document report 
@@ -857,7 +817,6 @@ namespace GroupDocs.AssemblyExamples
             {
                 case "document":
                     //ExStart:GenerateNumberedListinDocumentProcessingFormat
-
                     //Setting up source document template
                     const String strDocumentTemplate = "Word Templates/Numbered List.docx";
                     //Setting up destination document report 
@@ -878,7 +837,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "spreadsheet":
                     //ExStart:GenerateNumberedListinSpreadsheetFormat
-
                     //Setting up source spreadsheet template
                     const String strSpreadsheetTemplate = "Spreadsheet Templates/Numbered List.xlsx";
                     //Setting up destination document report 
@@ -899,7 +857,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "presentation":
                     //ExStart:GenerateNumberedListinPresentationFormat
-
                     //Setting up source spreadsheet template
                     const String strPresentationTemplate = "Presentation Templates/Numbered List.pptx";
                     //Setting up destination document report 
@@ -927,7 +884,6 @@ namespace GroupDocs.AssemblyExamples
             {
                 case "document":
                     //ExStart:GeneratePieChartinDocumentProcessingFormat
-
                     //Setting up source document template
                     const String strDocumentTemplate = "Word Templates/Pie Chart.docx";
                     //Setting up destination document report 
@@ -948,7 +904,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "spreadsheet":
                     //ExStart:GeneratePieChartinSpreadsheetFormat
-
                     //Setting up source spreadsheet template
                     const String strSpreadsheetTemplate = "Spreadsheet Templates/Pie Chart.xlsx";
                     //Setting up destination document report 
@@ -969,7 +924,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "presentation":
                     //ExStart:GeneratePieChartinPresentationFormat
-
                     //Setting up source spreadsheet template
                     const String strPresentationTemplate = "Presentation Templates/Pie Chart.pptx";
                     //Setting up destination document report 
@@ -997,7 +951,6 @@ namespace GroupDocs.AssemblyExamples
             {
                 case "document":
                     //ExStart:GenerateScatterChartinDocumentProcessingFormat
-
                     //Setting up source document template
                     const String strDocumentTemplate = "Word Templates/Scatter Chart.docx";
                     //Setting up destination document report 
@@ -1018,7 +971,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "spreadsheet":
                     //ExStart:GenerateScatterChartinSpreadsheetFormat
-
                     //Setting up source spreadsheet template
                     const String strSpreadsheetTemplate = "Spreadsheet Templates/Scatter Chart.xlsx";
                     //Setting up destination document report 
@@ -1039,7 +991,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "presentation":
                     //ExStart:GenerateScatterChartinPresentationFormat
-
                     //Setting up source spreadsheet template
                     const String strPresentationTemplate = "Presentation Templates/Scatter Chart.pptx";
                     //Setting up destination document report 
@@ -1067,7 +1018,6 @@ namespace GroupDocs.AssemblyExamples
             {
                 case "document":
                     //ExStart:GenerateSingleRowinDocumentProcessingFormat
-
                     //Setting up source document template
                     const String strDocumentTemplate = "Word Templates/Single Row.docx";
                     //Setting up destination document report 
@@ -1088,7 +1038,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "spreadsheet":
                     //ExStart:GenerateSingleRowinSpreadsheetFormat
-
                     //Setting up source spreadsheet template
                     const String strSpreadsheetTemplate = "Spreadsheet Templates/Single Row.xlsx";
                     //Setting up destination document report 
@@ -1109,7 +1058,6 @@ namespace GroupDocs.AssemblyExamples
 
                 case "presentation":
                     //ExStart:GenerateSingleRowinPresentationFormat
-
                     //Setting up source spreadsheet template
                     const String strPresentationTemplate = "Presentation Templates/Single Row.pptx";
                     //Setting up destination document report 

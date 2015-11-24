@@ -12,7 +12,6 @@ namespace GroupDocs.AssemblyExamples.ProjectBusinessObjects
         public static string imagePath = "../../../../Data/Images/";
 
         //ExStart:ProjectEntities
-
         public class Customer
         {
             public String CustomerName { get; set; }
@@ -20,10 +19,7 @@ namespace GroupDocs.AssemblyExamples.ProjectBusinessObjects
             public string CustomerContactNumber { get; set; }
             public IEnumerable<Order> Order { get; set; }
             public String Photo { get { return Path.Combine(Path.GetFullPath(imagePath), "no-photo.jpg"); } }
-
         }
-
-
         public class Order
         {
             public Customer Customer { get; set; }
@@ -34,7 +30,6 @@ namespace GroupDocs.AssemblyExamples.ProjectBusinessObjects
             public int OrderNumber { get; set; }
             public DateTime ShippingDate { get; set; }
         }
-
         public class Product
         {
             public string ProductName { get; set; }
@@ -42,7 +37,6 @@ namespace GroupDocs.AssemblyExamples.ProjectBusinessObjects
             public int Discount { get; set; }
             public string ProductPrice { get; set; }
         }
-
-          //ExEnd:ProjectEntities
+        //ExEnd:ProjectEntities
     }
 }

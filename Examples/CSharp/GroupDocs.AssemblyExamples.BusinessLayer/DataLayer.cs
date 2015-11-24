@@ -19,7 +19,6 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         /// <returns>Returns customer's complete information</returns>
         public static IEnumerable<BusinessObjects.Customer> PopulateData()
         {
-
             BusinessObjects.Customer customer = new BusinessObjects.Customer { CustomerName = "Atir Tahir", CustomerContactNumber = "+9211874", ShippingAddress = "Flat # 1, Kiyani Plaza ISB" };
             customer.Order = new BusinessObjects.Order[]
             {
@@ -47,7 +46,6 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         /// Fetches order details from PopulateData
         /// </summary>
         /// <returns>Returns order details, one data at a time</returns>
-
         public static IEnumerable<BusinessObjects.Order> GetOrdersData()
         {
             foreach (BusinessObjects.Customer customer in PopulateData())
@@ -82,7 +80,6 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         /// Fetches customer details of very first customer
         /// </summary>
         /// <returns>Returns first customer's infromation</returns>
-
         public static BusinessObjects.Customer GetCustomerData()
         {
             IEnumerator<BusinessObjects.Customer> customer = PopulateData().GetEnumerator();
