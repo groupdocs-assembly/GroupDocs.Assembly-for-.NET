@@ -43,9 +43,6 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GroupDocs.Assembly">
-      <HintPath>..\..\..\Aspose\GroupDocs.Assembly\Pre Released API\GroupDocs.Assembly\GroupDocs.Assembly.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
