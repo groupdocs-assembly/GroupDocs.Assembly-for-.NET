@@ -53,10 +53,6 @@
       <Project>{5984dd10-865d-470e-a963-9fdef20929aa}</Project>
       <Name>GroupDocs.AssemblyExamples.BusinessLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GroupDocs.AssemblyExamples.ProjectEntities\GroupDocs.AssemblyExamples.ProjectBusinessObjects.csproj">
-      <Project>{65189345-c620-4736-8d0c-4bc6a25cfdee}</Project>
-      <Name>GroupDocs.AssemblyExamples.ProjectBusinessObjects</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

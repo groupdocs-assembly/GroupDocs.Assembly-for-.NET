@@ -44,7 +44,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GroupDocs.AssemblyExamples.ProjectEntities\GroupDocs.AssemblyExamples.ProjectBusinessObjects.csproj">
+    <ProjectReference Include="..\GroupDocs.AssemblyExamples.ProjectBusinessObjects\GroupDocs.AssemblyExamples.ProjectBusinessObjects.csproj">
       <Project>{65189345-c620-4736-8d0c-4bc6a25cfdee}</Project>
       <Name>GroupDocs.AssemblyExamples.ProjectBusinessObjects</Name>
     </ProjectReference>
