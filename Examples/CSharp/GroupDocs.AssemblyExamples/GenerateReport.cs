@@ -388,7 +388,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
 
                 case "spreadsheet":
-                    //ExEnd:GenerateInParagraphListinSpreadsheetFormat
+                    //ExStart:GenerateInParagraphListinSpreadsheetFormat
 
                     //Setting up source spreadsheet template
                     const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Paragraph List.xlsx";
@@ -409,7 +409,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
 
                 case "presentation":
-                    //ExEnd:GenerateInParagraphListinPresentationFormat
+                    //ExStart:GenerateInParagraphListinPresentationFormat
 
                     //Setting up source spreadsheet template
                     const String strPresentationTemplate = "Presentation Templates/In-Paragraph List.pptx";

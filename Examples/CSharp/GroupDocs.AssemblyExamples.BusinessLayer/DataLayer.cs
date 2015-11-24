@@ -11,7 +11,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
     {
 
         #region DataInitialization
-
+        //ExStart:PopulateData
         /// <summary>
         /// This function initializes/populates the data. 
         /// Initialize Customer information, product information and order information
@@ -38,11 +38,11 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
             };
             yield return customer; //yield return statement will return one data at a time 
         }
-
+        //ExEnd:PopulateData
         #endregion
 
         #region GetOrders
-
+        //ExStart:GetOrdersData
         /// <summary>
         /// Fetches order details from PopulateData
         /// </summary>
@@ -56,11 +56,11 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
                     yield return order; //yield return statement returns one data at a time
             }
         }
-
+        //ExEnd:GetOrdersData
         #endregion
 
         #region GetProducts
-
+        //ExStart:GetProductsData
         /// <summary>
         /// Fetches product details from PopulateData
         /// </summary>
@@ -73,11 +73,11 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
                     yield return order.Product;
             }
         }
-
+        //ExEnd:GetProductsData
         #endregion
 
         #region GetSingleCustomer
-
+        //ExStart:GetCustomerData
         /// <summary>
         /// Fetches customer details of very first customer
         /// </summary>
@@ -90,7 +90,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
 
             return customer.Current;
         }
-
+        //ExEnd:GetCustomerData
         #endregion
     }
 }
