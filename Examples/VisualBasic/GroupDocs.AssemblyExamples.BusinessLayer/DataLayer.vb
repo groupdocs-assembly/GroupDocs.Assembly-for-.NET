@@ -1,16 +1,16 @@
-﻿Imports GroupDocs.AssemblyExamples.ProjectBusinessObjects
-Imports System.Collections.Generic
+﻿Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Text
 Imports System.Threading.Tasks
-Imports GroupDocs.AssemblyExamples.ProjectBusinessObjects.GroupDocs.AssemblyExamples.ProjectBusinessObjects
+Imports GroupDocs.AssemblyExamples.ProjectBusinessObjects
+Imports GroupDocs.AssemblyExamples.ProjectBusinessObjects.GroupDocs.AssemblyExamples.ProjectEntities
+
 
 Namespace GroupDocs.AssemblyExamples.BusinessLayer
     Public NotInheritable Class DataLayer
         Private Sub New()
         End Sub
-
-
+#Region "DataInitialization"
         'ExStart:PopulateData
         ''' <summary>
         ''' This function initializes/populates the data. 
@@ -23,6 +23,7 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
                  .CustomerContactNumber = "+9211874", _
                  .ShippingAddress = "Flat # 1, Kiyani Plaza ISB" _
             }
+
             customer.Order = New BusinessObjects.Order() {New BusinessObjects.Order() With { _
                  .Product = New BusinessObjects.Product() With { _
                      .ProductName = "Lumia 525" _
@@ -32,53 +33,55 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
                  .ProductQuantity = 5, _
                  .OrderDate = New DateTime(2015, 1, 1) _
             }}
-			Yield customer
+            Yield customer
             'yield return statement will return one data at a time
+
             customer = New BusinessObjects.Customer() With { _
                  .CustomerName = "Usman Aziz", _
                  .CustomerContactNumber = "+458789", _
                  .ShippingAddress = "Quette House, Park Road, ISB" _
             }
-			customer.Order = New BusinessObjects.Order() {New BusinessObjects.Order() With { _
-				 .Product = New BusinessObjects.Product() With { _
-					 .ProductName = "Lenovo G50" _
-				}, _
-				  .Customer = customer, _
-				  .Price = 480, _
-				  .ProductQuantity = 2, _
-				  .OrderDate = New DateTime(2015, 2, 1) _
-			}, New BusinessObjects.Order() With { _
-				  .Product = New BusinessObjects.Product() With { _
-					  .ProductName = "Pavilion G6" _
-				}, _
-				  .Customer = customer, _
-				  .Price = 400, _
-				  .ProductQuantity = 1, _
-				  .OrderDate = New DateTime(2015, 10, 1) _
-			}, New BusinessObjects.Order() With { _
-				  .Product = New BusinessObjects.Product() With { _
-					  .ProductName = "Nexus 5" _
-				}, _
-				  .Customer = customer, _
-				  .Price = 320, _
-				  .ProductQuantity = 3, _
-				 .OrderDate = New DateTime(2015, 6, 1) _
-			}}
-			 Yield customer
+            customer.Order = New BusinessObjects.Order() {New BusinessObjects.Order() With { _
+                 .Product = New BusinessObjects.Product() With { _
+                     .ProductName = "Lenovo G50" _
+                }, _
+                 .Customer = customer, _
+                 .Price = 480, _
+                 .ProductQuantity = 2, _
+                 .OrderDate = New DateTime(2015, 2, 1) _
+            }, New BusinessObjects.Order() With { _
+                 .Product = New BusinessObjects.Product() With { _
+                     .ProductName = "Pavilion G6" _
+                }, _
+                 .Customer = customer, _
+                 .Price = 400, _
+                 .ProductQuantity = 1, _
+                 .OrderDate = New DateTime(2015, 10, 1) _
+            }, New BusinessObjects.Order() With { _
+                 .Product = New BusinessObjects.Product() With { _
+                     .ProductName = "Nexus 5" _
+                }, _
+                 .Customer = customer, _
+                 .Price = 320, _
+                 .ProductQuantity = 3, _
+                 .OrderDate = New DateTime(2015, 6, 1) _
+            }}
+            Yield customer
             'yield return statement will return one data at a time 
         End Function
         'ExEnd:PopulateData
+#End Region
 
 #Region "GetOrders"
         'ExStart:GetOrdersData
         ''' <summary>
-        ''' Fetches order details from PopulateData
+        ''' Fetches order from PopulateData
         ''' </summary>
         ''' <returns>Returns order details, one data at a time</returns>
         Public Shared Iterator Function GetOrdersData() As IEnumerable(Of BusinessObjects.Order)
             For Each customer As BusinessObjects.Customer In PopulateData()
                 For Each order As BusinessObjects.Order In customer.Order
-					Yield order
+                    Yield order
                     'yield return statement returns one data at a time
                 Next
             Next
@@ -89,13 +92,13 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
 #Region "GetProducts"
         'ExStart:GetProductsData
         ''' <summary>
-        ''' Fetches product details from PopulateData
+        ''' Fetches products from PopulateData
         ''' </summary>
         ''' <returns>Returns product details, one data at a time</returns>
         Public Shared Iterator Function GetProductsData() As IEnumerable(Of BusinessObjects.Product)
             For Each customer As BusinessObjects.Customer In PopulateData()
                 For Each order As BusinessObjects.Order In customer.Order
-					Yield order.Product
+                    Yield order.Product
                 Next
             Next
         End Function
@@ -117,9 +120,74 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         'ExEnd:GetCustomerData
 #End Region
 
-        Private Shared Sub [yield](p1 As Object)
-            Throw New NotImplementedException
-        End Sub
+#Region "GetOrdersDataDB"
+        'ExStart:GetOrdersDataDB
+        ''' <summary>
+        ''' Fetches orders from database
+        ''' </summary>
+        ''' <returns>Returns order details, one data at a time</returns>
+        Public Shared Iterator Function GetOrdersDataDB() As IEnumerable(Of Order)
+            'create object of data context
+            Dim dbEntities As New DatabaseEntitiesDataContext()
+            Dim orders = From c In dbEntities.Orders
+            For Each order As Order In orders
+                Yield order
+            Next
+        End Function
+        'ExEnd:GetOrdersDataDB
+#End Region
 
+#Region "GetProductsDataDB"
+        'ExStart:GetProductsDataDB
+        ''' <summary>
+        ''' Fetches products from database 
+        ''' </summary>
+        ''' <returns>Returns products information, one data at a time </returns>
+        Public Shared Iterator Function GetProductsDataDB() As IEnumerable(Of Product)
+            'create object of data context
+            Dim dbEntities As New DatabaseEntitiesDataContext()
+            'get products' list...
+            Dim Products = From c In dbEntities.Products
+            For Each product As Product In Products
+                Yield product
+            Next
+        End Function
+        'ExEnd:GetProductsDataDB
+#End Region
+
+#Region "GetCustomersDataDB"
+        'ExStart:GetCustomersDataDB
+        ''' <summary>
+        ''' Fetches customers from database
+        ''' </summary>
+        ''' <returns>Returns customers information, one data at a time</returns>
+        Public Shared Iterator Function GetCustomersDataDB() As IEnumerable(Of Customer)
+            'create object of data context
+            Dim dbEntities As New DatabaseEntitiesDataContext()
+            'get products' list...
+            Dim customers = From c In dbEntities.Customers
+            For Each customer As Customer In customers
+                Yield customer
+            Next
+        End Function
+        'ExEnd:GetCustomersDataDB
+#End Region
+
+#Region "GetSingleCustomerData"
+        'ExStart:GetSingleCustomerData
+        ''' <summary>
+        ''' Fetches single customer data
+        ''' </summary>
+        ''' <returns>Return single, first customer's data</returns>
+        Public Shared Function GetSingleCustomerData() As Customer
+            'create object of data context
+            Dim dbEntites As New DatabaseEntitiesDataContext()
+            Dim customer As IEnumerator(Of Customer) = GetCustomersDataDB().GetEnumerator()
+            customer.MoveNext()
+            Return customer.Current
+        End Function
+#End Region
     End Class
 End Namespace
+
+

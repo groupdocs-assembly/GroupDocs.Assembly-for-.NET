@@ -7,7 +7,7 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GroupDocs.Assembly.Examples
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GroupDocs.AssemblyExamples.BusinessLayer", "VisualBasic\GroupDocs.AssemblyExamples.BusinessLayer\GroupDocs.AssemblyExamples.BusinessLayer.vbproj", "{CAFC2537-D6C0-4A47-A7D9-DB9178C24E17}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GroupDocs.AssemblyExamples.ProjectBusinessObjects", "VisualBasic\GroupDocs.AssemblyExamples.ProjectBusinessObjects\GroupDocs.AssemblyExamples.ProjectBusinessObjects.vbproj", "{4D94149E-43D1-48AD-AEA1-03AB9D686540}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GroupDocs.AssemblyExamples.ProjectEntities", "VisualBasic\GroupDocs.AssemblyExamples.ProjectEntities\GroupDocs.AssemblyExamples.ProjectEntities.vbproj", "{4D94149E-43D1-48AD-AEA1-03AB9D686540}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
