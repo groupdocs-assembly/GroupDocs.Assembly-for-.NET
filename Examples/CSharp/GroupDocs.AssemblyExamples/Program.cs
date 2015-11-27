@@ -16,17 +16,17 @@ namespace GroupDocs.AssemblyExamples
              *  Applying product license
              *  Please uncomment the statement if you do have license.
              */
-            CommonUtilities.ApplyLicense();
+            //CommonUtilities.ApplyLicense();
 
             #region Generating Bubble Chart Report
             //Generate a bubble chart report in document processing format
             GenerateReport.GenerateBubbleChart("document", true);
 
             //Generate a Bulleted List report in spreadsheet format
-            //GenerateReport.GenerateBubbleChart("spreadsheet", true);
+            GenerateReport.GenerateBubbleChart("spreadsheet", true);
 
             //Generate a Bulleted List report in presentation format
-            //GenerateReport.GenerateBubbleChart("presentation", true);
+            GenerateReport.GenerateBubbleChart("presentation", true);
             #endregion
             
             #region Generating Bulleted List Report
