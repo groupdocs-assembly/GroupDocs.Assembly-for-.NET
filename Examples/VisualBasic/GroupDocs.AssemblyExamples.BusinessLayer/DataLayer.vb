@@ -105,8 +105,8 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         'ExEnd:GetProductsData
 #End Region
 
-#Region "GetSingleCustomer"
-        'ExStart:GetCustomerData
+#Region "GetSingleCustomerData"
+        'ExStart:GetSingleCustomerData
         ''' <summary>
         ''' Fetches customer details of very first customer
         ''' </summary>
@@ -117,7 +117,7 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
 
             Return customer.Current
         End Function
-        'ExEnd:GetCustomerData
+        'ExEnd:GetSingleCustomerData
 #End Region
 
 #Region "GetOrdersDataDB"
@@ -173,19 +173,20 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         'ExEnd:GetCustomersDataDB
 #End Region
 
-#Region "GetSingleCustomerData"
-        'ExStart:GetSingleCustomerData
+#Region "GetSingleCustomerDataDB"
+        'ExStart:GetSingleCustomerDataDB
         ''' <summary>
         ''' Fetches single customer data
         ''' </summary>
         ''' <returns>Return single, first customer's data</returns>
-        Public Shared Function GetSingleCustomerData() As Customer
+        Public Shared Function GetSingleCustomerDataDB() As Customer
             'create object of data context
             Dim dbEntites As New DatabaseEntitiesDataContext()
             Dim customer As IEnumerator(Of Customer) = GetCustomersDataDB().GetEnumerator()
             customer.MoveNext()
             Return customer.Current
         End Function
+        'ExEnd:GetSingleCustomerDataDB
 #End Region
     End Class
 End Namespace

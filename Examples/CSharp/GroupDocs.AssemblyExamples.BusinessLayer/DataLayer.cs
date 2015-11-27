@@ -73,8 +73,8 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         //ExEnd:GetProductsData
         #endregion
 
-        #region GetSingleCustomer
-        //ExStart:GetCustomerData
+        #region GetSingleCustomerData
+        //ExStart:GetSingleCustomerData
         /// <summary>
         /// Fetches customer details of very first customer
         /// </summary>
@@ -86,7 +86,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
 
             return customer.Current;
         }
-        //ExEnd:GetCustomerData
+        //ExEnd:GetSingleCustomerData
         #endregion
 
         #region GetOrdersDataDB
@@ -151,13 +151,13 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         //ExEnd:GetCustomersDataDB
         #endregion
 
-        #region GetSingleCustomerData
-        //ExStart:GetSingleCustomerData
+        #region GetSingleCustomerDataDB
+        //ExStart:GetSingleCustomerDataDB
         /// <summary>
         /// Fetches single customer data
         /// </summary>
         /// <returns>Return single, first customer's data</returns>
-        public static Customer GetSingleCustomerData()
+        public static Customer GetSingleCustomerDataDB()
         {
             //create object of data context
             DatabaseEntitiesDataContext dbEntites = new DatabaseEntitiesDataContext();
@@ -165,6 +165,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
             customer.MoveNext();
             return customer.Current;
         }
+        //ExEnd:GetSingleCustomerDataDB
         #endregion
     }
 }
