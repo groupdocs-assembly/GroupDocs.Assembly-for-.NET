@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,9 +45,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GroupDocs.AssemblyExamples.ProjectBusinessObjects\GroupDocs.AssemblyExamples.ProjectBusinessObjects.csproj">
+    <ProjectReference Include="..\GroupDocs.AssemblyExamples.ProjectEntities\GroupDocs.AssemblyExamples.ProjectEntities.csproj">
       <Project>{65189345-c620-4736-8d0c-4bc6a25cfdee}</Project>
-      <Name>GroupDocs.AssemblyExamples.ProjectBusinessObjects</Name>
+      <Name>GroupDocs.AssemblyExamples.ProjectEntities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

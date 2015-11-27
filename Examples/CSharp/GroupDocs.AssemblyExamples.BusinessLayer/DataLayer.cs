@@ -1,4 +1,4 @@
-﻿using GroupDocs.AssemblyExamples.ProjectBusinessObjects;
+﻿using GroupDocs.AssemblyExamples.ProjectEntities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,6 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
 {
     public static class DataLayer
     {
-
         #region DataInitialization
         //ExStart:PopulateData
         /// <summary>
@@ -43,7 +42,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #region GetOrders
         //ExStart:GetOrdersData
         /// <summary>
-        /// Fetches order details from PopulateData
+        /// Fetches order from PopulateData
         /// </summary>
         /// <returns>Returns order details, one data at a time</returns>
         public static IEnumerable<BusinessObjects.Order> GetOrdersData()
@@ -60,7 +59,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #region GetProducts
         //ExStart:GetProductsData
         /// <summary>
-        /// Fetches product details from PopulateData
+        /// Fetches products from PopulateData
         /// </summary>
         /// <returns>Returns product details, one data at a time</returns>
         public static IEnumerable<BusinessObjects.Product> GetProductsData()
@@ -74,8 +73,8 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         //ExEnd:GetProductsData
         #endregion
 
-        #region GetSingleCustomer
-        //ExStart:GetCustomerData
+        #region GetSingleCustomerData
+        //ExStart:GetSingleCustomerData
         /// <summary>
         /// Fetches customer details of very first customer
         /// </summary>
@@ -87,7 +86,86 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
 
             return customer.Current;
         }
-        //ExEnd:GetCustomerData
+        //ExEnd:GetSingleCustomerData
+        #endregion
+
+        #region GetOrdersDataDB
+        //ExStart:GetOrdersDataDB
+        /// <summary>
+        /// Fetches orders from database
+        /// </summary>
+        /// <returns>Returns order details, one data at a time</returns>
+        public static IEnumerable<Order> GetOrdersDataDB()
+        {
+            //create object of data context
+            DatabaseEntitiesDataContext dbEntities = new DatabaseEntitiesDataContext();
+            var orders = from c in dbEntities.Orders
+                         select c;
+            foreach (Order order in orders)
+            {
+                yield return order;
+            }
+        }
+        //ExEnd:GetOrdersDataDB
+        #endregion
+
+        #region GetProductsDataDB
+        //ExStart:GetProductsDataDB
+        /// <summary>
+        /// Fetches products from database 
+        /// </summary>
+        /// <returns>Returns products information, one data at a time </returns>
+        public static IEnumerable<Product> GetProductsDataDB()
+        {
+            //create object of data context
+            DatabaseEntitiesDataContext dbEntities = new DatabaseEntitiesDataContext();
+            //get products' list...
+            var Products = from c in dbEntities.Products
+                           select c;
+            foreach (Product product in Products)
+            {
+                yield return product;
+            }
+        }
+        //ExEnd:GetProductsDataDB
+        #endregion
+
+        #region GetCustomersDataDB
+        //ExStart:GetCustomersDataDB
+        /// <summary>
+        /// Fetches customers from database
+        /// </summary>
+        /// <returns>Returns customers information, one data at a time</returns>
+        public static IEnumerable<Customer> GetCustomersDataDB()
+        {
+            //create object of data context
+            DatabaseEntitiesDataContext dbEntities = new DatabaseEntitiesDataContext();
+            //get products' list...
+            var customers = from c in dbEntities.Customers
+                            select c;
+            foreach (Customer customer in customers)
+            {
+                yield return customer;
+            }
+        }
+        //ExEnd:GetCustomersDataDB
+        #endregion
+
+        #region GetSingleCustomerDataDB
+        //ExStart:GetSingleCustomerDataDB
+        /// <summary>
+        /// Fetches single customer data
+        /// </summary>
+        /// <returns>Return single, first customer's data</returns>
+        public static Customer GetSingleCustomerDataDB()
+        {
+            //create object of data context
+            DatabaseEntitiesDataContext dbEntites = new DatabaseEntitiesDataContext();
+            IEnumerator<Customer> customer = GetCustomersDataDB().GetEnumerator();
+            customer.MoveNext();
+            return customer.Current;
+        }
+        //ExEnd:GetSingleCustomerDataDB
         #endregion
     }
 }

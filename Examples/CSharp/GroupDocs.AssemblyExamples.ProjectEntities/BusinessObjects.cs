@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace GroupDocs.AssemblyExamples.ProjectBusinessObjects
+namespace GroupDocs.AssemblyExamples.ProjectEntities
 {
     public class BusinessObjects
     {

@@ -109,9 +109,9 @@
       <Project>{cafc2537-d6c0-4a47-a7d9-db9178c24e17}</Project>
       <Name>GroupDocs.AssemblyExamples.BusinessLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GroupDocs.AssemblyExamples.ProjectBusinessObjects\GroupDocs.AssemblyExamples.ProjectBusinessObjects.vbproj">
+    <ProjectReference Include="..\GroupDocs.AssemblyExamples.ProjectEntities\GroupDocs.AssemblyExamples.ProjectEntities.vbproj">
       <Project>{4d94149e-43d1-48ad-aea1-03ab9d686540}</Project>
-      <Name>GroupDocs.AssemblyExamples.ProjectBusinessObjects</Name>
+      <Name>GroupDocs.AssemblyExamples.ProjectEntities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

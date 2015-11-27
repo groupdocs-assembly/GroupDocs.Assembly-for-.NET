@@ -5,1075 +5,2166 @@ using System.Text;
 using System.Threading.Tasks;
 using GroupDocs.Assembly;
 using GroupDocs.AssemblyExamples.BusinessLayer;
+using GroupDocs.AssemblyExamples.ProjectEntities;
 
 namespace GroupDocs.AssemblyExamples
 {
     public static class GenerateReport
     {
-        
-        public static void GenerateBubbleChart(string strDocumentFormat)
+
+        public static void GenerateBubbleChart(string strDocumentFormat, bool isDatabase)
         {
-            
+
             switch (strDocumentFormat)
             {
                 case "document":
-                    //ExStart:GenerateBubbleChartinDocumentProcessingFormat
-                    //Setting up source document template
-                    const String strDocumentTemplate = "Word Templates/Bubble Chart.docx";
-                    //Setting up destination document report 
-                    const String strDocumentReport = "Word Reports/Bubble Chart Report.docx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Bubble Chart Report in document format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders");
+                        //ExStart:GenerateBubbleChartFromDatabaseinDocumentProcessingFormat
+                        //setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Bubble Chart_DB.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Bubble Chart_DB Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Bubble Chart Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersDataDB(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateBubbleChartFromDatabaseinDocumentProcessingFormat
                     }
-                    catch (Exception ex)
-                    { 
-                        Console.WriteLine(ex.Message); 
+                    else
+                    {
+                        //ExStart:GenerateBubbleChartinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Bubble Chart.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Bubble Chart Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Bubble Chart Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateBubbleChartinDocumentProcessingFormat
                     }
-                    //ExEnd:GenerateBubbleChartinDocumentProcessingFormat
+
                     break;
 
                 case "spreadsheet":
-                    //ExStart:GenerateBubbleChartinSpreadsheetFormat
-                    //Setting up source spreadsheet template
-                    const String strSpreadsheetTemplate = "Spreadsheet Templates/Bubble Chart.xlsx";
-                    //Setting up destination document report 
-                    const String strSpreadsheetReport = "Spreadsheet Reports/Bubble Chart Report.xlsx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Bubble Chart Report in spreadsheet format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersData(), "orders");
+                        //ExStart:GenerateBubbleChartFromDatabaseinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Bubble Chart_DB.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Bubble Chart_DB Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Bubble Chart Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersDataDB(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateBubbleChartFromDatabaseinSpreadsheetFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateBubbleChartinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Bubble Chart.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Bubble Chart Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Bubble Chart Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersData(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateBubbleChartinSpreadsheetFormat
                     }
-                    //ExEnd:GenerateBubbleChartinSpreadsheetFormat
                     break;
 
                 case "presentation":
-                    //ExStart:GenerateBubbleChartinPresentationFormat
-                    //Setting up source spreadsheet template
-                    const String strPresentationTemplate = "Presentation Templates/Bubble Chart.pptx";
-                    //Setting up destination document report 
-                    const String strPresentationReport = "Presentation Reports/Bubble Chart Report.pptx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Bubble Chart Report in presentation format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersData(), "orders");
+                        //ExStart:GenerateBubbleChartFromDatabaseinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Bubble Chart_DB.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Bubble Chart_DB Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Bubble Chart Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersDataDB(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateBubbleChartFromDatabaseinPresentationFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateBubbleChartinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Bubble Chart.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Bubble Chart Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Bubble Chart Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersData(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateBubbleChartinPresentationFormat
                     }
-                    //ExEnd:GenerateBubbleChartinPresentationFormat
+                    break;
+            }
+        }
+        public static void GenerateBulletedList(string strDocumentFormat, bool isDatabase)
+        {
+            switch (strDocumentFormat)
+            {
+                case "document":
+                    if (isDatabase)
+                    {
+                        //ExStart:GenerateBulletedListFromDatabaseinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Bulleted List.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Bulleted List Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Bulleted List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataDB(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateBulletedListFromDatabaseinDocumentProcessingFormat
+                    }
+                    else
+                    {
+                        //ExStart:GenerateBulletedListinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Bulleted List.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Bulleted List Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Bulleted List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsData(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateBulletedListinDocumentProcessingFormat
+                    }
+                    break;
+
+                case "spreadsheet":
+                    if (isDatabase)
+                    {
+                        //ExStart:GenerateBulletedListFromDatabaseinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Bulleted List.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Bulleted List Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Bulleted List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsDataDB(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateBulletedListFromDatabaseinSpreadsheetFormat
+                    }
+                    else
+                    {
+                        //ExStart:GenerateBulletedListinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Bulleted List.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Bulleted List Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Bulleted List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsData(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateBulletedListinSpreadsheetFormat
+                    }
+                    break;
+
+                case "presentation":
+                    if (isDatabase)
+                    {
+                        //ExStart:GenerateBulletedListFromDatabaseinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Bulleted List.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Bulleted List Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Bulleted List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsDataDB(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateBulletedListFromDatabaseinPresentationFormat
+                    }
+                    else
+                    {
+                        //ExStart:GenerateBulletedListinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Bulleted List.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Bulleted List Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Bulleted List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsData(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateBulletedListinPresentationFormat
+                    }
                     break;
             }
         }
 
-       
-        public static void GenerateBulletedList(string strDocumentFormat)
+
+        public static void GenerateChartWithFilteringGroupingAndOrdering(string strDocumentFormat, bool isDatabase)
         {
             switch (strDocumentFormat)
             {
                 case "document":
-                    //ExStart:GenerateBulletedListinDocumentProcessingFormat
-                    //Setting up source document template
-                    const String strDocumentTemplate = "Word Templates/Bulleted List.docx";
-                    //Setting up destination document report 
-                    const String strDocumentReport = "Word Reports/Bulleted List Report.docx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Bulleted List Report in document format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsData(), "products");
+                        //ExStart:GenerateChartWithFilteringGroupingAndOrderingFromDatabaseinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Chart with Filtering, Grouping, and Ordering_DB.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Chart with Filtering, Grouping, and Ordering_DB Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersDataDB(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDatabaseinDocumentProcessingFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateChartWithFilteringGroupingAndOrderinginDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Chart with Filtering, Grouping, and Ordering.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Chart with Filtering, Grouping, and Ordering Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateChartWithFilteringGroupingAndOrderinginDocumentProcessingFormat
                     }
-                    //ExEnd:GenerateBulletedListinDocumentProcessingFormat
                     break;
 
                 case "spreadsheet":
-                    //ExStart:GenerateBulletedListinSpreadsheetFormat
-                    //Setting up source spreadsheet template
-                    const String strSpreadsheetTemplate = "Spreadsheet Templates/Bulleted List.xlsx";
-                    //Setting up destination document report 
-                    const String strSpreadsheetReport = "Spreadsheet Reports/Bulleted List Report.xlsx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Bulleted List Report in spreadsheet format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsData(), "products");
+                        //ExStart:GenerateChartWithFilteringGroupingAndOrderingFromDatabaseinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Chart with Filtering, Grouping, and Ordering_DB.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Chart with Filtering, Grouping, and Ordering_DB Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersDataDB(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDatabaseinSpreadsheetFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateChartWithFilteringGroupingAndOrderinginSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Chart with Filtering, Grouping, and Ordering.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Chart with Filtering, Grouping, and Ordering Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersData(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateChartWithFilteringGroupingAndOrderinginSpreadsheetFormat
                     }
-                    //ExEnd:GenerateBulletedListinSpreadsheetFormat
                     break;
 
                 case "presentation":
-                    //ExStart:GenerateBulletedListinPresentationFormat
-                    //Setting up source spreadsheet template
-                    const String strPresentationTemplate = "Presentation Templates/Bulleted List.pptx";
-                    //Setting up destination document report 
-                    const String strPresentationReport = "Presentation Reports/Bulleted List Report.pptx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Bulleted List Report in presentation format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsData(), "products");
+                        //ExStart:GenerateChartWithFilteringGroupingAndOrderingFromDatabaseinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Chart with Filtering, Grouping, and Ordering_DB.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Chart with Filtering, Grouping, and Ordering_DB Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersDataDB(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDatabaseinPresentationFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateChartWithFilteringGroupingAndOrderinginPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Chart with Filtering, Grouping, and Ordering.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Chart with Filtering, Grouping, and Ordering Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersData(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateChartWithFilteringGroupingAndOrderinginPresentationFormat
                     }
-                    //ExEnd:GenerateBulletedListinPresentationFormat
+                    break;
+            }
+        }
+        public static void GenerateCommonList(string strDocumentFormat, bool isDatabase)
+        {
+            switch (strDocumentFormat)
+            {
+                case "document":
+                    if (isDatabase)
+                    {
+                        //ExStart:GenerateCommonListFromDatabaseinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Common List.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Common List Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Common List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersDataDB(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateCommonListFromDatabaseinDocumentProcessingFormat
+                    }
+                    else
+                    {
+                        //ExStart:GenerateCommonListinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Common List.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Common List Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Common List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.PopulateData(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateCommonListinDocumentProcessingFormat
+                    }
+                    break;
+
+                case "spreadsheet":
+                    if (isDatabase)
+                    {
+                        //ExStart:GenerateCommonListFromDatabaseinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Common List.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Common List Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Common List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomersDataDB(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateCommonListFromDatabaseinSpreadsheetFormat
+                    }
+                    else
+                    {
+                        //ExStart:GenerateCommonListinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Common List.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Common List Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Common List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.PopulateData(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateCommonListinSpreadsheetFormat
+                    }
+                    break;
+
+                case "presentation":
+                    if (isDatabase)
+                    {
+                        //ExStart:GenerateCommonListFromDatabaseinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Common List.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Common List Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Common List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersDataDB(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateCommonListFromDatabaseinPresentationFormat
+                    }
+                    else
+                    {
+                        //ExStart:GenerateCommonListinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Common List.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Common List Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Common List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.PopulateData(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateCommonListinPresentationFormat
+                    }
+                    break;
+            }
+        }
+        public static void GenerateCommonMasterDetail(string strDocumentFormat, bool isDatabase)
+        {
+            switch (strDocumentFormat)
+            {
+                case "document":
+                    if (isDatabase)
+                    {
+                        //ExStart:GenerateCommonMasterDetailFromDatabaseinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Common Master-Detail_DB.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Common Master-Detail_DB Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Common Master-Detail Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersDataDB(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateCommonMasterDetailFromDatabaseinDocumentProcessingFormat
+                    }
+                    else
+                    {
+                        //ExStart:GenerateCommonMasterDetailinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Common Master-Detail.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Common Master-Detail Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Common Master-Detail Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.PopulateData(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateCommonMasterDetailinDocumentProcessingFormat
+                    }
+                    break;
+
+                case "spreadsheet":
+                    if (isDatabase)
+                    {
+                        //ExStart:GenerateCommonMasterDetailFromDatabaseinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Common Master-Detail_DB.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Common Master-Detail_DB Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Common List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomersDataDB(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateCommonMasterDetailFromDatabaseinSpreadsheetFormat
+                    }
+                    else
+                    {
+                        //ExStart:GenerateCommonMasterDetailinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Common Master-Detail.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Common Master-Detail Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Common List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.PopulateData(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateCommonMasterDetailinSpreadsheetFormat
+                    }
+                    break;
+
+                case "presentation":
+                    if (isDatabase)
+                    {
+                        //ExStart:GenerateCommonMasterDetailFromDatabaseinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Common Master-Detail_DB.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Common Master-Detail_DB Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Common List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersDataDB(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateCommonMasterDetailFromDatabaseinPresentationFormat
+                    }
+                    else
+                    {
+                        //ExStart:GenerateCommonMasterDetailinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Common Master-Detail.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Common Master-Detail Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Common List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.PopulateData(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateCommonMasterDetailinPresentationFormat
+                    }
                     break;
             }
         }
 
-        
-        public static void GenerateChartWithFilteringGroupingAndOrdering(string strDocumentFormat)
+        public static void GenerateInParagraphList(string strDocumentFormat, bool isDatabase)
         {
-            
             switch (strDocumentFormat)
             {
                 case "document":
-                    //ExStart:GenerateChartWithFilteringGroupingAndOrderinginDocumentProcessingFormat
-                    //Setting up source document template
-                    const String strDocumentTemplate = "Word Templates/Chart with Filtering, Grouping, and Ordering.docx";
-                    //Setting up destination document report 
-                    const String strDocumentReport = "Word Reports/Chart with Filtering, Grouping, and Ordering Report.docx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in document format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders");
+                        //ExStart:GenerateInParagraphListFromDatabaseinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/In-Paragraph List.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/In-Paragraph List Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Paragraph List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataDB(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInParagraphListFromDatabaseinDocumentProcessingFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateInParagraphListinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/In-Paragraph List.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/In-Paragraph List Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Paragraph List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsData(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInParagraphListinDocumentProcessingFormat
                     }
-                    //ExEnd:GenerateChartWithFilteringGroupingAndOrderinginDocumentProcessingFormat
                     break;
 
                 case "spreadsheet":
-                    //ExStart:GenerateChartWithFilteringGroupingAndOrderinginSpreadsheetFormat
-                    //Setting up source spreadsheet template
-                    const String strSpreadsheetTemplate = "Spreadsheet Templates/Chart with Filtering, Grouping, and Ordering.xlsx";
-                    //Setting up destination document report 
-                    const String strSpreadsheetReport = "Spreadsheet Reports/Chart with Filtering, Grouping, and Ordering Report.xlsx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in spreadsheet format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersData(), "orders");
+                        //ExStart:GenerateInParagraphListFromDatabaseinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Paragraph List.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/In-Paragraph List Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Paragraph List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsDataDB(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInParagraphListFromDatabaseinSpreadsheetFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateInParagraphListinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Paragraph List.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/In-Paragraph List Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Paragraph List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsData(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInParagraphListinSpreadsheetFormat
                     }
-                    //ExEnd:GenerateChartWithFilteringGroupingAndOrderinginSpreadsheetFormat
                     break;
 
                 case "presentation":
-                    //ExStart:GenerateChartWithFilteringGroupingAndOrderinginPresentationFormat
-                    //Setting up source spreadsheet template
-                    const String strPresentationTemplate = "Presentation Templates/Chart with Filtering, Grouping, and Ordering.pptx";
-                    //Setting up destination document report 
-                    const String strPresentationReport = "Presentation Reports/Chart with Filtering, Grouping, and Ordering Report.pptx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in presentation format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersData(), "orders");
+                        //ExStart:GenerateInParagraphListFromDatabaseinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/In-Paragraph List.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/In-Paragraph List Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Paragraph List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsDataDB(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInParagraphListFromDatabaseinPresentationFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateInParagraphListinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/In-Paragraph List.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/In-Paragraph List Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Paragraph List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsData(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInParagraphListinPresentationFormat
                     }
-                    //ExEnd:GenerateChartWithFilteringGroupingAndOrderinginPresentationFormat
                     break;
             }
         }
-        public static void GenerateCommonList(string strDocumentFormat)
+        public static void GenerateInTableListWithAlternateContent(string strDocumentFormat, bool isDatabase)
         {
             switch (strDocumentFormat)
             {
                 case "document":
-                    //ExStart:GenerateCommonListinDocumentProcessingFormat
-                    //Setting up source document template
-                    const String strDocumentTemplate = "Word Templates/Common List.docx";
-                    //Setting up destination document report 
-                    const String strDocumentReport = "Word Reports/Common List Report.docx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Common List Report in document format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.PopulateData(), "customers");
+                        //ExStart:GenerateInTableListWithAlternateContentFromDatabaseinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/In-Table List with Alternate Content_DB.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/In-Table List with Alternate Content_DB Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataDB(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithAlternateContentFromDatabaseinDocumentProcessingFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateInTableListWithAlternateContentinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/In-Table List with Alternate Content.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/In-Table List with Alternate Content Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithAlternateContentinDocumentProcessingFormat
                     }
-                    //ExEnd:GenerateCommonListinDocumentProcessingFormat
                     break;
 
                 case "spreadsheet":
-                    //ExStart:GenerateCommonListinSpreadsheetFormat
-                    //Setting up source spreadsheet template
-                    const String strSpreadsheetTemplate = "Spreadsheet Templates/Common List.xlsx";
-                    //Setting up destination document report 
-                    const String strSpreadsheetReport = "Spreadsheet Reports/Common List Report.xlsx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Common List Report in spreadsheet format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.PopulateData(), "customers");
+                        //ExStart:GenerateInTableListWithAlternateContentFromDatabaseinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List with Alternate Content_DB.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/In-Table List with Alternate Content_DB Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsDataDB(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithAlternateContentFromDatabaseinSpreadsheetFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateInTableListWithAlternateContentinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List with Alternate Content.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/In-Table List with Alternate Content Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersData(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithAlternateContentinSpreadsheetFormat
                     }
-                    //ExEnd:GenerateCommonListinSpreadsheetFormat
                     break;
 
                 case "presentation":
-                    //ExStart:GenerateCommonListinPresentationFormat
-                    //Setting up source spreadsheet template
-                    const String strPresentationTemplate = "Presentation Templates/Common List.pptx";
-                    //Setting up destination document report 
-                    const String strPresentationReport = "Presentation Reports/Common List Report.pptx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Common List Report in presentation format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.PopulateData(), "customers");
+                        //ExStart:GenerateInTableListWithAlternateContentFromDatabaseinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/In-Table List with Alternate Content_DB.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/In-Table List with Alternate Content_DB Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsDataDB(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithAlternateContentFromDatabaseinPresentationFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateInTableListWithAlternateContentinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/In-Table List with Alternate Content.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/In-Table List with Alternate Content Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersData(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithAlternateContentinPresentationFormat
                     }
-                    //ExEnd:GenerateCommonListinPresentationFormat
                     break;
             }
         }
-
-    
-        public static void GenerateCommonMasterDetail(string strDocumentFormat)
+        public static void GenerateInTableListWithFilteringGroupingAndOrdering(string strDocumentFormat, bool isDatabase)
         {
             switch (strDocumentFormat)
             {
                 case "document":
-                    //ExStart:GenerateCommonMasterDetailinDocumentProcessingFormat
-                    //Setting up source document template
-                    const String strDocumentTemplate = "Word Templates/Common Master-Detail.docx";
-                    //Setting up destination document report 
-                    const String strDocumentReport = "Word Reports/Common Master-Detail Report.docx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Common Master-Detail Report in document format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.PopulateData(), "customers");
+                        //ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinDocumentProcessingDocument
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/In-Table List with Filtering, Grouping, and Ordering_DB.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/In-Table List with Filtering, Grouping, and Ordering_DB Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersDataDB(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinDocumentProcessingDocument
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginDocumentProcessingDocument
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/In-Table List with Filtering, Grouping, and Ordering.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/In-Table List with Filtering, Grouping, and Ordering Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderinginDocumentProcessingDocument
                     }
-                    //ExEnd:GenerateCommonMasterDetailinDocumentProcessingFormat
                     break;
 
                 case "spreadsheet":
-                    //ExStart:GenerateCommonMasterDetailinSpreadsheetFormat
-                    //Setting up source spreadsheet template
-                    const String strSpreadsheetTemplate = "Spreadsheet Templates/Common Master-Detail.xlsx";
-                    //Setting up destination document report 
-                    const String strSpreadsheetReport = "Spreadsheet Reports/Common Master-Detail Report.xlsx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Common List Report in spreadsheet format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.PopulateData(), "customers");
+                        //ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List with Filtering, Grouping, and Ordering_DB.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/In-Table List with Filtering, Grouping, and Ordering_DB Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersDataDB(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinSpreadsheetFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List with Filtering, Grouping, and Ordering.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/In-Table List with Filtering, Grouping, and Ordering Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersData(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderinginSpreadsheetFormat
                     }
-                    //ExEnd:GenerateCommonMasterDetailinSpreadsheetFormat
                     break;
 
                 case "presentation":
-                    //ExStart:GenerateCommonMasterDetailinPresentationFormat
-                    //Setting up source spreadsheet template
-                    const String strPresentationTemplate = "Presentation Templates/Common Master-Detail.pptx";
-                    //Setting up destination document report 
-                    const String strPresentationReport = "Presentation Reports/Common Master-Detail Report.pptx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Common List Report in presentation format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.PopulateData(), "customers");
+                        //ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/In-Table List with Filtering, Grouping, and Ordering_DB.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/In-Table List with Filtering, Grouping, and Ordering_DB Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersDataDB(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinPresentationFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/In-Table List with Filtering, Grouping, and Ordering.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/In-Table List with Filtering, Grouping, and Ordering Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersData(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderinginPresentationFormat
                     }
-                    //ExEnd:GenerateCommonMasterDetailinPresentationFormat
-                    break;
-            }
-        }
-
-        
-        public static void GenerateInParagraphList(string strDocumentFormat)
-        {
-            switch (strDocumentFormat)
-            {
-                case "document":
-                    //ExStart:GenerateInParagraphListinDocumentProcessingFormat
-                    //Setting up source document template
-                    const String strDocumentTemplate = "Word Templates/In-Paragraph List.docx";
-                    //Setting up destination document report 
-                    const String strDocumentReport = "Word Reports/In-Paragraph List Report.docx";
-                    try
-                    {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Paragraph List Report in document format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsData(), "products");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
-                    //ExEnd:GenerateInParagraphListinDocumentProcessingFormat
-                    break;
-
-                case "spreadsheet":
-                    //ExStart:GenerateInParagraphListinSpreadsheetFormat
-                    //Setting up source spreadsheet template
-                    const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Paragraph List.xlsx";
-                    //Setting up destination document report 
-                    const String strSpreadsheetReport = "Spreadsheet Reports/In-Paragraph List Report.xlsx";
-                    try
-                    {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Paragraph List Report in spreadsheet format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsData(), "products");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
-                    //ExEnd:GenerateInParagraphListinSpreadsheetFormat
-                    break;
-
-                case "presentation":
-                    //ExStart:GenerateInParagraphListinPresentationFormat
-                    //Setting up source spreadsheet template
-                    const String strPresentationTemplate = "Presentation Templates/In-Paragraph List.pptx";
-                    //Setting up destination document report 
-                    const String strPresentationReport = "Presentation Reports/In-Paragraph List Report.pptx";
-                    try
-                    {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Paragraph List Report in presentation format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsData(), "products");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
-                    //ExEnd:GenerateInParagraphListinPresentationFormat
-                    break;
-            }
-        }
-        public static void GenerateInTableListWithAlternateContent(string strDocumentFormat)
-        {
-            switch (strDocumentFormat)
-            {
-                case "document":
-                    //ExStart:GenerateInTableListWithAlternateContentinDocumentProcessingFormat
-                    //Setting up source document template
-                    const String strDocumentTemplate = "Word Templates/In-Table List with Alternate Content.docx";
-                    //Setting up destination document report 
-                    const String strDocumentReport = "Word Reports/In-Table List with Alternate Content Report.docx";
-                    try
-                    {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table List with Alternate Content Report in document format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
-                    //ExEnd:GenerateInTableListWithAlternateContentinDocumentProcessingFormat
-                    break;
-
-                case "spreadsheet":
-                    //ExStart:GenerateInTableListWithAlternateContentinSpreadsheetFormat
-                    //Setting up source spreadsheet template
-                    const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List with Alternate Content.xlsx";
-                    //Setting up destination document report 
-                    const String strSpreadsheetReport = "Spreadsheet Reports/In-Table List with Alternate Content Report.xlsx";
-                    try
-                    {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table List with Alternate Content Report in spreadsheet format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersData(), "orders");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
-                    //ExEnd:GenerateInTableListWithAlternateContentinSpreadsheetFormat
-                    break;
-
-                case "presentation":
-                    //ExStart:GenerateInTableListWithAlternateContentinPresentationFormat
-                    //Setting up source spreadsheet template
-                    const String strPresentationTemplate = "Presentation Templates/In-Table List with Alternate Content.pptx";
-                    //Setting up destination document report 
-                    const String strPresentationReport = "Presentation Reports/In-Table List with Alternate Content Report.pptx";
-                    try
-                    {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table List with Alternate Content Report in presentation format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersData(), "orders");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
-                    //ExEnd:GenerateInTableListWithAlternateContentinPresentationFormat
-                    break;
-            }
-        }
-        public static void GenerateInTableListWithFilteringGroupingAndOrdering(string strDocumentFormat)
-        {
-            switch (strDocumentFormat)
-            {
-                case "document":
-                    //ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginDocumentProcessingDocument
-                    //Setting up source document template
-                    const String strDocumentTemplate = "Word Templates/In-Table List with Filtering, Grouping, and Ordering.docx";
-                    //Setting up destination document report 
-                    const String strDocumentReport = "Word Reports/In-Table List with Filtering, Grouping, and Ordering Report.docx";
-                    try
-                    {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in document format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
-                    //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderinginDocumentProcessingDocument
-                    break;
-
-                case "spreadsheet":
-                    //ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginSpreadsheetFormat
-                    //Setting up source spreadsheet template
-                    const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List with Filtering, Grouping, and Ordering.xlsx";
-                    //Setting up destination document report 
-                    const String strSpreadsheetReport = "Spreadsheet Reports/In-Table List with Filtering, Grouping, and Ordering Report.xlsx";
-                    try
-                    {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in spreadsheet format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersData(), "orders");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
-                    //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderinginSpreadsheetFormat
-                    break;
-
-                case "presentation":
-                    //ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginPresentationFormat
-                    //Setting up source spreadsheet template
-                    const String strPresentationTemplate = "Presentation Templates/In-Table List with Filtering, Grouping, and Ordering.pptx";
-                    //Setting up destination document report 
-                    const String strPresentationReport = "Presentation Reports/In-Table List with Filtering, Grouping, and Ordering Report.pptx";
-                    try
-                    {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in presentation format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersData(), "orders");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
-                    //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderinginPresentationFormat
-                    break;
-            }
-        }
-
-        
-        public static void GenerateInTableListWithHighlightedRows(string strDocumentFormat)
-        {
-            switch (strDocumentFormat)
-            {
-                case "document":
-                    //ExStart:GenerateInTableListWithHighlightedRowsinDocumentProcessingDocument
-                    //Setting up source document template
-                    const String strDocumentTemplate = "Word Templates/In-Table List with Highlighted Rows.docx";
-                    //Setting up destination document report 
-                    const String strDocumentReport = "Word Reports/In-Table List with Highlighted Rows Report.docx";
-                    try
-                    {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in document format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
-                    //ExEnd:GenerateInTableListWithHighlightedRowsinDocumentProcessingDocument
-                    break;
-
-                case "spreadsheet":
-                    //ExStart:GenerateInTableListWithHighlightedRowsinSpreadsheetDocument
-                    //Setting up source spreadsheet template
-                    const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List with Highlighted Rows.xlsx";
-                    //Setting up destination document report 
-                    const String strSpreadsheetReport = "Spreadsheet Reports/In-Table List with Highlighted Rows Report.xlsx";
-                    try
-                    {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in spreadsheet format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersData(), "orders");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
-                    //ExEnd:GenerateInTableListWithHighlightedRowsinSpreadsheetDocument
-                    break;
-
-                case "presentation":
-                    //ExStart:GenerateInTableListWithHighlightedRowsinPresentationFormat
-                    //Setting up source spreadsheet template
-                    const String strPresentationTemplate = "Presentation Templates/In-Table List with Highlighted Rows.pptx";
-                    //Setting up destination document report 
-                    const String strPresentationReport = "Presentation Reports/In-Table List with Highlighted Rows Report.pptx";
-                    try
-                    {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in presentation format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersData(), "orders");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
-                    //ExEnd:GenerateInTableListWithHighlightedRowsinPresentationFormat
                     break;
             }
         }
 
-        
-        public static void GenerateInTableList(string strDocumentFormat)
+        public static void GenerateInTableListWithHighlightedRows(string strDocumentFormat, bool isDatabase)
         {
             switch (strDocumentFormat)
             {
                 case "document":
-                    //ExStart:GenerateInTableListinDocumentProcessingDocument
-                    //Setting up source document template
-                    const String strDocumentTemplate = "Word Templates/In-Table List.docx";
-                    //Setting up destination document report 
-                    const String strDocumentReport = "Word Reports/In-Table List Report.docx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table List Report in document format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.PopulateData(), "customers");
+                        //ExStart:GenerateInTableListWithHighlightedRowsFromDatabaseinDocumentProcessingDocument
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/In-Table List with Highlighted Rows_DB.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/In-Table List with Highlighted Rows_DB Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersDataDB(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithHighlightedRowsFromDatabaseinDocumentProcessingDocument
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateInTableListWithHighlightedRowsinDocumentProcessingDocument
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/In-Table List with Highlighted Rows.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/In-Table List with Highlighted Rows Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithHighlightedRowsinDocumentProcessingDocument
                     }
-                    //ExEnd:GenerateInTableListinDocumentProcessingDocument
                     break;
 
                 case "spreadsheet":
-                    //ExStart:GenerateInTableListinSpreadsheetFormat
-                    //Setting up source spreadsheet template
-                    const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List.xlsx";
-                    //Setting up destination document report 
-                    const String strSpreadsheetReport = "Spreadsheet Reports/In-Table List Report.xlsx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table List Report in spreadsheet format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.PopulateData(), "customers");
+                        //ExStart:GenerateInTableListWithHighlightedRowsFromDatabaseinSpreadsheetDocument
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List with Highlighted Rows_DB.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/In-Table List with Highlighted Rows_DB Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersDataDB(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithHighlightedRowsFromDatabaseinSpreadsheetDocument
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateInTableListWithHighlightedRowsinSpreadsheetDocument
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List with Highlighted Rows.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/In-Table List with Highlighted Rows Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersData(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithHighlightedRowsinSpreadsheetDocument
                     }
-                    //ExEnd:GenerateInTableListinSpreadsheetFormat
                     break;
 
                 case "presentation":
-                    //ExStart:GenerateInTableListinPresentationFormat
-                    //Setting up source spreadsheet template
-                    const String strPresentationTemplate = "Presentation Templates/In-Table List.pptx";
-                    //Setting up destination document report 
-                    const String strPresentationReport = "Presentation Reports/In-Table List Report.pptx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table List Report in presentation format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.PopulateData(), "customers");
+                        //ExStart:GenerateInTableListWithHighlightedRowsFromDatabaseinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/In-Table List with Highlighted Rows_DB.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/In-Table List with Highlighted Rows_DB Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersDataDB(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithHighlightedRowsFromDatabaseinPresentationFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateInTableListWithHighlightedRowsinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/In-Table List with Highlighted Rows.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/In-Table List with Highlighted Rows Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersData(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithHighlightedRowsinPresentationFormat
                     }
-                    //ExEnd:GenerateInTableListinPresentationFormat
                     break;
             }
         }
 
-        
-        public static void GenerateInTableMasterDetail(string strDocumentFormat)
+        public static void GenerateInTableList(string strDocumentFormat, bool isDatabase)
         {
             switch (strDocumentFormat)
             {
                 case "document":
-                    //ExStart:GenerateInTableMasterDetailinDocumentProcessingFormat
-                    //Setting up source document template
-                    const String strDocumentTemplate = "Word Templates/In-Table Master-Detail.docx";
-                    //Setting up destination document report 
-                    const String strDocumentReport = "Word Reports/In-Table Master-Detail Report.docx";
-                    try
+                    if (true)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table Master-Detail Report in document format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.PopulateData(), "customers");
+                        //ExStart:GenerateInTableListFromDatabaseinDocumentProcessingDocument
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/In-Table List_DB.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/In-Table List_DB Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersDataDB(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListFromDatabaseinDocumentProcessingDocument
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateInTableListinDocumentProcessingDocument
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/In-Table List.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/In-Table List Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.PopulateData(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListinDocumentProcessingDocument
                     }
-                    //ExEnd:GenerateInTableMasterDetailinDocumentProcessingFormat
                     break;
 
                 case "spreadsheet":
-                    //ExStart:GenerateInTableMasterDetailinSpreadsheetFormat
-                    //Setting up source spreadsheet template
-                    const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table Master-Detail.xlsx";
-                    //Setting up destination document report 
-                    const String strSpreadsheetReport = "Spreadsheet Reports/In-Table Master-Detail Report.xlsx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table Master-Detail Report in spreadsheet format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.PopulateData(), "customers");
+                        //ExStart:GenerateInTableListFromDatabaseinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List_DB.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/In-Table List_DB Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomersDataDB(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListFromDatabaseinSpreadsheetFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateInTableListinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/In-Table List Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.PopulateData(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListinSpreadsheetFormat
                     }
-                    //ExEnd:GenerateInTableMasterDetailinSpreadsheetFormat
                     break;
 
                 case "presentation":
-                    //ExStart:GenerateInTableMasterDetailinPresentationFormat
-                    //Setting up source spreadsheet template
-                    const String strPresentationTemplate = "Presentation Templates/In-Table Master-Detail.pptx";
-                    //Setting up destination document report 
-                    const String strPresentationReport = "Presentation Reports/In-Table Master-Detail Report.pptx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table Master-Detail Report in presentation format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.PopulateData(), "customers");
+                        //ExStart:GenerateInTableListFromDatabaseinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/In-Table List_DB.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/In-Table List_DB Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersDataDB(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListFromDatabaseinPresentationFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateInTableListinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/In-Table List.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/In-Table List Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.PopulateData(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListinPresentationFormat
                     }
-                    //ExEnd:GenerateInTableMasterDetailinPresentationFormat
+                    break;
+            }
+        }
+        public static void GenerateInTableMasterDetail(string strDocumentFormat, bool isDatabase)
+        {
+            switch (strDocumentFormat)
+            {
+                case "document":
+                    if (isDatabase)
+                    {
+                        //ExStart:GenerateInTableMasterDetailFromDatabaseinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/In-Table Master-Detail_DB.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/In-Table Master-Detail_DB Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table Master-Detail Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersDataDB(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableMasterDetailFromDatabaseinDocumentProcessingFormat
+                    }
+                    else
+                    {
+                        //ExStart:GenerateInTableMasterDetailinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/In-Table Master-Detail.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/In-Table Master-Detail Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table Master-Detail Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.PopulateData(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableMasterDetailinDocumentProcessingFormat
+                    }
+                    break;
+
+                case "spreadsheet":
+                    if (isDatabase)
+                    {
+                        //ExStart:GenerateInTableMasterDetailFromDatabaseinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table Master-Detail_DB.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/In-Table Master-Detail_DB Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table Master-Detail Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomersDataDB(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableMasterDetailFromDatabaseinSpreadsheetFormat
+                    }
+                    else
+                    {
+                        //ExStart:GenerateInTableMasterDetailinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table Master-Detail.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/In-Table Master-Detail Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table Master-Detail Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.PopulateData(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableMasterDetailinSpreadsheetFormat
+                    }
+                    break;
+
+                case "presentation":
+                    if (isDatabase)
+                    {
+                        //ExStart:GenerateInTableMasterDetailFromDatabaseinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/In-Table Master-Detail_DB.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/In-Table Master-Detail_DB Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table Master-Detail Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersDataDB(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableMasterDetailFromDatabaseinPresentationFormat
+                    }
+                    else
+                    {
+                        //ExStart:GenerateInTableMasterDetailinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/In-Table Master-Detail.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/In-Table Master-Detail Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table Master-Detail Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.PopulateData(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableMasterDetailinPresentationFormat
+                    }
                     break;
             }
         }
 
-        
-        public static void GenerateMulticoloredNumberedList(string strDocumentFormat)
+        public static void GenerateMulticoloredNumberedList(string strDocumentFormat, bool isDatabase)
         {
             switch (strDocumentFormat)
             {
                 case "document":
-                    //ExStart:GenerateMulticoloredNumberedListinDocumentProcessingDocument
-                    //Setting up source document template
-                    const String strDocumentTemplate = "Word Templates/Multicolored Numbered List.docx";
-                    //Setting up destination document report 
-                    const String strDocumentReport = "Word Reports/Multicolored Numbered List Report.docx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Multicolored Numbered List Report in document format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsData(), "products");
+                        //ExStart:GenerateMulticoloredNumberedListFromDatabaseinDocumentProcessingDocument
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Multicolored Numbered List.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Multicolored Numbered List Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Multicolored Numbered List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataDB(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateMulticoloredNumberedListFromDatabaseinDocumentProcessingDocument
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateMulticoloredNumberedListinDocumentProcessingDocument
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Multicolored Numbered List.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Multicolored Numbered List Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Multicolored Numbered List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsData(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateMulticoloredNumberedListinDocumentProcessingDocument
                     }
-                    //ExEnd:GenerateMulticoloredNumberedListinDocumentProcessingDocument
                     break;
 
                 case "spreadsheet":
-                    //ExStart:GenerateMulticoloredNumberedListinSpreadsheetDocument
-                    //Setting up source spreadsheet template
-                    const String strSpreadsheetTemplate = "Spreadsheet Templates/Multicolored Numbered List.xlsx";
-                    //Setting up destination document report 
-                    const String strSpreadsheetReport = "Spreadsheet Reports/Multicolored Numbered List Report.xlsx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Multicolored Numbered List Report in spreadsheet format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsData(), "products");
+                        //ExStart:GenerateMulticoloredNumberedListFromDatabaseinSpreadsheetDocument
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Multicolored Numbered List.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Multicolored Numbered List Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Multicolored Numbered List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsDataDB(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateMulticoloredNumberedListFromDatabaseinSpreadsheetDocument
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateMulticoloredNumberedListinSpreadsheetDocument
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Multicolored Numbered List.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Multicolored Numbered List Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Multicolored Numbered List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsData(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateMulticoloredNumberedListinSpreadsheetDocument
                     }
-                    //ExEnd:GenerateMulticoloredNumberedListinSpreadsheetDocument
                     break;
 
                 case "presentation":
-                    //ExStart:GenerateMulticoloredNumberedListinPresentationFormat
-                    //Setting up source spreadsheet template
-                    const String strPresentationTemplate = "Presentation Templates/Multicolored Numbered List.pptx";
-                    //Setting up destination document report 
-                    const String strPresentationReport = "Presentation Reports/Multicolored Numbered List Report.pptx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Multicolored Numbered List Report in presentation format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsData(), "products");
+                        //ExStart:GenerateMulticoloredNumberedListFromDatabaseinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Multicolored Numbered List.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Multicolored Numbered List Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Multicolored Numbered List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsDataDB(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateMulticoloredNumberedListFromDatabaseinPresentationFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateMulticoloredNumberedListinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Multicolored Numbered List.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Multicolored Numbered List Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Multicolored Numbered List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsData(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateMulticoloredNumberedListinPresentationFormat
                     }
-                    //ExEnd:GenerateMulticoloredNumberedListinPresentationFormat
                     break;
             }
         }
 
-        
-        public static void GenerateNumberedList(string strDocumentFormat)
+        public static void GenerateNumberedList(string strDocumentFormat, bool isDatabase)
         {
             switch (strDocumentFormat)
             {
                 case "document":
-                    //ExStart:GenerateNumberedListinDocumentProcessingFormat
-                    //Setting up source document template
-                    const String strDocumentTemplate = "Word Templates/Numbered List.docx";
-                    //Setting up destination document report 
-                    const String strDocumentReport = "Word Reports/Numbered List Report.docx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Numbered List Report in document format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsData(), "products");
+                        //ExStart:GenerateNumberedListFromDatabaseinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Numbered List.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Numbered List Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Numbered List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataDB(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateNumberedListFromDatabaseinDocumentProcessingFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateNumberedListinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Numbered List.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Numbered List Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Numbered List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsData(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateNumberedListinDocumentProcessingFormat
                     }
-                    //ExEnd:GenerateNumberedListinDocumentProcessingFormat
                     break;
 
                 case "spreadsheet":
-                    //ExStart:GenerateNumberedListinSpreadsheetFormat
-                    //Setting up source spreadsheet template
-                    const String strSpreadsheetTemplate = "Spreadsheet Templates/Numbered List.xlsx";
-                    //Setting up destination document report 
-                    const String strSpreadsheetReport = "Spreadsheet Reports/Numbered List Report.xlsx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Numbered List Report in spreadsheet format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsData(), "products");
+                        //ExStart:GenerateNumberedListFromDatabaseinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Numbered List.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Numbered List Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Numbered List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsDataDB(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateNumberedListFromDatabaseinSpreadsheetFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateNumberedListinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Numbered List.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Numbered List Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Numbered List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsData(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateNumberedListinSpreadsheetFormat
                     }
-                    //ExEnd:GenerateNumberedListinSpreadsheetFormat
                     break;
 
                 case "presentation":
-                    //ExStart:GenerateNumberedListinPresentationFormat
-                    //Setting up source spreadsheet template
-                    const String strPresentationTemplate = "Presentation Templates/Numbered List.pptx";
-                    //Setting up destination document report 
-                    const String strPresentationReport = "Presentation Reports/Numbered List Report.pptx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Numbered List Report in presentation format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsData(), "products");
+                        //ExStart:GenerateNumberedListFromDatabaseinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Numbered List.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Numbered List Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Numbered List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsDataDB(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateNumberedListFromDatabaseinPresentationFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateNumberedListinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Numbered List.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Numbered List Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Numbered List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsData(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateNumberedListinPresentationFormat
                     }
-                    //ExEnd:GenerateNumberedListinPresentationFormat
                     break;
             }
         }
 
-       
-        public static void GeneratePieChart(string strDocumentFormat)
+        public static void GeneratePieChart(string strDocumentFormat, bool isDatabase)
         {
             switch (strDocumentFormat)
             {
                 case "document":
-                    //ExStart:GeneratePieChartinDocumentProcessingFormat
-                    //Setting up source document template
-                    const String strDocumentTemplate = "Word Templates/Pie Chart.docx";
-                    //Setting up destination document report 
-                    const String strDocumentReport = "Word Reports/Pie Chart Report.docx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Pie Chart Report in document format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.PopulateData(), "customers");
+                        //ExStart:GeneratePieChartFromDatabaseinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Pie Chart_DB.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Pie Chart_DB Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Pie Chart Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersDataDB(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GeneratePieChartFromDatabaseinDocumentProcessingFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GeneratePieChartinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Pie Chart.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Pie Chart Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Pie Chart Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.PopulateData(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GeneratePieChartinDocumentProcessingFormat
                     }
-                    //ExEnd:GeneratePieChartinDocumentProcessingFormat
                     break;
 
                 case "spreadsheet":
-                    //ExStart:GeneratePieChartinSpreadsheetFormat
-                    //Setting up source spreadsheet template
-                    const String strSpreadsheetTemplate = "Spreadsheet Templates/Pie Chart.xlsx";
-                    //Setting up destination document report 
-                    const String strSpreadsheetReport = "Spreadsheet Reports/Pie Chart Report.xlsx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Pie Chart Report in spreadsheet format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.PopulateData(), "customers");
+                        //ExStart:GeneratePieChartFromDatabaseinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Pie Chart_DB.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Pie Chart_DB Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Pie Chart Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomersDataDB(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GeneratePieChartFromDatabaseinSpreadsheetFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GeneratePieChartinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Pie Chart.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Pie Chart Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Pie Chart Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.PopulateData(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GeneratePieChartinSpreadsheetFormat
                     }
-                    //ExEnd:GeneratePieChartinSpreadsheetFormat
                     break;
 
                 case "presentation":
-                    //ExStart:GeneratePieChartinPresentationFormat
-                    //Setting up source spreadsheet template
-                    const String strPresentationTemplate = "Presentation Templates/Pie Chart.pptx";
-                    //Setting up destination document report 
-                    const String strPresentationReport = "Presentation Reports/Pie Chart Report.pptx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Pie Chart Report in presentation format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.PopulateData(), "customers");
+                        //ExStart:GeneratePieChartFromDatabaseinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Pie Chart_DB.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Pie Chart_DB Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Pie Chart Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersDataDB(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GeneratePieChartFromDatabaseinPresentationFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GeneratePieChartinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Pie Chart.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Pie Chart Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Pie Chart Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.PopulateData(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GeneratePieChartinPresentationFormat
                     }
-                    //ExEnd:GeneratePieChartinPresentationFormat
                     break;
             }
         }
 
-        
-        public static void GenerateScatterChart(string strDocumentFormat)
+        public static void GenerateScatterChart(string strDocumentFormat, bool isDatabase)
         {
             switch (strDocumentFormat)
             {
                 case "document":
-                    //ExStart:GenerateScatterChartinDocumentProcessingFormat
-                    //Setting up source document template
-                    const String strDocumentTemplate = "Word Templates/Scatter Chart.docx";
-                    //Setting up destination document report 
-                    const String strDocumentReport = "Word Reports/Scatter Chart Report.docx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Scatter Chart Report in document format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders");
+                        //ExStart:GenerateScatterChartFromDatabaseinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Scatter Chart_DB.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Scatter Chart_DB Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Scatter Chart Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersDataDB(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateScatterChartFromDatabaseinDocumentProcessingFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateScatterChartinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Scatter Chart.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Scatter Chart Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Scatter Chart Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateScatterChartinDocumentProcessingFormat
                     }
-                    //ExEnd:GenerateScatterChartinDocumentProcessingFormat
                     break;
 
                 case "spreadsheet":
-                    //ExStart:GenerateScatterChartinSpreadsheetFormat
-                    //Setting up source spreadsheet template
-                    const String strSpreadsheetTemplate = "Spreadsheet Templates/Scatter Chart.xlsx";
-                    //Setting up destination document report 
-                    const String strSpreadsheetReport = "Spreadsheet Reports/Scatter Chart Report.xlsx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Scatter Chart Report in spreadsheet format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersData(), "orders");
+                        //ExStart:GenerateScatterChartFromDatabaseinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Scatter Chart_DB.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Scatter Chart_DB Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Scatter Chart Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersDataDB(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateScatterChartFromDatabaseinSpreadsheetFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateScatterChartinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Scatter Chart.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Scatter Chart Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Scatter Chart Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersData(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateScatterChartinSpreadsheetFormat
                     }
-                    //ExEnd:GenerateScatterChartinSpreadsheetFormat
                     break;
 
                 case "presentation":
-                    //ExStart:GenerateScatterChartinPresentationFormat
-                    //Setting up source spreadsheet template
-                    const String strPresentationTemplate = "Presentation Templates/Scatter Chart.pptx";
-                    //Setting up destination document report 
-                    const String strPresentationReport = "Presentation Reports/Scatter Chart Report.pptx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Scatter Chart Report in presentation format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersData(), "orders");
+                        //ExStart:GenerateScatterChartFromDatabaseinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Scatter Chart_DB.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Scatter Chart_DB Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Scatter Chart Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersDataDB(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateScatterChartFromDatabaseinPresentationFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateScatterChartinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Scatter Chart.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Scatter Chart Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Scatter Chart Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersData(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateScatterChartinPresentationFormat
                     }
-                    //ExEnd:GenerateScatterChartinPresentationFormat
                     break;
             }
         }
 
-        
-        public static void GenerateSingleRow(string strDocumentFormat)
+        public static void GenerateSingleRow(string strDocumentFormat, bool isDatabase)
         {
             switch (strDocumentFormat)
             {
                 case "document":
-                    //ExStart:GenerateSingleRowinDocumentProcessingFormat
-                    //Setting up source document template
-                    const String strDocumentTemplate = "Word Templates/Single Row.docx";
-                    //Setting up destination document report 
-                    const String strDocumentReport = "Word Reports/Single Row Report.docx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Single Row Report in document format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerData(), "customer");
+                        //ExStart:GenerateSingleRowFromDatabaseinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Single Row.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Single Row Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Single Row Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerData(), "customer");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateSingleRowFromDatabaseinDocumentProcessingFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateSingleRowinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Single Row.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Single Row Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Single Row Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerData(), "customer");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateSingleRowinDocumentProcessingFormat
                     }
-                    //ExEnd:GenerateSingleRowinDocumentProcessingFormat
                     break;
 
                 case "spreadsheet":
-                    //ExStart:GenerateSingleRowinSpreadsheetFormat
-                    //Setting up source spreadsheet template
-                    const String strSpreadsheetTemplate = "Spreadsheet Templates/Single Row.xlsx";
-                    //Setting up destination document report 
-                    const String strSpreadsheetReport = "Spreadsheet Reports/Single Row Report.xlsx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Single Row Report in spreadsheet format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomerData(), "customer");
+                        //ExStart:GenerateSingleRowFromDatabaseinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Single Row.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Single Row Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Single Row Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetSingleCustomerData(), "customer");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateSingleRowFromDatabaseinSpreadsheetFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateSingleRowinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Single Row.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Single Row Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Single Row Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomerData(), "customer");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateSingleRowinSpreadsheetFormat
                     }
-                    //ExEnd:GenerateSingleRowinSpreadsheetFormat
                     break;
 
                 case "presentation":
-                    //ExStart:GenerateSingleRowinPresentationFormat
-                    //Setting up source spreadsheet template
-                    const String strPresentationTemplate = "Presentation Templates/Single Row.pptx";
-                    //Setting up destination document report 
-                    const String strPresentationReport = "Presentation Reports/Single Row Report.pptx";
-                    try
+                    if (isDatabase)
                     {
-                        //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Single Row Report in presentation format
-                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomerData(), "customer");
+                        //ExStart:GenerateSingleRowFromDatabaseinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Single Row.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Single Row Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Single Row Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetSingleCustomerData(), "customer");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateSingleRowFromDatabaseinPresentationFormat
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine(ex.Message);
+                        //ExStart:GenerateSingleRowinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Single Row.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Single Row Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Single Row Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomerData(), "customer");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateSingleRowinPresentationFormat
                     }
-                    //ExEnd:GenerateSingleRowinPresentationFormat
                     break;
             }
         }

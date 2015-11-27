@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocs.AssemblyExamples"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocs.AssemblyExamples.BusinessLayer", "CSharp\GroupDocs.AssemblyExamples.BusinessLayer\GroupDocs.AssemblyExamples.BusinessLayer.csproj", "{5984DD10-865D-470E-A963-9FDEF20929AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocs.AssemblyExamples.ProjectBusinessObjects", "CSharp\GroupDocs.AssemblyExamples.ProjectBusinessObjects\GroupDocs.AssemblyExamples.ProjectBusinessObjects.csproj", "{65189345-C620-4736-8D0C-4BC6A25CFDEE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocs.AssemblyExamples.ProjectEntities", "CSharp\GroupDocs.AssemblyExamples.ProjectEntities\GroupDocs.AssemblyExamples.ProjectEntities.csproj", "{65189345-C620-4736-8D0C-4BC6A25CFDEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

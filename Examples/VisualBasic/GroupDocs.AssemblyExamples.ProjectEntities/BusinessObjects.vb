@@ -5,7 +5,7 @@ Imports System.Text
 Imports System.Threading.Tasks
 Imports System.IO
 
-Namespace GroupDocs.AssemblyExamples.ProjectBusinessObjects
+Namespace GroupDocs.AssemblyExamples.ProjectEntities
     Public Class BusinessObjects
         Public Shared imagePath As String = "../../../../Data/Images/"
 
@@ -16,7 +16,7 @@ Namespace GroupDocs.AssemblyExamples.ProjectBusinessObjects
                     Return m_CustomerName
                 End Get
                 Set(value As [String])
-                    m_CustomerName = Value
+                    m_CustomerName = value
                 End Set
             End Property
             Private m_CustomerName As [String]
@@ -25,7 +25,7 @@ Namespace GroupDocs.AssemblyExamples.ProjectBusinessObjects
                     Return m_ShippingAddress
                 End Get
                 Set(value As String)
-                    m_ShippingAddress = Value
+                    m_ShippingAddress = value
                 End Set
             End Property
             Private m_ShippingAddress As String
@@ -34,7 +34,7 @@ Namespace GroupDocs.AssemblyExamples.ProjectBusinessObjects
                     Return m_CustomerContactNumber
                 End Get
                 Set(value As String)
-                    m_CustomerContactNumber = Value
+                    m_CustomerContactNumber = value
                 End Set
             End Property
             Private m_CustomerContactNumber As String
@@ -43,7 +43,7 @@ Namespace GroupDocs.AssemblyExamples.ProjectBusinessObjects
                     Return m_Order
                 End Get
                 Set(value As IEnumerable(Of Order))
-                    m_Order = Value
+                    m_Order = value
                 End Set
             End Property
             Private m_Order As IEnumerable(Of Order)
@@ -61,7 +61,7 @@ Namespace GroupDocs.AssemblyExamples.ProjectBusinessObjects
                     Return m_Customer
                 End Get
                 Set(value As Customer)
-                    m_Customer = Value
+                    m_Customer = value
                 End Set
             End Property
             Private m_Customer As Customer
@@ -70,7 +70,7 @@ Namespace GroupDocs.AssemblyExamples.ProjectBusinessObjects
                     Return m_Product
                 End Get
                 Set(value As Product)
-                    m_Product = Value
+                    m_Product = value
                 End Set
             End Property
             Private m_Product As Product
@@ -79,7 +79,7 @@ Namespace GroupDocs.AssemblyExamples.ProjectBusinessObjects
                     Return m_ProductQuantity
                 End Get
                 Set(value As Integer)
-                    m_ProductQuantity = Value
+                    m_ProductQuantity = value
                 End Set
             End Property
             Private m_ProductQuantity As Integer
@@ -88,7 +88,7 @@ Namespace GroupDocs.AssemblyExamples.ProjectBusinessObjects
                     Return m_Price
                 End Get
                 Set(value As Integer)
-                    m_Price = Value
+                    m_Price = value
                 End Set
             End Property
             Private m_Price As Integer
@@ -97,7 +97,7 @@ Namespace GroupDocs.AssemblyExamples.ProjectBusinessObjects
                     Return m_OrderDate
                 End Get
                 Set(value As DateTime)
-                    m_OrderDate = Value
+                    m_OrderDate = value
                 End Set
             End Property
             Private m_OrderDate As DateTime
@@ -106,7 +106,7 @@ Namespace GroupDocs.AssemblyExamples.ProjectBusinessObjects
                     Return m_OrderNumber
                 End Get
                 Set(value As Integer)
-                    m_OrderNumber = Value
+                    m_OrderNumber = value
                 End Set
             End Property
             Private m_OrderNumber As Integer
@@ -115,7 +115,7 @@ Namespace GroupDocs.AssemblyExamples.ProjectBusinessObjects
                     Return m_ShippingDate
                 End Get
                 Set(value As DateTime)
-                    m_ShippingDate = Value
+                    m_ShippingDate = value
                 End Set
             End Property
             Private m_ShippingDate As DateTime
@@ -127,7 +127,7 @@ Namespace GroupDocs.AssemblyExamples.ProjectBusinessObjects
                     Return m_ProductName
                 End Get
                 Set(value As String)
-                    m_ProductName = Value
+                    m_ProductName = value
                 End Set
             End Property
             Private m_ProductName As String
@@ -136,7 +136,7 @@ Namespace GroupDocs.AssemblyExamples.ProjectBusinessObjects
                     Return m_UnitInStock
                 End Get
                 Set(value As Integer)
-                    m_UnitInStock = Value
+                    m_UnitInStock = value
                 End Set
             End Property
             Private m_UnitInStock As Integer
@@ -145,7 +145,7 @@ Namespace GroupDocs.AssemblyExamples.ProjectBusinessObjects
                     Return m_Discount
                 End Get
                 Set(value As Integer)
-                    m_Discount = Value
+                    m_Discount = value
                 End Set
             End Property
             Private m_Discount As Integer
@@ -154,7 +154,7 @@ Namespace GroupDocs.AssemblyExamples.ProjectBusinessObjects
                     Return m_ProductPrice
                 End Get
                 Set(value As String)
-                    m_ProductPrice = Value
+                    m_ProductPrice = value
                 End Set
             End Property
             Private m_ProductPrice As String
