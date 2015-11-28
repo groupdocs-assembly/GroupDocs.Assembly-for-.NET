@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace GroupDocs.AssemblyExamples.BusinessLayer
 {
+    //ExStart:CommonUtilities
     public class CommonUtilities
     {
 
@@ -52,4 +53,5 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         }
         #endregion
     }
+    //ExEnd:CommonUtilities
 }

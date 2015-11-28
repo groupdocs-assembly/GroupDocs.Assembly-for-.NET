@@ -11,13 +11,14 @@ Namespace GroupDocs.AssemblyExamples
     Module Module1
 
         Sub Main()
+            'ExStart:ApplyingLicense
             '*
             '             *  Applying product license
             '             *  Please uncomment the statement if you do have license.
             '             
 
             'CommonUtilities.ApplyLicense()
-
+            'ExEnd:ApplyingLicense
 
             '#Region "Generating Bubble Chart Report"
             'Generate a bubble chart report in document processing format
@@ -181,7 +182,7 @@ Namespace GroupDocs.AssemblyExamples
             'GenerateReport.GenerateScatterChart("spreadsheet", true)
 
             'Generate a Scatter Chart Report in presentation format
-            GenerateReport.GenerateScatterChart("presentation", True)
+            'GenerateReport.GenerateScatterChart("presentation", True)
             '#End Region
 
             '#Region "Generating Single Row Report"
@@ -192,7 +193,7 @@ Namespace GroupDocs.AssemblyExamples
             GenerateReport.GenerateSingleRow("spreadsheet", True)
 
             'Generate a Single Row Report in presentation format
-            GenerateReport.GenerateSingleRow("presentation", True)
+            'GenerateReport.GenerateSingleRow("presentation", True)
             '#End Region
 
 
