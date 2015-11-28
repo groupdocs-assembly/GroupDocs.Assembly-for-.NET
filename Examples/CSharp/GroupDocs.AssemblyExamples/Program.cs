@@ -12,11 +12,13 @@ namespace GroupDocs.AssemblyExamples
     {
         static void Main(string[] args)
         {
+            //ExStart:ApplyingLicense
             /**
              *  Applying product license
              *  Please uncomment the statement if you do have license.
              */
             //CommonUtilities.ApplyLicense();
+            //ExEnd:ApplyingLicense
 
             #region Generating Bubble Chart Report
             //Generate a bubble chart report in document processing format
@@ -122,7 +124,7 @@ namespace GroupDocs.AssemblyExamples
             //GenerateReport.GenerateInTableList("document", true);
 
             //Generate a In-Table List Report in spreadsheet format
-            GenerateReport.GenerateInTableList("spreadsheet", false);
+            //GenerateReport.GenerateInTableList("spreadsheet", false);
 
             //Generate a In-Table List Report in presentation format
             //GenerateReport.GenerateInTableList("presentation", true);
@@ -155,7 +157,7 @@ namespace GroupDocs.AssemblyExamples
             //GenerateReport.GenerateNumberedList("document", true);
 
             //Generate a Numbered List Report in spreadsheet format
-            //GenerateReport.GenerateNumberedList("spreadsheet", true);
+            GenerateReport.GenerateNumberedList("spreadsheet", true);
 
             //Generate a Numbered List Report in presentation format
             //GenerateReport.GenerateNumberedList("presentation", true);
@@ -185,7 +187,7 @@ namespace GroupDocs.AssemblyExamples
             
             #region Generating Single Row Report
             //Generate a Single Row Report in document processing format
-            //GenerateReport.GenerateSingleRow("document", true);
+            GenerateReport.GenerateSingleRow("document", false);
 
             //Generate a Single Row Report in spreadsheet format
             //GenerateReport.GenerateSingleRow("spreadsheet", true);

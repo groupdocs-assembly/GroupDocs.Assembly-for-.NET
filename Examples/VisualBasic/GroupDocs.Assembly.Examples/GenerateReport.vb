@@ -1615,7 +1615,7 @@ Namespace GroupDocs.AssemblyExamples
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'Call AssembleDocument to generate Single Row Report in document format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerData(), "customer")
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerDataDB(), "customer")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateSingleRowFromDatabaseinDocumentProcessingFormat
@@ -1649,7 +1649,7 @@ Namespace GroupDocs.AssemblyExamples
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'Call AssembleDocument to generate Single Row Report in spreadsheet format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetSingleCustomerData(), "customer")
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetSingleCustomerDataDB(), "customer")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateSingleRowFromDatabaseinSpreadsheetFormat
@@ -1683,7 +1683,7 @@ Namespace GroupDocs.AssemblyExamples
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'Call AssembleDocument to generate Single Row Report in presentation format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetSingleCustomerData(), "customer")
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetSingleCustomerDataDB(), "customer")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateSingleRowFromDatabaseinPresentationFormat

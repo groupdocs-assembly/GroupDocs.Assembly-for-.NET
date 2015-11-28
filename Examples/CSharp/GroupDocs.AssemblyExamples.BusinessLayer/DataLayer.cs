@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace GroupDocs.AssemblyExamples.BusinessLayer
 {
+    //ExStart:DataLayer
     public static class DataLayer
     {
+        
         #region DataInitialization
         //ExStart:PopulateData
         /// <summary>
@@ -168,4 +170,5 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         //ExEnd:GetSingleCustomerDataDB
         #endregion
     }
+    //ExEnd:DataLayer
 }

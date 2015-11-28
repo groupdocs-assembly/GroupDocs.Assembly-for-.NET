@@ -7,6 +7,7 @@ Imports System.Text
 Imports System.Threading.Tasks
 
 Namespace GroupDocs.AssemblyExamples.BusinessLayer
+    'ExStart:CommonUtilities
     Public Class CommonUtilities
 
         Public Const sourceFolderPath As String = "../../../../Data/Source/"
@@ -49,6 +50,7 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
 
 #End Region
     End Class
+    'ExEnd:CommonUtilities
 End Namespace
 
 

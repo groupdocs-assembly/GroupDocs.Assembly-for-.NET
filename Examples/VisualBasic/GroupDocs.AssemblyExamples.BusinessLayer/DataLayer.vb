@@ -7,6 +7,7 @@ Imports GroupDocs.AssemblyExamples.ProjectBusinessObjects.GroupDocs.AssemblyExam
 
 
 Namespace GroupDocs.AssemblyExamples.BusinessLayer
+    'ExStart:DataLayer
     Public NotInheritable Class DataLayer
         Private Sub New()
         End Sub
@@ -189,6 +190,7 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         'ExEnd:GetSingleCustomerDataDB
 #End Region
     End Class
+    'ExEnd:DataLayer
 End Namespace
 
 

@@ -2051,7 +2051,7 @@ namespace GroupDocs.AssemblyExamples
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
                             //Call AssembleDocument to generate Single Row Report in document format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerData(), "customer");
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerDataDB(), "customer");
                         }
                         catch (Exception ex)
                         {
@@ -2094,7 +2094,7 @@ namespace GroupDocs.AssemblyExamples
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
                             //Call AssembleDocument to generate Single Row Report in spreadsheet format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomerData(), "customer");
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetSingleCustomerDataDB(), "customer");
                         }
                         catch (Exception ex)
                         {
@@ -2137,7 +2137,7 @@ namespace GroupDocs.AssemblyExamples
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
                             //Call AssembleDocument to generate Single Row Report in presentation format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomerData(), "customer");
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetSingleCustomerDataDB(), "customer");
                         }
                         catch (Exception ex)
                         {
