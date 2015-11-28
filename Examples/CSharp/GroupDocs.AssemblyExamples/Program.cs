@@ -20,13 +20,13 @@ namespace GroupDocs.AssemblyExamples
 
             #region Generating Bubble Chart Report
             //Generate a bubble chart report in document processing format
-            GenerateReport.GenerateBubbleChart("document", false);
+            //GenerateReport.GenerateBubbleChart("document", false);
 
             //Generate a Bulleted List report in spreadsheet format
-            GenerateReport.GenerateBubbleChart("spreadsheet", false);
+            //GenerateReport.GenerateBubbleChart("spreadsheet", false);
 
             //Generate a Bulleted List report in presentation format
-            GenerateReport.GenerateBubbleChart("presentation", false);
+            //GenerateReport.GenerateBubbleChart("presentation", false);
             #endregion
             
             #region Generating Bulleted List Report
@@ -42,7 +42,7 @@ namespace GroupDocs.AssemblyExamples
             
             #region Generating Chart report with Filtering, Grouping, and Ordering
             //Generate a Chart report with Filtering, Grouping, and Ordering in document processing format
-            GenerateReport.GenerateChartWithFilteringGroupingAndOrdering("document", true);
+            //GenerateReport.GenerateChartWithFilteringGroupingAndOrdering("document", true);
 
             //Generate a Chart report with Filtering, Grouping, and Ordering in spreadsheet format
             //GenerateReport.GenerateChartWithFilteringGroupingAndOrdering("spreadsheet", true);
@@ -122,7 +122,7 @@ namespace GroupDocs.AssemblyExamples
             //GenerateReport.GenerateInTableList("document", true);
 
             //Generate a In-Table List Report in spreadsheet format
-            //GenerateReport.GenerateInTableList("spreadsheet", true);
+            GenerateReport.GenerateInTableList("spreadsheet", false);
 
             //Generate a In-Table List Report in presentation format
             //GenerateReport.GenerateInTableList("presentation", true);
