@@ -85,7 +85,6 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         {
             IEnumerator<BusinessObjects.Customer> customer = PopulateData().GetEnumerator();
             customer.MoveNext();
-
             return customer.Current;
         }
         //ExEnd:GetSingleCustomerData
@@ -103,10 +102,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
             DatabaseEntitiesDataContext dbEntities = new DatabaseEntitiesDataContext();
             var orders = from c in dbEntities.Orders
                          select c;
-            foreach (Order order in orders)
-            {
-                yield return order;
-            }
+            return dbEntities.Orders;
         }
         //ExEnd:GetOrdersDataDB
         #endregion
@@ -124,10 +120,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
             //get products' list...
             var Products = from c in dbEntities.Products
                            select c;
-            foreach (Product product in Products)
-            {
-                yield return product;
-            }
+            return dbEntities.Products;
         }
         //ExEnd:GetProductsDataDB
         #endregion
@@ -145,10 +138,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
             //get products' list...
             var customers = from c in dbEntities.Customers
                             select c;
-            foreach (Customer customer in customers)
-            {
-                yield return customer;
-            }
+            return dbEntities.Customers;
         }
         //ExEnd:GetCustomersDataDB
         #endregion

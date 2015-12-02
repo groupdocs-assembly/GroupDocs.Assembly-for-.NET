@@ -43,6 +43,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #endregion
 
         #region ProductLicense
+        //ExStart:ApplyLicense
         /// <summary>
         /// Set product's license
         /// </summary>
@@ -51,6 +52,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
             License lic = new License();
             lic.SetLicense(licensePath);
         }
+        //ExEnd:ApplyLicense
         #endregion
     }
     //ExEnd:CommonUtilities
