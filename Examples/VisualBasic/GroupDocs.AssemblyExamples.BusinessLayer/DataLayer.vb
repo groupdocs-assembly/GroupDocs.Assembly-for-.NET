@@ -121,19 +121,18 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         'ExEnd:GetSingleCustomerData
 #End Region
 
+
 #Region "GetOrdersDataDB"
         'ExStart:GetOrdersDataDB
         ''' <summary>
         ''' Fetches orders from database
         ''' </summary>
         ''' <returns>Returns order details, one data at a time</returns>
-        Public Shared Iterator Function GetOrdersDataDB() As IEnumerable(Of Order)
+        Public Shared Function GetOrdersDataDB() As IEnumerable(Of Order)
             'create object of data context
             Dim dbEntities As New DatabaseEntitiesDataContext()
             Dim orders = From c In dbEntities.Orders
-            For Each order As Order In orders
-                Yield order
-            Next
+            Return dbEntities.Orders
         End Function
         'ExEnd:GetOrdersDataDB
 #End Region
@@ -144,17 +143,16 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         ''' Fetches products from database 
         ''' </summary>
         ''' <returns>Returns products information, one data at a time </returns>
-        Public Shared Iterator Function GetProductsDataDB() As IEnumerable(Of Product)
+        Public Shared Function GetProductsDataDB() As IEnumerable(Of Product)
             'create object of data context
             Dim dbEntities As New DatabaseEntitiesDataContext()
             'get products' list...
             Dim Products = From c In dbEntities.Products
-            For Each product As Product In Products
-                Yield product
-            Next
+            Return dbEntities.Products
         End Function
         'ExEnd:GetProductsDataDB
 #End Region
+
 
 #Region "GetCustomersDataDB"
         'ExStart:GetCustomersDataDB
@@ -162,14 +160,12 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         ''' Fetches customers from database
         ''' </summary>
         ''' <returns>Returns customers information, one data at a time</returns>
-        Public Shared Iterator Function GetCustomersDataDB() As IEnumerable(Of Customer)
+        Public Shared Function GetCustomersDataDB() As IEnumerable(Of Customer)
             'create object of data context
             Dim dbEntities As New DatabaseEntitiesDataContext()
             'get products' list...
             Dim customers = From c In dbEntities.Customers
-            For Each customer As Customer In customers
-                Yield customer
-            Next
+            Return dbEntities.Customers
         End Function
         'ExEnd:GetCustomersDataDB
 #End Region

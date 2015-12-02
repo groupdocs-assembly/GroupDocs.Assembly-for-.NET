@@ -38,7 +38,7 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
 #End Region
 
 #Region "ProductLicense"
-
+        'ExStart:ApplyLicense
         ''' <summary>
         ''' Set product's license
         ''' </summary>
@@ -47,7 +47,7 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
             Dim lic As New License()
             lic.SetLicense(licensePath)
         End Sub
-
+        'ExEnd:ApplyLicense
 #End Region
     End Class
     'ExEnd:CommonUtilities
