@@ -22,13 +22,13 @@ Namespace GroupDocs.AssemblyExamples
 
             '#Region "Generating Bubble Chart Report"
             'Generate a bubble chart report in document processing format
-            'GenerateReport.GenerateBubbleChart("document", False)
+            GenerateReport.GenerateBubbleChart("document", False)
 
             'Generate a Bulleted List report in spreadsheet format
-            'GenerateReport.GenerateBubbleChart("spreadsheet", False)
+            GenerateReport.GenerateBubbleChart("spreadsheet", False)
 
             'Generate a Bulleted List report in presentation format
-            'GenerateReport.GenerateBubbleChart("presentation", False)
+            GenerateReport.GenerateBubbleChart("presentation", False)
             '#End Region
 
             '#Region "Generating Bulleted List Report"
