@@ -132,7 +132,7 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
             'create object of data context
             Dim dbEntities As New DatabaseEntitiesDataContext()
             Dim orders = From c In dbEntities.Orders
-            Return dbEntities.Orders
+            Return orders
         End Function
         'ExEnd:GetOrdersDataDB
 #End Region
@@ -147,8 +147,8 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
             'create object of data context
             Dim dbEntities As New DatabaseEntitiesDataContext()
             'get products' list...
-            Dim Products = From c In dbEntities.Products
-            Return dbEntities.Products
+            Dim products = From c In dbEntities.Products
+            Return products
         End Function
         'ExEnd:GetProductsDataDB
 #End Region
@@ -165,7 +165,7 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
             Dim dbEntities As New DatabaseEntitiesDataContext()
             'get products' list...
             Dim customers = From c In dbEntities.Customers
-            Return dbEntities.Customers
+            Return customers
         End Function
         'ExEnd:GetCustomersDataDB
 #End Region

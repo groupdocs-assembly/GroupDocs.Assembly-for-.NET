@@ -102,7 +102,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
             DatabaseEntitiesDataContext dbEntities = new DatabaseEntitiesDataContext();
             var orders = from c in dbEntities.Orders
                          select c;
-            return dbEntities.Orders;
+            return orders;
         }
         //ExEnd:GetOrdersDataDB
         #endregion
@@ -118,9 +118,9 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
             //create object of data context
             DatabaseEntitiesDataContext dbEntities = new DatabaseEntitiesDataContext();
             //get products' list...
-            var Products = from c in dbEntities.Products
+            var products = from c in dbEntities.Products
                            select c;
-            return dbEntities.Products;
+            return products;
         }
         //ExEnd:GetProductsDataDB
         #endregion
@@ -138,7 +138,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
             //get products' list...
             var customers = from c in dbEntities.Customers
                             select c;
-            return dbEntities.Customers;
+            return customers;
         }
         //ExEnd:GetCustomersDataDB
         #endregion
