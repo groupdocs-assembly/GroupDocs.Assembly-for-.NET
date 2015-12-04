@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace GroupDocs.AssemblyExamples.BusinessLayer
 {
@@ -100,9 +101,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         {
             //create object of data context
             DatabaseEntitiesDataContext dbEntities = new DatabaseEntitiesDataContext();
-            var orders = from c in dbEntities.Orders
-                         select c;
-            return orders;
+            return dbEntities.Orders;
         }
         //ExEnd:GetOrdersDataDB
         #endregion
@@ -117,10 +116,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         {
             //create object of data context
             DatabaseEntitiesDataContext dbEntities = new DatabaseEntitiesDataContext();
-            //get products' list...
-            var products = from c in dbEntities.Products
-                           select c;
-            return products;
+            return dbEntities.Products;
         }
         //ExEnd:GetProductsDataDB
         #endregion
@@ -135,10 +131,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         {
             //create object of data context
             DatabaseEntitiesDataContext dbEntities = new DatabaseEntitiesDataContext();
-            //get products' list...
-            var customers = from c in dbEntities.Customers
-                            select c;
-            return customers;
+            return dbEntities.Customers;
         }
         //ExEnd:GetCustomersDataDB
         #endregion

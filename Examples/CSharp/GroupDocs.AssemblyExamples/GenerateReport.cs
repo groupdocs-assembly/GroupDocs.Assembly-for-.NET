@@ -58,7 +58,6 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateBubbleChartinDocumentProcessingFormat
                     }
-
                     break;
 
                 case "spreadsheet":

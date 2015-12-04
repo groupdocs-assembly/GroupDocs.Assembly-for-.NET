@@ -131,8 +131,7 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         Public Shared Function GetOrdersDataDB() As IEnumerable(Of Order)
             'create object of data context
             Dim dbEntities As New DatabaseEntitiesDataContext()
-            Dim orders = From c In dbEntities.Orders
-            Return orders
+            Return dbEntities.Orders
         End Function
         'ExEnd:GetOrdersDataDB
 #End Region
@@ -146,13 +145,10 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         Public Shared Function GetProductsDataDB() As IEnumerable(Of Product)
             'create object of data context
             Dim dbEntities As New DatabaseEntitiesDataContext()
-            'get products' list...
-            Dim products = From c In dbEntities.Products
-            Return products
+            Return dbEntities.Products
         End Function
         'ExEnd:GetProductsDataDB
 #End Region
-
 
 #Region "GetCustomersDataDB"
         'ExStart:GetCustomersDataDB
@@ -163,9 +159,7 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         Public Shared Function GetCustomersDataDB() As IEnumerable(Of Customer)
             'create object of data context
             Dim dbEntities As New DatabaseEntitiesDataContext()
-            'get products' list...
-            Dim customers = From c In dbEntities.Customers
-            Return customers
+            Return dbEntities.Customers
         End Function
         'ExEnd:GetCustomersDataDB
 #End Region
@@ -185,6 +179,7 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         End Function
         'ExEnd:GetSingleCustomerDataDB
 #End Region
+
     End Class
     'ExEnd:DataLayer
 End Namespace
