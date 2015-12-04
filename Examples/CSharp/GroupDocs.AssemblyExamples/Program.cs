@@ -22,7 +22,7 @@ namespace GroupDocs.AssemblyExamples
 
             #region Generating Bubble Chart Report
             //Generate a bubble chart report in document processing format
-            //GenerateReport.GenerateBubbleChart("document", true);
+            GenerateReport.GenerateBubbleChart("document", true);
 
             //Generate a Bulleted List report in spreadsheet format
             //GenerateReport.GenerateBubbleChart("spreadsheet", true);
@@ -165,10 +165,10 @@ namespace GroupDocs.AssemblyExamples
             
             #region Generating Pie Chart Report
             //Generate a Pie Chart Report in document processing format
-            //GenerateReport.GeneratePieChart("document", true);
+            GenerateReport.GeneratePieChart("document", true);
             
             //Generate a Pie Chart Report in spreadsheet format
-            //GenerateReport.GeneratePieChart("spreadsheet", true);
+            GenerateReport.GeneratePieChart("spreadsheet", true);
 
             //Generate a Pie Chart Report in presentation format
             //GenerateReport.GeneratePieChart("presentation", true);
