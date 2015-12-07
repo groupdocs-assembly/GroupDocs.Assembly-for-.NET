@@ -11,7 +11,6 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
     //ExStart:DataLayer
     public static class DataLayer
     {
-        
         #region DataInitialization
         //ExStart:PopulateData
         /// <summary>
@@ -151,6 +150,100 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
             return customer.Current;
         }
         //ExEnd:GetSingleCustomerDataDB
+        #endregion
+
+        #region GetProductsDataDT
+        //ExStart:GetProductsDataDT
+        /// <summary>
+        /// Fetches Products and ProductOrders information, store them in DataTables and load DataTable to DataSet
+        /// </summary>
+        /// <returns>Returns DataSet</returns>
+        public static DataSet GetProductsDT()
+        {
+            DatabaseEntitiesDataContext dbEntities = new DatabaseEntitiesDataContext();
+            var products = (from c in dbEntities.Products
+                            select c).AsEnumerable();
+            var productOrders = (from c in dbEntities.ProductOrders
+                                 select c).AsEnumerable();
+            DataTable Products = new DataTable();
+            //ToADOTable function converts DataBase table into DataTable
+            Products = products.ToADOTable(rec => new object[] { products });
+            DataTable ProductOrders = new DataTable();
+            ProductOrders = productOrders.ToADOTable(rec => new object[] { productOrders });
+            ProductOrders.TableName = "ProductOrder";
+            Products.TableName = "products";
+            DataSet dataSet = new DataSet();
+            //Adding DataTable in DataSet
+            dataSet.Tables.Add(Products);
+            dataSet.Tables.Add(ProductOrders);
+            return dataSet;
+        }
+        //ExEnd:GetProductsDataDT
+        #endregion
+
+        #region GetSingleCustomerDataDT
+        //ExStart:GetSingleCustomerDT
+        /// <summary>
+        /// Fetches Customers from database
+        /// </summary>
+        /// <returns>Returns DataSet, very first record from the table</returns>
+        public static DataRow GetSingleCustomerDT()
+        {
+            DatabaseEntitiesDataContext dbEntities = new DatabaseEntitiesDataContext();
+            var customers = (from c in dbEntities.Customers
+                             select new
+                             {
+                                 c.CustomerID,
+                                 c.CustomerName,
+                                 c.ShippingAddress,
+                                 c.CustomerContactNumber,
+                                 c.Photo
+                             }).AsEnumerable();
+            DataTable Customers = new DataTable();
+            //ToADOTable function converts DataBase table into DataTable
+            Customers = customers.ToADOTable(rec => new object[] { customers });
+            Customers.TableName = "Customers";
+            DataSet dataSet = new DataSet();
+            //Adding DataTable in DataSet
+            dataSet.Tables.Add(Customers);
+            return dataSet.Tables["Customers"].Rows[0];
+        }
+        //ExEnd:GetSingleCustomerDT
+        #endregion
+
+        #region GetCustomersAndOrdersDataDT
+        //ExStart:GetCustomersAndOrdersDataDT
+        /// <summary>
+        /// Fetches Orders, ProductOrders and Customers from database
+        /// </summary>
+        /// <returns>Returns DataSet</returns>
+        public static DataSet GetCustomersAndOrdersDataDT()
+        {
+            DatabaseEntitiesDataContext dbEntities = new DatabaseEntitiesDataContext();
+            var orders = (from c in dbEntities.Orders
+                          select c).AsEnumerable();
+            var productOrders = (from c in dbEntities.ProductOrders
+                                 select c).AsEnumerable();
+            var customers = (from c in dbEntities.Customers
+                             select c).AsEnumerable();
+            DataTable Orders = new DataTable();
+            //ToADOTable function converts DataBase table into DataTable
+            Orders = orders.ToADOTable(rec => new object[] { orders });
+            DataTable ProductOrders = new DataTable();
+            ProductOrders = productOrders.ToADOTable(rec => new object[] { productOrders });
+            DataTable Customers = new DataTable();
+            Customers = customers.ToADOTable(rec => new object[] { customers });
+            ProductOrders.TableName = "ProductOrder";
+            Orders.TableName = "Orders";
+            Customers.TableName = "Customers";
+            DataSet dataSet = new DataSet();
+            //Adding DataTable in DataSet
+            dataSet.Tables.Add(Orders);
+            dataSet.Tables.Add(ProductOrders);
+            dataSet.Tables.Add(Customers);
+            return dataSet;
+        }
+        //ExEnd:GetCustomersAndOrdersDataDT
         #endregion
     }
     //ExEnd:DataLayer

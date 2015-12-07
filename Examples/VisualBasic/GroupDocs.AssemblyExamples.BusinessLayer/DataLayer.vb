@@ -4,6 +4,7 @@ Imports System.Text
 Imports System.Threading.Tasks
 Imports GroupDocs.AssemblyExamples.ProjectBusinessObjects
 Imports GroupDocs.AssemblyExamples.ProjectBusinessObjects.GroupDocs.AssemblyExamples.ProjectEntities
+Imports System.Reflection
 
 
 Namespace GroupDocs.AssemblyExamples.BusinessLayer
@@ -180,7 +181,96 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         'ExEnd:GetSingleCustomerDataDB
 #End Region
 
+
+#Region "GetSingleCustomerDataDT"
+        'ExStart:GetSingleCustomerDT
+        ''' <summary>
+        ''' Fetches Customers from database
+        ''' </summary>
+        ''' <returns>Returns DataSet, very first record from the table</returns>
+        Public Shared Function GetSingleCustomerDT() As DataRow
+            Dim dbEntities As New DatabaseEntitiesDataContext()
+            Dim customersQuery = (From c In dbEntities.Customers Select New With { _
+        c.CustomerID, _
+        c.CustomerName, _
+        c.ShippingAddress, _
+        c.CustomerContactNumber, _
+        c.Photo _
+    }).AsEnumerable()
+            Dim Customers As New DataTable()
+            'ToADOTable function converts DataBase table into DataTable
+            Customers = customersQuery.ToADOTable(Function(rec) New Object() {customersQuery})
+            Customers.TableName = "Customers"
+            Dim dataSet As New DataSet()
+            'Adding DataTable in DataSet
+            dataSet.Tables.Add(Customers)
+            Return dataSet.Tables("Customers").Rows(0)
+        End Function
+        'ExEnd:GetSingleCustomerDT
+#End Region
+
+
+
+
+#Region "GetCustomersAndOrdersDataDT"
+        'ExStart:GetCustomersAndOrdersDataDT
+        ''' <summary>
+        ''' Fetches Orders, ProductOrders and Customers from database
+        ''' </summary>
+        ''' <returns>Returns DataSet</returns>
+        Public Shared Function GetCustomersAndOrdersDataDT() As DataSet
+            Dim dbEntities As New DatabaseEntitiesDataContext()
+            Dim ordersQuery = (From c In dbEntities.Orders).AsEnumerable()
+            Dim productOrdersQuery = (From c In dbEntities.ProductOrders).AsEnumerable()
+            Dim customersQuery = (From c In dbEntities.Customers).AsEnumerable()
+            Dim Orders As New DataTable()
+            'ToADOTable function converts DataBase table into DataTable
+            Orders = ordersQuery.ToADOTable(Function(rec) New Object() {ordersQuery})
+            Dim ProductOrders As New DataTable()
+            ProductOrders = productOrdersQuery.ToADOTable(Function(rec) New Object() {productOrdersQuery})
+            Dim Customers As New DataTable()
+            Customers = customersQuery.ToADOTable(Function(rec) New Object() {customersQuery})
+            ProductOrders.TableName = "ProductOrder"
+            Orders.TableName = "Orders"
+            Customers.TableName = "Customers"
+            Dim dataSet As New DataSet()
+            'Adding DataTable in DataSet
+            dataSet.Tables.Add(Orders)
+            dataSet.Tables.Add(ProductOrders)
+            dataSet.Tables.Add(Customers)
+            Return dataSet
+        End Function
+        'ExEnd:GetCustomersAndOrdersDataDT
+#End Region
+
+#Region "GetProductsDataDT"
+        'ExStart:GetProductsDataDT
+        ''' <summary>
+        ''' Fetches Products and ProductOrders information, store them in DataTables and load DataTable to DataSet
+        ''' </summary>
+        ''' <returns>Returns DataSet</returns>
+        Public Shared Function GetProductsDT() As DataSet
+            Dim dbEntities As New DatabaseEntitiesDataContext()
+            Dim productsQuery = (From c In dbEntities.Products).AsEnumerable()
+            Dim productOrdersQuery = (From c In dbEntities.ProductOrders).AsEnumerable()
+            Dim Products As New DataTable()
+            'ToADOTable function converts DataBase table into DataTable
+            Products = productsQuery.ToADOTable(Function(rec) New Object() {productsQuery})
+            Dim ProductOrders As New DataTable()
+            ProductOrders = productOrdersQuery.ToADOTable(Function(rec) New Object() {productOrdersQuery})
+            ProductOrders.TableName = "ProductOrder"
+            Products.TableName = "products"
+            Dim dataSet As New DataSet()
+            'Adding DataTable in DataSet
+            dataSet.Tables.Add(Products)
+            dataSet.Tables.Add(ProductOrders)
+            Return dataSet
+        End Function
+        'ExEnd:GetProductsDataDT
+#End Region
+
     End Class
+   
     'ExEnd:DataLayer
 End Namespace
 
