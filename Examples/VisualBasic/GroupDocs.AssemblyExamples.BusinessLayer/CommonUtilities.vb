@@ -5,6 +5,7 @@ Imports System.IO
 Imports System.Linq
 Imports System.Text
 Imports System.Threading.Tasks
+Imports System.Reflection
 
 Namespace GroupDocs.AssemblyExamples.BusinessLayer
     'ExStart:CommonUtilities
@@ -49,7 +50,50 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         End Sub
         'ExEnd:ApplyLicense
 #End Region
+
     End Class
+    Module module2
+#Region "ToADOTable"
+        'ExStart:ConvertToDataTable
+        ''' <summary>
+        ''' It takes delegate as parameter and varlist IEnumberable
+        ''' </summary>
+        ''' <typeparam name="T">Template</typeparam>
+        ''' <param name="varlist">IEnumerable varlist</param>
+        ''' <param name="fn">Delegate as parameter</param>
+        ''' <returns></returns>
+        <System.Runtime.CompilerServices.Extension> _
+        Public Function ToADOTable(Of T)(varlist As IEnumerable(Of T), fn As ConvertDataTable.CreateRowDelegate(Of T)) As DataTable
+            Dim dtReturn As New DataTable()
+            Dim oProps As PropertyInfo() = Nothing
+            For Each rec As T In varlist
+                If oProps Is Nothing Then
+                    oProps = DirectCast(rec.[GetType](), Type).GetProperties()
+                    For Each pi As PropertyInfo In oProps
+                        Dim colType As Type = pi.PropertyType
+                        If (colType.IsGenericType) AndAlso (colType.GetGenericTypeDefinition() = GetType(Nullable(Of ))) Then
+                            colType = colType.GetGenericArguments()(0)
+                        End If
+                        dtReturn.Columns.Add(New DataColumn(pi.Name, colType))
+                    Next
+                End If
+                Dim dr As DataRow = dtReturn.NewRow()
+                For Each pi As PropertyInfo In oProps
+                    dr(pi.Name) = If(pi.GetValue(rec, Nothing) Is Nothing, DBNull.Value, pi.GetValue(rec, Nothing))
+                Next
+                dtReturn.Rows.Add(dr)
+            Next
+            Return (dtReturn)
+        End Function
+        'ExEnd:ConvertToDataTable
+#End Region
+
+        Public NotInheritable Class ConvertDataTable
+            Private Sub New()
+            End Sub
+            Public Delegate Function CreateRowDelegate(Of T)(t As T) As Object()
+        End Class
+    End Module
     'ExEnd:CommonUtilities
 End Namespace
 
