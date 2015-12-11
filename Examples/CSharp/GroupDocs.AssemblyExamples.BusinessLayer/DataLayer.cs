@@ -5,12 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.IO;
 
 namespace GroupDocs.AssemblyExamples.BusinessLayer
 {
     //ExStart:DataLayer
     public static class DataLayer
     {
+        public const string productXMLfile = "../../../../Data/XML DataSource/Products.xml";
+        public const string customerXMLfile = "../../../../Data/XML DataSource/Customers.xml";
+        public const string orderXMLfile = "../../../../Data/XML DataSource/Orders.xml";
+        public const string productOrderXMLfile = "../../../../Data/XML DataSource/ProductOrders.xml";
+
         #region DataInitialization
         //ExStart:PopulateData
         /// <summary>
@@ -166,7 +172,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
             var productOrders = (from c in dbEntities.ProductOrders
                                  select c).AsEnumerable();
             DataTable Products = new DataTable();
-            //ToADOTable function converts DataBase table into DataTable
+            //ToADOTable function converts query results into DataTable
             Products = products.ToADOTable(rec => new object[] { products });
             DataTable ProductOrders = new DataTable();
             ProductOrders = productOrders.ToADOTable(rec => new object[] { productOrders });
@@ -200,7 +206,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
                                  c.Photo
                              }).AsEnumerable();
             DataTable Customers = new DataTable();
-            //ToADOTable function converts DataBase table into DataTable
+            //ToADOTable function converts query results into DataTable
             Customers = customers.ToADOTable(rec => new object[] { customers });
             Customers.TableName = "Customers";
             DataSet dataSet = new DataSet();
@@ -227,7 +233,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
             var customers = (from c in dbEntities.Customers
                              select c).AsEnumerable();
             DataTable Orders = new DataTable();
-            //ToADOTable function converts DataBase table into DataTable
+            //ToADOTable function converts query results into DataTable
             Orders = orders.ToADOTable(rec => new object[] { orders });
             DataTable ProductOrders = new DataTable();
             ProductOrders = productOrders.ToADOTable(rec => new object[] { productOrders });
@@ -244,6 +250,96 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
             return dataSet;
         }
         //ExEnd:GetCustomersAndOrdersDataDT
+        #endregion
+
+        #region GetAllDataFromXML
+        //ExStart:GetAllDataXML
+        /// <summary>
+        /// Fetches the data from the XML files and store data in the DataSet
+        /// </summary>
+        /// <returns>Returns the DataSet</returns>
+        public static DataSet GetAllDataFromXML()
+        {
+            try
+            {
+                DataSet tempDs = new DataSet();
+                DataSet mainDs = new DataSet();
+
+
+                System.IO.FileStream fsReadXml = new System.IO.FileStream(customerXMLfile, System.IO.FileMode.Open);
+
+                tempDs.ReadXml(fsReadXml, XmlReadMode.ReadSchema);
+                tempDs.Tables[0].TableName = "Customers";
+
+                mainDs.Merge(tempDs.Tables[0]);
+                tempDs = new DataSet();
+
+                fsReadXml = new System.IO.FileStream(orderXMLfile, System.IO.FileMode.Open);
+
+                tempDs.ReadXml(fsReadXml, XmlReadMode.ReadSchema);
+                tempDs.Tables[0].TableName = "Orders";
+
+                mainDs.Merge(tempDs.Tables[0]);
+                tempDs = new DataSet();
+
+                fsReadXml = new System.IO.FileStream(productOrderXMLfile, System.IO.FileMode.Open);
+
+                tempDs.ReadXml(fsReadXml, XmlReadMode.ReadSchema);
+                tempDs.Tables[0].TableName = "ProductOrders";
+
+                mainDs.Merge(tempDs.Tables[0]);
+                tempDs = new DataSet();
+
+                fsReadXml = new System.IO.FileStream(productXMLfile, System.IO.FileMode.Open);
+
+                tempDs.ReadXml(fsReadXml, XmlReadMode.ReadSchema);
+                tempDs.Tables[0].TableName = "Product";
+
+                mainDs.Merge(tempDs.Tables[0]);
+
+                //Defining relations between the tables
+                DataColumn productColumn, orderColumn, customerColumn, customerOrderColumn, productProductIDColumn, productOrderProductIDColumn;
+                orderColumn = mainDs.Tables["Orders"].Columns["OrderID"];
+                productColumn = mainDs.Tables["ProductOrders"].Columns["OrderID"];
+                customerColumn = mainDs.Tables["Customers"].Columns["CustomerID"];
+                customerOrderColumn = mainDs.Tables["Orders"].Columns["CustomerID"];
+
+                productOrderProductIDColumn = mainDs.Tables["ProductOrders"].Columns["ProductID"];
+                productProductIDColumn = mainDs.Tables["Product"].Columns["ProductID"];
+
+                DataRelation dr2 = new DataRelation("Customer_Orders", customerColumn, customerOrderColumn);
+                mainDs.Relations.Add(dr2);
+                DataRelation dr = new DataRelation("Order_ProductOrders", orderColumn, productColumn);
+                mainDs.Relations.Add(dr);
+                DataRelation dr3 = new DataRelation("Product_ProductOrders", productProductIDColumn, productOrderProductIDColumn);
+                mainDs.Relations.Add(dr3);
+                return mainDs;
+            }
+            catch
+            { 
+                return null; 
+            }
+        }
+        //ExEnd:GetAllDataXML
+        #endregion
+
+        #region GetSingleRowXML
+        //ExStart:GetSingleCustomerXML
+        /// <summary>
+        /// Fetches information from the xml file and add it to the DataSet
+        /// </summary>
+        /// <returns>Returns DataSet, first record from the table</returns>
+        public static DataRow GetSingleCustomerXML()
+        {
+            DataSet singleCustomer = new DataSet();
+
+            FileStream readProductXML = new FileStream(customerXMLfile, FileMode.Open);
+            singleCustomer.ReadXml(readProductXML, XmlReadMode.ReadSchema);
+            singleCustomer.Tables[0].TableName = "Customers";
+
+            return singleCustomer.Tables["Customers"].Rows[0];
+        }
+        //ExEnd:GetSingleCustomerXML
         #endregion
     }
     //ExEnd:DataLayer

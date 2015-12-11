@@ -1,0 +1,54 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Products" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Products">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Discount" type="xs:double" minOccurs="0" />
+                <xs:element name="ProductID" type="xs:long" minOccurs="0" />
+                <xs:element name="ProductName" type="xs:string" minOccurs="0" />
+                <xs:element name="ProductPrice" type="xs:double" minOccurs="0" />
+                <xs:element name="UnitsInStock" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1">
+        <xs:selector xpath=".//Products" />
+        <xs:field xpath="ProductID" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <Products>
+    <Discount>0</Discount>
+    <ProductID>1</ProductID>
+    <ProductName>LG Nexus 5</ProductName>
+    <ProductPrice>350</ProductPrice>
+    <UnitsInStock>5</UnitsInStock>
+  </Products>
+  <Products>
+    <Discount>10</Discount>
+    <ProductID>2</ProductID>
+    <ProductName>Nokia Lumia 5801</ProductName>
+    <ProductPrice>250</ProductPrice>
+    <UnitsInStock>10</UnitsInStock>
+  </Products>
+  <Products>
+    <Discount>0</Discount>
+    <ProductID>3</ProductID>
+    <ProductName>Huawie Mate S</ProductName>
+    <ProductPrice>400</ProductPrice>
+    <UnitsInStock>8</UnitsInStock>
+  </Products>
+  <Products>
+    <Discount>0</Discount>
+    <ProductID>4</ProductID>
+    <ProductName>Moto Style</ProductName>
+    <ProductPrice>355</ProductPrice>
+    <UnitsInStock>5</UnitsInStock>
+  </Products>
+</NewDataSet>

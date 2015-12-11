@@ -12,9 +12,8 @@ namespace GroupDocs.AssemblyExamples
     public static class GenerateReport
     {
 
-        public static void GenerateBubbleChart(string strDocumentFormat, bool isDatabase, bool isDataSet)
+        public static void GenerateBubbleChart(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
         {
-
             switch (strDocumentFormat)
             {
                 case "document":
@@ -57,6 +56,27 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateBubbleChartFromDataSetinDocumentProcessingFormat
+                    }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateBubbleChartFromXMLinDocumentProcessingFormat
+                        //setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Bubble Chart_DB.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Bubble Chart_XML Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Bubble Chart Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateBubbleChartFromXMLinDocumentProcessingFormat
+                        
                     }
                     else
                     {
@@ -121,6 +141,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateBubbleChartFromDataSetinSpreadsheetFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateBubbleChartFromXMLinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Bubble Chart_DB.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Bubble Chart_XML Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Bubble Chart Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateBubbleChartFromXMLinSpreadsheetFormat
+                    }
                     else
                     {
                         //ExStart:GenerateBubbleChartinSpreadsheetFormat
@@ -184,6 +224,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateBubbleChartFromDataSetinPresentationFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateBubbleChartFromXMLinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Bubble Chart_DB.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Bubble Chart_XML Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Bubble Chart Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersAndOrdersDataDT());
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateBubbleChartFromXMLinPresentationFormat
+                    }
                     else
                     {
                         //ExStart:GenerateBubbleChartinPresentationFormat
@@ -207,7 +267,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateBulletedList(string strDocumentFormat, bool isDatabase, bool isDataSet)
+        public static void GenerateBulletedList(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
         {
             switch (strDocumentFormat)
             {
@@ -234,7 +294,7 @@ namespace GroupDocs.AssemblyExamples
                     }
                     else if (isDataSet)
                     {
-                         //ExStart:GenerateBulletedListFromDataSetinDocumentProcessingFormat
+                        //ExStart:GenerateBulletedListFromDataSetinDocumentProcessingFormat
                         //Setting up source document template
                         const String strDocumentTemplate = "Word Templates/Bulleted List.docx";
                         //Setting up destination document report 
@@ -251,6 +311,26 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateBulletedListFromDataSetinDocumentProcessingFormat
+                    }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateBulletedListFromXMLinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Bulleted List_XML.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Bulleted List_XML Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Bulleted List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateBulletedListFromXMLinDocumentProcessingFormat
                     }
                     else
                     {
@@ -315,6 +395,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateBulletedListFromDataSetinSpreadsheetFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateBulletedListFromXMLinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Bulleted List_XML.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Bulleted List_XML Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Bulleted List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateBulletedListFromXMLinSpreadsheetFormat
+                    }
                     else
                     {
                         //ExStart:GenerateBulletedListinSpreadsheetFormat
@@ -378,6 +478,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateBulletedListFromDataSetinPresentationFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateBulletedListFromXMLinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Bulleted List_XML.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Bulleted List_XML Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Bulleted List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateBulletedListFromXMLinPresentationFormat
+                    }
                     else
                     {
                         //ExStart:GenerateBulletedListinPresentationFormat
@@ -401,7 +521,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateChartWithFilteringGroupingAndOrdering(string strDocumentFormat, bool isDatabase, bool isDataSet)
+        public static void GenerateChartWithFilteringGroupingAndOrdering(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
         {
             switch (strDocumentFormat)
             {
@@ -445,6 +565,26 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinDocumentProcessingFormat
+                    }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateChartWithFilteringGroupingAndOrderingFromXMLinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Chart with Filtering, Grouping, and Ordering_XML.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Chart with Filtering, Grouping, and Ordering_XML Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromXMLinDocumentProcessingFormat
                     }
                     else
                     {
@@ -491,7 +631,7 @@ namespace GroupDocs.AssemblyExamples
                     }
                     else if (isDataSet)
                     {
-                         //ExStart:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinSpreadsheetFormat
+                        //ExStart:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinSpreadsheetFormat
                         //Setting up source spreadsheet template
                         const String strSpreadsheetTemplate = "Spreadsheet Templates/Chart with Filtering, Grouping, and Ordering_DB.xlsx";
                         //Setting up destination document report 
@@ -508,6 +648,26 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinSpreadsheetFormat
+                    }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateChartWithFilteringGroupingAndOrderingFromXMLinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Chart with Filtering, Grouping, and Ordering_XML.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Chart with Filtering, Grouping, and Ordering_XML Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromXMLinSpreadsheetFormat
                     }
                     else
                     {
@@ -572,6 +732,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinPresentationFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateChartWithFilteringGroupingAndOrderingFromXMLinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Chart with Filtering, Grouping, and Ordering_XML.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Chart with Filtering, Grouping, and Ordering_XML Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromXMLinPresentationFormat
+                    }
                     else
                     {
                         //ExStart:GenerateChartWithFilteringGroupingAndOrderinginPresentationFormat
@@ -595,7 +775,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateCommonList(string strDocumentFormat, bool isDatabase, bool isDataSet)
+        public static void GenerateCommonList(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
         {
             switch (strDocumentFormat)
             {
@@ -639,6 +819,26 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateCommonListFromDataSetinDocumentProcessingFormat
+                    }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateCommonListFromXMLinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Common List.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Common List_XML Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Common List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateCommonListFromXMLinDocumentProcessingFormat
                     }
                     else
                     {
@@ -685,7 +885,7 @@ namespace GroupDocs.AssemblyExamples
                     }
                     else if (isDataSet)
                     {
-                         //ExStart:GenerateCommonListFromDataSetinSpreadsheetFormat
+                        //ExStart:GenerateCommonListFromDataSetinSpreadsheetFormat
                         //Setting up source spreadsheet template
                         const String strSpreadsheetTemplate = "Spreadsheet Templates/Common List.xlsx";
                         //Setting up destination document report 
@@ -702,6 +902,26 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateCommonListFromDataSetinSpreadsheetFormat
+                    }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateCommonListFromXMLinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Common List.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Common List_XML Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Common List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateCommonListFromXMLinSpreadsheetFormat
                     }
                     else
                     {
@@ -766,6 +986,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateCommonListFromDataSetinPresentationFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateCommonListFromXMLinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Common List.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Common List_XML Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Common List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateCommonListFromXMLinPresentationFormat
+                    }
                     else
                     {
                         //ExStart:GenerateCommonListinPresentationFormat
@@ -789,7 +1029,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateCommonMasterDetail(string strDocumentFormat, bool isDatabase, bool isDataSet)
+        public static void GenerateCommonMasterDetail(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
         {
             switch (strDocumentFormat)
             {
@@ -833,6 +1073,26 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateCommonMasterDetailFromDataSetinDocumentProcessingFormat
+                    }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateCommonMasterDetailFromXMLinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Common Master-Detail_DB.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Common Master-Detail_XML Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Common Master-Detail Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateCommonMasterDetailFromXMLinDocumentProcessingFormat
                     }
                     else
                     {
@@ -897,6 +1157,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateCommonMasterDetailFromDataSetinSpreadsheetFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateCommonMasterDetailFromXMLinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Common Master-Detail_DB.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Common Master-Detail_XML Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Common List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateCommonMasterDetailFromXMLinSpreadsheetFormat
+                    }
                     else
                     {
                         //ExStart:GenerateCommonMasterDetailinSpreadsheetFormat
@@ -960,6 +1240,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateCommonMasterDetailFromDataSetinPresentationFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateCommonMasterDetailFromXMLinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Common Master-Detail_DB.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Common Master-Detail_XML Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Common List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersAndOrdersDataDT());
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateCommonMasterDetailFromXMLinPresentationFormat
+                    }
                     else
                     {
                         //ExStart:GenerateCommonMasterDetailinPresentationFormat
@@ -983,7 +1283,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateInParagraphList(string strDocumentFormat, bool isDatabase, bool isDataSet)
+        public static void GenerateInParagraphList(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
         {
             switch (strDocumentFormat)
             {
@@ -1027,6 +1327,26 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateInParagraphListFromDataSetinDocumentProcessingFormat
+                    }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateInParagraphListFromXMLinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/In-Paragraph List_XML.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/In-Paragraph List_XML Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Paragraph List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInParagraphListFromXMLinDocumentProcessingFormat
                     }
                     else
                     {
@@ -1091,6 +1411,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInParagraphListFromDataSetinSpreadsheetFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateInParagraphListFromXMLinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Paragraph List_XML.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/In-Paragraph List_XML Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Paragraph List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInParagraphListFromXMLinSpreadsheetFormat
+                    }
                     else
                     {
                         //ExStart:GenerateInParagraphListinSpreadsheetFormat
@@ -1154,6 +1494,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInParagraphListFromDataSetinPresentationFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateInParagraphListFromXMLinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/In-Paragraph List_XML.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/In-Paragraph List_XML Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Paragraph List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInParagraphListFromXMLinPresentationFormat
+                    }
                     else
                     {
                         //ExStart:GenerateInParagraphListinPresentationFormat
@@ -1177,7 +1537,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateInTableListWithAlternateContent(string strDocumentFormat, bool isDatabase, bool isDataSet)
+        public static void GenerateInTableListWithAlternateContent(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
         {
             switch (strDocumentFormat)
             {
@@ -1221,6 +1581,26 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateInTableListWithAlternateContentFromDataSetinDocumentProcessingFormat
+                    }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateInTableListWithAlternateContentFromXMLinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/In-Table List with Alternate Content_XML.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/In-Table List with Alternate Content_XML Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithAlternateContentFromXMLinDocumentProcessingFormat
                     }
                     else
                     {
@@ -1285,6 +1665,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInTableListWithAlternateContentFromDataSetinSpreadsheetFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateInTableListWithAlternateContentFromXMLinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List with Alternate Content_XML.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/In-Table List with Alternate Content_XML Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithAlternateContentFromXMLinSpreadsheetFormat
+                    }
                     else
                     {
                         //ExStart:GenerateInTableListWithAlternateContentinSpreadsheetFormat
@@ -1348,6 +1748,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInTableListWithAlternateContentFromDataSetinPresentationFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateInTableListWithAlternateContentFromXMLinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/In-Table List with Alternate Content_XML.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/In-Table List with Alternate Content_XML Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithAlternateContentFromXMLinPresentationFormat
+                    }
                     else
                     {
                         //ExStart:GenerateInTableListWithAlternateContentinPresentationFormat
@@ -1371,7 +1791,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateInTableListWithFilteringGroupingAndOrdering(string strDocumentFormat, bool isDatabase, bool isDataSet)
+        public static void GenerateInTableListWithFilteringGroupingAndOrdering(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
         {
             switch (strDocumentFormat)
             {
@@ -1415,6 +1835,26 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinDocumentProcessingDocument
+                    }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinDocumentProcessingDocument
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/In-Table List with Filtering, Grouping, and Ordering_XML.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/In-Table List with Filtering, Grouping, and Ordering_XML Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "dS");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinDocumentProcessingDocument
                     }
                     else
                     {
@@ -1479,6 +1919,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinSpreadsheetFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List with Filtering, Grouping, and Ordering_XML.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/In-Table List with Filtering, Grouping, and Ordering_XML Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinSpreadsheetFormat
+                    }
                     else
                     {
                         //ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginSpreadsheetFormat
@@ -1542,6 +2002,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinPresentationFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/In-Table List with Filtering, Grouping, and Ordering_XML.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/In-Table List with Filtering, Grouping, and Ordering_XML Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinPresentationFormat
+                    }
                     else
                     {
                         //ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginPresentationFormat
@@ -1565,7 +2045,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateInTableListWithHighlightedRows(string strDocumentFormat, bool isDatabase, bool isDataSet)
+        public static void GenerateInTableListWithHighlightedRows(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
         {
             switch (strDocumentFormat)
             {
@@ -1609,6 +2089,26 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateInTableListWithHighlightedRowsFromDataSetinDocumentProcessingDocument
+                    }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateInTableListWithHighlightedRowsFromXMLinDocumentProcessingDocument
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/In-Table List with Highlighted Rows_XML.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/In-Table List with Highlighted Rows_XML Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithHighlightedRowsFromXMLinDocumentProcessingDocument
                     }
                     else
                     {
@@ -1673,6 +2173,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInTableListWithHighlightedRowsFromDataSetinSpreadsheetDocument
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateInTableListWithHighlightedRowsFromXMLinSpreadsheetDocument
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List with Highlighted Rows_XML.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/In-Table List with Highlighted Rows_XML Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithHighlightedRowsFromXMLinSpreadsheetDocument
+                    }
                     else
                     {
                         //ExStart:GenerateInTableListWithHighlightedRowsinSpreadsheetDocument
@@ -1736,6 +2256,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInTableListWithHighlightedRowsFromDataSetinPresentationFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateInTableListWithHighlightedRowsFromXMLinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/In-Table List with Highlighted Rows_XML.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/In-Table List with Highlighted Rows_XML Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithHighlightedRowsFromXMLinPresentationFormat
+                    }
                     else
                     {
                         //ExStart:GenerateInTableListWithHighlightedRowsinPresentationFormat
@@ -1759,7 +2299,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateInTableList(string strDocumentFormat, bool isDatabase, bool isDataSet)
+        public static void GenerateInTableList(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
         {
             switch (strDocumentFormat)
             {
@@ -1803,6 +2343,26 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateInTableListFromDataSetinDocumentProcessingDocument
+                    }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateInTableListFromXMLinDocumentProcessingDocument
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/In-Table List_XML.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/In-Table List_XML Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListFromXMLinDocumentProcessingDocument
                     }
                     else
                     {
@@ -1867,6 +2427,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInTableListFromDataSetinSpreadsheetFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateInTableListFromXMLinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List_XML.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/In-Table List_XML Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListFromXMLinSpreadsheetFormat
+                    }
                     else
                     {
                         //ExStart:GenerateInTableListinSpreadsheetFormat
@@ -1930,6 +2510,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInTableListFromDataSetinPresentationFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateInTableListFromXMLinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/In-Table List_XML.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/In-Table List_XML Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListFromXMLinPresentationFormat
+                    }
                     else
                     {
                         //ExStart:GenerateInTableListinPresentationFormat
@@ -1953,7 +2553,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateInTableMasterDetail(string strDocumentFormat, bool isDatabase, bool isDataSet)
+        public static void GenerateInTableMasterDetail(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
         {
             switch (strDocumentFormat)
             {
@@ -1997,6 +2597,26 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateInTableMasterDetailFromDataSetinDocumentProcessingFormat
+                    }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateInTableMasterDetailFromXMLinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/In-Table Master-Detail_XML.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/In-Table Master-Detail_XML Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table Master-Detail Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableMasterDetailFromXMLinDocumentProcessingFormat
                     }
                     else
                     {
@@ -2061,6 +2681,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInTableMasterDetailFromDataSetinSpreadsheetFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateInTableMasterDetailFromXMLinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table Master-Detail_XML.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/In-Table Master-Detail_XML Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table Master-Detail Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableMasterDetailFromXMLinSpreadsheetFormat
+                    }
                     else
                     {
                         //ExStart:GenerateInTableMasterDetailinSpreadsheetFormat
@@ -2124,6 +2764,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInTableMasterDetailFromDataSetinPresentationFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateInTableMasterDetailFromXMLinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/In-Table Master-Detail_XML.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/In-Table Master-Detail_XML Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table Master-Detail Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableMasterDetailFromXMLinPresentationFormat
+                    }
                     else
                     {
                         //ExStart:GenerateInTableMasterDetailinPresentationFormat
@@ -2147,7 +2807,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateMulticoloredNumberedList(string strDocumentFormat, bool isDatabase, bool isDataSet)
+        public static void GenerateMulticoloredNumberedList(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
         {
             switch (strDocumentFormat)
             {
@@ -2191,6 +2851,26 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateMulticoloredNumberedListFromDataSetinDocumentProcessingDocument
+                    }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateMulticoloredNumberedListFromXMLinDocumentProcessingDocument
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Multicolored Numbered List_XML.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Multicolored Numbered List_XML Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Multicolored Numbered List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateMulticoloredNumberedListFromXMLinDocumentProcessingDocument
                     }
                     else
                     {
@@ -2255,6 +2935,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateMulticoloredNumberedListFromDataSetinSpreadsheetDocument
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateMulticoloredNumberedListFromXMLinSpreadsheetDocument
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Multicolored Numbered List_XML.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Multicolored Numbered List_XML Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Multicolored Numbered List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateMulticoloredNumberedListFromXMLinSpreadsheetDocument
+                    }
                     else
                     {
                         //ExStart:GenerateMulticoloredNumberedListinSpreadsheetDocument
@@ -2318,6 +3018,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateMulticoloredNumberedListFromDataSetinPresentationFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateMulticoloredNumberedListFromXMLinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Multicolored Numbered List_XML.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Multicolored Numbered List_XML Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Multicolored Numbered List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateMulticoloredNumberedListFromXMLinPresentationFormat
+                    }
                     else
                     {
                         //ExStart:GenerateMulticoloredNumberedListinPresentationFormat
@@ -2341,7 +3061,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateNumberedList(string strDocumentFormat, bool isDatabase, bool isDataSet)
+        public static void GenerateNumberedList(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
         {
             switch (strDocumentFormat)
             {
@@ -2385,6 +3105,26 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateNumberedListFromDataSetinDocumentProcessingFormat 
+                    }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateNumberedListFromXMLinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Numbered List_XML.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Numbered List_XML Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Numbered List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateNumberedListFromXMLinDocumentProcessingFormat 
                     }
                     else
                     {
@@ -2449,6 +3189,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateNumberedListFromDataSetinSpreadsheetFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateNumberedListFromXMLinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Numbered List_XML.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Numbered List_XML Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Numbered List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateNumberedListFromXMLinSpreadsheetFormat
+                    }
                     else
                     {
                         //ExStart:GenerateNumberedListinSpreadsheetFormat
@@ -2512,6 +3272,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateNumberedListFromDataSetinPresentationFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateNumberedListFromXMLinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Numbered List_XML.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Numbered List_XML Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Numbered List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateNumberedListFromXMLinPresentationFormat
+                    }
                     else
                     {
                         //ExStart:GenerateNumberedListinPresentationFormat
@@ -2535,7 +3315,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GeneratePieChart(string strDocumentFormat, bool isDatabase, bool isDataSet)
+        public static void GeneratePieChart(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
         {
             switch (strDocumentFormat)
             {
@@ -2579,6 +3359,26 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GeneratePieChartFromDataSetinDocumentProcessingFormat
+                    }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GeneratePieChartFromXMLinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Pie Chart_DB.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Pie Chart_XML Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Pie Chart Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GeneratePieChartFromXMLinDocumentProcessingFormat
                     }
                     else
                     {
@@ -2643,6 +3443,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GeneratePieChartFromDataSetinSpreadsheetFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GeneratePieChartFromXMLinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Pie Chart_DB.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Pie Chart_XML Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Pie Chart Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GeneratePieChartFromXMLinSpreadsheetFormat
+                    }
                     else
                     {
                         //ExStart:GeneratePieChartinSpreadsheetFormat
@@ -2706,6 +3526,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GeneratePieChartFromDataSetinPresentationFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GeneratePieChartFromXMLinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Pie Chart_DB.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Pie Chart_XML Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Pie Chart Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GeneratePieChartFromXMLinPresentationFormat
+                    }
                     else
                     {
                         //ExStart:GeneratePieChartinPresentationFormat
@@ -2729,7 +3569,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateScatterChart(string strDocumentFormat, bool isDatabase, bool isDataSet)
+        public static void GenerateScatterChart(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
         {
             switch (strDocumentFormat)
             {
@@ -2773,6 +3613,26 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateScatterChartFromDataSetinDocumentProcessingFormat
+                    }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateScatterChartFromXMLinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Scatter Chart_DB.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Scatter Chart_XML Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Scatter Chart Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateScatterChartFromXMLinDocumentProcessingFormat
                     }
                     else
                     {
@@ -2837,6 +3697,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateScatterChartFromDataSetinSpreadsheetFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateScatterChartFromXMLinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Scatter Chart_DB.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Scatter Chart_XML Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Scatter Chart Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateScatterChartFromXMLinSpreadsheetFormat
+                    }
                     else
                     {
                         //ExStart:GenerateScatterChartinSpreadsheetFormat
@@ -2900,6 +3780,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateScatterChartFromDataSetinPresentationFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateScatterChartFromXMLinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Scatter Chart_DB.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Scatter Chart_XML Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Scatter Chart Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateScatterChartFromXMLinPresentationFormat
+                    }
                     else
                     {
                         //ExStart:GenerateScatterChartinPresentationFormat
@@ -2923,7 +3823,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateSingleRow(string strDocumentFormat, bool isDatabase, bool isDataSet)
+        public static void GenerateSingleRow(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
         {
             switch (strDocumentFormat)
             {
@@ -2967,6 +3867,26 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateSingleRowFromDataSetinDocumentProcessingFormat
+                    }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateSingleRowFromXMLinDocumentProcessingFormat
+                        //Setting up source document template
+                        const String strDocumentTemplate = "Word Templates/Single Row.docx";
+                        //Setting up destination document report 
+                        const String strDocumentReport = "Word Reports/Single Row_XML Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Single Row Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerXML(), "customer");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateSingleRowFromXMLinDocumentProcessingFormat
                     }
                     else
                     {
@@ -3031,6 +3951,26 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateSingleRowFromDataSetinSpreadsheetFormat
                     }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateSingleRowFromXMLinSpreadsheetFormat
+                        //Setting up source spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/Single Row.xlsx";
+                        //Setting up destination document report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/Single Row_XML Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Single Row Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetSingleCustomerXML(), "customer");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateSingleRowFromXMLinSpreadsheetFormat
+                    }
                     else
                     {
                         //ExStart:GenerateSingleRowinSpreadsheetFormat
@@ -3093,6 +4033,26 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateSingleRowFromDataSetinPresentationFormat
+                    }
+                    else if (isDataSourceXML)
+                    {
+                        //ExStart:GenerateSingleRowFromXMLinPresentationFormat
+                        //Setting up source spreadsheet template
+                        const String strPresentationTemplate = "Presentation Templates/Single Row.pptx";
+                        //Setting up destination document report 
+                        const String strPresentationReport = "Presentation Reports/Single Row_XML Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Single Row Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetSingleCustomerXML(), "customer");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateSingleRowFromXMLinPresentationFormat
                     }
                     else
                     {
