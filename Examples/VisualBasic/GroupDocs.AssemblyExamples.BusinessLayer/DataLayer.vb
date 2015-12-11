@@ -5,6 +5,7 @@ Imports System.Threading.Tasks
 Imports GroupDocs.AssemblyExamples.ProjectBusinessObjects
 Imports GroupDocs.AssemblyExamples.ProjectBusinessObjects.GroupDocs.AssemblyExamples.ProjectEntities
 Imports System.Reflection
+Imports System.IO
 
 
 Namespace GroupDocs.AssemblyExamples.BusinessLayer
@@ -12,6 +13,13 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
     Public NotInheritable Class DataLayer
         Private Sub New()
         End Sub
+
+        Public Const productXMLfile As String = "../../../../Data/XML DataSource/Products.xml"
+        Public Const customerXMLfile As String = "../../../../Data/XML DataSource/Customers.xml"
+        Public Const orderXMLfile As String = "../../../../Data/XML DataSource/Orders.xml"
+        Public Const productOrderXMLfile As String = "../../../../Data/XML DataSource/ProductOrders.xml"
+
+
 #Region "DataInitialization"
         'ExStart:PopulateData
         ''' <summary>
@@ -122,7 +130,6 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         'ExEnd:GetSingleCustomerData
 #End Region
 
-
 #Region "GetOrdersDataDB"
         'ExStart:GetOrdersDataDB
         ''' <summary>
@@ -181,7 +188,6 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         'ExEnd:GetSingleCustomerDataDB
 #End Region
 
-
 #Region "GetSingleCustomerDataDT"
         'ExStart:GetSingleCustomerDT
         ''' <summary>
@@ -198,7 +204,7 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         c.Photo _
     }).AsEnumerable()
             Dim Customers As New DataTable()
-            'ToADOTable function converts DataBase table into DataTable
+            'ToADOTable function converts query results into DataTable
             Customers = customersQuery.ToADOTable(Function(rec) New Object() {customersQuery})
             Customers.TableName = "Customers"
             Dim dataSet As New DataSet()
@@ -208,9 +214,6 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         End Function
         'ExEnd:GetSingleCustomerDT
 #End Region
-
-
-
 
 #Region "GetCustomersAndOrdersDataDT"
         'ExStart:GetCustomersAndOrdersDataDT
@@ -224,7 +227,7 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
             Dim productOrdersQuery = (From c In dbEntities.ProductOrders).AsEnumerable()
             Dim customersQuery = (From c In dbEntities.Customers).AsEnumerable()
             Dim Orders As New DataTable()
-            'ToADOTable function converts DataBase table into DataTable
+            'ToADOTable function converts query results into DataTable
             Orders = ordersQuery.ToADOTable(Function(rec) New Object() {ordersQuery})
             Dim ProductOrders As New DataTable()
             ProductOrders = productOrdersQuery.ToADOTable(Function(rec) New Object() {productOrdersQuery})
@@ -254,7 +257,7 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
             Dim productsQuery = (From c In dbEntities.Products).AsEnumerable()
             Dim productOrdersQuery = (From c In dbEntities.ProductOrders).AsEnumerable()
             Dim Products As New DataTable()
-            'ToADOTable function converts DataBase table into DataTable
+            'ToADOTable function converts query results into DataTable
             Products = productsQuery.ToADOTable(Function(rec) New Object() {productsQuery})
             Dim ProductOrders As New DataTable()
             ProductOrders = productOrdersQuery.ToADOTable(Function(rec) New Object() {productOrdersQuery})
@@ -269,8 +272,95 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         'ExEnd:GetProductsDataDT
 #End Region
 
+#Region "GetAllDataFromXML"
+        'ExStart:GetAllDataXML
+        ''' <summary>
+        ''' Fetches the data from the XML files and store data in the DataSet
+        ''' </summary>
+        ''' <returns>Returns the DataSet</returns>
+        Public Shared Function GetAllDataFromXML() As DataSet
+            Try
+                Dim tempDs As New DataSet()
+                Dim mainDs As New DataSet()
+
+
+                Dim fsReadXml As New System.IO.FileStream(customerXMLfile, System.IO.FileMode.Open)
+
+                tempDs.ReadXml(fsReadXml, XmlReadMode.ReadSchema)
+                tempDs.Tables(0).TableName = "Customers"
+
+                mainDs.Merge(tempDs.Tables(0))
+                tempDs = New DataSet()
+
+                fsReadXml = New System.IO.FileStream(orderXMLfile, System.IO.FileMode.Open)
+
+                tempDs.ReadXml(fsReadXml, XmlReadMode.ReadSchema)
+                tempDs.Tables(0).TableName = "Orders"
+
+                mainDs.Merge(tempDs.Tables(0))
+                tempDs = New DataSet()
+
+                fsReadXml = New System.IO.FileStream(productOrderXMLfile, System.IO.FileMode.Open)
+
+                tempDs.ReadXml(fsReadXml, XmlReadMode.ReadSchema)
+                tempDs.Tables(0).TableName = "ProductOrders"
+
+                mainDs.Merge(tempDs.Tables(0))
+                tempDs = New DataSet()
+
+                fsReadXml = New System.IO.FileStream(productXMLfile, System.IO.FileMode.Open)
+
+                tempDs.ReadXml(fsReadXml, XmlReadMode.ReadSchema)
+                tempDs.Tables(0).TableName = "Product"
+
+                mainDs.Merge(tempDs.Tables(0))
+
+                'Defining relations between the tables
+                Dim productColumn As DataColumn, orderColumn As DataColumn, customerColumn As DataColumn, customerOrderColumn As DataColumn, productProductIDColumn As DataColumn, productOrderProductIDColumn As DataColumn
+                orderColumn = mainDs.Tables("Orders").Columns("OrderID")
+                productColumn = mainDs.Tables("ProductOrders").Columns("OrderID")
+                customerColumn = mainDs.Tables("Customers").Columns("CustomerID")
+                customerOrderColumn = mainDs.Tables("Orders").Columns("CustomerID")
+
+                productOrderProductIDColumn = mainDs.Tables("ProductOrders").Columns("ProductID")
+                productProductIDColumn = mainDs.Tables("Product").Columns("ProductID")
+
+                Dim dr2 As New DataRelation("Customer_Orders", customerColumn, customerOrderColumn)
+                mainDs.Relations.Add(dr2)
+                Dim dr As New DataRelation("Order_ProductOrders", orderColumn, productColumn)
+                mainDs.Relations.Add(dr)
+                Dim dr3 As New DataRelation("Product_ProductOrders", productProductIDColumn, productOrderProductIDColumn)
+                mainDs.Relations.Add(dr3)
+                Return mainDs
+            Catch
+                Return Nothing
+            End Try
+        End Function
+        'ExEnd:GetAllDataXML
+#End Region
+
+#Region "GetSingleRowXML"
+        'ExStart:GetSingleCustomerXML
+        ''' <summary>
+        ''' Fetches information from the xml file and add it to the DataSet
+        ''' </summary>
+        ''' <returns>Returns DataSet, first record from the table</returns>
+        Public Shared Function GetSingleCustomerXML() As DataRow
+            Dim singleCustomer As New DataSet()
+
+            Dim readProductXML As New FileStream(customerXMLfile, FileMode.Open)
+            singleCustomer.ReadXml(readProductXML, XmlReadMode.ReadSchema)
+            singleCustomer.Tables(0).TableName = "Customers"
+
+            Return singleCustomer.Tables("Customers").Rows(0)
+        End Function
+        'ExEnd:GetSingleCustomerXML
+#End Region
+
+
+
     End Class
-   
+
     'ExEnd:DataLayer
 End Namespace
 

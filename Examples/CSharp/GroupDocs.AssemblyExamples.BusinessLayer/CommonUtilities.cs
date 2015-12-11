@@ -60,12 +60,12 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #region ToADOTable
         //ExStart:ConvertToDataTable
         /// <summary>
-        /// It takes delegate as parameter and varlist IEnumberable
+        /// It takes delegate and varlist IEnumberable
         /// </summary>
         /// <typeparam name="T">Template</typeparam>
         /// <param name="varlist">IEnumerable varlist</param>
         /// <param name="fn">Delegate as parameter</param>
-        /// <returns></returns>
+        /// <returns>It returns DataTable</returns>
         public static DataTable ToADOTable<T>(this IEnumerable<T> varlist, ConvertDataTable.CreateRowDelegate<T> fn)
         {
             DataTable dtReturn = new DataTable();
@@ -92,12 +92,13 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
             }
             return (dtReturn);
         }
-        //ExEnd:ConvertToDataTable
         #endregion
+        public static class ConvertDataTable
+        {
+            public delegate object[] CreateRowDelegate<T>(T t);
+        }
+        //ExEnd:ConvertToDataTable
     }
-    public static class ConvertDataTable
-    {
-        public delegate object[] CreateRowDelegate<T>(T t);
-    }
+   
     //ExEnd:CommonUtilities
 }

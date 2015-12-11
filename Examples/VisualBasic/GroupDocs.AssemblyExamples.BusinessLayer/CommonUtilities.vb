@@ -56,12 +56,12 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
 #Region "ToADOTable"
         'ExStart:ConvertToDataTable
         ''' <summary>
-        ''' It takes delegate as parameter and varlist IEnumberable
+        ''' It takes delegate and varlist IEnumberable as parameter
         ''' </summary>
         ''' <typeparam name="T">Template</typeparam>
         ''' <param name="varlist">IEnumerable varlist</param>
         ''' <param name="fn">Delegate as parameter</param>
-        ''' <returns></returns>
+        ''' <returns>It returns DataTable</returns>
         <System.Runtime.CompilerServices.Extension> _
         Public Function ToADOTable(Of T)(varlist As IEnumerable(Of T), fn As ConvertDataTable.CreateRowDelegate(Of T)) As DataTable
             Dim dtReturn As New DataTable()
@@ -85,14 +85,13 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
             Next
             Return (dtReturn)
         End Function
-        'ExEnd:ConvertToDataTable
 #End Region
-
         Public NotInheritable Class ConvertDataTable
             Private Sub New()
             End Sub
             Public Delegate Function CreateRowDelegate(Of T)(t As T) As Object()
         End Class
+        'ExEnd:ConvertToDataTable
     End Module
     'ExEnd:CommonUtilities
 End Namespace

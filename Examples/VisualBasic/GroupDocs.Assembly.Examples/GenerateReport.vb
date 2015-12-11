@@ -15,8 +15,8 @@ Namespace GroupDocs.AssemblyExamples
         End Sub
 
 
-        Public Shared Sub GenerateBubbleChart(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean)
 
+        Public Shared Sub GenerateBubbleChart(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean)
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
@@ -50,6 +50,23 @@ Namespace GroupDocs.AssemblyExamples
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateBubbleChartFromDataSetinDocumentProcessingFormat
+                        End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateBubbleChartFromXMLinDocumentProcessingFormat
+                        'setting up source document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Bubble Chart_DB.docx"
+                        'Setting up destination document report 
+                        Const strDocumentReport As [String] = "Word Reports/Bubble Chart_XML Report.docx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'initialize object of DocumentAssembler class 
+                            'Call AssembleDocument to generate Bubble Chart Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateBubbleChartFromXMLinDocumentProcessingFormat
+
                         End Try
                     Else
                         'ExStart:GenerateBubbleChartinDocumentProcessingFormat
@@ -100,6 +117,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateBubbleChartFromDataSetinSpreadsheetFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateBubbleChartFromXMLinSpreadsheetFormat
+                        'Setting up source spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Bubble Chart_DB.xlsx"
+                        'Setting up destination document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Bubble Chart_XML Report.xlsx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Bubble Chart Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateBubbleChartFromXMLinSpreadsheetFormat
+                        End Try
                     Else
                         'ExStart:GenerateBubbleChartinSpreadsheetFormat
                         'Setting up source spreadsheet template
@@ -149,6 +181,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateBubbleChartFromDataSetinPresentationFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateBubbleChartFromXMLinPresentationFormat
+                        'Setting up source spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Bubble Chart_DB.pptx"
+                        'Setting up destination document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Bubble Chart_XML Report.pptx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Bubble Chart Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersAndOrdersDataDT())
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateBubbleChartFromXMLinPresentationFormat
+                        End Try
                     Else
                         'ExStart:GenerateBubbleChartinPresentationFormat
                         'Setting up source spreadsheet template
@@ -168,7 +215,7 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
             End Select
         End Sub
-        Public Shared Sub GenerateBulletedList(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean)
+        Public Shared Sub GenerateBulletedList(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean)
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
@@ -200,6 +247,21 @@ Namespace GroupDocs.AssemblyExamples
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateBulletedListFromDataSetinDocumentProcessingFormat
+                        End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateBulletedListFromXMLinDocumentProcessingFormat
+                        'Setting up source document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Bulleted List_XML.docx"
+                        'Setting up destination document report 
+                        Const strDocumentReport As [String] = "Word Reports/Bulleted List_XML Report.docx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Bulleted List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateBulletedListFromXMLinDocumentProcessingFormat
                         End Try
                     Else
                         'ExStart:GenerateBulletedListinDocumentProcessingFormat
@@ -250,6 +312,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateBulletedListFromDataSetinSpreadsheetFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateBulletedListFromXMLinSpreadsheetFormat
+                        'Setting up source spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Bulleted List_XML.xlsx"
+                        'Setting up destination document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Bulleted List_XML Report.xlsx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Bulleted List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateBulletedListFromXMLinSpreadsheetFormat
+                        End Try
                     Else
                         'ExStart:GenerateBulletedListinSpreadsheetFormat
                         'Setting up source spreadsheet template
@@ -299,6 +376,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateBulletedListFromDataSetinPresentationFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateBulletedListFromXMLinPresentationFormat
+                        'Setting up source spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Bulleted List_XML.pptx"
+                        'Setting up destination document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Bulleted List_XML Report.pptx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Bulleted List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateBulletedListFromXMLinPresentationFormat
+                        End Try
                     Else
                         'ExStart:GenerateBulletedListinPresentationFormat
                         'Setting up source spreadsheet template
@@ -318,7 +410,7 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
             End Select
         End Sub
-        Public Shared Sub GenerateChartWithFilteringGroupingAndOrdering(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean)
+        Public Shared Sub GenerateChartWithFilteringGroupingAndOrdering(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean)
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
@@ -350,6 +442,21 @@ Namespace GroupDocs.AssemblyExamples
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinDocumentProcessingFormat
+                        End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromXMLinDocumentProcessingFormat
+                        'Setting up source document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Chart with Filtering, Grouping, and Ordering_XML.docx"
+                        'Setting up destination document report 
+                        Const strDocumentReport As [String] = "Word Reports/Chart with Filtering, Grouping, and Ordering_XML Report.docx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromXMLinDocumentProcessingFormat
                         End Try
                     Else
                         'ExStart:GenerateChartWithFilteringGroupingAndOrderinginDocumentProcessingFormat
@@ -400,6 +507,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinSpreadsheetFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromXMLinSpreadsheetFormat
+                        'Setting up source spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Chart with Filtering, Grouping, and Ordering_XML.xlsx"
+                        'Setting up destination document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Chart with Filtering, Grouping, and Ordering_XML Report.xlsx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromXMLinSpreadsheetFormat
+                        End Try
                     Else
                         'ExStart:GenerateChartWithFilteringGroupingAndOrderinginSpreadsheetFormat
                         'Setting up source spreadsheet template
@@ -449,6 +571,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinPresentationFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromXMLinPresentationFormat
+                        'Setting up source spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Chart with Filtering, Grouping, and Ordering_XML.pptx"
+                        'Setting up destination document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Chart with Filtering, Grouping, and Ordering_XML Report.pptx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromXMLinPresentationFormat
+                        End Try
                     Else
                         'ExStart:GenerateChartWithFilteringGroupingAndOrderinginPresentationFormat
                         'Setting up source spreadsheet template
@@ -468,7 +605,7 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
             End Select
         End Sub
-        Public Shared Sub GenerateCommonList(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean)
+        Public Shared Sub GenerateCommonList(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean)
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
@@ -500,6 +637,21 @@ Namespace GroupDocs.AssemblyExamples
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateCommonListFromDataSetinDocumentProcessingFormat
+                        End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateCommonListFromXMLinDocumentProcessingFormat
+                        'Setting up source document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Common List.docx"
+                        'Setting up destination document report 
+                        Const strDocumentReport As [String] = "Word Reports/Common List_XML Report.docx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Common List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateCommonListFromXMLinDocumentProcessingFormat
                         End Try
                     Else
                         'ExStart:GenerateCommonListinDocumentProcessingFormat
@@ -550,6 +702,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateCommonListFromDataSetinSpreadsheetFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateCommonListFromXMLinSpreadsheetFormat
+                        'Setting up source spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Common List.xlsx"
+                        'Setting up destination document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Common List_XML Report.xlsx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Common List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateCommonListFromXMLinSpreadsheetFormat
+                        End Try
                     Else
                         'ExStart:GenerateCommonListinSpreadsheetFormat
                         'Setting up source spreadsheet template
@@ -599,6 +766,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateCommonListFromDataSetinPresentationFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateCommonListFromXMLinPresentationFormat
+                        'Setting up source spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Common List.pptx"
+                        'Setting up destination document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Common List_XML Report.pptx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Common List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateCommonListFromXMLinPresentationFormat
+                        End Try
                     Else
                         'ExStart:GenerateCommonListinPresentationFormat
                         'Setting up source spreadsheet template
@@ -618,7 +800,7 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
             End Select
         End Sub
-        Public Shared Sub GenerateCommonMasterDetail(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean)
+        Public Shared Sub GenerateCommonMasterDetail(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean)
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
@@ -650,6 +832,21 @@ Namespace GroupDocs.AssemblyExamples
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateCommonMasterDetailFromDataSetinDocumentProcessingFormat
+                        End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateCommonMasterDetailFromXMLinDocumentProcessingFormat
+                        'Setting up source document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Common Master-Detail_DB.docx"
+                        'Setting up destination document report 
+                        Const strDocumentReport As [String] = "Word Reports/Common Master-Detail_XML Report.docx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Common Master-Detail Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateCommonMasterDetailFromXMLinDocumentProcessingFormat
                         End Try
                     Else
                         'ExStart:GenerateCommonMasterDetailinDocumentProcessingFormat
@@ -700,6 +897,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateCommonMasterDetailFromDataSetinSpreadsheetFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateCommonMasterDetailFromXMLinSpreadsheetFormat
+                        'Setting up source spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Common Master-Detail_DB.xlsx"
+                        'Setting up destination document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Common Master-Detail_XML Report.xlsx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Common List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateCommonMasterDetailFromXMLinSpreadsheetFormat
+                        End Try
                     Else
                         'ExStart:GenerateCommonMasterDetailinSpreadsheetFormat
                         'Setting up source spreadsheet template
@@ -749,6 +961,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateCommonMasterDetailFromDataSetinPresentationFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateCommonMasterDetailFromXMLinPresentationFormat
+                        'Setting up source spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Common Master-Detail_DB.pptx"
+                        'Setting up destination document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Common Master-Detail_XML Report.pptx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Common List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersAndOrdersDataDT())
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateCommonMasterDetailFromXMLinPresentationFormat
+                        End Try
                     Else
                         'ExStart:GenerateCommonMasterDetailinPresentationFormat
                         'Setting up source spreadsheet template
@@ -768,7 +995,7 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
             End Select
         End Sub
-        Public Shared Sub GenerateInParagraphList(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean)
+        Public Shared Sub GenerateInParagraphList(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean)
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
@@ -800,6 +1027,21 @@ Namespace GroupDocs.AssemblyExamples
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateInParagraphListFromDataSetinDocumentProcessingFormat
+                        End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateInParagraphListFromXMLinDocumentProcessingFormat
+                        'Setting up source document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Paragraph List_XML.docx"
+                        'Setting up destination document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Paragraph List_XML Report.docx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Paragraph List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateInParagraphListFromXMLinDocumentProcessingFormat
                         End Try
                     Else
                         'ExStart:GenerateInParagraphListinDocumentProcessingFormat
@@ -850,6 +1092,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateInParagraphListFromDataSetinSpreadsheetFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateInParagraphListFromXMLinSpreadsheetFormat
+                        'Setting up source spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Paragraph List_XML.xlsx"
+                        'Setting up destination document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Paragraph List_XML Report.xlsx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Paragraph List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateInParagraphListFromXMLinSpreadsheetFormat
+                        End Try
                     Else
                         'ExStart:GenerateInParagraphListinSpreadsheetFormat
                         'Setting up source spreadsheet template
@@ -899,6 +1156,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateInParagraphListFromDataSetinPresentationFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateInParagraphListFromXMLinPresentationFormat
+                        'Setting up source spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Paragraph List_XML.pptx"
+                        'Setting up destination document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Paragraph List_XML Report.pptx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Paragraph List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateInParagraphListFromXMLinPresentationFormat
+                        End Try
                     Else
                         'ExStart:GenerateInParagraphListinPresentationFormat
                         'Setting up source spreadsheet template
@@ -918,7 +1190,7 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
             End Select
         End Sub
-        Public Shared Sub GenerateInTableListWithAlternateContent(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean)
+        Public Shared Sub GenerateInTableListWithAlternateContent(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean)
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
@@ -950,6 +1222,21 @@ Namespace GroupDocs.AssemblyExamples
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateInTableListWithAlternateContentFromDataSetinDocumentProcessingFormat
+                        End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateInTableListWithAlternateContentFromXMLinDocumentProcessingFormat
+                        'Setting up source document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Alternate Content_XML.docx"
+                        'Setting up destination document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Alternate Content_XML Report.docx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateInTableListWithAlternateContentFromXMLinDocumentProcessingFormat
                         End Try
                     Else
                         'ExStart:GenerateInTableListWithAlternateContentinDocumentProcessingFormat
@@ -1000,6 +1287,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateInTableListWithAlternateContentFromDataSetinSpreadsheetFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateInTableListWithAlternateContentFromXMLinSpreadsheetFormat
+                        'Setting up source spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Alternate Content_XML.xlsx"
+                        'Setting up destination document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Alternate Content_XML Report.xlsx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateInTableListWithAlternateContentFromXMLinSpreadsheetFormat
+                        End Try
                     Else
                         'ExStart:GenerateInTableListWithAlternateContentinSpreadsheetFormat
                         'Setting up source spreadsheet template
@@ -1049,6 +1351,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateInTableListWithAlternateContentFromDataSetinPresentationFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateInTableListWithAlternateContentFromXMLinPresentationFormat
+                        'Setting up source spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Alternate Content_XML.pptx"
+                        'Setting up destination document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Alternate Content_XML Report.pptx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateInTableListWithAlternateContentFromXMLinPresentationFormat
+                        End Try
                     Else
                         'ExStart:GenerateInTableListWithAlternateContentinPresentationFormat
                         'Setting up source spreadsheet template
@@ -1068,7 +1385,7 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
             End Select
         End Sub
-        Public Shared Sub GenerateInTableListWithFilteringGroupingAndOrdering(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean)
+        Public Shared Sub GenerateInTableListWithFilteringGroupingAndOrdering(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean)
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
@@ -1100,6 +1417,21 @@ Namespace GroupDocs.AssemblyExamples
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinDocumentProcessingDocument
+                        End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinDocumentProcessingDocument
+                        'Setting up source document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Filtering, Grouping, and Ordering_XML.docx"
+                        'Setting up destination document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Filtering, Grouping, and Ordering_XML Report.docx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "dS")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinDocumentProcessingDocument
                         End Try
                     Else
                         'ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginDocumentProcessingDocument
@@ -1150,6 +1482,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinSpreadsheetFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinSpreadsheetFormat
+                        'Setting up source spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Filtering, Grouping, and Ordering_XML.xlsx"
+                        'Setting up destination document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Filtering, Grouping, and Ordering_XML Report.xlsx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinSpreadsheetFormat
+                        End Try
                     Else
                         'ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginSpreadsheetFormat
                         'Setting up source spreadsheet template
@@ -1199,6 +1546,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinPresentationFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinPresentationFormat
+                        'Setting up source spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Filtering, Grouping, and Ordering_XML.pptx"
+                        'Setting up destination document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Filtering, Grouping, and Ordering_XML Report.pptx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinPresentationFormat
+                        End Try
                     Else
                         'ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginPresentationFormat
                         'Setting up source spreadsheet template
@@ -1218,7 +1580,7 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
             End Select
         End Sub
-        Public Shared Sub GenerateInTableListWithHighlightedRows(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean)
+        Public Shared Sub GenerateInTableListWithHighlightedRows(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean)
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
@@ -1250,6 +1612,21 @@ Namespace GroupDocs.AssemblyExamples
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateInTableListWithHighlightedRowsFromDataSetinDocumentProcessingDocument
+                        End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateInTableListWithHighlightedRowsFromXMLinDocumentProcessingDocument
+                        'Setting up source document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Highlighted Rows_XML.docx"
+                        'Setting up destination document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Highlighted Rows_XML Report.docx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateInTableListWithHighlightedRowsFromXMLinDocumentProcessingDocument
                         End Try
                     Else
                         'ExStart:GenerateInTableListWithHighlightedRowsinDocumentProcessingDocument
@@ -1300,6 +1677,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateInTableListWithHighlightedRowsFromDataSetinSpreadsheetDocument
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateInTableListWithHighlightedRowsFromXMLinSpreadsheetDocument
+                        'Setting up source spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Highlighted Rows_XML.xlsx"
+                        'Setting up destination document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Highlighted Rows_XML Report.xlsx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateInTableListWithHighlightedRowsFromXMLinSpreadsheetDocument
+                        End Try
                     Else
                         'ExStart:GenerateInTableListWithHighlightedRowsinSpreadsheetDocument
                         'Setting up source spreadsheet template
@@ -1349,6 +1741,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateInTableListWithHighlightedRowsFromDataSetinPresentationFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateInTableListWithHighlightedRowsFromXMLinPresentationFormat
+                        'Setting up source spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Highlighted Rows_XML.pptx"
+                        'Setting up destination document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Highlighted Rows_XML Report.pptx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateInTableListWithHighlightedRowsFromXMLinPresentationFormat
+                        End Try
                     Else
                         'ExStart:GenerateInTableListWithHighlightedRowsinPresentationFormat
                         'Setting up source spreadsheet template
@@ -1368,7 +1775,7 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
             End Select
         End Sub
-        Public Shared Sub GenerateInTableList(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean)
+        Public Shared Sub GenerateInTableList(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean)
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
@@ -1400,6 +1807,21 @@ Namespace GroupDocs.AssemblyExamples
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateInTableListFromDataSetinDocumentProcessingDocument
+                        End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateInTableListFromXMLinDocumentProcessingDocument
+                        'Setting up source document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List_XML.docx"
+                        'Setting up destination document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List_XML Report.docx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateInTableListFromXMLinDocumentProcessingDocument
                         End Try
                     Else
                         'ExStart:GenerateInTableListinDocumentProcessingDocument
@@ -1450,6 +1872,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateInTableListFromDataSetinSpreadsheetFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateInTableListFromXMLinSpreadsheetFormat
+                        'Setting up source spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List_XML.xlsx"
+                        'Setting up destination document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List_XML Report.xlsx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateInTableListFromXMLinSpreadsheetFormat
+                        End Try
                     Else
                         'ExStart:GenerateInTableListinSpreadsheetFormat
                         'Setting up source spreadsheet template
@@ -1499,6 +1936,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateInTableListFromDataSetinPresentationFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateInTableListFromXMLinPresentationFormat
+                        'Setting up source spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List_XML.pptx"
+                        'Setting up destination document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List_XML Report.pptx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateInTableListFromXMLinPresentationFormat
+                        End Try
                     Else
                         'ExStart:GenerateInTableListinPresentationFormat
                         'Setting up source spreadsheet template
@@ -1518,7 +1970,7 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
             End Select
         End Sub
-        Public Shared Sub GenerateInTableMasterDetail(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean)
+        Public Shared Sub GenerateInTableMasterDetail(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean)
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
@@ -1550,6 +2002,21 @@ Namespace GroupDocs.AssemblyExamples
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateInTableMasterDetailFromDataSetinDocumentProcessingFormat
+                        End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateInTableMasterDetailFromXMLinDocumentProcessingFormat
+                        'Setting up source document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table Master-Detail_XML.docx"
+                        'Setting up destination document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table Master-Detail_XML Report.docx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table Master-Detail Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateInTableMasterDetailFromXMLinDocumentProcessingFormat
                         End Try
                     Else
                         'ExStart:GenerateInTableMasterDetailinDocumentProcessingFormat
@@ -1600,6 +2067,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateInTableMasterDetailFromDataSetinSpreadsheetFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateInTableMasterDetailFromXMLinSpreadsheetFormat
+                        'Setting up source spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table Master-Detail_XML.xlsx"
+                        'Setting up destination document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table Master-Detail_XML Report.xlsx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table Master-Detail Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateInTableMasterDetailFromXMLinSpreadsheetFormat
+                        End Try
                     Else
                         'ExStart:GenerateInTableMasterDetailinSpreadsheetFormat
                         'Setting up source spreadsheet template
@@ -1649,6 +2131,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateInTableMasterDetailFromDataSetinPresentationFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateInTableMasterDetailFromXMLinPresentationFormat
+                        'Setting up source spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table Master-Detail_XML.pptx"
+                        'Setting up destination document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table Master-Detail_XML Report.pptx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table Master-Detail Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateInTableMasterDetailFromXMLinPresentationFormat
+                        End Try
                     Else
                         'ExStart:GenerateInTableMasterDetailinPresentationFormat
                         'Setting up source spreadsheet template
@@ -1668,7 +2165,7 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
             End Select
         End Sub
-        Public Shared Sub GenerateMulticoloredNumberedList(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean)
+        Public Shared Sub GenerateMulticoloredNumberedList(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean)
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
@@ -1700,6 +2197,21 @@ Namespace GroupDocs.AssemblyExamples
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateMulticoloredNumberedListFromDataSetinDocumentProcessingDocument
+                        End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateMulticoloredNumberedListFromXMLinDocumentProcessingDocument
+                        'Setting up source document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Multicolored Numbered List_XML.docx"
+                        'Setting up destination document report 
+                        Const strDocumentReport As [String] = "Word Reports/Multicolored Numbered List_XML Report.docx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Multicolored Numbered List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateMulticoloredNumberedListFromXMLinDocumentProcessingDocument
                         End Try
                     Else
                         'ExStart:GenerateMulticoloredNumberedListinDocumentProcessingDocument
@@ -1750,6 +2262,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateMulticoloredNumberedListFromDataSetinSpreadsheetDocument
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateMulticoloredNumberedListFromXMLinSpreadsheetDocument
+                        'Setting up source spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Multicolored Numbered List_XML.xlsx"
+                        'Setting up destination document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Multicolored Numbered List_XML Report.xlsx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Multicolored Numbered List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateMulticoloredNumberedListFromXMLinSpreadsheetDocument
+                        End Try
                     Else
                         'ExStart:GenerateMulticoloredNumberedListinSpreadsheetDocument
                         'Setting up source spreadsheet template
@@ -1799,6 +2326,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateMulticoloredNumberedListFromDataSetinPresentationFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateMulticoloredNumberedListFromXMLinPresentationFormat
+                        'Setting up source spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Multicolored Numbered List_XML.pptx"
+                        'Setting up destination document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Multicolored Numbered List_XML Report.pptx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Multicolored Numbered List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateMulticoloredNumberedListFromXMLinPresentationFormat
+                        End Try
                     Else
                         'ExStart:GenerateMulticoloredNumberedListinPresentationFormat
                         'Setting up source spreadsheet template
@@ -1818,7 +2360,7 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
             End Select
         End Sub
-        Public Shared Sub GenerateNumberedList(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean)
+        Public Shared Sub GenerateNumberedList(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean)
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
@@ -1850,6 +2392,21 @@ Namespace GroupDocs.AssemblyExamples
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateNumberedListFromDataSetinDocumentProcessingFormat 
+                        End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateNumberedListFromXMLinDocumentProcessingFormat
+                        'Setting up source document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Numbered List_XML.docx"
+                        'Setting up destination document report 
+                        Const strDocumentReport As [String] = "Word Reports/Numbered List_XML Report.docx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Numbered List Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateNumberedListFromXMLinDocumentProcessingFormat 
                         End Try
                     Else
                         'ExStart:GenerateNumberedListinDocumentProcessingFormat
@@ -1900,6 +2457,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateNumberedListFromDataSetinSpreadsheetFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateNumberedListFromXMLinSpreadsheetFormat
+                        'Setting up source spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Numbered List_XML.xlsx"
+                        'Setting up destination document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Numbered List_XML Report.xlsx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Numbered List Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateNumberedListFromXMLinSpreadsheetFormat
+                        End Try
                     Else
                         'ExStart:GenerateNumberedListinSpreadsheetFormat
                         'Setting up source spreadsheet template
@@ -1949,6 +2521,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateNumberedListFromDataSetinPresentationFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateNumberedListFromXMLinPresentationFormat
+                        'Setting up source spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Numbered List_XML.pptx"
+                        'Setting up destination document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Numbered List_XML Report.pptx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Numbered List Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateNumberedListFromXMLinPresentationFormat
+                        End Try
                     Else
                         'ExStart:GenerateNumberedListinPresentationFormat
                         'Setting up source spreadsheet template
@@ -1968,7 +2555,7 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
             End Select
         End Sub
-        Public Shared Sub GeneratePieChart(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean)
+        Public Shared Sub GeneratePieChart(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean)
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
@@ -2000,6 +2587,21 @@ Namespace GroupDocs.AssemblyExamples
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
                             'ExEnd:GeneratePieChartFromDataSetinDocumentProcessingFormat
+                        End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GeneratePieChartFromXMLinDocumentProcessingFormat
+                        'Setting up source document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Pie Chart_DB.docx"
+                        'Setting up destination document report 
+                        Const strDocumentReport As [String] = "Word Reports/Pie Chart_XML Report.docx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Pie Chart Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GeneratePieChartFromXMLinDocumentProcessingFormat
                         End Try
                     Else
                         'ExStart:GeneratePieChartinDocumentProcessingFormat
@@ -2050,6 +2652,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GeneratePieChartFromDataSetinSpreadsheetFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GeneratePieChartFromXMLinSpreadsheetFormat
+                        'Setting up source spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Pie Chart_DB.xlsx"
+                        'Setting up destination document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Pie Chart_XML Report.xlsx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Pie Chart Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GeneratePieChartFromXMLinSpreadsheetFormat
+                        End Try
                     Else
                         'ExStart:GeneratePieChartinSpreadsheetFormat
                         'Setting up source spreadsheet template
@@ -2099,6 +2716,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GeneratePieChartFromDataSetinPresentationFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GeneratePieChartFromXMLinPresentationFormat
+                        'Setting up source spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Pie Chart_DB.pptx"
+                        'Setting up destination document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Pie Chart_XML Report.pptx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Pie Chart Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GeneratePieChartFromXMLinPresentationFormat
+                        End Try
                     Else
                         'ExStart:GeneratePieChartinPresentationFormat
                         'Setting up source spreadsheet template
@@ -2118,7 +2750,7 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
             End Select
         End Sub
-        Public Shared Sub GenerateScatterChart(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean)
+        Public Shared Sub GenerateScatterChart(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean)
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
@@ -2150,6 +2782,21 @@ Namespace GroupDocs.AssemblyExamples
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateScatterChartFromDataSetinDocumentProcessingFormat
+                        End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateScatterChartFromXMLinDocumentProcessingFormat
+                        'Setting up source document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Scatter Chart_DB.docx"
+                        'Setting up destination document report 
+                        Const strDocumentReport As [String] = "Word Reports/Scatter Chart_XML Report.docx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Scatter Chart Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateScatterChartFromXMLinDocumentProcessingFormat
                         End Try
                     Else
                         'ExStart:GenerateScatterChartinDocumentProcessingFormat
@@ -2200,6 +2847,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateScatterChartFromDataSetinSpreadsheetFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateScatterChartFromXMLinSpreadsheetFormat
+                        'Setting up source spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Scatter Chart_DB.xlsx"
+                        'Setting up destination document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Scatter Chart_XML Report.xlsx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Scatter Chart Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateScatterChartFromXMLinSpreadsheetFormat
+                        End Try
                     Else
                         'ExStart:GenerateScatterChartinSpreadsheetFormat
                         'Setting up source spreadsheet template
@@ -2249,6 +2911,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateScatterChartFromDataSetinPresentationFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateScatterChartFromXMLinPresentationFormat
+                        'Setting up source spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Scatter Chart_DB.pptx"
+                        'Setting up destination document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Scatter Chart_XML Report.pptx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Scatter Chart Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateScatterChartFromXMLinPresentationFormat
+                        End Try
                     Else
                         'ExStart:GenerateScatterChartinPresentationFormat
                         'Setting up source spreadsheet template
@@ -2268,7 +2945,7 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
             End Select
         End Sub
-        Public Shared Sub GenerateSingleRow(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean)
+        Public Shared Sub GenerateSingleRow(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean)
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
@@ -2300,6 +2977,21 @@ Namespace GroupDocs.AssemblyExamples
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateSingleRowFromDataSetinDocumentProcessingFormat
+                        End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateSingleRowFromXMLinDocumentProcessingFormat
+                        'Setting up source document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Single Row.docx"
+                        'Setting up destination document report 
+                        Const strDocumentReport As [String] = "Word Reports/Single Row_XML Report.docx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Single Row Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerXML(), "customer")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateSingleRowFromXMLinDocumentProcessingFormat
                         End Try
                     Else
                         'ExStart:GenerateSingleRowinDocumentProcessingFormat
@@ -2350,6 +3042,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateSingleRowFromDataSetinSpreadsheetFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateSingleRowFromXMLinSpreadsheetFormat
+                        'Setting up source spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Single Row.xlsx"
+                        'Setting up destination document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Single Row_XML Report.xlsx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Single Row Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetSingleCustomerXML(), "customer")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateSingleRowFromXMLinSpreadsheetFormat
+                        End Try
                     Else
                         'ExStart:GenerateSingleRowinSpreadsheetFormat
                         'Setting up source spreadsheet template
@@ -2399,6 +3106,21 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateSingleRowFromDataSetinPresentationFormat
                         End Try
+                    ElseIf isDataSourceXML Then
+                        'ExStart:GenerateSingleRowFromXMLinPresentationFormat
+                        'Setting up source spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Single Row.pptx"
+                        'Setting up destination document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Single Row_XML Report.pptx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Single Row Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetSingleCustomerXML(), "customer")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                            'ExEnd:GenerateSingleRowFromXMLinPresentationFormat
+                        End Try
                     Else
                         'ExStart:GenerateSingleRowinPresentationFormat
                         'Setting up source spreadsheet template
@@ -2418,6 +3140,8 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
             End Select
         End Sub
+
+
     End Class
 End Namespace
 
