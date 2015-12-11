@@ -22,10 +22,10 @@ namespace GroupDocs.AssemblyExamples
 
             #region Generating Bubble Chart Report
             //Generate a bubble chart report in document processing format
-            //GenerateReport.GenerateBubbleChart("document", false, false, true);
+            GenerateReport.GenerateBubbleChart("document", false, false, true);
 
             //Generate a Bulleted List report in spreadsheet format
-            //GenerateReport.GenerateBubbleChart("spreadsheet", false, false, true);
+            GenerateReport.GenerateBubbleChart("spreadsheet", false, false, true);
 
             //Generate a Bulleted List report in presentation format
             //GenerateReport.GenerateBubbleChart("presentation", false, false, true);
