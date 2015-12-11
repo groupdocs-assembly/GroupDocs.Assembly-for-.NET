@@ -1,0 +1,30 @@
+﻿<ProductOrders>
+  <ProductOrders>
+    <ProductOrderID>1</ProductOrderID>
+    <OrderID>1</OrderID>
+    <ProductID>1</ProductID>
+    <ProductQuantity>1</ProductQuantity>
+    <Price>3.500000000000000e+002</Price>
+  </ProductOrders>
+  <ProductOrders>
+    <ProductOrderID>2</ProductOrderID>
+    <OrderID>1</OrderID>
+    <ProductID>3</ProductID>
+    <ProductQuantity>2</ProductQuantity>
+    <Price>4.000000000000000e+002</Price>
+  </ProductOrders>
+  <ProductOrders>
+    <ProductOrderID>3</ProductOrderID>
+    <OrderID>3</OrderID>
+    <ProductID>2</ProductID>
+    <ProductQuantity>1</ProductQuantity>
+    <Price>2.500000000000000e+002</Price>
+  </ProductOrders>
+  <ProductOrders>
+    <ProductOrderID>4</ProductOrderID>
+    <OrderID>2</OrderID>
+    <ProductID>4</ProductID>
+    <ProductQuantity>5</ProductQuantity>
+    <Price>3.550000000000000e+002</Price>
+  </ProductOrders>
+</ProductOrders>
