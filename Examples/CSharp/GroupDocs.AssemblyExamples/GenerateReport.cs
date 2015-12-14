@@ -236,7 +236,7 @@ namespace GroupDocs.AssemblyExamples
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
                             //Call AssembleDocument to generate Bubble Chart Report in presentation format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersAndOrdersDataDT());
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds");
                         }
                         catch (Exception ex)
                         {
@@ -1252,7 +1252,7 @@ namespace GroupDocs.AssemblyExamples
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
                             //Call AssembleDocument to generate Common List Report in presentation format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersAndOrdersDataDT());
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds");
                         }
                         catch (Exception ex)
                         {
@@ -1848,7 +1848,7 @@ namespace GroupDocs.AssemblyExamples
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
                             //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in document format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "dS");
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
                         }
                         catch (Exception ex)
                         {
