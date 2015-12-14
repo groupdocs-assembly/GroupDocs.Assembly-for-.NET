@@ -17,7 +17,7 @@ namespace GroupDocs.AssemblyExamples
              *  Applying product license
              *  Please uncomment the statement if you do have license.
              */
-            //CommonUtilities.ApplyLicense();
+            CommonUtilities.ApplyLicense();
             //ExEnd:ApplyingLicense
 
             #region Generating Bubble Chart Report
@@ -25,7 +25,7 @@ namespace GroupDocs.AssemblyExamples
             GenerateReport.GenerateBubbleChart("document", false, false, true);
 
             //Generate a Bulleted List report in spreadsheet format
-            GenerateReport.GenerateBubbleChart("spreadsheet", false, false, true);
+            //GenerateReport.GenerateBubbleChart("spreadsheet", false, false, true);
 
             //Generate a Bulleted List report in presentation format
             //GenerateReport.GenerateBubbleChart("presentation", false, false, true);
@@ -44,7 +44,7 @@ namespace GroupDocs.AssemblyExamples
             
             #region Generating Chart report with Filtering, Grouping, and Ordering
             //Generate a Chart report with Filtering, Grouping, and Ordering in document processing format
-            //GenerateReport.GenerateChartWithFilteringGroupingAndOrdering("document", false, false, true);
+            GenerateReport.GenerateChartWithFilteringGroupingAndOrdering("document", false, false, true);
 
             //Generate a Chart report with Filtering, Grouping, and Ordering in spreadsheet format
             //GenerateReport.GenerateChartWithFilteringGroupingAndOrdering("spreadsheet", false, false, true);
