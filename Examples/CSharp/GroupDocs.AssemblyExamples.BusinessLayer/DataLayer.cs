@@ -12,10 +12,10 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
     //ExStart:DataLayer
     public static class DataLayer
     {
-        public const string productXMLfile = "../../../../Data/XML DataSource/Products.xml";
-        public const string customerXMLfile = "../../../../Data/XML DataSource/Customers.xml";
-        public const string orderXMLfile = "../../../../Data/XML DataSource/Orders.xml";
-        public const string productOrderXMLfile = "../../../../Data/XML DataSource/ProductOrders.xml";
+        public const string productXMLfile = "../../../../Data/Data Sources/XML DataSource/Products.xml";
+        public const string customerXMLfile = "../../../../Data/Data Sources/XML DataSource/Customers.xml";
+        public const string orderXMLfile = "../../../../Data/Data Sources/XML DataSource/Orders.xml";
+        public const string productOrderXMLfile = "../../../../Data/Data Sources/XML DataSource/ProductOrders.xml";
 
         #region DataInitialization
         //ExStart:PopulateData

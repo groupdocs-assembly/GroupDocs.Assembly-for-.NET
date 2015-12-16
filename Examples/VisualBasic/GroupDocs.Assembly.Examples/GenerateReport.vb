@@ -16,200 +16,201 @@ Namespace GroupDocs.AssemblyExamples
 
 
 
+
         Public Shared Sub GenerateBubbleChart(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean)
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
-                        'ExStart:GenerateBubbleChartFromDatabaseinDocumentProcessingFormat
-                        'setting up source document template
+                        'ExStart:GenerateBubbleChartFromDatabaseinOpenDocumentProcessingFormat
+                        'setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/Bubble Chart_DB.docx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strDocumentReport As [String] = "Word Reports/Bubble Chart_DB Report.docx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Bubble Chart Report in document format
+                            'Call AssembleDocument to generate Bubble Chart Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersDataDB(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBubbleChartFromDatabaseinDocumentProcessingFormat
+                            'ExEnd:GenerateBubbleChartFromDatabaseinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateBubbleChartFromDataSetinDocumentProcessingFormat
-                        'setting up source document template
+                        'ExStart:GenerateBubbleChartFromDataSetinOpenDocumentProcessingFormat
+                        'setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/Bubble Chart_DB.docx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strDocumentReport As [String] = "Word Reports/Bubble Chart_DT Report.docx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Bubble Chart Report in document format
+                            'Call AssembleDocument to generate Bubble Chart Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersAndOrdersDataDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBubbleChartFromDataSetinDocumentProcessingFormat
+                            'ExEnd:GenerateBubbleChartFromDataSetinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateBubbleChartFromXMLinDocumentProcessingFormat
-                        'setting up source document template
+                        'ExStart:GenerateBubbleChartFromXMLinOpenDocumentProcessingFormat
+                        'setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/Bubble Chart_DB.docx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strDocumentReport As [String] = "Word Reports/Bubble Chart_XML Report.docx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Bubble Chart Report in document format
+                            'Call AssembleDocument to generate Bubble Chart Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBubbleChartFromXMLinDocumentProcessingFormat
+                            'ExEnd:GenerateBubbleChartFromXMLinOpenDocumentProcessingFormat
 
                         End Try
                     Else
-                        'ExStart:GenerateBubbleChartinDocumentProcessingFormat
-                        'Setting up source document template
+                        'ExStart:GenerateBubbleChartinOpenDocumentProcessingFormat
+                        'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/Bubble Chart.docx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strDocumentReport As [String] = "Word Reports/Bubble Chart Report.docx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bubble Chart Report in document format
+                            'Call AssembleDocument to generate Bubble Chart Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBubbleChartinDocumentProcessingFormat
+                            'ExEnd:GenerateBubbleChartinOpenDocumentProcessingFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "spreadsheet"
                     If isDatabase Then
-                        'ExStart:GenerateBubbleChartFromDatabaseinSpreadsheetFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateBubbleChartFromDatabaseinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Bubble Chart_DB.xlsx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Bubble Chart_DB Report.xlsx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bubble Chart Report in spreadsheet format
+                            'Call AssembleDocument to generate Bubble Chart Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersDataDB(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBubbleChartFromDatabaseinSpreadsheetFormat
+                            'ExEnd:GenerateBubbleChartFromDatabaseinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateBubbleChartFromDataSetinSpreadsheetFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateBubbleChartFromDataSetinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Bubble Chart_DB.xlsx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Bubble Chart_DT Report.xlsx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bubble Chart Report in spreadsheet format
+                            'Call AssembleDocument to generate Bubble Chart Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomersAndOrdersDataDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBubbleChartFromDataSetinSpreadsheetFormat
+                            'ExEnd:GenerateBubbleChartFromDataSetinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateBubbleChartFromXMLinSpreadsheetFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateBubbleChartFromXMLinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Bubble Chart_DB.xlsx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Bubble Chart_XML Report.xlsx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bubble Chart Report in spreadsheet format
+                            'Call AssembleDocument to generate Bubble Chart Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBubbleChartFromXMLinSpreadsheetFormat
+                            'ExEnd:GenerateBubbleChartFromXMLinOpenSpreadsheetFormat
                         End Try
                     Else
-                        'ExStart:GenerateBubbleChartinSpreadsheetFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateBubbleChartinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Bubble Chart.xlsx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Bubble Chart Report.xlsx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bubble Chart Report in spreadsheet format
+                            'Call AssembleDocument to generate Bubble Chart Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBubbleChartinSpreadsheetFormat
+                            'ExEnd:GenerateBubbleChartinOpenSpreadsheetFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "presentation"
                     If isDatabase Then
-                        'ExStart:GenerateBubbleChartFromDatabaseinPresentationFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateBubbleChartFromDatabaseinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
                         Const strPresentationTemplate As [String] = "Presentation Templates/Bubble Chart_DB.pptx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strPresentationReport As [String] = "Presentation Reports/Bubble Chart_DB Report.pptx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bubble Chart Report in presentation format
+                            'Call AssembleDocument to generate Bubble Chart Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersDataDB(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBubbleChartFromDatabaseinPresentationFormat
+                            'ExEnd:GenerateBubbleChartFromDatabaseinOpenPresentationFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateBubbleChartFromDataSetinPresentationFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateBubbleChartFromDataSetinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
                         Const strPresentationTemplate As [String] = "Presentation Templates/Bubble Chart_DB.pptx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strPresentationReport As [String] = "Presentation Reports/Bubble Chart_DT Report.pptx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bubble Chart Report in presentation format
+                            'Call AssembleDocument to generate Bubble Chart Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersAndOrdersDataDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBubbleChartFromDataSetinPresentationFormat
+                            'ExEnd:GenerateBubbleChartFromDataSetinOpenPresentationFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateBubbleChartFromXMLinPresentationFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateBubbleChartFromXMLinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
                         Const strPresentationTemplate As [String] = "Presentation Templates/Bubble Chart_DB.pptx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strPresentationReport As [String] = "Presentation Reports/Bubble Chart_XML Report.pptx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bubble Chart Report in presentation format
+                            'Call AssembleDocument to generate Bubble Chart Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBubbleChartFromXMLinPresentationFormat
+                            'ExEnd:GenerateBubbleChartFromXMLinOpenPresentationFormat
                         End Try
                     Else
-                        'ExStart:GenerateBubbleChartinPresentationFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateBubbleChartinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
                         Const strPresentationTemplate As [String] = "Presentation Templates/Bubble Chart.pptx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strPresentationReport As [String] = "Presentation Reports/Bubble Chart Report.pptx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bubble Chart Report in presentation format
+                            'Call AssembleDocument to generate Bubble Chart Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBubbleChartinPresentationFormat
+                            'ExEnd:GenerateBubbleChartinOpenPresentationFormat
                         End Try
                     End If
                     Exit Select
@@ -219,192 +220,192 @@ Namespace GroupDocs.AssemblyExamples
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
-                        'ExStart:GenerateBulletedListFromDatabaseinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Bulleted List.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Bulleted List Report.docx"
+                        'ExStart:GenerateBulletedListFromDatabaseinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Bulleted List_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Bulleted List_DB Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bulleted List Report in document format
+                            'Call AssembleDocument to generate Bulleted List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataDB(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBulletedListFromDatabaseinDocumentProcessingFormat
+                            'ExEnd:GenerateBulletedListFromDatabaseinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateBulletedListFromDataSetinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Bulleted List.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Bulleted List_DT Report.docx"
+                        'ExStart:GenerateBulletedListFromDataSetinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Bulleted List_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Bulleted List_DT Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bulleted List Report in document format
+                            'Call AssembleDocument to generate Bulleted List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBulletedListFromDataSetinDocumentProcessingFormat
+                            'ExEnd:GenerateBulletedListFromDataSetinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateBulletedListFromXMLinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Bulleted List_XML.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Bulleted List_XML Report.docx"
+                        'ExStart:GenerateBulletedListFromXMLinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Bulleted List_XML_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Bulleted List_XML Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bulleted List Report in document format
+                            'Call AssembleDocument to generate Bulleted List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBulletedListFromXMLinDocumentProcessingFormat
+                            'ExEnd:GenerateBulletedListFromXMLinOpenDocumentProcessingFormat
                         End Try
                     Else
-                        'ExStart:GenerateBulletedListinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Bulleted List.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Bulleted List Report.docx"
+                        'ExStart:GenerateBulletedListinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Bulleted List_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Bulleted List Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bulleted List Report in document format
+                            'Call AssembleDocument to generate Bulleted List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsData(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBulletedListinDocumentProcessingFormat
+                            'ExEnd:GenerateBulletedListinOpenDocumentProcessingFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "spreadsheet"
                     If isDatabase Then
-                        'ExStart:GenerateBulletedListFromDatabaseinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Bulleted List.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Bulleted List Report.xlsx"
+                        'ExStart:GenerateBulletedListFromDatabaseinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Bulleted List_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Bulleted List_DB Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bulleted List Report in spreadsheet format
+                            'Call AssembleDocument to generate Bulleted List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsDataDB(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBulletedListFromDatabaseinSpreadsheetFormat
+                            'ExEnd:GenerateBulletedListFromDatabaseinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateBulletedListFromDataSetinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Bulleted List.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Bulleted List_DT Report.xlsx"
+                        'ExStart:GenerateBulletedListFromDataSetinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Bulleted List_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Bulleted List_DT Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bulleted List Report in spreadsheet format
+                            'Call AssembleDocument to generate Bulleted List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBulletedListFromDataSetinSpreadsheetFormat
+                            'ExEnd:GenerateBulletedListFromDataSetinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateBulletedListFromXMLinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Bulleted List_XML.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Bulleted List_XML Report.xlsx"
+                        'ExStart:GenerateBulletedListFromXMLinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Bulleted List_XML_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Bulleted List_XML Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bulleted List Report in spreadsheet format
+                            'Call AssembleDocument to generate Bulleted List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBulletedListFromXMLinSpreadsheetFormat
+                            'ExEnd:GenerateBulletedListFromXMLinOpenSpreadsheetFormat
                         End Try
                     Else
-                        'ExStart:GenerateBulletedListinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Bulleted List.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Bulleted List Report.xlsx"
+                        'ExStart:GenerateBulletedListinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Bulleted List_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Bulleted List Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bulleted List Report in spreadsheet format
+                            'Call AssembleDocument to generate Bulleted List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsData(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBulletedListinSpreadsheetFormat
+                            'ExEnd:GenerateBulletedListinOpenSpreadsheetFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "presentation"
                     If isDatabase Then
-                        'ExStart:GenerateBulletedListFromDatabaseinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Bulleted List.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Bulleted List Report.pptx"
+                        'ExStart:GenerateBulletedListFromDatabaseinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Bulleted List_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Bulleted List_DB Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bulleted List Report in presentation format
+                            'Call AssembleDocument to generate Bulleted List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsDataDB(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBulletedListFromDatabaseinPresentationFormat
+                            'ExEnd:GenerateBulletedListFromDatabaseinOpenPresentationFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateBulletedListFromDataSetinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Bulleted List.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Bulleted List_DT Report.pptx"
+                        'ExStart:GenerateBulletedListFromDataSetinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Bulleted List_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Bulleted List_DT Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bulleted List Report in presentation format
+                            'Call AssembleDocument to generate Bulleted List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBulletedListFromDataSetinPresentationFormat
+                            'ExEnd:GenerateBulletedListFromDataSetinOpenPresentationFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateBulletedListFromXMLinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Bulleted List_XML.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Bulleted List_XML Report.pptx"
+                        'ExStart:GenerateBulletedListFromXMLinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Bulleted List_XML_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Bulleted List_XML Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bulleted List Report in presentation format
+                            'Call AssembleDocument to generate Bulleted List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBulletedListFromXMLinPresentationFormat
+                            'ExEnd:GenerateBulletedListFromXMLinOpenPresentationFormat
                         End Try
                     Else
-                        'ExStart:GenerateBulletedListinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Bulleted List.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Bulleted List Report.pptx"
+                        'ExStart:GenerateBulletedListinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Bulleted List_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Bulleted List Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bulleted List Report in presentation format
+                            'Call AssembleDocument to generate Bulleted List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsData(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBulletedListinPresentationFormat
+                            'ExEnd:GenerateBulletedListinOpenPresentationFormat
                         End Try
                     End If
                     Exit Select
@@ -414,10 +415,10 @@ Namespace GroupDocs.AssemblyExamples
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
-                        'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromDatabaseinDocumentProcessingFormat
-                        'Setting up source document template
+                        'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromDatabaseinOpenDocumentProcessingFormat
+                        'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/Chart with Filtering, Grouping, and Ordering_DB.docx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strDocumentReport As [String] = "Word Reports/Chart with Filtering, Grouping, and Ordering_DB Report.docx"
                         Try
                             'Instantiate DocumentAssembler class
@@ -426,13 +427,13 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersDataDB(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDatabaseinDocumentProcessingFormat
+                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDatabaseinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinDocumentProcessingFormat
-                        'Setting up source document template
+                        'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinOpenDocumentProcessingFormat
+                        'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/Chart with Filtering, Grouping, and Ordering_DB.docx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strDocumentReport As [String] = "Word Reports/Chart with Filtering, Grouping, and Ordering_DT Report.docx"
                         Try
                             'Instantiate DocumentAssembler class
@@ -441,13 +442,13 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersAndOrdersDataDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinDocumentProcessingFormat
+                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromXMLinDocumentProcessingFormat
-                        'Setting up source document template
+                        'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromXMLinOpenDocumentProcessingFormat
+                        'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/Chart with Filtering, Grouping, and Ordering_XML.docx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strDocumentReport As [String] = "Word Reports/Chart with Filtering, Grouping, and Ordering_XML Report.docx"
                         Try
                             'Instantiate DocumentAssembler class
@@ -456,13 +457,13 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromXMLinDocumentProcessingFormat
+                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromXMLinOpenDocumentProcessingFormat
                         End Try
                     Else
-                        'ExStart:GenerateChartWithFilteringGroupingAndOrderinginDocumentProcessingFormat
-                        'Setting up source document template
+                        'ExStart:GenerateChartWithFilteringGroupingAndOrderinginOpenDocumentProcessingFormat
+                        'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/Chart with Filtering, Grouping, and Ordering.docx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strDocumentReport As [String] = "Word Reports/Chart with Filtering, Grouping, and Ordering Report.docx"
                         Try
                             'Instantiate DocumentAssembler class
@@ -471,17 +472,17 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderinginDocumentProcessingFormat
+                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderinginOpenDocumentProcessingFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "spreadsheet"
                     If isDatabase Then
-                        'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromDatabaseinSpreadsheetFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromDatabaseinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Chart with Filtering, Grouping, and Ordering_DB.xlsx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Chart with Filtering, Grouping, and Ordering_DB Report.xlsx"
                         Try
                             'Instantiate DocumentAssembler class
@@ -490,13 +491,13 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersDataDB(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDatabaseinSpreadsheetFormat
+                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDatabaseinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinSpreadsheetFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Chart with Filtering, Grouping, and Ordering_DB.xlsx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Chart with Filtering, Grouping, and Ordering_DT Report.xlsx"
                         Try
                             'Instantiate DocumentAssembler class
@@ -505,13 +506,13 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomersAndOrdersDataDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinSpreadsheetFormat
+                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromXMLinSpreadsheetFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromXMLinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Chart with Filtering, Grouping, and Ordering_XML.xlsx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Chart with Filtering, Grouping, and Ordering_XML Report.xlsx"
                         Try
                             'Instantiate DocumentAssembler class
@@ -520,13 +521,13 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromXMLinSpreadsheetFormat
+                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromXMLinOpenSpreadsheetFormat
                         End Try
                     Else
-                        'ExStart:GenerateChartWithFilteringGroupingAndOrderinginSpreadsheetFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateChartWithFilteringGroupingAndOrderinginOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Chart with Filtering, Grouping, and Ordering.xlsx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Chart with Filtering, Grouping, and Ordering Report.xlsx"
                         Try
                             'Instantiate DocumentAssembler class
@@ -535,17 +536,17 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderinginSpreadsheetFormat
+                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderinginOpenSpreadsheetFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "presentation"
                     If isDatabase Then
-                        'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromDatabaseinPresentationFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromDatabaseinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
                         Const strPresentationTemplate As [String] = "Presentation Templates/Chart with Filtering, Grouping, and Ordering_DB.pptx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strPresentationReport As [String] = "Presentation Reports/Chart with Filtering, Grouping, and Ordering_DB Report.pptx"
                         Try
                             'Instantiate DocumentAssembler class
@@ -554,13 +555,13 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersDataDB(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDatabaseinPresentationFormat
+                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDatabaseinOpenPresentationFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinPresentationFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
                         Const strPresentationTemplate As [String] = "Presentation Templates/Chart with Filtering, Grouping, and Ordering_DB.pptx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strPresentationReport As [String] = "Presentation Reports/Chart with Filtering, Grouping, and Ordering_DT Report.pptx"
                         Try
                             'Instantiate DocumentAssembler class
@@ -569,13 +570,13 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersAndOrdersDataDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinPresentationFormat
+                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinOpenPresentationFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromXMLinPresentationFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromXMLinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
                         Const strPresentationTemplate As [String] = "Presentation Templates/Chart with Filtering, Grouping, and Ordering_XML.pptx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strPresentationReport As [String] = "Presentation Reports/Chart with Filtering, Grouping, and Ordering_XML Report.pptx"
                         Try
                             'Instantiate DocumentAssembler class
@@ -584,13 +585,13 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromXMLinPresentationFormat
+                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromXMLinOpenPresentationFormat
                         End Try
                     Else
-                        'ExStart:GenerateChartWithFilteringGroupingAndOrderinginPresentationFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateChartWithFilteringGroupingAndOrderinginOpenPresentationFormat
+                        'Setting up source open spreadsheet template
                         Const strPresentationTemplate As [String] = "Presentation Templates/Chart with Filtering, Grouping, and Ordering.pptx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strPresentationReport As [String] = "Presentation Reports/Chart with Filtering, Grouping, and Ordering Report.pptx"
                         Try
                             'Instantiate DocumentAssembler class
@@ -599,7 +600,7 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderinginPresentationFormat
+                            'ExEnd:GenerateChartWithFilteringGroupingAndOrderinginOpenPresentationFormat
                         End Try
                     End If
                     Exit Select
@@ -609,192 +610,192 @@ Namespace GroupDocs.AssemblyExamples
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
-                        'ExStart:GenerateCommonListFromDatabaseinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Common List.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Common List Report.docx"
+                        'ExStart:GenerateCommonListFromDatabaseinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Common List_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Common List_DB Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common List Report in document format
+                            'Call AssembleDocument to generate Common List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersDataDB(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonListFromDatabaseinDocumentProcessingFormat
+                            'ExEnd:GenerateCommonListFromDatabaseinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateCommonListFromDataSetinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Common List.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Common List_DT Report.docx"
+                        'ExStart:GenerateCommonListFromDataSetinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Common List_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Common List_DT Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common List Report in document format
+                            'Call AssembleDocument to generate Common List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersAndOrdersDataDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonListFromDataSetinDocumentProcessingFormat
+                            'ExEnd:GenerateCommonListFromDataSetinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateCommonListFromXMLinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Common List.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Common List_XML Report.docx"
+                        'ExStart:GenerateCommonListFromXMLinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Common List_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Common List_XML Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common List Report in document format
+                            'Call AssembleDocument to generate Common List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonListFromXMLinDocumentProcessingFormat
+                            'ExEnd:GenerateCommonListFromXMLinOpenDocumentProcessingFormat
                         End Try
                     Else
-                        'ExStart:GenerateCommonListinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Common List.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Common List Report.docx"
+                        'ExStart:GenerateCommonListinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Common List_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Common List Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common List Report in document format
+                            'Call AssembleDocument to generate Common List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.PopulateData(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonListinDocumentProcessingFormat
+                            'ExEnd:GenerateCommonListinOpenDocumentProcessingFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "spreadsheet"
                     If isDatabase Then
-                        'ExStart:GenerateCommonListFromDatabaseinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Common List.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Common List Report.xlsx"
+                        'ExStart:GenerateCommonListFromDatabaseinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Common List_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Common List_DB Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common List Report in spreadsheet format
+                            'Call AssembleDocument to generate Common List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomersDataDB(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonListFromDatabaseinSpreadsheetFormat
+                            'ExEnd:GenerateCommonListFromDatabaseinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateCommonListFromDataSetinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Common List.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Common List_DT Report.xlsx"
+                        'ExStart:GenerateCommonListFromDataSetinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Common List_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Common List_DT Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common List Report in spreadsheet format
+                            'Call AssembleDocument to generate Common List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomersAndOrdersDataDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonListFromDataSetinSpreadsheetFormat
+                            'ExEnd:GenerateCommonListFromDataSetinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateCommonListFromXMLinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Common List.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Common List_XML Report.xlsx"
+                        'ExStart:GenerateCommonListFromXMLinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Common List_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Common List_XML Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common List Report in spreadsheet format
+                            'Call AssembleDocument to generate Common List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonListFromXMLinSpreadsheetFormat
+                            'ExEnd:GenerateCommonListFromXMLinOpenSpreadsheetFormat
                         End Try
                     Else
-                        'ExStart:GenerateCommonListinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Common List.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Common List Report.xlsx"
+                        'ExStart:GenerateCommonListinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Common List_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Common List Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common List Report in spreadsheet format
+                            'Call AssembleDocument to generate Common List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.PopulateData(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonListinSpreadsheetFormat
+                            'ExEnd:GenerateCommonListinOpenSpreadsheetFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "presentation"
                     If isDatabase Then
-                        'ExStart:GenerateCommonListFromDatabaseinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Common List.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Common List Report.pptx"
+                        'ExStart:GenerateCommonListFromDatabaseinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Common List_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Common List_DB Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common List Report in presentation format
+                            'Call AssembleDocument to generate Common List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersDataDB(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonListFromDatabaseinPresentationFormat
+                            'ExEnd:GenerateCommonListFromDatabaseinOpenPresentationFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateCommonListFromDataSetinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Common List.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Common List_DT Report.pptx"
+                        'ExStart:GenerateCommonListFromDataSetinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Common List_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Common List_DT Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common List Report in presentation format
+                            'Call AssembleDocument to generate Common List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersAndOrdersDataDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonListFromDataSetinPresentationFormat
+                            'ExEnd:GenerateCommonListFromDataSetinOpenPresentationFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateCommonListFromXMLinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Common List.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Common List_XML Report.pptx"
+                        'ExStart:GenerateCommonListFromXMLinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Common List.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Common List_XML Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common List Report in presentation format
+                            'Call AssembleDocument to generate Common List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonListFromXMLinPresentationFormat
+                            'ExEnd:GenerateCommonListFromXMLinOpenPresentationFormat
                         End Try
                     Else
-                        'ExStart:GenerateCommonListinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Common List.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Common List Report.pptx"
+                        'ExStart:GenerateCommonListinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Common List.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Common List Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common List Report in presentation format
+                            'Call AssembleDocument to generate Common List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.PopulateData(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonListinPresentationFormat
+                            'ExEnd:GenerateCommonListinOpenPresentationFormat
                         End Try
                     End If
                     Exit Select
@@ -804,192 +805,192 @@ Namespace GroupDocs.AssemblyExamples
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
-                        'ExStart:GenerateCommonMasterDetailFromDatabaseinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Common Master-Detail_DB.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Common Master-Detail_DB Report.docx"
+                        'ExStart:GenerateCommonMasterDetailFromDatabaseinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Common Master-Detail_DB_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Common Master-Detail_DB Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common Master-Detail Report in document format
+                            'Call AssembleDocument to generate Common Master-Detail Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersDataDB(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonMasterDetailFromDatabaseinDocumentProcessingFormat
+                            'ExEnd:GenerateCommonMasterDetailFromDatabaseinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateCommonMasterDetailFromDataSetinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Common Master-Detail_DB.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Common Master-Detail_DT Report.docx"
+                        'ExStart:GenerateCommonMasterDetailFromDataSetinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Common Master-Detail_DB_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Common Master-Detail_DT Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common Master-Detail Report in document format
+                            'Call AssembleDocument to generate Common Master-Detail Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersAndOrdersDataDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonMasterDetailFromDataSetinDocumentProcessingFormat
+                            'ExEnd:GenerateCommonMasterDetailFromDataSetinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateCommonMasterDetailFromXMLinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Common Master-Detail_DB.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Common Master-Detail_XML Report.docx"
+                        'ExStart:GenerateCommonMasterDetailFromXMLinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Common Master-Detail_DB_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Common Master-Detail_XML Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common Master-Detail Report in document format
+                            'Call AssembleDocument to generate Common Master-Detail Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonMasterDetailFromXMLinDocumentProcessingFormat
+                            'ExEnd:GenerateCommonMasterDetailFromXMLinOpenDocumentProcessingFormat
                         End Try
                     Else
-                        'ExStart:GenerateCommonMasterDetailinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Common Master-Detail.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Common Master-Detail Report.docx"
+                        'ExStart:GenerateCommonMasterDetailinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Common Master-Detail_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Common Master-Detail Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common Master-Detail Report in document format
+                            'Call AssembleDocument to generate Common Master-Detail Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.PopulateData(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonMasterDetailinDocumentProcessingFormat
+                            'ExEnd:GenerateCommonMasterDetailinOpenDocumentProcessingFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "spreadsheet"
                     If isDatabase Then
-                        'ExStart:GenerateCommonMasterDetailFromDatabaseinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Common Master-Detail_DB.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Common Master-Detail_DB Report.xlsx"
+                        'ExStart:GenerateCommonMasterDetailFromDatabaseinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Common Master-Detail_DB_OpenDocument.ods"
+                        'Setting up destination open document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Common Master-Detail_DB Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common List Report in spreadsheet format
+                            'Call AssembleDocument to generate Common List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomersDataDB(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonMasterDetailFromDatabaseinSpreadsheetFormat
+                            'ExEnd:GenerateCommonMasterDetailFromDatabaseinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateCommonMasterDetailFromDataSetinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Common Master-Detail_DB.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Common Master-Detail_DT Report.xlsx"
+                        'ExStart:GenerateCommonMasterDetailFromDataSetinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Common Master-Detail_DB_OpenDocument.ods"
+                        'Setting up destination open document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Common Master-Detail_DT Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common List Report in spreadsheet format
+                            'Call AssembleDocument to generate Common List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomersAndOrdersDataDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonMasterDetailFromDataSetinSpreadsheetFormat
+                            'ExEnd:GenerateCommonMasterDetailFromDataSetinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateCommonMasterDetailFromXMLinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Common Master-Detail_DB.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Common Master-Detail_XML Report.xlsx"
+                        'ExStart:GenerateCommonMasterDetailFromXMLinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Common Master-Detail_DB_OpenDocument.ods"
+                        'Setting up destination open document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Common Master-Detail_XML Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common List Report in spreadsheet format
+                            'Call AssembleDocument to generate Common List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonMasterDetailFromXMLinSpreadsheetFormat
+                            'ExEnd:GenerateCommonMasterDetailFromXMLinOpenSpreadsheetFormat
                         End Try
                     Else
-                        'ExStart:GenerateCommonMasterDetailinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Common Master-Detail.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Common Master-Detail Report.xlsx"
+                        'ExStart:GenerateCommonMasterDetailinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Common Master-Detail_OpenDocument.ods"
+                        'Setting up destination open document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Common Master-Detail Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common List Report in spreadsheet format
+                            'Call AssembleDocument to generate Common List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.PopulateData(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonMasterDetailinSpreadsheetFormat
+                            'ExEnd:GenerateCommonMasterDetailinOpenSpreadsheetFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "presentation"
                     If isDatabase Then
-                        'ExStart:GenerateCommonMasterDetailFromDatabaseinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Common Master-Detail_DB.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Common Master-Detail_DB Report.pptx"
+                        'ExStart:GenerateCommonMasterDetailFromDatabaseinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Common Master-Detail_DB_OpenDocument.odp"
+                        'Setting up destination open document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Common Master-Detail_DB Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common List Report in presentation format
+                            'Call AssembleDocument to generate Common List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersDataDB(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonMasterDetailFromDatabaseinPresentationFormat
+                            'ExEnd:GenerateCommonMasterDetailFromDatabaseinOpenPresentationFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateCommonMasterDetailFromDataSetinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Common Master-Detail_DB.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Common Master-Detail_DT Report.pptx"
+                        'ExStart:GenerateCommonMasterDetailFromDataSetinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Common Master-Detail_DB_OpenDocument.odp"
+                        'Setting up destination open document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Common Master-Detail_DT Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common List Report in presentation format
+                            'Call AssembleDocument to generate Common List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersAndOrdersDataDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonMasterDetailFromDataSetinPresentationFormat
+                            'ExEnd:GenerateCommonMasterDetailFromDataSetinOpenPresentationFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateCommonMasterDetailFromXMLinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Common Master-Detail_DB.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Common Master-Detail_XML Report.pptx"
+                        'ExStart:GenerateCommonMasterDetailFromXMLinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Common Master-Detail_DB_OpenDocument.odp"
+                        'Setting up destination open document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Common Master-Detail_XML Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common List Report in presentation format
+                            'Call AssembleDocument to generate Common List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonMasterDetailFromXMLinPresentationFormat
+                            'ExEnd:GenerateCommonMasterDetailFromXMLinOpenPresentationFormat
                         End Try
                     Else
-                        'ExStart:GenerateCommonMasterDetailinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Common Master-Detail.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Common Master-Detail Report.pptx"
+                        'ExStart:GenerateCommonMasterDetailinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Common Master-Detail_OpenDocument.odp"
+                        'Setting up destination open document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Common Master-Detail Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common List Report in presentation format
+                            'Call AssembleDocument to generate Common List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.PopulateData(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonMasterDetailinPresentationFormat
+                            'ExEnd:GenerateCommonMasterDetailinOpenPresentationFormat
                         End Try
                     End If
                     Exit Select
@@ -999,192 +1000,192 @@ Namespace GroupDocs.AssemblyExamples
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
-                        'ExStart:GenerateInParagraphListFromDatabaseinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Paragraph List.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Paragraph List Report.docx"
+                        'ExStart:GenerateInParagraphListFromDatabaseinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Paragraph List_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Paragraph List_DB Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Paragraph List Report in document format
+                            'Call AssembleDocument to generate In-Paragraph List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataDB(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInParagraphListFromDatabaseinDocumentProcessingFormat
+                            'ExEnd:GenerateInParagraphListFromDatabaseinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateInParagraphListFromDataSetinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Paragraph List.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Paragraph List_DT Report.docx"
+                        'ExStart:GenerateInParagraphListFromDataSetinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Paragraph List_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Paragraph List_DT Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Paragraph List Report in document format
+                            'Call AssembleDocument to generate In-Paragraph List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInParagraphListFromDataSetinDocumentProcessingFormat
+                            'ExEnd:GenerateInParagraphListFromDataSetinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInParagraphListFromXMLinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Paragraph List_XML.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Paragraph List_XML Report.docx"
+                        'ExStart:GenerateInParagraphListFromXMLinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Paragraph List_XML_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Paragraph List_XML Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Paragraph List Report in document format
+                            'Call AssembleDocument to generate In-Paragraph List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInParagraphListFromXMLinDocumentProcessingFormat
+                            'ExEnd:GenerateInParagraphListFromXMLinOpenDocumentProcessingFormat
                         End Try
                     Else
-                        'ExStart:GenerateInParagraphListinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Paragraph List.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Paragraph List Report.docx"
+                        'ExStart:GenerateInParagraphListinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Paragraph List_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Paragraph List Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Paragraph List Report in document format
+                            'Call AssembleDocument to generate In-Paragraph List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsData(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInParagraphListinDocumentProcessingFormat
+                            'ExEnd:GenerateInParagraphListinOpenDocumentProcessingFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "spreadsheet"
                     If isDatabase Then
-                        'ExStart:GenerateInParagraphListFromDatabaseinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Paragraph List.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Paragraph List Report.xlsx"
+                        'ExStart:GenerateInParagraphListFromDatabaseinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Paragraph List_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Paragraph List_DB Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Paragraph List Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Paragraph List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsDataDB(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInParagraphListFromDatabaseinSpreadsheetFormat
+                            'ExEnd:GenerateInParagraphListFromDatabaseinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateInParagraphListFromDataSetinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Paragraph List.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Paragraph List_DT Report.xlsx"
+                        'ExStart:GenerateInParagraphListFromDataSetinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Paragraph List_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Paragraph List_DT Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Paragraph List Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Paragraph List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInParagraphListFromDataSetinSpreadsheetFormat
+                            'ExEnd:GenerateInParagraphListFromDataSetinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInParagraphListFromXMLinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Paragraph List_XML.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Paragraph List_XML Report.xlsx"
+                        'ExStart:GenerateInParagraphListFromXMLinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Paragraph List_XML_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Paragraph List_XML Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Paragraph List Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Paragraph List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInParagraphListFromXMLinSpreadsheetFormat
+                            'ExEnd:GenerateInParagraphListFromXMLinOpenSpreadsheetFormat
                         End Try
                     Else
-                        'ExStart:GenerateInParagraphListinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Paragraph List.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Paragraph List Report.xlsx"
+                        'ExStart:GenerateInParagraphListinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Paragraph List_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Paragraph List Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Paragraph List Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Paragraph List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsData(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInParagraphListinSpreadsheetFormat
+                            'ExEnd:GenerateInParagraphListinOpenSpreadsheetFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "presentation"
                     If isDatabase Then
-                        'ExStart:GenerateInParagraphListFromDatabaseinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Paragraph List.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Paragraph List Report.pptx"
+                        'ExStart:GenerateInParagraphListFromDatabaseinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Paragraph List_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Paragraph List_DB Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Paragraph List Report in presentation format
+                            'Call AssembleDocument to generate In-Paragraph List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsDataDB(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInParagraphListFromDatabaseinPresentationFormat
+                            'ExEnd:GenerateInParagraphListFromDatabaseinOpenPresentationFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateInParagraphListFromDataSetinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Paragraph List.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Paragraph List_DT Report.pptx"
+                        'ExStart:GenerateInParagraphListFromDataSetinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Paragraph List_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Paragraph List_DT Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Paragraph List Report in presentation format
+                            'Call AssembleDocument to generate In-Paragraph List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInParagraphListFromDataSetinPresentationFormat
+                            'ExEnd:GenerateInParagraphListFromDataSetinOpenPresentationFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInParagraphListFromXMLinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Paragraph List_XML.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Paragraph List_XML Report.pptx"
+                        'ExStart:GenerateInParagraphListFromXMLinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Paragraph List_XML_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Paragraph List_XML Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Paragraph List Report in presentation format
+                            'Call AssembleDocument to generate In-Paragraph List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInParagraphListFromXMLinPresentationFormat
+                            'ExEnd:GenerateInParagraphListFromXMLinOpenPresentationFormat
                         End Try
                     Else
-                        'ExStart:GenerateInParagraphListinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Paragraph List.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Paragraph List Report.pptx"
+                        'ExStart:GenerateInParagraphListinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Paragraph List_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Paragraph List Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Paragraph List Report in presentation format
+                            'Call AssembleDocument to generate In-Paragraph List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsData(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInParagraphListinPresentationFormat
+                            'ExEnd:GenerateInParagraphListinOpenPresentationFormat
                         End Try
                     End If
                     Exit Select
@@ -1194,192 +1195,192 @@ Namespace GroupDocs.AssemblyExamples
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
-                        'ExStart:GenerateInTableListWithAlternateContentFromDatabaseinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Alternate Content_DB.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Alternate Content_DB Report.docx"
+                        'ExStart:GenerateInTableListWithAlternateContentFromDatabaseinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Alternate Content_DB_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Alternate Content_DB Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in document format
+                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataDB(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithAlternateContentFromDatabaseinDocumentProcessingFormat
+                            'ExEnd:GenerateInTableListWithAlternateContentFromDatabaseinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateInTableListWithAlternateContentFromDataSetinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Alternate Content_DT.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Alternate Content_DT Report.docx"
+                        'ExStart:GenerateInTableListWithAlternateContentFromDataSetinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Alternate Content_DT_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Alternate Content_DT Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in document format
+                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDT(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithAlternateContentFromDataSetinDocumentProcessingFormat
+                            'ExEnd:GenerateInTableListWithAlternateContentFromDataSetinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInTableListWithAlternateContentFromXMLinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Alternate Content_XML.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Alternate Content_XML Report.docx"
+                        'ExStart:GenerateInTableListWithAlternateContentFromXMLinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Alternate Content_XML_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Alternate Content_XML Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in document format
+                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithAlternateContentFromXMLinDocumentProcessingFormat
+                            'ExEnd:GenerateInTableListWithAlternateContentFromXMLinOpenDocumentProcessingFormat
                         End Try
                     Else
-                        'ExStart:GenerateInTableListWithAlternateContentinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Alternate Content.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Alternate Content Report.docx"
+                        'ExStart:GenerateInTableListWithAlternateContentinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Alternate Content_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Alternate Content Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in document format
+                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithAlternateContentinDocumentProcessingFormat
+                            'ExEnd:GenerateInTableListWithAlternateContentinOpenDocumentProcessingFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "spreadsheet"
                     If isDatabase Then
-                        'ExStart:GenerateInTableListWithAlternateContentFromDatabaseinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Alternate Content_DB.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Alternate Content_DB Report.xlsx"
+                        'ExStart:GenerateInTableListWithAlternateContentFromDatabaseinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Alternate Content_DB_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Alternate Content_DB Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsDataDB(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithAlternateContentFromDatabaseinSpreadsheetFormat
+                            'ExEnd:GenerateInTableListWithAlternateContentFromDatabaseinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateInTableListWithAlternateContentFromDataSetinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Alternate Content_DT.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Alternate Content_DT Report.xlsx"
+                        'ExStart:GenerateInTableListWithAlternateContentFromDataSetinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Alternate Content_DT_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Alternate Content_DT Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsDT(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithAlternateContentFromDataSetinSpreadsheetFormat
+                            'ExEnd:GenerateInTableListWithAlternateContentFromDataSetinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInTableListWithAlternateContentFromXMLinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Alternate Content_XML.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Alternate Content_XML Report.xlsx"
+                        'ExStart:GenerateInTableListWithAlternateContentFromXMLinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Alternate Content_XML_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Alternate Content_XML Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithAlternateContentFromXMLinSpreadsheetFormat
+                            'ExEnd:GenerateInTableListWithAlternateContentFromXMLinOpenSpreadsheetFormat
                         End Try
                     Else
-                        'ExStart:GenerateInTableListWithAlternateContentinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Alternate Content.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Alternate Content Report.xlsx"
+                        'ExStart:GenerateInTableListWithAlternateContentinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Alternate Content_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Alternate Content Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithAlternateContentinSpreadsheetFormat
+                            'ExEnd:GenerateInTableListWithAlternateContentinOpenSpreadsheetFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "presentation"
                     If isDatabase Then
-                        'ExStart:GenerateInTableListWithAlternateContentFromDatabaseinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Alternate Content_DB.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Alternate Content_DB Report.pptx"
+                        'ExStart:GenerateInTableListWithAlternateContentFromDatabaseinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Alternate Content_DB_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Alternate Content_DB Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in presentation format
+                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsDataDB(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithAlternateContentFromDatabaseinPresentationFormat
+                            'ExEnd:GenerateInTableListWithAlternateContentFromDatabaseinOpenPresentationFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateInTableListWithAlternateContentFromDataSetinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Alternate Content_DT.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Alternate Content_DT Report.pptx"
+                        'ExStart:GenerateInTableListWithAlternateContentFromDataSetinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Alternate Content_DT_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Alternate Content_DT Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in presentation format
+                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsDT(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithAlternateContentFromDataSetinPresentationFormat
+                            'ExEnd:GenerateInTableListWithAlternateContentFromDataSetinOpenPresentationFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInTableListWithAlternateContentFromXMLinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Alternate Content_XML.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Alternate Content_XML Report.pptx"
+                        'ExStart:GenerateInTableListWithAlternateContentFromXMLinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Alternate Content_XML_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Alternate Content_XML Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in presentation format
+                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithAlternateContentFromXMLinPresentationFormat
+                            'ExEnd:GenerateInTableListWithAlternateContentFromXMLinOpenPresentationFormat
                         End Try
                     Else
-                        'ExStart:GenerateInTableListWithAlternateContentinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Alternate Content.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Alternate Content Report.pptx"
+                        'ExStart:GenerateInTableListWithAlternateContentinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Alternate Content_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Alternate Content Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in presentation format
+                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithAlternateContentinPresentationFormat
+                            'ExEnd:GenerateInTableListWithAlternateContentinOpenPresentationFormat
                         End Try
                     End If
                     Exit Select
@@ -1390,14 +1391,14 @@ Namespace GroupDocs.AssemblyExamples
                 Case "document"
                     If isDatabase Then
                         'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinDocumentProcessingDocument
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Filtering, Grouping, and Ordering_DB.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Filtering, Grouping, and Ordering_DB Report.docx"
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Filtering, Grouping, and Ordering_DB_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Filtering, Grouping, and Ordering_DB Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in document format
+                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersDataDB(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -1405,14 +1406,14 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isDataSet Then
                         'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinDocumentProcessingDocument
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Filtering, Grouping, and Ordering_DB.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Filtering, Grouping, and Ordering_DT Report.docx"
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Filtering, Grouping, and Ordering_DB_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Filtering, Grouping, and Ordering_DT Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in document format
+                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersAndOrdersDataDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -1420,14 +1421,14 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isDataSourceXML Then
                         'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinDocumentProcessingDocument
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Filtering, Grouping, and Ordering_XML.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Filtering, Grouping, and Ordering_XML Report.docx"
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Filtering, Grouping, and Ordering_XML_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Filtering, Grouping, and Ordering_XML Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in document format
+                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -1435,14 +1436,14 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     Else
                         'ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginDocumentProcessingDocument
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Filtering, Grouping, and Ordering.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Filtering, Grouping, and Ordering Report.docx"
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Filtering, Grouping, and Ordering_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Filtering, Grouping, and Ordering Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in document format
+                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -1453,128 +1454,128 @@ Namespace GroupDocs.AssemblyExamples
 
                 Case "spreadsheet"
                     If isDatabase Then
-                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Filtering, Grouping, and Ordering_DB.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Filtering, Grouping, and Ordering_DB Report.xlsx"
+                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Filtering, Grouping, and Ordering_DB_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Filtering, Grouping, and Ordering_DB Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersDataDB(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinSpreadsheetFormat
+                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Filtering, Grouping, and Ordering_DB.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Filtering, Grouping, and Ordering_DT Report.xlsx"
+                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Filtering, Grouping, and Ordering_DB_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Filtering, Grouping, and Ordering_DT Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomersAndOrdersDataDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinSpreadsheetFormat
+                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Filtering, Grouping, and Ordering_XML.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Filtering, Grouping, and Ordering_XML Report.xlsx"
+                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Filtering, Grouping, and Ordering_XML_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Filtering, Grouping, and Ordering_XML Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinSpreadsheetFormat
+                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinOpenSpreadsheetFormat
                         End Try
                     Else
-                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Filtering, Grouping, and Ordering.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Filtering, Grouping, and Ordering Report.xlsx"
+                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Filtering, Grouping, and Ordering_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Filtering, Grouping, and Ordering Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderinginSpreadsheetFormat
+                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderinginOpenSpreadsheetFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "presentation"
                     If isDatabase Then
-                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Filtering, Grouping, and Ordering_DB.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Filtering, Grouping, and Ordering_DB Report.pptx"
+                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Filtering, Grouping, and Ordering_DB_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Filtering, Grouping, and Ordering_DB Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in presentation format
+                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersDataDB(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinPresentationFormat
+                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinOpenPresentationFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Filtering, Grouping, and Ordering_DB.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Filtering, Grouping, and Ordering_DT Report.pptx"
+                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Filtering, Grouping, and Ordering_DB_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Filtering, Grouping, and Ordering_DT Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in presentation format
+                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersAndOrdersDataDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinPresentationFormat
+                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinOpenPresentationFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Filtering, Grouping, and Ordering_XML.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Filtering, Grouping, and Ordering_XML Report.pptx"
+                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Filtering, Grouping, and Ordering_XML_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Filtering, Grouping, and Ordering_XML Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in presentation format
+                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinPresentationFormat
+                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinOpenPresentationFormat
                         End Try
                     Else
-                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Filtering, Grouping, and Ordering.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Filtering, Grouping, and Ordering Report.pptx"
+                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Filtering, Grouping, and Ordering_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Filtering, Grouping, and Ordering Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in presentation format
+                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderinginPresentationFormat
+                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderinginOpenPresentationFormat
                         End Try
                     End If
                     Exit Select
@@ -1585,14 +1586,14 @@ Namespace GroupDocs.AssemblyExamples
                 Case "document"
                     If isDatabase Then
                         'ExStart:GenerateInTableListWithHighlightedRowsFromDatabaseinDocumentProcessingDocument
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Highlighted Rows_DB.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Highlighted Rows_DB Report.docx"
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Highlighted Rows_DB_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Highlighted Rows_DB Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in document format
+                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersDataDB(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -1600,14 +1601,14 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isDataSet Then
                         'ExStart:GenerateInTableListWithHighlightedRowsFromDataSetinDocumentProcessingDocument
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Highlighted Rows_DT.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Highlighted Rows_DT Report.docx"
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Highlighted Rows_DT_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Highlighted Rows_DT Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in document format
+                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersAndOrdersDataDT(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -1615,14 +1616,14 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isDataSourceXML Then
                         'ExStart:GenerateInTableListWithHighlightedRowsFromXMLinDocumentProcessingDocument
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Highlighted Rows_XML.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Highlighted Rows_XML Report.docx"
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Highlighted Rows_XML_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Highlighted Rows_XML Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in document format
+                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -1630,14 +1631,14 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     Else
                         'ExStart:GenerateInTableListWithHighlightedRowsinDocumentProcessingDocument
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Highlighted Rows.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Highlighted Rows Report.docx"
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Highlighted Rows_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Highlighted Rows Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in document format
+                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -1649,14 +1650,14 @@ Namespace GroupDocs.AssemblyExamples
                 Case "spreadsheet"
                     If isDatabase Then
                         'ExStart:GenerateInTableListWithHighlightedRowsFromDatabaseinSpreadsheetDocument
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Highlighted Rows_DB.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Highlighted Rows_DB Report.xlsx"
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Highlighted Rows_DB_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Highlighted Rows_DB Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersDataDB(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -1664,14 +1665,14 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isDataSet Then
                         'ExStart:GenerateInTableListWithHighlightedRowsFromDataSetinSpreadsheetDocument
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Highlighted Rows_DT.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Highlighted Rows_DT Report.xlsx"
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Highlighted Rows_DT_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Highlighted Rows_DT Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomersAndOrdersDataDT(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -1679,14 +1680,14 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isDataSourceXML Then
                         'ExStart:GenerateInTableListWithHighlightedRowsFromXMLinSpreadsheetDocument
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Highlighted Rows_XML.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Highlighted Rows_XML Report.xlsx"
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Highlighted Rows_XML_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Highlighted Rows_XML Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -1694,14 +1695,14 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     Else
                         'ExStart:GenerateInTableListWithHighlightedRowsinSpreadsheetDocument
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Highlighted Rows.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Highlighted Rows Report.xlsx"
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Highlighted Rows_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Highlighted Rows Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -1712,64 +1713,64 @@ Namespace GroupDocs.AssemblyExamples
 
                 Case "presentation"
                     If isDatabase Then
-                        'ExStart:GenerateInTableListWithHighlightedRowsFromDatabaseinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Highlighted Rows_DB.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Highlighted Rows_DB Report.pptx"
+                        'ExStart:GenerateInTableListWithHighlightedRowsFromDatabaseinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Highlighted Rows_DB_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Highlighted Rows_DB Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in presentation format
+                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersDataDB(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithHighlightedRowsFromDatabaseinPresentationFormat
+                            'ExEnd:GenerateInTableListWithHighlightedRowsFromDatabaseinOpenPresentationFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateInTableListWithHighlightedRowsFromDataSetinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Highlighted Rows_DT.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Highlighted Rows_DT Report.pptx"
+                        'ExStart:GenerateInTableListWithHighlightedRowsFromDataSetinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Highlighted Rows_DT_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Highlighted Rows_DT Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in presentation format
+                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersAndOrdersDataDT(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithHighlightedRowsFromDataSetinPresentationFormat
+                            'ExEnd:GenerateInTableListWithHighlightedRowsFromDataSetinOpenPresentationFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInTableListWithHighlightedRowsFromXMLinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Highlighted Rows_XML.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Highlighted Rows_XML Report.pptx"
+                        'ExStart:GenerateInTableListWithHighlightedRowsFromXMLinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Highlighted Rows_XML_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Highlighted Rows_XML Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in presentation format
+                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithHighlightedRowsFromXMLinPresentationFormat
+                            'ExEnd:GenerateInTableListWithHighlightedRowsFromXMLinOpenPresentationFormat
                         End Try
                     Else
-                        'ExStart:GenerateInTableListWithHighlightedRowsinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Highlighted Rows.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Highlighted Rows Report.pptx"
+                        'ExStart:GenerateInTableListWithHighlightedRowsinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Highlighted Rows_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Highlighted Rows Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in presentation format
+                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithHighlightedRowsinPresentationFormat
+                            'ExEnd:GenerateInTableListWithHighlightedRowsinOpenPresentationFormat
                         End Try
                     End If
                     Exit Select
@@ -1780,14 +1781,14 @@ Namespace GroupDocs.AssemblyExamples
                 Case "document"
                     If isDatabase Then
                         'ExStart:GenerateInTableListFromDatabaseinDocumentProcessingDocument
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List_DB.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table List_DB Report.docx"
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List_DB_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List_DB Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List Report in document format
+                            'Call AssembleDocument to generate In-Table List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersDataDB(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -1795,14 +1796,14 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isDataSet Then
                         'ExStart:GenerateInTableListFromDataSetinDocumentProcessingDocument
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List_DT.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table List_DT Report.docx"
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List_DT_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List_DT Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List Report in document format
+                            'Call AssembleDocument to generate In-Table List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersAndOrdersDataDT(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -1810,14 +1811,14 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isDataSourceXML Then
                         'ExStart:GenerateInTableListFromXMLinDocumentProcessingDocument
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List_XML.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table List_XML Report.docx"
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List_XML_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List_XML Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List Report in document format
+                            'Call AssembleDocument to generate In-Table List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -1825,14 +1826,14 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     Else
                         'ExStart:GenerateInTableListinDocumentProcessingDocument
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table List Report.docx"
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List Report in document format
+                            'Call AssembleDocument to generate In-Table List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.PopulateData(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -1843,128 +1844,128 @@ Namespace GroupDocs.AssemblyExamples
 
                 Case "spreadsheet"
                     If isDatabase Then
-                        'ExStart:GenerateInTableListFromDatabaseinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List_DB.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List_DB Report.xlsx"
+                        'ExStart:GenerateInTableListFromDatabaseinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List_DB_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List_DB Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomersDataDB(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListFromDatabaseinSpreadsheetFormat
+                            'ExEnd:GenerateInTableListFromDatabaseinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateInTableListFromDataSetinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List_DT.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List_DT Report.xlsx"
+                        'ExStart:GenerateInTableListFromDataSetinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List_DT_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List_DT Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomersAndOrdersDataDT(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListFromDataSetinSpreadsheetFormat
+                            'ExEnd:GenerateInTableListFromDataSetinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInTableListFromXMLinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List_XML.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List_XML Report.xlsx"
+                        'ExStart:GenerateInTableListFromXMLinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List_XML_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List_XML Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListFromXMLinSpreadsheetFormat
+                            'ExEnd:GenerateInTableListFromXMLinOpenSpreadsheetFormat
                         End Try
                     Else
-                        'ExStart:GenerateInTableListinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List Report.xlsx"
+                        'ExStart:GenerateInTableListinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.PopulateData(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListinSpreadsheetFormat
+                            'ExEnd:GenerateInTableListinOpenSpreadsheetFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "presentation"
                     If isDatabase Then
-                        'ExStart:GenerateInTableListFromDatabaseinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List_DB.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List_DB Report.pptx"
+                        'ExStart:GenerateInTableListFromDatabaseinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List_DB_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List_DB Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List Report in presentation format
+                            'Call AssembleDocument to generate In-Table List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersDataDB(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListFromDatabaseinPresentationFormat
+                            'ExEnd:GenerateInTableListFromDatabaseinOpenPresentationFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateInTableListFromDataSetinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List_DT.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List_DT Report.pptx"
+                        'ExStart:GenerateInTableListFromDataSetinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List_DT_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List_DT Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List Report in presentation format
+                            'Call AssembleDocument to generate In-Table List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersAndOrdersDataDT(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListFromDataSetinPresentationFormat
+                            'ExEnd:GenerateInTableListFromDataSetinOpenPresentationFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInTableListFromXMLinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List_XML.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List_XML Report.pptx"
+                        'ExStart:GenerateInTableListFromXMLinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List_XML_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List_XML Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List Report in presentation format
+                            'Call AssembleDocument to generate In-Table List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListFromXMLinPresentationFormat
+                            'ExEnd:GenerateInTableListFromXMLinOpenPresentationFormat
                         End Try
                     Else
-                        'ExStart:GenerateInTableListinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List Report.pptx"
+                        'ExStart:GenerateInTableListinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List Report in presentation format
+                            'Call AssembleDocument to generate In-Table List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.PopulateData(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListinPresentationFormat
+                            'ExEnd:GenerateInTableListinOpenPresentationFormat
                         End Try
                     End If
                     Exit Select
@@ -1974,192 +1975,192 @@ Namespace GroupDocs.AssemblyExamples
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
-                        'ExStart:GenerateInTableMasterDetailFromDatabaseinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table Master-Detail_DB.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table Master-Detail_DB Report.docx"
+                        'ExStart:GenerateInTableMasterDetailFromDatabaseinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table Master-Detail_DB_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table Master-Detail_DB Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table Master-Detail Report in document format
+                            'Call AssembleDocument to generate In-Table Master-Detail Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersDataDB(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableMasterDetailFromDatabaseinDocumentProcessingFormat
+                            'ExEnd:GenerateInTableMasterDetailFromDatabaseinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateInTableMasterDetailFromDataSetinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table Master-Detail_DT.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table Master-Detail_DT Report.docx"
+                        'ExStart:GenerateInTableMasterDetailFromDataSetinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table Master-Detail_DT_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table Master-Detail_DT Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table Master-Detail Report in document format
+                            'Call AssembleDocument to generate In-Table Master-Detail Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersAndOrdersDataDT(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableMasterDetailFromDataSetinDocumentProcessingFormat
+                            'ExEnd:GenerateInTableMasterDetailFromDataSetinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInTableMasterDetailFromXMLinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table Master-Detail_XML.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table Master-Detail_XML Report.docx"
+                        'ExStart:GenerateInTableMasterDetailFromXMLinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table Master-Detail_XML_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table Master-Detail_XML Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table Master-Detail Report in document format
+                            'Call AssembleDocument to generate In-Table Master-Detail Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableMasterDetailFromXMLinDocumentProcessingFormat
+                            'ExEnd:GenerateInTableMasterDetailFromXMLinOpenDocumentProcessingFormat
                         End Try
                     Else
-                        'ExStart:GenerateInTableMasterDetailinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table Master-Detail.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table Master-Detail Report.docx"
+                        'ExStart:GenerateInTableMasterDetailinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table Master-Detail_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/In-Table Master-Detail Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table Master-Detail Report in document format
+                            'Call AssembleDocument to generate In-Table Master-Detail Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.PopulateData(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableMasterDetailinDocumentProcessingFormat
+                            'ExEnd:GenerateInTableMasterDetailinOpenDocumentProcessingFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "spreadsheet"
                     If isDatabase Then
-                        'ExStart:GenerateInTableMasterDetailFromDatabaseinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table Master-Detail_DB.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table Master-Detail_DB Report.xlsx"
+                        'ExStart:GenerateInTableMasterDetailFromDatabaseinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table Master-Detail_DB_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table Master-Detail_DB Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table Master-Detail Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table Master-Detail Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomersDataDB(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableMasterDetailFromDatabaseinSpreadsheetFormat
+                            'ExEnd:GenerateInTableMasterDetailFromDatabaseinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateInTableMasterDetailFromDataSetinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table Master-Detail_DT.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table Master-Detail_DT Report.xlsx"
+                        'ExStart:GenerateInTableMasterDetailFromDataSetinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table Master-Detail_DT_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table Master-Detail_DT Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table Master-Detail Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table Master-Detail Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomersAndOrdersDataDT(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableMasterDetailFromDataSetinSpreadsheetFormat
+                            'ExEnd:GenerateInTableMasterDetailFromDataSetinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInTableMasterDetailFromXMLinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table Master-Detail_XML.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table Master-Detail_XML Report.xlsx"
+                        'ExStart:GenerateInTableMasterDetailFromXMLinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table Master-Detail_XML_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table Master-Detail_XML Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table Master-Detail Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table Master-Detail Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableMasterDetailFromXMLinSpreadsheetFormat
+                            'ExEnd:GenerateInTableMasterDetailFromXMLinOpenSpreadsheetFormat
                         End Try
                     Else
-                        'ExStart:GenerateInTableMasterDetailinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table Master-Detail.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table Master-Detail Report.xlsx"
+                        'ExStart:GenerateInTableMasterDetailinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table Master-Detail_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table Master-Detail Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table Master-Detail Report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table Master-Detail Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.PopulateData(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableMasterDetailinSpreadsheetFormat
+                            'ExEnd:GenerateInTableMasterDetailinOpenSpreadsheetFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "presentation"
                     If isDatabase Then
-                        'ExStart:GenerateInTableMasterDetailFromDatabaseinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table Master-Detail_DB.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Table Master-Detail_DB Report.pptx"
+                        'ExStart:GenerateInTableMasterDetailFromDatabaseinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table Master-Detail_DB_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table Master-Detail_DB Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table Master-Detail Report in presentation format
+                            'Call AssembleDocument to generate In-Table Master-Detail Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersDataDB(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableMasterDetailFromDatabaseinPresentationFormat
+                            'ExEnd:GenerateInTableMasterDetailFromDatabaseinOpenPresentationFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateInTableMasterDetailFromDataSetinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table Master-Detail_DT.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Table Master-Detail_DT Report.pptx"
+                        'ExStart:GenerateInTableMasterDetailFromDataSetinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table Master-Detail_DT_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table Master-Detail_DT Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table Master-Detail Report in presentation format
+                            'Call AssembleDocument to generate In-Table Master-Detail Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersAndOrdersDataDT(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableMasterDetailFromDataSetinPresentationFormat
+                            'ExEnd:GenerateInTableMasterDetailFromDataSetinOpenPresentationFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInTableMasterDetailFromXMLinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table Master-Detail_XML.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Table Master-Detail_XML Report.pptx"
+                        'ExStart:GenerateInTableMasterDetailFromXMLinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table Master-Detail_XML_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table Master-Detail_XML Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table Master-Detail Report in presentation format
+                            'Call AssembleDocument to generate In-Table Master-Detail Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableMasterDetailFromXMLinPresentationFormat
+                            'ExEnd:GenerateInTableMasterDetailFromXMLinOpenPresentationFormat
                         End Try
                     Else
-                        'ExStart:GenerateInTableMasterDetailinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table Master-Detail.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/In-Table Master-Detail Report.pptx"
+                        'ExStart:GenerateInTableMasterDetailinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table Master-Detail_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table Master-Detail Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table Master-Detail Report in presentation format
+                            'Call AssembleDocument to generate In-Table Master-Detail Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.PopulateData(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableMasterDetailinPresentationFormat
+                            'ExEnd:GenerateInTableMasterDetailinOpenPresentationFormat
                         End Try
                     End If
                     Exit Select
@@ -2170,14 +2171,14 @@ Namespace GroupDocs.AssemblyExamples
                 Case "document"
                     If isDatabase Then
                         'ExStart:GenerateMulticoloredNumberedListFromDatabaseinDocumentProcessingDocument
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Multicolored Numbered List.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Multicolored Numbered List Report.docx"
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Multicolored Numbered List_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Multicolored Numbered List_DB Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Multicolored Numbered List Report in document format
+                            'Call AssembleDocument to generate Multicolored Numbered List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataDB(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -2185,14 +2186,14 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isDataSet Then
                         'ExStart:GenerateMulticoloredNumberedListFromDataSetinDocumentProcessingDocument
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Multicolored Numbered List.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Multicolored Numbered List_DT Report.docx"
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Multicolored Numbered List_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Multicolored Numbered List_DT Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Multicolored Numbered List Report in document format
+                            'Call AssembleDocument to generate Multicolored Numbered List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -2200,14 +2201,14 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isDataSourceXML Then
                         'ExStart:GenerateMulticoloredNumberedListFromXMLinDocumentProcessingDocument
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Multicolored Numbered List_XML.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Multicolored Numbered List_XML Report.docx"
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Multicolored Numbered List_XML_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Multicolored Numbered List_XML Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Multicolored Numbered List Report in document format
+                            'Call AssembleDocument to generate Multicolored Numbered List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -2215,14 +2216,14 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     Else
                         'ExStart:GenerateMulticoloredNumberedListinDocumentProcessingDocument
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Multicolored Numbered List.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Multicolored Numbered List Report.docx"
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Multicolored Numbered List_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Multicolored Numbered List Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Multicolored Numbered List Report in document format
+                            'Call AssembleDocument to generate Multicolored Numbered List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsData(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -2234,14 +2235,14 @@ Namespace GroupDocs.AssemblyExamples
                 Case "spreadsheet"
                     If isDatabase Then
                         'ExStart:GenerateMulticoloredNumberedListFromDatabaseinSpreadsheetDocument
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Multicolored Numbered List.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Multicolored Numbered List Report.xlsx"
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Multicolored Numbered List_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Multicolored Numbered List_DB Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Multicolored Numbered List Report in spreadsheet format
+                            'Call AssembleDocument to generate Multicolored Numbered List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsDataDB(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -2249,14 +2250,14 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isDataSet Then
                         'ExStart:GenerateMulticoloredNumberedListFromDataSetinSpreadsheetDocument
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Multicolored Numbered List.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Multicolored Numbered List_DT Report.xlsx"
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Multicolored Numbered List_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Multicolored Numbered List_DT Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Multicolored Numbered List Report in spreadsheet format
+                            'Call AssembleDocument to generate Multicolored Numbered List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -2264,14 +2265,14 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isDataSourceXML Then
                         'ExStart:GenerateMulticoloredNumberedListFromXMLinSpreadsheetDocument
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Multicolored Numbered List_XML.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Multicolored Numbered List_XML Report.xlsx"
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Multicolored Numbered List_XML_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Multicolored Numbered List_XML Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Multicolored Numbered List Report in spreadsheet format
+                            'Call AssembleDocument to generate Multicolored Numbered List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -2279,14 +2280,14 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     Else
                         'ExStart:GenerateMulticoloredNumberedListinSpreadsheetDocument
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Multicolored Numbered List.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Multicolored Numbered List Report.xlsx"
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Multicolored Numbered List_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Multicolored Numbered List Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Multicolored Numbered List Report in spreadsheet format
+                            'Call AssembleDocument to generate Multicolored Numbered List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsData(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
@@ -2297,64 +2298,64 @@ Namespace GroupDocs.AssemblyExamples
 
                 Case "presentation"
                     If isDatabase Then
-                        'ExStart:GenerateMulticoloredNumberedListFromDatabaseinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Multicolored Numbered List.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Multicolored Numbered List Report.pptx"
+                        'ExStart:GenerateMulticoloredNumberedListFromDatabaseinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Multicolored Numbered List_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Multicolored Numbered List_DB Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Multicolored Numbered List Report in presentation format
+                            'Call AssembleDocument to generate Multicolored Numbered List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsDataDB(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateMulticoloredNumberedListFromDatabaseinPresentationFormat
+                            'ExEnd:GenerateMulticoloredNumberedListFromDatabaseinOpenPresentationFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateMulticoloredNumberedListFromDataSetinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Multicolored Numbered List.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Multicolored Numbered List_DT Report.pptx"
+                        'ExStart:GenerateMulticoloredNumberedListFromDataSetinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Multicolored Numbered List_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Multicolored Numbered List_DT Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Multicolored Numbered List Report in presentation format
+                            'Call AssembleDocument to generate Multicolored Numbered List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateMulticoloredNumberedListFromDataSetinPresentationFormat
+                            'ExEnd:GenerateMulticoloredNumberedListFromDataSetinOpenPresentationFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateMulticoloredNumberedListFromXMLinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Multicolored Numbered List_XML.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Multicolored Numbered List_XML Report.pptx"
+                        'ExStart:GenerateMulticoloredNumberedListFromXMLinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Multicolored Numbered List_XML_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Multicolored Numbered List_XML Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Multicolored Numbered List Report in presentation format
+                            'Call AssembleDocument to generate Multicolored Numbered List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateMulticoloredNumberedListFromXMLinPresentationFormat
+                            'ExEnd:GenerateMulticoloredNumberedListFromXMLinOpenPresentationFormat
                         End Try
                     Else
-                        'ExStart:GenerateMulticoloredNumberedListinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Multicolored Numbered List.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Multicolored Numbered List Report.pptx"
+                        'ExStart:GenerateMulticoloredNumberedListinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Multicolored Numbered List_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Multicolored Numbered List Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Multicolored Numbered List Report in presentation format
+                            'Call AssembleDocument to generate Multicolored Numbered List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsData(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateMulticoloredNumberedListinPresentationFormat
+                            'ExEnd:GenerateMulticoloredNumberedListinOpenPresentationFormat
                         End Try
                     End If
                     Exit Select
@@ -2364,192 +2365,192 @@ Namespace GroupDocs.AssemblyExamples
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
-                        'ExStart:GenerateNumberedListFromDatabaseinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Numbered List.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Numbered List Report.docx"
+                        'ExStart:GenerateNumberedListFromDatabaseinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Numbered List_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Numbered List_DB Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Numbered List Report in document format
+                            'Call AssembleDocument to generate Numbered List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataDB(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateNumberedListFromDatabaseinDocumentProcessingFormat
+                            'ExEnd:GenerateNumberedListFromDatabaseinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateNumberedListFromDataSetinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Numbered List.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Numbered List_DT Report.docx"
+                        'ExStart:GenerateNumberedListFromDataSetinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Numbered List_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Numbered List_DT Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Numbered List Report in document format
+                            'Call AssembleDocument to generate Numbered List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateNumberedListFromDataSetinDocumentProcessingFormat 
+                            'ExEnd:GenerateNumberedListFromDataSetinOpenDocumentProcessingFormat 
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateNumberedListFromXMLinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Numbered List_XML.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Numbered List_XML Report.docx"
+                        'ExStart:GenerateNumberedListFromXMLinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Numbered List_XML_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Numbered List_XML Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Numbered List Report in document format
+                            'Call AssembleDocument to generate Numbered List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateNumberedListFromXMLinDocumentProcessingFormat 
+                            'ExEnd:GenerateNumberedListFromXMLinOpenDocumentProcessingFormat 
                         End Try
                     Else
-                        'ExStart:GenerateNumberedListinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Numbered List.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Numbered List Report.docx"
+                        'ExStart:GenerateNumberedListinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Numbered List_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Numbered List Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Numbered List Report in document format
+                            'Call AssembleDocument to generate Numbered List Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsData(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateNumberedListinDocumentProcessingFormat
+                            'ExEnd:GenerateNumberedListinOpenDocumentProcessingFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "spreadsheet"
                     If isDatabase Then
-                        'ExStart:GenerateNumberedListFromDatabaseinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Numbered List.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Numbered List Report.xlsx"
+                        'ExStart:GenerateNumberedListFromDatabaseinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Numbered List_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Numbered List_DB Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Numbered List Report in spreadsheet format
+                            'Call AssembleDocument to generate Numbered List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsDataDB(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateNumberedListFromDatabaseinSpreadsheetFormat
+                            'ExEnd:GenerateNumberedListFromDatabaseinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateNumberedListFromDataSetinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Numbered List.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Numbered List_DT Report.xlsx"
+                        'ExStart:GenerateNumberedListFromDataSetinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Numbered List_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Numbered List_DT Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Numbered List Report in spreadsheet format
+                            'Call AssembleDocument to generate Numbered List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateNumberedListFromDataSetinSpreadsheetFormat
+                            'ExEnd:GenerateNumberedListFromDataSetinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateNumberedListFromXMLinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Numbered List_XML.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Numbered List_XML Report.xlsx"
+                        'ExStart:GenerateNumberedListFromXMLinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Numbered List_XML_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Numbered List_XML Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Numbered List Report in spreadsheet format
+                            'Call AssembleDocument to generate Numbered List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateNumberedListFromXMLinSpreadsheetFormat
+                            'ExEnd:GenerateNumberedListFromXMLinOpenSpreadsheetFormat
                         End Try
                     Else
-                        'ExStart:GenerateNumberedListinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Numbered List.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Numbered List Report.xlsx"
+                        'ExStart:GenerateNumberedListinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Numbered List_OpenDocument.ods"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Numbered List Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Numbered List Report in spreadsheet format
+                            'Call AssembleDocument to generate Numbered List Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsData(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateNumberedListinSpreadsheetFormat
+                            'ExEnd:GenerateNumberedListinOpenSpreadsheetFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "presentation"
                     If isDatabase Then
-                        'ExStart:GenerateNumberedListFromDatabaseinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Numbered List.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Numbered List Report.pptx"
+                        'ExStart:GenerateNumberedListFromDatabaseinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Numbered List_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Numbered List_DB Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Numbered List Report in presentation format
+                            'Call AssembleDocument to generate Numbered List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsDataDB(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateNumberedListFromDatabaseinPresentationFormat
+                            'ExEnd:GenerateNumberedListFromDatabaseinOpenPresentationFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateNumberedListFromDataSetinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Numbered List.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Numbered List_DT Report.pptx"
+                        'ExStart:GenerateNumberedListFromDataSetinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Numbered List_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Numbered List_DT Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Numbered List Report in presentation format
+                            'Call AssembleDocument to generate Numbered List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateNumberedListFromDataSetinPresentationFormat
+                            'ExEnd:GenerateNumberedListFromDataSetinOpenPresentationFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateNumberedListFromXMLinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Numbered List_XML.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Numbered List_XML Report.pptx"
+                        'ExStart:GenerateNumberedListFromXMLinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Numbered List_XML_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Numbered List_XML Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Numbered List Report in presentation format
+                            'Call AssembleDocument to generate Numbered List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateNumberedListFromXMLinPresentationFormat
+                            'ExEnd:GenerateNumberedListFromXMLinOpenPresentationFormat
                         End Try
                     Else
-                        'ExStart:GenerateNumberedListinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Numbered List.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Numbered List Report.pptx"
+                        'ExStart:GenerateNumberedListinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Numbered List_OpenDocument.odp"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Numbered List Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Numbered List Report in presentation format
+                            'Call AssembleDocument to generate Numbered List Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetProductsData(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateNumberedListinPresentationFormat
+                            'ExEnd:GenerateNumberedListinOpenPresentationFormat
                         End Try
                     End If
                     Exit Select
@@ -2559,192 +2560,192 @@ Namespace GroupDocs.AssemblyExamples
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
-                        'ExStart:GeneratePieChartFromDatabaseinDocumentProcessingFormat
-                        'Setting up source document template
+                        'ExStart:GeneratePieChartFromDatabaseinOpenDocumentProcessingFormat
+                        'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/Pie Chart_DB.docx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strDocumentReport As [String] = "Word Reports/Pie Chart_DB Report.docx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Pie Chart Report in document format
+                            'Call AssembleDocument to generate Pie Chart Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersDataDB(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GeneratePieChartFromDatabaseinDocumentProcessingFormat
+                            'ExEnd:GeneratePieChartFromDatabaseinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GeneratePieChartFromDataSetinDocumentProcessingFormat
-                        'Setting up source document template
+                        'ExStart:GeneratePieChartFromDataSetinOpenDocumentProcessingFormat
+                        'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/Pie Chart_DB.docx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strDocumentReport As [String] = "Word Reports/Pie Chart_DT Report.docx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Pie Chart Report in document format
+                            'Call AssembleDocument to generate Pie Chart Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersAndOrdersDataDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GeneratePieChartFromDataSetinDocumentProcessingFormat
+                            'ExEnd:GeneratePieChartFromDataSetinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GeneratePieChartFromXMLinDocumentProcessingFormat
-                        'Setting up source document template
+                        'ExStart:GeneratePieChartFromXMLinOpenDocumentProcessingFormat
+                        'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/Pie Chart_DB.docx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strDocumentReport As [String] = "Word Reports/Pie Chart_XML Report.docx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Pie Chart Report in document format
+                            'Call AssembleDocument to generate Pie Chart Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GeneratePieChartFromXMLinDocumentProcessingFormat
+                            'ExEnd:GeneratePieChartFromXMLinOpenDocumentProcessingFormat
                         End Try
                     Else
-                        'ExStart:GeneratePieChartinDocumentProcessingFormat
-                        'Setting up source document template
+                        'ExStart:GeneratePieChartinOpenDocumentProcessingFormat
+                        'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/Pie Chart.docx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strDocumentReport As [String] = "Word Reports/Pie Chart Report.docx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Pie Chart Report in document format
+                            'Call AssembleDocument to generate Pie Chart Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.PopulateData(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GeneratePieChartinDocumentProcessingFormat
+                            'ExEnd:GeneratePieChartinOpenDocumentProcessingFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "spreadsheet"
                     If isDatabase Then
-                        'ExStart:GeneratePieChartFromDatabaseinSpreadsheetFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GeneratePieChartFromDatabaseinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Pie Chart_DB.xlsx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Pie Chart_DB Report.xlsx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Pie Chart Report in spreadsheet format
+                            'Call AssembleDocument to generate Pie Chart Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomersDataDB(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GeneratePieChartFromDatabaseinSpreadsheetFormat
+                            'ExEnd:GeneratePieChartFromDatabaseinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GeneratePieChartFromDataSetinSpreadsheetFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GeneratePieChartFromDataSetinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Pie Chart_DB.xlsx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Pie Chart_DT Report.xlsx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Pie Chart Report in spreadsheet format
+                            'Call AssembleDocument to generate Pie Chart Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomersAndOrdersDataDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GeneratePieChartFromDataSetinSpreadsheetFormat
+                            'ExEnd:GeneratePieChartFromDataSetinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GeneratePieChartFromXMLinSpreadsheetFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GeneratePieChartFromXMLinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Pie Chart_DB.xlsx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Pie Chart_XML Report.xlsx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Pie Chart Report in spreadsheet format
+                            'Call AssembleDocument to generate Pie Chart Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GeneratePieChartFromXMLinSpreadsheetFormat
+                            'ExEnd:GeneratePieChartFromXMLinOpenSpreadsheetFormat
                         End Try
                     Else
-                        'ExStart:GeneratePieChartinSpreadsheetFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GeneratePieChartinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Pie Chart.xlsx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Pie Chart Report.xlsx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Pie Chart Report in spreadsheet format
+                            'Call AssembleDocument to generate Pie Chart Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.PopulateData(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GeneratePieChartinSpreadsheetFormat
+                            'ExEnd:GeneratePieChartinOpenSpreadsheetFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "presentation"
                     If isDatabase Then
-                        'ExStart:GeneratePieChartFromDatabaseinPresentationFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GeneratePieChartFromDatabaseinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
                         Const strPresentationTemplate As [String] = "Presentation Templates/Pie Chart_DB.pptx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strPresentationReport As [String] = "Presentation Reports/Pie Chart_DB Report.pptx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Pie Chart Report in presentation format
+                            'Call AssembleDocument to generate Pie Chart Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersDataDB(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GeneratePieChartFromDatabaseinPresentationFormat
+                            'ExEnd:GeneratePieChartFromDatabaseinOpenPresentationFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GeneratePieChartFromDataSetinPresentationFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GeneratePieChartFromDataSetinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
                         Const strPresentationTemplate As [String] = "Presentation Templates/Pie Chart_DB.pptx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strPresentationReport As [String] = "Presentation Reports/Pie Chart_DT Report.pptx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Pie Chart Report in presentation format
+                            'Call AssembleDocument to generate Pie Chart Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersAndOrdersDataDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GeneratePieChartFromDataSetinPresentationFormat
+                            'ExEnd:GeneratePieChartFromDataSetinOpenPresentationFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GeneratePieChartFromXMLinPresentationFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GeneratePieChartFromXMLinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
                         Const strPresentationTemplate As [String] = "Presentation Templates/Pie Chart_DB.pptx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strPresentationReport As [String] = "Presentation Reports/Pie Chart_XML Report.pptx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Pie Chart Report in presentation format
+                            'Call AssembleDocument to generate Pie Chart Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GeneratePieChartFromXMLinPresentationFormat
+                            'ExEnd:GeneratePieChartFromXMLinOpenPresentationFormat
                         End Try
                     Else
-                        'ExStart:GeneratePieChartinPresentationFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GeneratePieChartinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
                         Const strPresentationTemplate As [String] = "Presentation Templates/Pie Chart.pptx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strPresentationReport As [String] = "Presentation Reports/Pie Chart Report.pptx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Pie Chart Report in presentation format
+                            'Call AssembleDocument to generate Pie Chart Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.PopulateData(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GeneratePieChartinPresentationFormat
+                            'ExEnd:GeneratePieChartinOpenPresentationFormat
                         End Try
                     End If
                     Exit Select
@@ -2754,192 +2755,192 @@ Namespace GroupDocs.AssemblyExamples
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
-                        'ExStart:GenerateScatterChartFromDatabaseinDocumentProcessingFormat
-                        'Setting up source document template
+                        'ExStart:GenerateScatterChartFromDatabaseinOpenDocumentProcessingFormat
+                        'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/Scatter Chart_DB.docx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strDocumentReport As [String] = "Word Reports/Scatter Chart_DB Report.docx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Scatter Chart Report in document format
+                            'Call AssembleDocument to generate Scatter Chart Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersDataDB(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateScatterChartFromDatabaseinDocumentProcessingFormat
+                            'ExEnd:GenerateScatterChartFromDatabaseinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateScatterChartFromDataSetinDocumentProcessingFormat
-                        'Setting up source document template
+                        'ExStart:GenerateScatterChartFromDataSetinOpenDocumentProcessingFormat
+                        'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/Scatter Chart_DB.docx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strDocumentReport As [String] = "Word Reports/Scatter Chart_DT Report.docx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Scatter Chart Report in document format
+                            'Call AssembleDocument to generate Scatter Chart Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersAndOrdersDataDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateScatterChartFromDataSetinDocumentProcessingFormat
+                            'ExEnd:GenerateScatterChartFromDataSetinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateScatterChartFromXMLinDocumentProcessingFormat
-                        'Setting up source document template
+                        'ExStart:GenerateScatterChartFromXMLinOpenDocumentProcessingFormat
+                        'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/Scatter Chart_DB.docx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strDocumentReport As [String] = "Word Reports/Scatter Chart_XML Report.docx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Scatter Chart Report in document format
+                            'Call AssembleDocument to generate Scatter Chart Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateScatterChartFromXMLinDocumentProcessingFormat
+                            'ExEnd:GenerateScatterChartFromXMLinOpenDocumentProcessingFormat
                         End Try
                     Else
-                        'ExStart:GenerateScatterChartinDocumentProcessingFormat
-                        'Setting up source document template
+                        'ExStart:GenerateScatterChartinOpenDocumentProcessingFormat
+                        'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/Scatter Chart.docx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strDocumentReport As [String] = "Word Reports/Scatter Chart Report.docx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Scatter Chart Report in document format
+                            'Call AssembleDocument to generate Scatter Chart Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateScatterChartinDocumentProcessingFormat
+                            'ExEnd:GenerateScatterChartinOpenDocumentProcessingFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "spreadsheet"
                     If isDatabase Then
-                        'ExStart:GenerateScatterChartFromDatabaseinSpreadsheetFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateScatterChartFromDatabaseinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Scatter Chart_DB.xlsx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Scatter Chart_DB Report.xlsx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Scatter Chart Report in spreadsheet format
+                            'Call AssembleDocument to generate Scatter Chart Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersDataDB(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateScatterChartFromDatabaseinSpreadsheetFormat
+                            'ExEnd:GenerateScatterChartFromDatabaseinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateScatterChartFromDataSetinSpreadsheetFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateScatterChartFromDataSetinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Scatter Chart_DB.xlsx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Scatter Chart_DT Report.xlsx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Scatter Chart Report in spreadsheet format
+                            'Call AssembleDocument to generate Scatter Chart Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomersAndOrdersDataDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateScatterChartFromDataSetinSpreadsheetFormat
+                            'ExEnd:GenerateScatterChartFromDataSetinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateScatterChartFromXMLinSpreadsheetFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateScatterChartFromXMLinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Scatter Chart_DB.xlsx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Scatter Chart_XML Report.xlsx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Scatter Chart Report in spreadsheet format
+                            'Call AssembleDocument to generate Scatter Chart Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateScatterChartFromXMLinSpreadsheetFormat
+                            'ExEnd:GenerateScatterChartFromXMLinOpenSpreadsheetFormat
                         End Try
                     Else
-                        'ExStart:GenerateScatterChartinSpreadsheetFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateScatterChartinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Scatter Chart.xlsx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Scatter Chart Report.xlsx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Scatter Chart Report in spreadsheet format
+                            'Call AssembleDocument to generate Scatter Chart Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateScatterChartinSpreadsheetFormat
+                            'ExEnd:GenerateScatterChartinOpenSpreadsheetFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "presentation"
                     If isDatabase Then
-                        'ExStart:GenerateScatterChartFromDatabaseinPresentationFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateScatterChartFromDatabaseinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
                         Const strPresentationTemplate As [String] = "Presentation Templates/Scatter Chart_DB.pptx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strPresentationReport As [String] = "Presentation Reports/Scatter Chart_DB Report.pptx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Scatter Chart Report in presentation format
+                            'Call AssembleDocument to generate Scatter Chart Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersDataDB(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateScatterChartFromDatabaseinPresentationFormat
+                            'ExEnd:GenerateScatterChartFromDatabaseinOpenPresentationFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateScatterChartFromDataSetinPresentationFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateScatterChartFromDataSetinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
                         Const strPresentationTemplate As [String] = "Presentation Templates/Scatter Chart_DB.pptx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strPresentationReport As [String] = "Presentation Reports/Scatter Chart_DT Report.pptx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Scatter Chart Report in presentation format
+                            'Call AssembleDocument to generate Scatter Chart Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomersAndOrdersDataDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateScatterChartFromDataSetinPresentationFormat
+                            'ExEnd:GenerateScatterChartFromDataSetinOpenPresentationFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateScatterChartFromXMLinPresentationFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateScatterChartFromXMLinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
                         Const strPresentationTemplate As [String] = "Presentation Templates/Scatter Chart_DB.pptx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strPresentationReport As [String] = "Presentation Reports/Scatter Chart_XML Report.pptx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Scatter Chart Report in presentation format
+                            'Call AssembleDocument to generate Scatter Chart Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateScatterChartFromXMLinPresentationFormat
+                            'ExEnd:GenerateScatterChartFromXMLinOpenPresentationFormat
                         End Try
                     Else
-                        'ExStart:GenerateScatterChartinPresentationFormat
-                        'Setting up source spreadsheet template
+                        'ExStart:GenerateScatterChartinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
                         Const strPresentationTemplate As [String] = "Presentation Templates/Scatter Chart.pptx"
-                        'Setting up destination document report 
+                        'Setting up destination open document report 
                         Const strPresentationReport As [String] = "Presentation Reports/Scatter Chart Report.pptx"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Scatter Chart Report in presentation format
+                            'Call AssembleDocument to generate Scatter Chart Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateScatterChartinPresentationFormat
+                            'ExEnd:GenerateScatterChartinOpenPresentationFormat
                         End Try
                     End If
                     Exit Select
@@ -2949,197 +2950,198 @@ Namespace GroupDocs.AssemblyExamples
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
-                        'ExStart:GenerateSingleRowFromDatabaseinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Single Row.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Single Row Report.docx"
+                        'ExStart:GenerateSingleRowFromDatabaseinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Single Row_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Single Row_DB Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Single Row Report in document format
+                            'Call AssembleDocument to generate Single Row Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerDataDB(), "customer")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateSingleRowFromDatabaseinDocumentProcessingFormat
+                            'ExEnd:GenerateSingleRowFromDatabaseinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateSingleRowFromDataSetinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Single Row.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Single Row_DT Report.docx"
+                        'ExStart:GenerateSingleRowFromDataSetinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Single Row_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Single Row_DT Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Single Row Report in document format
+                            'Call AssembleDocument to generate Single Row Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerDT(), "customer")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateSingleRowFromDataSetinDocumentProcessingFormat
+                            'ExEnd:GenerateSingleRowFromDataSetinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateSingleRowFromXMLinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Single Row.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Single Row_XML Report.docx"
+                        'ExStart:GenerateSingleRowFromXMLinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Single Row_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Single Row_XML Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Single Row Report in document format
+                            'Call AssembleDocument to generate Single Row Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerXML(), "customer")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateSingleRowFromXMLinDocumentProcessingFormat
+                            'ExEnd:GenerateSingleRowFromXMLinOpenDocumentProcessingFormat
                         End Try
                     Else
-                        'ExStart:GenerateSingleRowinDocumentProcessingFormat
-                        'Setting up source document template
-                        Const strDocumentTemplate As [String] = "Word Templates/Single Row.docx"
-                        'Setting up destination document report 
-                        Const strDocumentReport As [String] = "Word Reports/Single Row Report.docx"
+                        'ExStart:GenerateSingleRowinOpenDocumentProcessingFormat
+                        'Setting up source open document template
+                        Const strDocumentTemplate As [String] = "Word Templates/Single Row_OpenDocument.odt"
+                        'Setting up destination open document report 
+                        Const strDocumentReport As [String] = "Word Reports/Single Row Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Single Row Report in document format
+                            'Call AssembleDocument to generate Single Row Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerData(), "customer")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateSingleRowinDocumentProcessingFormat
+                            'ExEnd:GenerateSingleRowinOpenDocumentProcessingFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "spreadsheet"
                     If isDatabase Then
-                        'ExStart:GenerateSingleRowFromDatabaseinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Single Row.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Single Row Report.xlsx"
+                        'ExStart:GenerateSingleRowFromDatabaseinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Single Row_OpenDocument.ods"
+                        'Setting up destination open document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Single Row_DB Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Single Row Report in spreadsheet format
+                            'Call AssembleDocument to generate Single Row Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetSingleCustomerDataDB(), "customer")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateSingleRowFromDatabaseinSpreadsheetFormat
+                            'ExEnd:GenerateSingleRowFromDatabaseinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateSingleRowFromDataSetinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Single Row.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Single Row_DT Report.xlsx"
+                        'ExStart:GenerateSingleRowFromDataSetinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Single Row_OpenDocument.ods"
+                        'Setting up destination open document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Single Row_DT Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Single Row Report in spreadsheet format
+                            'Call AssembleDocument to generate Single Row Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetSingleCustomerDT(), "customer")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateSingleRowFromDataSetinSpreadsheetFormat
+                            'ExEnd:GenerateSingleRowFromDataSetinOpenSpreadsheetFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateSingleRowFromXMLinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Single Row.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Single Row_XML Report.xlsx"
+                        'ExStart:GenerateSingleRowFromXMLinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Single Row_OpenDocument.ods"
+                        'Setting up destination open document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Single Row_XML Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Single Row Report in spreadsheet format
+                            'Call AssembleDocument to generate Single Row Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetSingleCustomerXML(), "customer")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateSingleRowFromXMLinSpreadsheetFormat
+                            'ExEnd:GenerateSingleRowFromXMLinOpenSpreadsheetFormat
                         End Try
                     Else
-                        'ExStart:GenerateSingleRowinSpreadsheetFormat
-                        'Setting up source spreadsheet template
-                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Single Row.xlsx"
-                        'Setting up destination document report 
-                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Single Row Report.xlsx"
+                        'ExStart:GenerateSingleRowinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Single Row_OpenDocument.ods"
+                        'Setting up destination open document report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Single Row Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Single Row Report in spreadsheet format
+                            'Call AssembleDocument to generate Single Row Report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomerData(), "customer")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateSingleRowinSpreadsheetFormat
+                            'ExEnd:GenerateSingleRowinOpenSpreadsheetFormat
                         End Try
                     End If
                     Exit Select
 
                 Case "presentation"
                     If isDatabase Then
-                        'ExStart:GenerateSingleRowFromDatabaseinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Single Row.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Single Row Report.pptx"
+                        'ExStart:GenerateSingleRowFromDatabaseinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Single Row_OpenDocument.odp"
+                        'Setting up destination open document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Single Row_DB Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Single Row Report in presentation format
+                            'Call AssembleDocument to generate Single Row Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetSingleCustomerDataDB(), "customer")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateSingleRowFromDatabaseinPresentationFormat
+                            'ExEnd:GenerateSingleRowFromDatabaseinOpenPresentationFormat
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateSingleRowFromDataSetinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Single Row.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Single Row_DT Report.pptx"
+                        'ExStart:GenerateSingleRowFromDataSetinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Single Row_OpenDocument.odp"
+                        'Setting up destination open document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Single Row_DT Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Single Row Report in presentation format
+                            'Call AssembleDocument to generate Single Row Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetSingleCustomerDT(), "customer")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateSingleRowFromDataSetinPresentationFormat
+                            'ExEnd:GenerateSingleRowFromDataSetinOpenPresentationFormat
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateSingleRowFromXMLinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Single Row.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Single Row_XML Report.pptx"
+                        'ExStart:GenerateSingleRowFromXMLinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Single Row_OpenDocument.odp"
+                        'Setting up destination open document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Single Row_XML Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Single Row Report in presentation format
+                            'Call AssembleDocument to generate Single Row Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetSingleCustomerXML(), "customer")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateSingleRowFromXMLinPresentationFormat
+                            'ExEnd:GenerateSingleRowFromXMLinOpenPresentationFormat
                         End Try
                     Else
-                        'ExStart:GenerateSingleRowinPresentationFormat
-                        'Setting up source spreadsheet template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Single Row.pptx"
-                        'Setting up destination document report 
-                        Const strPresentationReport As [String] = "Presentation Reports/Single Row Report.pptx"
+                        'ExStart:GenerateSingleRowinOpenPresentationFormat
+                        'Setting up source open spreadsheet template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Single Row_OpenDocument.odp"
+                        'Setting up destination open document report 
+                        Const strPresentationReport As [String] = "Presentation Reports/Single Row Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Single Row Report in presentation format
+                            'Call AssembleDocument to generate Single Row Report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomerData(), "customer")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateSingleRowinPresentationFormat
+                            'ExEnd:GenerateSingleRowinOpenPresentationFormat
                         End Try
                     End If
                     Exit Select
             End Select
         End Sub
+
 
 
     End Class
