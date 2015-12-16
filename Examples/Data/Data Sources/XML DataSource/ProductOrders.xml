@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ProductOrders" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ProductOrders">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="OrderID" type="xs:long" minOccurs="0" />
+                <xs:element name="Price" type="xs:double" minOccurs="0" />
+                <xs:element name="ProductID" type="xs:long" minOccurs="0" />
+                <xs:element name="ProductQuantity" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <ProductOrders>
+    <OrderID>1</OrderID>
+    <Price>350</Price>
+    <ProductID>1</ProductID>
+    <ProductQuantity>1</ProductQuantity>
+  </ProductOrders>
+  <ProductOrders>
+    <OrderID>1</OrderID>
+    <Price>400</Price>
+    <ProductID>3</ProductID>
+    <ProductQuantity>2</ProductQuantity>
+  </ProductOrders>
+  <ProductOrders>
+    <OrderID>3</OrderID>
+    <Price>250</Price>
+    <ProductID>2</ProductID>
+    <ProductQuantity>1</ProductQuantity>
+  </ProductOrders>
+  <ProductOrders>
+    <OrderID>2</OrderID>
+    <Price>355</Price>
+    <ProductID>4</ProductID>
+    <ProductQuantity>5</ProductQuantity>
+  </ProductOrders>
+</NewDataSet>
