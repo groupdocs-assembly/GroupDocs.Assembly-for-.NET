@@ -18,7 +18,7 @@ Namespace GroupDocs.AssemblyExamples
             '             *  Please uncomment the statement if you do have license.
             '             
 
-            CommonUtilities.ApplyLicense()
+            'CommonUtilities.ApplyLicense()
             'ExEnd:ApplyingLicense
 
             '#Region "Generating Bubble Chart Report"
