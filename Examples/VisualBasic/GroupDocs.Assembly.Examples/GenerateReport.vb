@@ -770,7 +770,7 @@ Namespace GroupDocs.AssemblyExamples
                     ElseIf isDataSourceXML Then
                         'ExStart:GenerateCommonListFromXMLinOpenPresentationFormat
                         'Setting up source open presentation template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Common List.odp"
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Common List_OpenDocument.odp"
                         'Setting up destination open presentation report 
                         Const strPresentationReport As [String] = "Presentation Reports/Common List_XML Report.odp"
                         Try
@@ -785,7 +785,7 @@ Namespace GroupDocs.AssemblyExamples
                     Else
                         'ExStart:GenerateCommonListinOpenPresentationFormat
                         'Setting up source open presentation template
-                        Const strPresentationTemplate As [String] = "Presentation Templates/Common List.odp"
+                        Const strPresentationTemplate As [String] = "Presentation Templates/Common List_OpenDocument.odp"
                         'Setting up destination open presentation report 
                         Const strPresentationReport As [String] = "Presentation Reports/Common List Report.odp"
                         Try
@@ -1390,7 +1390,7 @@ Namespace GroupDocs.AssemblyExamples
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
-                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinDocumentProcessingDocument
+                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinOpenDocumentProcessingDocument
                         'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Filtering, Grouping, and Ordering_DB_OpenDocument.odt"
                         'Setting up destination open document report 
@@ -1402,10 +1402,10 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersDataDB(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinDocumentProcessingDocument
+                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinOpenDocumentProcessingDocument
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinDocumentProcessingDocument
+                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinOpenDocumentProcessingDocument
                         'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Filtering, Grouping, and Ordering_DB_OpenDocument.odt"
                         'Setting up destination open document report 
@@ -1417,10 +1417,10 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersAndOrdersDataDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinDocumentProcessingDocument
+                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinOpenDocumentProcessingDocument
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinDocumentProcessingDocument
+                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinOpenDocumentProcessingDocument
                         'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Filtering, Grouping, and Ordering_XML_OpenDocument.odt"
                         'Setting up destination open document report 
@@ -1432,10 +1432,10 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinDocumentProcessingDocument
+                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinOpenDocumentProcessingDocument
                         End Try
                     Else
-                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginDocumentProcessingDocument
+                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginOpenDocumentProcessingDocument
                         'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Filtering, Grouping, and Ordering_OpenDocument.odt"
                         'Setting up destination open document report 
@@ -1447,7 +1447,7 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderinginDocumentProcessingDocument
+                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderinginOpenDocumentProcessingDocument
                         End Try
                     End If
                     Exit Select
@@ -1585,7 +1585,7 @@ Namespace GroupDocs.AssemblyExamples
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
-                        'ExStart:GenerateInTableListWithHighlightedRowsFromDatabaseinDocumentProcessingDocument
+                        'ExStart:GenerateInTableListWithHighlightedRowsFromDatabaseinOpenDocumentProcessingDocument
                         'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Highlighted Rows_DB_OpenDocument.odt"
                         'Setting up destination open document report 
@@ -1597,10 +1597,10 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersDataDB(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithHighlightedRowsFromDatabaseinDocumentProcessingDocument
+                            'ExEnd:GenerateInTableListWithHighlightedRowsFromDatabaseinOpenDocumentProcessingDocument
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateInTableListWithHighlightedRowsFromDataSetinDocumentProcessingDocument
+                        'ExStart:GenerateInTableListWithHighlightedRowsFromDataSetinOpenDocumentProcessingDocument
                         'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Highlighted Rows_DT_OpenDocument.odt"
                         'Setting up destination open document report 
@@ -1612,10 +1612,10 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersAndOrdersDataDT(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithHighlightedRowsFromDataSetinDocumentProcessingDocument
+                            'ExEnd:GenerateInTableListWithHighlightedRowsFromDataSetinOpenDocumentProcessingDocument
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInTableListWithHighlightedRowsFromXMLinDocumentProcessingDocument
+                        'ExStart:GenerateInTableListWithHighlightedRowsFromXMLinOpenDocumentProcessingDocument
                         'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Highlighted Rows_XML_OpenDocument.odt"
                         'Setting up destination open document report 
@@ -1627,10 +1627,10 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithHighlightedRowsFromXMLinDocumentProcessingDocument
+                            'ExEnd:GenerateInTableListWithHighlightedRowsFromXMLinOpenDocumentProcessingDocument
                         End Try
                     Else
-                        'ExStart:GenerateInTableListWithHighlightedRowsinDocumentProcessingDocument
+                        'ExStart:GenerateInTableListWithHighlightedRowsinOpenDocumentProcessingDocument
                         'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Highlighted Rows_OpenDocument.odt"
                         'Setting up destination open document report 
@@ -1642,14 +1642,14 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithHighlightedRowsinDocumentProcessingDocument
+                            'ExEnd:GenerateInTableListWithHighlightedRowsinOpenDocumentProcessingDocument
                         End Try
                     End If
                     Exit Select
 
                 Case "spreadsheet"
                     If isDatabase Then
-                        'ExStart:GenerateInTableListWithHighlightedRowsFromDatabaseinSpreadsheetDocument
+                        'ExStart:GenerateInTableListWithHighlightedRowsFromDatabaseinOpenSpreadsheetDocument
                         'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Highlighted Rows_DB_OpenDocument.ods"
                         'Setting up destination open spreadsheet report 
@@ -1661,10 +1661,10 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersDataDB(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithHighlightedRowsFromDatabaseinSpreadsheetDocument
+                            'ExEnd:GenerateInTableListWithHighlightedRowsFromDatabaseinOpenSpreadsheetDocument
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateInTableListWithHighlightedRowsFromDataSetinSpreadsheetDocument
+                        'ExStart:GenerateInTableListWithHighlightedRowsFromDataSetinOpenSpreadsheetDocument
                         'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Highlighted Rows_DT_OpenDocument.ods"
                         'Setting up destination open spreadsheet report 
@@ -1676,10 +1676,10 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomersAndOrdersDataDT(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithHighlightedRowsFromDataSetinSpreadsheetDocument
+                            'ExEnd:GenerateInTableListWithHighlightedRowsFromDataSetinOpenSpreadsheetDocument
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInTableListWithHighlightedRowsFromXMLinSpreadsheetDocument
+                        'ExStart:GenerateInTableListWithHighlightedRowsFromXMLinOpenSpreadsheetDocument
                         'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Highlighted Rows_XML_OpenDocument.ods"
                         'Setting up destination open spreadsheet report 
@@ -1691,10 +1691,10 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithHighlightedRowsFromXMLinSpreadsheetDocument
+                            'ExEnd:GenerateInTableListWithHighlightedRowsFromXMLinOpenSpreadsheetDocument
                         End Try
                     Else
-                        'ExStart:GenerateInTableListWithHighlightedRowsinSpreadsheetDocument
+                        'ExStart:GenerateInTableListWithHighlightedRowsinOpenSpreadsheetDocument
                         'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Highlighted Rows_OpenDocument.ods"
                         'Setting up destination open spreadsheet report 
@@ -1706,7 +1706,7 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithHighlightedRowsinSpreadsheetDocument
+                            'ExEnd:GenerateInTableListWithHighlightedRowsinOpenSpreadsheetDocument
                         End Try
                     End If
                     Exit Select
@@ -1780,7 +1780,7 @@ Namespace GroupDocs.AssemblyExamples
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
-                        'ExStart:GenerateInTableListFromDatabaseinDocumentProcessingDocument
+                        'ExStart:GenerateInTableListFromDatabaseinOpenDocumentProcessingDocument
                         'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/In-Table List_DB_OpenDocument.odt"
                         'Setting up destination open document report 
@@ -1792,10 +1792,10 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersDataDB(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListFromDatabaseinDocumentProcessingDocument
+                            'ExEnd:GenerateInTableListFromDatabaseinOpenDocumentProcessingDocument
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateInTableListFromDataSetinDocumentProcessingDocument
+                        'ExStart:GenerateInTableListFromDataSetinOpenDocumentProcessingDocument
                         'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/In-Table List_DT_OpenDocument.odt"
                         'Setting up destination open document report 
@@ -1807,10 +1807,10 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersAndOrdersDataDT(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListFromDataSetinDocumentProcessingDocument
+                            'ExEnd:GenerateInTableListFromDataSetinOpenDocumentProcessingDocument
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInTableListFromXMLinDocumentProcessingDocument
+                        'ExStart:GenerateInTableListFromXMLinOpenDocumentProcessingDocument
                         'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/In-Table List_XML_OpenDocument.odt"
                         'Setting up destination open document report 
@@ -1822,10 +1822,10 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListFromXMLinDocumentProcessingDocument
+                            'ExEnd:GenerateInTableListFromXMLinOpenDocumentProcessingDocument
                         End Try
                     Else
-                        'ExStart:GenerateInTableListinDocumentProcessingDocument
+                        'ExStart:GenerateInTableListinOpenDocumentProcessingDocument
                         'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/In-Table List_OpenDocument.odt"
                         'Setting up destination open document report 
@@ -1837,7 +1837,7 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.PopulateData(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListinDocumentProcessingDocument
+                            'ExEnd:GenerateInTableListinOpenDocumentProcessingDocument
                         End Try
                     End If
                     Exit Select
@@ -2170,7 +2170,7 @@ Namespace GroupDocs.AssemblyExamples
             Select Case strDocumentFormat
                 Case "document"
                     If isDatabase Then
-                        'ExStart:GenerateMulticoloredNumberedListFromDatabaseinDocumentProcessingDocument
+                        'ExStart:GenerateMulticoloredNumberedListFromDatabaseinOpenDocumentProcessingDocument
                         'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/Multicolored Numbered List_OpenDocument.odt"
                         'Setting up destination open document report 
@@ -2182,10 +2182,10 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataDB(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateMulticoloredNumberedListFromDatabaseinDocumentProcessingDocument
+                            'ExEnd:GenerateMulticoloredNumberedListFromDatabaseinOpenDocumentProcessingDocument
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateMulticoloredNumberedListFromDataSetinDocumentProcessingDocument
+                        'ExStart:GenerateMulticoloredNumberedListFromDataSetinOpenDocumentProcessingDocument
                         'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/Multicolored Numbered List_OpenDocument.odt"
                         'Setting up destination open document report 
@@ -2197,10 +2197,10 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateMulticoloredNumberedListFromDataSetinDocumentProcessingDocument
+                            'ExEnd:GenerateMulticoloredNumberedListFromDataSetinOpenDocumentProcessingDocument
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateMulticoloredNumberedListFromXMLinDocumentProcessingDocument
+                        'ExStart:GenerateMulticoloredNumberedListFromXMLinOpenDocumentProcessingDocument
                         'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/Multicolored Numbered List_XML_OpenDocument.odt"
                         'Setting up destination open document report 
@@ -2212,10 +2212,10 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateMulticoloredNumberedListFromXMLinDocumentProcessingDocument
+                            'ExEnd:GenerateMulticoloredNumberedListFromXMLinOpenDocumentProcessingDocument
                         End Try
                     Else
-                        'ExStart:GenerateMulticoloredNumberedListinDocumentProcessingDocument
+                        'ExStart:GenerateMulticoloredNumberedListinOpenDocumentProcessingDocument
                         'Setting up source open document template
                         Const strDocumentTemplate As [String] = "Word Templates/Multicolored Numbered List_OpenDocument.odt"
                         'Setting up destination open document report 
@@ -2227,14 +2227,14 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsData(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateMulticoloredNumberedListinDocumentProcessingDocument
+                            'ExEnd:GenerateMulticoloredNumberedListinOpenDocumentProcessingDocument
                         End Try
                     End If
                     Exit Select
 
                 Case "spreadsheet"
                     If isDatabase Then
-                        'ExStart:GenerateMulticoloredNumberedListFromDatabaseinSpreadsheetDocument
+                        'ExStart:GenerateMulticoloredNumberedListFromDatabaseinOpenSpreadsheetDocument
                         'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Multicolored Numbered List_OpenDocument.ods"
                         'Setting up destination open spreadsheet report 
@@ -2246,10 +2246,10 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsDataDB(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateMulticoloredNumberedListFromDatabaseinSpreadsheetDocument
+                            'ExEnd:GenerateMulticoloredNumberedListFromDatabaseinOpenSpreadsheetDocument
                         End Try
                     ElseIf isDataSet Then
-                        'ExStart:GenerateMulticoloredNumberedListFromDataSetinSpreadsheetDocument
+                        'ExStart:GenerateMulticoloredNumberedListFromDataSetinOpenSpreadsheetDocument
                         'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Multicolored Numbered List_OpenDocument.ods"
                         'Setting up destination open spreadsheet report 
@@ -2261,10 +2261,10 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsDT())
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateMulticoloredNumberedListFromDataSetinSpreadsheetDocument
+                            'ExEnd:GenerateMulticoloredNumberedListFromDataSetinOpenSpreadsheetDocument
                         End Try
                     ElseIf isDataSourceXML Then
-                        'ExStart:GenerateMulticoloredNumberedListFromXMLinSpreadsheetDocument
+                        'ExStart:GenerateMulticoloredNumberedListFromXMLinOpenSpreadsheetDocument
                         'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Multicolored Numbered List_XML_OpenDocument.ods"
                         'Setting up destination open spreadsheet report 
@@ -2276,10 +2276,10 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetAllDataFromXML(), "ds")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateMulticoloredNumberedListFromXMLinSpreadsheetDocument
+                            'ExEnd:GenerateMulticoloredNumberedListFromXMLinOpenSpreadsheetDocument
                         End Try
                     Else
-                        'ExStart:GenerateMulticoloredNumberedListinSpreadsheetDocument
+                        'ExStart:GenerateMulticoloredNumberedListinOpenSpreadsheetDocument
                         'Setting up source open spreadsheet template
                         Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Multicolored Numbered List_OpenDocument.ods"
                         'Setting up destination open spreadsheet report 
@@ -2291,7 +2291,7 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetProductsData(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateMulticoloredNumberedListinSpreadsheetDocument
+                            'ExEnd:GenerateMulticoloredNumberedListinOpenSpreadsheetDocument
                         End Try
                     End If
                     Exit Select
