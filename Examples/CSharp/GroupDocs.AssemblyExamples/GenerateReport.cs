@@ -990,7 +990,7 @@ namespace GroupDocs.AssemblyExamples
                     {
                         //ExStart:GenerateCommonListFromXMLinOpenPresentationFormat
                         //Setting up source open presentation template
-                        const String strPresentationTemplate = "Presentation Templates/Common List.odp";
+                        const String strPresentationTemplate = "Presentation Templates/Common List_OpenDocument.odp";
                         //Setting up destination open presentation report 
                         const String strPresentationReport = "Presentation Reports/Common List_XML Report.odp";
                         try
@@ -1010,7 +1010,7 @@ namespace GroupDocs.AssemblyExamples
                     {
                         //ExStart:GenerateCommonListinOpenPresentationFormat
                         //Setting up source open presentation template
-                        const String strPresentationTemplate = "Presentation Templates/Common List.odp";
+                        const String strPresentationTemplate = "Presentation Templates/Common List_OpenDocument.odp";
                         //Setting up destination open presentation report 
                         const String strPresentationReport = "Presentation Reports/Common List Report.odp";
                         try
@@ -2814,7 +2814,7 @@ namespace GroupDocs.AssemblyExamples
                 case "document":
                     if (isDatabase)
                     {
-                        //ExStart:GenerateMulticoloredNumberedListFromDatabaseinDocumentProcessingDocument
+                        //ExStart:GenerateMulticoloredNumberedListFromDatabaseinOpenDocumentProcessingDocument
                         //Setting up source open document template
                         const String strDocumentTemplate = "Word Templates/Multicolored Numbered List_OpenDocument.odt";
                         //Setting up destination open document report 
@@ -2830,11 +2830,11 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-                        //ExEnd:GenerateMulticoloredNumberedListFromDatabaseinDocumentProcessingDocument
+                        //ExEnd:GenerateMulticoloredNumberedListFromDatabaseinOpenDocumentProcessingDocument
                     }
                     else if (isDataSet)
                     {
-                        //ExStart:GenerateMulticoloredNumberedListFromDataSetinDocumentProcessingDocument
+                        //ExStart:GenerateMulticoloredNumberedListFromDataSetinOpenDocumentProcessingDocument
                         //Setting up source open document template
                         const String strDocumentTemplate = "Word Templates/Multicolored Numbered List_OpenDocument.odt";
                         //Setting up destination open document report 
@@ -2850,11 +2850,11 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-                        //ExEnd:GenerateMulticoloredNumberedListFromDataSetinDocumentProcessingDocument
+                        //ExEnd:GenerateMulticoloredNumberedListFromDataSetinOpenDocumentProcessingDocument
                     }
                     else if (isDataSourceXML)
                     {
-                        //ExStart:GenerateMulticoloredNumberedListFromXMLinDocumentProcessingDocument
+                        //ExStart:GenerateMulticoloredNumberedListFromXMLinOpenDocumentProcessingDocument
                         //Setting up source open document template
                         const String strDocumentTemplate = "Word Templates/Multicolored Numbered List_XML_OpenDocument.odt";
                         //Setting up destination open document report 
@@ -2870,11 +2870,11 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-                        //ExEnd:GenerateMulticoloredNumberedListFromXMLinDocumentProcessingDocument
+                        //ExEnd:GenerateMulticoloredNumberedListFromXMLinOpenDocumentProcessingDocument
                     }
                     else
                     {
-                        //ExStart:GenerateMulticoloredNumberedListinDocumentProcessingDocument
+                        //ExStart:GenerateMulticoloredNumberedListinOpenDocumentProcessingDocument
                         //Setting up source open document template
                         const String strDocumentTemplate = "Word Templates/Multicolored Numbered List_OpenDocument.odt";
                         //Setting up destination open document report 
@@ -2890,14 +2890,14 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-                        //ExEnd:GenerateMulticoloredNumberedListinDocumentProcessingDocument
+                        //ExEnd:GenerateMulticoloredNumberedListinOpenDocumentProcessingDocument
                     }
                     break;
 
                 case "spreadsheet":
                     if (isDatabase)
                     {
-                        //ExStart:GenerateMulticoloredNumberedListFromDatabaseinSpreadsheetDocument
+                        //ExStart:GenerateMulticoloredNumberedListFromDatabaseinOpenSpreadsheetDocument
                         //Setting up source open spreadsheet template
                         const String strSpreadsheetTemplate = "Spreadsheet Templates/Multicolored Numbered List_OpenDocument.ods";
                         //Setting up destination open spreadsheet report 
@@ -2913,11 +2913,11 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-                        //ExEnd:GenerateMulticoloredNumberedListFromDatabaseinSpreadsheetDocument
+                        //ExEnd:GenerateMulticoloredNumberedListFromDatabaseinOpenSpreadsheetDocument
                     }
                     else if (isDataSet)
                     {
-                        //ExStart:GenerateMulticoloredNumberedListFromDataSetinSpreadsheetDocument
+                        //ExStart:GenerateMulticoloredNumberedListFromDataSetinOpenSpreadsheetDocument
                         //Setting up source open spreadsheet template
                         const String strSpreadsheetTemplate = "Spreadsheet Templates/Multicolored Numbered List_OpenDocument.ods";
                         //Setting up destination open spreadsheet report 
@@ -2933,11 +2933,11 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-                        //ExEnd:GenerateMulticoloredNumberedListFromDataSetinSpreadsheetDocument
+                        //ExEnd:GenerateMulticoloredNumberedListFromDataSetinOpenSpreadsheetDocument
                     }
                     else if (isDataSourceXML)
                     {
-                        //ExStart:GenerateMulticoloredNumberedListFromXMLinSpreadsheetDocument
+                        //ExStart:GenerateMulticoloredNumberedListFromXMLinOpenSpreadsheetDocument
                         //Setting up source open spreadsheet template
                         const String strSpreadsheetTemplate = "Spreadsheet Templates/Multicolored Numbered List_XML_OpenDocument.ods";
                         //Setting up destination open spreadsheet report 
@@ -2953,11 +2953,11 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-                        //ExEnd:GenerateMulticoloredNumberedListFromXMLinSpreadsheetDocument
+                        //ExEnd:GenerateMulticoloredNumberedListFromXMLinOpenSpreadsheetDocument
                     }
                     else
                     {
-                        //ExStart:GenerateMulticoloredNumberedListinSpreadsheetDocument
+                        //ExStart:GenerateMulticoloredNumberedListinOpenSpreadsheetDocument
                         //Setting up source open spreadsheet template
                         const String strSpreadsheetTemplate = "Spreadsheet Templates/Multicolored Numbered List_OpenDocument.ods";
                         //Setting up destination open spreadsheet report 
@@ -2973,7 +2973,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-                        //ExEnd:GenerateMulticoloredNumberedListinSpreadsheetDocument
+                        //ExEnd:GenerateMulticoloredNumberedListinOpenSpreadsheetDocument
                     }
                     break;
 

@@ -17,7 +17,7 @@ namespace GroupDocs.AssemblyExamples
              *  Applying product license
              *  Please uncomment the statement if you do have license.
              */
-            CommonUtilities.ApplyLicense();
+            //CommonUtilities.ApplyLicense();
             //ExEnd:ApplyingLicense
 
             #region Generating Bubble Chart Report
@@ -61,7 +61,7 @@ namespace GroupDocs.AssemblyExamples
             //GenerateReport.GenerateCommonList("spreadsheet", false, false, false);
 
             //Generate a Common List Report in presentation format
-            //GenerateReport.GenerateCommonList("presentation", false, false, false);
+            GenerateReport.GenerateCommonList("presentation", false, false, false);
             #endregion
             
             #region Generating Common Master-Detail Report
@@ -69,7 +69,7 @@ namespace GroupDocs.AssemblyExamples
             //GenerateReport.GenerateCommonMasterDetail("document", false, false, false);
 
             //Generate a Common Master-Detail Report in spreadsheet format
-            GenerateReport.GenerateCommonMasterDetail("spreadsheet", false, false, false);
+            //GenerateReport.GenerateCommonMasterDetail("spreadsheet", false, false, false);
 
             //Generate a Common Master-Detail Report in presentation format
             //GenerateReport.GenerateCommonMasterDetail("presentation", false, false, false);
