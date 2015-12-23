@@ -16,7 +16,9 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
 
         public const string sourceFolderPath = "../../../../Data/Source/";
         public const string destinationFolderPath = "../../../../Data/Destination/";
+        //ExStart:LicenseFilePath
         public const string licensePath = "../../GroupDocs.Assembly Product Family.lic";
+        //ExEnd:LicenseFilePath
 
         #region DocumentDirectories
 
