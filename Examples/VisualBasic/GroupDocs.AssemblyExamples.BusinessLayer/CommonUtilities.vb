@@ -13,7 +13,9 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
 
         Public Const sourceFolderPath As String = "../../../../Data/Source/"
         Public Const destinationFolderPath As String = "../../../../Data/Destination/"
+        'ExStart:LicenseFilePath
         Public Const licensePath As String = "../../GroupDocs.Assembly Product Family.lic"
+        'ExEnd:LicenseFilePath
 
 #Region "DocumentDirectories"
 
