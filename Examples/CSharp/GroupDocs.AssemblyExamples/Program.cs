@@ -36,7 +36,7 @@ namespace GroupDocs.AssemblyExamples
             //GenerateReport.GenerateBulletedList("document", false, false, false);
 
             //Generate a Bulleted List report in spreadsheet format
-            //GenerateReport.GenerateBulletedList("spreadsheet", false, false, true);
+            GenerateReport.GenerateBulletedList("spreadsheet", false, false, true);
 
             //Generate a Bulleted List report in presentation format
             //GenerateReport.GenerateBulletedList("presentation", false, false, true);
@@ -61,7 +61,7 @@ namespace GroupDocs.AssemblyExamples
             //GenerateReport.GenerateCommonList("spreadsheet", false, false, false);
 
             //Generate a Common List Report in presentation format
-            GenerateReport.GenerateCommonList("presentation", false, false, false);
+            //GenerateReport.GenerateCommonList("presentation", false, false, false);
             #endregion
             
             #region Generating Common Master-Detail Report
@@ -154,7 +154,7 @@ namespace GroupDocs.AssemblyExamples
             
             #region Generating Numbered List Report
             //Generate a Numbered List Report in document processing format
-            GenerateReport.GenerateNumberedList("document", false, false, false);
+            //GenerateReport.GenerateNumberedList("document", false, false, false);
 
             //Generate a Numbered List Report in spreadsheet format
             //GenerateReport.GenerateNumberedList("spreadsheet", false, false, true);
