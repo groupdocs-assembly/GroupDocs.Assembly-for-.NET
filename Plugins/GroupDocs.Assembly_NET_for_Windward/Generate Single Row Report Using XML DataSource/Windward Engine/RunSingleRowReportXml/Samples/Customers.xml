@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NewDataSet>
+  
+  <Customers>
+    <CustomerID>1</CustomerID>
+    <CustomerContactNumber>+923455808105</CustomerContactNumber>
+    <CustomerName>Usman Aziz</CustomerName>
+    <Photo>../Data/Images/no-photo.jpg</Photo>
+    <ShippingAddress>Lane 8, Islamabad, Pakistan</ShippingAddress>
+  </Customers>
+  <Customers>
+    <CustomerID>2</CustomerID>
+    <CustomerContactNumber>+923129402088</CustomerContactNumber>
+    <CustomerName>Atir Tahir</CustomerName>
+    <Photo>../Data/Images/no-photo.jpg</Photo>
+    <ShippingAddress>Park Road, Shahzad Town, Islamabad, Pakistan</ShippingAddress>
+  </Customers>
+  <Customers>
+    <CustomerID>3</CustomerID>
+    <CustomerContactNumber>111888555</CustomerContactNumber>
+    <CustomerName>Dawood Khan</CustomerName>
+    <Photo>../Data/Images/no-photo.jpg</Photo>
+    <ShippingAddress>Berlin, Germany</ShippingAddress>
+  </Customers>
+</NewDataSet>
