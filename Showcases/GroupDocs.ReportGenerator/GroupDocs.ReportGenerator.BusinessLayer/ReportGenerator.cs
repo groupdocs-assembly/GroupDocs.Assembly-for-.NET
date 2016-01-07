@@ -1,4 +1,5 @@
-﻿using GroupDocs.Assembly;
+﻿//ExStart:ReportGenerator
+using GroupDocs.Assembly;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -29,7 +30,7 @@ namespace GroupDocs.ReportGenerator.BusinessLayer
 
         private String _LicensePath = "D:/ReportGenerator/GroupDocs.ReportGenerator/GroupDocs.Assembly Product Family.lic";
        
-
+        //ExStart:GenerateReportShowcase
         /// <summary>
         /// Generates the report by using dataset.
         /// </summary>
@@ -50,6 +51,7 @@ namespace GroupDocs.ReportGenerator.BusinessLayer
                 throw ex;
             }
         }
-
+        //ExEnd:GenerateReportShowcase
     }
 }
+//ExEnd:ReportGenerator
