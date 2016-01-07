@@ -25,14 +25,14 @@ namespace RunReportXML
                 //Instantiate DocumentAssembler class
                 DocumentAssembler assembler = new DocumentAssembler();
                 //Call AssembleDocument to generate Bulleted List Report in open presentation format
-                assembler.AssembleDocument(template, output, GetAllDataFromXML(), "ds");
+                assembler.AssembleDocument(template, output, GetProductsData(), "ds");
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
         }
-        public static DataSet GetAllDataFromXML()
+        public static DataSet GetProductsData()
         {
             try
             {

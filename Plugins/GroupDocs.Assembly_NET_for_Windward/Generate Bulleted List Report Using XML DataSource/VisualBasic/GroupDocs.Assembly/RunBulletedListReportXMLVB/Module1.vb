@@ -15,7 +15,7 @@ Module Module1
             'Instantiate DocumentAssembler class
             Dim assembler As New DocumentAssembler()
             'Call AssembleDocument to generate Bulleted List Report in open presentation format
-            assembler.AssembleDocument(template, output, GetAllDataFromXML(), "ds")
+            assembler.AssembleDocument(template, output, GetProductsData(), "ds")
         Catch ex As Exception
             Console.WriteLine(ex.Message)
         End Try
@@ -23,7 +23,7 @@ Module Module1
 
     End Sub
 
-    Public Function GetAllDataFromXML() As DataSet
+    Public Function GetProductsData() As DataSet
         Try
             Dim mainDs As New DataSet()
             Dim fsReadXml As New System.IO.FileStream(productXMLfile, System.IO.FileMode.Open)

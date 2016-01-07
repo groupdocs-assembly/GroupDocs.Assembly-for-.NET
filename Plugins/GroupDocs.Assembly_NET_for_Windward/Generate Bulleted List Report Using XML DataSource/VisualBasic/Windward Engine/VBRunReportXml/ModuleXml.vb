@@ -4,11 +4,10 @@ Imports Net.windward.api.csharp
 Imports System.IO
 Imports WindwardReportsDrivers.net.windward.datasource.ado
 Imports WindwardInterfaces.net.windward.api.csharp
-
+'ExStart:Generate bulleted list in windward-VB
 Module ModuleXml
 
     Sub Main()
-        'ExStart:Generate bulleted list in windward-VB
         'Initilize the engine
         Report.Init()
         'open a inputfilestream for our template file
@@ -38,7 +37,6 @@ Module ModuleXml
         'Open finished report
         Dim fullPath As String = Path.GetFullPath("../../../../../Data/Samples/Destination/Xml Bulleted List.docx")
         System.Diagnostics.Process.Start(fullPath)
-        'ExEnd:Generate bulleted list in windward-VB
     End Sub
-
 End Module
+'ExEnd:Generate bulleted list in windward-VB
