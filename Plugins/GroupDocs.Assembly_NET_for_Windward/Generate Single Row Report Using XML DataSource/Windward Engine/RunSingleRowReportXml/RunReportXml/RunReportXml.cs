@@ -11,22 +11,22 @@ namespace RunReportXml
 {
     class RunReportXml
     {
+        //ExStart:Windward XML Single report generation
         static void Main(string[] args)
         {
-            //ExStart:Windward XML Single report generation
             // Initialize the engine
             Report.Init();
 
             // Open template file and create output file
-            FileStream template = File.OpenRead("../../../Samples/Single Row.docx");
-            FileStream output = File.Create("../../../Samples/Xml Single Row.docx");
+            FileStream template = File.OpenRead("../../../../../Data/Samples/Source/WW-Single Row.docx");
+            FileStream output = File.Create("../../../../../Data/Samples/Destination/Xml Single Row.docx");
 
             // Create report process
             Report myReport = new ReportPdf(template, output);
 
 
             // Open an inputfilestream for our data file
-            FileStream Xml = File.OpenRead("../../../Samples/Customers.xml");
+            FileStream Xml = File.OpenRead("../../../../../Data/Data Source/WW-Customers.xml");
 
             // Open a data object to connect to our xml file
             IReportDataSource data = new XmlDataSourceImpl(Xml, false);
@@ -43,9 +43,9 @@ namespace RunReportXml
             Xml.Close();
 
             // Opens the finished report
-            string fullPath = Path.GetFullPath("../../../Samples/Xml Single Row.docx");
+            string fullPath = Path.GetFullPath("../../../../../Data/Samples/Destination/Xml Single Row.docx");
             System.Diagnostics.Process.Start(fullPath);
-            //ExEnd:Windward XML Single report generation
         }
+        //ExEnd:Windward XML Single report generation
     }
 }

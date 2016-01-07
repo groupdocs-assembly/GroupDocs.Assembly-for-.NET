@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 
 namespace RunReportXML
 {
+    //ExStart:GenerateBulletedListFromXMLinOpenPresentationFormat
     public class Program
     {
-        public const string customerXMLfile = "../../../Samples/Customers.xml";
+        public const string customerXMLfile = "../../../../../Data/Data Source/Customers.xml";
         static void Main(string[] args)
         {
-            //ExStart:GenerateBulletedListFromXMLinOpenPresentationFormat
             //Setting up source open presentation template
-            FileStream template = File.OpenRead("../../../Samples/Single Row.docx");
+            FileStream template = File.OpenRead("../../../../../Data/Samples/Source/Single Row.docx");
             //Setting up destination open presentation report 
-            FileStream output = File.Create("../../../Samples/Xml Single Row.docx");
+            FileStream output = File.Create("../../../../../Data/Samples/Destination/Xml Single Row.docx");
 
             try
             {
@@ -31,7 +31,6 @@ namespace RunReportXML
             {
                 Console.WriteLine(ex.Message);
             }
-            //ExEnd:GenerateBulletedListFromXMLinOpenPresentationFormat
         }
         public static DataRow GetSingleRow()
         {
@@ -51,4 +50,5 @@ namespace RunReportXML
             }
         }
     }
+    //ExEnd:GenerateBulletedListFromXMLinOpenPresentationFormat
 }
