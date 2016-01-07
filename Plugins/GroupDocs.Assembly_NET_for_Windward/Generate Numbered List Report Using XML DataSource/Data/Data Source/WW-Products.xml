@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+ 
+  <Products>
+    <Discount>0</Discount>
+    <ProductID>1</ProductID>
+    <ProductName>LG Nexus 5</ProductName>
+    <ProductPrice>350</ProductPrice>
+    <UnitsInStock>5</UnitsInStock>
+  </Products>
+  <Products>
+    <Discount>10</Discount>
+    <ProductID>2</ProductID>
+    <ProductName>Nokia Lumia 5801</ProductName>
+    <ProductPrice>250</ProductPrice>
+    <UnitsInStock>10</UnitsInStock>
+  </Products>
+  <Products>
+    <Discount>0</Discount>
+    <ProductID>3</ProductID>
+    <ProductName>Huawie Mate S</ProductName>
+    <ProductPrice>400</ProductPrice>
+    <UnitsInStock>8</UnitsInStock>
+  </Products>
+  <Products>
+    <Discount>0</Discount>
+    <ProductID>4</ProductID>
+    <ProductName>Moto Style</ProductName>
+    <ProductPrice>355</ProductPrice>
+    <UnitsInStock>5</UnitsInStock>
+  </Products>
+</NewDataSet>
