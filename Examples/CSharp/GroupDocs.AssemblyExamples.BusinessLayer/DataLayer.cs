@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace GroupDocs.AssemblyExamples.BusinessLayer
 {
@@ -16,6 +17,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         public const string customerXMLfile = "../../../../Data/Data Sources/XML DataSource/Customers.xml";
         public const string orderXMLfile = "../../../../Data/Data Sources/XML DataSource/Orders.xml";
         public const string productOrderXMLfile = "../../../../Data/Data Sources/XML DataSource/ProductOrders.xml";
+        public const string jsonFile = "../../../../Data/Data Sources/JSON DataSource/CustomerData-Json.json";
 
         #region DataInitialization
         //ExStart:PopulateData
@@ -316,8 +318,8 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
                 return mainDs;
             }
             catch
-            { 
-                return null; 
+            {
+                return null;
             }
         }
         //ExEnd:GetAllDataXML
@@ -341,6 +343,87 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         }
         //ExEnd:GetSingleCustomerXML
         #endregion
+
+
+        #region GetCustomerDataJson
+        //ExStart:GetCustomerDataJson
+        /// <summary>
+        /// Deserializes the json file, loop over the deserialized data
+        /// </summary>
+        /// <returns>Returns deserialized data</returns>
+        public static IEnumerable<BusinessObjects.Customer> GetCustomerDataFromJson()
+        {
+            string rawData = File.ReadAllText(jsonFile);
+            BusinessObjects.Customer[] customers = JsonConvert.DeserializeObject<BusinessObjects.Customer[]>(rawData);
+
+            foreach (BusinessObjects.Customer customer in customers)
+            {
+                yield return customer;
+            }
+        }
+        //ExEnd:GetCustomerDataJson
+        #endregion
+        
+        #region GetCustomerOrderDataJson
+        //ExStart:GetCustomerOrderDataJson
+        /// <summary>
+        /// Deserializes the json file, loop over the deserialized data
+        /// </summary>
+        /// <returns>Returns deserialized data</returns>
+        public static IEnumerable<BusinessObjects.Order> GetCustomerOrderDataFromJson()
+        {
+            string rawData = File.ReadAllText(jsonFile);
+            BusinessObjects.Customer[] customers = JsonConvert.DeserializeObject<BusinessObjects.Customer[]>(rawData);
+
+            foreach (BusinessObjects.Customer customer in customers)
+            {
+                foreach (BusinessObjects.Order order in customer.Order)
+                {
+                    yield return order;
+                }
+            }
+        }
+        //ExEnd:GetCustomerOrderDataJson
+        #endregion
+
+        #region GetProductsJson
+        //ExStart:GetProductsDataJson
+        /// <summary>
+        /// Deserializes the json file, loop over the deserialized data
+        /// </summary>
+        /// <returns>Returns deserialized data</returns>
+        public static IEnumerable<BusinessObjects.Product> GetProductsDataJson()
+        {
+            string rawData = File.ReadAllText(jsonFile);
+            BusinessObjects.Customer[] customers = JsonConvert.DeserializeObject<BusinessObjects.Customer[]>(rawData);
+
+            foreach (BusinessObjects.Customer customer in customers)
+            {
+                foreach (BusinessObjects.Order order in customer.Order)
+                    yield return order.Product;
+            }
+        }
+        //ExEnd:GetProductsDataJson
+        #endregion
+
+        #region GetSingleCustomerDataJson
+        //ExStart:GetSingleCustomerDataJson
+        /// <summary>
+        /// Deserializes the json file, loop over the deserialized data
+        /// </summary>
+        /// <returns>Returns deserialized data</returns>
+        public static BusinessObjects.Customer GetSingleCustomerDataJson()
+        {
+            string rawData = File.ReadAllText(jsonFile);
+            BusinessObjects.Customer[] customers = JsonConvert.DeserializeObject<BusinessObjects.Customer[]>(rawData);
+
+            IEnumerator<BusinessObjects.Customer> customer = GetCustomerDataFromJson().GetEnumerator();
+            customer.MoveNext();
+            return customer.Current;
+        }
+        //ExEnd:GetSingleCustomerDataJson
+        #endregion
     }
+
     //ExEnd:DataLayer
 }

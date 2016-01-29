@@ -22,178 +22,178 @@ namespace GroupDocs.AssemblyExamples
 
             #region Generating Bubble Chart Report
             //Generate a bubble chart report in document processing format
-            //GenerateReport.GenerateBubbleChart("document", false, false, false);
+            //GenerateReport.GenerateBubbleChart("document", false, false, false, true);
 
             //Generate a Bulleted List report in spreadsheet format
-            //GenerateReport.GenerateBubbleChart("spreadsheet", false, false, false);
+            //GenerateReport.GenerateBubbleChart("spreadsheet", false, false, false, true);
 
             //Generate a Bulleted List report in presentation format
-            //GenerateReport.GenerateBubbleChart("presentation", false, false, false);
+            //GenerateReport.GenerateBubbleChart("presentation", false, false, false, true);
             #endregion
             
             #region Generating Bulleted List Report
             //Generate a Bulleted List report in document processing format
-            //GenerateReport.GenerateBulletedList("document", false, false, false);
+            //GenerateReport.GenerateBulletedList("document", false, false, false, true);
 
             //Generate a Bulleted List report in spreadsheet format
-            GenerateReport.GenerateBulletedList("spreadsheet", false, false, true);
+            //GenerateReport.GenerateBulletedList("spreadsheet", false, false, false, true);
 
             //Generate a Bulleted List report in presentation format
-            //GenerateReport.GenerateBulletedList("presentation", false, false, true);
+            //GenerateReport.GenerateBulletedList("presentation", false, false, false, true);
             #endregion
             
             #region Generating Chart report with Filtering, Grouping, and Ordering
             //Generate a Chart report with Filtering, Grouping, and Ordering in document processing format
-            //GenerateReport.GenerateChartWithFilteringGroupingAndOrdering("document", false, false, false);
+            //GenerateReport.GenerateChartWithFilteringGroupingAndOrdering("document", false, false, false, true);
 
             //Generate a Chart report with Filtering, Grouping, and Ordering in spreadsheet format
-            //GenerateReport.GenerateChartWithFilteringGroupingAndOrdering("spreadsheet", false, false, false);
+            //GenerateReport.GenerateChartWithFilteringGroupingAndOrdering("spreadsheet", false, false, false, true);
 
             //Generate a Chart report with Filtering, Grouping, and Ordering in presentation format
-            //GenerateReport.GenerateChartWithFilteringGroupingAndOrdering("presentation", false, false, false);
+            //GenerateReport.GenerateChartWithFilteringGroupingAndOrdering("presentation", false, false, false, true);
             #endregion
             
             #region Generating Common List Report
             //Generate a Common List Report in document processing format
-            //GenerateReport.GenerateCommonList("document", true, false, false);
+            //GenerateReport.GenerateCommonList("document", false, false, false, true);
 
             //Generate a Common List Report in spreadsheet format
-            //GenerateReport.GenerateCommonList("spreadsheet", false, false, false);
+            //GenerateReport.GenerateCommonList("spreadsheet", false, false, false, true);
 
             //Generate a Common List Report in presentation format
-            //GenerateReport.GenerateCommonList("presentation", false, false, false);
+            //GenerateReport.GenerateCommonList("presentation", false, false, false, true);
             #endregion
             
             #region Generating Common Master-Detail Report
             //Generate a Common Master-Detail Report in document processing format
-            //GenerateReport.GenerateCommonMasterDetail("document", false, false, false);
+            //GenerateReport.GenerateCommonMasterDetail("document", false, false, false, true);
 
             //Generate a Common Master-Detail Report in spreadsheet format
-            //GenerateReport.GenerateCommonMasterDetail("spreadsheet", false, false, false);
+            //GenerateReport.GenerateCommonMasterDetail("spreadsheet", false, false, false, true);
 
             //Generate a Common Master-Detail Report in presentation format
-            //GenerateReport.GenerateCommonMasterDetail("presentation", false, false, false);
+            //GenerateReport.GenerateCommonMasterDetail("presentation", false, false, false, true);
             #endregion
             
             #region Generating In-Paragraph List Report
             //Generate a In-Paragraph List Report in document processing format
-            //GenerateReport.GenerateInParagraphList("document", false, false, false);
+            //GenerateReport.GenerateInParagraphList("document", false, false, false, true);
 
             //Generate a In-Paragraph List Report in spreadsheet format
-            //GenerateReport.GenerateInParagraphList("spreadsheet", false, false, true);
+            //GenerateReport.GenerateInParagraphList("spreadsheet", false, false, false, true);
 
             //Generate a In-Paragraph List Report in presentation format
-            //GenerateReport.GenerateInParagraphList("presentation", false, true, false);
+            //GenerateReport.GenerateInParagraphList("presentation", false, false, false, true);
             #endregion
             
             #region Generating In-Table with Alternate Content Report
             //Generate a In-Table List with Alternate Content Report in document processing format
-            //GenerateReport.GenerateInTableListWithAlternateContent("document", false, false, false);
+            //GenerateReport.GenerateInTableListWithAlternateContent("document", false, false, false, true);
 
             //Generate a In-Table List with Alternate Content Report in spreadsheet format
-            //GenerateReport.GenerateInTableListWithAlternateContent("spreadsheet", false, false, true);
+            //GenerateReport.GenerateInTableListWithAlternateContent("spreadsheet", false, false, false, true);
 
             //Generate a In-Table List with Alternate Content Report in presentation format
-            //GenerateReport.GenerateInTableListWithAlternateContent("presentation", false, false, true);
+            //GenerateReport.GenerateInTableListWithAlternateContent("presentation", false, false, false, true);
             #endregion
            
             #region Generating In-Table with Filtering, Grouping and Ordering Report
             //Generate a In-Table List with Filtering, Grouping, and Ordering Report in document processing format
-            //GenerateReport.GenerateInTableListWithFilteringGroupingAndOrdering("document", false, false, false);
+            //GenerateReport.GenerateInTableListWithFilteringGroupingAndOrdering("document", false, false, false, true);
 
             //Generate a In-Table List with Filtering, Grouping, and Ordering Report in spreadsheet format
-            //GenerateReport.GenerateInTableListWithFilteringGroupingAndOrdering("spreadsheet", false, false, true);
+            //GenerateReport.GenerateInTableListWithFilteringGroupingAndOrdering("spreadsheet", false, false, false, true);
 
             //Generate a In-Table List with Filtering, Grouping, and Ordering Report in presentation format
-            //GenerateReport.GenerateInTableListWithFilteringGroupingAndOrdering("presentation", false, false, true);
+            //GenerateReport.GenerateInTableListWithFilteringGroupingAndOrdering("presentation", false, false, false, true);
             #endregion
             
             #region Generating In-Table List with Highlighted Rows Report
             //Generate a In-Table List with Highlighted Rows Report in document processing format
-            //GenerateReport.GenerateInTableListWithHighlightedRows("document", false, false, false);
+            //GenerateReport.GenerateInTableListWithHighlightedRows("document", false, false, false, true);
 
             //Generate a In-Table List with Highlighted Rows Report in spreadsheet format
-            //GenerateReport.GenerateInTableListWithHighlightedRows("spreadsheet", false, false, true);
+            //GenerateReport.GenerateInTableListWithHighlightedRows("spreadsheet", false, false, false, true);
 
             //Generate a In-Table List with Highlighted Rows Report in presentation format
-            //GenerateReport.GenerateInTableListWithHighlightedRows("presentation", false, false, true);
+            //GenerateReport.GenerateInTableListWithHighlightedRows("presentation", false, false, false, true);
             #endregion
             
             #region Generating In-Table List Report
             //Generate a In-Table List Report in document processing format
-            //GenerateReport.GenerateInTableList("document", false, false, false);
+            //GenerateReport.GenerateInTableList("document", false, false, false, true);
 
             //Generate a In-Table List Report in spreadsheet format
-            //GenerateReport.GenerateInTableList("spreadsheet", false, false, true);
+            //GenerateReport.GenerateInTableList("spreadsheet", false, false, false, true);
 
             //Generate a In-Table List Report in presentation format
-            //GenerateReport.GenerateInTableList("presentation", false, false, true);
+            //GenerateReport.GenerateInTableList("presentation", false, false, false, true);
             #endregion
             
             #region Generating In-Table Master-Detail Report
             //Generate a In-Table Master-Detail Report in document processing format
-            //GenerateReport.GenerateInTableMasterDetail("document", false, false, false);
+            //GenerateReport.GenerateInTableMasterDetail("document", false, false, false, true);
 
             //Generate a In-Table Master-Detail Report in spreadsheet format
-            //GenerateReport.GenerateInTableMasterDetail("spreadsheet", false, false, true);
+            //GenerateReport.GenerateInTableMasterDetail("spreadsheet", false, false, false, true);
 
             //Generate a In-Table Master-Detail Report in presentation format
-            //GenerateReport.GenerateInTableMasterDetail("presentation", false, false, true);
+            //GenerateReport.GenerateInTableMasterDetail("presentation", false, false, false, true);
             #endregion
             
             #region Generating Multicolored Number List Report
             //Generate a Multicolored Numbered List Report in document processing format
-            //GenerateReport.GenerateMulticoloredNumberedList("document", false, false, false);
+            //GenerateReport.GenerateMulticoloredNumberedList("document", false, false, false, true);
 
             //Generate a Multicolored Numbered List Report in spreadsheet format
-            //GenerateReport.GenerateMulticoloredNumberedList("spreadsheet", false, false, true);
+            //GenerateReport.GenerateMulticoloredNumberedList("spreadsheet", false, false, false, true);
 
             //Generate a Multicolored Numbered List Report in presentation format
-            //GenerateReport.GenerateMulticoloredNumberedList("presentation", false, false, true);
+            //GenerateReport.GenerateMulticoloredNumberedList("presentation", false, false, false, true);
             #endregion
             
             #region Generating Numbered List Report
             //Generate a Numbered List Report in document processing format
-            //GenerateReport.GenerateNumberedList("document", false, false, false);
+            //GenerateReport.GenerateNumberedList("document", false, false, false, true);
 
             //Generate a Numbered List Report in spreadsheet format
-            //GenerateReport.GenerateNumberedList("spreadsheet", false, false, true);
+            //GenerateReport.GenerateNumberedList("spreadsheet", false, false, false, true);
 
             //Generate a Numbered List Report in presentation format
-            //GenerateReport.GenerateNumberedList("presentation", false, false, true);
+            //GenerateReport.GenerateNumberedList("presentation", false, false, false, true);
             #endregion
             
             #region Generating Pie Chart Report
             //Generate a Pie Chart Report in document processing format
-            //GenerateReport.GeneratePieChart("document", false, false, false);
+            //GenerateReport.GeneratePieChart("document", false, false, false, true);
             
             //Generate a Pie Chart Report in spreadsheet format
-            //GenerateReport.GeneratePieChart("spreadsheet", false, false, false);
+            //GenerateReport.GeneratePieChart("spreadsheet", false, false, false, true);
 
             //Generate a Pie Chart Report in presentation format
-            //GenerateReport.GeneratePieChart("presentation", false, false, false);
+            //GenerateReport.GeneratePieChart("presentation", false, false, false, true);
             #endregion
             
             #region Generating Scatter Chart Report
             //Generate a Scatter Chart Report in document processing format
-            //GenerateReport.GenerateScatterChart("document", false, false, false);
+            //GenerateReport.GenerateScatterChart("document", false, false, false, true);
 
             //Generate a Scatter Chart Report in spreadsheet format
-            //GenerateReport.GenerateScatterChart("spreadsheet", false, false, false);
+            //GenerateReport.GenerateScatterChart("spreadsheet", false, false, false, true);
 
             //Generate a Scatter Chart Report in presentation format
-            //GenerateReport.GenerateScatterChart("presentation", false, false, false);
+            //GenerateReport.GenerateScatterChart("presentation", false, false, false, true);
             #endregion
             
             #region Generating Single Row Report
             //Generate a Single Row Report in document processing format
-            //GenerateReport.GenerateSingleRow("document", false, false, false);
+            //GenerateReport.GenerateSingleRow("document", false, false, false, true);
 
             //Generate a Single Row Report in spreadsheet format
-            //GenerateReport.GenerateSingleRow("spreadsheet", false, false, true);
+            //GenerateReport.GenerateSingleRow("spreadsheet", false, false, false, true);
 
             //Generate a Single Row Report in presentation format
-            //GenerateReport.GenerateSingleRow("presentation", false, false, false);
+            //GenerateReport.GenerateSingleRow("presentation", false, false, false, true);
             #endregion
             
            
