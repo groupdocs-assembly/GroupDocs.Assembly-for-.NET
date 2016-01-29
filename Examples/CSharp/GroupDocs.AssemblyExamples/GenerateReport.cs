@@ -12,7 +12,7 @@ namespace GroupDocs.AssemblyExamples
     public static class GenerateReport
     {
 
-        public static void GenerateBubbleChart(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
+        public static void GenerateBubbleChart(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
         {
             switch (strDocumentFormat)
             {
@@ -77,6 +77,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateBubbleChartFromXMLinOpenDocumentProcessingFormat
                         
+                    }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateBubbleChartFromJsoninWord
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Word Templates/Bubble Chart.docx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Word Reports/Bubble Chart_Json Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Bubble Chart Report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateBubbleChartFromJsoninWord
                     }
                     else
                     {
@@ -161,6 +183,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateBubbleChartFromXMLinOpenSpreadsheetFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateBubbleChartFromJsoninExcel
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Spreadsheet Templates/Bubble Chart.xlsx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Spreadsheet Reports/Bubble Chart_Json Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Bubble Chart Report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateBubbleChartFromJsoninExcel
+                    }
                     else
                     {
                         //ExStart:GenerateBubbleChartinOpenSpreadsheetFormat
@@ -244,6 +288,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateBubbleChartFromXMLinOpenPresentationFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateBubbleChartFromJsoninPresentation
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Presentation Templates/Bubble Chart.pptx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Presentation Reports/Bubble Chart_Json Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Bubble Chart Report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateBubbleChartFromJsoninPresentation
+                    }
                     else
                     {
                         //ExStart:GenerateBubbleChartinOpenPresentationFormat
@@ -267,7 +333,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateBulletedList(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
+        public static void GenerateBulletedList(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
         {
             switch (strDocumentFormat)
             {
@@ -331,6 +397,28 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateBulletedListFromXMLinOpenDocumentProcessingFormat
+                    }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateBulletedListFromJsoninWord
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Word Templates/Bulleted List.docx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Word Reports/Bulleted List_Json Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Bulleted list report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateBulletedListFromJsoninWord
                     }
                     else
                     {
@@ -415,6 +503,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateBulletedListFromXMLinOpenSpreadsheetFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateBulletedListFromJsoninExcel
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Spreadsheet Templates/Bulleted List.xlsx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Spreadsheet Reports/Bulleted List_Json Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate bulleted list in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateBulletedListFromJsoninExcel
+                    }
                     else
                     {
                         //ExStart:GenerateBulletedListinOpenSpreadsheetFormat
@@ -498,6 +608,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateBulletedListFromXMLinOpenPresentationFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateBulletedListFromJsoninPresentation
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Presentation Templates/Bulleted List.pptx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Presentation Reports/Bulleted List_Json Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate bulleted list in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateBulletedListFromJsoninPresentation
+                    }
                     else
                     {
                         //ExStart:GenerateBulletedListinOpenPresentationFormat
@@ -521,7 +653,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateChartWithFilteringGroupingAndOrdering(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
+        public static void GenerateChartWithFilteringGroupingAndOrdering(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
         {
             switch (strDocumentFormat)
             {
@@ -585,6 +717,28 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromXMLinOpenDocumentProcessingFormat
+                    }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateChartWithFilteringGroupingAndOrderingFromJsoninWord
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Word Templates/Chart with Filtering, Grouping, and Ordering.docx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Word Reports/Chart with Filtering, Grouping, and Ordering_Json Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Chart with Filtering, Grouping, and Ordering report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromJsoninWord
                     }
                     else
                     {
@@ -669,6 +823,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromXMLinOpenSpreadsheetFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateChartWithFilteringGroupingAndOrderingFromJsoninSpreadsheet
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Spreadsheet Templates/Chart with Filtering, Grouping, and Ordering.xlsx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Spreadsheet Reports/Chart with Filtering, Grouping, and Ordering_Json Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Chart with Filtering, Grouping, and Ordering report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromJsoninSpreadsheet
+                    }
                     else
                     {
                         //ExStart:GenerateChartWithFilteringGroupingAndOrderinginOpenSpreadsheetFormat
@@ -752,6 +928,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromXMLinOpenPresentationFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateChartWithFilteringGroupingAndOrderingFromJsoninPresentation
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Presentation Templates/Chart with Filtering, Grouping, and Ordering.pptx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Presentation Reports/Chart with Filtering, Grouping, and Ordering_Json Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Chart with Filtering, Grouping, and Ordering report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromJsoninPresentation
+                    }
                     else
                     {
                         //ExStart:GenerateChartWithFilteringGroupingAndOrderinginOpenPresentationFormat
@@ -775,7 +973,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateCommonList(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
+        public static void GenerateCommonList(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
         {
             switch (strDocumentFormat)
             {
@@ -839,6 +1037,28 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateCommonListFromXMLinOpenDocumentProcessingFormat
+                    }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateCommonListReportFromJsoninWord
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Word Templates/Common List.docx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Word Reports/Common List_Json Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Common List report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateCommonListReportFromJsoninWord
                     }
                     else
                     {
@@ -923,6 +1143,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateCommonListFromXMLinOpenSpreadsheetFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateCommonListReportFromJsoninSpreadsheet
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Spreadsheet Templates/Common List.xlsx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Spreadsheet Reports/Common List_Json Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Common List report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateCommonListReportFromJsoninSpreadsheet
+                    }
                     else
                     {
                         //ExStart:GenerateCommonListinOpenSpreadsheetFormat
@@ -1006,6 +1248,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateCommonListFromXMLinOpenPresentationFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateCommonListReportFromJsoninPresentation
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Presentation Templates/Common List.pptx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Presentation Reports/Common List_Json Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Common List report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateCommonListReportFromJsoninPresentation
+                    }
                     else
                     {
                         //ExStart:GenerateCommonListinOpenPresentationFormat
@@ -1029,7 +1293,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateCommonMasterDetail(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
+        public static void GenerateCommonMasterDetail(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
         {
             switch (strDocumentFormat)
             {
@@ -1093,6 +1357,28 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateCommonMasterDetailFromXMLinOpenDocumentProcessingFormat
+                    }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateCommonMasterDetailReportFromJsoninWord
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Word Templates/Common Master-Detail.docx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Word Reports/Common Master-Detail_Json Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Common master-detail report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateCommonMasterDetailReportFromJsoninWord
                     }
                     else
                     {
@@ -1177,6 +1463,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateCommonMasterDetailFromXMLinOpenSpreadsheetFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateCommonMasterDetailReportFromJsoninSpreadsheet
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Spreadsheet Templates/Common Master-Detail.xlsx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Spreadsheet Reports/Common Master-Detail_Json Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Common master-detail report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateCommonMasterDetailReportFromJsoninSpreadsheet
+                    }
                     else
                     {
                         //ExStart:GenerateCommonMasterDetailinOpenSpreadsheetFormat
@@ -1260,6 +1568,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateCommonMasterDetailFromXMLinOpenPresentationFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateCommonMasterDetailReportFromJsoninPresentation
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Presentation Templates/Common Master-Detail.pptx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Presentation Reports/Common Master-Detail_Json Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Common master-detail report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateCommonMasterDetailReportFromJsoninPresentation
+                    }
                     else
                     {
                         //ExStart:GenerateCommonMasterDetailinOpenPresentationFormat
@@ -1283,7 +1613,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateInParagraphList(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
+        public static void GenerateInParagraphList(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
         {
             switch (strDocumentFormat)
             {
@@ -1347,6 +1677,28 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateInParagraphListFromXMLinOpenDocumentProcessingFormat
+                    }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateInParagraphListReportFromJsoninWord
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Word Templates/In-Paragraph List.docx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Word Reports/In-Paragraph List_Json Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate In-Paragraph List report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateInParagraphListReportFromJsoninWord
                     }
                     else
                     {
@@ -1431,6 +1783,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInParagraphListFromXMLinOpenSpreadsheetFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateInParagraphListReportFromJsoninExcel
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Spreadsheet Templates/In-Paragraph List.xlsx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Spreadsheet Reports/In-Paragraph List_Json Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate In-Paragraph List report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateInParagraphListReportFromJsoninExcel
+                    }
                     else
                     {
                         //ExStart:GenerateInParagraphListinOpenSpreadsheetFormat
@@ -1514,6 +1888,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInParagraphListFromXMLinOpenPresentationFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateInParagraphListReportFromJsoninPresentation
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Presentation Templates/In-Paragraph List.pptx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Presentation Reports/In-Paragraph List_Json Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate In-Paragraph List report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateInParagraphListReportFromJsoninPresentation
+                    }
                     else
                     {
                         //ExStart:GenerateInParagraphListinOpenPresentationFormat
@@ -1537,7 +1933,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateInTableListWithAlternateContent(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
+        public static void GenerateInTableListWithAlternateContent(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
         {
             switch (strDocumentFormat)
             {
@@ -1601,6 +1997,28 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateInTableListWithAlternateContentFromXMLinOpenDocumentProcessingFormat
+                    }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateInTableListwithAlternateContentReportFromJsoninWord
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Word Templates/In-Table List with Alternate Content.docx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Word Reports/In-Table List with Alternate Content_Json Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate In-Table List with Alternate Content report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateInTableListwithAlternateContentReportFromJsoninWord
                     }
                     else
                     {
@@ -1685,6 +2103,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInTableListWithAlternateContentFromXMLinOpenSpreadsheetFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateInTableListwithAlternateContentReportFromJsoninExcel
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Spreadsheet Templates/In-Table List with Alternate Content.xlsx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Spreadsheet Reports/In-Table List with Alternate Content_Json Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate In-Table List with Alternate Content report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateInTableListwithAlternateContentReportFromJsoninExcel
+                    }
                     else
                     {
                         //ExStart:GenerateInTableListWithAlternateContentinOpenSpreadsheetFormat
@@ -1768,6 +2208,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInTableListWithAlternateContentFromXMLinOpenPresentationFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateInTableListwithAlternateContentReportFromJsoninPresentation
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Presentation Templates/In-Table List with Alternate Content.pptx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Presentation Reports/In-Table List with Alternate Content_Json Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate In-Table List with Alternate Content report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateInTableListwithAlternateContentReportFromJsoninPresentation
+                    }
                     else
                     {
                         //ExStart:GenerateInTableListWithAlternateContentinOpenPresentationFormat
@@ -1791,7 +2253,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateInTableListWithFilteringGroupingAndOrdering(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
+        public static void GenerateInTableListWithFilteringGroupingAndOrdering(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
         {
             switch (strDocumentFormat)
             {
@@ -1855,6 +2317,28 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinDocumentProcessingDocument
+                    }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninWord
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Word Templates/In-Table List with Filtering, Grouping, and Ordering.docx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Word Reports/In-Table List with Filtering, Grouping, and Ordering_Json Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninWord
                     }
                     else
                     {
@@ -1939,6 +2423,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinOpenSpreadsheetFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninSpreadsheet
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Spreadsheet Templates/In-Table List with Filtering, Grouping, and Ordering.xlsx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Spreadsheet Reports/In-Table List with Filtering, Grouping, and Ordering_Json Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninSpreadsheet
+                    }
                     else
                     {
                         //ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginOpenSpreadsheetFormat
@@ -2022,6 +2528,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinOpenPresentationFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninPresentation
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Presentation Templates/In-Table List with Filtering, Grouping, and Ordering.pptx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Presentation Reports/In-Table List with Filtering, Grouping, and Ordering_Json Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninPresentation
+                    }
                     else
                     {
                         //ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginOpenPresentationFormat
@@ -2045,7 +2573,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateInTableListWithHighlightedRows(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
+        public static void GenerateInTableListWithHighlightedRows(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
         {
             switch (strDocumentFormat)
             {
@@ -2109,6 +2637,28 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateInTableListWithHighlightedRowsFromXMLinDocumentProcessingDocument
+                    }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateInTableListwithHighlightedRowsReportFromJsoninWord
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Word Templates/In-Table List with Highlighted Rows.docx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Word Reports/In-Table List with Highlighted Rows_Json Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate In-Table List with Highlighted Rows report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateInTableListwithHighlightedRowsReportFromJsoninWord
                     }
                     else
                     {
@@ -2193,6 +2743,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInTableListWithHighlightedRowsFromXMLinSpreadsheetDocument
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateInTableListwithHighlightedRowsReportFromJsoninSpreadsheet
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Spreadsheet Templates/In-Table List with Highlighted Rows.xlsx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Spreadsheet Reports/In-Table List with Highlighted Rows_Json Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate In-Table List with Highlighted Rows report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateInTableListwithHighlightedRowsReportFromJsoninSpreadsheet
+                    }
                     else
                     {
                         //ExStart:GenerateInTableListWithHighlightedRowsinSpreadsheetDocument
@@ -2276,6 +2848,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInTableListWithHighlightedRowsFromXMLinOpenPresentationFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateInTableListwithHighlightedRowsReportFromJsoninPresentation
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Presentation Templates/In-Table List with Highlighted Rows.pptx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Presentation Reports/In-Table List with Highlighted Rows_Json Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate In-Table List with Highlighted Rows report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateInTableListwithHighlightedRowsReportFromJsoninPresentation
+                    }
                     else
                     {
                         //ExStart:GenerateInTableListWithHighlightedRowsinOpenPresentationFormat
@@ -2299,7 +2893,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateInTableList(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
+        public static void GenerateInTableList(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
         {
             switch (strDocumentFormat)
             {
@@ -2363,6 +2957,28 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateInTableListFromXMLinDocumentProcessingDocument
+                    }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateInTableListReportFromJsoninWord
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Word Templates/In-Table List.docx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Word Reports/In-Table List_Json Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate In-Table List report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateInTableListReportFromJsoninWord
                     }
                     else
                     {
@@ -2447,6 +3063,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInTableListFromXMLinOpenSpreadsheetFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateInTableListReportFromJsoninSpreadsheet
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Spreadsheet Templates/In-Table List.xlsx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Spreadsheet Reports/In-Table List_Json Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate In-Table List report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateInTableListReportFromJsoninSpreadsheet
+                    }
                     else
                     {
                         //ExStart:GenerateInTableListinOpenSpreadsheetFormat
@@ -2530,6 +3168,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInTableListFromXMLinOpenPresentationFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateInTableListReportFromJsoninPresentation
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Presentation Templates/In-Table List.pptx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Presentation Reports/In-Table List_Json Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate In-Table List report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateInTableListReportFromJsoninPresentation
+                    }
                     else
                     {
                         //ExStart:GenerateInTableListinOpenPresentationFormat
@@ -2553,7 +3213,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateInTableMasterDetail(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
+        public static void GenerateInTableMasterDetail(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
         {
             switch (strDocumentFormat)
             {
@@ -2617,6 +3277,28 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateInTableMasterDetailFromXMLinOpenDocumentProcessingFormat
+                    }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateInTableMasterDetailReportFromJsoninWord
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Word Templates/In-Table Master-Detail.docx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Word Reports/In-Table Master-Detail_Json Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate In-Table Master-Detail report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateInTableMasterDetailReportFromJsoninWord
                     }
                     else
                     {
@@ -2701,6 +3383,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInTableMasterDetailFromXMLinOpenSpreadsheetFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateInTableMasterDetailReportFromJsoninSpreadsheet
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Spreadsheet Templates/In-Table Master-Detail.xlsx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Spreadsheet Reports/In-Table Master-Detail_Json Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate In-Table Master-Detail report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateInTableMasterDetailReportFromJsoninSpreadsheet
+                    }
                     else
                     {
                         //ExStart:GenerateInTableMasterDetailinOpenSpreadsheetFormat
@@ -2784,6 +3488,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateInTableMasterDetailFromXMLinOpenPresentationFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateInTableMasterDetailReportFromJsoninPresentation
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Presentation Templates/In-Table Master-Detail.pptx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Presentation Reports/In-Table Master-Detail_Json Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate In-Table Master-Detail report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateInTableMasterDetailReportFromJsoninPresentation
+                    }
                     else
                     {
                         //ExStart:GenerateInTableMasterDetailinOpenPresentationFormat
@@ -2807,7 +3533,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateMulticoloredNumberedList(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
+        public static void GenerateMulticoloredNumberedList(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
         {
             switch (strDocumentFormat)
             {
@@ -2871,6 +3597,28 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateMulticoloredNumberedListFromXMLinOpenDocumentProcessingDocument
+                    }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateMulticoloredNumberedListReportFromJsoninWord
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Word Templates/Multicolored Numbered List.docx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Word Reports/Multicolored Numbered List_Json Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Multicolored Numbered List report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateMulticoloredNumberedListReportFromJsoninWord
                     }
                     else
                     {
@@ -2955,6 +3703,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateMulticoloredNumberedListFromXMLinOpenSpreadsheetDocument
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateMulticoloredNumberedListReportFromJsoninSpreadsheet
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Spreadsheet Templates/Multicolored Numbered List.xlsx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Spreadsheet Reports/Multicolored Numbered List_Json Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Multicolored Numbered List report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateMulticoloredNumberedListReportFromJsoninSpreadsheet
+                    }
                     else
                     {
                         //ExStart:GenerateMulticoloredNumberedListinOpenSpreadsheetDocument
@@ -3038,6 +3808,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateMulticoloredNumberedListFromXMLinOpenPresentationFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateMulticoloredNumberedListReportFromJsoninPresentation
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Presentation Templates/Multicolored Numbered List.pptx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Presentation Reports/Multicolored Numbered List_Json Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Multicolored Numbered List report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateMulticoloredNumberedListReportFromJsoninPresentation
+                    }
                     else
                     {
                         //ExStart:GenerateMulticoloredNumberedListinOpenPresentationFormat
@@ -3061,7 +3853,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateNumberedList(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
+        public static void GenerateNumberedList(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
         {
             switch (strDocumentFormat)
             {
@@ -3125,6 +3917,28 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateNumberedListFromXMLinOpenDocumentProcessingFormat 
+                    }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateNumberedListReportFromJsoninWord
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Word Templates/Numbered List.docx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Word Reports/Numbered List_Json Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Numbered List report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateNumberedListReportFromJsoninWord
                     }
                     else
                     {
@@ -3209,6 +4023,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateNumberedListFromXMLinOpenSpreadsheetFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateNumberedListReportFromJsoninSpreadsheet
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Spreadsheet Templates/Numbered List.xlsx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Spreadsheet Reports/Numbered List_Json Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Numbered List report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateNumberedListReportFromJsoninSpreadsheet
+                    }
                     else
                     {
                         //ExStart:GenerateNumberedListinOpenSpreadsheetFormat
@@ -3292,6 +4128,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateNumberedListFromXMLinOpenPresentationFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateNumberedListReportFromJsoninPresentation
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Presentation Templates/Numbered List.pptx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Presentation Reports/Numbered List_Json Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Numbered List report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateNumberedListReportFromJsoninPresentation
+                    }
                     else
                     {
                         //ExStart:GenerateNumberedListinOpenPresentationFormat
@@ -3315,7 +4173,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GeneratePieChart(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
+        public static void GeneratePieChart(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
         {
             switch (strDocumentFormat)
             {
@@ -3379,6 +4237,28 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GeneratePieChartFromXMLinOpenDocumentProcessingFormat
+                    }
+                    else if (isJson)
+                    {
+                        //ExStart:GeneratePieChartReportFromJsoninWord
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Word Templates/Pie Chart.docx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Word Reports/Pie Chart_Json Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Pie Chart report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GeneratePieChartReportFromJsoninWord
                     }
                     else
                     {
@@ -3463,6 +4343,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GeneratePieChartFromXMLinOpenSpreadsheetFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GeneratePieChartReportFromJsoninSpreadsheet
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Spreadsheet Templates/Pie Chart.xlsx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Spreadsheet Reports/Pie Chart_Json Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Pie Chart report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GeneratePieChartReportFromJsoninSpreadsheet
+                    }
                     else
                     {
                         //ExStart:GeneratePieChartinOpenSpreadsheetFormat
@@ -3546,6 +4448,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GeneratePieChartFromXMLinOpenPresentationFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GeneratePieChartReportFromJsoninPresentation
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Presentation Templates/Pie Chart.pptx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Presentation Reports/Pie Chart_Json Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Pie Chart report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GeneratePieChartReportFromJsoninPresentation
+                    }
                     else
                     {
                         //ExStart:GeneratePieChartinOpenPresentationFormat
@@ -3569,7 +4493,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateScatterChart(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
+        public static void GenerateScatterChart(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
         {
             switch (strDocumentFormat)
             {
@@ -3633,6 +4557,28 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateScatterChartFromXMLinOpenDocumentProcessingFormat
+                    }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateScatterChartReportFromJsoninWord
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Word Templates/Scatter Chart.docx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Word Reports/Scatter Chart_Json Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Scatter Chart report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateScatterChartReportFromJsoninWord
                     }
                     else
                     {
@@ -3717,6 +4663,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateScatterChartFromXMLinOpenSpreadsheetFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateScatterChartReportFromJsoninSpreadsheet
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Spreadsheet Templates/Scatter Chart.xlsx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Spreadsheet Reports/Scatter Chart_Json Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Scatter Chart report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateScatterChartReportFromJsoninSpreadsheet
+                    }
                     else
                     {
                         //ExStart:GenerateScatterChartinOpenSpreadsheetFormat
@@ -3800,6 +4768,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateScatterChartFromXMLinOpenPresentationFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateScatterChartReportFromJsoninPresentation
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Presentation Templates/Scatter Chart.pptx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Presentation Reports/Scatter Chart_Json Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Scatter Chart report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateScatterChartReportFromJsoninPresentation
+                    }
                     else
                     {
                         //ExStart:GenerateScatterChartinOpenPresentationFormat
@@ -3823,7 +4813,7 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        public static void GenerateSingleRow(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML)
+        public static void GenerateSingleRow(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
         {
             switch (strDocumentFormat)
             {
@@ -3887,6 +4877,28 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateSingleRowFromXMLinOpenDocumentProcessingFormat
+                    }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateSingleRowReportFromJsoninWord
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Word Templates/Single Row.docx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Word Reports/Single Row_Json Report.docx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Single Row report in document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerDataJson(), "customer");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateSingleRowReportFromJsoninWord
                     }
                     else
                     {
@@ -3971,6 +4983,28 @@ namespace GroupDocs.AssemblyExamples
                         }
                         //ExEnd:GenerateSingleRowFromXMLinOpenSpreadsheetFormat
                     }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateSingleRowReportFromJsoninSpreadsheet
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Spreadsheet Templates/Single Row.xlsx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Spreadsheet Reports/Single Row_Json Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Single Row report in spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerDataJson(), "customer");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateSingleRowReportFromJsoninSpreadsheet
+                    }
                     else
                     {
                         //ExStart:GenerateSingleRowinOpenSpreadsheetFormat
@@ -4053,6 +5087,28 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateSingleRowFromXMLinOpenPresentationFormat
+                    }
+                    else if (isJson)
+                    {
+                        //ExStart:GenerateSingleRowReportFromJsoninPresentation
+
+                        //setting up source 
+                        const String strDocumentTemplate = "Presentation Templates/Single Row.pptx";
+                        //Setting up destination 
+                        const String strDocumentReport = "Presentation Reports/Single Row_Json Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                            //Call AssembleDocument to generate Single Row report in presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerDataJson(), "customer");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        //ExEnd:GenerateSingleRowReportFromJsoninPresentation
                     }
                     else
                     {

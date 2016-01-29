@@ -6,6 +6,7 @@ Imports GroupDocs.AssemblyExamples.ProjectBusinessObjects
 Imports GroupDocs.AssemblyExamples.ProjectBusinessObjects.GroupDocs.AssemblyExamples.ProjectEntities
 Imports System.Reflection
 Imports System.IO
+Imports Newtonsoft.Json
 
 
 Namespace GroupDocs.AssemblyExamples.BusinessLayer
@@ -18,6 +19,7 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         Public Const customerXMLfile As String = "../../../../Data/XML DataSource/Customers.xml"
         Public Const orderXMLfile As String = "../../../../Data/XML DataSource/Orders.xml"
         Public Const productOrderXMLfile As String = "../../../../Data/XML DataSource/ProductOrders.xml"
+        Public Const jsonFile As String = "../../../../Data/Data Sources/JSON DataSource/CustomerData-Json.json"
 
 
 #Region "DataInitialization"
@@ -357,6 +359,79 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         'ExEnd:GetSingleCustomerXML
 #End Region
 
+        'here
+#Region "GetCustomerDataJson"
+        'ExStart:GetCustomerDataJson
+        ''' <summary>
+        ''' Deserializes the json file, loop over the deserialized data
+        ''' </summary>
+        ''' <returns>Returns deserialized data</returns>
+        Public Shared Iterator Function GetCustomerDataFromJson() As IEnumerable(Of BusinessObjects.Customer)
+            Dim rawData As String = File.ReadAllText(jsonFile)
+            Dim customers As BusinessObjects.Customer() = JsonConvert.DeserializeObject(Of BusinessObjects.Customer())(rawData)
+
+            For Each customer As BusinessObjects.Customer In customers
+                Yield customer
+            Next
+        End Function
+        'ExEnd:GetCustomerDataJson
+#End Region
+
+#Region "GetCustomerOrderDataJson"
+        'ExStart:GetCustomerOrderDataJson
+        ''' <summary>
+        ''' Deserializes the json file, loop over the deserialized data
+        ''' </summary>
+        ''' <returns>Returns deserialized data</returns>
+        Public Shared Iterator Function GetCustomerOrderDataFromJson() As IEnumerable(Of BusinessObjects.Order)
+            Dim rawData As String = File.ReadAllText(jsonFile)
+            Dim customers As BusinessObjects.Customer() = JsonConvert.DeserializeObject(Of BusinessObjects.Customer())(rawData)
+
+            For Each customer As BusinessObjects.Customer In customers
+                For Each order As BusinessObjects.Order In customer.Order
+                    Yield order
+                Next
+            Next
+        End Function
+        'ExEnd:GetCustomerOrderDataJson
+#End Region
+
+#Region "GetProductsJson"
+        'ExStart:GetProductsDataJson
+        ''' <summary>
+        ''' Deserializes the json file, loop over the deserialized data
+        ''' </summary>
+        ''' <returns>Returns deserialized data</returns>
+        Public Shared Iterator Function GetProductsDataJson() As IEnumerable(Of BusinessObjects.Product)
+            Dim rawData As String = File.ReadAllText(jsonFile)
+            Dim customers As BusinessObjects.Customer() = JsonConvert.DeserializeObject(Of BusinessObjects.Customer())(rawData)
+
+            For Each customer As BusinessObjects.Customer In customers
+                For Each order As BusinessObjects.Order In customer.Order
+                    Yield order.Product
+                Next
+            Next
+        End Function
+        'ExEnd:GetProductsDataJson
+#End Region
+
+#Region "GetSingleCustomerDataJson"
+        'ExStart:GetSingleCustomerDataJson
+        ''' <summary>
+        ''' Deserializes the json file, loop over the deserialized data
+        ''' </summary>
+        ''' <returns>Returns deserialized data</returns>
+        Public Shared Function GetSingleCustomerDataJson() As BusinessObjects.Customer
+            Dim rawData As String = File.ReadAllText(jsonFile)
+            Dim customers As BusinessObjects.Customer() = JsonConvert.DeserializeObject(Of BusinessObjects.Customer())(rawData)
+
+            Dim customer As IEnumerator(Of BusinessObjects.Customer) = GetCustomerDataFromJson().GetEnumerator()
+            customer.MoveNext()
+            Return customer.Current
+        End Function
+        'ExEnd:GetSingleCustomerDataJson
+#End Region
+        'here
 
 
     End Class
