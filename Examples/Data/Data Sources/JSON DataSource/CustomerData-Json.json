@@ -60,7 +60,7 @@
         "ShippingDate": "0001-01-01T00:00:00"
       }
     ],
-    "Photo": "c:\\users\\acer\\documents\\visual studio 2010\\Projects\\Data\\Images\\no-photo.jpg"
+    "Photo": "../../../../Data/Images/no-photo.jpg"
   },
   {
     "$id": "8",
