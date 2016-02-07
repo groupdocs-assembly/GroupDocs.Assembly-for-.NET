@@ -44,7 +44,7 @@ namespace GroupDocs.AssemblyExamples
             
             #region Generating Chart report with Filtering, Grouping, and Ordering
             //Generate a Chart report with Filtering, Grouping, and Ordering in document processing format
-            //GenerateReport.GenerateChartWithFilteringGroupingAndOrdering("document", false, false, false, true);
+            //GenerateReport.GenerateChartWithFilteringGroupingAndOrdering("document", false, false, true, false);
 
             //Generate a Chart report with Filtering, Grouping, and Ordering in spreadsheet format
             //GenerateReport.GenerateChartWithFilteringGroupingAndOrdering("spreadsheet", false, false, false, true);
@@ -171,7 +171,7 @@ namespace GroupDocs.AssemblyExamples
             //GenerateReport.GeneratePieChart("spreadsheet", false, false, false, true);
 
             //Generate a Pie Chart Report in presentation format
-            //GenerateReport.GeneratePieChart("presentation", false, false, false, true);
+            //GenerateReport.GeneratePieChart("presentation", false, false, true, false);
             #endregion
             
             #region Generating Scatter Chart Report
@@ -195,9 +195,6 @@ namespace GroupDocs.AssemblyExamples
             //Generate a Single Row Report in presentation format
             //GenerateReport.GenerateSingleRow("presentation", false, false, false, true);
             #endregion
-            
-           
         }
     }
 }
-

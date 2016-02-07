@@ -13,11 +13,7 @@ Namespace GroupDocs.AssemblyExamples
     Public NotInheritable Class GenerateReport
         Private Sub New()
         End Sub
-
-
-
-
-
+       
         Public Shared Sub GenerateBubbleChart(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean, isJson As Boolean)
             Select Case strDocumentFormat
                 Case "document"
@@ -72,7 +68,6 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isJson Then
                         'ExStart:GenerateBubbleChartFromJsoninWord
-
                         'setting up source 
                         Const strDocumentTemplate As [String] = "Word Templates/Bubble Chart.docx"
                         'Setting up destination 
@@ -85,7 +80,6 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
                             'ExEnd:GenerateBubbleChartFromJsoninWord
                         End Try
                     Else
@@ -154,7 +148,6 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isJson Then
                         'ExStart:GenerateBubbleChartFromJsoninExcel
-
                         'setting up source 
                         Const strDocumentTemplate As [String] = "Spreadsheet Templates/Bubble Chart.xlsx"
                         'Setting up destination 
@@ -167,7 +160,6 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
                             'ExEnd:GenerateBubbleChartFromJsoninExcel
                         End Try
                     Else
@@ -236,7 +228,6 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isJson Then
                         'ExStart:GenerateBubbleChartFromJsoninPresentation
-
                         'setting up source 
                         Const strDocumentTemplate As [String] = "Presentation Templates/Bubble Chart.pptx"
                         'Setting up destination 
@@ -249,7 +240,6 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
                             'ExEnd:GenerateBubbleChartFromJsoninPresentation
                         End Try
                     Else
@@ -320,22 +310,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateBulletedListFromXMLinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateBulletedListFromJsoninWord
-
+                        'ExStart:GenerateBulletedListFromJsoninOpenWord
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Word Templates/Bulleted List.docx"
+                        Const strDocumentTemplate As [String] = "Word Templates/Bulleted List_OpenDocument.odt"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Word Reports/Bulleted List_Json Report.docx"
+                        Const strDocumentReport As [String] = "Word Reports/Bulleted List_OpenDocument_Json Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Bulleted list report in document format
+                            'Call AssembleDocument to generate Bulleted list report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateBulletedListFromJsoninWord
+                            'ExEnd:GenerateBulletedListFromJsoninOpenWord
                         End Try
                     Else
                         'ExStart:GenerateBulletedListinOpenDocumentProcessingFormat
@@ -402,22 +390,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateBulletedListFromXMLinOpenSpreadsheetFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateBulletedListFromJsoninExcel
-
+                        'ExStart:GenerateBulletedListFromJsoninOpenExcel
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/Bulleted List.xlsx"
+                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/Bulleted List_OpenDocument.ods"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Spreadsheet Reports/Bulleted List_Json Report.xlsx"
+                        Const strDocumentReport As [String] = "Spreadsheet Reports/Bulleted List_OpenDocument_Json Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate bulleted list in spreadsheet format
+                            'Call AssembleDocument to generate bulleted list in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateBulletedListFromJsoninExcel
+                            'ExEnd:GenerateBulletedListFromJsoninOpenExcel
                         End Try
                     Else
                         'ExStart:GenerateBulletedListinOpenSpreadsheetFormat
@@ -484,22 +470,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateBulletedListFromXMLinOpenPresentationFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateBulletedListFromJsoninPresentation
-
+                        'ExStart:GenerateBulletedListFromJsoninOpenPresentation
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Presentation Templates/Bulleted List.pptx"
+                        Const strDocumentTemplate As [String] = "Presentation Templates/Bulleted List_OpenDocument.odp"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Presentation Reports/Bulleted List_Json Report.pptx"
+                        Const strDocumentReport As [String] = "Presentation Reports/Bulleted List_OpenDocument_Json Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate bulleted list in presentation format
+                            'Call AssembleDocument to generate bulleted list in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateBulletedListFromJsoninPresentation
+                            'ExEnd:GenerateBulletedListFromJsoninOpenPresentation
                         End Try
                     Else
                         'ExStart:GenerateBulletedListinOpenPresentationFormat
@@ -570,7 +554,6 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isJson Then
                         'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromJsoninWord
-
                         'setting up source 
                         Const strDocumentTemplate As [String] = "Word Templates/Chart with Filtering, Grouping, and Ordering.docx"
                         'Setting up destination 
@@ -583,7 +566,6 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
                             'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromJsoninWord
                         End Try
                     Else
@@ -652,7 +634,6 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isJson Then
                         'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromJsoninSpreadsheet
-
                         'setting up source 
                         Const strDocumentTemplate As [String] = "Spreadsheet Templates/Chart with Filtering, Grouping, and Ordering.xlsx"
                         'Setting up destination 
@@ -665,7 +646,6 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
                             'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromJsoninSpreadsheet
                         End Try
                     Else
@@ -734,7 +714,6 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isJson Then
                         'ExStart:GenerateChartWithFilteringGroupingAndOrderingFromJsoninPresentation
-
                         'setting up source 
                         Const strDocumentTemplate As [String] = "Presentation Templates/Chart with Filtering, Grouping, and Ordering.pptx"
                         'Setting up destination 
@@ -747,7 +726,6 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
                             'ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromJsoninPresentation
                         End Try
                     Else
@@ -818,22 +796,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateCommonListFromXMLinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateCommonListReportFromJsoninWord
-
+                        'ExStart:GenerateCommonListReportFromJsoninOpenWord
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Word Templates/Common List.docx"
+                        Const strDocumentTemplate As [String] = "Word Templates/Common List_OpenDocument.odt"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Word Reports/Common List_Json Report.docx"
+                        Const strDocumentReport As [String] = "Word Reports/Common List_OpenDocument_Json Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Common List report in document format
+                            'Call AssembleDocument to generate Common List report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateCommonListReportFromJsoninWord
+                            'ExEnd:GenerateCommonListReportFromJsoninOpenWord
                         End Try
                     Else
                         'ExStart:GenerateCommonListinOpenDocumentProcessingFormat
@@ -900,22 +876,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateCommonListFromXMLinOpenSpreadsheetFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateCommonListReportFromJsoninSpreadsheet
-
+                        'ExStart:GenerateCommonListReportFromJsoninOpenSpreadsheet
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/Common List.xlsx"
+                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/Common List_OpenDocument.ods"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Spreadsheet Reports/Common List_Json Report.xlsx"
+                        Const strDocumentReport As [String] = "Spreadsheet Reports/Common List_OpenDocument_Json Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Common List report in spreadsheet format
+                            'Call AssembleDocument to generate Common List report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateCommonListReportFromJsoninSpreadsheet
+                            'ExEnd:GenerateCommonListReportFromJsoninOpenSpreadsheet
                         End Try
                     Else
                         'ExStart:GenerateCommonListinOpenSpreadsheetFormat
@@ -982,22 +956,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateCommonListFromXMLinOpenPresentationFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateCommonListReportFromJsoninPresentation
-
+                        'ExStart:GenerateCommonListReportFromJsoninOpenPresentation
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Presentation Templates/Common List.pptx"
+                        Const strDocumentTemplate As [String] = "Presentation Templates/Common List_OpenDocument.odp"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Presentation Reports/Common List_Json Report.pptx"
+                        Const strDocumentReport As [String] = "Presentation Reports/Common List_OpenDocument_Json Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Common List report in presentation format
+                            'Call AssembleDocument to generate Common List report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateCommonListReportFromJsoninPresentation
+                            'ExEnd:GenerateCommonListReportFromJsoninOpenPresentation
                         End Try
                     Else
                         'ExStart:GenerateCommonListinOpenPresentationFormat
@@ -1067,22 +1039,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateCommonMasterDetailFromXMLinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateCommonMasterDetailReportFromJsoninWord
-
+                        'ExStart:GenerateCommonMasterDetailReportFromJsoninOpenWord
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Word Templates/Common Master-Detail.docx"
+                        Const strDocumentTemplate As [String] = "Word Templates/Common Master-Detail_OpenDocument.odt"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Word Reports/Common Master-Detail_Json Report.docx"
+                        Const strDocumentReport As [String] = "Word Reports/Common Master-Detail_OpenDocument_Json Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Common master-detail report in document format
+                            'Call AssembleDocument to generate Common master-detail report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateCommonMasterDetailReportFromJsoninWord
+                            'ExEnd:GenerateCommonMasterDetailReportFromJsoninOpenWord
                         End Try
                     Else
                         'ExStart:GenerateCommonMasterDetailinOpenDocumentProcessingFormat
@@ -1149,22 +1119,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateCommonMasterDetailFromXMLinOpenSpreadsheetFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateCommonMasterDetailReportFromJsoninSpreadsheet
-
+                        'ExStart:GenerateCommonMasterDetailReportFromJsoninOpenSpreadsheet
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/Common Master-Detail.xlsx"
+                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/Common Master-Detail_OpenDocument.ods"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Spreadsheet Reports/Common Master-Detail_Json Report.xlsx"
+                        Const strDocumentReport As [String] = "Spreadsheet Reports/Common Master-Detail_OpenDocument_Json Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Common master-detail report in spreadsheet format
+                            'Call AssembleDocument to generate Common master-detail report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateCommonMasterDetailReportFromJsoninSpreadsheet
+                            'ExEnd:GenerateCommonMasterDetailReportFromJsoninOpenSpreadsheet
                         End Try
                     Else
                         'ExStart:GenerateCommonMasterDetailinOpenSpreadsheetFormat
@@ -1231,22 +1199,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateCommonMasterDetailFromXMLinOpenPresentationFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateCommonMasterDetailReportFromJsoninPresentation
-
+                        'ExStart:GenerateCommonMasterDetailReportFromJsoninOpenPresentation
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Presentation Templates/Common Master-Detail.pptx"
+                        Const strDocumentTemplate As [String] = "Presentation Templates/Common Master-Detail_OpenDocument.odp"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Presentation Reports/Common Master-Detail_Json Report.pptx"
+                        Const strDocumentReport As [String] = "Presentation Reports/Common Master-Detail_OpenDocument_Json Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Common master-detail report in presentation format
+                            'Call AssembleDocument to generate Common master-detail report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateCommonMasterDetailReportFromJsoninPresentation
+                            'ExEnd:GenerateCommonMasterDetailReportFromJsoninOpenPresentation
                         End Try
                     Else
                         'ExStart:GenerateCommonMasterDetailinOpenPresentationFormat
@@ -1316,22 +1282,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateInParagraphListFromXMLinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateInParagraphListReportFromJsoninWord
-
+                        'ExStart:GenerateInParagraphListReportFromJsoninOpenWord
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Paragraph List.docx"
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Paragraph List_OpenDocument.odt"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Word Reports/In-Paragraph List_Json Report.docx"
+                        Const strDocumentReport As [String] = "Word Reports/In-Paragraph List_OpenDocument_Json Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Paragraph List report in document format
+                            'Call AssembleDocument to generate In-Paragraph List report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateInParagraphListReportFromJsoninWord
+                            'ExEnd:GenerateInParagraphListReportFromJsoninOpenWord
                         End Try
                     Else
                         'ExStart:GenerateInParagraphListinOpenDocumentProcessingFormat
@@ -1398,22 +1362,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateInParagraphListFromXMLinOpenSpreadsheetFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateInParagraphListReportFromJsoninExcel
-
+                        'ExStart:GenerateInParagraphListReportFromJsoninOpenExcel
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/In-Paragraph List.xlsx"
+                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/In-Paragraph List_OpenDocument.ods"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Spreadsheet Reports/In-Paragraph List_Json Report.xlsx"
+                        Const strDocumentReport As [String] = "Spreadsheet Reports/In-Paragraph List_OpenDocument_Json Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Paragraph List report in spreadsheet format
+                            'Call AssembleDocument to generate In-Paragraph List report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateInParagraphListReportFromJsoninExcel
+                            'ExEnd:GenerateInParagraphListReportFromJsoninOpenExcel
                         End Try
                     Else
                         'ExStart:GenerateInParagraphListinOpenSpreadsheetFormat
@@ -1480,22 +1442,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateInParagraphListFromXMLinOpenPresentationFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateInParagraphListReportFromJsoninPresentation
-
+                        'ExStart:GenerateInParagraphListReportFromJsoninOpenPresentation
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Presentation Templates/In-Paragraph List.pptx"
+                        Const strDocumentTemplate As [String] = "Presentation Templates/In-Paragraph List_OpenDocument.odp"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Presentation Reports/In-Paragraph List_Json Report.pptx"
+                        Const strDocumentReport As [String] = "Presentation Reports/In-Paragraph List_OpenDocument_Json Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Paragraph List report in presentation format
+                            'Call AssembleDocument to generate In-Paragraph List report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateInParagraphListReportFromJsoninPresentation
+                            'ExEnd:GenerateInParagraphListReportFromJsoninOpenPresentation
                         End Try
                     Else
                         'ExStart:GenerateInParagraphListinOpenPresentationFormat
@@ -1565,22 +1525,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateInTableListWithAlternateContentFromXMLinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateInTableListwithAlternateContentReportFromJsoninWord
-
+                        'ExStart:GenerateInTableListwithAlternateContentReportFromJsoninOpenWord
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Alternate Content.docx"
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Alternate Content_OpenDocument.odt"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Alternate Content_Json Report.docx"
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Alternate Content_OpenDocument_Json Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Table List with Alternate Content report in document format
+                            'Call AssembleDocument to generate In-Table List with Alternate Content report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateInTableListwithAlternateContentReportFromJsoninWord
+                            'ExEnd:GenerateInTableListwithAlternateContentReportFromJsoninOpenWord
                         End Try
                     Else
                         'ExStart:GenerateInTableListWithAlternateContentinOpenDocumentProcessingFormat
@@ -1647,22 +1605,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateInTableListWithAlternateContentFromXMLinOpenSpreadsheetFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateInTableListwithAlternateContentReportFromJsoninExcel
-
+                        'ExStart:GenerateInTableListwithAlternateContentReportFromJsoninOpenExcel
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/In-Table List with Alternate Content.xlsx"
+                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/In-Table List with Alternate Content_OpenDocument.ods"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Spreadsheet Reports/In-Table List with Alternate Content_Json Report.xlsx"
+                        Const strDocumentReport As [String] = "Spreadsheet Reports/In-Table List with Alternate Content_OpenDocument_Json Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Table List with Alternate Content report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table List with Alternate Content report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateInTableListwithAlternateContentReportFromJsoninExcel
+                            'ExEnd:GenerateInTableListwithAlternateContentReportFromJsoninOpenExcel
                         End Try
                     Else
                         'ExStart:GenerateInTableListWithAlternateContentinOpenSpreadsheetFormat
@@ -1729,12 +1685,11 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateInTableListWithAlternateContentFromXMLinOpenPresentationFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateInTableListwithAlternateContentReportFromJsoninPresentation
-
+                        'ExStart:GenerateInTableListwithAlternateContentReportFromJsoninOpenPresentation
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Presentation Templates/In-Table List with Alternate Content.pptx"
+                        Const strDocumentTemplate As [String] = "Presentation Templates/In-Table List with Alternate Content_OpenDocument.odp"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Presentation Reports/In-Table List with Alternate Content_Json Report.pptx"
+                        Const strDocumentReport As [String] = "Presentation Reports/In-Table List with Alternate Content_OpenDocument_Json Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
@@ -1743,8 +1698,7 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateInTableListwithAlternateContentReportFromJsoninPresentation
+                            'ExEnd:GenerateInTableListwithAlternateContentReportFromJsoninOpenPresentation
                         End Try
                     Else
                         'ExStart:GenerateInTableListWithAlternateContentinOpenPresentationFormat
@@ -1814,22 +1768,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinDocumentProcessingDocument
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninWord
-
+                        'ExStart:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninOpenWord
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Filtering, Grouping, and Ordering.docx"
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Filtering, Grouping, and Ordering_OpenDocument.odt"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Filtering, Grouping, and Ordering_Json Report.docx"
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Filtering, Grouping, and Ordering_OpenDocument_Json Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering report in document format
+                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninWord
+                            'ExEnd:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninOpenWord
                         End Try
                     Else
                         'ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginDocumentProcessingDocument
@@ -1896,22 +1848,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinOpenSpreadsheetFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninSpreadsheet
-
+                        'ExStart:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninOpenSpreadsheet
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/In-Table List with Filtering, Grouping, and Ordering.xlsx"
+                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/In-Table List with Filtering, Grouping, and Ordering_OpenDocument.ods"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Spreadsheet Reports/In-Table List with Filtering, Grouping, and Ordering_Json Report.xlsx"
+                        Const strDocumentReport As [String] = "Spreadsheet Reports/In-Table List with Filtering, Grouping, and Ordering_OpenDocument_Json Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninSpreadsheet
+                            'ExEnd:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninOpenSpreadsheet
                         End Try
                     Else
                         'ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginOpenSpreadsheetFormat
@@ -1978,22 +1928,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinOpenPresentationFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninPresentation
-
+                        'ExStart:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninOpenPresentation
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Presentation Templates/In-Table List with Filtering, Grouping, and Ordering.pptx"
+                        Const strDocumentTemplate As [String] = "Presentation Templates/In-Table List with Filtering, Grouping, and Ordering_OpenDocument.odp"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Presentation Reports/In-Table List with Filtering, Grouping, and Ordering_Json Report.pptx"
+                        Const strDocumentReport As [String] = "Presentation Reports/In-Table List with Filtering, Grouping, and Ordering_OpenDocument_Json Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering report in presentation format
+                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninPresentation
+                            'ExEnd:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninOpenPresentation
                         End Try
                     Else
                         'ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginOpenPresentationFormat
@@ -2063,22 +2011,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateInTableListWithHighlightedRowsFromXMLinDocumentProcessingDocument
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateInTableListwithHighlightedRowsReportFromJsoninWord
-
+                        'ExStart:GenerateInTableListwithHighlightedRowsReportFromJsoninOpenWord
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Highlighted Rows.docx"
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Highlighted Rows_OpenDocument.odt"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Highlighted Rows_Json Report.docx"
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List with Highlighted Rows_OpenDocument_Json Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Table List with Highlighted Rows report in document format
+                            'Call AssembleDocument to generate In-Table List with Highlighted Rows report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateInTableListwithHighlightedRowsReportFromJsoninWord
+                            'ExEnd:GenerateInTableListwithHighlightedRowsReportFromJsoninOpenWord
                         End Try
                     Else
                         'ExStart:GenerateInTableListWithHighlightedRowsinDocumentProcessingDocument
@@ -2145,22 +2091,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateInTableListWithHighlightedRowsFromXMLinSpreadsheetDocument
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateInTableListwithHighlightedRowsReportFromJsoninSpreadsheet
-
+                        'ExStart:GenerateInTableListwithHighlightedRowsReportFromJsoninOpenSpreadsheet
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/In-Table List with Highlighted Rows.xlsx"
+                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/In-Table List with Highlighted Rows_OpenDocument.ods"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Spreadsheet Reports/In-Table List with Highlighted Rows_Json Report.xlsx"
+                        Const strDocumentReport As [String] = "Spreadsheet Reports/In-Table List with Highlighted Rows_OpenDocument_Json Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Table List with Highlighted Rows report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table List with Highlighted Rows report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateInTableListwithHighlightedRowsReportFromJsoninSpreadsheet
+                            'ExEnd:GenerateInTableListwithHighlightedRowsReportFromJsoninOpenSpreadsheet
                         End Try
                     Else
                         'ExStart:GenerateInTableListWithHighlightedRowsinSpreadsheetDocument
@@ -2227,22 +2171,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateInTableListWithHighlightedRowsFromXMLinOpenPresentationFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateInTableListwithHighlightedRowsReportFromJsoninPresentation
-
+                        'ExStart:GenerateInTableListwithHighlightedRowsReportFromJsoninOpenPresentation
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Presentation Templates/In-Table List with Highlighted Rows.pptx"
+                        Const strDocumentTemplate As [String] = "Presentation Templates/In-Table List with Highlighted Rows_OpenDocument.odp"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Presentation Reports/In-Table List with Highlighted Rows_Json Report.pptx"
+                        Const strDocumentReport As [String] = "Presentation Reports/In-Table List with Highlighted Rows_OpenDocument_Json Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Table List with Highlighted Rows report in presentation format
+                            'Call AssembleDocument to generate In-Table List with Highlighted Rows report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateInTableListwithHighlightedRowsReportFromJsoninPresentation
+                            'ExEnd:GenerateInTableListwithHighlightedRowsReportFromJsoninOpenPresentation
                         End Try
                     Else
                         'ExStart:GenerateInTableListWithHighlightedRowsinOpenPresentationFormat
@@ -2312,22 +2254,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateInTableListFromXMLinDocumentProcessingDocument
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateInTableListReportFromJsoninWord
-
+                        'ExStart:GenerateInTableListReportFromJsoninOpenWord
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List.docx"
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table List_OpenDocument.odt"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table List_Json Report.docx"
+                        Const strDocumentReport As [String] = "Word Reports/In-Table List_OpenDocument_Json Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Table List report in document format
+                            'Call AssembleDocument to generate In-Table List report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateInTableListReportFromJsoninWord
+                            'ExEnd:GenerateInTableListReportFromJsoninOpenWord
                         End Try
                     Else
                         'ExStart:GenerateInTableListinDocumentProcessingDocument
@@ -2394,22 +2334,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateInTableListFromXMLinOpenSpreadsheetFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateInTableListReportFromJsoninSpreadsheet
-
+                        'ExStart:GenerateInTableListReportFromJsoninOpenSpreadsheet
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/In-Table List.xlsx"
+                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/In-Table List_OpenDocument.ods"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Spreadsheet Reports/In-Table List_Json Report.xlsx"
+                        Const strDocumentReport As [String] = "Spreadsheet Reports/In-Table List_OpenDocument_Json Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Table List report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table List report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateInTableListReportFromJsoninSpreadsheet
+                            'ExEnd:GenerateInTableListReportFromJsoninOpenSpreadsheet
                         End Try
                     Else
                         'ExStart:GenerateInTableListinOpenSpreadsheetFormat
@@ -2476,22 +2414,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateInTableListFromXMLinOpenPresentationFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateInTableListReportFromJsoninPresentation
-
+                        'ExStart:GenerateInTableListReportFromJsoninOpenPresentation
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Presentation Templates/In-Table List.pptx"
+                        Const strDocumentTemplate As [String] = "Presentation Templates/In-Table List_OpenDocument.odp"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Presentation Reports/In-Table List_Json Report.pptx"
+                        Const strDocumentReport As [String] = "Presentation Reports/In-Table List_OpenDocument_Json Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Table List report in presentation format
+                            'Call AssembleDocument to generate In-Table List report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateInTableListReportFromJsoninPresentation
+                            'ExEnd:GenerateInTableListReportFromJsoninOpenPresentation
                         End Try
                     Else
                         'ExStart:GenerateInTableListinOpenPresentationFormat
@@ -2561,22 +2497,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateInTableMasterDetailFromXMLinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateInTableMasterDetailReportFromJsoninWord
-
+                        'ExStart:GenerateInTableMasterDetailReportFromJsoninOpenWord
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Word Templates/In-Table Master-Detail.docx"
+                        Const strDocumentTemplate As [String] = "Word Templates/In-Table Master-Detail_OpenDocument.odt"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Word Reports/In-Table Master-Detail_Json Report.docx"
+                        Const strDocumentReport As [String] = "Word Reports/In-Table Master-Detail_OpenDocument_Json Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Table Master-Detail report in document format
+                            'Call AssembleDocument to generate In-Table Master-Detail report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateInTableMasterDetailReportFromJsoninWord
+                            'ExEnd:GenerateInTableMasterDetailReportFromJsoninOpenWord
                         End Try
                     Else
                         'ExStart:GenerateInTableMasterDetailinOpenDocumentProcessingFormat
@@ -2643,22 +2577,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateInTableMasterDetailFromXMLinOpenSpreadsheetFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateInTableMasterDetailReportFromJsoninSpreadsheet
-
+                        'ExStart:GenerateInTableMasterDetailReportFromJsoninOpenSpreadsheet
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/In-Table Master-Detail.xlsx"
+                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/In-Table Master-Detail_OpenDocument.ods"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Spreadsheet Reports/In-Table Master-Detail_Json Report.xlsx"
+                        Const strDocumentReport As [String] = "Spreadsheet Reports/In-Table Master-Detail_OpenDocument_Json Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Table Master-Detail report in spreadsheet format
+                            'Call AssembleDocument to generate In-Table Master-Detail report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateInTableMasterDetailReportFromJsoninSpreadsheet
+                            'ExEnd:GenerateInTableMasterDetailReportFromJsoninOpenSpreadsheet
                         End Try
                     Else
                         'ExStart:GenerateInTableMasterDetailinOpenSpreadsheetFormat
@@ -2725,22 +2657,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateInTableMasterDetailFromXMLinOpenPresentationFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateInTableMasterDetailReportFromJsoninPresentation
-
+                        'ExStart:GenerateInTableMasterDetailReportFromJsoninOpenPresentation
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Presentation Templates/In-Table Master-Detail.pptx"
+                        Const strDocumentTemplate As [String] = "Presentation Templates/In-Table Master-Detail_OpenDocument.odp"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Presentation Reports/In-Table Master-Detail_Json Report.pptx"
+                        Const strDocumentReport As [String] = "Presentation Reports/In-Table Master-Detail_OpenDocument_Json Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Table Master-Detail report in presentation format
+                            'Call AssembleDocument to generate In-Table Master-Detail report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateInTableMasterDetailReportFromJsoninPresentation
+                            'ExEnd:GenerateInTableMasterDetailReportFromJsoninOpenPresentation
                         End Try
                     Else
                         'ExStart:GenerateInTableMasterDetailinOpenPresentationFormat
@@ -2810,22 +2740,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateMulticoloredNumberedListFromXMLinOpenDocumentProcessingDocument
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateMulticoloredNumberedListReportFromJsoninWord
-
+                        'ExStart:GenerateMulticoloredNumberedListReportFromJsoninOpenWord
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Word Templates/Multicolored Numbered List.docx"
+                        Const strDocumentTemplate As [String] = "Word Templates/Multicolored Numbered List_OpenDocument.odt"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Word Reports/Multicolored Numbered List_Json Report.docx"
+                        Const strDocumentReport As [String] = "Word Reports/Multicolored Numbered List_OpenDocument_Json Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Multicolored Numbered List report in document format
+                            'Call AssembleDocument to generate Multicolored Numbered List report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateMulticoloredNumberedListReportFromJsoninWord
+                            'ExEnd:GenerateMulticoloredNumberedListReportFromJsoninOpenWord
                         End Try
                     Else
                         'ExStart:GenerateMulticoloredNumberedListinOpenDocumentProcessingDocument
@@ -2892,22 +2820,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateMulticoloredNumberedListFromXMLinOpenSpreadsheetDocument
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateMulticoloredNumberedListReportFromJsoninSpreadsheet
-
+                        'ExStart:GenerateMulticoloredNumberedListReportFromJsoninOpenSpreadsheet
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/Multicolored Numbered List.xlsx"
+                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/Multicolored Numbered List_OpenDocument.ods"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Spreadsheet Reports/Multicolored Numbered List_Json Report.xlsx"
+                        Const strDocumentReport As [String] = "Spreadsheet Reports/Multicolored Numbered List_OpenDocument_Json Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Multicolored Numbered List report in spreadsheet format
+                            'Call AssembleDocument to generate Multicolored Numbered List report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateMulticoloredNumberedListReportFromJsoninSpreadsheet
+                            'ExEnd:GenerateMulticoloredNumberedListReportFromJsoninOpenSpreadsheet
                         End Try
                     Else
                         'ExStart:GenerateMulticoloredNumberedListinOpenSpreadsheetDocument
@@ -2974,22 +2900,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateMulticoloredNumberedListFromXMLinOpenPresentationFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateMulticoloredNumberedListReportFromJsoninPresentation
-
+                        'ExStart:GenerateMulticoloredNumberedListReportFromJsoninOpenPresentation
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Presentation Templates/Multicolored Numbered List.pptx"
+                        Const strDocumentTemplate As [String] = "Presentation Templates/Multicolored Numbered List_OpenDocument.odp"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Presentation Reports/Multicolored Numbered List_Json Report.pptx"
+                        Const strDocumentReport As [String] = "Presentation Reports/Multicolored Numbered List_OpenDocument_Json Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Multicolored Numbered List report in presentation format
+                            'Call AssembleDocument to generate Multicolored Numbered List report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateMulticoloredNumberedListReportFromJsoninPresentation
+                            'ExEnd:GenerateMulticoloredNumberedListReportFromJsoninOpenPresentation
                         End Try
                     Else
                         'ExStart:GenerateMulticoloredNumberedListinOpenPresentationFormat
@@ -3059,22 +2983,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateNumberedListFromXMLinOpenDocumentProcessingFormat 
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateNumberedListReportFromJsoninWord
-
+                        'ExStart:GenerateNumberedListReportFromJsoninOpenWord
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Word Templates/Numbered List.docx"
+                        Const strDocumentTemplate As [String] = "Word Templates/Numbered List_OpenDocument.odt"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Word Reports/Numbered List_Json Report.docx"
+                        Const strDocumentReport As [String] = "Word Reports/Numbered List_OpenDocument_Json Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Numbered List report in document format
+                            'Call AssembleDocument to generate Numbered List report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateNumberedListReportFromJsoninWord
+                            'ExEnd:GenerateNumberedListReportFromJsoninOpenWord
                         End Try
                     Else
                         'ExStart:GenerateNumberedListinOpenDocumentProcessingFormat
@@ -3141,22 +3063,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateNumberedListFromXMLinOpenSpreadsheetFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateNumberedListReportFromJsoninSpreadsheet
-
+                        'ExStart:GenerateNumberedListReportFromJsoninOpenSpreadsheet
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/Numbered List.xlsx"
+                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/Numbered List_OpenDocument.ods"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Spreadsheet Reports/Numbered List_Json Report.xlsx"
+                        Const strDocumentReport As [String] = "Spreadsheet Reports/Numbered List_OpenDocument_Json Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Numbered List report in spreadsheet format
+                            'Call AssembleDocument to generate Numbered List report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateNumberedListReportFromJsoninSpreadsheet
+                            'ExEnd:GenerateNumberedListReportFromJsoninOpenSpreadsheet
                         End Try
                     Else
                         'ExStart:GenerateNumberedListinOpenSpreadsheetFormat
@@ -3223,22 +3143,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateNumberedListFromXMLinOpenPresentationFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateNumberedListReportFromJsoninPresentation
-
+                        'ExStart:GenerateNumberedListReportFromJsoninOpenPresentation
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Presentation Templates/Numbered List.pptx"
+                        Const strDocumentTemplate As [String] = "Presentation Templates/Numbered List_OpenDocument.odp"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Presentation Reports/Numbered List_Json Report.pptx"
+                        Const strDocumentReport As [String] = "Presentation Reports/Numbered List_OpenDocument_Json Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Numbered List report in presentation format
+                            'Call AssembleDocument to generate Numbered List report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateNumberedListReportFromJsoninPresentation
+                            'ExEnd:GenerateNumberedListReportFromJsoninOpenPresentation
                         End Try
                     Else
                         'ExStart:GenerateNumberedListinOpenPresentationFormat
@@ -3309,7 +3227,6 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isJson Then
                         'ExStart:GeneratePieChartReportFromJsoninWord
-
                         'setting up source 
                         Const strDocumentTemplate As [String] = "Word Templates/Pie Chart.docx"
                         'Setting up destination 
@@ -3322,7 +3239,6 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
                             'ExEnd:GeneratePieChartReportFromJsoninWord
                         End Try
                     Else
@@ -3391,7 +3307,6 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isJson Then
                         'ExStart:GeneratePieChartReportFromJsoninSpreadsheet
-
                         'setting up source 
                         Const strDocumentTemplate As [String] = "Spreadsheet Templates/Pie Chart.xlsx"
                         'Setting up destination 
@@ -3404,7 +3319,6 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
                             'ExEnd:GeneratePieChartReportFromJsoninSpreadsheet
                         End Try
                     Else
@@ -3473,7 +3387,6 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isJson Then
                         'ExStart:GeneratePieChartReportFromJsoninPresentation
-
                         'setting up source 
                         Const strDocumentTemplate As [String] = "Presentation Templates/Pie Chart.pptx"
                         'Setting up destination 
@@ -3486,7 +3399,6 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
                             'ExEnd:GeneratePieChartReportFromJsoninPresentation
                         End Try
                     Else
@@ -3558,7 +3470,6 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isJson Then
                         'ExStart:GenerateScatterChartReportFromJsoninWord
-
                         'setting up source 
                         Const strDocumentTemplate As [String] = "Word Templates/Scatter Chart.docx"
                         'Setting up destination 
@@ -3571,7 +3482,6 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
                             'ExEnd:GenerateScatterChartReportFromJsoninWord
                         End Try
                     Else
@@ -3640,7 +3550,6 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isJson Then
                         'ExStart:GenerateScatterChartReportFromJsoninSpreadsheet
-
                         'setting up source 
                         Const strDocumentTemplate As [String] = "Spreadsheet Templates/Scatter Chart.xlsx"
                         'Setting up destination 
@@ -3653,7 +3562,6 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
                             'ExEnd:GenerateScatterChartReportFromJsoninSpreadsheet
                         End Try
                     Else
@@ -3722,7 +3630,6 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     ElseIf isJson Then
                         'ExStart:GenerateScatterChartReportFromJsoninPresentation
-
                         'setting up source 
                         Const strDocumentTemplate As [String] = "Presentation Templates/Scatter Chart.pptx"
                         'Setting up destination 
@@ -3735,7 +3642,6 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
                             'ExEnd:GenerateScatterChartReportFromJsoninPresentation
                         End Try
                     Else
@@ -3806,22 +3712,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateSingleRowFromXMLinOpenDocumentProcessingFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateSingleRowReportFromJsoninWord
-
+                        'ExStart:GenerateSingleRowReportFromJsoninOpenWord
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Word Templates/Single Row.docx"
+                        Const strDocumentTemplate As [String] = "Word Templates/Single Row_OpenDocument.odt"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Word Reports/Single Row_Json Report.docx"
+                        Const strDocumentReport As [String] = "Word Reports/Single Row_OpenDocument_Json Report.odt"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Single Row report in document format
+                            'Call AssembleDocument to generate Single Row report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerDataJson(), "customer")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateSingleRowReportFromJsoninWord
+                            'ExEnd:GenerateSingleRowReportFromJsoninOpenWord
                         End Try
                     Else
                         'ExStart:GenerateSingleRowinOpenDocumentProcessingFormat
@@ -3888,22 +3792,20 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateSingleRowFromXMLinOpenSpreadsheetFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateSingleRowReportFromJsoninSpreadsheet
-
+                        'ExStart:GenerateSingleRowReportFromJsoninOpenSpreadsheet
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/Single Row.xlsx"
+                        Const strDocumentTemplate As [String] = "Spreadsheet Templates/Single Row_OpenDocument.ods"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Spreadsheet Reports/Single Row_Json Report.xlsx"
+                        Const strDocumentReport As [String] = "Spreadsheet Reports/Single Row_OpenDocument_Json Report.ods"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
                             'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Single Row report in spreadsheet format
+                            'Call AssembleDocument to generate Single Row report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerDataJson(), "customer")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateSingleRowReportFromJsoninSpreadsheet
+                            'ExEnd:GenerateSingleRowReportFromJsoninOpenSpreadsheet
                         End Try
                     Else
                         'ExStart:GenerateSingleRowinOpenSpreadsheetFormat
@@ -3970,12 +3872,11 @@ Namespace GroupDocs.AssemblyExamples
                             'ExEnd:GenerateSingleRowFromXMLinOpenPresentationFormat
                         End Try
                     ElseIf isJson Then
-                        'ExStart:GenerateSingleRowReportFromJsoninPresentation
-
+                        'ExStart:GenerateSingleRowReportFromJsoninOpenPresentation
                         'setting up source 
-                        Const strDocumentTemplate As [String] = "Presentation Templates/Single Row.pptx"
+                        Const strDocumentTemplate As [String] = "Presentation Templates/Single Row_OpenDocument.odp"
                         'Setting up destination 
-                        Const strDocumentReport As [String] = "Presentation Reports/Single Row_Json Report.pptx"
+                        Const strDocumentReport As [String] = "Presentation Reports/Single Row_OpenDocument_Json Report.odp"
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
@@ -3984,8 +3885,7 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerDataJson(), "customer")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-
-                            'ExEnd:GenerateSingleRowReportFromJsoninPresentation
+                            'ExEnd:GenerateSingleRowReportFromJsoninOpenPresentation
                         End Try
                     Else
                         'ExStart:GenerateSingleRowinOpenPresentationFormat
@@ -4006,9 +3906,6 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
             End Select
         End Sub
-
-
-
 
     End Class
 End Namespace

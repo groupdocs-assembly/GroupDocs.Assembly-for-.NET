@@ -359,7 +359,6 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         'ExEnd:GetSingleCustomerXML
 #End Region
 
-        'here
 #Region "GetCustomerDataJson"
         'ExStart:GetCustomerDataJson
         ''' <summary>
@@ -431,11 +430,7 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         End Function
         'ExEnd:GetSingleCustomerDataJson
 #End Region
-        'here
-
-
     End Class
-
     'ExEnd:DataLayer
 End Namespace
 

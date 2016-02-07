@@ -424,6 +424,5 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         //ExEnd:GetSingleCustomerDataJson
         #endregion
     }
-
     //ExEnd:DataLayer
 }
