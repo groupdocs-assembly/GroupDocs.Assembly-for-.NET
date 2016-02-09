@@ -15,7 +15,7 @@ Directory | Description
 --------- | -----------
 [Examples](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Examples)  | Contains the package of all .NET examples (C# & VB) and sample files that will help you learn how to use product features. 
 [Plugins](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Plugins)  | Analyze the progress of GroupDocs.Assembly and WinWard while generating the reports, compare code and template preparation. 
-[Showcases](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Showcases)  | Contains a showcase (Web Report Generator), this showcase is an ASP.NET Web forms application using GroupDocs.Assembly for .NET that demonstrates the core functionalities provided by GroupDocs.Assembly for .NET.
+[Showcases](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Showcases)  | Web Report Generator is an ASP.NET Web forms application that demonstrates the core functionalities provided by GroupDocs.Assembly for .NET.
 
 ## Resources
 
