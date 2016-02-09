@@ -1,7 +1,7 @@
 ## Web Report Generator Powered by GroupDocs.Assembly 
 
-Web Report Generator is an ASP.NET Web forms application using GroupDocs.Assembly for .NET that demonstrates the core 
-functionalities provided by GroupDocs.Assembly for .NET. The Web Report Generator allows user to easily create reports based on:
+Web Report Generator is an ASP.NET Web Forms Application that demonstrates the core functionalities provided by GroupDocs.Assembly for .NET.
+The Web Report Generator allows user to easily create reports based on:
 
 + **Predefined custom templates** 
 + **Your own database (MS SQL Server local OR Remote) tables, views and also with custom query**
