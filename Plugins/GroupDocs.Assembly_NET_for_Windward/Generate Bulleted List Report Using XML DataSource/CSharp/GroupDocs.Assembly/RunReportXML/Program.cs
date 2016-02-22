@@ -15,6 +15,7 @@ namespace RunReportXML
         public const string productXMLfile = "../../../../../Data/Data Source/Products.xml";
         static void Main(string[] args)
         {
+            
             //Setting up source open presentation template
             FileStream template = File.OpenRead("../../../../../Data/Samples/Source/Bulleted List_XML.docx");
             //Setting up destination open presentation report 
