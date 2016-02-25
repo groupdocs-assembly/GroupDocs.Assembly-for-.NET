@@ -208,14 +208,12 @@ namespace GroupDocsAssemblyVisualStudioPlugin.GUI
             //var installedPackages = installerServices.GetInstalledPackages();
             //Console.WriteLine(installedPackages.FirstOrDefault().Title);
 
-
             WebClient webClient = new WebClient();
             webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
             webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
             Uri url = new Uri("https://www.nuget.org/api/v2/package/GroupDocs.Assembly/3.0.0");
-            webClient.DownloadFileAsync(url, destinationPath);
+            webClient.DownloadFileAsync(url, destinationPath); 
         }
-
         private void ProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
             progressBar.Value = e.ProgressPercentage;
@@ -234,6 +232,7 @@ namespace GroupDocsAssemblyVisualStudioPlugin.GUI
         private void UnZipDownloadedFile(AsyncDownload download)
         {
             GroupDocsComponentsManager.unZipFile(download.LocalPath, Path.Combine(Path.GetDirectoryName(download.LocalPath), download.Component.Name));
+            //GroupDocsComponentsManager.unZipFile(download.LocalPath, Path.Combine(Path.GetDirectoryName(download.LocalPath), download.Component.Name));
         }
 
         public DialogResult showMessage(string title, string message, MessageBoxButtons buttons, MessageBoxIcon icon)

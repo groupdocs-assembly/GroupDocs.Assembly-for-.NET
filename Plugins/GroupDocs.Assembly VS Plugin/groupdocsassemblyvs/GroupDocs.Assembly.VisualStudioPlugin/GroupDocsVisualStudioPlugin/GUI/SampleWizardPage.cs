@@ -283,6 +283,12 @@ namespace GroupDocsAssemblyVisualStudioPlugin.GUI
                 {
                     UpdatePrjReferenceHintPath(projectFiles[i], component);
                 }
+                string[] projectFiles2 = Directory.GetFiles(Path.Combine(destinationPath, (rdbCSharp.Checked ? "CSharp/GroupDocs.AssemblyExamples.BusinessLayer" : "VisualBasic/GroupDocs.AssemblyExamples.BusinessLayer")), (rdbCSharp.Checked ? "*.csproj" : "*.vbproj"));
+                for (int i = 0; i < projectFiles2.Length; i++)
+                {
+                    UpdatePrjReferenceHintPath(projectFiles2[i], component);
+                }
+              
                 progressBar1.Value = 70;
 
                 int vsVersion = GetVSVersion();
@@ -406,9 +412,10 @@ namespace GroupDocsAssemblyVisualStudioPlugin.GUI
                 foreach (XmlNode nd in nodelist)
                 {
                     string innter = nd.InnerText;
-                    nd.InnerText = "..\\Bin\\" + component.Name + ".dll";
+                    nd.InnerText = "..\\Bin\\Debug\\" + component.Name + ".dll";
                 }
             }
+
             xdDoc.Save(projectFilePath);
         }
 
