@@ -189,8 +189,10 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Config Files\info.txt" />
+    <Content Include="Resources\assembly.ico" />
     <Content Include="Resources\assembly.png" />
-    <None Include="Resources\assembly.ico" />
+    <None Include="Resources\groupdocs-assembly.png" />
+    <None Include="Resources\assembly1.png" />
     <None Include="Resources\AssemblyBanner.png" />
     <None Include="Resources\Groupdocs-metadata.png" />
     <None Include="GroupDocsAssemblyVSPlugin.pfx" />
