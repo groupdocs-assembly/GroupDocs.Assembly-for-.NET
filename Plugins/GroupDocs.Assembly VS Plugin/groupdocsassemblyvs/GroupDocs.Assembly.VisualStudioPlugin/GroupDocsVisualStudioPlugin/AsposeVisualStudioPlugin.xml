@@ -155,12 +155,22 @@
               Looks up a localized resource of type System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:GroupDocsAssemblyVisualStudioPlugin.Properties.Resources.assembly1">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:GroupDocsAssemblyVisualStudioPlugin.Properties.Resources.AssemblyBanner">
             <summary>
               Looks up a localized resource of type System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:GroupDocsAssemblyVisualStudioPlugin.Properties.Resources.bmplogo">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:GroupDocsAssemblyVisualStudioPlugin.Properties.Resources.groupdocs_assembly">
             <summary>
               Looks up a localized resource of type System.Drawing.Bitmap.
             </summary>

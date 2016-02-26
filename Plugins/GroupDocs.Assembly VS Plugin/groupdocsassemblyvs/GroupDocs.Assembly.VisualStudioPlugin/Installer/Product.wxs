@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
 
-  <?define PRODUCT_ID  = "e4a4ca25-b861-4974-9b3e-87a75449951a" ?>
-  <?define UPGRADE_CODE = "724236c1-f71b-4344-ab37-512685f689e7" ?>
-  <?define LICENSE_AGREEMENT_FILE_COMPONENT_GUID = "8fdebc7c-4293-4a40-97c5-184eac35f8cc" ?>
-  <?define HELP_FILE_COMPONENT_GUID = "1d5c9f0f-4492-4d3d-a855-2a8e4e68f9f2" ?>
-  <?define HELP_FILE_SHORTCUT_COMPONENT_GUID = "43c3cb34-00ce-4c67-a4f2-e9439888ee7c" ?>
-  <?define VS2010_DLL_FILE_COMPONENT_GUID = "39ca7857-dae0-418b-b796-235b49101540" ?>
+  <?define PRODUCT_ID  = "d67e5514-59fb-4787-9a14-7e495bf8610e" ?>
+  <?define UPGRADE_CODE = "28edd63d-fe2f-4443-bf9c-2c2b5036a663" ?>
+  <?define LICENSE_AGREEMENT_FILE_COMPONENT_GUID = "a42e1a01-6a84-4cc5-8676-ce0d428b37b3" ?>
+  <?define HELP_FILE_COMPONENT_GUID = "6a4db07b-3d47-4529-bcdc-4129ec588559" ?>
+  <?define HELP_FILE_SHORTCUT_COMPONENT_GUID = "68a60102-a120-467e-9ccf-8ef1d7fde000" ?>
+  <?define VS2010_DLL_FILE_COMPONENT_GUID = "637fd236-5b50-47c8-8307-08a1ef850384" ?>
   <?define VS2012_DLL_FILE_COMPONENT_GUID = "c0925eef-7e78-4db1-a4d3-c4fbaef4599d" ?>
-  <?define VS2013_DLL_FILE_COMPONENT_GUID = "4ee4ece3-e6de-49a8-8bb6-9bce982b7689" ?>
-  <?define VS2010_ADDIN_FILE_COMPONENT_GUID = "0806b5c4-c67a-4a5d-b560-5ecf7e52637d" ?>
-  <?define VS2012_ADDIN_FILE_COMPONENT_GUID = "445babb5-de67-46ba-8660-4914803d3b51" ?>
-  <?define VS2013_ADDIN_FILE_COMPONENT_GUID = "bb1a8f54-0f01-4447-969a-708e0370f397" ?>
+  <?define VS2013_DLL_FILE_COMPONENT_GUID = "5b80ebe3-eabd-4772-a4a7-a8320eb39002" ?>
+  <?define VS2010_ADDIN_FILE_COMPONENT_GUID = "ef74ea5f-def6-4156-9a77-c10cf265869f" ?>
+  <?define VS2012_ADDIN_FILE_COMPONENT_GUID = "78e3fa61-8426-4a94-a18c-5dbdac9ab076" ?>
+  <?define VS2013_ADDIN_FILE_COMPONENT_GUID = "b06a4c03-e729-4d1d-ac49-15b823134a91" ?>
   <?define APP_NAME = "Explore GroupDocs.Assembly for .NET API Examples" ?>
   <?define APP_VERSION = "1.0.0.0" ?>
   <?define DEFAULT_GROUP_NAME = "GroupDocs" ?>

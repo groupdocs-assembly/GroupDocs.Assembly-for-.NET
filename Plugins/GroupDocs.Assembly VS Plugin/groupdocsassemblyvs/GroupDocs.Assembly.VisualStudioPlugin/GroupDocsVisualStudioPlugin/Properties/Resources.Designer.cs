@@ -93,6 +93,16 @@ namespace GroupDocsAssemblyVisualStudioPlugin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap assembly1 {
+            get {
+                object obj = ResourceManager.GetObject("assembly1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap AssemblyBanner {
             get {
                 object obj = ResourceManager.GetObject("AssemblyBanner", resourceCulture);
@@ -106,6 +116,16 @@ namespace GroupDocsAssemblyVisualStudioPlugin.Properties {
         internal static System.Drawing.Bitmap bmplogo {
             get {
                 object obj = ResourceManager.GetObject("bmplogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap groupdocs_assembly {
+            get {
+                object obj = ResourceManager.GetObject("groupdocs-assembly", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
