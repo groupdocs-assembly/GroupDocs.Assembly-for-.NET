@@ -5036,5 +5036,27 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
+        public static void GenerateReportLazilyAndRecursively()
+        {
+            //ExStart:GeneratingReportbyRecursivelyandLazilyAccessingtheData
+            //Setting up source open document template
+            const String strDocumentTemplate = "Word Templates/Lazy And Recursive.docx";
+            //Setting up destination open document report 
+            const String strDocumentReport = "Word Reports/Lazy And Recursive Report.docx";
+            try
+            {
+                //Instantiate DynamicEntity class
+                DynamicEntity dentity = new DynamicEntity(Guid.NewGuid());
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler();
+                //Call AssembleDocument to generate Single Row Report in open document format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), dentity, "root");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:GeneratingReportbyRecursivelyandLazilyAccessingtheData
+        }
     }
 }

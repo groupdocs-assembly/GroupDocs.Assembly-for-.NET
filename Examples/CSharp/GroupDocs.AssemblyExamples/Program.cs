@@ -195,6 +195,10 @@ namespace GroupDocs.AssemblyExamples
             //Generate a Single Row Report in presentation format
             //GenerateReport.GenerateSingleRow("presentation", false, false, false, true);
             #endregion
+
+            #region Generating Report by Recursively and Lazily Accessing the Data
+            //GenerateReport.GenerateReportLazilyAndRecursively();
+            #endregion
         }
     }
 }

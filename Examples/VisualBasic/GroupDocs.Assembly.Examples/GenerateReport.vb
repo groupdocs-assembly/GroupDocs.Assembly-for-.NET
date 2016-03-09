@@ -3906,6 +3906,24 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
             End Select
         End Sub
+        Public Shared Sub GenerateReportLazilyAndRecursively()
+            'ExStart:GeneratingReportbyRecursivelyandLazilyAccessingtheData
+            'Setting up source open document template
+            Const strDocumentTemplate As [String] = "Word Templates/Lazy And Recursive.docx"
+            'Setting up destination open document report 
+            Const strDocumentReport As [String] = "Word Reports/Lazy And Recursive Report.docx"
+            Try
+                'Instantiate DynamicEntity class
+                Dim dentity As New DynamicEntity(Guid.NewGuid())
+                'Instantiate DocumentAssembler class
+                Dim assembler As New DocumentAssembler()
+                'Call AssembleDocument to generate Single Row Report in open document format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), dentity, "root")
+            Catch ex As Exception
+                Console.WriteLine(ex.Message)
+            End Try
+            'ExEnd:GeneratingReportbyRecursivelyandLazilyAccessingtheData
+        End Sub
 
     End Class
 End Namespace

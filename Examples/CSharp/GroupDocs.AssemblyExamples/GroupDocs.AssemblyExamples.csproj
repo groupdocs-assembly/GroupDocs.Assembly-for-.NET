@@ -32,9 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GroupDocs.Assembly, Version=3.0.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\OfficeWork\Aspose\GroupDocs.Assembly\GroupDocs.Assembly.dll</HintPath>
+    <Reference Include="GroupDocs.Assembly">
+      <HintPath>..\..\..\..\..\OfficeWork\GroupDocs.Assembly updated dll\GroupDocs.Assembly.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
