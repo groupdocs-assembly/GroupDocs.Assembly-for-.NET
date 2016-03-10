@@ -197,6 +197,10 @@ Namespace GroupDocs.AssemblyExamples
             'GenerateReport.GenerateSingleRow("presentation", False, False, False, True)
             '#End Region
 
+            '#region Generating Report by Recursively and Lazily Accessing the Data
+            'GenerateReport.GenerateReportLazilyAndRecursively()
+            '#End Region
+
         End Sub
 
     End Module
