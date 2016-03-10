@@ -10,6 +10,7 @@ Imports Newtonsoft.Json
 
 
 Namespace GroupDocs.AssemblyExamples.BusinessLayer
+#Region "DataLayer"
     'ExStart:DataLayer
     Public NotInheritable Class DataLayer
         Private Sub New()
@@ -432,6 +433,111 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
 #End Region
     End Class
     'ExEnd:DataLayer
+#End Region
+#Region "LazyAndRecursiveAccess"
+    'ExStart:RecursiveandLazyAccessOfData
+    Public Interface IPropertyProvider(Of T)
+        Default ReadOnly Property Item(propertyName As String) As T
+    End Interface
+
+    Public Class DynamicEntity
+        Implements IPropertyProvider(Of String)
+        ''' <summary>
+        ''' Gets a property value by its name.
+        ''' </summary>
+        Default Public ReadOnly Property Item(propertyName As String) As String Implements IPropertyProvider(Of String).Item
+            Get
+                ' In this example, we simply return a property name as its value.
+                ' In a real-life application, a real property value should be returned.
+                ' This value can be cached using for example a Dictionary, or fetched
+                ' every time the property is requested.
+                Return propertyName & Convert.ToString(" Value")
+            End Get
+        End Property
+
+        ''' <summary>
+        ''' Provides access to individual related <see cref="DynamicEntity"/> instances
+        ''' by their names.
+        ''' </summary>
+        Public ReadOnly Property Entities() As IPropertyProvider(Of DynamicEntity)
+            Get
+                Return mEntities
+            End Get
+        End Property
+
+        ''' <summary>
+        ''' Provides access to enumerations of related <see cref="DynamicEntity"/> instances
+        ''' by their names.
+        ''' </summary>
+        Public ReadOnly Property Children() As IPropertyProvider(Of IEnumerable(Of DynamicEntity))
+            Get
+                Return mChildren
+            End Get
+        End Property
+
+        Private Class ReferencedEntities
+            Implements IPropertyProvider(Of DynamicEntity)
+            Default Public ReadOnly Property Item(propertyName As String) As DynamicEntity Implements IPropertyProvider(Of Global.GroupDocs.AssemblyExamples.BusinessLayer.GroupDocs.AssemblyExamples.BusinessLayer.DynamicEntity).Item
+                Get
+                    ' In this example, we simply return the root entity.
+                    ' In a real-life application, a DynamicEntity instance corresponding
+                    ' to propertyName for the given root entity should be returned.
+                    ' This instance can be cached using for example a Dictionary,
+                    ' or fetched every time the referenced entity is requested.
+                    Return mRootEntity
+                End Get
+            End Property
+
+            Public Sub New(rootEntity As DynamicEntity)
+                ' The reference to the root entity allows to access fields of the root entity
+                ' (such as an identifier) in the above indexer for a real-life application.
+                mRootEntity = rootEntity
+            End Sub
+
+            Private ReadOnly mRootEntity As DynamicEntity
+        End Class
+
+        Private Class ChildEntities
+            Implements IPropertyProvider(Of IEnumerable(Of DynamicEntity))
+            Public ReadOnly Iterator Property Item(propertyName As String) As IEnumerable(Of DynamicEntity) Implements IPropertyProvider(Of System.Collections.Generic.IEnumerable(Of Global.GroupDocs.AssemblyExamples.BusinessLayer.GroupDocs.AssemblyExamples.BusinessLayer.DynamicEntity)).Item
+                Get
+                    ' In this example, we simply return the root entity three times.
+                    ' In a real-life application, an enumeration of DynamicEntity instances
+                    ' corresponding to propertyName for the given root entity should be returned.
+                    ' This enumeration can be cached using for example a Dictionary,
+                    ' or fetched every time the child entities are requested.
+                    Yield mRootEntity
+                    Yield mRootEntity
+                    Yield mRootEntity
+                End Get
+            End Property
+
+            Public Sub New(rootEntity As DynamicEntity)
+                ' The reference to the root entity allows to access fields of the root entity
+                ' (such as an identifier) in the above indexer for a real-life application.
+                mRootEntity = rootEntity
+            End Sub
+
+            Private ReadOnly mRootEntity As DynamicEntity
+        End Class
+        Public Sub New(id As Guid)
+            ' In this example, we use Guid to represent an entity identifier.
+            ' In a real-life application, the identifier can be of any type or even missing.
+            mId = id
+
+            ' In this example, we simply initialize fields in the constructor.
+            ' In a real-life application, these fields can be initialized lazily
+            ' at the corresponding properties, if needed.
+            mEntities = New ReferencedEntities(Me)
+            mChildren = New ChildEntities(Me)
+        End Sub
+
+        Private ReadOnly mId As Guid
+        Private ReadOnly mEntities As ReferencedEntities
+        Private ReadOnly mChildren As ChildEntities
+    End Class
+    'ExEnd:RecursiveandLazyAccessOfData
+#End Region
 End Namespace
 
 
