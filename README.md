@@ -24,4 +24,4 @@ Directory | Description
 + **Download:** [Download GroupDocs.Assembly for .NET](http://groupdocs.com/Community/files/8/.net-libraries/groupdocs_assembly_for_.net/default.aspx)
 + **Documentation:** [GroupDocs.Assembly for .NET Documentation](http://groupdocs.com/docs/display/assemblynet/Introducing+GroupDocs.Assembly+for+.NET)
 + **Forum:** [GroupDocs.Assembly for .NET Forum](http://groupdocs.com/Community/forums/groupdocs.assembly-product-family/8/showforum.aspx)
-+ **Blog:** [GroupDocs.Assembly for .NET Blog](#)
++ **Blog:** [GroupDocs.Assembly for .NET Blog](http://groupdocs.com/blog/simplest-api-for-document-automation-and-reports-generation)
