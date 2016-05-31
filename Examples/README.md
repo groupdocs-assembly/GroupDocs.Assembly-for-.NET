@@ -18,8 +18,7 @@ The package contains two solutions, one for C# examples and other for Visual Bas
 
 Rebuild the solution which would automatically add missing references of the external libraries in the first two projects mentioned above. In case, Visual Studio is unable to automatically add references, please add following references manually:
 
-(GroupDocs.Assembly)[https://www.nuget.org/packages/GroupDocs.Assembly/]
-
-Newtonsoft.Json
+1) [GroupDocs.Assembly](https://www.nuget.org/packages/GroupDocs.Assembly/)
+2) Newtonsoft.Json
 
 For more details, visit our [How to run examples](http://groupdocs.com/docs/display/assemblynet/How+to+Run+Examples).
