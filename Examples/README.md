@@ -10,13 +10,17 @@ This package contains C# and VB.NET Examples Solutions for [GroupDocs.Assembly f
 
 ## How to Run the Examples?
 
-The package contains two solutions developed in Visual Studio 2013, one for C# examples and other for Visual Basic examples. You can download the ZIP, extract the files and open the solution file in Visual Studio. The solution contains three projects:
+### Open Solutions in Visual Studio
+
+The package contains two solutions developed in Visual Studio 2013, one for C# examples and other for Visual Basic examples. You can download the ZIP, extract the files, go to [Examples](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-.NET/tree/master/Examples) folder and open the solution file in Visual Studio. The solution contains three projects:
 
 1) GroupDocs.AssemblyExamples                  
 2) GroupDocs.AssemblyExamples.BusinessLayer    
 3) GroupDocs.AssemblyExamples.ProjectEntities
 
-Rebuild the solution which would automatically add missing references of the external libraries in the first two projects mentioned above. In case, Visual Studio is unable to automatically add references, please add following references manually:
+### Add Missing APIs
+
+Rebuild the solution which would automatically add missing references of the third party APIs in the first two projects mentioned above. It is possible that Visual Studio is unable to automatically add third party APIs references due to Visual Studio version differences. In this case, please add references of the following APIs manually:
 
 1) [GroupDocs.Assembly](https://www.nuget.org/packages/GroupDocs.Assembly/)
 2) [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/)
