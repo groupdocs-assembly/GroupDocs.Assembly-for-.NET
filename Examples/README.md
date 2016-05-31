@@ -10,4 +10,15 @@ This package contains C# and VB.NET Example Projects for [GroupDocs.Assembly for
 
 ## How to Run the Examples?
 
-The package contains two projects, one for C# examples and other for Visual Basic examples. You can download the ZIP, extract the files and open the solution file in Visual Studio. For more details, visit our [documentation website](http://groupdocs.com/docs/).
+The package contains two solutions, one for C# examples and other for Visual Basic examples. You can download the ZIP, extract the files and open the solution file in Visual Studio. The solution contains three projects:
+
+1) GroupDocs.AssemblyExamples                  
+2) GroupDocs.AssemblyExamples.BusinessLayer    
+3) GroupDocs.AssemblyExamples.ProjectEntities
+
+Rebuild the solution which would automatically add missing references of the external libraries in the first two projects mentioned above. In case, Visual Studio is unable to automatically add references, please add following references manually:
+
+(GroupDocs.Assembly)[https://www.nuget.org/packages/GroupDocs.Assembly/]
+Newtonsoft.Json
+
+For more details, visit our [How to run examples](http://groupdocs.com/docs/display/assemblynet/How+to+Run+Examples).
