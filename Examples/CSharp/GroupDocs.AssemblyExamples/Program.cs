@@ -33,13 +33,13 @@ namespace GroupDocs.AssemblyExamples
             
             #region Generating Bulleted List Report
             //Generate a Bulleted List report in document processing format
-            //GenerateReport.GenerateBulletedList("document", false, false, false, true);
+            //GenerateReport.GenerateBulletedList("document", false, false, true, false);
 
             //Generate a Bulleted List report in spreadsheet format
-            //GenerateReport.GenerateBulletedList("spreadsheet", false, false, false, true);
+            //GenerateReport.GenerateBulletedList("spreadsheet", false, false, true, false);
 
             //Generate a Bulleted List report in presentation format
-            //GenerateReport.GenerateBulletedList("presentation", false, false, false, true);
+            //GenerateReport.GenerateBulletedList("presentation", false, false, true, false);
             #endregion
             
             #region Generating Chart report with Filtering, Grouping, and Ordering
@@ -55,13 +55,13 @@ namespace GroupDocs.AssemblyExamples
             
             #region Generating Common List Report
             //Generate a Common List Report in document processing format
-            //GenerateReport.GenerateCommonList("document", false, false, false, true);
+            //GenerateReport.GenerateCommonList("document", false, false, true, false);
 
             //Generate a Common List Report in spreadsheet format
-            //GenerateReport.GenerateCommonList("spreadsheet", false, false, false, true);
+            //GenerateReport.GenerateCommonList("spreadsheet", false, false, true, false);
 
             //Generate a Common List Report in presentation format
-            //GenerateReport.GenerateCommonList("presentation", false, false, false, true);
+            //GenerateReport.GenerateCommonList("presentation", false, false, true, false);
             #endregion
             
             #region Generating Common Master-Detail Report
@@ -198,6 +198,10 @@ namespace GroupDocs.AssemblyExamples
 
             #region Generating Report by Recursively and Lazily Accessing the Data
             //GenerateReport.GenerateReportLazilyAndRecursively();
+            #endregion
+
+            #region Generating Report using Multiple DataSources
+            //GenerateReport.GenerateReportUsingMultipleDS();
             #endregion
         }
     }

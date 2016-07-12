@@ -3925,6 +3925,31 @@ Namespace GroupDocs.AssemblyExamples
             'ExEnd:GeneratingReportbyRecursivelyandLazilyAccessingtheData
         End Sub
 
+        Public Shared Sub GenerateReportUsingMultipleDS()
+            'ExStart:GeneratingReportUsingMultipleDataSources
+            'Setting up source open document template
+            Const strDocumentTemplate As [String] = "Word Templates/Multiple DS.docx"
+            'Setting up destination open document report 
+            Const strDocumentReport As [String] = "Word Reports/Multiple DS.docx"
+            Try
+                'Instantiate DynamicEntity class
+                Dim dentity As New DynamicEntity(Guid.NewGuid())
+                'Instantiate DocumentAssembler class
+                Dim assembler As New DocumentAssembler()
+                'Create an array of data source objects
+                Dim dataSourceObj As Object() = New Object() {DataLayer.GetAllDataFromXML(), DataLayer.GetProductsDataJson()}
+                'Create an array of data source string
+                Dim dataSourceString As String() = New String() {"ds", "products"}
+
+                'Call AssembleDocument to generate Single Row Report in open document format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), dataSourceObj, dataSourceString)
+            Catch ex As Exception
+                Console.WriteLine(ex.Message)
+            End Try
+            'ExEnd:GeneratingReportUsingMultipleDataSources
+        End Sub
+
+
     End Class
 End Namespace
 

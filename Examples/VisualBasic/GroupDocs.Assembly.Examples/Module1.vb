@@ -201,6 +201,10 @@ Namespace GroupDocs.AssemblyExamples
             'GenerateReport.GenerateReportLazilyAndRecursively()
             '#End Region
 
+            '#region Generating Report by Recursively and Lazily Accessing the Data
+            'GenerateReport.GenerateReportUsingMultipleDS()
+            '#End Region
+
         End Sub
 
     End Module
