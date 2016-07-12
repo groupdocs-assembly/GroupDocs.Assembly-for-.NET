@@ -3934,8 +3934,6 @@ Namespace GroupDocs.AssemblyExamples
                 'Setting up destination open document report 
                 Const strDocumentReport As [String] = "Word Reports/Multiple DS.odt"
                 Try
-                    'Instantiate DynamicEntity class
-                    Dim dentity As New DynamicEntity(Guid.NewGuid())
                     'Instantiate DocumentAssembler class
                     Dim assembler As New DocumentAssembler()
                     'Create an array of data source objects
@@ -3956,8 +3954,6 @@ Namespace GroupDocs.AssemblyExamples
                 'Setting up destination open document report 
                 Const strDocumentReport As [String] = "Spreadsheet Reports/Multiple DS.ods"
                 Try
-                    'Instantiate DynamicEntity class
-                    Dim dentity As New DynamicEntity(Guid.NewGuid())
                     'Instantiate DocumentAssembler class
                     Dim assembler As New DocumentAssembler()
                     'Create an array of data source objects
@@ -3978,8 +3974,6 @@ Namespace GroupDocs.AssemblyExamples
                 'Setting up destination open document report 
                 Const strDocumentReport As [String] = "Presentation Reports/Multiple DS.odp"
                 Try
-                    'Instantiate DynamicEntity class
-                    Dim dentity As New DynamicEntity(Guid.NewGuid())
                     'Instantiate DocumentAssembler class
                     Dim assembler As New DocumentAssembler()
                     'Create an array of data source objects
