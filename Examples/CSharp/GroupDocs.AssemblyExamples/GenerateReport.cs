@@ -5077,7 +5077,7 @@ namespace GroupDocs.AssemblyExamples
                     //Create an array of data source string
                     string[] dataSourceString = new string[] { "ds", "products" };
 
-                    //Call AssembleDocument to generate Single Row Report in open document format
+                    //Call AssembleDocument to generate report
                     assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), dataSourceObj, dataSourceString);
                 }
                 catch (Exception ex)
@@ -5102,7 +5102,7 @@ namespace GroupDocs.AssemblyExamples
                     //Create an array of data source string
                     string[] dataSourceString = new string[] { "ds", "products" };
 
-                    //Call AssembleDocument to generate Single Row Report in open document format
+                    //Call AssembleDocument to generate report
                     assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), dataSourceObj, dataSourceString);
                 }
                 catch (Exception ex)
@@ -5127,7 +5127,7 @@ namespace GroupDocs.AssemblyExamples
                     //Create an array of data source string
                     string[] dataSourceString = new string[] { "ds", "products" };
 
-                    //Call AssembleDocument to generate Single Row Report in open document format
+                    //Call AssembleDocument to generate report
                     assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), dataSourceObj, dataSourceString);
                 }
                 catch (Exception ex)
