@@ -201,8 +201,15 @@ Namespace GroupDocs.AssemblyExamples
             'GenerateReport.GenerateReportLazilyAndRecursively()
             '#End Region
 
-            '#region Generating Report by Recursively and Lazily Accessing the Data
-            'GenerateReport.GenerateReportUsingMultipleDS()
+            '#region Generating Report using multiple data sources
+
+            'Generate a report using multiple data sources in document processing format
+            'GenerateReport.GenerateReportUsingMultipleDS("document")
+            'Generate a report using multiple data sources in spreadsheet format
+            'GenerateReport.GenerateReportUsingMultipleDS("spreadsheet")
+            'Generate a report using multiple data sources in presentation format
+            'GenerateReport.GenerateReportUsingMultipleDS("presentation")
+
             '#End Region
 
         End Sub

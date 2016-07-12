@@ -201,7 +201,12 @@ namespace GroupDocs.AssemblyExamples
             #endregion
 
             #region Generating Report using Multiple DataSources
-            //GenerateReport.GenerateReportUsingMultipleDS();
+            //Generate a report using multiple data sources in document processing format
+            //GenerateReport.GenerateReportUsingMultipleDS("document");
+            //Generate a report using multiple data sources in spreadsheet format
+            //GenerateReport.GenerateReportUsingMultipleDS("spreadsheet");
+            //Generate a report using multiple data sources in presentation format
+            //GenerateReport.GenerateReportUsingMultipleDS("presentation");
             #endregion
         }
     }
