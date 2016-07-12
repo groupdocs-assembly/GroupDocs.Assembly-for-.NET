@@ -5070,8 +5070,6 @@ namespace GroupDocs.AssemblyExamples
                 const String strDocumentReport = "Word Reports/Multiple DS.odt";
                 try
                 {
-                    //Instantiate DynamicEntity class
-                    DynamicEntity dentity = new DynamicEntity(Guid.NewGuid());
                     //Instantiate DocumentAssembler class
                     DocumentAssembler assembler = new DocumentAssembler();
                     //Create an array of data source objects
@@ -5097,8 +5095,6 @@ namespace GroupDocs.AssemblyExamples
                 const String strDocumentReport = "Spreadsheet Reports/Multiple DS.ods";
                 try
                 {
-                    //Instantiate DynamicEntity class
-                    DynamicEntity dentity = new DynamicEntity(Guid.NewGuid());
                     //Instantiate DocumentAssembler class
                     DocumentAssembler assembler = new DocumentAssembler();
                     //Create an array of data source objects
@@ -5124,8 +5120,6 @@ namespace GroupDocs.AssemblyExamples
                 const String strDocumentReport = "Presentation Reports/Multiple DS.odp";
                 try
                 {
-                    //Instantiate DynamicEntity class
-                    DynamicEntity dentity = new DynamicEntity(Guid.NewGuid());
                     //Instantiate DocumentAssembler class
                     DocumentAssembler assembler = new DocumentAssembler();
                     //Create an array of data source objects
