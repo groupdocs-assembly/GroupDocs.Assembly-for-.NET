@@ -3941,7 +3941,7 @@ Namespace GroupDocs.AssemblyExamples
                     'Create an array of data source string
                     Dim dataSourceString As String() = New String() {"ds", "products"}
 
-                    'Call AssembleDocument to generate Single Row Report in open document format
+                    'Call AssembleDocument to generate report
                     assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), dataSourceObj, dataSourceString)
                 Catch ex As Exception
                     Console.WriteLine(ex.Message)
@@ -3961,7 +3961,7 @@ Namespace GroupDocs.AssemblyExamples
                     'Create an array of data source string
                     Dim dataSourceString As String() = New String() {"ds", "products"}
 
-                    'Call AssembleDocument to generate Single Row Report in open document format
+                    'Call AssembleDocument to generate report
                     assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), dataSourceObj, dataSourceString)
                 Catch ex As Exception
                     Console.WriteLine(ex.Message)
@@ -3981,7 +3981,7 @@ Namespace GroupDocs.AssemblyExamples
                     'Create an array of data source string
                     Dim dataSourceString As String() = New String() {"ds", "products"}
 
-                    'Call AssembleDocument to generate Single Row Report in open document format
+                    'Call AssembleDocument to generate report
                     assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), dataSourceObj, dataSourceString)
                 Catch ex As Exception
                     Console.WriteLine(ex.Message)
