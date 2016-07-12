@@ -5058,5 +5058,33 @@ namespace GroupDocs.AssemblyExamples
             }
             //ExEnd:GeneratingReportbyRecursivelyandLazilyAccessingtheData
         }
+
+        public static void GenerateReportUsingMultipleDS()
+        {
+            //ExStart:GeneratingReportUsingMultipleDataSources
+            //Setting up source open document template
+            const String strDocumentTemplate = "Word Templates/Multiple DS.docx";
+            //Setting up destination open document report 
+            const String strDocumentReport = "Word Reports/Multiple DS.docx";
+            try
+            {
+                //Instantiate DynamicEntity class
+                DynamicEntity dentity = new DynamicEntity(Guid.NewGuid());
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler();
+                //Create an array of data source objects
+                object[] dataSourceObj = new object[] { DataLayer.GetAllDataFromXML(), DataLayer.GetProductsDataJson() };
+                //Create an array of data source string
+                string[] dataSourceString = new string[] { "ds", "products" };
+
+                //Call AssembleDocument to generate Single Row Report in open document format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), dataSourceObj, dataSourceString);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:GeneratingReportUsingMultipleDataSources
+        }
     }
 }
