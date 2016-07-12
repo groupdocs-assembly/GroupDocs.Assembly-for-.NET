@@ -75,7 +75,7 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateBubbleChartFromXMLinOpenDocumentProcessingFormat
-                        
+
                     }
                     else if (isJson)
                     {
@@ -3807,7 +3807,7 @@ namespace GroupDocs.AssemblyExamples
                     }
                     else if (isDataSet)
                     {
-                       //ExStart:GenerateNumberedListFromDataSetinOpenDocumentProcessingFormat
+                        //ExStart:GenerateNumberedListFromDataSetinOpenDocumentProcessingFormat
                         //Setting up source open document template
                         const String strDocumentTemplate = "Word Templates/Numbered List_OpenDocument.odt";
                         //Setting up destination open document report 
@@ -5059,32 +5059,90 @@ namespace GroupDocs.AssemblyExamples
             //ExEnd:GeneratingReportbyRecursivelyandLazilyAccessingtheData
         }
 
-        public static void GenerateReportUsingMultipleDS()
+        public static void GenerateReportUsingMultipleDS(string strDocumentFormat)
         {
-            //ExStart:GeneratingReportUsingMultipleDataSources
-            //Setting up source open document template
-            const String strDocumentTemplate = "Word Templates/Multiple DS.docx";
-            //Setting up destination open document report 
-            const String strDocumentReport = "Word Reports/Multiple DS.docx";
-            try
+            if (strDocumentFormat == "document")
             {
-                //Instantiate DynamicEntity class
-                DynamicEntity dentity = new DynamicEntity(Guid.NewGuid());
-                //Instantiate DocumentAssembler class
-                DocumentAssembler assembler = new DocumentAssembler();
-                //Create an array of data source objects
-                object[] dataSourceObj = new object[] { DataLayer.GetAllDataFromXML(), DataLayer.GetProductsDataJson() };
-                //Create an array of data source string
-                string[] dataSourceString = new string[] { "ds", "products" };
+                //ExStart:GeneratingReportUsingMultipleDataSourcesdocumentprocessing
+                //Setting up source open document template
+                const String strDocumentTemplate = "Word Templates/Multiple DS.odt";
+                //Setting up destination open document report 
+                const String strDocumentReport = "Word Reports/Multiple DS.odt";
+                try
+                {
+                    //Instantiate DynamicEntity class
+                    DynamicEntity dentity = new DynamicEntity(Guid.NewGuid());
+                    //Instantiate DocumentAssembler class
+                    DocumentAssembler assembler = new DocumentAssembler();
+                    //Create an array of data source objects
+                    object[] dataSourceObj = new object[] { DataLayer.GetAllDataFromXML(), DataLayer.GetProductsDataJson() };
+                    //Create an array of data source string
+                    string[] dataSourceString = new string[] { "ds", "products" };
 
-                //Call AssembleDocument to generate Single Row Report in open document format
-                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), dataSourceObj, dataSourceString);
+                    //Call AssembleDocument to generate Single Row Report in open document format
+                    assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), dataSourceObj, dataSourceString);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                //ExEnd:GeneratingReportUsingMultipleDataSourcesdocumentprocessing
             }
-            catch (Exception ex)
+            else if (strDocumentFormat == "spreadsheet")
             {
-                Console.WriteLine(ex.Message);
+                //ExStart:GeneratingReportUsingMultipleDataSourcesspreadsheet
+                //Setting up source open document template
+                const String strDocumentTemplate = "Spreadsheet Templates/Multiple DS.ods";
+                //Setting up destination open document report 
+                const String strDocumentReport = "Spreadsheet Reports/Multiple DS.ods";
+                try
+                {
+                    //Instantiate DynamicEntity class
+                    DynamicEntity dentity = new DynamicEntity(Guid.NewGuid());
+                    //Instantiate DocumentAssembler class
+                    DocumentAssembler assembler = new DocumentAssembler();
+                    //Create an array of data source objects
+                    object[] dataSourceObj = new object[] { DataLayer.GetAllDataFromXML(), DataLayer.GetProductsDataJson() };
+                    //Create an array of data source string
+                    string[] dataSourceString = new string[] { "ds", "products" };
+
+                    //Call AssembleDocument to generate Single Row Report in open document format
+                    assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), dataSourceObj, dataSourceString);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                //ExEnd:GeneratingReportUsingMultipleDataSourcesspreadsheet
             }
-            //ExEnd:GeneratingReportUsingMultipleDataSources
+            else if (strDocumentFormat == "presentation")
+            {
+                //ExStart:GeneratingReportUsingMultipleDataSourcespresentation
+                //Setting up source open document template
+                const String strDocumentTemplate = "Presentation Templates/Multiple DS.odp";
+                //Setting up destination open document report 
+                const String strDocumentReport = "Presentation Reports/Multiple DS.odp";
+                try
+                {
+                    //Instantiate DynamicEntity class
+                    DynamicEntity dentity = new DynamicEntity(Guid.NewGuid());
+                    //Instantiate DocumentAssembler class
+                    DocumentAssembler assembler = new DocumentAssembler();
+                    //Create an array of data source objects
+                    object[] dataSourceObj = new object[] { DataLayer.GetAllDataFromXML(), DataLayer.GetProductsDataJson() };
+                    //Create an array of data source string
+                    string[] dataSourceString = new string[] { "ds", "products" };
+
+                    //Call AssembleDocument to generate Single Row Report in open document format
+                    assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), dataSourceObj, dataSourceString);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                //ExEnd:GeneratingReportUsingMultipleDataSourcespresentation
+            }
+
         }
     }
 }
