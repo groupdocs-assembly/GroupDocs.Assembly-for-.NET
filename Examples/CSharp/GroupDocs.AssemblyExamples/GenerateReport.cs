@@ -5143,7 +5143,7 @@ namespace GroupDocs.AssemblyExamples
             //Setting up source open document template
             const String strDocumentTemplate = "Word Templates/String_Numeric_Formatting.odt";
             //Setting up destination open document report 
-            const String strDocumentReport = "Word Reports/String_Numeric_Formatting.odt";
+            const String strDocumentReport = "Word Reports/String_Numeric_Formatting Report.odt";
             try
             {
                 //Instantiate DocumentAssembler class

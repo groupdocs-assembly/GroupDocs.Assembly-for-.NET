@@ -3997,7 +3997,7 @@ Namespace GroupDocs.AssemblyExamples
             'Setting up source open document template
             Const strDocumentTemplate As [String] = "Word Templates/String_Numeric_Formatting.odt"
             'Setting up destination open document report 
-            Const strDocumentReport As [String] = "Word Reports/String_Numeric_Formatting.odt"
+            Const strDocumentReport As [String] = "Word Reports/String_Numeric_Formatting Report.odt"
             Try
                 'Instantiate DocumentAssembler class
                 Dim assembler As New DocumentAssembler()
