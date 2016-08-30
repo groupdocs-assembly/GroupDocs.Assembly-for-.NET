@@ -1,13 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GroupDocs.Assembly.Examples", "VisualBasic\GroupDocs.Assembly.Examples\GroupDocs.Assembly.Examples.vbproj", "{8242D80D-B78A-448B-AB17-96C35F9058DF}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GroupDocs.AssemblyExamples.BusinessLayer", "VisualBasic\GroupDocs.AssemblyExamples.BusinessLayer\GroupDocs.AssemblyExamples.BusinessLayer.vbproj", "{CAFC2537-D6C0-4A47-A7D9-DB9178C24E17}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GroupDocs.AssemblyExamples.ProjectEntities", "VisualBasic\GroupDocs.AssemblyExamples.ProjectEntities\GroupDocs.AssemblyExamples.ProjectEntities.vbproj", "{4D94149E-43D1-48AD-AEA1-03AB9D686540}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4EFFC72D-20C7-49AC-9395-429B63BCB9F9}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

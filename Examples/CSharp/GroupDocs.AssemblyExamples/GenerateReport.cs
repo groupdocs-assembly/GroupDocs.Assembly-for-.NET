@@ -5058,7 +5058,6 @@ namespace GroupDocs.AssemblyExamples
             }
             //ExEnd:GeneratingReportbyRecursivelyandLazilyAccessingtheData
         }
-
         public static void GenerateReportUsingMultipleDS(string strDocumentFormat)
         {
             if (strDocumentFormat == "document")
@@ -5138,5 +5137,111 @@ namespace GroupDocs.AssemblyExamples
             }
 
         }
+        public static void TemplateSyntaxFormatting()
+        {
+            //ExStart:TemplateSyntaxFormatting 
+            //Setting up source open document template
+            const String strDocumentTemplate = "Word Templates/String_Formatting.odt";
+            //Setting up destination open document report 
+            const String strDocumentReport = "Word Reports/String_Formatting Report.odt";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler();
+                //Call AssembleDocument to generate In-Table List with Alternate Content Report in open document format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:TemplateSyntaxFormatting 
+        }
+        public static void OuterDocumentInsertion()
+        {
+            //ExStart:OuterDocumentInsertion
+            //Setting up source open document template
+            const String strDocumentTemplate = "Word Templates/OuterDocInsertion.odt";
+            //Setting up destination open document report 
+            const String strDocumentReport = "Word Reports/OuterDocInsertion Report.odt";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler();
+                //Call AssembleDocument to generate Single Row Report in open document format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerData(), "customer");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:OuterDocumentInsertion
+        }
+        public static void AddBarCodes(string strDocumentFormat)
+        {
+            switch (strDocumentFormat)
+            {
+                case "document":
+                    //ExStart:AddBarCodesDocumentProcessingFormat
+                    //Setting up source open document template
+                    const String strDocumentTemplate = "Word Templates/Barcode.docx";
+                    //Setting up destination open document report 
+                    const String strDocumentReport = "Word Reports/Barcode.docx";
+                    try
+                    {
+                        //Instantiate DocumentAssembler class
+                        DocumentAssembler assembler = new DocumentAssembler();
+                        //Call AssembleDocument to generate Bulleted List Report in open document format
+                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerData(), "customer");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                    //ExEnd:AddBarCodesDocumentProcessingFormat 
+                    break;
+
+                case "spreadsheet":
+                    //ExStart:AddBarCodesSpreadsheet
+                    //Setting up source open spreadsheet template
+                    const String strSpreadsheetTemplate = "Spreadsheet Templates/Barcode.xlsx";
+                    //Setting up destination open spreadsheet report 
+                    const String strSpreadsheetReport = "Spreadsheet Reports/Barcode.xlsx";
+                    try
+                    {
+                        //Instantiate DocumentAssembler class
+                        DocumentAssembler assembler = new DocumentAssembler();
+                        //Call AssembleDocument to generate Bulleted List Report in open spreadsheet format
+                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomerData(), "customer");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                    //ExEnd:AddBarCodesSpreadsheet 
+                    break;
+
+                case "presentation":
+                    //ExStart:AddBarCodesPowerPoint
+                    //Setting up source open presentation template
+                    const String strPresentationTemplate = "Presentation Templates/Barcode.pptx";
+                    //Setting up destination open presentation report 
+                    const String strPresentationReport = "Presentation Reports/Barcode.pptx";
+                    try
+                    {
+                        //Instantiate DocumentAssembler class
+                        DocumentAssembler assembler = new DocumentAssembler();
+                        //Call AssembleDocument to generate Bulleted List Report in open presentation format
+                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomerData(), "customer");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                    //ExEnd:AddBarCodesPowerPoint 
+                    break;
+            }
+        }
+
     }
 }

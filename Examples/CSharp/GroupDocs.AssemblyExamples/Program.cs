@@ -187,7 +187,7 @@ namespace GroupDocs.AssemblyExamples
             
             #region Generating Single Row Report
             //Generate a Single Row Report in document processing format
-            //GenerateReport.GenerateSingleRow("document", false, false, false, true);
+            //GenerateReport.GenerateSingleRow("document", false, false, false, false);
 
             //Generate a Single Row Report in spreadsheet format
             //GenerateReport.GenerateSingleRow("spreadsheet", false, false, false, true);
@@ -207,6 +207,31 @@ namespace GroupDocs.AssemblyExamples
             //GenerateReport.GenerateReportUsingMultipleDS("spreadsheet");
             //Generate a report using multiple data sources in presentation format
             //GenerateReport.GenerateReportUsingMultipleDS("presentation");
+            #endregion
+
+            #region Template Syntax Formatting
+
+            //Generate document processing formatted reports with desired string or numeric format
+            //GenerateReport.TemplateSyntaxFormatting();
+
+            #endregion
+
+            #region Insert Outer Documents
+
+            //Outer document insertion in a report
+            //GenerateReport.OuterDocumentInsertion();
+
+            #endregion
+
+            #region Barcode Insertion 
+
+            //add barcode in word processing documents
+            GenerateReport.AddBarCodes("document");
+            //add barcode in spreadsheet documents
+            //GenerateReport.AddBarCodes("spreadsheet");
+            //add barcode in persentation documents 
+            //GenerateReport.AddBarCodes("presentation");
+
             #endregion
         }
     }

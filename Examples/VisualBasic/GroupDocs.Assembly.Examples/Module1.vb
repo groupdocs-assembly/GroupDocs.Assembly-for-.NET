@@ -212,6 +212,33 @@ Namespace GroupDocs.AssemblyExamples
 
             '#End Region
 
+
+            'Region "Template Syntax Formatting"
+
+            'Generate document processing formatted reports with desired string or numeric format
+            'GenerateReport.TemplateSyntaxFormatting()
+
+            'End Region
+
+            'Region "Insert Outer Documents"
+
+            'Outer document insertion in a report
+            'GenerateReport.OuterDocumentInsertion()
+
+            'End Region
+
+            'Region "Barcode Insertion"
+
+            'add barcode in word processing documents
+            'GenerateReport.AddBarCodes("document")
+            'add barcode in spreadsheet documents
+            'GenerateReport.AddBarCodes("spreadsheet")
+            'add barcode in persentation documents 
+            'GenerateReport.AddBarCodes("presentation")
+
+            'End Region
+
+
         End Sub
 
     End Module
