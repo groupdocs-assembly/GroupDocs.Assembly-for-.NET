@@ -5148,7 +5148,7 @@ namespace GroupDocs.AssemblyExamples
             {
                 //Instantiate DocumentAssembler class
                 DocumentAssembler assembler = new DocumentAssembler();
-                //Call AssembleDocument to generate In-Table List with Alternate Content Report in open document format
+                //Call AssembleDocument to generate   Report in open document format
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders");
             }
             catch (Exception ex)
@@ -5168,7 +5168,7 @@ namespace GroupDocs.AssemblyExamples
             {
                 //Instantiate DocumentAssembler class
                 DocumentAssembler assembler = new DocumentAssembler();
-                //Call AssembleDocument to generate Single Row Report in open document format
+                //Call AssembleDocument to generate  Report in open document format
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerData(), "customer");
             }
             catch (Exception ex)
@@ -5190,8 +5190,8 @@ namespace GroupDocs.AssemblyExamples
                     try
                     {
                         //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Bulleted List Report in open document format
+                        DocumentAssembler assembler = new DocumentAssembler(); 
+                        //Call AssembleDocument to generate   Report in open document format
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerData(), "customer");
                     }
                     catch (Exception ex)
@@ -5211,7 +5211,7 @@ namespace GroupDocs.AssemblyExamples
                     {
                         //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Bulleted List Report in open spreadsheet format
+                        //Call AssembleDocument to generate  Report in open spreadsheet format
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomerData(), "customer");
                     }
                     catch (Exception ex)
@@ -5231,7 +5231,7 @@ namespace GroupDocs.AssemblyExamples
                     {
                         //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Bulleted List Report in open presentation format
+                        //Call AssembleDocument to generate  Report in open presentation format
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomerData(), "customer");
                     }
                     catch (Exception ex)
