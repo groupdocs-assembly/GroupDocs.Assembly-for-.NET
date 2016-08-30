@@ -3992,6 +3992,93 @@ Namespace GroupDocs.AssemblyExamples
         End Sub
 
 
+        Public Shared Sub TemplateSyntaxFormatting()
+            'ExStart:TemplateSyntaxFormatting 
+            'Setting up source open document template
+            Const strDocumentTemplate As [String] = "Word Templates/String_Formatting.odt"
+            'Setting up destination open document report 
+            Const strDocumentReport As [String] = "Word Reports/String_Formatting Report.odt"
+            Try
+                'Instantiate DocumentAssembler class
+                Dim assembler As New DocumentAssembler()
+                'Call AssembleDocument to generate In-Table List with Alternate Content Report in open document format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders")
+            Catch ex As Exception
+                Console.WriteLine(ex.Message)
+            End Try
+            'ExEnd:TemplateSyntaxFormatting 
+        End Sub
+        Public Shared Sub OuterDocumentInsertion()
+            'ExStart:OuterDocumentInsertion
+            'Setting up source open document template
+            Const strDocumentTemplate As [String] = "Word Templates/OuterDocInsertion.odt"
+            'Setting up destination open document report 
+            Const strDocumentReport As [String] = "Word Reports/OuterDocInsertion Report.odt"
+            Try
+                'Instantiate DocumentAssembler class
+                Dim assembler As New DocumentAssembler()
+                'Call AssembleDocument to generate Single Row Report in open document format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerData(), "customer")
+            Catch ex As Exception
+                Console.WriteLine(ex.Message)
+            End Try
+            'ExEnd:OuterDocumentInsertion
+        End Sub
+        Public Shared Sub AddBarCodes(strDocumentFormat As String)
+            Select Case strDocumentFormat
+                Case "document"
+                    'ExStart:AddBarCodesDocumentProcessingFormat
+                    'Setting up source open document template
+                    Const strDocumentTemplate As [String] = "Word Templates/Barcode.docx"
+                    'Setting up destination open document report 
+                    Const strDocumentReport As [String] = "Word Reports/Barcode.docx"
+                    Try
+                        'Instantiate DocumentAssembler class
+                        Dim assembler As New DocumentAssembler()
+                        'Call AssembleDocument to generate Bulleted List Report in open document format
+                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerData(), "customer")
+                    Catch ex As Exception
+                        Console.WriteLine(ex.Message)
+                    End Try
+                    'ExEnd:AddBarCodesDocumentProcessingFormat 
+                    Exit Select
+
+                Case "spreadsheet"
+                    'ExStart:AddBarCodesSpreadsheet
+                    'Setting up source open spreadsheet template
+                    Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/Barcode.xlsx"
+                    'Setting up destination open spreadsheet report 
+                    Const strSpreadsheetReport As [String] = "Spreadsheet Reports/Barcode.xlsx"
+                    Try
+                        'Instantiate DocumentAssembler class
+                        Dim assembler As New DocumentAssembler()
+                        'Call AssembleDocument to generate Bulleted List Report in open spreadsheet format
+                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomerData(), "customer")
+                    Catch ex As Exception
+                        Console.WriteLine(ex.Message)
+                    End Try
+                    'ExEnd:AddBarCodesSpreadsheet 
+                    Exit Select
+
+                Case "presentation"
+                    'ExStart:AddBarCodesPowerPoint
+                    'Setting up source open presentation template
+                    Const strPresentationTemplate As [String] = "Presentation Templates/Barcode.pptx"
+                    'Setting up destination open presentation report 
+                    Const strPresentationReport As [String] = "Presentation Reports/Barcode.pptx"
+                    Try
+                        'Instantiate DocumentAssembler class
+                        Dim assembler As New DocumentAssembler()
+                        'Call AssembleDocument to generate Bulleted List Report in open presentation format
+                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomerData(), "customer")
+                    Catch ex As Exception
+                        Console.WriteLine(ex.Message)
+                    End Try
+                    'ExEnd:AddBarCodesPowerPoint 
+                    Exit Select
+            End Select
+        End Sub
+
 
     End Class
 End Namespace

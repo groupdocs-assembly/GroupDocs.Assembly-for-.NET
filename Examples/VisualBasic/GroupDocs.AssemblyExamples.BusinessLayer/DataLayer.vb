@@ -34,8 +34,10 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
             Dim customer As New BusinessObjects.Customer() With { _
                  .CustomerName = "Atir Tahir", _
                  .CustomerContactNumber = "+9211874", _
-                 .ShippingAddress = "Flat # 1, Kiyani Plaza ISB" _
-            }
+                 .ShippingAddress = "Flat # 1, Kiyani Plaza ISB", _
+                 .Barcode = "123456789qwertyu0025"}
+
+
 
             customer.Order = New BusinessObjects.Order() {New BusinessObjects.Order() With { _
                  .Product = New BusinessObjects.Product() With { _
@@ -52,8 +54,10 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
             customer = New BusinessObjects.Customer() With { _
                  .CustomerName = "Usman Aziz", _
                  .CustomerContactNumber = "+458789", _
-                 .ShippingAddress = "Quette House, Park Road, ISB" _
-            }
+                 .ShippingAddress = "Quette House, Park Road, ISB", _
+                 .Barcode = "123456789qwertyu0025"}
+
+
             customer.Order = New BusinessObjects.Order() {New BusinessObjects.Order() With { _
                  .Product = New BusinessObjects.Product() With { _
                      .ProductName = "Lenovo G50" _

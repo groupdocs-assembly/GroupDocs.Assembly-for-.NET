@@ -29,7 +29,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         /// <returns>Returns customer's complete information</returns>
         public static IEnumerable<BusinessObjects.Customer> PopulateData()
         {
-            BusinessObjects.Customer customer = new BusinessObjects.Customer { CustomerName = "Atir Tahir", CustomerContactNumber = "+9211874", ShippingAddress = "Flat # 1, Kiyani Plaza ISB" };
+            BusinessObjects.Customer customer = new BusinessObjects.Customer { CustomerName = "Atir Tahir", CustomerContactNumber = "+9211874", ShippingAddress = "Flat # 1, Kiyani Plaza ISB", Barcode = "123456789qwertyu0025" };
             customer.Order = new BusinessObjects.Order[]
             {
                   new BusinessObjects.Order { Product = new BusinessObjects.Product { ProductName ="Lumia 525" }, Customer = customer, Price= 170, ProductQuantity = 5, OrderDate = new DateTime(2015, 1, 1) }
@@ -38,7 +38,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
             yield return customer; //yield return statement will return one data at a time
 
 
-            customer = new BusinessObjects.Customer { CustomerName = "Usman Aziz", CustomerContactNumber = "+458789", ShippingAddress = "Quette House, Park Road, ISB" };
+            customer = new BusinessObjects.Customer { CustomerName = "Usman Aziz", CustomerContactNumber = "+458789", ShippingAddress = "Quette House, Park Road, ISB", Barcode = "123456789qwertyu0025" };
             customer.Order = new BusinessObjects.Order[]
             {
                   new BusinessObjects.Order { Product = new BusinessObjects.Product { ProductName = "Lenovo G50" }, Customer = customer, Price = 480, ProductQuantity = 2, OrderDate = new DateTime(2015, 2, 1) },

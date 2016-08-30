@@ -8,6 +8,7 @@ Imports System.IO
 Namespace GroupDocs.AssemblyExamples.ProjectEntities
     Public Class BusinessObjects
         Public Shared imagePath As String = "../../../../Data/Images/"
+        Public Shared docPath As String = "../../../../Data/OuterDocuments/"
 
         'ExStart:ProjectEntities
         Public Class Customer
@@ -47,9 +48,26 @@ Namespace GroupDocs.AssemblyExamples.ProjectEntities
                 End Set
             End Property
             Private m_Order As IEnumerable(Of Order)
+
+            Public Property Barcode() As String
+                Get
+                    Return m_Barcode
+                End Get
+                Set(value As String)
+                    m_Barcode = Value
+                End Set
+            End Property
+            Private m_Barcode As String
+
             Public ReadOnly Property Photo() As [String]
                 Get
                     Return Path.Combine(Path.GetFullPath(imagePath), "no-photo.jpg")
+                End Get
+            End Property
+
+            Public ReadOnly Property Document() As [String]
+                Get
+                    Return Path.Combine(Path.GetFullPath(docPath), "outerDoc.odt")
                 End Get
             End Property
 
@@ -92,6 +110,17 @@ Namespace GroupDocs.AssemblyExamples.ProjectEntities
                 End Set
             End Property
             Private m_Price As Integer
+
+            Public Property Barcode() As String
+                Get
+                    Return m_Barcode
+                End Get
+                Set(value As String)
+                    m_Barcode = Value
+                End Set
+            End Property
+            Private m_Barcode As String
+
             Public Property OrderDate() As DateTime
                 Get
                     Return m_OrderDate
