@@ -226,13 +226,18 @@ namespace GroupDocs.AssemblyExamples
             #region Barcode Insertion 
 
             //add barcode in word processing documents
-            GenerateReport.AddBarCodes("document");
+            //GenerateReport.AddBarCodes("document");
             //add barcode in spreadsheet documents
             //GenerateReport.AddBarCodes("spreadsheet");
             //add barcode in persentation documents 
             //GenerateReport.AddBarCodes("presentation");
 
             #endregion
+
+            //Update fields/formulas in word processing or spreadsheet documents
+            //GenerateReport.UpdateWordDocFields("spreadsheet");
+            //Use of Next keyword in template syntax
+            //GenerateReport.NextIteration();
         }
     }
 }

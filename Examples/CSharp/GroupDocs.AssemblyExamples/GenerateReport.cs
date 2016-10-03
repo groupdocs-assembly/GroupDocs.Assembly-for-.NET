@@ -5177,6 +5177,11 @@ namespace GroupDocs.AssemblyExamples
             }
             //ExEnd:OuterDocumentInsertion
         }
+
+        /// <summary>
+        /// Generate barcodes
+        /// </summary>
+        /// <param name="strDocumentFormat"></param>
         public static void AddBarCodes(string strDocumentFormat)
         {
             switch (strDocumentFormat)
@@ -5190,7 +5195,7 @@ namespace GroupDocs.AssemblyExamples
                     try
                     {
                         //Instantiate DocumentAssembler class
-                        DocumentAssembler assembler = new DocumentAssembler(); 
+                        DocumentAssembler assembler = new DocumentAssembler();
                         //Call AssembleDocument to generate   Report in open document format
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerData(), "customer");
                     }
@@ -5241,6 +5246,64 @@ namespace GroupDocs.AssemblyExamples
                     //ExEnd:AddBarCodesPowerPoint 
                     break;
             }
+        }
+
+        /// <summary>
+        /// Update word processing documents fields while assembling 
+        /// </summary>
+        /// <param name="documentType"></param>
+        public static void UpdateWordDocFields(string documentType)
+        {
+
+            if (documentType == "document")
+            {
+                //ExStart:UpdateWordDocFields
+                //Setting up source document template
+                const String strDocumentTemplate = "Word Templates/Update_Field_XML.docx";
+                //Setting up destination document report 
+                const String strDocumentReport = "Word Reports/Update_Field_XML Report.docx";
+                DocumentAssembler assembler = new DocumentAssembler();
+                assembler.Options |= DocumentAssemblyOptions.UpdateFieldsAndFormulas;
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
+                //ExEnd:UpdateWordDocFields
+            }
+            else if (documentType == "spreadsheet")
+            {
+                //ExStart:updateformula
+                //Setting up source document template
+                const String strDocumentTemplate = "Spreadsheet Templates/Update-Fomula.xlsx";
+                //Setting up destination document report 
+                const String strDocumentReport = "Spreadsheet Reports/Update-Fomula Report.xlsx";
+                DocumentAssembler assembler = new DocumentAssembler();
+                assembler.Options |= DocumentAssemblyOptions.UpdateFieldsAndFormulas;
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
+                //ExEnd:updateformula
+            }
+            
+        }
+
+        /// <summary>
+        /// Support for Analogue of Microsoft Word NEXT Field
+        /// </summary>
+        public static void NextIteration()
+        {
+            //ExStart:nextiteration
+            //Setting up source document template
+            const String strDocumentTemplate = "Word Templates/Using Next.docx";
+            //Setting up destination document report
+            const String strDocumentReport = "Word Reports/Using Next Report.docx";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler();
+                //Call AssembleDocument to generate Report 
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:nextiteration
         }
 
     }
