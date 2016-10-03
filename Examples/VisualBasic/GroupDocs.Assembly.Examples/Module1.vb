@@ -237,7 +237,10 @@ Namespace GroupDocs.AssemblyExamples
             'GenerateReport.AddBarCodes("presentation")
 
             'End Region
-
+            'Update fields/formulas in word processing or spreadsheet documents
+            'GenerateReport.UpdateWordDocFields("spreadsheet")
+            'Use of Next keyword in template syntax
+            'GenerateReport.NextIteration()
 
         End Sub
 

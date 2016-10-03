@@ -13,7 +13,7 @@ Namespace GroupDocs.AssemblyExamples
     Public NotInheritable Class GenerateReport
         Private Sub New()
         End Sub
-       
+
         Public Shared Sub GenerateBubbleChart(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean, isJson As Boolean)
             Select Case strDocumentFormat
                 Case "document"
@@ -4001,7 +4001,7 @@ Namespace GroupDocs.AssemblyExamples
             Try
                 'Instantiate DocumentAssembler class
                 Dim assembler As New DocumentAssembler()
-                'Call AssembleDocument to generate In-Table List with Alternate Content Report in open document format
+                'Call AssembleDocument to generate   Report in open document format
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders")
             Catch ex As Exception
                 Console.WriteLine(ex.Message)
@@ -4017,7 +4017,7 @@ Namespace GroupDocs.AssemblyExamples
             Try
                 'Instantiate DocumentAssembler class
                 Dim assembler As New DocumentAssembler()
-                'Call AssembleDocument to generate Single Row Report in open document format
+                'Call AssembleDocument to generate  Report in open document format
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerData(), "customer")
             Catch ex As Exception
                 Console.WriteLine(ex.Message)
@@ -4035,7 +4035,7 @@ Namespace GroupDocs.AssemblyExamples
                     Try
                         'Instantiate DocumentAssembler class
                         Dim assembler As New DocumentAssembler()
-                        'Call AssembleDocument to generate Bulleted List Report in open document format
+                        'Call AssembleDocument to generate   Report in open document format
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerData(), "customer")
                     Catch ex As Exception
                         Console.WriteLine(ex.Message)
@@ -4052,7 +4052,7 @@ Namespace GroupDocs.AssemblyExamples
                     Try
                         'Instantiate DocumentAssembler class
                         Dim assembler As New DocumentAssembler()
-                        'Call AssembleDocument to generate Bulleted List Report in open spreadsheet format
+                        'Call AssembleDocument to generate   Report in open spreadsheet format
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetCustomerData(), "customer")
                     Catch ex As Exception
                         Console.WriteLine(ex.Message)
@@ -4069,7 +4069,7 @@ Namespace GroupDocs.AssemblyExamples
                     Try
                         'Instantiate DocumentAssembler class
                         Dim assembler As New DocumentAssembler()
-                        'Call AssembleDocument to generate Bulleted List Report in open presentation format
+                        'Call AssembleDocument to generate Report in open presentation format
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetCustomerData(), "customer")
                     Catch ex As Exception
                         Console.WriteLine(ex.Message)
@@ -4080,7 +4080,59 @@ Namespace GroupDocs.AssemblyExamples
         End Sub
 
 
+        ''' <summary>
+        ''' Update word processing documents fields while assembling 
+        ''' </summary>
+        ''' <param name="documentType"></param>
+        Public Shared Sub UpdateWordDocFields(documentType As String)
+
+            If documentType = "document" Then
+                'ExStart:UpdateWordDocFields
+                'Setting up source document template
+                Const strDocumentTemplate As [String] = "Word Templates/Update_Field_XML.docx"
+                'Setting up destination document report 
+                Const strDocumentReport As [String] = "Word Reports/Update_Field_XML Report.docx"
+                Dim assembler As New DocumentAssembler()
+                assembler.Options = assembler.Options Or DocumentAssemblyOptions.UpdateFieldsAndFormulas
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
+                'ExEnd:UpdateWordDocFields
+            ElseIf documentType = "spreadsheet" Then
+                'ExStart:updateformula
+                'Setting up source document template
+                Const strDocumentTemplate As [String] = "Spreadsheet Templates/Update-Fomula.xlsx"
+                'Setting up destination document report 
+                Const strDocumentReport As [String] = "Spreadsheet Reports/Update-Fomula Report.xlsx"
+                Dim assembler As New DocumentAssembler()
+                assembler.Options = assembler.Options Or DocumentAssemblyOptions.UpdateFieldsAndFormulas
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
+                'ExEnd:updateformula
+            End If
+
+        End Sub
+
+        ''' <summary>
+        ''' Support for Analogue of Microsoft Word NEXT Field
+        ''' </summary>
+        Public Shared Sub NextIteration()
+            'ExStart:nextiteration
+            'Setting up source document template
+            Const strDocumentTemplate As [String] = "Word Templates/Using Next.docx"
+            'Setting up destination document report
+            Const strDocumentReport As [String] = "Word Reports/Using Next Report.docx"
+            Try
+                'Instantiate DocumentAssembler class
+                Dim assembler As New DocumentAssembler()
+                'Call AssembleDocument to generate Report 
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
+            Catch ex As Exception
+                Console.WriteLine(ex.Message)
+            End Try
+            'ExEnd:nextiteration
+        End Sub
+
+
+
     End Class
 End Namespace
 
- 
+
