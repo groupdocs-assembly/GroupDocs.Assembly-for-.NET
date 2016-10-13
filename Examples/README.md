@@ -21,8 +21,6 @@ The package contains two solutions developed in Visual Studio 2013, one for C# e
 ### Add Missing APIs
 
 Follow the given steps to rebuild the solution which would automatically add missing references of the third party APIs in the first two projects mentioned [above](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-.NET/blob/master/Examples/README.md#open-solutions-in-visual-studio):
-
-Follow the given steps to proceed with project build:
 * Extract the downloaded project and open the solution file in Visual Studio
 * Right click on solution and press "Enable NuGet package Restore"
 * Build the project.
