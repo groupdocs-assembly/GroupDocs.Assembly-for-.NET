@@ -20,7 +20,12 @@ The package contains two solutions developed in Visual Studio 2013, one for C# e
 
 ### Add Missing APIs
 
-Rebuild the solution which would automatically add missing references of the third party APIs in the first two projects mentioned [above](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-.NET/blob/master/Examples/README.md#open-solutions-in-visual-studio). It is possible that Visual Studio is unable to automatically add these third party APIs references due to Visual Studio version differences. In this case, please add references of the following APIs manually:
+Follow the given steps to rebuild the solution which would automatically add missing references of the third party APIs in the first two projects mentioned [above](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-.NET/blob/master/Examples/README.md#open-solutions-in-visual-studio):
+* Extract the downloaded project and open the solution file in Visual Studio
+* Right click on solution and press "Enable NuGet package Restore"
+* Build the project
+
+In other case, it is possible that Visual Studio is unable to automatically add these third party APIs references due to Visual Studio version differences. In this case, please add references of the following APIs manually:
 
 1) [GroupDocs.Assembly](https://www.nuget.org/packages/GroupDocs.Assembly/)
 2) [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/)
