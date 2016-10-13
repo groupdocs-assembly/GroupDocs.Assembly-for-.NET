@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GroupDocs.Assembly">
+      <HintPath>..\packages\GroupDocs.Assembly.3.3.0\lib\net20\GroupDocs.Assembly.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
