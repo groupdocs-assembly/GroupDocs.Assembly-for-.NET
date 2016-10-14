@@ -25,7 +25,7 @@ Follow the given steps to rebuild the solution which would automatically add mis
 * Right click on solution and press "Enable NuGet package Restore"
 * Build the project
 
-In other case, it is possible that Visual Studio is unable to automatically add these third party APIs references due to Visual Studio version differences. In this case, please add references of the following APIs manually:
+In other case, it is possible that Visual Studio is unable to automatically add these APIs references due to Visual Studio version differences. In this case, please add references of the following APIs manually:
 
 1) [GroupDocs.Assembly](https://www.nuget.org/packages/GroupDocs.Assembly/)
 2) [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/)
