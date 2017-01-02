@@ -51,6 +51,23 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
             lic.SetLicense(licensePath)
         End Sub
         'ExEnd:ApplyLicense
+
+        'ExStart:metered licensing 
+        ''' <summary>
+        ''' provide metered licensing
+        ''' </summary>
+        Public Shared Sub MeteredLicensing()
+
+            ' Set metered license public and private keys.
+            Dim metered As New Metered()
+            metered.SetMeteredKey("PublicKey", "PrivateKey")
+
+            ' Ensure that the product is licensed.
+            Dim license As New License()
+            Debug.Assert(license.IsLicensed)
+        End Sub
+        'ExEnd:metered licensing
+
 #End Region
 
     End Class

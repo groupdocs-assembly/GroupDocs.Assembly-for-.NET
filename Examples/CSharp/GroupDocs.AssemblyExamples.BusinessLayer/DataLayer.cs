@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Data;
 using System.IO;
 using Newtonsoft.Json;
+using GroupDocs.Assembly.Data;
+using System.Diagnostics;
 
 namespace GroupDocs.AssemblyExamples.BusinessLayer
 {
@@ -19,6 +21,8 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         public const string orderXMLfile = "../../../../Data/Data Sources/XML DataSource/Orders.xml";
         public const string productOrderXMLfile = "../../../../Data/Data Sources/XML DataSource/ProductOrders.xml";
         public const string jsonFile = "../../../../Data/Data Sources/JSON DataSource/CustomerData-Json.json";
+        public const string wordDataFile = "../../../../Data/Data Sources/Word DataSource/Managers Data.docx";
+        public const string excelDataFile = "../../../../Data/Data Sources/Excel DataSource/Contracts Data.xlsx";
 
         #region DataInitialization
         //ExStart:PopulateData
@@ -424,6 +428,57 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         }
         //ExEnd:GetSingleCustomerDataJson
         #endregion
+        /// <summary>
+        /// Generate report from excel data source
+        /// </summary>
+        /// <returns></returns>
+        public static GroupDocs.Assembly.Data.DocumentTable ExcelData()
+        {
+            DocumentTableOptions options = new DocumentTableOptions();
+            options.FirstRowContainsColumnNames = true;
+
+            // Use data of the _first_ worksheet.
+            DocumentTable table = new DocumentTable(excelDataFile, 0, options);
+
+            // Check column count, names, and types.
+            Debug.Assert(table.Columns.Count == 3);
+
+            Debug.Assert(table.Columns[0].Name == "Client");
+            Debug.Assert(table.Columns[0].Type == typeof(string));
+
+            Debug.Assert(table.Columns[1].Name == "Manager");
+            Debug.Assert(table.Columns[1].Type == typeof(string));
+
+            // NOTE: A space is replaced with an underscore, because spaces are not allowed in column names.
+            Debug.Assert(table.Columns[2].Name == "Contract_Price");
+
+            // NOTE: The type of the column is double, because all cells in the column contain numeric values.
+            Debug.Assert(table.Columns[2].Type == typeof(double));
+            return table;
+        }
+        /// <summary>
+        /// Import word doc to presentation
+        /// </summary>
+        /// <returns></returns>
+        public static GroupDocs.Assembly.Data.DocumentTable ImportingWordDocToPresentation()
+        {
+
+            // Do not extract column names from the first row, so that the first row to be treated as a data row.
+            // Limit the largest row index, so that only the first four data rows to be loaded.
+            DocumentTableOptions options = new DocumentTableOptions();
+            options.MaxRowIndex = 3;
+
+            // Use data of the _second_ table in the document.
+            DocumentTable table = new DocumentTable(wordDataFile, 1, options);
+
+            // Check column count and names.
+            Debug.Assert(table.Columns.Count == 2);
+
+            // NOTE: Default column names are used, because we do not extract the names from the first row.
+            Debug.Assert(table.Columns[0].Name == "Column1");
+            Debug.Assert(table.Columns[1].Name == "Column2");
+            return table;
+        }
     }
     //ExEnd:DataLayer
     #endregion DataLayer

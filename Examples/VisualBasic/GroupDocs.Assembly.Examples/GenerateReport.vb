@@ -4131,6 +4131,32 @@ Namespace GroupDocs.AssemblyExamples
         End Sub
 
 
+        ''' <summary>
+        ''' Generate report from excel data source
+        ''' </summary>
+        Public Shared Sub UseSpreadsheetAsDataSource()
+            Dim strDocumentTemplate As String = "Word Templates/Using Spreadsheet as Table of Data.docx"
+            Dim strDocumentReport As String = "Word Reports/Using Spreadsheet as Table of Data_Output.docx"
+
+            ' Assemble a document using the external document table as a data source.
+            Dim assembler As New DocumentAssembler()
+            'assembler.AssembleDocument("Using Spreadsheet as Table of Data.docx", "Out.docx", table, "contracts");
+            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.ExcelData(), "contracts")
+        End Sub
+        ''' <summary>
+        ''' Import word proccessing table into presentation
+        ''' </summary>
+        Public Shared Sub ImportingWordProcessingTableIntoPresentation()
+            Dim strDocumentTemplate As String = "Presentation Templates/Importing Word Processing Table into Presentation.pptx"
+            Dim strDocumentReport As String = "Presentation Reports/Importing Word Processing Table into Presentation.pptx_Output.pptx"
+
+
+            ' Assemble a document using the external document table as a data source.
+            Dim assembler As New DocumentAssembler()
+            'assembler.AssembleDocument("Importing Word Processing Table into Presentation.pptx", "Out.pptx", DataLayer.ImportingWordDocToPresentation(), "table");
+            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.ImportingWordDocToPresentation(), "table")
+        End Sub
+
 
     End Class
 End Namespace

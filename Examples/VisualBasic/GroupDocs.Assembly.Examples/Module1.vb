@@ -242,6 +242,12 @@ Namespace GroupDocs.AssemblyExamples
             'Use of Next keyword in template syntax
             'GenerateReport.NextIteration()
 
+            'Generate report from excel data source 
+            'GenerateReport.UseSpreadsheetAsDataSource();
+
+            'Importing word processing table into presentation
+            'GenerateReport.ImportingWordProcessingTableIntoPresentation();
+
         End Sub
 
     End Module
