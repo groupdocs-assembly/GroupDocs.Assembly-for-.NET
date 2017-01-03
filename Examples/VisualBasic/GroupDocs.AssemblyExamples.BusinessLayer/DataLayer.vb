@@ -24,6 +24,7 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         Public Const jsonFile As String = "../../../../Data/Data Sources/JSON DataSource/CustomerData-Json.json"
         Public Const wordDataFile As String = "../../../../Data/Data Sources/Word DataSource/Managers Data.docx"
         Public Const excelDataFile As String = "../../../../Data/Data Sources/Excel DataSource/Contracts Data.xlsx"
+        Public Const presentationDataFile As String = "../../../../Data/Data Sources/Presentation DataSource/Managers Data.pptx"
 
 
 
@@ -467,6 +468,7 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
             Debug.Assert(table.Columns(2).Type = GetType(Double))
             Return table
         End Function
+
         ''' <summary>
         ''' Import word doc to presentation
         ''' </summary>
@@ -489,6 +491,30 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
             Debug.Assert(table.Columns(1).Name = "Column2")
             Return table
         End Function
+
+        ''' <summary>
+        ''' Presentation file data source
+        ''' </summary>
+        ''' <returns></returns>
+        Public Shared Function PresentationData() As Global.GroupDocs.Assembly.Data.DocumentTable
+
+            ' Do not extract column names from the first row, so that the first row to be treated as a data row.
+            ' Limit the largest row index, so that only the first four data rows to be loaded.
+            Dim options As New DocumentTableOptions()
+            options.MaxRowIndex = 3
+
+            ' Use data of the _second_ table in the document.
+            Dim table As New DocumentTable(presentationDataFile, 1, options)
+
+            ' Check column count and names.
+            Debug.Assert(table.Columns.Count = 2)
+
+            ' NOTE: Default column names are used, because we do not extract the names from the first row.
+            Debug.Assert(table.Columns(0).Name = "Column1")
+            Debug.Assert(table.Columns(1).Name = "Column2")
+            Return table
+        End Function
+
 
     End Class
     'ExEnd:DataLayer

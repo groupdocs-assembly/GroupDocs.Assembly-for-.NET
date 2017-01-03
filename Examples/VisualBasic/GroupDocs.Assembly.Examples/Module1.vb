@@ -243,10 +243,13 @@ Namespace GroupDocs.AssemblyExamples
             'GenerateReport.NextIteration()
 
             'Generate report from excel data source 
-            'GenerateReport.UseSpreadsheetAsDataSource();
+            'GenerateReport.UseSpreadsheetAsDataSource()
 
             'Importing word processing table into presentation
-            'GenerateReport.ImportingWordProcessingTableIntoPresentation();
+            'GenerateReport.ImportingWordProcessingTableIntoPresentation()
+
+            'Generate report from presentation data source
+            'GenerateReport.UsePresentationTableAsDataSource()
 
         End Sub
 

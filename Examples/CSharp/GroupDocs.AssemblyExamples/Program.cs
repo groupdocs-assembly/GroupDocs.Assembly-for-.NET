@@ -242,6 +242,9 @@ namespace GroupDocs.AssemblyExamples
             //Generate report from excel data source 
             //GenerateReport.UseSpreadsheetAsDataSource();
 
+            //Generate report from presentation data source
+            //GenerateReport.UsePresentationTableAsDataSource();
+
             //Importing word processing table into presentation
             //GenerateReport.ImportingWordProcessingTableIntoPresentation();
         }

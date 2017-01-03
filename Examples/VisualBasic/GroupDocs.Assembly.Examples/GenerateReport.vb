@@ -4140,20 +4140,32 @@ Namespace GroupDocs.AssemblyExamples
 
             ' Assemble a document using the external document table as a data source.
             Dim assembler As New DocumentAssembler()
-            'assembler.AssembleDocument("Using Spreadsheet as Table of Data.docx", "Out.docx", table, "contracts");
             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.ExcelData(), "contracts")
         End Sub
+
+        ''' <summary>
+        ''' Generate report from presentation data source
+        ''' </summary>
+        Public Shared Sub UsePresentationTableAsDataSource()
+            Dim strDocumentTemplate As String = "Presentation Templates/Using Presentation as Table of Data.pptx"
+            Dim strDocumentReport As String = "Presentation Reports/Using Presentation as Table of Data_Output.pptx"
+
+
+            ' Assemble a document using the external document table as a data source.
+            Dim assembler As New DocumentAssembler()
+            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.PresentationData(), "table")
+        End Sub
+
         ''' <summary>
         ''' Import word proccessing table into presentation
         ''' </summary>
         Public Shared Sub ImportingWordProcessingTableIntoPresentation()
             Dim strDocumentTemplate As String = "Presentation Templates/Importing Word Processing Table into Presentation.pptx"
-            Dim strDocumentReport As String = "Presentation Reports/Importing Word Processing Table into Presentation.pptx_Output.pptx"
+            Dim strDocumentReport As String = "Presentation Reports/Importing Word Processing Table into Presentation_Output.pptx"
 
 
             ' Assemble a document using the external document table as a data source.
             Dim assembler As New DocumentAssembler()
-            'assembler.AssembleDocument("Importing Word Processing Table into Presentation.pptx", "Out.pptx", DataLayer.ImportingWordDocToPresentation(), "table");
             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.ImportingWordDocToPresentation(), "table")
         End Sub
 

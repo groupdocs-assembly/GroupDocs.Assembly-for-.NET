@@ -23,6 +23,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         public const string jsonFile = "../../../../Data/Data Sources/JSON DataSource/CustomerData-Json.json";
         public const string wordDataFile = "../../../../Data/Data Sources/Word DataSource/Managers Data.docx";
         public const string excelDataFile = "../../../../Data/Data Sources/Excel DataSource/Contracts Data.xlsx";
+        public const string presentationDataFile = "../../../../Data/Data Sources/Presentation DataSource/Managers Data.pptx";
 
         #region DataInitialization
         //ExStart:PopulateData
@@ -470,6 +471,29 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
 
             // Use data of the _second_ table in the document.
             DocumentTable table = new DocumentTable(wordDataFile, 1, options);
+
+            // Check column count and names.
+            Debug.Assert(table.Columns.Count == 2);
+
+            // NOTE: Default column names are used, because we do not extract the names from the first row.
+            Debug.Assert(table.Columns[0].Name == "Column1");
+            Debug.Assert(table.Columns[1].Name == "Column2");
+            return table;
+        }
+        /// <summary>
+        /// Presentation file data source
+        /// </summary>
+        /// <returns></returns>
+        public static GroupDocs.Assembly.Data.DocumentTable PresentationData()
+        {
+
+            // Do not extract column names from the first row, so that the first row to be treated as a data row.
+            // Limit the largest row index, so that only the first four data rows to be loaded.
+            DocumentTableOptions options = new DocumentTableOptions();
+            options.MaxRowIndex = 3;
+
+            // Use data of the _second_ table in the document.
+            DocumentTable table = new DocumentTable(presentationDataFile, 1, options);
 
             // Check column count and names.
             Debug.Assert(table.Columns.Count == 2);
