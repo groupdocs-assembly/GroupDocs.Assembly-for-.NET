@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace GroupDocs.AssemblyExamples.BusinessLayer
@@ -57,6 +58,23 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
             lic.SetLicense(licensePath);
         }
         //ExEnd:ApplyLicense
+
+        //ExStart:metered licensing 
+        /// <summary>
+        /// provide metered licensing
+        /// </summary>
+        public static void MeteredLicensing()
+        {
+
+            // Set metered license public and private keys.
+            Metered metered = new Metered();
+            metered.SetMeteredKey("PublicKey", "PrivateKey");
+
+            // Ensure that the product is licensed.
+            License license = new License();
+            Debug.Assert(license.IsLicensed);
+        }
+        //ExEnd:metered licensing 
         #endregion
 
         #region ToADOTable
@@ -101,6 +119,6 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         }
         //ExEnd:ConvertToDataTable
     }
-   
+
     //ExEnd:CommonUtilities
 }

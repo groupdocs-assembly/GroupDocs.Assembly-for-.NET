@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using GroupDocs.Assembly;
 using GroupDocs.AssemblyExamples.BusinessLayer;
+using System.Diagnostics;
 using GroupDocs.AssemblyExamples.ProjectEntities;
+using GroupDocs.Assembly.Data;
 
 namespace GroupDocs.AssemblyExamples
 {
@@ -5279,7 +5281,7 @@ namespace GroupDocs.AssemblyExamples
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
                 //ExEnd:updateformula
             }
-            
+
         }
 
         /// <summary>
@@ -5304,6 +5306,47 @@ namespace GroupDocs.AssemblyExamples
                 Console.WriteLine(ex.Message);
             }
             //ExEnd:nextiteration
+        }
+
+        /// <summary>
+        /// Generate report from excel data source
+        /// </summary>
+        public static void UseSpreadsheetAsDataSource()
+        {
+            //ExStart:UseSpreadsheetAsDataSource
+            string strDocumentTemplate = "Word Templates/Using Spreadsheet as Table of Data.docx";
+            string strDocumentReport = "Word Reports/Using Spreadsheet as Table of Data_Output.docx";
+
+            // Assemble a document using the external document table as a data source.
+            DocumentAssembler assembler = new DocumentAssembler();
+            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.ExcelData(), "contracts");
+            //ExEnd:UseSpreadsheetAsDataSource
+        }
+        /// <summary>
+        /// Generate report from presentation data source
+        /// </summary>
+        public static void UsePresentationTableAsDataSource()
+        {
+            string strDocumentTemplate = "Presentation Templates/Using Presentation as Table of Data.pptx";
+            string strDocumentReport = "Presentation Reports/Using Presentation as Table of Data_Output.pptx";
+
+
+            // Assemble a document using the external document table as a data source.
+            DocumentAssembler assembler = new DocumentAssembler();
+            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.PresentationData(), "table");
+        }
+        /// <summary>
+        /// Import word proccessing table into presentation
+        /// </summary>
+        public static void ImportingWordProcessingTableIntoPresentation()
+        {
+            string strDocumentTemplate = "Presentation Templates/Importing Word Processing Table into Presentation.pptx";
+            string strDocumentReport = "Presentation Reports/Importing Word Processing Table into Presentation_Output.pptx";
+           
+
+            // Assemble a document using the external document table as a data source.
+            DocumentAssembler assembler = new DocumentAssembler();
+            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.ImportingWordDocToPresentation(), "table");
         }
 
     }
