@@ -1,6 +1,6 @@
 ##GroupDocs.Assembly for .NET
 
-This package contains [Examples](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Examples), [Plugins](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Plugins) and [Showcases](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Showcases) for [GroupDocs.Assembly for .NET](http://groupdocs.com/dot-net/document-assembly-library) that will help you in understanding the API's working and writing your own applications.
+This package contains [Examples](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Examples), [Plugins](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Plugins) and [Showcases](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Showcases) for [GroupDocs.Assembly for .NET](https://www.groupdocs.com/products/assembly/net) that will help you in understanding the API's working and writing your own applications.
 
 GroupDocs.Assembly for .NET is a .NET API engine designed to generate documents based on templates. In essence, the engine accepts a template document and some data, assembles data with the template document as per syntax defined by the template document and then, generates the output document in the same format as of the template document format.
 
@@ -20,8 +20,8 @@ Directory | Description
 ## Resources
 
 + **Website:** [www.groupdocs.com](http://www.groupdocs.com)
-+ **Product Home:** [GroupDocs.Assembly for .NET](http://groupdocs.com/dot-net/document-assembly-library)
-+ **Download:** [Download GroupDocs.Assembly for .NET](http://groupdocs.com/Community/files/8/.net-libraries/groupdocs_assembly_for_.net/default.aspx)
-+ **Documentation:** [GroupDocs.Assembly for .NET Documentation](http://groupdocs.com/docs/display/assemblynet/Introducing+GroupDocs.Assembly+for+.NET)
++ **Product Home:** [GroupDocs.Assembly for .NET](https://www.groupdocs.com/products/assembly/net)
++ **Download:** [Download GroupDocs.Assembly for .NET](https://downloads.groupdocs.com/assembly/net)
++ **Documentation:** [GroupDocs.Assembly for .NET Documentation](https://docs.groupdocs.com/display/assemblynet/Introducing+GroupDocs.Assembly+for+.NET)
 + **Forum:** [GroupDocs.Assembly for .NET Forum](http://groupdocs.com/Community/forums/groupdocs.assembly-product-family/8/showforum.aspx)
-+ **Blog:** [GroupDocs.Assembly for .NET Blog](http://groupdocs.com/blog/simplest-api-for-document-automation-and-reports-generation)
++ **Blog:** [GroupDocs.Assembly for .NET Blog](https://blog.groupdocs.com/category/groupdocs-assembly-product-family/)
