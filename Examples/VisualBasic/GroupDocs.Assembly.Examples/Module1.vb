@@ -251,6 +251,15 @@ Namespace GroupDocs.AssemblyExamples
             'Generate report from presentation data source
             'GenerateReport.UsePresentationTableAsDataSource()
 
+            'Load document table set using default options
+            'GenerateReport.LoadDocTableSet("Multiple Tables Data.docx")
+            'Load document table set using custom options
+            'GenerateReport.LoadDocTableSetWithCustomOptions("Multiple Tables Data.docx")
+            'Using DocumentTableSet as Data Source
+            'GenerateReport.UseDocumentTableSetAsDataSource("Multiple Tables Data.docx", "Using Document Table Set as Data Source.pptx")
+            'GenerateReport.DefiningDocumentTableRelations("Related Tables Data.xlsx", "Using Document Table Relations.docx")
+            'GenerateReport.ChangingDocumentTableColumnType("Presentation Templates/Changing Document Table Column Type.pptx")
+
         End Sub
 
     End Module

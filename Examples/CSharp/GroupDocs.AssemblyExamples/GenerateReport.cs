@@ -13,6 +13,146 @@ namespace GroupDocs.AssemblyExamples
 {
     public static class GenerateReport
     {
+        /// <summary>
+        /// Shows how to load document Table set using default options
+        /// Features is supported by version 17.01 or greater
+        /// </summary>
+        /// <param name="dataSource">name of the data source file</param>
+        public static void LoadDocTableSet(string dataSource)
+        {
+            //ExStart:LoadDocTableSet
+            // Load all document tables using default options.
+            DocumentTableSet tableSet = new DocumentTableSet(CommonUtilities.GetDataSourceDocument("Word DataSource/" + dataSource));
+
+            // Check loading.
+            Debug.Assert(tableSet.Tables.Count == 3);
+            Debug.Assert(tableSet.Tables[0].Name == "Table1");
+            Debug.Assert(tableSet.Tables[1].Name == "Table2");
+            Debug.Assert(tableSet.Tables[2].Name == "Table3");
+            //ExEnd:LoadDocTableSet
+        }
+
+        /// <summary>
+        /// Show how to Load document table set using custom options
+        /// Features is supported by version 17.01 or greater
+        /// </summary>
+        /// <param name="dataSource">name of the data source file</param>
+        public static void LoadDocTableSetWithCustomOptions(string dataSource)
+        {
+            //ExStart:LoadDocTableSetWithCustomOptions
+            // Load document tables using custom options.
+            DocumentTableSet tableSet = new DocumentTableSet(CommonUtilities.GetDataSourceDocument("Word DataSource/" + dataSource), new CustomDocumentTableLoadHandler());
+
+            // Ensure that the second table is not loaded.
+            Debug.Assert(tableSet.Tables.Count == 2);
+            Debug.Assert(tableSet.Tables[0].Name == "Table1");
+            Debug.Assert(tableSet.Tables[1].Name == "Table3");
+
+            // Ensure that default options are used to load the first table (that is, default column names are used).
+            Debug.Assert(tableSet.Tables[0].Columns.Count == 2);
+            Debug.Assert(tableSet.Tables[0].Columns[0].Name == "Column1");
+            Debug.Assert(tableSet.Tables[0].Columns[1].Name == "Column2");
+
+            // Ensure that custom options are used to load the third table (that is, column names are extracted).
+            Debug.Assert(tableSet.Tables[1].Columns.Count == 2);
+            Debug.Assert(tableSet.Tables[1].Columns[0].Name == "Name");
+            Debug.Assert(tableSet.Tables[1].Columns[1].Name == "Address");
+            //ExEnd:LoadDocTableSetWithCustomOptions
+        }
+
+        /// <summary>
+        /// Shows how to use document TableSet as DataSource
+        /// Features is supported by version 17.01 or greater
+        /// </summary>
+        /// <param name="dataSource">Name of the data source file</param>
+        /// <param name="slideDoc">name of the template file</param>
+        public static void UseDocumentTableSetAsDataSource(string dataSource, string slideDoc)
+        {
+            //ExStart:UseDocumentTableSetAsDataSource
+            //setting up output document
+            const string outDocument = "Presentation Reports/Use Document Table Set As DataSource Output.pptx";
+            //set up path for the template file
+            string templateFile = CommonUtilities.GetSourceDocument("Presentation Templates/" + slideDoc);
+            // Set table column names to be extracted from the document.
+            DocumentTableSet tableSet = new DocumentTableSet(CommonUtilities.GetDataSourceDocument("Word DataSource/" + dataSource), new ColumnNameExtractingDocumentTableLoadHandler());
+
+            // Set table names for conveniency.
+            tableSet.Tables[0].Name = "Planets";
+            tableSet.Tables[1].Name = "Persons";
+            tableSet.Tables[2].Name = "Companies";
+
+            // Pass DocumentTableSet as a data source.
+            DocumentAssembler assembler = new DocumentAssembler();
+            assembler.AssembleDocument(templateFile, CommonUtilities.SetDestinationDocument(outDocument), tableSet);
+            //ExEnd:UseDocumentTableSetAsDataSource
+        }
+
+        /// <summary>
+        /// Shows how to define document table relations
+        /// Feature is supported by version 17.01 or greater
+        /// </summary>
+        /// <param name="relatedTables">name of the data source file</param>
+        /// <param name="docTableRelations">name of the template file</param>
+        public static void DefiningDocumentTableRelations(string relatedTables, string docTableRelations)
+        {
+            //ExStart:DefiningDocumentTableRelations
+            //setting up output document
+            const string outDocument = "Word Reports/document relations output.docx";
+            //set up path for the related tables data source
+            string relatedTablesDataSource = CommonUtilities.GetDataSourceDocument("Excel DataSource/" + relatedTables);
+            //set up path for the template file
+            string templateFile = CommonUtilities.GetSourceDocument("Word Templates/" + docTableRelations);
+
+            // Set table column names to be extracted from the document.
+            DocumentTableSet tableSet = new DocumentTableSet(relatedTablesDataSource, new ColumnNameExtractingDocumentTableLoadHandler());
+
+            // Define relations between tables.
+            // NOTE: For Spreadsheet documents, table names are extracted from sheet names.
+            tableSet.Relations.Add(
+                tableSet.Tables["CLIENT"].Columns["ID"],
+                tableSet.Tables["CONTRACT"].Columns["CLIENT_ID"]);
+
+            tableSet.Relations.Add(
+                tableSet.Tables["MANAGER"].Columns["ID"],
+                tableSet.Tables["CONTRACT"].Columns["MANAGER_ID"]);
+
+            // Pass DocumentTableSet as a data source.
+            DocumentAssembler assembler = new DocumentAssembler();
+            assembler.AssembleDocument(templateFile, CommonUtilities.SetDestinationDocument(outDocument), tableSet);
+            //ExEnd:DefiningDocumentTableRelations
+        }
+
+        /// <summary>
+        /// Shows how to change document table column type
+        /// Feature is supported by version 17.01 or greater
+        /// </summary>
+        /// <param name="document"></param>
+        public static void ChangingDocumentTableColumnType(string document)
+        {
+            //ExStart:ChangingDocumentTableColumnType
+            //setting up data source document
+            const string dataSrcDocument = "Word DataSource/Managers Data.docx";
+            //setting up output document
+            const string outDocument = "Presentation Reports/Out.pptx";
+
+            // Set table column names to be extracted from the document.
+            DocumentTableOptions options = new DocumentTableOptions();
+            options.FirstRowContainsColumnNames = true;
+
+            DocumentTable table = new DocumentTable(CommonUtilities.GetDataSourceDocument(dataSrcDocument), 1, options);
+
+            // NOTE: For non-Spreadsheet documents, the type of a document table column is always string by default.
+            Debug.Assert(table.Columns["Total_Contract_Price"].Type == typeof(string));
+
+            // Change the column's type to double thus enabling to use arithmetic operations on values of the column 
+            // such as summing in templates.
+            table.Columns["Total_Contract_Price"].Type = typeof(double);
+
+            // Pass DocumentTable as a data source.
+            DocumentAssembler assembler = new DocumentAssembler();
+            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(document), CommonUtilities.SetDestinationDocument(outDocument), table, "Managers");
+            //ExEnd:ChangingDocumentTableColumnType
+        }
         public static void GenerateBubbleChart(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
         {
             switch (strDocumentFormat)
@@ -29,7 +169,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Bubble Chart Report in open document format
+                                                                                  //Call AssembleDocument to generate Bubble Chart Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersDataDB(), "orders");
                         }
                         catch (Exception ex)
@@ -49,7 +189,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Bubble Chart Report in open document format
+                                                                                  //Call AssembleDocument to generate Bubble Chart Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersAndOrdersDataDT());
                         }
                         catch (Exception ex)
@@ -69,7 +209,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Bubble Chart Report in open document format
+                                                                                  //Call AssembleDocument to generate Bubble Chart Report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
                         }
                         catch (Exception ex)
@@ -90,7 +230,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Bubble Chart Report in document format
+                                                                                  //Call AssembleDocument to generate Bubble Chart Report in document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
                         }
                         catch (Exception ex)
@@ -193,7 +333,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Bubble Chart Report in spreadsheet format
+                                                                                  //Call AssembleDocument to generate Bubble Chart Report in spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
                         }
                         catch (Exception ex)
@@ -296,7 +436,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Bubble Chart Report in presentation format
+                                                                                  //Call AssembleDocument to generate Bubble Chart Report in presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
                         }
                         catch (Exception ex)
@@ -404,7 +544,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Bulleted list report in open document format
+                                                                                  //Call AssembleDocument to generate Bulleted list report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
                         }
                         catch (Exception ex)
@@ -507,7 +647,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate bulleted list in open spreadsheet format
+                                                                                  //Call AssembleDocument to generate bulleted list in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
                         }
                         catch (Exception ex)
@@ -610,7 +750,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate bulleted list in open presentation format
+                                                                                  //Call AssembleDocument to generate bulleted list in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
                         }
                         catch (Exception ex)
@@ -718,7 +858,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Chart with Filtering, Grouping, and Ordering report in document format
+                                                                                  //Call AssembleDocument to generate Chart with Filtering, Grouping, and Ordering report in document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
                         }
                         catch (Exception ex)
@@ -821,7 +961,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Chart with Filtering, Grouping, and Ordering report in spreadsheet format
+                                                                                  //Call AssembleDocument to generate Chart with Filtering, Grouping, and Ordering report in spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
                         }
                         catch (Exception ex)
@@ -924,7 +1064,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Chart with Filtering, Grouping, and Ordering report in presentation format
+                                                                                  //Call AssembleDocument to generate Chart with Filtering, Grouping, and Ordering report in presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
                         }
                         catch (Exception ex)
@@ -1032,7 +1172,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Common List report in open document format
+                                                                                  //Call AssembleDocument to generate Common List report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
                         }
                         catch (Exception ex)
@@ -1135,7 +1275,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Common List report in open spreadsheet format
+                                                                                  //Call AssembleDocument to generate Common List report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
                         }
                         catch (Exception ex)
@@ -1238,7 +1378,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Common List report in open presentation format
+                                                                                  //Call AssembleDocument to generate Common List report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
                         }
                         catch (Exception ex)
@@ -1346,7 +1486,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Common master-detail report in open document format
+                                                                                  //Call AssembleDocument to generate Common master-detail report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
                         }
                         catch (Exception ex)
@@ -1449,7 +1589,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Common master-detail report in open spreadsheet format
+                                                                                  //Call AssembleDocument to generate Common master-detail report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
                         }
                         catch (Exception ex)
@@ -1552,7 +1692,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Common master-detail report in open presentation format
+                                                                                  //Call AssembleDocument to generate Common master-detail report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
                         }
                         catch (Exception ex)
@@ -1660,7 +1800,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Paragraph List report in open document format
+                                                                                  //Call AssembleDocument to generate In-Paragraph List report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
                         }
                         catch (Exception ex)
@@ -1763,7 +1903,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Paragraph List report in open spreadsheet format
+                                                                                  //Call AssembleDocument to generate In-Paragraph List report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
                         }
                         catch (Exception ex)
@@ -1866,7 +2006,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Paragraph List report in open presentation format
+                                                                                  //Call AssembleDocument to generate In-Paragraph List report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
                         }
                         catch (Exception ex)
@@ -1974,7 +2114,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List with Alternate Content report in open document format
+                                                                                  //Call AssembleDocument to generate In-Table List with Alternate Content report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
                         }
                         catch (Exception ex)
@@ -2077,7 +2217,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List with Alternate Content report in open spreadsheet format
+                                                                                  //Call AssembleDocument to generate In-Table List with Alternate Content report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
                         }
                         catch (Exception ex)
@@ -2180,7 +2320,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List with Alternate Content report in presentation format
+                                                                                  //Call AssembleDocument to generate In-Table List with Alternate Content report in presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
                         }
                         catch (Exception ex)
@@ -2288,7 +2428,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering report in open document format
+                                                                                  //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
                         }
                         catch (Exception ex)
@@ -2391,7 +2531,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering report in open spreadsheet format
+                                                                                  //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
                         }
                         catch (Exception ex)
@@ -2494,7 +2634,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering report in open presentation format
+                                                                                  //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
                         }
                         catch (Exception ex)
@@ -2602,7 +2742,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List with Highlighted Rows report in open document format
+                                                                                  //Call AssembleDocument to generate In-Table List with Highlighted Rows report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
                         }
                         catch (Exception ex)
@@ -2705,7 +2845,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List with Highlighted Rows report in open spreadsheet format
+                                                                                  //Call AssembleDocument to generate In-Table List with Highlighted Rows report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
                         }
                         catch (Exception ex)
@@ -2808,7 +2948,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List with Highlighted Rows report in open presentation format
+                                                                                  //Call AssembleDocument to generate In-Table List with Highlighted Rows report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
                         }
                         catch (Exception ex)
@@ -2916,7 +3056,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List report in open document format
+                                                                                  //Call AssembleDocument to generate In-Table List report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
                         }
                         catch (Exception ex)
@@ -3019,7 +3159,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List report in open spreadsheet format
+                                                                                  //Call AssembleDocument to generate In-Table List report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
                         }
                         catch (Exception ex)
@@ -3122,7 +3262,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List report in open presentation format
+                                                                                  //Call AssembleDocument to generate In-Table List report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
                         }
                         catch (Exception ex)
@@ -3230,7 +3370,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table Master-Detail report in open document format
+                                                                                  //Call AssembleDocument to generate In-Table Master-Detail report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
                         }
                         catch (Exception ex)
@@ -3333,7 +3473,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table Master-Detail report in open spreadsheet format
+                                                                                  //Call AssembleDocument to generate In-Table Master-Detail report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
                         }
                         catch (Exception ex)
@@ -3436,7 +3576,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table Master-Detail report in open presentation format
+                                                                                  //Call AssembleDocument to generate In-Table Master-Detail report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
                         }
                         catch (Exception ex)
@@ -3544,7 +3684,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Multicolored Numbered List report in open document format
+                                                                                  //Call AssembleDocument to generate Multicolored Numbered List report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
                         }
                         catch (Exception ex)
@@ -3647,7 +3787,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Multicolored Numbered List report in open spreadsheet format
+                                                                                  //Call AssembleDocument to generate Multicolored Numbered List report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
                         }
                         catch (Exception ex)
@@ -3750,7 +3890,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Multicolored Numbered List report in open presentation format
+                                                                                  //Call AssembleDocument to generate Multicolored Numbered List report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
                         }
                         catch (Exception ex)
@@ -3858,7 +3998,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Numbered List report in open document format
+                                                                                  //Call AssembleDocument to generate Numbered List report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
                         }
                         catch (Exception ex)
@@ -3961,7 +4101,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Numbered List report in open spreadsheet format
+                                                                                  //Call AssembleDocument to generate Numbered List report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
                         }
                         catch (Exception ex)
@@ -4064,7 +4204,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Numbered List report in open presentation format
+                                                                                  //Call AssembleDocument to generate Numbered List report in open presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
                         }
                         catch (Exception ex)
@@ -4172,7 +4312,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Pie Chart report in document format
+                                                                                  //Call AssembleDocument to generate Pie Chart report in document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
                         }
                         catch (Exception ex)
@@ -4275,7 +4415,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Pie Chart report in spreadsheet format
+                                                                                  //Call AssembleDocument to generate Pie Chart report in spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
                         }
                         catch (Exception ex)
@@ -4378,7 +4518,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Pie Chart report in presentation format
+                                                                                  //Call AssembleDocument to generate Pie Chart report in presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
                         }
                         catch (Exception ex)
@@ -4486,7 +4626,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Scatter Chart report in document format
+                                                                                  //Call AssembleDocument to generate Scatter Chart report in document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
                         }
                         catch (Exception ex)
@@ -4589,7 +4729,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Scatter Chart report in spreadsheet format
+                                                                                  //Call AssembleDocument to generate Scatter Chart report in spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
                         }
                         catch (Exception ex)
@@ -4692,7 +4832,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Scatter Chart report in presentation format
+                                                                                  //Call AssembleDocument to generate Scatter Chart report in presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
                         }
                         catch (Exception ex)
@@ -4800,7 +4940,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Single Row report in open document format
+                                                                                  //Call AssembleDocument to generate Single Row report in open document format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerDataJson(), "customer");
                         }
                         catch (Exception ex)
@@ -4903,7 +5043,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Single Row report in open spreadsheet format
+                                                                                  //Call AssembleDocument to generate Single Row report in open spreadsheet format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerDataJson(), "customer");
                         }
                         catch (Exception ex)
@@ -5006,7 +5146,7 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Single Row report in presentation format
+                                                                                  //Call AssembleDocument to generate Single Row report in presentation format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerDataJson(), "customer");
                         }
                         catch (Exception ex)
@@ -5342,7 +5482,7 @@ namespace GroupDocs.AssemblyExamples
         {
             string strDocumentTemplate = "Presentation Templates/Importing Word Processing Table into Presentation.pptx";
             string strDocumentReport = "Presentation Reports/Importing Word Processing Table into Presentation_Output.pptx";
-           
+
 
             // Assemble a document using the external document table as a data source.
             DocumentAssembler assembler = new DocumentAssembler();
