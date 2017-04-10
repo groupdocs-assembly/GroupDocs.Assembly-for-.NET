@@ -4,6 +4,7 @@ Imports System.Linq
 Imports System.Text
 Imports System.Threading.Tasks
 Imports GroupDocs.Assembly
+Imports GroupDocs.Assembly.Data
 Imports GroupDocs.AssemblyExamples.BusinessLayer
 Imports GroupDocs.AssemblyExamples.BusinessLayer.GroupDocs.AssemblyExamples.BusinessLayer
 
@@ -11,8 +12,140 @@ Imports GroupDocs.AssemblyExamples.BusinessLayer.GroupDocs.AssemblyExamples.Busi
 
 Namespace GroupDocs.AssemblyExamples
     Public NotInheritable Class GenerateReport
-        Private Sub New()
+
+
+        ''' <summary>
+        ''' Shows how to load document Table set using default options
+        ''' Features is supported by version 17.01 or greater
+        ''' </summary>
+        ''' <param name="dataSource">name of the data source file</param>
+        Public Shared Sub LoadDocTableSet(dataSource As String)
+            'ExStart:LoadDocTableSet
+            ' Load all document tables using default options.
+            Dim tableSet As New DocumentTableSet(CommonUtilities.GetDataSourceDocument(Convert.ToString("Word DataSource/") & dataSource))
+
+            ' Check loading.
+            Debug.Assert(tableSet.Tables.Count = 3)
+            Debug.Assert(tableSet.Tables(0).Name = "Table1")
+            Debug.Assert(tableSet.Tables(1).Name = "Table2")
+            Debug.Assert(tableSet.Tables(2).Name = "Table3")
+            'ExEnd:LoadDocTableSet
         End Sub
+
+        ''' <summary>
+        ''' Show how to Load document table set using custom options
+        ''' Features is supported by version 17.01 or greater
+        ''' </summary>
+        ''' <param name="dataSource">name of the data source file</param>
+        Public Shared Sub LoadDocTableSetWithCustomOptions(dataSource As String)
+            'ExStart:LoadDocTableSetWithCustomOptions
+            ' Load document tables using custom options.
+            Dim tableSet As New DocumentTableSet(CommonUtilities.GetDataSourceDocument(Convert.ToString("Word DataSource/") & dataSource), New CustomDocumentTableLoadHandler())
+
+            ' Ensure that the second table is not loaded.
+            Debug.Assert(tableSet.Tables.Count = 2)
+            Debug.Assert(tableSet.Tables(0).Name = "Table1")
+            Debug.Assert(tableSet.Tables(1).Name = "Table3")
+
+            ' Ensure that default options are used to load the first table (that is, default column names are used).
+            Debug.Assert(tableSet.Tables(0).Columns.Count = 2)
+            Debug.Assert(tableSet.Tables(0).Columns(0).Name = "Column1")
+            Debug.Assert(tableSet.Tables(0).Columns(1).Name = "Column2")
+
+            ' Ensure that custom options are used to load the third table (that is, column names are extracted).
+            Debug.Assert(tableSet.Tables(1).Columns.Count = 2)
+            Debug.Assert(tableSet.Tables(1).Columns(0).Name = "Name")
+            Debug.Assert(tableSet.Tables(1).Columns(1).Name = "Address")
+            'ExEnd:LoadDocTableSetWithCustomOptions
+        End Sub
+
+        ''' <summary>
+        ''' Shows how to use document TableSet as DataSource
+        ''' Features is supported by version 17.01 or greater
+        ''' </summary>
+        ''' <param name="dataSource">Name of the data source file</param>
+        ''' <param name="slideDoc">name of the template file</param>
+        Public Shared Sub UseDocumentTableSetAsDataSource(dataSource As String, slideDoc As String)
+            'ExStart:UseDocumentTableSetAsDataSource
+            'setting up output document
+            Const outDocument As String = "Presentation Reports/Use Document Table Set As DataSource Output.pptx"
+            'set up path for the template file
+            Dim templateFile As String = CommonUtilities.GetSourceDocument(Convert.ToString("Presentation Templates/") & slideDoc)
+            ' Set table column names to be extracted from the document.
+            Dim tableSet As New DocumentTableSet(CommonUtilities.GetDataSourceDocument(Convert.ToString("Word DataSource/") & dataSource), New ColumnNameExtractingDocumentTableLoadHandler())
+
+            ' Set table names for conveniency.
+            tableSet.Tables(0).Name = "Planets"
+            tableSet.Tables(1).Name = "Persons"
+            tableSet.Tables(2).Name = "Companies"
+
+            ' Pass DocumentTableSet as a data source.
+            Dim assembler As New DocumentAssembler()
+            assembler.AssembleDocument(templateFile, CommonUtilities.SetDestinationDocument(outDocument), tableSet)
+            'ExEnd:UseDocumentTableSetAsDataSource
+        End Sub
+
+        ''' <summary>
+        ''' Shows how to define document table relations
+        ''' Feature is supported by version 17.01 or greater
+        ''' </summary>
+        ''' <param name="relatedTables">name of the data source file</param>
+        ''' <param name="docTableRelations">name of the template file</param>
+        Public Shared Sub DefiningDocumentTableRelations(relatedTables As String, docTableRelations As String)
+            'ExStart:DefiningDocumentTableRelations
+            'setting up output document
+            Const outDocument As String = "Word Reports/document relations output.docx"
+            'set up path for the related tables data source
+            Dim relatedTablesDataSource As String = CommonUtilities.GetDataSourceDocument(Convert.ToString("Excel DataSource/") & relatedTables)
+            'set up path for the template file
+            Dim templateFile As String = CommonUtilities.GetSourceDocument(Convert.ToString("Word Templates/") & docTableRelations)
+
+            ' Set table column names to be extracted from the document.
+            Dim tableSet As New DocumentTableSet(relatedTablesDataSource, New ColumnNameExtractingDocumentTableLoadHandler())
+
+            ' Define relations between tables.
+            ' NOTE: For Spreadsheet documents, table names are extracted from sheet names.
+            tableSet.Relations.Add(tableSet.Tables("CLIENT").Columns("ID"), tableSet.Tables("CONTRACT").Columns("CLIENT_ID"))
+
+            tableSet.Relations.Add(tableSet.Tables("MANAGER").Columns("ID"), tableSet.Tables("CONTRACT").Columns("MANAGER_ID"))
+
+            ' Pass DocumentTableSet as a data source.
+            Dim assembler As New DocumentAssembler()
+            assembler.AssembleDocument(templateFile, CommonUtilities.SetDestinationDocument(outDocument), tableSet)
+            'ExEnd:DefiningDocumentTableRelations
+        End Sub
+
+        ''' <summary>
+        ''' Shows how to change document table column type
+        ''' Feature is supported by version 17.01 or greater
+        ''' </summary>
+        ''' <param name="document"></param>
+        Public Shared Sub ChangingDocumentTableColumnType(document As String)
+            'ExStart:ChangingDocumentTableColumnType
+            'setting up data source document
+            Const dataSrcDocument As String = "Word DataSource/Managers Data.docx"
+            'setting up output document
+            Const outDocument As String = "Presentation Reports/Out.pptx"
+
+            ' Set table column names to be extracted from the document.
+            Dim options As New DocumentTableOptions()
+            options.FirstRowContainsColumnNames = True
+
+            Dim table As New DocumentTable(CommonUtilities.GetDataSourceDocument(dataSrcDocument), 1, options)
+
+            ' NOTE: For non-Spreadsheet documents, the type of a document table column is always string by default.
+            Debug.Assert(table.Columns("Total_Contract_Price").Type = GetType(String))
+
+            ' Change the column's type to double thus enabling to use arithmetic operations on values of the column 
+            ' such as summing in templates.
+            table.Columns("Total_Contract_Price").Type = GetType(Double)
+
+            ' Pass DocumentTable as a data source.
+            Dim assembler As New DocumentAssembler()
+            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(document), CommonUtilities.SetDestinationDocument(outDocument), table, "Managers")
+            'ExEnd:ChangingDocumentTableColumnType
+        End Sub
+
 
         Public Shared Sub GenerateBubbleChart(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean, isJson As Boolean)
             Select Case strDocumentFormat

@@ -17,8 +17,9 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
 
         public const string sourceFolderPath = "../../../../Data/Source/";
         public const string destinationFolderPath = "../../../../Data/Destination/";
+        public const string dataSourcesFolderPath = "../../../../Data/Data Sources/";
         //ExStart:LicenseFilePath
-        public const string licensePath = "../../GroupDocs.Assembly Product Family.lic";
+        public const string licensePath = "D:/Aspose Projects/License/GroupDocs.Total.lic";
         //ExEnd:LicenseFilePath
 
         #region DocumentDirectories
@@ -42,6 +43,16 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         public static string SetDestinationDocument(string outputFileName)
         {
             return Path.Combine(Path.GetFullPath(destinationFolderPath), outputFileName);
+        }
+
+        /// <summary>
+        /// Takes source file name as argument. 
+        /// </summary>
+        /// <param name="sourceFileName">Source file name</param>
+        /// <returns>Returns explicit path by combining data source folder path and source file name.</returns>
+        public static string GetDataSourceDocument(string sourceFileName)
+        {
+            return Path.Combine(Path.GetFullPath(dataSourcesFolderPath), sourceFileName);
         }
 
         //ExEnd:DocumentDirectories

@@ -13,8 +13,10 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
 
         Public Const sourceFolderPath As String = "../../../../Data/Source/"
         Public Const destinationFolderPath As String = "../../../../Data/Destination/"
+        Public Const dataSourcesFolderPath As String = "../../../../Data/Data Sources/"
+
         'ExStart:LicenseFilePath
-        Public Const licensePath As String = "../../GroupDocs.Assembly Product Family.lic"
+        Public Const licensePath As String = "D:/Aspose Projects/License/GroupDocs.Total.lic"
         'ExEnd:LicenseFilePath
 
 #Region "DocumentDirectories"
@@ -37,6 +39,18 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         Public Shared Function SetDestinationDocument(outputFileName As String) As String
             Return Path.Combine(Path.GetFullPath(destinationFolderPath), outputFileName)
         End Function
+
+
+        ''' <summary>
+        ''' Takes source file name as argument. 
+        ''' </summary>
+        ''' <param name="sourceFileName">Source file name</param>
+        ''' <returns>Returns explicit path by combining data source folder path and source file name.</returns>
+        Public Shared Function GetDataSourceDocument(sourceFileName As String) As String
+            Return Path.Combine(Path.GetFullPath(dataSourcesFolderPath), sourceFileName)
+        End Function
+
+
         'ExEnd:DocumentDirectories
 #End Region
 
@@ -81,7 +95,7 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         ''' <param name="varlist">IEnumerable varlist</param>
         ''' <param name="fn">Delegate as parameter</param>
         ''' <returns>It returns DataTable</returns>
-        <System.Runtime.CompilerServices.Extension> _
+        <System.Runtime.CompilerServices.Extension>
         Public Function ToADOTable(Of T)(varlist As IEnumerable(Of T), fn As ConvertDataTable.CreateRowDelegate(Of T)) As DataTable
             Dim dtReturn As New DataTable()
             Dim oProps As PropertyInfo() = Nothing
