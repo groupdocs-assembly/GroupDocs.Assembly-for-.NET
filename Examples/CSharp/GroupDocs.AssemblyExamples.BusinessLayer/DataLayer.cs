@@ -480,6 +480,32 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
             Debug.Assert(table.Columns[1].Name == "Column2");
             return table;
         }
+
+        /// <summary>
+        /// Import spread sheet to html document
+        /// </summary>
+        /// <returns></returns>
+        public static GroupDocs.Assembly.Data.DocumentTable ImportingSpreadsheetToHtml()
+        {
+
+            // Do not extract column names from the first row, so that the first row to be treated as a data row.
+            // Limit the largest row index, so that only the first four data rows to be loaded.
+            DocumentTableOptions options = new DocumentTableOptions();
+            //options.MaxRowIndex = 3;
+
+            // Use data of the _second_ table in the document.
+            DocumentTable table = new DocumentTable(excelDataFile, 0);
+
+            // Check column count and names.
+            Debug.Assert(table.Columns.Count == 3);
+
+            // NOTE: Default column names are used, because we do not extract the names from the first row.
+            Debug.Assert(table.Columns[0].Name == "A");
+            Debug.Assert(table.Columns[1].Name == "B");
+            Debug.Assert(table.Columns[2].Name == "C");
+             return table;
+        }
+
         /// <summary>
         /// Presentation file data source
         /// </summary>

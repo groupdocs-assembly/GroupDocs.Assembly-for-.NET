@@ -1,0 +1,1 @@
+We provide support for the following products: <<foreach [in products]>><<[IndexOf() != 0 ? ", " : ""]>><<[ProductName]>><</foreach>>

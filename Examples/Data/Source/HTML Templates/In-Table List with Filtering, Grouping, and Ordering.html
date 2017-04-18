@@ -1,0 +1,27 @@
+<html>
+<body>
+<table>
+<tr>
+<th>
+Customer
+</th>
+<th>
+Order Price
+</th>
+</tr>
+&lt;&lt;foreach [in orders
+    .Where(c =&gt; c.OrderDate.Year == 2015)
+    .GroupBy(c =&gt; c.Customer)
+    .OrderBy(g =&gt; g.Key.CustomerName)]&gt;&gt;
+<tr>
+<td>
+<b>&lt;&lt;[Key.CustomerName]&gt;&gt;</b>
+</td>
+<td>
+&lt;&lt;[Sum(c =&gt; c.Price)]&gt;&gt;
+</td>
+</tr>
+&lt;&lt;/foreach&gt;&gt;
+</table>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<<foreach [in customers]>><<[CustomerName]>>
+Products: <<foreach [in Order]>><<[IndexOf() != 0 ? ", " : ""]>><<[Product.ProductName]>><</foreach>>
+
+<</foreach>>
