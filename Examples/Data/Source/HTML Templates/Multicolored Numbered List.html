@@ -1,0 +1,10 @@
+<html>
+<body>
+We provide support for the following products:
+<ol>
+&lt;&lt;foreach [in products]&gt;&gt;
+<li &lt;&lt;if [IndexOf() % 2 == 0]&gt;&gt;style="background-color:#FFF8DC"&lt;&lt;/if&gt;&gt;>&lt;&lt;[ProductName]&gt;&gt;</li>
+&lt;&lt;/foreach&gt;&gt;
+</ol>
+</body>
+</html>

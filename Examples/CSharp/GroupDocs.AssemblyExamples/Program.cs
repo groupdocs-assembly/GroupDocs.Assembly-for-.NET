@@ -40,6 +40,12 @@ namespace GroupDocs.AssemblyExamples
 
             //Generate a Bulleted List report in presentation format
             //GenerateReport.GenerateBulletedList("presentation", false, false, true, false);
+
+            //Generate a Bulleted List report in html format
+            //GenerateReport.GenerateBulletedList("html", false, false, false, false);
+
+            //Generate a Bulleted List report in text format
+            //GenerateReport.GenerateBulletedList("text", false, false, false, false);
             #endregion
 
             #region Generating Chart report with Filtering, Grouping, and Ordering
@@ -62,6 +68,12 @@ namespace GroupDocs.AssemblyExamples
 
             //Generate a Common List Report in presentation format
             //GenerateReport.GenerateCommonList("presentation", false, false, true, false);
+
+            //Generate a Common List Report in html format
+            //GenerateReport.GenerateCommonList("html", false, false, false, false);
+
+            //Generate a Common List Report in text format
+            //GenerateReport.GenerateCommonList("text", false, false, false, false);
             #endregion
 
             #region Generating Common Master-Detail Report
@@ -73,6 +85,13 @@ namespace GroupDocs.AssemblyExamples
 
             //Generate a Common Master-Detail Report in presentation format
             //GenerateReport.GenerateCommonMasterDetail("presentation", false, false, false, true);
+
+            //Generate a Common Master-Detail Report in html format
+            //GenerateReport.GenerateCommonMasterDetail("html", false, false, false, false);
+
+            //Generate a Common Master-Detail Report in text format
+            //GenerateReport.GenerateCommonMasterDetail("text", false, false, false, false);
+
             #endregion
 
             #region Generating In-Paragraph List Report
@@ -84,6 +103,12 @@ namespace GroupDocs.AssemblyExamples
 
             //Generate a In-Paragraph List Report in presentation format
             //GenerateReport.GenerateInParagraphList("presentation", false, false, false, true);
+
+            //Generate a In-Paragraph List Report in html format
+            //GenerateReport.GenerateInParagraphList("html", false, false, false, false);
+
+            //Generate a In-Paragraph List Report in text format
+            //GenerateReport.GenerateInParagraphList("text", false, false, false, false);
             #endregion
 
             #region Generating In-Table with Alternate Content Report
@@ -95,6 +120,9 @@ namespace GroupDocs.AssemblyExamples
 
             //Generate a In-Table List with Alternate Content Report in presentation format
             //GenerateReport.GenerateInTableListWithAlternateContent("presentation", false, false, false, true);
+
+            //Generate a In-Table List with Alternate Content Report in html format
+            //GenerateReport.GenerateInTableListWithAlternateContent("html", false, false, false, false);
             #endregion
 
             #region Generating In-Table with Filtering, Grouping and Ordering Report
@@ -106,6 +134,9 @@ namespace GroupDocs.AssemblyExamples
 
             //Generate a In-Table List with Filtering, Grouping, and Ordering Report in presentation format
             //GenerateReport.GenerateInTableListWithFilteringGroupingAndOrdering("presentation", false, false, false, true);
+
+            //Generate a In-Table List with Filtering, Grouping, and Ordering Report in html format
+            //GenerateReport.GenerateInTableListWithFilteringGroupingAndOrdering("html", false, false, false, false);
             #endregion
 
             #region Generating In-Table List with Highlighted Rows Report
@@ -117,6 +148,9 @@ namespace GroupDocs.AssemblyExamples
 
             //Generate a In-Table List with Highlighted Rows Report in presentation format
             //GenerateReport.GenerateInTableListWithHighlightedRows("presentation", false, false, false, true);
+
+            //Generate a In-Table List with Highlighted Rows Report in html format
+            //GenerateReport.GenerateInTableListWithHighlightedRows("html", false, false, false, false);
             #endregion
 
             #region Generating In-Table List Report
@@ -128,6 +162,9 @@ namespace GroupDocs.AssemblyExamples
 
             //Generate a In-Table List Report in presentation format
             //GenerateReport.GenerateInTableList("presentation", false, false, false, true);
+
+            //Generate a In-Table List Report in html format
+            //GenerateReport.GenerateInTableList("html", false, false, false, false);
             #endregion
 
             #region Generating In-Table Master-Detail Report
@@ -139,6 +176,9 @@ namespace GroupDocs.AssemblyExamples
 
             //Generate a In-Table Master-Detail Report in presentation format
             //GenerateReport.GenerateInTableMasterDetail("presentation", false, false, false, true);
+
+            //Generate a In-Table Master-Detail Report in html format
+            //GenerateReport.GenerateInTableMasterDetail("html", false, false, false, false);
             #endregion
 
             #region Generating Multicolored Number List Report
@@ -150,6 +190,9 @@ namespace GroupDocs.AssemblyExamples
 
             //Generate a Multicolored Numbered List Report in presentation format
             //GenerateReport.GenerateMulticoloredNumberedList("presentation", false, false, false, true);
+
+            //Generate a Multicolored Numbered List Report in html format
+            //GenerateReport.GenerateMulticoloredNumberedList("html", false, false, false, false);
             #endregion
 
             #region Generating Numbered List Report
@@ -161,6 +204,12 @@ namespace GroupDocs.AssemblyExamples
 
             //Generate a Numbered List Report in presentation format
             //GenerateReport.GenerateNumberedList("presentation", false, false, false, true);
+
+            //Generate a Numbered List Report in html format
+            //GenerateReport.GenerateNumberedList("html", false, false, false, false);
+
+            //Generate a Numbered List Report in text format
+            //GenerateReport.GenerateNumberedList("text", false, false, false, false);
             #endregion
 
             #region Generating Pie Chart Report
@@ -194,6 +243,12 @@ namespace GroupDocs.AssemblyExamples
 
             //Generate a Single Row Report in presentation format
             //GenerateReport.GenerateSingleRow("presentation", false, false, false, true);
+
+            //Generate a Single Row Report in html format
+            //GenerateReport.GenerateSingleRow("html", false, false, false, false);
+
+            //Generate a Single Row Report in text format
+            //GenerateReport.GenerateSingleRow("text", false, false, false, false);
             #endregion
 
             #region Generating Report by Recursively and Lazily Accessing the Data
@@ -248,6 +303,9 @@ namespace GroupDocs.AssemblyExamples
             //Importing word processing table into presentation
             //GenerateReport.ImportingWordProcessingTableIntoPresentation();
 
+            //Importing spread table into html
+            //GenerateReport.ImportingSpreadsheetIntoHtmlDocument();
+
             //Load document table set using default options
             //GenerateReport.LoadDocTableSet("Multiple Tables Data.docx");
             //Load document table set using custom options
@@ -256,6 +314,7 @@ namespace GroupDocs.AssemblyExamples
             //GenerateReport.UseDocumentTableSetAsDataSource("Multiple Tables Data.docx", "Using Document Table Set as Data Source.pptx");
             //GenerateReport.DefiningDocumentTableRelations("Related Tables Data.xlsx", "Using Document Table Relations.docx");
             //GenerateReport.ChangingDocumentTableColumnType("Presentation Templates/Changing Document Table Column Type.pptx");
+            
         }
     }
 }

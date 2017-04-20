@@ -1,0 +1,33 @@
+<html>
+<body>
+<table>
+<tr>
+<th>
+Customer
+</th>
+<th>
+Order Price
+</th>
+</tr>
+&lt;&lt;foreach [in orders]&gt;&gt;
+<tr &lt;&lt;if [Price &gt;= 450]&gt;&gt;style="background-color:#FFF8DC"&lt;&lt;/if&gt;&gt;> <!-- Repeated row. -->
+<td>
+<b>&lt;&lt;[Customer.CustomerName]&gt;&gt;</b>
+</td>
+<td>
+&lt;&lt;[Price]&gt;&gt;
+</td>
+</tr>
+&lt;&lt;/foreach&gt;&gt;
+<tr> <!-- Footer row. -->
+<td>
+<b>Total:</b>
+</td>
+<td>
+&lt;&lt;[Sum(c =&gt; c.Price)]&gt;&gt;
+</td>
+</tr>
+
+</table>
+</body>
+</html>

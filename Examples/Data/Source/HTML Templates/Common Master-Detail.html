@@ -1,0 +1,9 @@
+<html>
+<body>
+&lt;&lt;foreach [in customers]&gt;&gt;
+<img height="100" width="100" src="data:image/jpeg;base64,&lt;&lt;[Photo]&gt;&gt;"/>
+<h2>&lt;&lt;[CustomerName]&gt;&gt;</h2>
+<p><b>Products: &lt;&lt;foreach [in Order]&gt;&gt;&lt;&lt;[IndexOf() != 0 ? ", " : ""]&gt;&gt;&lt;&lt;[Product.ProductName]&gt;&gt;&lt;&lt;/foreach&gt;&gt;</b></p>
+&lt;&lt;/foreach&gt;&gt;
+</body>
+</html>
