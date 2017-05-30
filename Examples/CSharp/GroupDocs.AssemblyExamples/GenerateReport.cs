@@ -782,87 +782,6 @@ namespace GroupDocs.AssemblyExamples
                     break;
 
                 case "html":
-                    if (isDatabase)
-                    {
-                        //ExStart:GenerateBulletedListFromDatabaseinHtmlFormat
-                        //Setting up source html template
-                        const String strHtmlTemplate = "HTML Templates/Bulleted List.html";
-                        //Setting up destination html report 
-                        const String strHtmlReport = "HTML Reports/Bulleted List Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Bulleted List Report in open spreadsheet format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetProductsDataDB(), "products");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateBulletedListFromDatabaseinHtmlFormat
-                    }
-                    else if (isDataSet)
-                    {
-                        //ExStart:GenerateBulletedListFromDataSetinHtmlFormat
-                        //Setting up source html template
-                        const String strHtmlTemplate = "HTML Templates/Bulleted List.html";
-                        //Setting up destination html report 
-                        const String strHtmlReport = "HTML Reports/Bulleted List Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Bulleted List Report in open spreadsheet format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetProductsDT());
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateBulletedListFromDataSetinHtmlFormat
-                    }
-                    else if (isDataSourceXML)
-                    {
-                        //ExStart:GenerateBulletedListFromXMLinHtmlFormat
-                        //Setting up source html template
-                        const String strHtmlTemplate = "HTML Templates/Bulleted List.html";
-                        //Setting up destination html report 
-                        const String strHtmlReport = "HTML Reports/Bulleted List Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Bulleted List Report in open spreadsheet format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetAllDataFromXML(), "ds");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateBulletedListFromXMLinHtmlFormat
-                    }
-                    else if (isJson)
-                    {
-                        //ExStart:GenerateBulletedListFromJsoninHtml
-                        //setting up source 
-                        const String strDocumentTemplate = "HTML Templates/Bulleted List.html";
-                        //Setting up destination 
-                        const String strDocumentReport = "HTML Reports/Bulleted List Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate bulleted list in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateBulletedListFromJsoninHtml
-                    }
-                    else
                     {
                         //ExStart:GenerateBulletedListinHTMLFormat
                         //Setting up source html template
@@ -1535,87 +1454,6 @@ namespace GroupDocs.AssemblyExamples
                     break;
 
                 case "html":
-                    if (isDatabase)
-                    {
-                        //ExStart:GenerateCommonListFromDatabaseinHtmlFormat
-                        //Setting up source html document template
-                        const String strDocumentTemplate = "HTML Templates/Common List.html";
-                        //Setting up destination html report 
-                        const String strDocumentReport = "HTML Reports/Common List_DB Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersDataDB(), "customers");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateCommonListFromDatabaseinHtmlFormat
-                    }
-                    else if (isDataSet)
-                    {
-                        //ExStart:GenerateCommonListFromDataSetinHtmlFormat
-                        //Setting up source html template
-                        const String strDocumentTemplate = "HTML Templates/Common List.html";
-                        //Setting up destination html report 
-                        const String strDocumentReport = "HTML Reports/Common List_DT Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersAndOrdersDataDT());
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateCommonListFromDataSetinHtmlFormat
-                    }
-                    else if (isDataSourceXML)
-                    {
-                        //ExStart:GenerateCommonListFromXMLinHtmlFormat
-                        //Setting up source html template
-                        const String strDocumentTemplate = "HTML Templates/Common List.html";
-                        //Setting up destination open document report 
-                        const String strDocumentReport = "HTML Reports/Common List_XML Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateCommonListFromXMLinHtmlFormat
-                    }
-                    else if (isJson)
-                    {
-                        //ExStart:GenerateCommonListReportFromJsoninHtml
-                        //setting up source 
-                        const String strDocumentTemplate = "HTML Templates/Common List.html";
-                        //Setting up destination 
-                        const String strDocumentReport = "HTML Reports/Common List_HTML_Json Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Common List report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateCommonListReportFromJsoninHtml
-                    }
-                    else
                     {
                         //ExStart:GenerateCommonListinHtmlFormat
                         //Setting up source html template
@@ -1973,87 +1811,6 @@ namespace GroupDocs.AssemblyExamples
                     break;
 
                 case "html":
-                    if (isDatabase)
-                    {
-                        //ExStart:GenerateCommonMasterDetailFromDatabaseinHtmlFormat
-                        //Setting up source html template
-                        const String strDocumentTemplate = "HTML Templates/Common Master-Detail.html";
-                        //Setting up destination html report 
-                        const String strDocumentReport = "HTML Reports/Common Master-Detail_DB Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common Master-Detail Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersDataDB(), "customers");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateCommonMasterDetailFromDatabaseinHtmlFormat
-                    }
-                    else if (isDataSet)
-                    {
-                        //ExStart:GenerateCommonMasterDetailFromDataSetinHtmlFormat
-                        //Setting up source html template
-                        const String strDocumentTemplate = "HTML Templates/Common Master-Detail.html";
-                        //Setting up destination html report 
-                        const String strDocumentReport = "HTML Reports/Common Master-Detail Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common Master-Detail Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersAndOrdersDataDT());
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateCommonMasterDetailFromDataSetinHtmlFormat
-                    }
-                    else if (isDataSourceXML)
-                    {
-                        //ExStart:GenerateCommonMasterDetailFromXMLinHtmlFormat
-                        //Setting up source html template
-                        const String strDocumentTemplate = "HTML Templates/Common Master-Detail.html";
-                        //Setting up destination html report 
-                        const String strDocumentReport = "HTML Reports/Common Master-Detail_XML Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common Master-Detail Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateCommonMasterDetailFromXMLinHtmlFormat
-                    }
-                    else if (isJson)
-                    {
-                        //ExStart:GenerateCommonMasterDetailReportFromJsoninHtml
-                        //setting up source 
-                        const String strDocumentTemplate = "HTML Templates/Common Master-Detail.html";
-                        //Setting up destination 
-                        const String strDocumentReport = "HTML Reports/Common Master-Detail_Json Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Common master-detail report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateCommonMasterDetailReportFromJsoninHtml
-                    }
-                    else
                     {
                         //ExStart:GenerateCommonMasterDetailinHtmlFormat
                         //Setting up source html template
@@ -2410,87 +2167,6 @@ namespace GroupDocs.AssemblyExamples
                     }
                     break;
                 case "html":
-                    if (isDatabase)
-                    {
-                        //ExStart:GenerateInParagraphListFromDatabaseinHtmlFormat
-                        //Setting up source html template
-                        const String strDocumentTemplate = "HTML Templates/In-Paragraph List.html";
-                        //Setting up destination html report 
-                        const String strDocumentReport = "HTML Reports/In-Paragraph List_DB Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Paragraph List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataDB(), "products");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInParagraphListFromDatabaseinHtmlFormat
-                    }
-                    else if (isDataSet)
-                    {
-                        //ExStart:GenerateInParagraphListFromDataSetinHtmlFormat
-                        //Setting up source html template
-                        const String strDocumentTemplate = "HTML Templates/In-Paragraph List.html";
-                        //Setting up destination html report 
-                        const String strDocumentReport = "HTML Reports/In-Paragraph List_DT Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Paragraph List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDT());
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInParagraphListFromDataSetinHtmlFormat
-                    }
-                    else if (isDataSourceXML)
-                    {
-                        //ExStart:GenerateInParagraphListFromXMLinHtmlFormat
-                        //Setting up source html template
-                        const String strDocumentTemplate = "HTML Templates/In-Paragraph List.html";
-                        //Setting up destination html report 
-                        const String strDocumentReport = "HTML Reports/In-Paragraph List_XML Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Paragraph List Report in htmlformat
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInParagraphListFromXMLinHtmlFormat
-                    }
-                    else if (isJson)
-                    {
-                        //ExStart:GenerateInParagraphListReportFromJsoninHtml
-                        //setting up source 
-                        const String strDocumentTemplate = "HTML Templates/In-Paragraph List.html";
-                        //Setting up destination 
-                        const String strDocumentReport = "HTML Reports/In-Paragraph List_OpenDocument_Json Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Paragraph List report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInParagraphListReportFromJsoninHtml
-                    }
-                    else
                     {
                         //ExStart:GenerateInParagraphListinHtmlFormat
                         //Setting up source html template
@@ -2513,87 +2189,6 @@ namespace GroupDocs.AssemblyExamples
                     break;
 
                 case "text":
-                    if (isDatabase)
-                    {
-                        //ExStart:GenerateInParagraphListFromDatabaseinTextFormat
-                        //Setting up source text document template
-                        const String strDocumentTemplate = "Text Templates/In-Paragraph List.txt";
-                        //Setting up destination text document report 
-                        const String strDocumentReport = "Text Reports/In-Paragraph List_DB Report.txt";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Paragraph List Report in text document format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataDB(), "products");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInParagraphListFromDatabaseinTextFormat
-                    }
-                    else if (isDataSet)
-                    {
-                        //ExStart:GenerateInParagraphListFromDataSetinTextFormat
-                        //Setting up source text document template
-                        const String strDocumentTemplate = "Text Templates/In-Paragraph List.txt";
-                        //Setting up destination text document report 
-                        const String strDocumentReport = "Text Reports/In-Paragraph List_DT Report.txt";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Paragraph List Report in text document format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDT());
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInParagraphListFromDataSetinTextFormat
-                    }
-                    else if (isDataSourceXML)
-                    {
-                        //ExStart:GenerateInParagraphListFromXMLinTextFormat
-                        //Setting up source text document template
-                        const String strDocumentTemplate = "Text Templates/In-Paragraph List_XML_OpenDocument.txt";
-                        //Setting up destination text document report 
-                        const String strDocumentReport = "Text Reports/In-Paragraph List_XML Report.txt";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Paragraph List Report in text document format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInParagraphListFromXMLinTextFormat
-                    }
-                    else if (isJson)
-                    {
-                        //ExStart:GenerateInParagraphListReportFromJsoninText
-                        //setting up source 
-                        const String strDocumentTemplate = "Text Templates/In-Paragraph List.txt";
-                        //Setting up destination 
-                        const String strDocumentReport = "Text Reports/In-Paragraph List_Json Report.txt";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                                                                                  //Call AssembleDocument to generate In-Paragraph List report in text document format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInParagraphListReportFromJsoninText
-                    }
-                    else
                     {
                         //ExStart:GenerateInParagraphListinTextFormat
                         //Setting up source text document template
@@ -2929,87 +2524,7 @@ namespace GroupDocs.AssemblyExamples
                     }
                     break;
                 case "html":
-                    if (isDatabase)
-                    {
-                        //ExStart:GenerateInTableListWithAlternateContentFromDatabaseinHtmlFormat
-                        //Setting up source html template
-                        const String strHtmlTemplate = "HTML Templates/In-Table List with Alternate Content.html";
-                        //Setting up destination html report 
-                        const String strHtmlReport = "HTML Reports/In-Table List with Alternate Content_DB Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetProductsDataDB(), "products");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInTableListWithAlternateContentFromDatabaseinHtmlFormat
-                    }
-                    else if (isDataSet)
-                    {
-                        //ExStart:GenerateInTableListWithAlternateContentFromDataSetinHtmlFormat
-                        //Setting up source html template
-                        const String strHtmlTemplate = "HTML Templates/In-Table List with Alternate Content.html";
-                        //Setting up destination html report 
-                        const String strHtmlReport = "HTML Reports/In-Table List with Alternate Content_DT Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetProductsDT(), "ds");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInTableListWithAlternateContentFromDataSetinHtmlFormat
-                    }
-                    else if (isDataSourceXML)
-                    {
-                        //ExStart:GenerateInTableListWithAlternateContentFromXMLinHtmlFormat
-                        //Setting up source html template
-                        const String strHtmlTemplate = "HTML Templates/In-Table List with Alternate Content.html";
-                        //Setting up destination html report 
-                        const String strHtmlReport = "HTML Reports/In-Table List with Alternate Content_XML Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetAllDataFromXML(), "ds");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInTableListWithAlternateContentFromXMLinHtmlFormat
-                    }
-                    else if (isJson)
-                    {
-                        //ExStart:GenerateInTableListwithAlternateContentReportFromJsoninHtml
-                        //setting up source 
-                        const String strHtmlTemplate = "HTML Templates/In-Table List with Alternate Content.html";
-                        //Setting up destination 
-                        const String strHtmlReport = "HTML Reports/In-Table List with Alternate Content_OpenDocument_Json Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List with Alternate Content report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInTableListwithAlternateContentReportFromJsoninHtml
-                    }
-                    else
+
                     {
                         //ExStart:GenerateInTableListWithAlternateContentinHtmlFormat
                         //Setting up source html template
@@ -3345,87 +2860,6 @@ namespace GroupDocs.AssemblyExamples
                     }
                     break;
                 case "html":
-                    if (isDatabase)
-                    {
-                        //ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinHtmlDocument
-                        //Setting up source html template
-                        const String strHtmlTemplate = "HTML Templates/In-Table List with Filtering, Grouping, and Ordering.html";
-                        //Setting up destination html report 
-                        const String strHtmlReport = "HTML Reports/In-Table List with Filtering, Grouping, and Ordering_DB Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetOrdersDataDB(), "orders");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinHtmlDocument
-                    }
-                    else if (isDataSet)
-                    {
-                        //ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinHtmlDocument
-                        //Setting up source html template
-                        const String strHtmlTemplate = "HTML Templates/In-Table List with Filtering, Grouping, and Ordering.html";
-                        //Setting up destination html report 
-                        const String strHtmlReport = "HTML Reports/In-Table List with Filtering, Grouping, and Ordering_DT Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomersAndOrdersDataDT());
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinHtmlDocument
-                    }
-                    else if (isDataSourceXML)
-                    {
-                        //ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinHtmlDocument
-                        //Setting up source html template
-                        const String strHtmlTemplate = "HTML Templates/In-Table List with Filtering, Grouping, and Ordering.html";
-                        //Setting up destination html report 
-                        const String strHtmlReport = "HTML Reports/In-Table List with Filtering, Grouping, and Ordering_XML Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetAllDataFromXML(), "ds");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinHtmlDocument
-                    }
-                    else if (isJson)
-                    {
-                        //ExStart:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninHtml
-                        //setting up source 
-                        const String strHtmlTemplate = "HTML Templates/In-Table List with Filtering, Grouping, and Ordering_OpenDocument.html";
-                        //Setting up destination 
-                        const String strHtmlReport = "HTML Reports/In-Table List with Filtering, Grouping, and Ordering_OpenDocument_Json Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninHtml
-                    }
-                    else
                     {
                         //ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginHtmlDocument
                         //Setting up source html template
@@ -3763,87 +3197,6 @@ namespace GroupDocs.AssemblyExamples
                     break;
 
                 case "html":
-                    if (isDatabase)
-                    {
-                        //ExStart:GenerateInTableListWithHighlightedRowsFromDatabaseinHtmlDocument
-                        //Setting up source html template
-                        const String strHtmlTemplate = "HTML Templates/In-Table List with Highlighted Rows.html";
-                        //Setting up destination html report 
-                        const String strHtmlReport = "HTML Reports/In-Table List with Highlighted Rows_DB Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetOrdersDataDB(), "orders");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInTableListWithHighlightedRowsFromDatabaseinHtmlDocument
-                    }
-                    else if (isDataSet)
-                    {
-                        //ExStart:GenerateInTableListWithHighlightedRowsFromDataSetinHtmlDocument
-                        //Setting up source html template
-                        const String strHtmlTemplate = "HTML Templates/In-Table List with Highlighted Rows.html";
-                        //Setting up destination html report 
-                        const String strHtmlReport = "HTML Reports/In-Table List with Highlighted Rows_DT Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomersAndOrdersDataDT(), "ds");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInTableListWithHighlightedRowsFromDataSetinHtmlDocument
-                    }
-                    else if (isDataSourceXML)
-                    {
-                        //ExStart:GenerateInTableListWithHighlightedRowsFromXMLinHtmlDocument
-                        //Setting up source html template
-                        const String strHtmlTemplate = "HTML Templates/In-Table List with Highlighted Rows_XML_OpenDocument.html";
-                        //Setting up destination html report 
-                        const String strHtmlReport = "HTML Reports/In-Table List with Highlighted Rows_XML Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetAllDataFromXML(), "ds");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInTableListWithHighlightedRowsFromXMLinHtmlDocument
-                    }
-                    else if (isJson)
-                    {
-                        //ExStart:GenerateInTableListwithHighlightedRowsReportFromJsoninHtml 
-                        //setting up source 
-                        const String strHtmlTemplate = "HTML Templates/In-Table List with Highlighted Rows_OpenDocument.html";
-                        //Setting up destination 
-                        const String strHtmlReport = "HTML Reports/In-Table List with Highlighted Rows_OpenDocument_Json Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List with Highlighted Rows report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomerOrderDataFromJson(), "orders");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInTableListwithHighlightedRowsReportFromJsoninHtml 
-                    }
-                    else
                     {
                         //ExStart:GenerateInTableListWithHighlightedRowsinHtmlDocument
                         //Setting up source html template
@@ -4180,87 +3533,6 @@ namespace GroupDocs.AssemblyExamples
                     break;
 
                 case "html":
-                    if (isDatabase)
-                    {
-                        //ExStart:GenerateInTableListFromDatabaseinHtmlDocument
-                        //Setting up source html template
-                        const String strHtmlTemplate = "HTML Templates/In-Table List.html";
-                        //Setting up destination html report 
-                        const String strHtmlReport = "HTML Reports/In-Table List_DB Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomersDataDB(), "customers");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInTableListFromDatabaseinHtmlDocument
-                    }
-                    else if (isDataSet)
-                    {
-                        //ExStart:GenerateInTableListFromDataSetinHtmlDocument
-                        //Setting up source html template
-                        const String strHtmlTemplate = "HTML Templates/In-Table List.html";
-                        //Setting up destination html report 
-                        const String strHtmlReport = "HTML Reports/In-Table List_DT Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomersAndOrdersDataDT(), "ds");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInTableListFromDataSetinHtmlDocument
-                    }
-                    else if (isDataSourceXML)
-                    {
-                        //ExStart:GenerateInTableListFromXMLinHtmlDocument
-                        //Setting up source html template
-                        const String strHtmlTemplate = "HTML Templates/In-Table List.html";
-                        //Setting up destination html report 
-                        const String strHtmlReport = "HTML Reports/In-Table List_XML Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetAllDataFromXML(), "ds");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInTableListFromXMLinHtmlDocument
-                    }
-                    else if (isJson)
-                    {
-                        //ExStart:GenerateInTableListReportFromJsoninHtml
-                        //setting up source 
-                        const String strHtmlTemplate = "HTML Templates/In-Table List.html";
-                        //Setting up destination 
-                        const String strHtmlReport = "HTML Reports/In-Table List_OpenDocument_Json Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                                                                                  //Call AssembleDocument to generate In-Table List report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomerDataFromJson(), "customers");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInTableListReportFromJsoninHtml
-                    }
-                    else
                     {
                         //ExStart:GenerateInTableListinHtmlDocument
                         //Setting up source html template
@@ -4596,87 +3868,6 @@ namespace GroupDocs.AssemblyExamples
                     }
                     break;
                 case "html":
-                    if (isDatabase)
-                    {
-                        //ExStart:GenerateInTableMasterDetailFromDatabaseinHtmlFormat
-                        //Setting up source html template
-                        const String strHtmlTemplate = "HTML Templates/In-Table Master-Detail.html";
-                        //Setting up destination html report 
-                        const String strHtmlReport = "HTML Reports/In-Table Master-Detail_DB Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table Master-Detail Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomersDataDB(), "customers");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInTableMasterDetailFromDatabaseinHtmlFormat
-                    }
-                    else if (isDataSet)
-                    {
-                        //ExStart:GenerateInTableMasterDetailFromDataSetinHtmlFormat
-                        //Setting up source html template
-                        const String strHtmlTemplate = "HTML Templates/In-Table Master-Detail.html";
-                        //Setting up destination html report 
-                        const String strHtmlReport = "HTML Reports/In-Table Master-Detail_DT Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table Master-Detail Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomersAndOrdersDataDT(), "ds");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInTableMasterDetailFromDataSetinHtmlFormat
-                    }
-                    else if (isDataSourceXML)
-                    {
-                        //ExStart:GenerateInTableMasterDetailFromXMLinHtmlFormat
-                        //Setting up source html template
-                        const String strHtmlTemplate = "HTML Templates/In-Table Master-Detail.html";
-                        //Setting up destination html report 
-                        const String strHtmlReport = "HTML Reports/In-Table Master-Detail_XML Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table Master-Detail Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetAllDataFromXML(), "ds");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInTableMasterDetailFromXMLinHtmlFormat
-                    }
-                    else if (isJson)
-                    {
-                        //ExStart:GenerateInTableMasterDetailReportFromJsoninHtml
-                        //setting up source 
-                        const String strHtmlTemplate = "HTML Templates/In-Table Master-Detail.html";
-                        //Setting up destination 
-                        const String strHtmlReport = "HTML Reports/In-Table Master-Detail_Json Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table Master-Detail report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomerDataFromJson(), "customers");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateInTableMasterDetailReportFromJsoninHtml
-                    }
-                    else
                     {
                         //ExStart:GenerateInTableMasterDetailinHtmlFormat
                         //Setting up source html template
@@ -4695,6 +3886,98 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateInTableMasterDetailinHtmlFormat
+                    }
+                    break;
+            }
+        }
+
+        public static void GenerateInTableListWithProgressiveTotal(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
+        {
+            switch (strDocumentFormat)
+            {
+                case "document":
+                    //ExStart:GenerateInTableListWithProgressiveTotalinOpenDocumentProcessingFormat
+                    //Setting up source open document template
+                    const String strDocumentTemplate = "Word Templates/In-Table List with Running (Progressive) Total.docx";
+                    //Setting up destination open document report 
+                    const String strDocumentReport = "Word Reports/In-Table List with Running (Progressive) Total Report.docx";
+                    try
+                    {
+                        //Instantiate DocumentAssembler class
+                        DocumentAssembler assembler = new DocumentAssembler();
+                        //Call AssembleDocument to generate In-Table List with Progressive(Running) total Report in open document format
+                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                    //ExEnd:GenerateInTableListWithProgressiveTotalinOpenDocumentProcessingFormat
+
+                    break;
+
+                case "spreadsheet":
+                    {
+                        //ExStart:GenerateInTableListWithProgressiveTotalinOpenSpreadsheetFormat
+                        //Setting up source open spreadsheet template
+                        const String strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List with Running (Progressive) Total.xlsx";
+                        //Setting up destination open spreadsheet report 
+                        const String strSpreadsheetReport = "Spreadsheet Reports/In-Table List with Running (Progressive) Total Report.xlsx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Progressive(Running) total Report in open spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersData(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithProgressiveTotalinOpenSpreadsheetFormat
+                    }
+                    break;
+
+                case "presentation":
+                    {
+                        //ExStart:GenerateInTableListWithProgressiveTotalinOpenPresentationFormat
+                        //Setting up source open presentation template
+                        const String strPresentationTemplate = "Presentation Templates/In-Table List with Running (Progressive) Total.pptx";
+                        //Setting up destination open presentation report 
+                        const String strPresentationReport = "Presentation Reports/In-Table List with Running (Progressive) Total Report.pptx";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Progressive(running) total Report in open presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersData(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithProgressiveTotalinOpenPresentationFormat
+                    }
+                    break;
+                case "html":
+                    {
+                        //ExStart:GenerateInTableListWithProgressiveTotalinHtmlFormat
+                        //Setting up source html template
+                        const String strHtmlTemplate = "HTML Templates/In-Table List with Running (Progressive) Total.html";
+                        //Setting up destination html report 
+                        const String strHtmlReport = "HTML Reports/In-Table List with Running (Progressive) Total.html";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Progressive(Running) Total Report in html format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetOrdersData(), "orders");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithProgressiveTotalinHtmlFormat
                     }
                     break;
             }
@@ -5012,87 +4295,6 @@ namespace GroupDocs.AssemblyExamples
                     }
                     break;
                 case "html":
-                    if (isDatabase)
-                    {
-                        //ExStart:GenerateMulticoloredNumberedListFromDatabaseinHtml
-                        //Setting up source html template
-                        const String strDocumentTemplate = "HTML Templates/Multicolored Numbered List.html";
-                        //Setting up destination html report 
-                        const String strDocumentReport = "HTML Reports/Multicolored Numbered List_DB Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Multicolored Numbered List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataDB(), "products");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateMulticoloredNumberedListFromDatabaseinHtml
-                    }
-                    else if (isDataSet)
-                    {
-                        //ExStart:GenerateMulticoloredNumberedListFromDataSetinHtml
-                        //Setting up source html template
-                        const String strDocumentTemplate = "HTML Templates/Multicolored Numbered List.html";
-                        //Setting up destination html report 
-                        const String strDocumentReport = "HTML Reports/Multicolored Numbered List_DT Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Multicolored Numbered List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDT());
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateMulticoloredNumberedListFromDataSetinHtml
-                    }
-                    else if (isDataSourceXML)
-                    {
-                        //ExStart:GenerateMulticoloredNumberedListFromXMLinHtml
-                        //Setting up source html template
-                        const String strDocumentTemplate = "HTML Templates/Multicolored Numbered List_XML.html";
-                        //Setting up destination html report 
-                        const String strDocumentReport = "HTML Reports/Multicolored Numbered List_XML Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Multicolored Numbered List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateMulticoloredNumberedListFromXMLinHtml
-                    }
-                    else if (isJson)
-                    {
-                        //ExStart:GenerateMulticoloredNumberedListReportFromJsoninHtml
-                        //setting up source 
-                        const String strDocumentTemplate = "HTML Templates/Multicolored Numbered List.html";
-                        //Setting up destination 
-                        const String strDocumentReport = "HTML Reports/Multicolored Numbered List_Json Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Multicolored Numbered List report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateMulticoloredNumberedListReportFromJsoninHtml
-                    }
-                    else
                     {
                         //ExStart:GenerateMulticoloredNumberedListinHtml
                         //Setting up source html template
@@ -5430,87 +4632,6 @@ namespace GroupDocs.AssemblyExamples
                     break;
 
                 case "html":
-                    if (isDatabase)
-                    {
-                        //ExStart:GenerateNumberedListFromDatabaseinHtmlFormat
-                        //Setting up source html template
-                        const String strDocumentTemplate = "HTML Templates/Numbered List.html";
-                        //Setting up destination html report 
-                        const String strDocumentReport = "HTML Reports/Numbered List_DB Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Numbered List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataDB(), "products");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateNumberedListFromDatabaseinHtmlFormat
-                    }
-                    else if (isDataSet)
-                    {
-                        //ExStart:GenerateNumberedListFromDataSetinHtmlFormat
-                        //Setting up source html template
-                        const String strDocumentTemplate = "HTML Templates/Numbered List.html";
-                        //Setting up destination html report 
-                        const String strDocumentReport = "HTML Reports/Numbered List_DT Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Numbered List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDT());
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateNumberedListFromDataSetinHtmlFormat 
-                    }
-                    else if (isDataSourceXML)
-                    {
-                        //ExStart:GenerateNumberedListFromXMLinHtmlFormat
-                        //Setting up source html template
-                        const String strDocumentTemplate = "HTML Templates/Numbered List_XML.html";
-                        //Setting up destination html report 
-                        const String strDocumentReport = "HTML Reports/Numbered List_XML Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Numbered List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateNumberedListFromXMLinHtmlFormat 
-                    }
-                    else if (isJson)
-                    {
-                        //ExStart:GenerateNumberedListReportFromJsoninHtml
-                        //setting up source 
-                        const String strDocumentTemplate = "HTML Templates/Numbered List.html";
-                        //Setting up destination 
-                        const String strDocumentReport = "HTML Reports/Numbered List_Json Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Numbered List report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateNumberedListReportFromJsoninHtml
-                    }
-                    else
                     {
                         //ExStart:GenerateNumberedListinHtmlFormat
                         //Setting up source html template
@@ -5532,87 +4653,6 @@ namespace GroupDocs.AssemblyExamples
                     }
                     break;
                 case "text":
-                    if (isDatabase)
-                    {
-                        //ExStart:GenerateNumberedListFromDatabaseinTextFormat
-                        //Setting up source text document template
-                        const String strDocumentTemplate = "Text Templates/Numbered List.txt";
-                        //Setting up destination text document report 
-                        const String strDocumentReport = "Text Reports/Numbered List_DB Report.txt";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Numbered List Report in text document  format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataDB(), "products");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateNumberedListFromDatabaseinTextFormat
-                    }
-                    else if (isDataSet)
-                    {
-                        //ExStart:GenerateNumberedListFromDataSetinTextFormat
-                        //Setting up source text document template
-                        const String strDocumentTemplate = "Text Templates/Numbered List.txt";
-                        //Setting up destination text document report 
-                        const String strDocumentReport = "Text Reports/Numbered List_DT Report.txt";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Numbered List Report in text document  format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDT());
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateNumberedListFromDataSetinTextFormat 
-                    }
-                    else if (isDataSourceXML)
-                    {
-                        //ExStart:GenerateNumberedListFromXMLinTextFormat
-                        //Setting up source text document template
-                        const String strDocumentTemplate = "Text Templates/Numbered List_XML.txt";
-                        //Setting up destination text document report 
-                        const String strDocumentReport = "Text Reports/Numbered List_XML Report.txt";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Numbered List Report in text document  format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateNumberedListFromXMLinTextFormat 
-                    }
-                    else if (isJson)
-                    {
-                        //ExStart:GenerateNumberedListReportFromJsoninText
-                        //setting up source 
-                        const String strDocumentTemplate = "Text Templates/Numbered List.txt";
-                        //Setting up destination 
-                        const String strDocumentReport = "Text Reports/Numbered List_Json Report.txt";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Numbered List report in text document  format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateNumberedListReportFromJsoninText
-                    }
-                    else
                     {
                         //ExStart:GenerateNumberedListinTextFormat
                         //Setting up source text document template
@@ -6576,87 +5616,6 @@ namespace GroupDocs.AssemblyExamples
                     }
                     break;
                 case "html":
-                    if (isDatabase)
-                    {
-                        //ExStart:GenerateSingleRowFromDatabaseinHtmlFormat
-                        //Setting up source html template
-                        const String strHtmlTemplate = "HTML Templates/Single Row.html";
-                        //Setting up destination html report 
-                        const String strHtmlReport = "HTML Reports/Single Row_DB Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Single Row Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetSingleCustomerDataDB(), "customer");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateSingleRowFromDatabaseinHtmlFormat
-                    }
-                    else if (isDataSet)
-                    {
-                        //ExStart:GenerateSingleRowFromDataSetinHtmlFormat
-                        //Setting up source html template
-                        const String strHtmlTemplate = "HTML Templates/Single Row.html";
-                        //Setting up destination html report 
-                        const String strHtmlReport = "HTML Reports/Single Row_DT Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Single Row Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetSingleCustomerDT(), "customer");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateSingleRowFromDataSetinHtmlFormat
-                    }
-                    else if (isDataSourceXML)
-                    {
-                        //ExStart:GenerateSingleRowFromXMLinHtmlFormat
-                        //Setting up source html template
-                        const String strHtmlTemplate = "HTML Templates/Single Row.html";
-                        //Setting up destination html report 
-                        const String strHtmlReport = "HTML Reports/Single Row_XML Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Single Row Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetSingleCustomerXML(), "customer");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateSingleRowFromXMLinHtmlFormat
-                    }
-                    else if (isJson)
-                    {
-                        //ExStart:GenerateSingleRowReportFromJsoninHtmlFormat
-                        //setting up source 
-                        const String strHtmlTemplate = "HTML Templates/Single Row.html";
-                        //Setting up destination 
-                        const String strHtmlReport = "HTML Reports/Single Row_Json Report.html";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                                                                                  //Call AssembleDocument to generate Single Row report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetSingleCustomerDataJson(), "customer");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateSingleRowReportFromJsoninHtmlFormat
-                    }
-                    else
                     {
                         //ExStart:GenerateSingleRowinHtmlFormat
                         //Setting up source html template
@@ -6679,87 +5638,6 @@ namespace GroupDocs.AssemblyExamples
                     break;
 
                 case "text":
-                    if (isDatabase)
-                    {
-                        //ExStart:GenerateSingleRowFromDatabaseinTextFormat
-                        //Setting up source text format template
-                        const String strTextTemplate = "Text Templates/Single Row.txt";
-                        //Setting up destination text format report 
-                        const String strDocumentReport = "Text Reports/Single Row_DB Report.txt";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Single Row Report in text format format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strTextTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerDataDB(), "customer");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateSingleRowFromDatabaseinTextFormat
-                    }
-                    else if (isDataSet)
-                    {
-                        //ExStart:GenerateSingleRowFromDataSetinTextFormat
-                        //Setting up source text format template
-                        const String strTextTemplate = "Text Templates/Single Row.txt";
-                        //Setting up destination text format report 
-                        const String strDocumentReport = "Text Reports/Single Row_DT Report.txt";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Single Row Report in text format format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strTextTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerDT(), "customer");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateSingleRowFromDataSetinTextFormat
-                    }
-                    else if (isDataSourceXML)
-                    {
-                        //ExStart:GenerateSingleRowFromXMLinTextFormat
-                        //Setting up source text format template
-                        const String strTextTemplate = "Text Templates/Single Row.txt";
-                        //Setting up destination text format report 
-                        const String strDocumentReport = "Text Reports/Single Row_XML Report.txt";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Single Row Report in text format format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strTextTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerXML(), "customer");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateSingleRowFromXMLinTextFormat
-                    }
-                    else if (isJson)
-                    {
-                        //ExStart:GenerateSingleRowReportFromJsoninTextFormat
-                        //setting up source 
-                        const String strTextTemplate = "Text Templates/Single Row.txt";
-                        //Setting up destination 
-                        const String strDocumentReport = "Text Reports/Single Row_Json Report.txt";
-                        try
-                        {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
-                                                                                  //Call AssembleDocument to generate Single Row report in text format format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strTextTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerDataJson(), "customer");
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-                        //ExEnd:GenerateSingleRowReportFromJsoninTextFormat
-                    }
-                    else
                     {
                         //ExStart:GenerateSingleRowinTextFormat
                         //Setting up source text format template

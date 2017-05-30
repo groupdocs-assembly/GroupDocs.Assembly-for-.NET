@@ -123,6 +123,7 @@ namespace GroupDocs.AssemblyExamples
 
             //Generate a In-Table List with Alternate Content Report in html format
             //GenerateReport.GenerateInTableListWithAlternateContent("html", false, false, false, false);
+
             #endregion
 
             #region Generating In-Table with Filtering, Grouping and Ordering Report
@@ -181,6 +182,20 @@ namespace GroupDocs.AssemblyExamples
             //GenerateReport.GenerateInTableMasterDetail("html", false, false, false, false);
             #endregion
 
+            #region Generating In-Table with Running (Progressive) Total Report
+            //Generate a In-Table List with Running (Progressive) Total Report in document processing format
+            //GenerateReport.GenerateInTableListWithProgressiveTotal("document", false, false, false, false);
+
+            //Generate a In-Table List with Running (Progressive) Total Report in spreadsheet format
+            //GenerateReport.GenerateInTableListWithProgressiveTotal("spreadsheet", false, false, false, false);
+
+            //Generate a In-Table List with Running (Progressive) Total Report in presentation format
+            //GenerateReport.GenerateInTableListWithProgressiveTotal("presentation", false, false, false, false);
+
+            //Generate a In-Table List with Running (Progressive) Total Report in html format
+            //GenerateReport.GenerateInTableListWithProgressiveTotal("html", false, false, false, false);
+            #endregion
+
             #region Generating Multicolored Number List Report
             //Generate a Multicolored Numbered List Report in document processing format
             //GenerateReport.GenerateMulticoloredNumberedList("document", false, false, false, true);
@@ -206,7 +221,7 @@ namespace GroupDocs.AssemblyExamples
             //GenerateReport.GenerateNumberedList("presentation", false, false, false, true);
 
             //Generate a Numbered List Report in html format
-            //GenerateReport.GenerateNumberedList("html", false, false, false, false);
+            GenerateReport.GenerateNumberedList("html", false, false, false, false);
 
             //Generate a Numbered List Report in text format
             //GenerateReport.GenerateNumberedList("text", false, false, false, false);
@@ -314,7 +329,7 @@ namespace GroupDocs.AssemblyExamples
             //GenerateReport.UseDocumentTableSetAsDataSource("Multiple Tables Data.docx", "Using Document Table Set as Data Source.pptx");
             //GenerateReport.DefiningDocumentTableRelations("Related Tables Data.xlsx", "Using Document Table Relations.docx");
             //GenerateReport.ChangingDocumentTableColumnType("Presentation Templates/Changing Document Table Column Type.pptx");
-            
+            Console.WriteLine();
         }
     }
 }

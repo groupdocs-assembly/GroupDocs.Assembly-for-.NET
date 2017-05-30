@@ -183,6 +183,20 @@ Namespace GroupDocs.AssemblyExamples
             'GenerateReport.GenerateInTableMasterDetail("html", false, false, false, false);
 #End Region
 
+#Region "Generating In-Table With Running (Progressive) Total Report"
+            'Generate a In-Table List with Running (Progressive) Total Report in document processing format
+            ' GenerateReport.GenerateInTableListWithProgressiveTotal("document", false, false, false, false)
+
+            'Generate a In-Table List with Running (Progressive) Total Report in spreadsheet format
+            ' GenerateReport.GenerateInTableListWithProgressiveTotal("spreadsheet", false, false, false, false)
+
+            'Generate a In-Table List with Running (Progressive) Total Report in presentation format
+            ' GenerateReport.GenerateInTableListWithProgressiveTotal("presentation", false, false, false, false)
+
+            'Generate a In-Table List with Running (Progressive) Total Report in html format
+            ' GenerateReport.GenerateInTableListWithProgressiveTotal("html", false, false, false, false)
+#End Region
+
 #Region "Generating Multicolored Number List Report"
             'Generate a Multicolored Numbered List Report in document processing format
             'GenerateReport.GenerateMulticoloredNumberedList("document", false, false, false, true);
