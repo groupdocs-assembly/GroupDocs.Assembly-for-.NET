@@ -1,0 +1,24 @@
+<html>
+<body>
+<table>
+<tr>
+<th>
+Client
+</th>
+<th>
+Total Contract Price&lt;&lt;var [total = 0.0]&gt;&gt;
+</th>
+</tr>
+&lt;&lt;foreach [in orders]&gt;&gt;
+<tr>
+<td>
+<b>&lt;&lt;[Customer.CustomerName]&gt;&gt;</b>
+</td>
+<td>
+&lt;&lt;var [total = total + Price]&gt;&gt;&lt;&lt;[total]&gt;&gt;
+</td>
+</tr>
+&lt;&lt;/foreach&gt;&gt;
+</table>
+</body>
+</html>

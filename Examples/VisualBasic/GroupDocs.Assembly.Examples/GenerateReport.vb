@@ -13,8 +13,6 @@ Imports GroupDocs.AssemblyExamples.BusinessLayer.GroupDocs.AssemblyExamples.Busi
 Namespace GroupDocs.AssemblyExamples
     Public NotInheritable Class GenerateReport
 
-
-
         ''' <summary>
         ''' Shows how to load document Table set using default options
         ''' Features is supported by version 17.01 or greater
@@ -636,68 +634,7 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
 
                 Case "html"
-                    If isDatabase Then
-                        'ExStart:GenerateBulletedListFromDatabaseinHtmlFormat
-                        'Setting up source html template
-                        Const strHtmlTemplate As [String] = "HTML Templates/Bulleted List.html"
-                        'Setting up destination html report 
-                        Const strHtmlReport As [String] = "HTML Reports/Bulleted List Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bulleted List Report in open spreadsheet format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetProductsDataDB(), "products")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBulletedListFromDatabaseinHtmlFormat
-                        End Try
-                    ElseIf isDataSet Then
-                        'ExStart:GenerateBulletedListFromDataSetinHtmlFormat
-                        'Setting up source html template
-                        Const strHtmlTemplate As [String] = "HTML Templates/Bulleted List.html"
-                        'Setting up destination html report 
-                        Const strHtmlReport As [String] = "HTML Reports/Bulleted List Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bulleted List Report in open spreadsheet format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetProductsDT())
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBulletedListFromDataSetinHtmlFormat
-                        End Try
-                    ElseIf isDataSourceXML Then
-                        'ExStart:GenerateBulletedListFromXMLinHtmlFormat
-                        'Setting up source html template
-                        Const strHtmlTemplate As [String] = "HTML Templates/Bulleted List.html"
-                        'Setting up destination html report 
-                        Const strHtmlReport As [String] = "HTML Reports/Bulleted List Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Bulleted List Report in open spreadsheet format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetAllDataFromXML(), "ds")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBulletedListFromXMLinHtmlFormat
-                        End Try
-                    ElseIf isJson Then
-                        'ExStart:GenerateBulletedListFromJsoninHtml
-                        'setting up source 
-                        Const strDocumentTemplate As [String] = "HTML Templates/Bulleted List.html"
-                        'Setting up destination 
-                        Const strDocumentReport As [String] = "HTML Reports/Bulleted List Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate bulleted list in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBulletedListFromJsoninHtml
-                        End Try
-                    Else
+                    If True Then
                         'ExStart:GenerateBulletedListinHTMLFormat
                         'Setting up source html template
                         Const strHtmlTemplate As [String] = "HTML Templates/Bulleted List.html"
@@ -710,8 +647,8 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetProductsData(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateBulletedListinHTMLFormat
                         End Try
+                        'ExEnd:GenerateBulletedListinHTMLFormat
                     End If
                     Exit Select
                 Case "text"
@@ -1221,68 +1158,7 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
 
                 Case "html"
-                    If isDatabase Then
-                        'ExStart:GenerateCommonListFromDatabaseinHtmlFormat
-                        'Setting up source html document template
-                        Const strDocumentTemplate As [String] = "HTML Templates/Common List.html"
-                        'Setting up destination html report 
-                        Const strDocumentReport As [String] = "HTML Reports/Common List_DB Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersDataDB(), "customers")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonListFromDatabaseinHtmlFormat
-                        End Try
-                    ElseIf isDataSet Then
-                        'ExStart:GenerateCommonListFromDataSetinHtmlFormat
-                        'Setting up source html template
-                        Const strDocumentTemplate As [String] = "HTML Templates/Common List.html"
-                        'Setting up destination html report 
-                        Const strDocumentReport As [String] = "HTML Reports/Common List_DT Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersAndOrdersDataDT())
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonListFromDataSetinHtmlFormat
-                        End Try
-                    ElseIf isDataSourceXML Then
-                        'ExStart:GenerateCommonListFromXMLinHtmlFormat
-                        'Setting up source html template
-                        Const strDocumentTemplate As [String] = "HTML Templates/Common List.html"
-                        'Setting up destination open document report 
-                        Const strDocumentReport As [String] = "HTML Reports/Common List_XML Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonListFromXMLinHtmlFormat
-                        End Try
-                    ElseIf isJson Then
-                        'ExStart:GenerateCommonListReportFromJsoninHtml
-                        'setting up source 
-                        Const strDocumentTemplate As [String] = "HTML Templates/Common List.html"
-                        'Setting up destination 
-                        Const strDocumentReport As [String] = "HTML Reports/Common List_HTML_Json Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Common List report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonListReportFromJsoninHtml
-                        End Try
-                    Else
+                    If True Then
                         'ExStart:GenerateCommonListinHtmlFormat
                         'Setting up source html template
                         Const strDocumentTemplate As [String] = "HTML Templates/Common List.html"
@@ -1295,8 +1171,8 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.PopulateData(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonListinHtmlFormat
                         End Try
+                        'ExEnd:GenerateCommonListinHtmlFormat
                     End If
                     Exit Select
                 Case "text"
@@ -1562,68 +1438,7 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
 
                 Case "html"
-                    If isDatabase Then
-                        'ExStart:GenerateCommonMasterDetailFromDatabaseinHtmlFormat
-                        'Setting up source html template
-                        Const strDocumentTemplate As [String] = "HTML Templates/Common Master-Detail.html"
-                        'Setting up destination html report 
-                        Const strDocumentReport As [String] = "HTML Reports/Common Master-Detail_DB Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common Master-Detail Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersDataDB(), "customers")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonMasterDetailFromDatabaseinHtmlFormat
-                        End Try
-                    ElseIf isDataSet Then
-                        'ExStart:GenerateCommonMasterDetailFromDataSetinHtmlFormat
-                        'Setting up source html template
-                        Const strDocumentTemplate As [String] = "HTML Templates/Common Master-Detail.html"
-                        'Setting up destination html report 
-                        Const strDocumentReport As [String] = "HTML Reports/Common Master-Detail Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common Master-Detail Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomersAndOrdersDataDT())
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonMasterDetailFromDataSetinHtmlFormat
-                        End Try
-                    ElseIf isDataSourceXML Then
-                        'ExStart:GenerateCommonMasterDetailFromXMLinHtmlFormat
-                        'Setting up source html template
-                        Const strDocumentTemplate As [String] = "HTML Templates/Common Master-Detail.html"
-                        'Setting up destination html report 
-                        Const strDocumentReport As [String] = "HTML Reports/Common Master-Detail_XML Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Common Master-Detail Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonMasterDetailFromXMLinHtmlFormat
-                        End Try
-                    ElseIf isJson Then
-                        'ExStart:GenerateCommonMasterDetailReportFromJsoninHtml
-                        'setting up source 
-                        Const strDocumentTemplate As [String] = "HTML Templates/Common Master-Detail.html"
-                        'Setting up destination 
-                        Const strDocumentReport As [String] = "HTML Reports/Common Master-Detail_Json Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Common master-detail report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonMasterDetailReportFromJsoninHtml
-                        End Try
-                    Else
+                    If True Then
                         'ExStart:GenerateCommonMasterDetailinHtmlFormat
                         'Setting up source html template
                         Const strDocumentTemplate As [String] = "HTML Templates/Common Master-Detail.html"
@@ -1636,8 +1451,8 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.PopulateData(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateCommonMasterDetailinHtmlFormat
                         End Try
+                        'ExEnd:GenerateCommonMasterDetailinHtmlFormat
                     End If
                     Exit Select
                 Case "text"
@@ -1902,68 +1717,7 @@ Namespace GroupDocs.AssemblyExamples
                     End If
                     Exit Select
                 Case "html"
-                    If isDatabase Then
-                        'ExStart:GenerateInParagraphListFromDatabaseinHtmlFormat
-                        'Setting up source html template
-                        Const strDocumentTemplate As [String] = "HTML Templates/In-Paragraph List.html"
-                        'Setting up destination html report 
-                        Const strDocumentReport As [String] = "HTML Reports/In-Paragraph List_DB Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Paragraph List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataDB(), "products")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInParagraphListFromDatabaseinHtmlFormat
-                        End Try
-                    ElseIf isDataSet Then
-                        'ExStart:GenerateInParagraphListFromDataSetinHtmlFormat
-                        'Setting up source html template
-                        Const strDocumentTemplate As [String] = "HTML Templates/In-Paragraph List.html"
-                        'Setting up destination html report 
-                        Const strDocumentReport As [String] = "HTML Reports/In-Paragraph List_DT Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Paragraph List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDT())
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInParagraphListFromDataSetinHtmlFormat
-                        End Try
-                    ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInParagraphListFromXMLinHtmlFormat
-                        'Setting up source html template
-                        Const strDocumentTemplate As [String] = "HTML Templates/In-Paragraph List.html"
-                        'Setting up destination html report 
-                        Const strDocumentReport As [String] = "HTML Reports/In-Paragraph List_XML Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Paragraph List Report in htmlformat
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInParagraphListFromXMLinHtmlFormat
-                        End Try
-                    ElseIf isJson Then
-                        'ExStart:GenerateInParagraphListReportFromJsoninHtml
-                        'setting up source 
-                        Const strDocumentTemplate As [String] = "HTML Templates/In-Paragraph List.html"
-                        'Setting up destination 
-                        Const strDocumentReport As [String] = "HTML Reports/In-Paragraph List_OpenDocument_Json Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Paragraph List report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInParagraphListReportFromJsoninHtml
-                        End Try
-                    Else
+                    If True Then
                         'ExStart:GenerateInParagraphListinHtmlFormat
                         'Setting up source html template
                         Const strDocumentTemplate As [String] = "HTML Templates/In-Paragraph List.html"
@@ -1976,74 +1730,13 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsData(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInParagraphListinHtmlFormat
                         End Try
+                        'ExEnd:GenerateInParagraphListinHtmlFormat
                     End If
                     Exit Select
 
                 Case "text"
-                    If isDatabase Then
-                        'ExStart:GenerateInParagraphListFromDatabaseinTextFormat
-                        'Setting up source text document template
-                        Const strDocumentTemplate As [String] = "Text Templates/In-Paragraph List.txt"
-                        'Setting up destination text document report 
-                        Const strDocumentReport As [String] = "Text Reports/In-Paragraph List_DB Report.txt"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Paragraph List Report in text document format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataDB(), "products")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInParagraphListFromDatabaseinTextFormat
-                        End Try
-                    ElseIf isDataSet Then
-                        'ExStart:GenerateInParagraphListFromDataSetinTextFormat
-                        'Setting up source text document template
-                        Const strDocumentTemplate As [String] = "Text Templates/In-Paragraph List.txt"
-                        'Setting up destination text document report 
-                        Const strDocumentReport As [String] = "Text Reports/In-Paragraph List_DT Report.txt"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Paragraph List Report in text document format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDT())
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInParagraphListFromDataSetinTextFormat
-                        End Try
-                    ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInParagraphListFromXMLinTextFormat
-                        'Setting up source text document template
-                        Const strDocumentTemplate As [String] = "Text Templates/In-Paragraph List_XML_OpenDocument.txt"
-                        'Setting up destination text document report 
-                        Const strDocumentReport As [String] = "Text Reports/In-Paragraph List_XML Report.txt"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Paragraph List Report in text document format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInParagraphListFromXMLinTextFormat
-                        End Try
-                    ElseIf isJson Then
-                        'ExStart:GenerateInParagraphListReportFromJsoninText
-                        'setting up source 
-                        Const strDocumentTemplate As [String] = "Text Templates/In-Paragraph List.txt"
-                        'Setting up destination 
-                        Const strDocumentReport As [String] = "Text Reports/In-Paragraph List_Json Report.txt"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Paragraph List report in text document format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInParagraphListReportFromJsoninText
-                        End Try
-                    Else
+                    If True Then
                         'ExStart:GenerateInParagraphListinTextFormat
                         'Setting up source text document template
                         Const strDocumentTemplate As [String] = "Text Templates/In-Paragraph List.txt"
@@ -2056,8 +1749,8 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsData(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInParagraphListinTextFormat
                         End Try
+                        'ExEnd:GenerateInParagraphListinTextFormat
                     End If
                     Exit Select
             End Select
@@ -2304,68 +1997,8 @@ Namespace GroupDocs.AssemblyExamples
                     End If
                     Exit Select
                 Case "html"
-                    If isDatabase Then
-                        'ExStart:GenerateInTableListWithAlternateContentFromDatabaseinHtmlFormat
-                        'Setting up source html template
-                        Const strHtmlTemplate As [String] = "HTML Templates/In-Table List with Alternate Content.html"
-                        'Setting up destination html report 
-                        Const strHtmlReport As [String] = "HTML Reports/In-Table List with Alternate Content_DB Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetProductsDataDB(), "products")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithAlternateContentFromDatabaseinHtmlFormat
-                        End Try
-                    ElseIf isDataSet Then
-                        'ExStart:GenerateInTableListWithAlternateContentFromDataSetinHtmlFormat
-                        'Setting up source html template
-                        Const strHtmlTemplate As [String] = "HTML Templates/In-Table List with Alternate Content.html"
-                        'Setting up destination html report 
-                        Const strHtmlReport As [String] = "HTML Reports/In-Table List with Alternate Content_DT Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetProductsDT(), "ds")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithAlternateContentFromDataSetinHtmlFormat
-                        End Try
-                    ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInTableListWithAlternateContentFromXMLinHtmlFormat
-                        'Setting up source html template
-                        Const strHtmlTemplate As [String] = "HTML Templates/In-Table List with Alternate Content.html"
-                        'Setting up destination html report 
-                        Const strHtmlReport As [String] = "HTML Reports/In-Table List with Alternate Content_XML Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetAllDataFromXML(), "ds")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithAlternateContentFromXMLinHtmlFormat
-                        End Try
-                    ElseIf isJson Then
-                        'ExStart:GenerateInTableListwithAlternateContentReportFromJsoninHtml
-                        'setting up source 
-                        Const strHtmlTemplate As [String] = "HTML Templates/In-Table List with Alternate Content.html"
-                        'Setting up destination 
-                        Const strHtmlReport As [String] = "HTML Reports/In-Table List with Alternate Content_OpenDocument_Json Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Table List with Alternate Content report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomerOrderDataFromJson(), "orders")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListwithAlternateContentReportFromJsoninHtml
-                        End Try
-                    Else
+
+                    If True Then
                         'ExStart:GenerateInTableListWithAlternateContentinHtmlFormat
                         'Setting up source html template
                         Const strHtmlTemplate As [String] = "HTML Templates/In-Table List with Alternate Content.html"
@@ -2378,8 +2011,8 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithAlternateContentinHtmlFormat
                         End Try
+                        'ExEnd:GenerateInTableListWithAlternateContentinHtmlFormat
                     End If
                     Exit Select
             End Select
@@ -2626,68 +2259,7 @@ Namespace GroupDocs.AssemblyExamples
                     End If
                     Exit Select
                 Case "html"
-                    If isDatabase Then
-                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinHtmlDocument
-                        'Setting up source html template
-                        Const strHtmlTemplate As [String] = "HTML Templates/In-Table List with Filtering, Grouping, and Ordering.html"
-                        'Setting up destination html report 
-                        Const strHtmlReport As [String] = "HTML Reports/In-Table List with Filtering, Grouping, and Ordering_DB Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetOrdersDataDB(), "orders")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinHtmlDocument
-                        End Try
-                    ElseIf isDataSet Then
-                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinHtmlDocument
-                        'Setting up source html template
-                        Const strHtmlTemplate As [String] = "HTML Templates/In-Table List with Filtering, Grouping, and Ordering.html"
-                        'Setting up destination html report 
-                        Const strHtmlReport As [String] = "HTML Reports/In-Table List with Filtering, Grouping, and Ordering_DT Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomersAndOrdersDataDT())
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinHtmlDocument
-                        End Try
-                    ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinHtmlDocument
-                        'Setting up source html template
-                        Const strHtmlTemplate As [String] = "HTML Templates/In-Table List with Filtering, Grouping, and Ordering.html"
-                        'Setting up destination html report 
-                        Const strHtmlReport As [String] = "HTML Reports/In-Table List with Filtering, Grouping, and Ordering_XML Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetAllDataFromXML(), "ds")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinHtmlDocument
-                        End Try
-                    ElseIf isJson Then
-                        'ExStart:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninHtml
-                        'setting up source 
-                        Const strHtmlTemplate As [String] = "HTML Templates/In-Table List with Filtering, Grouping, and Ordering_OpenDocument.html"
-                        'Setting up destination 
-                        Const strHtmlReport As [String] = "HTML Reports/In-Table List with Filtering, Grouping, and Ordering_OpenDocument_Json Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomerOrderDataFromJson(), "orders")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninHtml
-                        End Try
-                    Else
+                    If True Then
                         'ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginHtmlDocument
                         'Setting up source html template
                         Const strHtmlTemplate As [String] = "HTML Templates/In-Table List with Filtering, Grouping, and Ordering.html"
@@ -2700,8 +2272,8 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderinginHtmlDocument
                         End Try
+                        'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderinginHtmlDocument
                     End If
                     Exit Select
 
@@ -2950,68 +2522,7 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
 
                 Case "html"
-                    If isDatabase Then
-                        'ExStart:GenerateInTableListWithHighlightedRowsFromDatabaseinHtmlDocument
-                        'Setting up source html template
-                        Const strHtmlTemplate As [String] = "HTML Templates/In-Table List with Highlighted Rows.html"
-                        'Setting up destination html report 
-                        Const strHtmlReport As [String] = "HTML Reports/In-Table List with Highlighted Rows_DB Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetOrdersDataDB(), "orders")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithHighlightedRowsFromDatabaseinHtmlDocument
-                        End Try
-                    ElseIf isDataSet Then
-                        'ExStart:GenerateInTableListWithHighlightedRowsFromDataSetinHtmlDocument
-                        'Setting up source html template
-                        Const strHtmlTemplate As [String] = "HTML Templates/In-Table List with Highlighted Rows.html"
-                        'Setting up destination html report 
-                        Const strHtmlReport As [String] = "HTML Reports/In-Table List with Highlighted Rows_DT Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomersAndOrdersDataDT(), "ds")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithHighlightedRowsFromDataSetinHtmlDocument
-                        End Try
-                    ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInTableListWithHighlightedRowsFromXMLinHtmlDocument
-                        'Setting up source html template
-                        Const strHtmlTemplate As [String] = "HTML Templates/In-Table List with Highlighted Rows_XML_OpenDocument.html"
-                        'Setting up destination html report 
-                        Const strHtmlReport As [String] = "HTML Reports/In-Table List with Highlighted Rows_XML Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetAllDataFromXML(), "ds")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithHighlightedRowsFromXMLinHtmlDocument
-                        End Try
-                    ElseIf isJson Then
-                        'ExStart:GenerateInTableListwithHighlightedRowsReportFromJsoninHtml 
-                        'setting up source 
-                        Const strHtmlTemplate As [String] = "HTML Templates/In-Table List with Highlighted Rows_OpenDocument.html"
-                        'Setting up destination 
-                        Const strHtmlReport As [String] = "HTML Reports/In-Table List with Highlighted Rows_OpenDocument_Json Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Table List with Highlighted Rows report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomerOrderDataFromJson(), "orders")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListwithHighlightedRowsReportFromJsoninHtml 
-                        End Try
-                    Else
+                    If True Then
                         'ExStart:GenerateInTableListWithHighlightedRowsinHtmlDocument
                         'Setting up source html template
                         Const strHtmlTemplate As [String] = "HTML Templates/In-Table List with Highlighted Rows.html"
@@ -3024,8 +2535,8 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetOrdersData(), "orders")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListWithHighlightedRowsinHtmlDocument
                         End Try
+                        'ExEnd:GenerateInTableListWithHighlightedRowsinHtmlDocument
                     End If
                     Exit Select
             End Select
@@ -3273,68 +2784,7 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
 
                 Case "html"
-                    If isDatabase Then
-                        'ExStart:GenerateInTableListFromDatabaseinHtmlDocument
-                        'Setting up source html template
-                        Const strHtmlTemplate As [String] = "HTML Templates/In-Table List.html"
-                        'Setting up destination html report 
-                        Const strHtmlReport As [String] = "HTML Reports/In-Table List_DB Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomersDataDB(), "customers")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListFromDatabaseinHtmlDocument
-                        End Try
-                    ElseIf isDataSet Then
-                        'ExStart:GenerateInTableListFromDataSetinHtmlDocument
-                        'Setting up source html template
-                        Const strHtmlTemplate As [String] = "HTML Templates/In-Table List.html"
-                        'Setting up destination html report 
-                        Const strHtmlReport As [String] = "HTML Reports/In-Table List_DT Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomersAndOrdersDataDT(), "ds")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListFromDataSetinHtmlDocument
-                        End Try
-                    ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInTableListFromXMLinHtmlDocument
-                        'Setting up source html template
-                        Const strHtmlTemplate As [String] = "HTML Templates/In-Table List.html"
-                        'Setting up destination html report 
-                        Const strHtmlReport As [String] = "HTML Reports/In-Table List_XML Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetAllDataFromXML(), "ds")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListFromXMLinHtmlDocument
-                        End Try
-                    ElseIf isJson Then
-                        'ExStart:GenerateInTableListReportFromJsoninHtml
-                        'setting up source 
-                        Const strHtmlTemplate As [String] = "HTML Templates/In-Table List.html"
-                        'Setting up destination 
-                        Const strHtmlReport As [String] = "HTML Reports/In-Table List_OpenDocument_Json Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Table List report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomerDataFromJson(), "customers")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListReportFromJsoninHtml
-                        End Try
-                    Else
+                    If True Then
                         'ExStart:GenerateInTableListinHtmlDocument
                         'Setting up source html template
                         Const strHtmlTemplate As [String] = "HTML Templates/In-Table List.html"
@@ -3347,8 +2797,8 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.PopulateData(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableListinHtmlDocument
                         End Try
+                        'ExEnd:GenerateInTableListinHtmlDocument
                     End If
                     Exit Select
             End Select
@@ -3595,68 +3045,7 @@ Namespace GroupDocs.AssemblyExamples
                     End If
                     Exit Select
                 Case "html"
-                    If isDatabase Then
-                        'ExStart:GenerateInTableMasterDetailFromDatabaseinHtmlFormat
-                        'Setting up source html template
-                        Const strHtmlTemplate As [String] = "HTML Templates/In-Table Master-Detail.html"
-                        'Setting up destination html report 
-                        Const strHtmlReport As [String] = "HTML Reports/In-Table Master-Detail_DB Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table Master-Detail Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomersDataDB(), "customers")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableMasterDetailFromDatabaseinHtmlFormat
-                        End Try
-                    ElseIf isDataSet Then
-                        'ExStart:GenerateInTableMasterDetailFromDataSetinHtmlFormat
-                        'Setting up source html template
-                        Const strHtmlTemplate As [String] = "HTML Templates/In-Table Master-Detail.html"
-                        'Setting up destination html report 
-                        Const strHtmlReport As [String] = "HTML Reports/In-Table Master-Detail_DT Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table Master-Detail Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomersAndOrdersDataDT(), "ds")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableMasterDetailFromDataSetinHtmlFormat
-                        End Try
-                    ElseIf isDataSourceXML Then
-                        'ExStart:GenerateInTableMasterDetailFromXMLinHtmlFormat
-                        'Setting up source html template
-                        Const strHtmlTemplate As [String] = "HTML Templates/In-Table Master-Detail.html"
-                        'Setting up destination html report 
-                        Const strHtmlReport As [String] = "HTML Reports/In-Table Master-Detail_XML Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate In-Table Master-Detail Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetAllDataFromXML(), "ds")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableMasterDetailFromXMLinHtmlFormat
-                        End Try
-                    ElseIf isJson Then
-                        'ExStart:GenerateInTableMasterDetailReportFromJsoninHtml
-                        'setting up source 
-                        Const strHtmlTemplate As [String] = "HTML Templates/In-Table Master-Detail.html"
-                        'Setting up destination 
-                        Const strHtmlReport As [String] = "HTML Reports/In-Table Master-Detail_Json Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate In-Table Master-Detail report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomerDataFromJson(), "customers")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableMasterDetailReportFromJsoninHtml
-                        End Try
-                    Else
+                    If True Then
                         'ExStart:GenerateInTableMasterDetailinHtmlFormat
                         'Setting up source html template
                         Const strHtmlTemplate As [String] = "HTML Templates/In-Table Master-Detail.html"
@@ -3669,12 +3058,93 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.PopulateData(), "customers")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateInTableMasterDetailinHtmlFormat
                         End Try
+                        'ExEnd:GenerateInTableMasterDetailinHtmlFormat
                     End If
                     Exit Select
             End Select
         End Sub
+
+
+        Public Shared Sub GenerateInTableListWithProgressiveTotal(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean, isJson As Boolean)
+            Select Case strDocumentFormat
+                Case "document"
+                    'ExStart:GenerateInTableListWithProgressiveTotalinOpenDocumentProcessingFormat
+                    'Setting up source open document template
+                    Const strDocumentTemplate As [String] = "Word Templates/In-Table List with Running (Progressive) Total.docx"
+                    'Setting up destination open document report 
+                    Const strDocumentReport As [String] = "Word Reports/In-Table List with Running (Progressive) Total Report.docx"
+                    Try
+                        'Instantiate DocumentAssembler class
+                        Dim assembler As New DocumentAssembler()
+                        'Call AssembleDocument to generate In-Table List with Progressive(Running) total Report in open document format
+                        assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders")
+                    Catch ex As Exception
+                        Console.WriteLine(ex.Message)
+                    End Try
+                    'ExEnd:GenerateInTableListWithProgressiveTotalinOpenDocumentProcessingFormat
+
+                    Exit Select
+
+                Case "spreadsheet"
+                    If True Then
+                        'ExStart:GenerateInTableListWithProgressiveTotalinOpenSpreadsheetFormat
+                        'Setting up source open spreadsheet template
+                        Const strSpreadsheetTemplate As [String] = "Spreadsheet Templates/In-Table List with Running (Progressive) Total.xlsx"
+                        'Setting up destination open spreadsheet report 
+                        Const strSpreadsheetReport As [String] = "Spreadsheet Reports/In-Table List with Running (Progressive) Total Report.xlsx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table List with Progressive(Running) total Report in open spreadsheet format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate), CommonUtilities.SetDestinationDocument(strSpreadsheetReport), DataLayer.GetOrdersData(), "orders")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                        End Try
+                        'ExEnd:GenerateInTableListWithProgressiveTotalinOpenSpreadsheetFormat
+                    End If
+                    Exit Select
+
+                Case "presentation"
+                    If True Then
+                        'ExStart:GenerateInTableListWithProgressiveTotalinOpenPresentationFormat
+                        'Setting up source open presentation template
+                        Const strPresentationTemplate As [String] = "Presentation Templates/In-Table List with Running (Progressive) Total.pptx"
+                        'Setting up destination open presentation report 
+                        Const strPresentationReport As [String] = "Presentation Reports/In-Table List with Running (Progressive) Total Report.pptx"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table List with Progressive(running) total Report in open presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate), CommonUtilities.SetDestinationDocument(strPresentationReport), DataLayer.GetOrdersData(), "orders")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                        End Try
+                        'ExEnd:GenerateInTableListWithProgressiveTotalinOpenPresentationFormat
+                    End If
+                    Exit Select
+                Case "html"
+                    If True Then
+                        'ExStart:GenerateInTableListWithProgressiveTotalinHtmlFormat
+                        'Setting up source html template
+                        Const strHtmlTemplate As [String] = "HTML Templates/In-Table List with Running (Progressive) Total.html"
+                        'Setting up destination html report 
+                        Const strHtmlReport As [String] = "HTML Reports/In-Table List with Running (Progressive) Total.html"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table List with Progressive(Running) Total Report in html format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetOrdersData(), "orders")
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                        End Try
+                        'ExEnd:GenerateInTableListWithProgressiveTotalinHtmlFormat
+                    End If
+                    Exit Select
+            End Select
+        End Sub
+
+
         Public Shared Sub GenerateMulticoloredNumberedList(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean, isJson As Boolean)
             Select Case strDocumentFormat
                 Case "document"
@@ -3917,68 +3387,7 @@ Namespace GroupDocs.AssemblyExamples
                     End If
                     Exit Select
                 Case "html"
-                    If isDatabase Then
-                        'ExStart:GenerateMulticoloredNumberedListFromDatabaseinHtml
-                        'Setting up source html template
-                        Const strDocumentTemplate As [String] = "HTML Templates/Multicolored Numbered List.html"
-                        'Setting up destination html report 
-                        Const strDocumentReport As [String] = "HTML Reports/Multicolored Numbered List_DB Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Multicolored Numbered List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataDB(), "products")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateMulticoloredNumberedListFromDatabaseinHtml
-                        End Try
-                    ElseIf isDataSet Then
-                        'ExStart:GenerateMulticoloredNumberedListFromDataSetinHtml
-                        'Setting up source html template
-                        Const strDocumentTemplate As [String] = "HTML Templates/Multicolored Numbered List.html"
-                        'Setting up destination html report 
-                        Const strDocumentReport As [String] = "HTML Reports/Multicolored Numbered List_DT Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Multicolored Numbered List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDT())
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateMulticoloredNumberedListFromDataSetinHtml
-                        End Try
-                    ElseIf isDataSourceXML Then
-                        'ExStart:GenerateMulticoloredNumberedListFromXMLinHtml
-                        'Setting up source html template
-                        Const strDocumentTemplate As [String] = "HTML Templates/Multicolored Numbered List_XML.html"
-                        'Setting up destination html report 
-                        Const strDocumentReport As [String] = "HTML Reports/Multicolored Numbered List_XML Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Multicolored Numbered List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateMulticoloredNumberedListFromXMLinHtml
-                        End Try
-                    ElseIf isJson Then
-                        'ExStart:GenerateMulticoloredNumberedListReportFromJsoninHtml
-                        'setting up source 
-                        Const strDocumentTemplate As [String] = "HTML Templates/Multicolored Numbered List.html"
-                        'Setting up destination 
-                        Const strDocumentReport As [String] = "HTML Reports/Multicolored Numbered List_Json Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Multicolored Numbered List report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateMulticoloredNumberedListReportFromJsoninHtml
-                        End Try
-                    Else
+                    If True Then
                         'ExStart:GenerateMulticoloredNumberedListinHtml
                         'Setting up source html template
                         Const strDocumentTemplate As [String] = "HTML Templates/Multicolored Numbered List.html"
@@ -3991,8 +3400,8 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsData(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateMulticoloredNumberedListinHtml
                         End Try
+                        'ExEnd:GenerateMulticoloredNumberedListinHtml
                     End If
                     Exit Select
 
@@ -4241,68 +3650,7 @@ Namespace GroupDocs.AssemblyExamples
                     Exit Select
 
                 Case "html"
-                    If isDatabase Then
-                        'ExStart:GenerateNumberedListFromDatabaseinHtmlFormat
-                        'Setting up source html template
-                        Const strDocumentTemplate As [String] = "HTML Templates/Numbered List.html"
-                        'Setting up destination html report 
-                        Const strDocumentReport As [String] = "HTML Reports/Numbered List_DB Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Numbered List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataDB(), "products")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateNumberedListFromDatabaseinHtmlFormat
-                        End Try
-                    ElseIf isDataSet Then
-                        'ExStart:GenerateNumberedListFromDataSetinHtmlFormat
-                        'Setting up source html template
-                        Const strDocumentTemplate As [String] = "HTML Templates/Numbered List.html"
-                        'Setting up destination html report 
-                        Const strDocumentReport As [String] = "HTML Reports/Numbered List_DT Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Numbered List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDT())
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateNumberedListFromDataSetinHtmlFormat 
-                        End Try
-                    ElseIf isDataSourceXML Then
-                        'ExStart:GenerateNumberedListFromXMLinHtmlFormat
-                        'Setting up source html template
-                        Const strDocumentTemplate As [String] = "HTML Templates/Numbered List_XML.html"
-                        'Setting up destination html report 
-                        Const strDocumentReport As [String] = "HTML Reports/Numbered List_XML Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Numbered List Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateNumberedListFromXMLinHtmlFormat 
-                        End Try
-                    ElseIf isJson Then
-                        'ExStart:GenerateNumberedListReportFromJsoninHtml
-                        'setting up source 
-                        Const strDocumentTemplate As [String] = "HTML Templates/Numbered List.html"
-                        'Setting up destination 
-                        Const strDocumentReport As [String] = "HTML Reports/Numbered List_Json Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Numbered List report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateNumberedListReportFromJsoninHtml
-                        End Try
-                    Else
+                    If True Then
                         'ExStart:GenerateNumberedListinHtmlFormat
                         'Setting up source html template
                         Const strDocumentTemplate As [String] = "HTML Templates/Numbered List.html"
@@ -4315,73 +3663,12 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsData(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateNumberedListinHtmlFormat
                         End Try
+                        'ExEnd:GenerateNumberedListinHtmlFormat
                     End If
                     Exit Select
                 Case "text"
-                    If isDatabase Then
-                        'ExStart:GenerateNumberedListFromDatabaseinTextFormat
-                        'Setting up source text document template
-                        Const strDocumentTemplate As [String] = "Text Templates/Numbered List.txt"
-                        'Setting up destination text document report 
-                        Const strDocumentReport As [String] = "Text Reports/Numbered List_DB Report.txt"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Numbered List Report in text document  format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataDB(), "products")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateNumberedListFromDatabaseinTextFormat
-                        End Try
-                    ElseIf isDataSet Then
-                        'ExStart:GenerateNumberedListFromDataSetinTextFormat
-                        'Setting up source text document template
-                        Const strDocumentTemplate As [String] = "Text Templates/Numbered List.txt"
-                        'Setting up destination text document report 
-                        Const strDocumentReport As [String] = "Text Reports/Numbered List_DT Report.txt"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Numbered List Report in text document  format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDT())
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateNumberedListFromDataSetinTextFormat 
-                        End Try
-                    ElseIf isDataSourceXML Then
-                        'ExStart:GenerateNumberedListFromXMLinTextFormat
-                        'Setting up source text document template
-                        Const strDocumentTemplate As [String] = "Text Templates/Numbered List_XML.txt"
-                        'Setting up destination text document report 
-                        Const strDocumentReport As [String] = "Text Reports/Numbered List_XML Report.txt"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Numbered List Report in text document  format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetAllDataFromXML(), "ds")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateNumberedListFromXMLinTextFormat 
-                        End Try
-                    ElseIf isJson Then
-                        'ExStart:GenerateNumberedListReportFromJsoninText
-                        'setting up source 
-                        Const strDocumentTemplate As [String] = "Text Templates/Numbered List.txt"
-                        'Setting up destination 
-                        Const strDocumentReport As [String] = "Text Reports/Numbered List_Json Report.txt"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Numbered List report in text document  format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsDataJson(), "products")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateNumberedListReportFromJsoninText
-                        End Try
-                    Else
+                    If True Then
                         'ExStart:GenerateNumberedListinTextFormat
                         'Setting up source text document template
                         Const strDocumentTemplate As [String] = "Text Templates/Numbered List.txt"
@@ -4394,8 +3681,8 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetProductsData(), "products")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateNumberedListinTextFormat
                         End Try
+                        'ExEnd:GenerateNumberedListinTextFormat
                     End If
                     Exit Select
             End Select
@@ -5128,68 +4415,7 @@ Namespace GroupDocs.AssemblyExamples
                     End If
                     Exit Select
                 Case "html"
-                    If isDatabase Then
-                        'ExStart:GenerateSingleRowFromDatabaseinHtmlFormat
-                        'Setting up source html template
-                        Const strHtmlTemplate As [String] = "HTML Templates/Single Row.html"
-                        'Setting up destination html report 
-                        Const strHtmlReport As [String] = "HTML Reports/Single Row_DB Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Single Row Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetSingleCustomerDataDB(), "customer")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateSingleRowFromDatabaseinHtmlFormat
-                        End Try
-                    ElseIf isDataSet Then
-                        'ExStart:GenerateSingleRowFromDataSetinHtmlFormat
-                        'Setting up source html template
-                        Const strHtmlTemplate As [String] = "HTML Templates/Single Row.html"
-                        'Setting up destination html report 
-                        Const strHtmlReport As [String] = "HTML Reports/Single Row_DT Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Single Row Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetSingleCustomerDT(), "customer")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateSingleRowFromDataSetinHtmlFormat
-                        End Try
-                    ElseIf isDataSourceXML Then
-                        'ExStart:GenerateSingleRowFromXMLinHtmlFormat
-                        'Setting up source html template
-                        Const strHtmlTemplate As [String] = "HTML Templates/Single Row.html"
-                        'Setting up destination html report 
-                        Const strHtmlReport As [String] = "HTML Reports/Single Row_XML Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Single Row Report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetSingleCustomerXML(), "customer")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateSingleRowFromXMLinHtmlFormat
-                        End Try
-                    ElseIf isJson Then
-                        'ExStart:GenerateSingleRowReportFromJsoninHtmlFormat
-                        'setting up source 
-                        Const strHtmlTemplate As [String] = "HTML Templates/Single Row.html"
-                        'Setting up destination 
-                        Const strHtmlReport As [String] = "HTML Reports/Single Row_Json Report.html"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Single Row report in html format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetSingleCustomerDataJson(), "customer")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateSingleRowReportFromJsoninHtmlFormat
-                        End Try
-                    Else
+                    If True Then
                         'ExStart:GenerateSingleRowinHtmlFormat
                         'Setting up source html template
                         Const strHtmlTemplate As [String] = "HTML Templates/Single Row.html"
@@ -5202,74 +4428,13 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomerData(), "customer")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateSingleRowinHtmlFormat
                         End Try
+                        'ExEnd:GenerateSingleRowinHtmlFormat
                     End If
                     Exit Select
 
                 Case "text"
-                    If isDatabase Then
-                        'ExStart:GenerateSingleRowFromDatabaseinTextFormat
-                        'Setting up source text format template
-                        Const strTextTemplate As [String] = "Text Templates/Single Row.txt"
-                        'Setting up destination text format report 
-                        Const strDocumentReport As [String] = "Text Reports/Single Row_DB Report.txt"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Single Row Report in text format format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strTextTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerDataDB(), "customer")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateSingleRowFromDatabaseinTextFormat
-                        End Try
-                    ElseIf isDataSet Then
-                        'ExStart:GenerateSingleRowFromDataSetinTextFormat
-                        'Setting up source text format template
-                        Const strTextTemplate As [String] = "Text Templates/Single Row.txt"
-                        'Setting up destination text format report 
-                        Const strDocumentReport As [String] = "Text Reports/Single Row_DT Report.txt"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Single Row Report in text format format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strTextTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerDT(), "customer")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateSingleRowFromDataSetinTextFormat
-                        End Try
-                    ElseIf isDataSourceXML Then
-                        'ExStart:GenerateSingleRowFromXMLinTextFormat
-                        'Setting up source text format template
-                        Const strTextTemplate As [String] = "Text Templates/Single Row.txt"
-                        'Setting up destination text format report 
-                        Const strDocumentReport As [String] = "Text Reports/Single Row_XML Report.txt"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'Call AssembleDocument to generate Single Row Report in text format format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strTextTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerXML(), "customer")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateSingleRowFromXMLinTextFormat
-                        End Try
-                    ElseIf isJson Then
-                        'ExStart:GenerateSingleRowReportFromJsoninTextFormat
-                        'setting up source 
-                        Const strTextTemplate As [String] = "Text Templates/Single Row.txt"
-                        'Setting up destination 
-                        Const strDocumentReport As [String] = "Text Reports/Single Row_Json Report.txt"
-                        Try
-                            'Instantiate DocumentAssembler class
-                            Dim assembler As New DocumentAssembler()
-                            'initialize object of DocumentAssembler class 
-                            'Call AssembleDocument to generate Single Row report in text format format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strTextTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetSingleCustomerDataJson(), "customer")
-                        Catch ex As Exception
-                            Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateSingleRowReportFromJsoninTextFormat
-                        End Try
-                    Else
+                    If True Then
                         'ExStart:GenerateSingleRowinTextFormat
                         'Setting up source text format template
                         Const strTextTemplate As [String] = "Text Templates/Single Row.txt"
@@ -5282,8 +4447,8 @@ Namespace GroupDocs.AssemblyExamples
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strTextTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerData(), "customer")
                         Catch ex As Exception
                             Console.WriteLine(ex.Message)
-                            'ExEnd:GenerateSingleRowinTextFormat
                         End Try
+                        'ExEnd:GenerateSingleRowinTextFormat
                     End If
                     Exit Select
             End Select
@@ -5568,7 +4733,6 @@ Namespace GroupDocs.AssemblyExamples
             End Try
             'ExEnd:ImportingSpreadsheetIntoHtmlDocument
         End Sub
-
     End Class
 End Namespace
 
