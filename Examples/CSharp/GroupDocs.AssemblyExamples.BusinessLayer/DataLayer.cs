@@ -503,7 +503,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
             Debug.Assert(table.Columns[0].Name == "A");
             Debug.Assert(table.Columns[1].Name == "B");
             Debug.Assert(table.Columns[2].Name == "C");
-             return table;
+            return table;
         }
 
         /// <summary>
@@ -529,6 +529,69 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
             Debug.Assert(table.Columns[1].Name == "Column2");
             return table;
         }
+
+        /// <summary>
+        /// Creates an Email data source object
+        /// </summary>
+        /// <param name="fileName">Name of the template file</param>
+        /// <param name="dataSource">data source</param>
+        /// <returns></returns>
+
+        public static object[] EmailDataSourceObject(string fileName, object dataSource)
+        {
+            //ExStart:EmailDataSourceObject
+            object[] dataSources;
+            string extension = Path.GetExtension(fileName);
+
+            if ((extension == ".msg") || (extension == ".eml"))
+            {
+                List<string> recipients = new List<string>();
+                recipients.Add("Named Recipient <named@example.com>");
+                recipients.Add("unnamed@example.com");
+
+                dataSources = new object[]
+                {
+                    dataSource,
+                    "Example Sender <sender@example.com>",
+                    recipients,
+                    "cc@example.com",
+                    Path.GetFileNameWithoutExtension(fileName)
+                };
+
+            }
+            else
+            {
+                dataSources = new object[] { dataSource };
+            }
+            return dataSources;
+            //ExEnd:EmailDataSourceObject
+        }
+
+        public static string[] EmailDataSourceName(string extension, string name)
+        {
+            //ExStart:EmailDataSourceName
+            string[] dataSourceNames;
+            if ((extension == ".msg") || (extension == ".eml"))
+            {
+                dataSourceNames = new string[]
+              {
+                    name,
+                    "sender",
+                    "recipients",
+                    "cc",
+                    "subject"
+              };
+
+            }
+            else
+            {
+                dataSourceNames = new string[] { };
+            }
+            return dataSourceNames;
+            //ExEnd:EmailDataSourceName
+        }
+
+
     }
     //ExEnd:DataLayer
     #endregion DataLayer

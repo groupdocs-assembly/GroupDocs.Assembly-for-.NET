@@ -129,6 +129,14 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
             public delegate object[] CreateRowDelegate<T>(T t);
         }
         //ExEnd:ConvertToDataTable
+
+        public static class FileUtil
+        {
+            public static string GetBytesAsBase64(string path)
+            {
+                return Convert.ToBase64String(File.ReadAllBytes(path));
+            }
+        }
     }
 
     //ExEnd:CommonUtilities
