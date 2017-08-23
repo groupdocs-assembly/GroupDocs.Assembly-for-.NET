@@ -126,6 +126,14 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         End Class
         'ExEnd:ConvertToDataTable
     End Module
+
+    Public NotInheritable Class FileUtil
+	Private Sub New()
+	End Sub
+	Public Shared Function GetBytesAsBase64(path As String) As String
+		Return Convert.ToBase64String(File.ReadAllBytes(path))
+	End Function
+End Class
     'ExEnd:CommonUtilities
 End Namespace
 

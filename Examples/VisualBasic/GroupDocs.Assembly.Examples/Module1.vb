@@ -22,6 +22,7 @@ Namespace GroupDocs.AssemblyExamples
             'ExEnd:ApplyingLicense
 
 
+
 #Region "Generating Bubble Chart Report"
             'Generate a bubble chart report in document processing format
             'GenerateReport.GenerateBubbleChart("document", false, false, false, true);
@@ -31,6 +32,10 @@ Namespace GroupDocs.AssemblyExamples
 
             'Generate a Bulleted List report in presentation format
             'GenerateReport.GenerateBubbleChart("presentation", false, false, false, true);
+
+            'Generate a Bubble chart report in email format
+            'GenerateReport.GenerateBubbleChart("email", false, false, false, false);
+
 #End Region
 
 #Region "Generating Bulleted List Report"
@@ -48,6 +53,9 @@ Namespace GroupDocs.AssemblyExamples
 
             'Generate a Bulleted List report in text format
             'GenerateReport.GenerateBulletedList("text", false, false, false, false);
+
+            'Generate a Bulleted List report in email format
+            'GenerateReport.GenerateBulletedList("email", false, false, false, false);
 #End Region
 
 #Region "Generating Chart report with Filtering, Grouping, and Ordering"
@@ -59,6 +67,9 @@ Namespace GroupDocs.AssemblyExamples
 
             'Generate a Chart report with Filtering, Grouping, and Ordering in presentation format
             'GenerateReport.GenerateChartWithFilteringGroupingAndOrdering("presentation", false, false, false, true);
+
+            'Generate a Chart report with Filtering, Grouping, and Ordering in email format
+            'GenerateReport.GenerateChartWithFilteringGroupingAndOrdering("email", false, false, false, false);
 #End Region
 
 #Region "Generating Common List Report"
@@ -76,6 +87,9 @@ Namespace GroupDocs.AssemblyExamples
 
             'Generate a Common List Report in text format
             'GenerateReport.GenerateCommonList("text", false, false, false, false);
+
+            'Generate a Common List Report in email format
+            'GenerateReport.GenerateCommonList("email", false, false, false, false);
 #End Region
 
 #Region "Generating Common Master-Detail Report"
@@ -94,107 +108,134 @@ Namespace GroupDocs.AssemblyExamples
             'Generate a Common Master-Detail Report in text format
             'GenerateReport.GenerateCommonMasterDetail("text", false, false, false, false);
 
+            'Generate a Common Master-Detail Report in email format
+            'GenerateReport.GenerateCommonMasterDetail("email", false, false, false, false);
+
 #End Region
 
 #Region "Generating In-Paragraph List Report"
-            'Generate a In-Paragraph List Report in document processing format
+            'Generate an In-Paragraph List Report in document processing format
             'GenerateReport.GenerateInParagraphList("document", false, false, false, true);
 
-            'Generate a In-Paragraph List Report in spreadsheet format
+            'Generate an In-Paragraph List Report in spreadsheet format
             'GenerateReport.GenerateInParagraphList("spreadsheet", false, false, false, true);
 
-            'Generate a In-Paragraph List Report in presentation format
+            'Generate an In-Paragraph List Report in presentation format
             'GenerateReport.GenerateInParagraphList("presentation", false, false, false, true);
 
-            'Generate a In-Paragraph List Report in html format
+            'Generate an In-Paragraph List Report in html format
             'GenerateReport.GenerateInParagraphList("html", false, false, false, false);
 
-            'Generate a In-Paragraph List Report in text format
+            'Generate an In-Paragraph List Report in text format
             'GenerateReport.GenerateInParagraphList("text", false, false, false, false);
+
+            'Generate an In-Paragraph List Report in email format
+            'GenerateReport.GenerateInParagraphList("email", false, false, false, false);
 #End Region
 
 #Region "Generating In-Table with Alternate Content Report"
-            'Generate a In-Table List with Alternate Content Report in document processing format
+            'Generate an In-Table List with Alternate Content Report in document processing format
             'GenerateReport.GenerateInTableListWithAlternateContent("document", false, false, false, true);
 
-            'Generate a In-Table List with Alternate Content Report in spreadsheet format
+            'Generate an In-Table List with Alternate Content Report in spreadsheet format
             'GenerateReport.GenerateInTableListWithAlternateContent("spreadsheet", false, false, false, true);
 
-            'Generate a In-Table List with Alternate Content Report in presentation format
+            'Generate an In-Table List with Alternate Content Report in presentation format
             'GenerateReport.GenerateInTableListWithAlternateContent("presentation", false, false, false, true);
 
-            'Generate a In-Table List with Alternate Content Report in html format
+            'Generate an In-Table List with Alternate Content Report in html format
             'GenerateReport.GenerateInTableListWithAlternateContent("html", false, false, false, false);
+
+            'Generate an In-Table List with Alternate Content Report in email format
+            'GenerateReport.GenerateInTableListWithAlternateContent("email", false, false, false, false);
+
 #End Region
 
 #Region "Generating In-Table with Filtering, Grouping and Ordering Report"
-            'Generate a In-Table List with Filtering, Grouping, and Ordering Report in document processing format
+            'Generate an In-Table List with Filtering, Grouping, and Ordering Report in document processing format
             'GenerateReport.GenerateInTableListWithFilteringGroupingAndOrdering("document", false, false, false, true);
 
-            'Generate a In-Table List with Filtering, Grouping, and Ordering Report in spreadsheet format
+            'Generate an In-Table List with Filtering, Grouping, and Ordering Report in spreadsheet format
             'GenerateReport.GenerateInTableListWithFilteringGroupingAndOrdering("spreadsheet", false, false, false, true);
 
-            'Generate a In-Table List with Filtering, Grouping, and Ordering Report in presentation format
+            'Generate an In-Table List with Filtering, Grouping, and Ordering Report in presentation format
             'GenerateReport.GenerateInTableListWithFilteringGroupingAndOrdering("presentation", false, false, false, true);
 
-            'Generate a In-Table List with Filtering, Grouping, and Ordering Report in html format
+            'Generate an In-Table List with Filtering, Grouping, and Ordering Report in html format
             'GenerateReport.GenerateInTableListWithFilteringGroupingAndOrdering("html", false, false, false, false);
+
+            'Generate an In-Table List with Filtering, Grouping, and Ordering Report in email format
+            'GenerateReport.GenerateInTableListWithFilteringGroupingAndOrdering("email", false, false, false, false);
 #End Region
 
 #Region "Generating In-Table List with Highlighted Rows Report"
-            'Generate a In-Table List with Highlighted Rows Report in document processing format
+            'Generate an In-Table List with Highlighted Rows Report in document processing format
             'GenerateReport.GenerateInTableListWithHighlightedRows("document", false, false, false, true);
 
-            'Generate a In-Table List with Highlighted Rows Report in spreadsheet format
+            'Generate an In-Table List with Highlighted Rows Report in spreadsheet format
             'GenerateReport.GenerateInTableListWithHighlightedRows("spreadsheet", false, false, false, true);
 
-            'Generate a In-Table List with Highlighted Rows Report in presentation format
+            'Generate an In-Table List with Highlighted Rows Report in presentation format
             'GenerateReport.GenerateInTableListWithHighlightedRows("presentation", false, false, false, true);
 
-            'Generate a In-Table List with Highlighted Rows Report in html format
+            'Generate an In-Table List with Highlighted Rows Report in html format
             'GenerateReport.GenerateInTableListWithHighlightedRows("html", false, false, false, false);
+
+            'Generate an In-Table List with Highlighted Rows Report in email format
+            'GenerateReport.GenerateInTableListWithHighlightedRows("email", false, false, false, false);
+
+
 #End Region
 
 #Region "Generating In-Table List Report"
-            'Generate a In-Table List Report in document processing format
+            'Generate an In-Table List Report in document processing format
             'GenerateReport.GenerateInTableList("document", false, false, false, true);
 
-            'Generate a In-Table List Report in spreadsheet format
+            'Generate an In-Table List Report in spreadsheet format
             'GenerateReport.GenerateInTableList("spreadsheet", false, false, false, true);
 
-            'Generate a In-Table List Report in presentation format
+            'Generate an In-Table List Report in presentation format
             'GenerateReport.GenerateInTableList("presentation", false, false, false, true);
 
-            'Generate a In-Table List Report in html format
+            'Generate an In-Table List Report in html format
             'GenerateReport.GenerateInTableList("html", false, false, false, false);
+
+            'Generate an In-Table List Report in email format
+            'GenerateReport.GenerateInTableList("email", false, false, false, false);
 #End Region
 
 #Region "Generating In-Table Master-Detail Report"
-            'Generate a In-Table Master-Detail Report in document processing format
+            'Generate an In-Table Master-Detail Report in document processing format
             'GenerateReport.GenerateInTableMasterDetail("document", false, false, false, true);
 
-            'Generate a In-Table Master-Detail Report in spreadsheet format
+            'Generate an In-Table Master-Detail Report in spreadsheet format
             'GenerateReport.GenerateInTableMasterDetail("spreadsheet", false, false, false, true);
 
-            'Generate a In-Table Master-Detail Report in presentation format
+            'Generate an In-Table Master-Detail Report in presentation format
             'GenerateReport.GenerateInTableMasterDetail("presentation", false, false, false, true);
 
-            'Generate a In-Table Master-Detail Report in html format
+            'Generate an In-Table Master-Detail Report in html format
             'GenerateReport.GenerateInTableMasterDetail("html", false, false, false, false);
+
+            'Generate an In-Table Master-Detail Report in email format
+            'GenerateReport.GenerateInTableMasterDetail("email", false, false, false, false);
 #End Region
 
-#Region "Generating In-Table With Running (Progressive) Total Report"
-            'Generate a In-Table List with Running (Progressive) Total Report in document processing format
-            ' GenerateReport.GenerateInTableListWithProgressiveTotal("document", false, false, false, false)
+#Region "Generating In-Table with Running (Progressive) Total Report"
+            'Generate an In-Table List with Running (Progressive) Total Report in document processing format
+            'GenerateReport.GenerateInTableListWithProgressiveTotal("document", false, false, false, false);
 
-            'Generate a In-Table List with Running (Progressive) Total Report in spreadsheet format
-            ' GenerateReport.GenerateInTableListWithProgressiveTotal("spreadsheet", false, false, false, false)
+            'Generate an In-Table List with Running (Progressive) Total Report in spreadsheet format
+            'GenerateReport.GenerateInTableListWithProgressiveTotal("spreadsheet", false, false, false, false);
 
-            'Generate a In-Table List with Running (Progressive) Total Report in presentation format
-            ' GenerateReport.GenerateInTableListWithProgressiveTotal("presentation", false, false, false, false)
+            'Generate an In-Table List with Running (Progressive) Total Report in presentation format
+            'GenerateReport.GenerateInTableListWithProgressiveTotal("presentation", false, false, false, false);
 
-            'Generate a In-Table List with Running (Progressive) Total Report in html format
-            ' GenerateReport.GenerateInTableListWithProgressiveTotal("html", false, false, false, false)
+            'Generate an In-Table List with Running (Progressive) Total Report in html format
+            'GenerateReport.GenerateInTableListWithProgressiveTotal("html", false, false, false, false);
+
+            'Generate an In-Table List with Running (Progressive) Total Report in email format
+            'GenerateReport.GenerateInTableListWithProgressiveTotal("email", false, false, false, false);
 #End Region
 
 #Region "Generating Multicolored Number List Report"
@@ -209,6 +250,9 @@ Namespace GroupDocs.AssemblyExamples
 
             'Generate a Multicolored Numbered List Report in html format
             'GenerateReport.GenerateMulticoloredNumberedList("html", false, false, false, false);
+
+            'Generate a Multicolored Numbered List Report in email format
+            'GenerateReport.GenerateMulticoloredNumberedList("email", false, false, false, false);
 #End Region
 
 #Region "Generating Numbered List Report"
@@ -226,6 +270,9 @@ Namespace GroupDocs.AssemblyExamples
 
             'Generate a Numbered List Report in text format
             'GenerateReport.GenerateNumberedList("text", false, false, false, false);
+
+            'Generate a Numbered List Report in email format
+            'GenerateReport.GenerateNumberedList("email", false, false, false, false);
 #End Region
 
 #Region "Generating Pie Chart Report"
@@ -237,6 +284,9 @@ Namespace GroupDocs.AssemblyExamples
 
             'Generate a Pie Chart Report in presentation format
             'GenerateReport.GeneratePieChart("presentation", false, false, true, false);
+
+            'Generate a Pie Chart Report in email format
+            'GenerateReport.GeneratePieChart("email", false, false, false, false);
 #End Region
 
 #Region "Generating Scatter Chart Report"
@@ -248,6 +298,9 @@ Namespace GroupDocs.AssemblyExamples
 
             'Generate a Scatter Chart Report in presentation format
             'GenerateReport.GenerateScatterChart("presentation", false, false, false, true);
+
+            'Generate a Scatter Chart Report in email format
+            'GenerateReport.GenerateScatterChart("email", false, false, false, false);
 #End Region
 
 #Region "Generating Single Row Report"
@@ -265,7 +318,12 @@ Namespace GroupDocs.AssemblyExamples
 
             'Generate a Single Row Report in text format
             'GenerateReport.GenerateSingleRow("text", false, false, false, false);
+
+            'Generate a Single Row Report in email format
+            'GenerateReport.GenerateSingleRow("email", false, false, false, false);
 #End Region
+
+
 
 #Region "Generating Report by Recursively and Lazily Accessing the Data"
             'GenerateReport.GenerateReportLazilyAndRecursively();

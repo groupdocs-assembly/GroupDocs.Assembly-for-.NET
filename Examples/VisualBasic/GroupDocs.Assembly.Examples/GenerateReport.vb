@@ -144,6 +144,7 @@ Namespace GroupDocs.AssemblyExamples
             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(document), CommonUtilities.SetDestinationDocument(outDocument), table, "Managers")
             'ExEnd:ChangingDocumentTableColumnType
         End Sub
+        
         Public Shared Sub GenerateBubbleChart(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean, isJson As Boolean)
             Select Case strDocumentFormat
                 Case "document"
@@ -387,6 +388,24 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateBubbleChartinOpenPresentationFormat
                         End Try
+                    End If
+                    Exit Select
+                Case "email"
+                    If True Then
+                        'ExStart:GenerateBubbleChartinEmailFormat
+                        'Setting up source email template
+                        Const strEmailTemplate As [String] = "Email Templates/Bubble Chart.msg"
+                        'Setting up destination email report 
+                        Const strEmailReport As [String] = "Email Reports/Bubble Chart Report.msg"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Bubble Chart Report in open presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport), DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetOrdersData()), DataLayer.EmailDataSourceName(".msg", "orders"))
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                        End Try
+                        'ExEnd:GenerateBubbleChartinEmailFormat
                     End If
                     Exit Select
             End Select
@@ -643,6 +662,8 @@ Namespace GroupDocs.AssemblyExamples
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
+                            ' This is needed solely for images in HTML documents.
+                            assembler.KnownTypes.Add(GetType(FileUtil))
                             'Call AssembleDocument to generate Bulleted List Report in html format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetProductsData(), "products")
                         Catch ex As Exception
@@ -667,6 +688,24 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                         End Try
                         'ExEnd:GenerateBulletedListinTextFormat
+                    End If
+                    Exit Select
+                Case "email"
+                    If True Then
+                        'ExStart:GenerateBulletedListinEmailFormat
+                        'Setting up source email template
+                        Const strEmailTemplate As [String] = "Email Templates/Bulleted List.msg"
+                        'Setting up destination email report 
+                        Const strEmailReport As [String] = "Email Reports/Bulleted List Report.msg"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Bulleted List Report in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport), DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetProductsData()), DataLayer.EmailDataSourceName(".msg", "products"))
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                        End Try
+                        'ExEnd:GenerateBulletedListinEmailFormat
                     End If
                     Exit Select
 
@@ -913,6 +952,25 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     End If
                     Exit Select
+                Case "email"
+                    If True Then
+                        'ExStart:GenerateChartWithFilteringGroupingAndOrderinginEmailFormat
+                        'Setting up source email template
+                        Const strEmailTemplate As [String] = "Email Templates/Chart with Filtering, Grouping, and Ordering.msg"
+                        'Setting up destination email report 
+                        Const strEmailReport As [String] = "Email Reports/Chart with Filtering, Grouping, and Ordering Report.msg"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport), DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetOrdersData()), DataLayer.EmailDataSourceName(".msg", "orders"))
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                        End Try
+                        'ExEnd:GenerateChartWithFilteringGroupingAndOrderinginEmailFormat
+                    End If
+                    Exit Select
+
             End Select
         End Sub
         Public Shared Sub GenerateCommonList(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean, isJson As Boolean)
@@ -1193,6 +1251,24 @@ Namespace GroupDocs.AssemblyExamples
                         'ExEnd:GenerateCommonListinTextFormat
                     End If
                     Exit Select
+                Case "email"
+                    If True Then
+                        'ExStart:GenerateCommonListinEmailFormat
+                        'Setting up source email template
+                        Const strEmailDocumentTemplate As [String] = "Email Templates/Common List.msg"
+                        'Setting up destination email report 
+                        Const strEmailDocumentReport As [String] = "Email Reports/Common List Report.msg"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Common List Report in email document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailDocumentTemplate), CommonUtilities.SetDestinationDocument(strEmailDocumentReport), DataLayer.EmailDataSourceObject(strEmailDocumentTemplate, DataLayer.PopulateData()), DataLayer.EmailDataSourceName(".msg", "customers"))
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                        End Try
+                        'ExEnd:GenerateCommonListinEmailFormat
+                    End If
+                    Exit Select
             End Select
         End Sub
         Public Shared Sub GenerateCommonMasterDetail(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean, isJson As Boolean)
@@ -1447,6 +1523,8 @@ Namespace GroupDocs.AssemblyExamples
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
+                            ' This is needed solely for images in HTML documents.
+                            assembler.KnownTypes.Add(GetType(FileUtil))
                             'Call AssembleDocument to generate Common Master-Detail Report in html format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.PopulateData(), "customers")
                         Catch ex As Exception
@@ -1471,6 +1549,24 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                         End Try
                         'ExEnd:GenerateCommonMasterDetailinTextFormat
+                    End If
+                    Exit Select
+                Case "email"
+                    If True Then
+                        'ExStart:GenerateCommonMasterDetailinEmailFormat
+                        'Setting up source email document template
+                        Const strEmailDocumentTemplate As [String] = "Email Templates/Common Master-Detail.msg"
+                        'Setting up destination email document report 
+                        Const strEmailDocumentReport As [String] = "Email Reports/Common Master-Detail Report.msg"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Common Master-Detail Report in email document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailDocumentTemplate), CommonUtilities.SetDestinationDocument(strEmailDocumentReport), DataLayer.EmailDataSourceObject(strEmailDocumentTemplate, DataLayer.PopulateData()), DataLayer.EmailDataSourceName(".msg", "customers"))
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                        End Try
+                        'ExEnd:GenerateCommonMasterDetailinEmailFormat
                     End If
                     Exit Select
             End Select
@@ -1753,6 +1849,24 @@ Namespace GroupDocs.AssemblyExamples
                         'ExEnd:GenerateInParagraphListinTextFormat
                     End If
                     Exit Select
+                Case "email"
+                    If True Then
+                        'ExStart:GenerateInParagraphListinEmailFormat
+                        'Setting up source email document template
+                        Const strEmailDocumentTemplate As [String] = "Email Templates/In-Paragraph List.msg"
+                        'Setting up destination email document report 
+                        Const strEmailDocumentReport As [String] = "Email Reports/In-Paragraph List Report.msg"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Paragraph List Report in email document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailDocumentTemplate), CommonUtilities.SetDestinationDocument(strEmailDocumentReport), DataLayer.EmailDataSourceObject(strEmailDocumentTemplate, DataLayer.GetProductsData()), DataLayer.EmailDataSourceName(".msg", "products"))
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                        End Try
+                        'ExEnd:GenerateInParagraphListinEmailFormat
+                    End If
+                    Exit Select
             End Select
         End Sub
         Public Shared Sub GenerateInTableListWithAlternateContent(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean, isJson As Boolean)
@@ -2015,6 +2129,26 @@ Namespace GroupDocs.AssemblyExamples
                         'ExEnd:GenerateInTableListWithAlternateContentinHtmlFormat
                     End If
                     Exit Select
+
+                Case "email"
+
+                    If True Then
+                        'ExStart:GenerateInTableListWithAlternateContentinEmailFormat
+                        'Setting up source email template
+                        Const strEmailTemplate As [String] = "Email Templates/In-Table List with Alternate Content.msg"
+                        'Setting up destination email report 
+                        Const strEmailReport As [String] = "Email Reports/In-Table List with Alternate Content Report.msg"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table List with Alternate Content Report in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport), DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetOrdersData()), DataLayer.EmailDataSourceName(".msg", "orders"))
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                        End Try
+                        'ExEnd:GenerateInTableListWithAlternateContentinEmailFormat
+                    End If
+                    Exit Select
             End Select
         End Sub
         Public Shared Sub GenerateInTableListWithFilteringGroupingAndOrdering(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean, isJson As Boolean)
@@ -2274,6 +2408,25 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                         End Try
                         'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderinginHtmlDocument
+                    End If
+                    Exit Select
+
+                Case "email"
+                    If True Then
+                        'ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginEmailDocument
+                        'Setting up source email template
+                        Const strEmailTemplate As [String] = "Email Templates/In-Table List with Filtering, Grouping, and Ordering.msg"
+                        'Setting up destination email report 
+                        Const strEmailReport As [String] = "Email Reports/In-Table List with Filtering, Grouping, and Ordering Report.msg"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport), DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetOrdersData()), DataLayer.EmailDataSourceName(".msg", "orders"))
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                        End Try
+                        'ExEnd:GenerateInTableListWithFilteringGroupingAndOrderinginEmailDocument
                     End If
                     Exit Select
 
@@ -2539,6 +2692,25 @@ Namespace GroupDocs.AssemblyExamples
                         'ExEnd:GenerateInTableListWithHighlightedRowsinHtmlDocument
                     End If
                     Exit Select
+                Case "email"
+                    If True Then
+                        'ExStart:GenerateInTableListWithHighlightedRowsinEmailDocument
+                        'Setting up source email template
+                        Const strEmailTemplate As [String] = "Email Templates/In-Table List with Highlighted Rows.msg"
+                        'Setting up destination email report 
+                        Const strEmailReport As [String] = "Email Reports/In-Table List with Highlighted Rows Report.msg"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table List with Highlighted Rows Report in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport), DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetOrdersData()), DataLayer.EmailDataSourceName(".msg", "orders"))
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                        End Try
+                        'ExEnd:GenerateInTableListWithHighlightedRowsinEmailDocument
+                    End If
+                    Exit Select
+
             End Select
         End Sub
         Public Shared Sub GenerateInTableList(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean, isJson As Boolean)
@@ -2799,6 +2971,24 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                         End Try
                         'ExEnd:GenerateInTableListinHtmlDocument
+                    End If
+                    Exit Select
+                Case "email"
+                    If True Then
+                        'ExStart:GenerateInTableListinEmailDocument
+                        'Setting up source email template
+                        Const strEmailTemplate As [String] = "Email Templates/In-Table List.msg"
+                        'Setting up destination email report 
+                        Const strEmailReport As [String] = "Email Reports/In-Table List Report.msg"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table List Report in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport), DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.PopulateData()), DataLayer.EmailDataSourceName(".msg", "customers"))
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                        End Try
+                        'ExEnd:GenerateInTableListinEmailDocument
                     End If
                     Exit Select
             End Select
@@ -3062,9 +3252,26 @@ Namespace GroupDocs.AssemblyExamples
                         'ExEnd:GenerateInTableMasterDetailinHtmlFormat
                     End If
                     Exit Select
+                Case "email"
+                    If True Then
+                        'ExStart:GenerateInTableMasterDetailinEmailFormat
+                        'Setting up source email template
+                        Const strEmailTemplate As [String] = "Email Templates/In-Table Master-Detail.msg"
+                        'Setting up destination email report 
+                        Const strEmailReport As [String] = "Email Reports/In-Table Master-Detail Report.msg"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table Master-Detail Report in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport), DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.PopulateData()), DataLayer.EmailDataSourceName(".msg", "customers"))
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                        End Try
+                        'ExEnd:GenerateInTableMasterDetailinEmailFormat
+                    End If
+                    Exit Select
             End Select
         End Sub
-
 
         Public Shared Sub GenerateInTableListWithProgressiveTotal(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean, isJson As Boolean)
             Select Case strDocumentFormat
@@ -3141,10 +3348,26 @@ Namespace GroupDocs.AssemblyExamples
                         'ExEnd:GenerateInTableListWithProgressiveTotalinHtmlFormat
                     End If
                     Exit Select
+                Case "email"
+                    If True Then
+                        'ExStart:GenerateInTableListWithProgressiveTotalinEmailFormat
+                        'Setting up source email template
+                        Const strEmailTemplate As [String] = "Email Templates/In-Table List with Running (Progressive) Total.msg"
+                        'Setting up destination email report 
+                        Const strEmailReport As [String] = "Email Reports/In-Table List with Running (Progressive) Total.msg"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate In-Table List with Progressive(Running) Total Report in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport), DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetOrdersData()), DataLayer.EmailDataSourceName(".msg", "orders"))
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                        End Try
+                        'ExEnd:GenerateInTableListWithProgressiveTotalinEmailFormat
+                    End If
+                    Exit Select
             End Select
         End Sub
-
-
         Public Shared Sub GenerateMulticoloredNumberedList(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean, isJson As Boolean)
             Select Case strDocumentFormat
                 Case "document"
@@ -3402,6 +3625,24 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                         End Try
                         'ExEnd:GenerateMulticoloredNumberedListinHtml
+                    End If
+                    Exit Select
+                Case "email"
+                    If True Then
+                        'ExStart:GenerateMulticoloredNumberedListinEmail
+                        'Setting up source email template
+                        Const strEmailDocumentTemplate As [String] = "Email Templates/Multicolored Numbered List.msg"
+                        'Setting up destination email report 
+                        Const strEmailDocumentReport As [String] = "Email Reports/Multicolored Numbered List Report.msg"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Multicolored Numbered List Report in html format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailDocumentTemplate), CommonUtilities.SetDestinationDocument(strEmailDocumentReport), DataLayer.EmailDataSourceObject(strEmailDocumentTemplate, DataLayer.GetProductsData()), DataLayer.EmailDataSourceName(".msg", "products"))
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                        End Try
+                        'ExEnd:GenerateMulticoloredNumberedListinEmail
                     End If
                     Exit Select
 
@@ -3685,6 +3926,24 @@ Namespace GroupDocs.AssemblyExamples
                         'ExEnd:GenerateNumberedListinTextFormat
                     End If
                     Exit Select
+                Case "email"
+                    If True Then
+                        'ExStart:GenerateNumberedListinEmailFormat
+                        'Setting up source email template
+                        Const strEmailDocumentTemplate As [String] = "Email Templates/Numbered List.msg"
+                        'Setting up destination email report 
+                        Const strEmailDocumentReport As [String] = "Email Reports/Numbered List Report.msg"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Numbered List Report in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailDocumentTemplate), CommonUtilities.SetDestinationDocument(strEmailDocumentReport), DataLayer.EmailDataSourceObject(strEmailDocumentTemplate, DataLayer.GetProductsData()), DataLayer.EmailDataSourceName(".msg", "products"))
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                        End Try
+                        'ExEnd:GenerateNumberedListinEmailFormat
+                    End If
+                    Exit Select
             End Select
         End Sub
         Public Shared Sub GeneratePieChart(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean, isJson As Boolean)
@@ -3928,6 +4187,24 @@ Namespace GroupDocs.AssemblyExamples
                         End Try
                     End If
                     Exit Select
+                Case "email"
+                    If True Then
+                        'ExStart:GeneratePieChartiEmailFormat
+                        'Setting up source email template
+                        Const strEmailTemplate As [String] = "Email Templates/Pie Chart.msg"
+                        'Setting up destination email report 
+                        Const strEmailReport As [String] = "Email Reports/Pie Chart Report.msg"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Pie Chart Report in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport), DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.PopulateData()), DataLayer.EmailDataSourceName(".msg", "customers"))
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                        End Try
+                        'ExEnd:GeneratePieChartiEmailFormat
+                    End If
+                    Exit Select
             End Select
         End Sub
         Public Shared Sub GenerateScatterChart(strDocumentFormat As String, isDatabase As Boolean, isDataSet As Boolean, isDataSourceXML As Boolean, isJson As Boolean)
@@ -4169,6 +4446,24 @@ Namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message)
                             'ExEnd:GenerateScatterChartinOpenPresentationFormat
                         End Try
+                    End If
+                    Exit Select
+                Case "email"
+                    If True Then
+                        'ExStart:GenerateScatterChartinEmailFormat
+                        'Setting up source email template
+                        Const strEmailTemplate As String = "Email Templates/Scatter Chart.msg"
+                        'Setting up destination email report 
+                        Const strEmailReport As [String] = "Email Reports/Scatter Chart Report.msg"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Scatter Chart Report in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport), DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetOrdersData()), DataLayer.EmailDataSourceName(".msg", "orders"))
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                        End Try
+                        'ExEnd:GenerateScatterChartinEmailFormat
                     End If
                     Exit Select
             End Select
@@ -4424,6 +4719,8 @@ Namespace GroupDocs.AssemblyExamples
                         Try
                             'Instantiate DocumentAssembler class
                             Dim assembler As New DocumentAssembler()
+                            ' This is needed solely for images in HTML documents.
+                            assembler.KnownTypes.Add(GetType(FileUtil))
                             'Call AssembleDocument to generate Single Row Report in html format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomerData(), "customer")
                         Catch ex As Exception
@@ -4451,8 +4748,28 @@ Namespace GroupDocs.AssemblyExamples
                         'ExEnd:GenerateSingleRowinTextFormat
                     End If
                     Exit Select
+
+                Case "email"
+                    If True Then
+                        'ExStart:GenerateSingleRowinEmailFormat
+                        'Setting up source email format template
+                        Const strEmailTemplate As [String] = "Email Templates/Single Row.msg"
+                        'Setting up destination email format report 
+                        Const strEmailReport As [String] = "Email Reports/Single Row Report.msg"
+                        Try
+                            'Instantiate DocumentAssembler class
+                            Dim assembler As New DocumentAssembler()
+                            'Call AssembleDocument to generate Single Row Report in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport), DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetCustomerData()), DataLayer.EmailDataSourceName(".msg", "customer"))
+                        Catch ex As Exception
+                            Console.WriteLine(ex.Message)
+                        End Try
+                        'ExEnd:GenerateSingleRowinEmailFormat
+                    End If
+                    Exit Select
             End Select
         End Sub
+
         Public Shared Sub GenerateReportLazilyAndRecursively()
             'ExStart:GeneratingReportbyRecursivelyandLazilyAccessingtheData
             'Setting up source open document template

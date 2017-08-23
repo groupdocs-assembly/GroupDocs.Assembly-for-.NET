@@ -8,6 +8,7 @@ using GroupDocs.AssemblyExamples.BusinessLayer;
 using System.Diagnostics;
 using GroupDocs.AssemblyExamples.ProjectEntities;
 using GroupDocs.Assembly.Data;
+using static GroupDocs.AssemblyExamples.BusinessLayer.CommonUtilities;
 
 namespace GroupDocs.AssemblyExamples
 {
@@ -466,6 +467,27 @@ namespace GroupDocs.AssemblyExamples
                         //ExEnd:GenerateBubbleChartinOpenPresentationFormat
                     }
                     break;
+                case "email":
+                    {
+                        //ExStart:GenerateBubbleChartinEmailFormat
+                        //Setting up source email template
+                        const String strEmailTemplate = "Email Templates/Bubble Chart.msg";
+                        //Setting up destination email report 
+                        const String strEmailReport = "Email Reports/Bubble Chart Report.msg";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Bubble Chart Report in open presentation format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport), DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetOrdersData()), DataLayer.EmailDataSourceName(".msg","orders"));
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateBubbleChartinEmailFormat
+                    }
+                    break;
             }
         }
         public static void GenerateBulletedList(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
@@ -792,6 +814,8 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
+                            // This is needed solely for images in HTML documents.
+                            assembler.KnownTypes.Add(typeof(FileUtil));
                             //Call AssembleDocument to generate Bulleted List Report in html format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetProductsData(), "products");
                         }
@@ -821,6 +845,27 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateBulletedListinTextFormat
+                    }
+                    break;
+                case "email":
+                    {
+                        //ExStart:GenerateBulletedListinEmailFormat
+                        //Setting up source email template
+                        const String strEmailTemplate = "Email Templates/Bulleted List.msg";
+                        //Setting up destination email report 
+                        const String strEmailReport = "Email Reports/Bulleted List Report.msg";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Bulleted List Report in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport), DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetProductsData()), DataLayer.EmailDataSourceName(".msg", "products"));
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateBulletedListinEmailFormat
                     }
                     break;
 
@@ -1138,6 +1183,28 @@ namespace GroupDocs.AssemblyExamples
                         //ExEnd:GenerateChartWithFilteringGroupingAndOrderinginOpenPresentationFormat
                     }
                     break;
+                case "email":
+                    {
+                        //ExStart:GenerateChartWithFilteringGroupingAndOrderinginEmailFormat
+                        //Setting up source email template
+                        const String strEmailTemplate = "Email Templates/Chart with Filtering, Grouping, and Ordering.msg";
+                        //Setting up destination email report 
+                        const String strEmailReport = "Email Reports/Chart with Filtering, Grouping, and Ordering Report.msg";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport), DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetOrdersData()), DataLayer.EmailDataSourceName(".msg","orders"));
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateChartWithFilteringGroupingAndOrderinginEmailFormat
+                    }
+                    break;
+
             }
         }
         public static void GenerateCommonList(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
@@ -1495,6 +1562,27 @@ namespace GroupDocs.AssemblyExamples
                         //ExEnd:GenerateCommonListinTextFormat
                     }
                     break;
+                case "email":
+                    {
+                        //ExStart:GenerateCommonListinEmailFormat
+                        //Setting up source email template
+                        const String strEmailDocumentTemplate = "Email Templates/Common List.msg";
+                        //Setting up destination email report 
+                        const String strEmailDocumentReport = "Email Reports/Common List Report.msg";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Common List Report in email document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailDocumentTemplate), CommonUtilities.SetDestinationDocument(strEmailDocumentReport), DataLayer.EmailDataSourceObject(strEmailDocumentTemplate, DataLayer.PopulateData()), DataLayer.EmailDataSourceName(".msg", "customers"));
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateCommonListinEmailFormat
+                    }
+                    break;
             }
         }
         public static void GenerateCommonMasterDetail(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
@@ -1821,6 +1909,8 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
+                            // This is needed solely for images in HTML documents.
+                            assembler.KnownTypes.Add(typeof(FileUtil));
                             //Call AssembleDocument to generate Common Master-Detail Report in html format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.PopulateData(), "customers");
                         }
@@ -1850,6 +1940,27 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateCommonMasterDetailinTextFormat
+                    }
+                    break;
+                case "email":
+                    {
+                        //ExStart:GenerateCommonMasterDetailinEmailFormat
+                        //Setting up source email document template
+                        const String strEmailDocumentTemplate = "Email Templates/Common Master-Detail.msg";
+                        //Setting up destination email document report 
+                        const String strEmailDocumentReport = "Email Reports/Common Master-Detail Report.msg";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Common Master-Detail Report in email document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailDocumentTemplate), CommonUtilities.SetDestinationDocument(strEmailDocumentReport), DataLayer.EmailDataSourceObject(strEmailDocumentTemplate, DataLayer.PopulateData()), DataLayer.EmailDataSourceName(".msg", "customers"));
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateCommonMasterDetailinEmailFormat
                     }
                     break;
             }
@@ -2209,6 +2320,27 @@ namespace GroupDocs.AssemblyExamples
                         //ExEnd:GenerateInParagraphListinTextFormat
                     }
                     break;
+                case "email":
+                    {
+                        //ExStart:GenerateInParagraphListinEmailFormat
+                        //Setting up source email document template
+                        const String strEmailDocumentTemplate = "Email Templates/In-Paragraph List.msg";
+                        //Setting up destination email document report 
+                        const String strEmailDocumentReport = "Email Reports/In-Paragraph List Report.msg";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Paragraph List Report in email document format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailDocumentTemplate), CommonUtilities.SetDestinationDocument(strEmailDocumentReport),DataLayer.EmailDataSourceObject(strEmailDocumentTemplate, DataLayer.GetProductsData()), DataLayer.EmailDataSourceName(".msg", "products"));
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInParagraphListinEmailFormat
+                    }
+                    break;
             }
         }
         public static void GenerateInTableListWithAlternateContent(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
@@ -2545,6 +2677,29 @@ namespace GroupDocs.AssemblyExamples
                         //ExEnd:GenerateInTableListWithAlternateContentinHtmlFormat
                     }
                     break;
+
+                case "email":
+
+                    {
+                        //ExStart:GenerateInTableListWithAlternateContentinEmailFormat
+                        //Setting up source email template
+                        const String strEmailTemplate = "Email Templates/In-Table List with Alternate Content.msg";
+                        //Setting up destination email report 
+                        const String strEmailReport = "Email Reports/In-Table List with Alternate Content Report.msg";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport), DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetOrdersData()),DataLayer.EmailDataSourceName(".msg", "orders"));
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithAlternateContentinEmailFormat
+                    }
+                    break;
             }
         }
         public static void GenerateInTableListWithFilteringGroupingAndOrdering(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
@@ -2878,6 +3033,28 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderinginHtmlDocument
+                    }
+                    break;
+
+                case "email":
+                    {
+                        //ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginEmailDocument
+                        //Setting up source email template
+                        const String strEmailTemplate = "Email Templates/In-Table List with Filtering, Grouping, and Ordering.msg";
+                        //Setting up destination email report 
+                        const String strEmailReport = "Email Reports/In-Table List with Filtering, Grouping, and Ordering Report.msg";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport), DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetOrdersData()),DataLayer.EmailDataSourceName(".msg", "orders"));
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderinginEmailDocument
                     }
                     break;
 
@@ -3217,6 +3394,28 @@ namespace GroupDocs.AssemblyExamples
                         //ExEnd:GenerateInTableListWithHighlightedRowsinHtmlDocument
                     }
                     break;
+                case "email":
+                    {
+                        //ExStart:GenerateInTableListWithHighlightedRowsinEmailDocument
+                        //Setting up source email template
+                        const String strEmailTemplate = "Email Templates/In-Table List with Highlighted Rows.msg";
+                        //Setting up destination email report 
+                        const String strEmailReport = "Email Reports/In-Table List with Highlighted Rows Report.msg";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport), DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetOrdersData()), DataLayer.EmailDataSourceName(".msg", "orders"));
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithHighlightedRowsinEmailDocument
+                    }
+                    break;
+
             }
         }
         public static void GenerateInTableList(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
@@ -3551,6 +3750,27 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateInTableListinHtmlDocument
+                    }
+                    break;
+ case "email":
+                    {
+                        //ExStart:GenerateInTableListinEmailDocument
+                        //Setting up source email template
+                        const String strEmailTemplate = "Email Templates/In-Table List.msg";
+                        //Setting up destination email report 
+                        const String strEmailReport = "Email Reports/In-Table List Report.msg";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List Report in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport),DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.PopulateData()), DataLayer.EmailDataSourceName(".msg", "customers"));
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListinEmailDocument
                     }
                     break;
             }
@@ -3888,6 +4108,27 @@ namespace GroupDocs.AssemblyExamples
                         //ExEnd:GenerateInTableMasterDetailinHtmlFormat
                     }
                     break;
+                case "email":
+                    {
+                        //ExStart:GenerateInTableMasterDetailinEmailFormat
+                        //Setting up source email template
+                        const String strEmailTemplate = "Email Templates/In-Table Master-Detail.msg";
+                        //Setting up destination email report 
+                        const String strEmailReport = "Email Reports/In-Table Master-Detail Report.msg";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table Master-Detail Report in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport), DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.PopulateData()), DataLayer.EmailDataSourceName(".msg", "customers"));
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableMasterDetailinEmailFormat
+                    }
+                    break;
             }
         }
 
@@ -3978,6 +4219,27 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateInTableListWithProgressiveTotalinHtmlFormat
+                    }
+                    break;
+                case "email":
+                    {
+                        //ExStart:GenerateInTableListWithProgressiveTotalinEmailFormat
+                        //Setting up source email template
+                        const String strEmailTemplate = "Email Templates/In-Table List with Running (Progressive) Total.msg";
+                        //Setting up destination email report 
+                        const String strEmailReport = "Email Reports/In-Table List with Running (Progressive) Total.msg";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate In-Table List with Progressive(Running) Total Report in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport),DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetOrdersData()), DataLayer.EmailDataSourceName(".msg", "orders"));
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateInTableListWithProgressiveTotalinEmailFormat
                     }
                     break;
             }
@@ -4313,6 +4575,27 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateMulticoloredNumberedListinHtml
+                    }
+                    break;
+                case "email":
+                    {
+                        //ExStart:GenerateMulticoloredNumberedListinEmail
+                        //Setting up source email template
+                        const String strEmailDocumentTemplate = "Email Templates/Multicolored Numbered List.msg";
+                        //Setting up destination email report 
+                        const String strEmailDocumentReport = "Email Reports/Multicolored Numbered List Report.msg";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Multicolored Numbered List Report in html format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailDocumentTemplate), CommonUtilities.SetDestinationDocument(strEmailDocumentReport), DataLayer.EmailDataSourceObject(strEmailDocumentTemplate, DataLayer.GetProductsData()), DataLayer.EmailDataSourceName(".msg", "products"));
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateMulticoloredNumberedListinEmail
                     }
                     break;
 
@@ -4673,6 +4956,27 @@ namespace GroupDocs.AssemblyExamples
                         //ExEnd:GenerateNumberedListinTextFormat
                     }
                     break;
+                case "email":
+                    {
+                        //ExStart:GenerateNumberedListinEmailFormat
+                        //Setting up source email template
+                        const String strEmailDocumentTemplate = "Email Templates/Numbered List.msg";
+                        //Setting up destination email report 
+                        const String strEmailDocumentReport = "Email Reports/Numbered List Report.msg";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Numbered List Report in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailDocumentTemplate), CommonUtilities.SetDestinationDocument(strEmailDocumentReport), DataLayer.EmailDataSourceObject(strEmailDocumentTemplate, DataLayer.GetProductsData()), DataLayer.EmailDataSourceName(".msg","products"));
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateNumberedListinEmailFormat
+                    }
+                    break;
             }
         }
         public static void GeneratePieChart(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
@@ -4987,6 +5291,27 @@ namespace GroupDocs.AssemblyExamples
                         //ExEnd:GeneratePieChartinOpenPresentationFormat
                     }
                     break;
+                case "email":
+                    {
+                        //ExStart:GeneratePieChartiEmailFormat
+                        //Setting up source email template
+                        const String strEmailTemplate = "Email Templates/Pie Chart.msg";
+                        //Setting up destination email report 
+                        const String strEmailReport = "Email Reports/Pie Chart Report.msg";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Pie Chart Report in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport),DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.PopulateData()), DataLayer.EmailDataSourceName(".msg", "customers"));
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GeneratePieChartiEmailFormat
+                    }
+                    break;
             }
         }
         public static void GenerateScatterChart(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
@@ -5299,6 +5624,27 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateScatterChartinOpenPresentationFormat
+                    }
+                    break;
+                case "email":
+                    {
+                        //ExStart:GenerateScatterChartinEmailFormat
+                        //Setting up source email template
+                        const string strEmailTemplate = "Email Templates/Scatter Chart.msg";
+                        //Setting up destination email report 
+                        const String strEmailReport = "Email Reports/Scatter Chart Report.msg";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Scatter Chart Report in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport), DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetOrdersData()), DataLayer.EmailDataSourceName(".msg", "orders"));
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateScatterChartinEmailFormat
                     }
                     break;
             }
@@ -5626,6 +5972,8 @@ namespace GroupDocs.AssemblyExamples
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
+                            // This is needed solely for images in HTML documents.
+                            assembler.KnownTypes.Add(typeof(FileUtil));
                             //Call AssembleDocument to generate Single Row Report in html format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomerData(), "customer");
                         }
@@ -5656,6 +6004,28 @@ namespace GroupDocs.AssemblyExamples
                             Console.WriteLine(ex.Message);
                         }
                         //ExEnd:GenerateSingleRowinTextFormat
+                    }
+                    break;
+
+                case "email":
+                    {
+                        //ExStart:GenerateSingleRowinEmailFormat
+                        //Setting up source email format template
+                        const String strEmailTemplate = "Email Templates/Single Row.msg";
+                        //Setting up destination email format report 
+                        const String strEmailReport = "Email Reports/Single Row Report.msg";
+                        try
+                        {
+                            //Instantiate DocumentAssembler class
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            //Call AssembleDocument to generate Single Row Report in email format
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport), DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetCustomerData()), DataLayer.EmailDataSourceName(".msg", "customer"));
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        //ExEnd:GenerateSingleRowinEmailFormat
                     }
                     break;
             }

@@ -543,6 +543,48 @@ Namespace GroupDocs.AssemblyExamples.BusinessLayer
         End Function
 
 
+
+        ''' <summary>
+        ''' Creates an Email data source object
+        ''' </summary>
+        ''' <param name="fileName">Name of the template file</param>
+        ''' <param name="dataSource">data source</param>
+        ''' <returns></returns>
+
+        Public Shared Function EmailDataSourceObject(fileName As String, dataSource As Object) As Object()
+            'ExStart:EmailDataSourceObject
+            Dim dataSources As Object()
+            Dim extension As String = Path.GetExtension(fileName)
+
+            If (extension = ".msg") OrElse (extension = ".eml") Then
+                Dim recipients As New List(Of String)()
+                recipients.Add("Named Recipient <named@example.com>")
+                recipients.Add("unnamed@example.com")
+
+
+                dataSources = New Object() {dataSource, "Example Sender <sender@example.com>", recipients, "cc@example.com", Path.GetFileNameWithoutExtension(fileName)}
+            Else
+                dataSources = New Object() {dataSource}
+            End If
+            Return dataSources
+            'ExEnd:EmailDataSourceObject
+        End Function
+
+        Public Shared Function EmailDataSourceName(extension As String, name As String) As String()
+            'ExStart:EmailDataSourceName
+            Dim dataSourceNames As String()
+            If (extension = ".msg") OrElse (extension = ".eml") Then
+
+                dataSourceNames = New String() {name, "sender", "recipients", "cc", "subject"}
+            Else
+                dataSourceNames = New String() {}
+            End If
+            Return dataSourceNames
+            'ExEnd:EmailDataSourceName
+        End Function
+
+
+
     End Class
     'ExEnd:DataLayer
 #End Region

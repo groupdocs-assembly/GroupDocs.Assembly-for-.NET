@@ -1,0 +1,1078 @@
+Message-ID: <4ff93552fac14f7fb551a1ac8a750f21>
+From: "<<[sender]>>" <temp@temp.com>
+Subject: <<[subject]>>
+To: "<<foreach [r in recipients]>><<[r]>>", "<</foreach>>"
+Cc: "<<[cc]>>"
+X-Unsent: 1
+Date: Mon, 7 Aug 2017 23:09:01 +0000
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+ boundary="--_=_NextPart1_0dc393f3-2017-4d48-b6bd-8e310ee08b37"
+
+This is a multi-part message in MIME format.
+
+----_=_NextPart1_0dc393f3-2017-4d48-b6bd-8e310ee08b37
+Content-Type: multipart/alternative; boundary="--_=_NextPart0_cc4600aa-aba6-4c84-9412-32c4e71238a3"
+
+
+----_=_NextPart0_cc4600aa-aba6-4c84-9412-32c4e71238a3
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+Manager
+Contract Price
+
+<<foreach [in contracts
+   =2EWhere(c =3D> c=2EDate=2EYear =3D=3D 2015)
+    =2EGroupBy(c =3D> c=2EManager)
+    =2EOrderBy(g =3D> g=2EKey=2EName)]>><<[Key=2EName]>>
+<<[Sum(c =3D> c=2EPrice)]>><</foreach>>
+=20
+
+----_=_NextPart0_cc4600aa-aba6-4c84-9412-32c4e71238a3
+Content-Type: text/html; charset="koi8-r"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas=2Emicrosoft=2Ecom/office/2004/12/omml" xmlns=3D"h=
+ttp://www=2Ew3=2Eorg/TR/REC-html40"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dkoi8-r"><=
+meta name=3D"ProgId" content=3D"Word=2EDocument"><meta name=3D"Generator" c=
+ontent=3D"Microsoft Word 15"><meta name=3D"Originator" content=3D"Microsoft=
+ Word 15"><link rel=3D"File-List" href=3D"cid:filelist=2Exml@01D30FC7=2EAAD=
+B3E80"><!--[if gte mso 9]><xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+</o:OfficeDocumentSettings>
+</xml><![endif]--><link rel=3D"themeData" href=3D"~~themedata~~"><link rel=
+=3D"colorSchemeMapping" href=3D"~~colorschememapping~~"><!--[if gte mso 9]>=
+<xml>
+<w:WordDocument>
+<w:SpellingState>Clean</w:SpellingState>
+<w:TrackMoves/>
+<w:TrackFormatting/>
+<w:EnvelopeVis/>
+<w:PunctuationKerning/>
+<w:ValidateAgainstSchemas/>
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:DoNotPromoteQF/>
+<w:LidThemeOther>RU</w:LidThemeOther>
+<w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+<w:LidThemeComplexScript>AR-SA</w:LidThemeComplexScript>
+<w:Compatibility>
+<w:BreakWrappedTables/>
+<w:SnapToGridInCell/>
+<w:WrapTextWithPunct/>
+<w:UseAsianBreakRules/>
+<w:DontGrowAutofit/>
+<w:SplitPgBreakAndParaMark/>
+<w:EnableOpenTypeKerning/>
+<w:DontFlipMirrorIndents/>
+<w:OverrideTableStyleHps/>
+</w:Compatibility>
+<m:mathPr>
+<m:mathFont m:val=3D"Cambria Math"/>
+<m:brkBin m:val=3D"before"/>
+<m:brkBinSub m:val=3D"&#45;-"/>
+<m:smallFrac m:val=3D"off"/>
+<m:dispDef/>
+<m:lMargin m:val=3D"0"/>
+<m:rMargin m:val=3D"0"/>
+<m:defJc m:val=3D"centerGroup"/>
+<m:wrapIndent m:val=3D"1440"/>
+<m:intLim m:val=3D"subSup"/>
+<m:naryLim m:val=3D"undOvr"/>
+</m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<w:LatentStyles DefLockedState=3D"false" DefUnhideWhenUsed=3D"false" DefSem=
+iHidden=3D"false" DefQFormat=3D"false" DefPriority=3D"99" LatentStyleCount=
+=3D"371">
+<w:LsdException Locked=3D"false" Priority=3D"0" QFormat=3D"true" Name=3D"No=
+rmal"/>
+<w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"he=
+ading 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"9" SemiHidden=3D"true" UnhideW=
+henUsed=3D"true" QFormat=3D"true" Name=3D"heading 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"9" SemiHidden=3D"true" UnhideW=
+henUsed=3D"true" QFormat=3D"true" Name=3D"heading 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"9" SemiHidden=3D"true" UnhideW=
+henUsed=3D"true" QFormat=3D"true" Name=3D"heading 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"9" SemiHidden=3D"true" UnhideW=
+henUsed=3D"true" QFormat=3D"true" Name=3D"heading 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"9" SemiHidden=3D"true" UnhideW=
+henUsed=3D"true" QFormat=3D"true" Name=3D"heading 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"9" SemiHidden=3D"true" UnhideW=
+henUsed=3D"true" QFormat=3D"true" Name=3D"heading 7"/>
+<w:LsdException Locked=3D"false" Priority=3D"9" SemiHidden=3D"true" UnhideW=
+henUsed=3D"true" QFormat=3D"true" Name=3D"heading 8"/>
+<w:LsdException Locked=3D"false" Priority=3D"9" SemiHidden=3D"true" UnhideW=
+henUsed=3D"true" QFormat=3D"true" Name=3D"heading 9"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"index 1"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"index 2"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"index 3"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"index 4"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"index 5"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"index 6"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"index 7"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"index 8"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"index 9"/>
+<w:LsdException Locked=3D"false" Priority=3D"39" SemiHidden=3D"true" Unhide=
+WhenUsed=3D"true" Name=3D"toc 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"39" SemiHidden=3D"true" Unhide=
+WhenUsed=3D"true" Name=3D"toc 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"39" SemiHidden=3D"true" Unhide=
+WhenUsed=3D"true" Name=3D"toc 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"39" SemiHidden=3D"true" Unhide=
+WhenUsed=3D"true" Name=3D"toc 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"39" SemiHidden=3D"true" Unhide=
+WhenUsed=3D"true" Name=3D"toc 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"39" SemiHidden=3D"true" Unhide=
+WhenUsed=3D"true" Name=3D"toc 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"39" SemiHidden=3D"true" Unhide=
+WhenUsed=3D"true" Name=3D"toc 7"/>
+<w:LsdException Locked=3D"false" Priority=3D"39" SemiHidden=3D"true" Unhide=
+WhenUsed=3D"true" Name=3D"toc 8"/>
+<w:LsdException Locked=3D"false" Priority=3D"39" SemiHidden=3D"true" Unhide=
+WhenUsed=3D"true" Name=3D"toc 9"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Normal Indent"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"footnote text"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"annotation text"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"header"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"footer"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"index heading"/>
+<w:LsdException Locked=3D"false" Priority=3D"35" SemiHidden=3D"true" Unhide=
+WhenUsed=3D"true" QFormat=3D"true" Name=3D"caption"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"table of figures"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"envelope address"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"envelope return"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"footnote reference"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"annotation reference"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"line number"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"page number"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"endnote reference"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"endnote text"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"table of authorities"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"macro"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"toa heading"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"List"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"List Bullet"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"List Number"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"List 2"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"List 3"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"List 4"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"List 5"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"List Bullet 2"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"List Bullet 3"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"List Bullet 4"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"List Bullet 5"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"List Number 2"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"List Number 3"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"List Number 4"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"List Number 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"10" QFormat=3D"true" Name=3D"T=
+itle"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Closing"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Signature"/>
+<w:LsdException Locked=3D"false" Priority=3D"1" SemiHidden=3D"true" UnhideW=
+henUsed=3D"true" Name=3D"Default Paragraph Font"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Body Text"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Body Text Indent"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"List Continue"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"List Continue 2"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"List Continue 3"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"List Continue 4"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"List Continue 5"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Message Header"/>
+<w:LsdException Locked=3D"false" Priority=3D"11" QFormat=3D"true" Name=3D"S=
+ubtitle"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Salutation"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Date"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Body Text First Indent"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Body Text First Indent 2"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Note Heading"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Body Text 2"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Body Text 3"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Body Text Indent 2"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Body Text Indent 3"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Block Text"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Hyperlink"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"FollowedHyperlink"/>
+<w:LsdException Locked=3D"false" Priority=3D"22" QFormat=3D"true" Name=3D"S=
+trong"/>
+<w:LsdException Locked=3D"false" Priority=3D"20" QFormat=3D"true" Name=3D"E=
+mphasis"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Document Map"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Plain Text"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"E-mail Signature"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"HTML Top of Form"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"HTML Bottom of Form"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Normal (Web)"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"HTML Acronym"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"HTML Address"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"HTML Cite"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"HTML Code"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"HTML Definition"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"HTML Keyboard"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"HTML Preformatted"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"HTML Sample"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"HTML Typewriter"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"HTML Variable"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Normal Table"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"annotation subject"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"No List"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Outline List 1"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Outline List 2"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Outline List 3"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Simple 1"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Simple 2"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Simple 3"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Classic 1"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Classic 2"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Classic 3"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Classic 4"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Colorful 1"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Colorful 2"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Colorful 3"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Columns 1"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Columns 2"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Columns 3"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Columns 4"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Columns 5"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Grid 1"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Grid 2"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Grid 3"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Grid 4"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Grid 5"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Grid 6"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Grid 7"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Grid 8"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table List 1"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table List 2"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table List 3"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table List 4"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table List 5"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table List 6"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table List 7"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table List 8"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table 3D effects 1"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table 3D effects 2"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table 3D effects 3"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Contemporary"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Elegant"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Professional"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Subtle 1"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Subtle 2"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Web 1"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Web 2"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Web 3"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Balloon Text"/>
+<w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"Table Grid"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" UnhideWhenUsed=3D"true=
+" Name=3D"Table Theme"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" Name=3D"Placeholder Te=
+xt"/>
+<w:LsdException Locked=3D"false" Priority=3D"1" QFormat=3D"true" Name=3D"No=
+ Spacing"/>
+<w:LsdException Locked=3D"false" Priority=3D"60" Name=3D"Light Shading"/>
+<w:LsdException Locked=3D"false" Priority=3D"61" Name=3D"Light List"/>
+<w:LsdException Locked=3D"false" Priority=3D"62" Name=3D"Light Grid"/>
+<w:LsdException Locked=3D"false" Priority=3D"63" Name=3D"Medium Shading 1"/=
+>
+<w:LsdException Locked=3D"false" Priority=3D"64" Name=3D"Medium Shading 2"/=
+>
+<w:LsdException Locked=3D"false" Priority=3D"65" Name=3D"Medium List 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"66" Name=3D"Medium List 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"67" Name=3D"Medium Grid 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"68" Name=3D"Medium Grid 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"69" Name=3D"Medium Grid 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"70" Name=3D"Dark List"/>
+<w:LsdException Locked=3D"false" Priority=3D"71" Name=3D"Colorful Shading"/=
+>
+<w:LsdException Locked=3D"false" Priority=3D"72" Name=3D"Colorful List"/>
+<w:LsdException Locked=3D"false" Priority=3D"73" Name=3D"Colorful Grid"/>
+<w:LsdException Locked=3D"false" Priority=3D"60" Name=3D"Light Shading Acce=
+nt 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"61" Name=3D"Light List Accent =
+1"/>
+<w:LsdException Locked=3D"false" Priority=3D"62" Name=3D"Light Grid Accent =
+1"/>
+<w:LsdException Locked=3D"false" Priority=3D"63" Name=3D"Medium Shading 1 A=
+ccent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"64" Name=3D"Medium Shading 2 A=
+ccent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"65" Name=3D"Medium List 1 Acce=
+nt 1"/>
+<w:LsdException Locked=3D"false" SemiHidden=3D"true" Name=3D"Revision"/>
+<w:LsdException Locked=3D"false" Priority=3D"34" QFormat=3D"true" Name=3D"L=
+ist Paragraph"/>
+<w:LsdException Locked=3D"false" Priority=3D"29" QFormat=3D"true" Name=3D"Q=
+uote"/>
+<w:LsdException Locked=3D"false" Priority=3D"30" QFormat=3D"true" Name=3D"I=
+ntense Quote"/>
+<w:LsdException Locked=3D"false" Priority=3D"66" Name=3D"Medium List 2 Acce=
+nt 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"67" Name=3D"Medium Grid 1 Acce=
+nt 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"68" Name=3D"Medium Grid 2 Acce=
+nt 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"69" Name=3D"Medium Grid 3 Acce=
+nt 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"70" Name=3D"Dark List Accent 1=
+"/>
+<w:LsdException Locked=3D"false" Priority=3D"71" Name=3D"Colorful Shading A=
+ccent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"72" Name=3D"Colorful List Acce=
+nt 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"73" Name=3D"Colorful Grid Acce=
+nt 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"60" Name=3D"Light Shading Acce=
+nt 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"61" Name=3D"Light List Accent =
+2"/>
+<w:LsdException Locked=3D"false" Priority=3D"62" Name=3D"Light Grid Accent =
+2"/>
+<w:LsdException Locked=3D"false" Priority=3D"63" Name=3D"Medium Shading 1 A=
+ccent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"64" Name=3D"Medium Shading 2 A=
+ccent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"65" Name=3D"Medium List 1 Acce=
+nt 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"66" Name=3D"Medium List 2 Acce=
+nt 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"67" Name=3D"Medium Grid 1 Acce=
+nt 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"68" Name=3D"Medium Grid 2 Acce=
+nt 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"69" Name=3D"Medium Grid 3 Acce=
+nt 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"70" Name=3D"Dark List Accent 2=
+"/>
+<w:LsdException Locked=3D"false" Priority=3D"71" Name=3D"Colorful Shading A=
+ccent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"72" Name=3D"Colorful List Acce=
+nt 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"73" Name=3D"Colorful Grid Acce=
+nt 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"60" Name=3D"Light Shading Acce=
+nt 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"61" Name=3D"Light List Accent =
+3"/>
+<w:LsdException Locked=3D"false" Priority=3D"62" Name=3D"Light Grid Accent =
+3"/>
+<w:LsdException Locked=3D"false" Priority=3D"63" Name=3D"Medium Shading 1 A=
+ccent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"64" Name=3D"Medium Shading 2 A=
+ccent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"65" Name=3D"Medium List 1 Acce=
+nt 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"66" Name=3D"Medium List 2 Acce=
+nt 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"67" Name=3D"Medium Grid 1 Acce=
+nt 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"68" Name=3D"Medium Grid 2 Acce=
+nt 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"69" Name=3D"Medium Grid 3 Acce=
+nt 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"70" Name=3D"Dark List Accent 3=
+"/>
+<w:LsdException Locked=3D"false" Priority=3D"71" Name=3D"Colorful Shading A=
+ccent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"72" Name=3D"Colorful List Acce=
+nt 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"73" Name=3D"Colorful Grid Acce=
+nt 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"60" Name=3D"Light Shading Acce=
+nt 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"61" Name=3D"Light List Accent =
+4"/>
+<w:LsdException Locked=3D"false" Priority=3D"62" Name=3D"Light Grid Accent =
+4"/>
+<w:LsdException Locked=3D"false" Priority=3D"63" Name=3D"Medium Shading 1 A=
+ccent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"64" Name=3D"Medium Shading 2 A=
+ccent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"65" Name=3D"Medium List 1 Acce=
+nt 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"66" Name=3D"Medium List 2 Acce=
+nt 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"67" Name=3D"Medium Grid 1 Acce=
+nt 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"68" Name=3D"Medium Grid 2 Acce=
+nt 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"69" Name=3D"Medium Grid 3 Acce=
+nt 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"70" Name=3D"Dark List Accent 4=
+"/>
+<w:LsdException Locked=3D"false" Priority=3D"71" Name=3D"Colorful Shading A=
+ccent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"72" Name=3D"Colorful List Acce=
+nt 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"73" Name=3D"Colorful Grid Acce=
+nt 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"60" Name=3D"Light Shading Acce=
+nt 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"61" Name=3D"Light List Accent =
+5"/>
+<w:LsdException Locked=3D"false" Priority=3D"62" Name=3D"Light Grid Accent =
+5"/>
+<w:LsdException Locked=3D"false" Priority=3D"63" Name=3D"Medium Shading 1 A=
+ccent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"64" Name=3D"Medium Shading 2 A=
+ccent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"65" Name=3D"Medium List 1 Acce=
+nt 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"66" Name=3D"Medium List 2 Acce=
+nt 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"67" Name=3D"Medium Grid 1 Acce=
+nt 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"68" Name=3D"Medium Grid 2 Acce=
+nt 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"69" Name=3D"Medium Grid 3 Acce=
+nt 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"70" Name=3D"Dark List Accent 5=
+"/>
+<w:LsdException Locked=3D"false" Priority=3D"71" Name=3D"Colorful Shading A=
+ccent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"72" Name=3D"Colorful List Acce=
+nt 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"73" Name=3D"Colorful Grid Acce=
+nt 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"60" Name=3D"Light Shading Acce=
+nt 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"61" Name=3D"Light List Accent =
+6"/>
+<w:LsdException Locked=3D"false" Priority=3D"62" Name=3D"Light Grid Accent =
+6"/>
+<w:LsdException Locked=3D"false" Priority=3D"63" Name=3D"Medium Shading 1 A=
+ccent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"64" Name=3D"Medium Shading 2 A=
+ccent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"65" Name=3D"Medium List 1 Acce=
+nt 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"66" Name=3D"Medium List 2 Acce=
+nt 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"67" Name=3D"Medium Grid 1 Acce=
+nt 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"68" Name=3D"Medium Grid 2 Acce=
+nt 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"69" Name=3D"Medium Grid 3 Acce=
+nt 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"70" Name=3D"Dark List Accent 6=
+"/>
+<w:LsdException Locked=3D"false" Priority=3D"71" Name=3D"Colorful Shading A=
+ccent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"72" Name=3D"Colorful List Acce=
+nt 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"73" Name=3D"Colorful Grid Acce=
+nt 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"19" QFormat=3D"true" Name=3D"S=
+ubtle Emphasis"/>
+<w:LsdException Locked=3D"false" Priority=3D"21" QFormat=3D"true" Name=3D"I=
+ntense Emphasis"/>
+<w:LsdException Locked=3D"false" Priority=3D"31" QFormat=3D"true" Name=3D"S=
+ubtle Reference"/>
+<w:LsdException Locked=3D"false" Priority=3D"32" QFormat=3D"true" Name=3D"I=
+ntense Reference"/>
+<w:LsdException Locked=3D"false" Priority=3D"33" QFormat=3D"true" Name=3D"B=
+ook Title"/>
+<w:LsdException Locked=3D"false" Priority=3D"37" SemiHidden=3D"true" Unhide=
+WhenUsed=3D"true" Name=3D"Bibliography"/>
+<w:LsdException Locked=3D"false" Priority=3D"39" SemiHidden=3D"true" Unhide=
+WhenUsed=3D"true" QFormat=3D"true" Name=3D"TOC Heading"/>
+<w:LsdException Locked=3D"false" Priority=3D"41" Name=3D"Plain Table 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"42" Name=3D"Plain Table 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"43" Name=3D"Plain Table 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"44" Name=3D"Plain Table 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"45" Name=3D"Plain Table 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"40" Name=3D"Grid Table Light"/=
+>
+<w:LsdException Locked=3D"false" Priority=3D"46" Name=3D"Grid Table 1 Light=
+"/>
+<w:LsdException Locked=3D"false" Priority=3D"47" Name=3D"Grid Table 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"48" Name=3D"Grid Table 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"49" Name=3D"Grid Table 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"50" Name=3D"Grid Table 5 Dark"=
+/>
+<w:LsdException Locked=3D"false" Priority=3D"51" Name=3D"Grid Table 6 Color=
+ful"/>
+<w:LsdException Locked=3D"false" Priority=3D"52" Name=3D"Grid Table 7 Color=
+ful"/>
+<w:LsdException Locked=3D"false" Priority=3D"46" Name=3D"Grid Table 1 Light=
+ Accent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"47" Name=3D"Grid Table 2 Accen=
+t 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"48" Name=3D"Grid Table 3 Accen=
+t 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"49" Name=3D"Grid Table 4 Accen=
+t 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"50" Name=3D"Grid Table 5 Dark =
+Accent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"51" Name=3D"Grid Table 6 Color=
+ful Accent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"52" Name=3D"Grid Table 7 Color=
+ful Accent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"46" Name=3D"Grid Table 1 Light=
+ Accent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"47" Name=3D"Grid Table 2 Accen=
+t 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"48" Name=3D"Grid Table 3 Accen=
+t 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"49" Name=3D"Grid Table 4 Accen=
+t 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"50" Name=3D"Grid Table 5 Dark =
+Accent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"51" Name=3D"Grid Table 6 Color=
+ful Accent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"52" Name=3D"Grid Table 7 Color=
+ful Accent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"46" Name=3D"Grid Table 1 Light=
+ Accent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"47" Name=3D"Grid Table 2 Accen=
+t 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"48" Name=3D"Grid Table 3 Accen=
+t 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"49" Name=3D"Grid Table 4 Accen=
+t 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"50" Name=3D"Grid Table 5 Dark =
+Accent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"51" Name=3D"Grid Table 6 Color=
+ful Accent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"52" Name=3D"Grid Table 7 Color=
+ful Accent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"46" Name=3D"Grid Table 1 Light=
+ Accent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"47" Name=3D"Grid Table 2 Accen=
+t 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"48" Name=3D"Grid Table 3 Accen=
+t 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"49" Name=3D"Grid Table 4 Accen=
+t 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"50" Name=3D"Grid Table 5 Dark =
+Accent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"51" Name=3D"Grid Table 6 Color=
+ful Accent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"52" Name=3D"Grid Table 7 Color=
+ful Accent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"46" Name=3D"Grid Table 1 Light=
+ Accent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"47" Name=3D"Grid Table 2 Accen=
+t 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"48" Name=3D"Grid Table 3 Accen=
+t 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"49" Name=3D"Grid Table 4 Accen=
+t 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"50" Name=3D"Grid Table 5 Dark =
+Accent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"51" Name=3D"Grid Table 6 Color=
+ful Accent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"52" Name=3D"Grid Table 7 Color=
+ful Accent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"46" Name=3D"Grid Table 1 Light=
+ Accent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"47" Name=3D"Grid Table 2 Accen=
+t 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"48" Name=3D"Grid Table 3 Accen=
+t 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"49" Name=3D"Grid Table 4 Accen=
+t 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"50" Name=3D"Grid Table 5 Dark =
+Accent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"51" Name=3D"Grid Table 6 Color=
+ful Accent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"52" Name=3D"Grid Table 7 Color=
+ful Accent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"46" Name=3D"List Table 1 Light=
+"/>
+<w:LsdException Locked=3D"false" Priority=3D"47" Name=3D"List Table 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"48" Name=3D"List Table 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"49" Name=3D"List Table 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"50" Name=3D"List Table 5 Dark"=
+/>
+<w:LsdException Locked=3D"false" Priority=3D"51" Name=3D"List Table 6 Color=
+ful"/>
+<w:LsdException Locked=3D"false" Priority=3D"52" Name=3D"List Table 7 Color=
+ful"/>
+<w:LsdException Locked=3D"false" Priority=3D"46" Name=3D"List Table 1 Light=
+ Accent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"47" Name=3D"List Table 2 Accen=
+t 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"48" Name=3D"List Table 3 Accen=
+t 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"49" Name=3D"List Table 4 Accen=
+t 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"50" Name=3D"List Table 5 Dark =
+Accent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"51" Name=3D"List Table 6 Color=
+ful Accent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"52" Name=3D"List Table 7 Color=
+ful Accent 1"/>
+<w:LsdException Locked=3D"false" Priority=3D"46" Name=3D"List Table 1 Light=
+ Accent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"47" Name=3D"List Table 2 Accen=
+t 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"48" Name=3D"List Table 3 Accen=
+t 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"49" Name=3D"List Table 4 Accen=
+t 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"50" Name=3D"List Table 5 Dark =
+Accent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"51" Name=3D"List Table 6 Color=
+ful Accent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"52" Name=3D"List Table 7 Color=
+ful Accent 2"/>
+<w:LsdException Locked=3D"false" Priority=3D"46" Name=3D"List Table 1 Light=
+ Accent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"47" Name=3D"List Table 2 Accen=
+t 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"48" Name=3D"List Table 3 Accen=
+t 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"49" Name=3D"List Table 4 Accen=
+t 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"50" Name=3D"List Table 5 Dark =
+Accent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"51" Name=3D"List Table 6 Color=
+ful Accent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"52" Name=3D"List Table 7 Color=
+ful Accent 3"/>
+<w:LsdException Locked=3D"false" Priority=3D"46" Name=3D"List Table 1 Light=
+ Accent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"47" Name=3D"List Table 2 Accen=
+t 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"48" Name=3D"List Table 3 Accen=
+t 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"49" Name=3D"List Table 4 Accen=
+t 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"50" Name=3D"List Table 5 Dark =
+Accent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"51" Name=3D"List Table 6 Color=
+ful Accent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"52" Name=3D"List Table 7 Color=
+ful Accent 4"/>
+<w:LsdException Locked=3D"false" Priority=3D"46" Name=3D"List Table 1 Light=
+ Accent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"47" Name=3D"List Table 2 Accen=
+t 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"48" Name=3D"List Table 3 Accen=
+t 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"49" Name=3D"List Table 4 Accen=
+t 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"50" Name=3D"List Table 5 Dark =
+Accent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"51" Name=3D"List Table 6 Color=
+ful Accent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"52" Name=3D"List Table 7 Color=
+ful Accent 5"/>
+<w:LsdException Locked=3D"false" Priority=3D"46" Name=3D"List Table 1 Light=
+ Accent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"47" Name=3D"List Table 2 Accen=
+t 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"48" Name=3D"List Table 3 Accen=
+t 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"49" Name=3D"List Table 4 Accen=
+t 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"50" Name=3D"List Table 5 Dark =
+Accent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"51" Name=3D"List Table 6 Color=
+ful Accent 6"/>
+<w:LsdException Locked=3D"false" Priority=3D"52" Name=3D"List Table 7 Color=
+ful Accent 6"/>
+</w:LatentStyles>
+</xml><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:204;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:204;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1073786111 1 0 415 0;}
+/* Style Definitions */
+p=2EMsoNormal, li=2EMsoNormal, div=2EMsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:=2E0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11=2E0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Arial;
+	mso-bidi-theme-font:minor-bidi;
+	mso-fareast-language:EN-US;}
+a:link, span=2EMsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:#0563C1;
+	mso-themecolor:hyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span=2EMsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:#954F72;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+span=2EEmailStyle17
+	{mso-style-type:personal-compose;
+	mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-ansi-font-size:11=2E0pt;
+	mso-bidi-font-size:11=2E0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Arial;
+	mso-bidi-theme-font:minor-bidi;
+	color:windowtext;}
+span=2ESpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+=2EMsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Arial;
+	mso-bidi-theme-font:minor-bidi;
+	mso-fareast-language:EN-US;}
+@page WordSection1
+	{size:612=2E0pt 792=2E0pt;
+	margin:2=2E0cm 42=2E5pt 2=2E0cm 3=2E0cm;
+	mso-header-margin:36=2E0pt;
+	mso-footer-margin:36=2E0pt;
+	mso-paper-source:0;}
+div=2EWordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 10]><style>/* Style Definitions */
+table=2EMsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5=2E4pt 0cm 5=2E4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:=2E0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11=2E0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-fareast-language:EN-US;}
+table=2EMsoTableGrid
+	{mso-style-name:"Table Grid";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-priority:39;
+	mso-style-unhide:no;
+	border:solid windowtext 1=2E0pt;
+	mso-border-alt:solid windowtext =2E5pt;
+	mso-padding-alt:0cm 5=2E4pt 0cm 5=2E4pt;
+	mso-border-insideh:=2E5pt solid windowtext;
+	mso-border-insidev:=2E5pt solid windowtext;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:=2E0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11=2E0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-fareast-language:EN-US;}
+table=2EMsoTable15Grid1Light
+	{mso-style-name:"Grid Table 1 Light";
+	mso-tstyle-rowband-size:1;
+	mso-tstyle-colband-size:1;
+	mso-style-priority:46;
+	mso-style-unhide:no;
+	border:solid #999999 1=2E0pt;
+	mso-border-themecolor:text1;
+	mso-border-themetint:102;
+	mso-border-alt:solid #999999 =2E5pt;
+	mso-border-themecolor:text1;
+	mso-border-themetint:102;
+	mso-padding-alt:0cm 5=2E4pt 0cm 5=2E4pt;
+	mso-border-insideh:=2E5pt solid #999999;
+	mso-border-insideh-themecolor:text1;
+	mso-border-insideh-themetint:102;
+	mso-border-insidev:=2E5pt solid #999999;
+	mso-border-insidev-themecolor:text1;
+	mso-border-insidev-themetint:102;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:=2E0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11=2E0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-fareast-language:EN-US;}
+table=2EMsoTable15Grid1LightFirstRow
+	{mso-style-name:"Grid Table 1 Light";
+	mso-table-condition:first-row;
+	mso-style-priority:46;
+	mso-style-unhide:no;
+	mso-tstyle-border-bottom:1=2E5pt solid #666666;
+	mso-tstyle-border-bottom-themecolor:text1;
+	mso-tstyle-border-bottom-themetint:153;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+table=2EMsoTable15Grid1LightLastRow
+	{mso-style-name:"Grid Table 1 Light";
+	mso-table-condition:last-row;
+	mso-style-priority:46;
+	mso-style-unhide:no;
+	mso-tstyle-border-top:=2E75pt double #666666;
+	mso-tstyle-border-top-themecolor:text1;
+	mso-tstyle-border-top-themetint:153;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+table=2EMsoTable15Grid1LightFirstCol
+	{mso-style-name:"Grid Table 1 Light";
+	mso-table-condition:first-column;
+	mso-style-priority:46;
+	mso-style-unhide:no;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+table=2EMsoTable15Grid1LightLastCol
+	{mso-style-name:"Grid Table 1 Light";
+	mso-table-condition:last-column;
+	mso-style-priority:46;
+	mso-style-unhide:no;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+</style><![endif]--><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body lang=3D"RU" link=3D"#0563C1"=
+ vlink=3D"#954F72" style=3D"tab-interval:35=2E4pt"><div class=3D"WordSectio=
+n1"><table class=3D"MsoTable15Grid1Light" border=3D"1" cellspacing=3D"0" ce=
+llpadding=3D"0" style=3D"border-collapse:collapse;border:none;mso-border-al=
+t:solid #999999 =2E5pt;mso-border-themecolor:text1;mso-border-themetint:102=
+;mso-yfti-tbllook:1184;mso-padding-alt:0cm 5=2E4pt 0cm 5=2E4pt"><tr style=
+=3D"mso-yfti-irow:-1;mso-yfti-firstrow:yes;mso-yfti-lastfirstrow:yes"><td w=
+idth=3D"323" valign=3D"top" style=3D"width:241=2E95pt;border:solid #999999 =
+1=2E0pt;mso-border-themecolor:text1;mso-border-themetint:102;border-bottom:=
+solid #666666 1=2E5pt;mso-border-bottom-themecolor:text1;mso-border-bottom-=
+themetint:153;mso-border-alt:solid #999999 =2E5pt;mso-border-themecolor:tex=
+t1;mso-border-themetint:102;mso-border-bottom-alt:solid #666666 1=2E5pt;mso=
+-border-bottom-themecolor:text1;mso-border-bottom-themetint:153;padding:0cm=
+ 5=2E4pt 0cm 5=2E4pt"><p class=3D"MsoNormal" style=3D"mso-yfti-cnfc:5"><b>M=
+anager<o:p></o:p></b></p></td><td width=3D"323" valign=3D"top" style=3D"wid=
+th:242=2E0pt;border-top:solid #999999 1=2E0pt;mso-border-top-themecolor:tex=
+t1;mso-border-top-themetint:102;border-left:none;border-bottom:solid #66666=
+6 1=2E5pt;mso-border-bottom-themecolor:text1;mso-border-bottom-themetint:15=
+3;border-right:solid #999999 1=2E0pt;mso-border-right-themecolor:text1;mso-=
+border-right-themetint:102;mso-border-left-alt:solid #999999 =2E5pt;mso-bor=
+der-left-themecolor:text1;mso-border-left-themetint:102;mso-border-alt:soli=
+d #999999 =2E5pt;mso-border-themecolor:text1;mso-border-themetint:102;mso-b=
+order-bottom-alt:solid #666666 1=2E5pt;mso-border-bottom-themecolor:text1;m=
+so-border-bottom-themetint:153;padding:0cm 5=2E4pt 0cm 5=2E4pt"><p class=3D"=
+MsoNormal" style=3D"mso-yfti-cnfc:1"><b>Contract Price<o:p></o:p></b></p></=
+td></tr><tr style=3D"mso-yfti-irow:0;mso-yfti-lastrow:yes"><td width=3D"323=
+" valign=3D"top" style=3D"width:241=2E95pt;border:solid #999999 1=2E0pt;mso=
+-border-themecolor:text1;mso-border-themetint:102;border-top:none;mso-borde=
+r-top-alt:solid #999999 =2E5pt;mso-border-top-themecolor:text1;mso-border-t=
+op-themetint:102;mso-border-alt:solid #999999 =2E5pt;mso-border-themecolor:=
+text1;mso-border-themetint:102;padding:0cm 5=2E4pt 0cm 5=2E4pt"><p class=3D"=
+MsoNormal" style=3D"mso-yfti-cnfc:4"><b><span lang=3D"EN-US" style=3D"mso-a=
+nsi-language:EN-US">&lt;&lt;<span class=3D"SpellE">foreach</span> [in contr=
+acts<o:p></o:p></span></b></p><p class=3D"MsoNormal" style=3D"mso-yfti-cnfc=
+:4"><b><span lang=3D"EN-US" style=3D"mso-ansi-language:EN-US"> <span style=
+=3D"mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span>=2EWhere(c =3D&gt; <span cla=
+ss=3D"SpellE">c=2EDate=2EYear</span> =3D=3D 2015)<o:p></o:p></span></b></p>=
+<p class=3D"MsoNormal" style=3D"mso-yfti-cnfc:4"><b><span lang=3D"EN-US" st=
+yle=3D"mso-ansi-language:EN-US"><span style=3D"mso-spacerun:yes">&nbsp;&nbs=
+p;&nbsp; </span></span>=2EGroupBy(c =3D&gt; c=2EManager)<o:p></o:p></b></p>=
+<p class=3D"MsoNormal" style=3D"mso-yfti-cnfc:4"><b><span lang=3D"EN-US" st=
+yle=3D"mso-ansi-language:EN-US"><span style=3D"mso-spacerun:yes">&nbsp;&nbs=
+p;&nbsp; </span>=2E<span class=3D"SpellE">OrderBy</span>(g =3D&gt; <span cl=
+ass=3D"SpellE">g=2EKey=2EName</span>)]&gt;&gt;&lt;&lt;[<span class=3D"Spell=
+E">Key=2EName</span>]&gt;&gt;<o:p></o:p></span></b></p></td><td width=3D"32=
+3" valign=3D"top" style=3D"width:242=2E0pt;border-top:none;border-left:none=
+;border-bottom:solid #999999 1=2E0pt;mso-border-bottom-themecolor:text1;mso=
+-border-bottom-themetint:102;border-right:solid #999999 1=2E0pt;mso-border-=
+right-themecolor:text1;mso-border-right-themetint:102;mso-border-top-alt:so=
+lid #999999 =2E5pt;mso-border-top-themecolor:text1;mso-border-top-themetint=
+:102;mso-border-left-alt:solid #999999 =2E5pt;mso-border-left-themecolor:te=
+xt1;mso-border-left-themetint:102;mso-border-alt:solid #999999 =2E5pt;mso-b=
+order-themecolor:text1;mso-border-themetint:102;padding:0cm 5=2E4pt 0cm 5=
+=2E4pt"><p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"mso-ansi-langu=
+age:EN-US">&lt;&lt;[Sum(c =3D&gt; <span class=3D"SpellE">c=2EPrice</span>)]=
+&gt;&gt;&lt;&lt;/<span class=3D"SpellE">foreach</span>&gt;&gt;<o:p></o:p></=
+span></p></td></tr></table><p class=3D"MsoNormal"><span lang=3D"EN-US" styl=
+e=3D"mso-ansi-language:EN-US"><o:p>&nbsp;</o:p></span></p></div></body></ht=
+ml>
+----_=_NextPart0_cc4600aa-aba6-4c84-9412-32c4e71238a3--
+
+----_=_NextPart1_0dc393f3-2017-4d48-b6bd-8e310ee08b37
+Content-Type: application/octet-stream; name="ExampleAttachment.txt"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment
+
+U3ViamVjdDogPDxbc3ViamVjdF0+Pg==
+----_=_NextPart1_0dc393f3-2017-4d48-b6bd-8e310ee08b37--
+
