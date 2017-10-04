@@ -41,7 +41,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="GroupDocs.Assembly">
-      <HintPath>..\packages\GroupDocs.Assembly.3.3.0\lib\net40-client\GroupDocs.Assembly.dll</HintPath>
+      <HintPath>..\packages\GroupDocs.Assembly.17.9\lib\net40-client\GroupDocs.Assembly.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />

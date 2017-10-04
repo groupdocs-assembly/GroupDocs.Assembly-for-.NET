@@ -1,4 +1,4 @@
-##GroupDocs.Assembly for .NET
+# GroupDocs.Assembly for .NET
 
 This package contains [Examples](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Examples), [Plugins](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Plugins) and [Showcases](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Showcases) for [GroupDocs.Assembly for .NET](https://www.groupdocs.com/products/assembly/net) that will help you in understanding the API's working and writing your own applications.
 
@@ -17,11 +17,11 @@ Directory | Description
 [Plugins](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Plugins)  | Analyze the progress of GroupDocs.Assembly and WinWard while generating the reports, compare code and template preparation. 
 [Showcases](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Showcases)  | Web Report Generator is an ASP.NET Web Forms Application that demonstrates the core functionalities provided by GroupDocs.Assembly for .NET.
 
-## Resources
+# Resources
 
 + **Website:** [www.groupdocs.com](http://www.groupdocs.com)
 + **Product Home:** [GroupDocs.Assembly for .NET](https://www.groupdocs.com/products/assembly/net)
-+ **Download:** [Download GroupDocs.Assembly for .NET](https://downloads.groupdocs.com/assembly/net)
-+ **Documentation:** [GroupDocs.Assembly for .NET Documentation](https://docs.groupdocs.com/display/assemblynet/Introducing+GroupDocs.Assembly+for+.NET)
-+ **Forum:** [GroupDocs.Assembly for .NET Forum](http://groupdocs.com/Community/forums/groupdocs.assembly-product-family/8/showforum.aspx)
++ **Download:** [Download GroupDocs.Assembly for .NET](https://downloads.groupdocs.com/assembly/net
++ **Documentation:** [GroupDocs.Assembly for .NET Documentation](https://docs.groupdocs.com/display/assemblynet/Home)
++ **Forum:** [GroupDocs.Assembly for .NET Forum](https://forum.groupdocs.com/c/assembly)
 + **Blog:** [GroupDocs.Assembly for .NET Blog](https://blog.groupdocs.com/category/groupdocs-assembly-product-family/)
