@@ -21,7 +21,7 @@ Directory | Description
 
 + **Website:** [www.groupdocs.com](http://www.groupdocs.com)
 + **Product Home:** [GroupDocs.Assembly for .NET](https://www.groupdocs.com/products/assembly/net)
-+ **Download:** [Download GroupDocs.Assembly for .NET](https://downloads.groupdocs.com/assembly/net
++ **Download:** [Download GroupDocs.Assembly for .NET](https://downloads.groupdocs.com/assembly/net)
 + **Documentation:** [GroupDocs.Assembly for .NET Documentation](https://docs.groupdocs.com/display/assemblynet/Home)
 + **Forum:** [GroupDocs.Assembly for .NET Forum](https://forum.groupdocs.com/c/assembly)
 + **Blog:** [GroupDocs.Assembly for .NET Blog](https://blog.groupdocs.com/category/groupdocs-assembly-product-family/)
