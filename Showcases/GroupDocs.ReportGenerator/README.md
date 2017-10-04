@@ -13,7 +13,7 @@ Open Source Project.
 
 + Visual Studio 2012 or later.
 + Any latest browsers (Firefox, Chrome ,IE9 or greater, Safari etc. )
-+ GroupDocs.Assembly 3.0.0.
++ GroupDocs.Assembly 17.9.
 
 ## Features 
 

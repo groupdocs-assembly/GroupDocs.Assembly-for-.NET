@@ -8,7 +8,7 @@ using GroupDocs.AssemblyExamples.BusinessLayer;
 using System.Diagnostics;
 using GroupDocs.AssemblyExamples.ProjectEntities;
 using GroupDocs.Assembly.Data;
-using static GroupDocs.AssemblyExamples.BusinessLayer.CommonUtilities;
+
 
 namespace GroupDocs.AssemblyExamples
 {
@@ -815,7 +815,7 @@ namespace GroupDocs.AssemblyExamples
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
                             // This is needed solely for images in HTML documents.
-                            assembler.KnownTypes.Add(typeof(FileUtil));
+                            assembler.KnownTypes.Add(typeof(GroupDocs.AssemblyExamples.BusinessLayer.CommonUtilities.FileUtil));
                             //Call AssembleDocument to generate Bulleted List Report in html format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetProductsData(), "products");
                         }
@@ -1910,7 +1910,7 @@ namespace GroupDocs.AssemblyExamples
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
                             // This is needed solely for images in HTML documents.
-                            assembler.KnownTypes.Add(typeof(FileUtil));
+                            assembler.KnownTypes.Add(typeof(GroupDocs.AssemblyExamples.BusinessLayer.CommonUtilities.FileUtil));
                             //Call AssembleDocument to generate Common Master-Detail Report in html format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.PopulateData(), "customers");
                         }
@@ -5973,7 +5973,7 @@ namespace GroupDocs.AssemblyExamples
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
                             // This is needed solely for images in HTML documents.
-                            assembler.KnownTypes.Add(typeof(FileUtil));
+                            assembler.KnownTypes.Add(typeof(GroupDocs.AssemblyExamples.BusinessLayer.CommonUtilities.FileUtil));
                             //Call AssembleDocument to generate Single Row Report in html format
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate), CommonUtilities.SetDestinationDocument(strHtmlReport), DataLayer.GetCustomerData(), "customer");
                         }

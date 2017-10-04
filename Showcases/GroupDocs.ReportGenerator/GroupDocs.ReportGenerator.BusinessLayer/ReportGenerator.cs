@@ -1,10 +1,12 @@
 ﻿//ExStart:ReportGenerator
-using GroupDocs.Assembly;
+
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Text;
+using GroupDocs.Assembly;
 
 namespace GroupDocs.ReportGenerator.BusinessLayer
 {
@@ -28,7 +30,7 @@ namespace GroupDocs.ReportGenerator.BusinessLayer
             set { _ReportDestinationPath = value; }
         }
 
-        private String _LicensePath = "D:/ReportGenerator/GroupDocs.ReportGenerator/GroupDocs.Assembly Product Family.lic";
+        private String _LicensePath = "D:/Lic/GroupDocs.Total.lic";
        
         //ExStart:GenerateReportShowcase
         /// <summary>
