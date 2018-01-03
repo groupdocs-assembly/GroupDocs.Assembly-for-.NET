@@ -1,6 +1,6 @@
 # GroupDocs.Assembly for .NET
 
-This package contains [Examples](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Examples), [Plugins](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Plugins) and [Showcases](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Showcases) for [GroupDocs.Assembly for .NET](https://www.groupdocs.com/products/assembly/net) that will help you in understanding the API's working and writing your own applications.
+This package contains [Examples](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Examples), [Plugins](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Plugins) and [Showcases](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Showcases) for [GroupDocs.Assembly for .NET](https://products.groupdocs.com/assembly/net) that will help you in understanding the API's working and writing your own applications.
 
 GroupDocs.Assembly for .NET is a .NET API engine designed to generate documents based on templates. In essence, the engine accepts a template document and some data, assembles data with the template document as per syntax defined by the template document and then, generates the output document in the same format as of the template document format.
 
@@ -20,7 +20,7 @@ Directory | Description
 # Resources
 
 + **Website:** [www.groupdocs.com](http://www.groupdocs.com)
-+ **Product Home:** [GroupDocs.Assembly for .NET](https://www.groupdocs.com/products/assembly/net)
++ **Product Home:** [GroupDocs.Assembly for .NET](https://products.groupdocs.com/assembly/net)
 + **Download:** [Download GroupDocs.Assembly for .NET](https://downloads.groupdocs.com/assembly/net)
 + **Documentation:** [GroupDocs.Assembly for .NET Documentation](https://docs.groupdocs.com/display/assemblynet/Home)
 + **Forum:** [GroupDocs.Assembly for .NET Forum](https://forum.groupdocs.com/c/assembly)

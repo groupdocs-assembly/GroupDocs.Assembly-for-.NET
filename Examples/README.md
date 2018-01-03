@@ -1,6 +1,6 @@
 # GroupDocs.Assembly for .NET Examples
 
-This package contains C# Examples Solutions for [GroupDocs.Assembly for .NET](http://groupdocs.com/dot-net/document-assembly-library) and sample input templates used in the examples.
+This package contains C# Examples Solutions for [GroupDocs.Assembly for .NET](https://products.groupdocs.com/assembly/net) and sample input templates used in the examples.
 
 <p align="center">
   <a title="Download complete GroupDocs.Assembly for .NET source code" href="https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/archive/master.zip">
