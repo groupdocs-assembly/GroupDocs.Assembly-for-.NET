@@ -490,6 +490,29 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
+
+        public static void RemoveSelectiveChartSeries()
+        {
+            //ExStart:RemoveSelectiveChartSeries
+            //Setting up source open document template
+            const String strDocumentTemplate = "Word Templates/Chart with Filtering, Grouping, and Ordering_RemoveIf.docx";
+            //Setting up destination open document report 
+            const String strDocumentReport = "Word Reports/Chart with Filtering, Grouping, and Ordering_RemoveIf.docx";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler();
+                int mode = 2;
+                //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in document format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new object[] { DataLayer.GetOrdersData(), mode }, new string[] { "orders", "mode" });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:RemoveSelectiveChartSeries
+        }
+
         public static void GenerateBulletedList(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
         {
             switch (strDocumentFormat)
@@ -968,7 +991,7 @@ namespace GroupDocs.AssemblyExamples
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
                             //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in document format
-                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersData(), "orders");
+                            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetOrdersDataDB(), "orders");
                         }
                         catch (Exception ex)
                         {

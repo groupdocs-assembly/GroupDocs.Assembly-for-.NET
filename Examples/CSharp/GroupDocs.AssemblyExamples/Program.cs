@@ -358,6 +358,10 @@ namespace GroupDocs.AssemblyExamples
 
             #endregion
 
+            #region Ability to remove selective chart series
+            GenerateReport.RemoveSelectiveChartSeries();
+            #endregion
+
             //Update fields/formulas in word processing or spreadsheet documents
             //GenerateReport.UpdateWordDocFields("spreadsheet");
             //Use of Next keyword in template syntax
