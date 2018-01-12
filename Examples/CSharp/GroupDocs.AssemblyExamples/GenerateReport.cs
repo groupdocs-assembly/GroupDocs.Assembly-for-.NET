@@ -491,6 +491,50 @@ namespace GroupDocs.AssemblyExamples
             }
         }
 
+        public static void DynamicColor()
+        {
+            //ExStart:DynamicColor
+            //Setting up source open document template
+            const String strDocumentTemplate = "Word Templates/In-Table List with Running (Progressive) Total_BackgroundColor.docx";
+            //Setting up destination open document report 
+            const String strDocumentReport = "Word Reports/In-Table List with Running (Progressive) Total_BackgroundColor.docx";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler();
+                string color = "red";
+                //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in document format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new object[] { DataLayer.GetOrdersData(), color }, new string[] { "orders", "color" });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:DynamicColor
+        }
+
+        public static void DynamicChartAxisTitle()
+        {
+            //ExStart:DynamicChartAxisTitle
+            //Setting up source open document template
+            const String strDocumentTemplate = "Word Templates/Chart with Filtering, Grouping, and Ordering_dynamic_title.docx";
+            //Setting up destination open document report 
+            const String strDocumentReport = "Word Reports/Chart with Filtering, Grouping, and Ordering_dynamic_title.docx";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler();
+                string title = "Total Order Quantity by Quarters";
+                //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in document format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new object[] { DataLayer.GetOrdersData(), title }, new string[] { "orders", "title" });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:DynamicChartAxisTitle
+        }
+
         public static void RemoveSelectiveChartSeries()
         {
             //ExStart:RemoveSelectiveChartSeries
@@ -4167,6 +4211,7 @@ namespace GroupDocs.AssemblyExamples
                     const String strDocumentReport = "Word Reports/In-Table List with Running (Progressive) Total Report.docx";
                     try
                     {
+                        var testData = DataLayer.GetOrdersData();
                         //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
                         //Call AssembleDocument to generate In-Table List with Progressive(Running) total Report in open document format
