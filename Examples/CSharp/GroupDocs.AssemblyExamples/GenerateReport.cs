@@ -491,6 +491,73 @@ namespace GroupDocs.AssemblyExamples
             }
         }
 
+        public static void DynamicChartAxisTitleEmail()
+        {
+            //ExStart:DynamicChartAxisTitleEmail
+            //Setting up source open document template
+            //Setting up source email template
+            const String strEmailTemplate = "Email Templates/Chart with Filtering, Grouping, and Ordering_Dynamic_Title.msg";
+            //Setting up destination email report 
+            const String strEmailReport = "Email Reports/Chart with Filtering, Grouping, and Ordering_Dynamic_Title.msg";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler();
+                string title = "Total Order Quantity by Quarters";
+                //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in email format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate), CommonUtilities.SetDestinationDocument(strEmailReport), DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetOrdersData(),title), DataLayer.EmailDataSourceName(".msg", "orders","title"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:DynamicChartAxisTitleEmail
+        }
+
+        public static void DynamicChartAxisTitleSpreadSheet()
+        {
+            //ExStart:DynamicChartAxisTitleSpreadSheet
+            //Setting up source open document template
+            const String strDocumentTemplate = "Spreadsheet Templates/Chart with Filtering, Grouping, and Ordering_Dynamic_Title.xlsx";
+            //Setting up destination open document report 
+            const String strDocumentReport = "Spreadsheet Reports/Chart with Filtering, Grouping, and Ordering_Dynamic_Title.xlsx";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler();
+                string title = "Total Order Quantity by Quarters";
+                //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in document format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new object[] { DataLayer.GetOrdersData(), title }, new string[] { "orders", "title" });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:DynamicChartAxisTitleSpreadSheet
+        }
+
+        public static void DynamicChartAxisTitlePPt()
+        {
+            //ExStart:DynamicChartAxisTitlePPt
+            //Setting up source open document template
+            const String strDocumentTemplate = "Presentation Templates/Chart with Filtering, Grouping, and Ordering_Dynamic_Title.pptx";
+            //Setting up destination open document report 
+            const String strDocumentReport = "Presentation Reports/Chart with Filtering, Grouping, and Ordering_Dynamic_Title.pptx";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler();
+                string title = "Total Order Quantity by Quarters";
+                //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in document format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new object[] { DataLayer.GetOrdersData(), title }, new string[] { "orders", "title" });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:DynamicChartAxisTitlePPt
+        }
+
         public static void DynamicColor()
         {
             //ExStart:DynamicColor

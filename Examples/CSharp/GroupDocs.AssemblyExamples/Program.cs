@@ -363,7 +363,14 @@ namespace GroupDocs.AssemblyExamples
             #endregion
 
             #region Dynamic Chart Axis Title 
+            //Dynamic Chart Axis Title in Word Document 
             //GenerateReport.DynamicChartAxisTitle();
+            //Dynamic Chart Axis Title in Presentation Document
+            //GenerateReport.DynamicChartAxisTitlePPt();
+            //Dynamic Chart Axis Title in Spreadsheet Document 
+            //GenerateReport.DynamicChartAxisTitleSpreadSheet();
+            //Dynamic Chart Axis Title in Presentation Document
+            GenerateReport.DynamicChartAxisTitleEmail();
             #endregion
 
             #region Dynamic Color in wordpressing document 
