@@ -377,6 +377,16 @@ namespace GroupDocs.AssemblyExamples
             //GenerateReport.DynamicColor();
             #endregion
 
+            #region Working With Table Row Data Bands
+            // Working With Table Row DataBands in Word Processing Document
+            //GenerateReport.WorkingWithTableRowDataBandsWord();
+            // Working With Table Row DataBands in SpreadSheet Document
+            //GenerateReport.WorkingWithTableRowDataBandsSpreadSheet();
+            // Working With Table Row DataBands in Presentation Document 
+            //GenerateReport.WorkingWithTableRowDataBandsPresentation();
+            // Working With Table Row DataBands in Email Format
+            //GenerateReport.WorkingWithTableRowDataBandsEmail();
+            #endregion
             //Update fields/formulas in word processing or spreadsheet documents
             //GenerateReport.UpdateWordDocFields("spreadsheet");
             //Use of Next keyword in template syntax
@@ -402,6 +412,7 @@ namespace GroupDocs.AssemblyExamples
             //GenerateReport.UseDocumentTableSetAsDataSource("Multiple Tables Data.docx", "Using Document Table Set as Data Source.pptx");
             //GenerateReport.DefiningDocumentTableRelations("Related Tables Data.xlsx", "Using Document Table Relations.docx");
             //GenerateReport.ChangingDocumentTableColumnType("Presentation Templates/Changing Document Table Column Type.pptx");
+
             Console.WriteLine();
         }
     }

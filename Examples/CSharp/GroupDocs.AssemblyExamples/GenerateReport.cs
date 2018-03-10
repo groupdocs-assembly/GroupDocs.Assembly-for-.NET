@@ -154,6 +154,7 @@ namespace GroupDocs.AssemblyExamples
             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(document), CommonUtilities.SetDestinationDocument(outDocument), table, "Managers");
             //ExEnd:ChangingDocumentTableColumnType
         }
+    
         public static void GenerateBubbleChart(string strDocumentFormat, bool isDatabase, bool isDataSet, bool isDataSourceXML, bool isJson)
         {
             switch (strDocumentFormat)
@@ -489,6 +490,69 @@ namespace GroupDocs.AssemblyExamples
                     }
                     break;
             }
+        }
+        /// <summary>
+        /// Working With Table Row DataBands in Email Message
+        /// Feature is supported by version 18.2 or greater
+        /// </summary>
+        public static void WorkingWithTableRowDataBandsEmail()
+        {
+            //ExStart:WorkingWithTableRowDataBandsEmail
+            string strDocumentTemplate = "Email Templates/Working With Table Row Data Bands.msg";
+            string strDocumentReport = "Email Reports/Working With Table Row Data Bands.msg";
+
+            // Assemble a document using the external document table as a data source.
+            DocumentAssembler assembler = new DocumentAssembler();
+            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.ExcelData(), "ds");
+            //ExEnd:WorkingWithTableRowDataBandsEmail
+        }
+
+        /// <summary>
+        /// Working With Table Row DataBands in Presentation Documents
+        /// Feature is supported by version 18.2 or greater
+        /// </summary>
+        public static void WorkingWithTableRowDataBandsPresentation()
+        {
+            //ExStart:WorkingWithTableRowDataBandsPresentation
+            string strDocumentTemplate = "Presentation Templates/Working With Table Row Data Bands.pptx";
+            string strDocumentReport = "Presentation Reports/Working With Table Row Data Bands.pptx";
+
+            // Assemble a document using the external document table as a data source.
+            DocumentAssembler assembler = new DocumentAssembler();
+            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.ExcelData(), "ds");
+            //ExEnd:WorkingWithTableRowDataBandsPresentation
+        }
+
+        /// <summary>
+        /// Working With Table Row DataBands in Spread Sheet Document
+        /// Feature is supported by version 18.2 or greater
+        /// </summary>
+        public static void WorkingWithTableRowDataBandsSpreadSheet()
+        {
+            //ExStart:WorkingWithTableRowDataBandsSpreadSheet
+            string strDocumentTemplate = "Spreadsheet Templates/Working With Table Row Data Bands.xlsx";
+            string strDocumentReport = "Spreadsheet Reports/Working With Table Row Data Bands.xlsx";
+
+            // Assemble a document using the external document table as a data source.
+            DocumentAssembler assembler = new DocumentAssembler();
+            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.ExcelData(), "ds");
+            //ExEnd:WorkingWithTableRowDataBandsSpreadSheet
+        }
+
+        /// <summary>
+        /// Working With Table Row DataBands in Words Processing Document
+        /// Feature is supported by version 18.2 or greater
+        /// </summary>
+        public static void WorkingWithTableRowDataBandsWord()
+        {
+            //ExStart:WorkingWithTableRowDataBandsWord
+            string strDocumentTemplate = "Word Templates/Working With Table Row Data Bands.docx";
+            string strDocumentReport = "Word Reports/Working With Table Row Data Bands.docx";
+
+            // Assemble a document using the external document table as a data source.
+            DocumentAssembler assembler = new DocumentAssembler();
+            assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.ExcelData(), "ds");
+            //ExEnd:WorkingWithTableRowDataBandsWord
         }
 
         public static void DynamicChartAxisTitleEmail()
@@ -6449,6 +6513,7 @@ namespace GroupDocs.AssemblyExamples
             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.ExcelData(), "contracts");
             //ExEnd:UseSpreadsheetAsDataSource
         }
+ 
         /// <summary>
         /// Generate report from presentation data source
         /// </summary>
