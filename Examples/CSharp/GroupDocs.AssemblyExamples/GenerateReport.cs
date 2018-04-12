@@ -8,7 +8,7 @@ using GroupDocs.AssemblyExamples.BusinessLayer;
 using System.Diagnostics;
 using GroupDocs.AssemblyExamples.ProjectEntities;
 using GroupDocs.Assembly.Data;
-
+using System.IO;
 
 namespace GroupDocs.AssemblyExamples
 {
@@ -491,6 +491,38 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
+
+        public static void UsingStringAsTemplate()
+        {
+            try
+            {
+
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                string sourceString = @"<<[yourValue]>>";
+                byte[] sourceBytes = Encoding.UTF8.GetBytes(sourceString);
+                byte[] targetBytes;
+
+                using (MemoryStream sourceStream = new MemoryStream(sourceBytes))
+                {
+                    using (MemoryStream targetStream = new MemoryStream())
+                    {
+                        assembler.AssembleDocument(sourceStream, targetStream, "Hello, World!", "yourValue");
+                        targetBytes = targetStream.ToArray();
+                    }
+                }
+
+                string targetString = Encoding.UTF8.GetString(targetBytes);
+                Console.WriteLine(targetString);
+
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+            }
+        }
+
         /// <summary>
         /// Working With Table Row DataBands in Email Message
         /// Feature is supported by version 18.2 or greater

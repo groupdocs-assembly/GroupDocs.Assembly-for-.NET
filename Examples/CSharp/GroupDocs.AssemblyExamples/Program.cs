@@ -413,6 +413,8 @@ namespace GroupDocs.AssemblyExamples
             //GenerateReport.DefiningDocumentTableRelations("Related Tables Data.xlsx", "Using Document Table Relations.docx");
             //GenerateReport.ChangingDocumentTableColumnType("Presentation Templates/Changing Document Table Column Type.pptx");
 
+            //GenerateReport.UsingStringAsTemplate();
+
             Console.WriteLine();
         }
     }
