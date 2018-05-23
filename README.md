@@ -19,9 +19,11 @@ Directory | Description
 
 # Resources
 
-+ **Website:** [www.groupdocs.com](http://www.groupdocs.com)
-+ **Product Home:** [GroupDocs.Assembly for .NET](https://products.groupdocs.com/assembly/net)
-+ **Download:** [Download GroupDocs.Assembly for .NET](https://downloads.groupdocs.com/assembly/net)
++ **Website:** [www.groupdocs.com](https://www.groupdocs.com/)
++ **Product Home:** [GroupDocs.Assembly for .NET](https://products.groupdocs.com/assembly/net) 
++ **API Reference:** [GroupDocs.Assembly for .NET API Reference](https://apireference.groupdocs.com/net/assembly)
 + **Documentation:** [GroupDocs.Assembly for .NET Documentation](https://docs.groupdocs.com/display/assemblynet/Home)
-+ **Forum:** [GroupDocs.Assembly for .NET Forum](https://forum.groupdocs.com/c/assembly)
++ **Installation:** [GroupDocs.Assembly for .NET NuGet Package](https://www.nuget.org/packages/GroupDocs.Assembly/)
++ **Free Support:** [GroupDocs.Assembly for .NET Free Support Forum](https://forum.groupdocs.com/c/assembly)
++ **Paid Support:** [GroupDocs.Assembly for .NET Paid Support Helpdesk](https://helpdesk.groupdocs.com/)
 + **Blog:** [GroupDocs.Assembly for .NET Blog](https://blog.groupdocs.com/category/groupdocs-assembly-product-family/)
