@@ -20,10 +20,10 @@ Directory | Description
 # Resources
 
 + **Website:** [www.groupdocs.com](https://www.groupdocs.com/)
-+ **Product Home:** [GroupDocs.Assembly for .NET](https://products.groupdocs.com/assembly/net) 
++ **Product Home:** [GroupDocs.Assembly for .NET](https://products.groupdocs.com/assembly/net)
++ **Installation:** [GroupDocs.Assembly for .NET NuGet Package](https://www.nuget.org/packages/GroupDocs.Assembly/)
 + **API Reference:** [GroupDocs.Assembly for .NET API Reference](https://apireference.groupdocs.com/net/assembly)
 + **Documentation:** [GroupDocs.Assembly for .NET Documentation](https://docs.groupdocs.com/display/assemblynet/Home)
-+ **Installation:** [GroupDocs.Assembly for .NET NuGet Package](https://www.nuget.org/packages/GroupDocs.Assembly/)
 + **Free Support:** [GroupDocs.Assembly for .NET Free Support Forum](https://forum.groupdocs.com/c/assembly)
 + **Paid Support:** [GroupDocs.Assembly for .NET Paid Support Helpdesk](https://helpdesk.groupdocs.com/)
 + **Blog:** [GroupDocs.Assembly for .NET Blog](https://blog.groupdocs.com/category/groupdocs-assembly-product-family/)
