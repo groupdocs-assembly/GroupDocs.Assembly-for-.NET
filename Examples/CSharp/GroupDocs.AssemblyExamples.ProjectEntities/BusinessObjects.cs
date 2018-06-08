@@ -21,8 +21,9 @@ namespace GroupDocs.AssemblyExamples.ProjectEntities
             public IEnumerable<Order> Order { get; set; }
             public string Barcode { get; set; }
             public String Photo { get { return Path.Combine(Path.GetFullPath(imagePath), "no-photo.jpg"); } }
-            public string Document { get { return Path.Combine(Path.GetFullPath(docPath), "outerDoc.odt"); } } 
- 
+            public string Document { get { return Path.Combine(Path.GetFullPath(docPath), "outerDoc.odt"); } }
+            public string Color { get; set; }
+
         }
         public class Order
         {

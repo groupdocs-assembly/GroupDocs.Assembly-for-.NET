@@ -17,7 +17,7 @@ namespace GroupDocs.AssemblyExamples
              *  Applying product license
              *  Please uncomment the statement if you do have license.
              */
-            //CommonUtilities.ApplyLicense();
+            CommonUtilities.ApplyLicense();
             //ExEnd:ApplyingLicense
 
             #region Generating Bubble Chart Report
@@ -373,8 +373,21 @@ namespace GroupDocs.AssemblyExamples
             GenerateReport.DynamicChartAxisTitleEmail();
             #endregion
 
-            #region Dynamic Color in wordpressing document 
+            #region Dynamic Color 
             //GenerateReport.DynamicColor();
+            // Sets colors of chart series dynamically based upon expressions
+            //GenerateReport.DynamicChartSeriesColor();
+            // Sets colors of chart series dynamically based upon expressions Spreadsheet document 
+            //GenerateReport.DynamicChartSeriesColorSpreadsheet();
+            // Sets colors of chart series dynamically based upon expressions
+            //GenerateReport.DynamicChartSeriesColorPresentation();
+
+            // Sets colors of chart series point color dynamically based upon expressions
+            //GenerateReport.DynamicChartSeriesPointColor();
+            // Sets colors of chart series point color dynamically based upon expressions Spreadsheet document 
+            //GenerateReport.DynamicChartSeriesPointColorSpreadsheet();
+            // Sets colors of chart series point color dynamically based upon expressions
+            GenerateReport.DynamicChartSeriesPointColorPresentation();
             #endregion
 
             #region Working With Table Row Data Bands
