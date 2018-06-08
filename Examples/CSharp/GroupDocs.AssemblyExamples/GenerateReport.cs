@@ -491,6 +491,194 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
+        /// <summary>
+        /// Sets colors of chart series point color dynamically based upon expressions
+        /// Feature is supported by version 18.5 or greater
+        /// </summary>
+        public static void DynamicChartSeriesPointColorPresentation()
+        {
+            //setting up source 
+            const String strDocumentTemplate = "Presentation Templates/Dynamic Chart Point Series Color.pptx";
+            //Setting up destination 
+            const String strDocumentReport = "Presentation Reports/Dynamic Chart Point Series Color.pptx";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                                                                      //Call AssembleDocument to generate Pie Chart report in document format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Sets colors of chart series point color dynamically based upon expressions
+        /// Feature is supported by version 18.5 or greater
+        /// </summary>
+        public static void DynamicChartSeriesPointColorSpreadsheet()
+        {
+            //setting up source 
+            const String strDocumentTemplate = "Spreadsheet Templates/Dynamic Chart Point Series Color.xlsx";
+            //Setting up destination 
+            const String strDocumentReport = "Spreadsheet Reports/Dynamic Chart Point Series Color.xlsx";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+               //Call AssembleDocument to generate Pie Chart report in document format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Sets colors of chart series point color dynamically based upon expressions
+        /// Feature is supported by version 18.5 or greater
+        /// </summary>
+        public static void DynamicChartSeriesPointColor()
+        {
+            //setting up source 
+            const String strDocumentTemplate = "Word Templates/Dynamic Chart Point Series Color.docx";
+            //Setting up destination 
+            const String strDocumentReport = "Word Reports/Dynamic Chart Point Series Color.docx";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                //Call AssembleDocument to generate Pie Chart report in document format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Sets colors of chart series dynamically based upon expressions
+        /// Feature is supported by version 18.5 or greater
+        /// </summary>
+        public static void DynamicChartSeriesColorPresentation()
+        {
+            try
+            {
+                // Setting up source open document template
+                const String strDocumentTemplate = "Presentation Templates/Dynamic Chart Series Color.pptx";
+                //setting up data source document
+                const string dataSrcDocument = "Presentation DataSource/Managers Data.pptx";
+                //Setting up destination open document report 
+                const String strDocumentReport = "Presentation Reports/Dynamic Chart Series Color.pptx";
+                //Define serires color
+                string color = "red";
+
+                // Set table column names to be extracted from the document.
+                DocumentTableOptions options = new DocumentTableOptions();
+                options.FirstRowContainsColumnNames = true;
+
+                DocumentTable table = new DocumentTable(CommonUtilities.GetDataSourceDocument(dataSrcDocument), 1, options);
+
+                // NOTE: For non-Spreadsheet documents, the type of a document table column is always string by default.
+                Debug.Assert(table.Columns["Total_Contract_Price"].Type == typeof(string));
+                // Change the column's type to double thus enabling to use arithmetic operations on values of the column 
+                // such as summing in templates.
+                table.Columns["Total_Contract_Price"].Type = typeof(double);
+
+                // Pass DocumentTable as a data source.
+                DocumentAssembler assembler = new DocumentAssembler();
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new object[] { table, color }, new string[] { "managers", "color" });
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Sets colors of chart series dynamically based upon expressions
+        /// Feature is supported by version 18.5 or greater
+        /// </summary>
+        public static void DynamicChartSeriesColorSpreadsheet()
+        {
+            try
+            {
+                // Setting up source open document template
+                const String strDocumentTemplate = "Spreadsheet Templates/Dynamic Chart Series Color.xlsx";
+                //setting up data source document
+                const string dataSrcDocument = "Word DataSource/Managers Data.docx";
+                //Setting up destination open document report 
+                const String strDocumentReport = "Spreadsheet Reports/Dynamic Chart Series Color.xlsx";
+                //Define serires color
+                string color = "red";
+
+                // Set table column names to be extracted from the document.
+                DocumentTableOptions options = new DocumentTableOptions();
+                options.FirstRowContainsColumnNames = true;
+
+                DocumentTable table = new DocumentTable(CommonUtilities.GetDataSourceDocument(dataSrcDocument), 1, options);
+
+                // NOTE: For non-Spreadsheet documents, the type of a document table column is always string by default.
+                Debug.Assert(table.Columns["Total_Contract_Price"].Type == typeof(string));
+                // Change the column's type to double thus enabling to use arithmetic operations on values of the column 
+                // such as summing in templates.
+                table.Columns["Total_Contract_Price"].Type = typeof(double);
+
+                // Pass DocumentTable as a data source.
+                DocumentAssembler assembler = new DocumentAssembler();
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new object[] { table, color }, new string[] { "managers", "color" });
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Sets colors of chart series dynamically based upon expressions
+        /// Feature is supported by version 18.5 or greater
+        /// </summary>
+        public static void DynamicChartSeriesColor()
+        {
+            try
+            {
+                // Setting up source open document template
+                const String strDocumentTemplate = "Word Templates/Dynamic Chart Series Color.docx";
+                //setting up data source document
+                const string dataSrcDocument = "Word DataSource/Managers Data.docx";
+                //Setting up destination open document report 
+                const String strDocumentReport = "Word Reports/Dynamic Chart Series Color.docx";
+                //Define serires color
+                string color = "red";
+
+                // Set table column names to be extracted from the document.
+                DocumentTableOptions options = new DocumentTableOptions();
+                options.FirstRowContainsColumnNames = true;
+
+                DocumentTable table = new DocumentTable(CommonUtilities.GetDataSourceDocument(dataSrcDocument), 1, options);
+
+                // NOTE: For non-Spreadsheet documents, the type of a document table column is always string by default.
+                Debug.Assert(table.Columns["Total_Contract_Price"].Type == typeof(string));
+                // Change the column's type to double thus enabling to use arithmetic operations on values of the column 
+                // such as summing in templates.
+                table.Columns["Total_Contract_Price"].Type = typeof(double);
+
+                // Pass DocumentTable as a data source.
+                DocumentAssembler assembler = new DocumentAssembler();
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport),new object[] { table, color }, new string[] { "managers", "color" });
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
 
         public static void UsingStringAsTemplate()
         {
