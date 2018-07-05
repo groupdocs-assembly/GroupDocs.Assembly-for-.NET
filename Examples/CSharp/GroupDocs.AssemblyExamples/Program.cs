@@ -375,19 +375,23 @@ namespace GroupDocs.AssemblyExamples
 
             #region Dynamic Color 
             //GenerateReport.DynamicColor();
-            // Sets colors of chart series dynamically based upon expressions
+            // Sets colors of chart series dynamically based upon expressions wordprocessing document
             //GenerateReport.DynamicChartSeriesColor();
-            // Sets colors of chart series dynamically based upon expressions Spreadsheet document 
+            // Sets colors of chart series dynamically based upon expressions spreadsheet document 
             //GenerateReport.DynamicChartSeriesColorSpreadsheet();
-            // Sets colors of chart series dynamically based upon expressions
+            // Sets colors of chart series dynamically based upon expressions presentation docuement
             //GenerateReport.DynamicChartSeriesColorPresentation();
+            // Sets colors of chart series dynamically based upon expressions email docuement
+            GenerateReport.DynamicChartSeriesColorEmail();
 
-            // Sets colors of chart series point color dynamically based upon expressions
+            // Sets colors of chart series point color dynamically based upon expressions wordprocessing document
             //GenerateReport.DynamicChartSeriesPointColor();
-            // Sets colors of chart series point color dynamically based upon expressions Spreadsheet document 
+            // Sets colors of chart series point color dynamically based upon expressions spreadsheet document 
             //GenerateReport.DynamicChartSeriesPointColorSpreadsheet();
-            // Sets colors of chart series point color dynamically based upon expressions
-            GenerateReport.DynamicChartSeriesPointColorPresentation();
+            // Sets colors of chart series point color dynamically based upon expressions prosentation document
+            //GenerateReport.DynamicChartSeriesPointColorPresentation();
+            // Sets colors of chart series point color dynamically based upon expressions email document
+            GenerateReport.DynamicChartSeriesPointColorEmail();
             #endregion
 
             #region Working With Table Row Data Bands

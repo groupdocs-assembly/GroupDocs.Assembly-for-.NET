@@ -493,6 +493,69 @@ namespace GroupDocs.AssemblyExamples
         }
         /// <summary>
         /// Sets colors of chart series point color dynamically based upon expressions
+        /// Feature is supported by version 18.6 or greater
+        /// </summary>
+        public static void DynamicChartSeriesPointColorEmail()
+        {
+            //setting up source 
+            const String strDocumentTemplate = "Email Templates/Dynamic Chart Point Series Color.msg";
+            //Setting up destination 
+            const String strDocumentReport = "Email Reports/Dynamic Chart Point Series Color.msg";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler();//initialize object of DocumentAssembler class 
+                                                                      //Call AssembleDocument to generate Pie Chart report in document format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), DataLayer.GetCustomerDataFromJson(), "customers");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Sets colors of chart series color dynamically based upon expressions
+        /// Feature is supported by version 18.6 or greater
+        /// </summary>
+        public static void DynamicChartSeriesColorEmail()
+        {
+            // Setting up source open document template
+            const String strDocumentTemplate = "Email Templates/Dynamic Chart Series Color.msg";
+            //setting up data source document
+            const string dataSrcDocument = "Word DataSource/Managers Data.docx";
+            //Setting up destination open document report 
+            const String strDocumentReport = "Email Reports/Dynamic Chart Series Color.msg";
+            //Define serires color
+            string color = "red";
+            try
+            {
+                // Set table column names to be extracted from the document.
+                DocumentTableOptions options = new DocumentTableOptions();
+                options.FirstRowContainsColumnNames = true;
+
+                DocumentTable table = new DocumentTable(CommonUtilities.GetDataSourceDocument(dataSrcDocument), 1, options);
+
+                // NOTE: For non-Spreadsheet documents, the type of a document table column is always string by default.
+                Debug.Assert(table.Columns["Total_Contract_Price"].Type == typeof(string));
+                // Change the column's type to double thus enabling to use arithmetic operations on values of the column 
+                // such as summing in templates.
+                table.Columns["Total_Contract_Price"].Type = typeof(double);
+
+                // Pass DocumentTable as a data source.
+                DocumentAssembler assembler = new DocumentAssembler();
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new object[] { table, color }, new string[] { "managers", "color" });
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+        }
+
+        /// <summary>
+        /// Sets colors of chart series point color dynamically based upon expressions
         /// Feature is supported by version 18.5 or greater
         /// </summary>
         public static void DynamicChartSeriesPointColorPresentation()

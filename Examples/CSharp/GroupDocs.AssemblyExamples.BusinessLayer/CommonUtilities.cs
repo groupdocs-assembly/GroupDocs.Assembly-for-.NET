@@ -19,7 +19,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         public const string destinationFolderPath = "../../../../Data/Destination/";
         public const string dataSourcesFolderPath = "../../../../Data/Data Sources/";
         //ExStart:LicenseFilePath
-        public const string licensePath = "D:/Aspose Projects/License/GroupDocs.Total.lic";
+        public const string licensePath = "D:/GroupDocs.Total.NET.lic";
         //ExEnd:LicenseFilePath
 
         #region DocumentDirectories
