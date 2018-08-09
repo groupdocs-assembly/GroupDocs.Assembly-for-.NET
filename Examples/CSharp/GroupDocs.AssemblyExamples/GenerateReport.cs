@@ -491,11 +491,117 @@ namespace GroupDocs.AssemblyExamples
                     break;
             }
         }
-        /// <summary>
-        /// Sets colors of chart series point color dynamically based upon expressions
-        /// Feature is supported by version 18.6 or greater
-        /// </summary>
-        public static void DynamicChartSeriesPointColorEmail()
+		/// <summary>
+		/// Insert Hyperlink Dynamically in Email Document
+		/// Feature is supported by version 18.7 or greater
+		/// </summary>
+		public static void DynamicHyperlinkInsertionEmail()
+		{
+			//setting up source 
+			const String strDocumentTemplate = "Email Templates/Dynamic Hyperlink.msg";
+			//Setting up destination 
+			const String strDocumentReport = "Email Reports/Dynamic Hyperlink.msg";
+			//Setting up Uri Expression
+			const String uriExpression = "https://www.groupdocs.com/";
+			//Setting up Display Text Expression
+			const String displayTextExpression = "GroupDocs";
+			try
+			{
+				//Instantiate DocumentAssembler class
+				DocumentAssembler assembler = new DocumentAssembler();
+				//Call AssembleDocument to assemble document 
+				assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new object[] { uriExpression, displayTextExpression }, new string[] { "uriExpression", "displayTextExpression" });
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex.Message);
+			}
+		}
+		/// <summary>
+		/// Insert Hyperlink Dynamically in Spreadsheet Document
+		/// Feature is supported by version 18.7 or greater
+		/// </summary>
+		public static void DynamicHyperlinkInsertionSpreadsheet()
+		{
+			//setting up source 
+			const String strDocumentTemplate = "Spreadsheet Templates/Dynamic Hyperlink.xlsx";
+			//Setting up destination 
+			const String strDocumentReport = "Spreadsheet Reports/Dynamic Hyperlink.xlsx";
+			//Setting up Uri Expression
+			const String uriExpression = "https://www.groupdocs.com/";
+			//Setting up Display Text Expression
+			const String displayTextExpression = "GroupDocs";
+			try
+			{
+				//Instantiate DocumentAssembler class
+				DocumentAssembler assembler = new DocumentAssembler();
+				//Call AssembleDocument to assemble document 
+				assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new object[] { uriExpression, displayTextExpression }, new string[] { "uriExpression", "displayTextExpression" });
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex.Message);
+			}
+		}
+		/// <summary>
+		/// Insert Hyperlink Dynamically in Presentaion Document
+		/// Feature is supported by version 18.7 or greater
+		/// </summary>
+		public static void DynamicHyperlinkInsertionPresentation()
+		{
+			//setting up source 
+			const String strDocumentTemplate = "Presentation Templates/Dynamic Hyperlink.pptx";
+			//Setting up destination 
+			const String strDocumentReport = "Presentation Reports/Dynamic Hyperlink.pptx";
+			//Setting up Uri Expression
+			const String uriExpression = "https://www.groupdocs.com/";
+			//Setting up Display Text Expression
+			const String displayTextExpression = "GroupDocs";
+			try
+			{
+				//Instantiate DocumentAssembler class
+				DocumentAssembler assembler = new DocumentAssembler();
+				//Call AssembleDocument to assemble document 
+				assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new object[] { uriExpression, displayTextExpression }, new string[] { "uriExpression", "displayTextExpression" });
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex.Message);
+			}
+		}
+
+		/// <summary>
+		/// Insert Hyperlink Dynamically in Word Document
+		/// Feature is supported by version 18.7 or greater
+		/// </summary>
+		public static void DynamicHyperlinkInsertionWord()
+		{
+			//setting up source 
+			const String strDocumentTemplate = "Word Templates/Dynamic Hyperlink.docx";
+			//Setting up destination 
+			const String strDocumentReport = "Word Reports/Dynamic Hyperlink.docx";
+			//Setting up Uri Expression
+			const String uriExpression = "https://www.groupdocs.com/";
+			//Setting up Display Text Expression
+			const String displayTextExpression = "GroupDocs";
+			try
+			{	
+				//Instantiate DocumentAssembler class
+				DocumentAssembler assembler = new DocumentAssembler();
+				//Call AssembleDocument to assemble document 
+				assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new object[] { uriExpression, displayTextExpression },new string[] { "uriExpression", "displayTextExpression" });
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex.Message);
+			}
+		}
+
+		/// <summary>
+		/// Sets colors of chart series point color dynamically based upon expressions
+		/// Feature is supported by version 18.6 or greater
+		/// </summary>
+		public static void DynamicChartSeriesPointColorEmail()
         {
             //setting up source 
             const String strDocumentTemplate = "Email Templates/Dynamic Chart Point Series Color.msg";

@@ -392,47 +392,59 @@ namespace GroupDocs.AssemblyExamples
             //GenerateReport.DynamicChartSeriesPointColorPresentation();
             // Sets colors of chart series point color dynamically based upon expressions email document
             GenerateReport.DynamicChartSeriesPointColorEmail();
-            #endregion
+			#endregion
 
-            #region Working With Table Row Data Bands
-            // Working With Table Row DataBands in Word Processing Document
-            //GenerateReport.WorkingWithTableRowDataBandsWord();
-            // Working With Table Row DataBands in SpreadSheet Document
-            //GenerateReport.WorkingWithTableRowDataBandsSpreadSheet();
-            // Working With Table Row DataBands in Presentation Document 
-            //GenerateReport.WorkingWithTableRowDataBandsPresentation();
-            // Working With Table Row DataBands in Email Format
-            //GenerateReport.WorkingWithTableRowDataBandsEmail();
-            #endregion
-            //Update fields/formulas in word processing or spreadsheet documents
-            //GenerateReport.UpdateWordDocFields("spreadsheet");
-            //Use of Next keyword in template syntax
-            //GenerateReport.NextIteration();
+			#region Working With Table Row Data Bands
+			// Working With Table Row DataBands in Word Processing Document
+			//GenerateReport.WorkingWithTableRowDataBandsWord();
+			// Working With Table Row DataBands in SpreadSheet Document
+			//GenerateReport.WorkingWithTableRowDataBandsSpreadSheet();
+			// Working With Table Row DataBands in Presentation Document 
+			//GenerateReport.WorkingWithTableRowDataBandsPresentation();
+			// Working With Table Row DataBands in Email Format
+			//GenerateReport.WorkingWithTableRowDataBandsEmail();
+			#endregion
 
-            //Generate report from excel data source 
-            //GenerateReport.UseSpreadsheetAsDataSource();
+			#region Insert Hyperlinks Dynamically
+			//Insert Hyperlink Dynamically in Word Document
+			//GenerateReport.DynamicHyperlinkInsertionWord();
+			//Insert Hyperlink Dynamically in Presentation Document
+			//GenerateReport.DynamicHyperlinkInsertionPresentation();
+			//Insert Hyperlink Dynamically in Spreadsheet Document
+			//GenerateReport.DynamicHyperlinkInsertionSpreadsheet();
+			//Insert Hyperlink Dynamically in Email Document
+			GenerateReport.DynamicHyperlinkInsertionEmail();
 
-            //Generate report from presentation data source
-            //GenerateReport.UsePresentationTableAsDataSource();
+			#endregion
+			//Update fields/formulas in word processing or spreadsheet documents
+			//GenerateReport.UpdateWordDocFields("spreadsheet");
+			//Use of Next keyword in template syntax
+			//GenerateReport.NextIteration();
 
-            //Importing word processing table into presentation
-            //GenerateReport.ImportingWordProcessingTableIntoPresentation();
+			//Generate report from excel data source 
+			//GenerateReport.UseSpreadsheetAsDataSource();
 
-            //Importing spread table into html
-            //GenerateReport.ImportingSpreadsheetIntoHtmlDocument();
+			//Generate report from presentation data source
+			//GenerateReport.UsePresentationTableAsDataSource();
 
-            //Load document table set using default options
-            //GenerateReport.LoadDocTableSet("Multiple Tables Data.docx");
-            //Load document table set using custom options
-            //GenerateReport.LoadDocTableSetWithCustomOptions("Multiple Tables Data.docx");
-            //Using DocumentTableSet as Data Source
-            //GenerateReport.UseDocumentTableSetAsDataSource("Multiple Tables Data.docx", "Using Document Table Set as Data Source.pptx");
-            //GenerateReport.DefiningDocumentTableRelations("Related Tables Data.xlsx", "Using Document Table Relations.docx");
-            //GenerateReport.ChangingDocumentTableColumnType("Presentation Templates/Changing Document Table Column Type.pptx");
+			//Importing word processing table into presentation
+			//GenerateReport.ImportingWordProcessingTableIntoPresentation();
 
-            //GenerateReport.UsingStringAsTemplate();
+			//Importing spread table into html
+			//GenerateReport.ImportingSpreadsheetIntoHtmlDocument();
 
-            Console.WriteLine();
+			//Load document table set using default options
+			//GenerateReport.LoadDocTableSet("Multiple Tables Data.docx");
+			//Load document table set using custom options
+			//GenerateReport.LoadDocTableSetWithCustomOptions("Multiple Tables Data.docx");
+			//Using DocumentTableSet as Data Source
+			//GenerateReport.UseDocumentTableSetAsDataSource("Multiple Tables Data.docx", "Using Document Table Set as Data Source.pptx");
+			//GenerateReport.DefiningDocumentTableRelations("Related Tables Data.xlsx", "Using Document Table Relations.docx");
+			//GenerateReport.ChangingDocumentTableColumnType("Presentation Templates/Changing Document Table Column Type.pptx");
+
+			//GenerateReport.UsingStringAsTemplate();
+
+			Console.WriteLine();
         }
     }
 }
