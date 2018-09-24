@@ -537,10 +537,10 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         /// <param name="dataSource">data source</param>
         /// <returns></returns>
 
-        public static object[] EmailDataSourceObject(string fileName, object dataSource)
+        public static EmailDataSourcesObjects EmailDataSourceObject(string fileName, object dataSource, string title = "")
         {
-            //ExStart:EmailDataSourceObject
-            object[] dataSources;
+			//ExStart:EmailDataSourceObject
+			EmailDataSourcesObjects dataSources = new EmailDataSourcesObjects();
             string extension = Path.GetExtension(fileName);
 
             if ((extension == ".msg") || (extension == ".eml"))
@@ -549,102 +549,40 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
                 recipients.Add("Named Recipient <named@example.com>");
                 recipients.Add("unnamed@example.com");
 
-                dataSources = new object[]
-                {
-                    dataSource,                  
-                    "Example Sender <sender@example.com>",
-                    recipients,
-                    "cc@example.com",
-                    Path.GetFileNameWithoutExtension(fileName)
-                };
-
+				dataSources.DataSource = dataSource;
+				dataSources.Sender = "Example Sender <sender@example.com>";
+				dataSources.Recipients = recipients;
+				dataSources.CC = "cc@example.com";
+				dataSources.Subject = Path.GetFileNameWithoutExtension(fileName);
+				if (title != "")
+					dataSources.Title = title;
             }
             else
             {
-                dataSources = new object[] { dataSource };
+				dataSources.DataSource = dataSource;
             }
             return dataSources;
             //ExEnd:EmailDataSourceObject
         }
-        public static object[] EmailDataSourceObject(string fileName, object dataSource, string title)
+		
+        public static EmailDataSourcesNames EmailDataSourceName(string extension, string name,string title ="")
         {
-            //ExStart:EmailDataSourceObject
-            object[] dataSources;
-            string extension = Path.GetExtension(fileName);
-
-            if ((extension == ".msg") || (extension == ".eml"))
-            {
-                List<string> recipients = new List<string>();
-                recipients.Add("Named Recipient <named@example.com>");
-                recipients.Add("unnamed@example.com");
-
-                dataSources = new object[]
-                {
-                    dataSource,
-
-                    "Example Sender <sender@example.com>",
-                    recipients,
-                    "cc@example.com",
-                    Path.GetFileNameWithoutExtension(fileName),
-                    title,
-                };
-
-            }
-            else
-            {
-                dataSources = new object[] { dataSource };
-            }
-            return dataSources;
-            //ExEnd:EmailDataSourceObject
-        }
-        public static string[] EmailDataSourceName(string extension, string name)
-        {
-            //ExStart:EmailDataSourceName
-            string[] dataSourceNames;
-            if ((extension == ".msg") || (extension == ".eml"))
-            {
-                dataSourceNames = new string[]
-              {
-                    name,
-                    "sender",
-                    "recipients",
-                    "cc",
-                    "subject",
-              };
-
-            }
-            else
-            {
-                dataSourceNames = new string[] { };
-            }
+			//ExStart:EmailDataSourceName
+			EmailDataSourcesNames dataSourceNames = new EmailDataSourcesNames();
+			if ((extension == ".msg") || (extension == ".eml"))
+			{
+				dataSourceNames.Name = name;
+				dataSourceNames.Sender = "sender";
+				dataSourceNames.Recipients = "recipients";
+				dataSourceNames.CC = "cc";
+				dataSourceNames.Subject = "subject";
+				dataSourceNames.Title = title;
+				if (title != "")
+					dataSourceNames.Title = title;
+			}
             return dataSourceNames;
             //ExEnd:EmailDataSourceName
         }
-        public static string[] EmailDataSourceName(string extension, string name,string title)
-        {
-            //ExStart:EmailDataSourceName
-            string[] dataSourceNames;
-            if ((extension == ".msg") || (extension == ".eml"))
-            {
-                dataSourceNames = new string[]
-              {
-                    name,
-                    "sender",
-                    "recipients",
-                    "cc",
-                    "subject",
-                    title,
-              };
-
-            }
-            else
-            {
-                dataSourceNames = new string[] { };
-            }
-            return dataSourceNames;
-            //ExEnd:EmailDataSourceName
-        }
-
 
     }
     //ExEnd:DataLayer
@@ -759,7 +697,24 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         private readonly ReferencedEntities mEntities;
         private readonly ChildEntities mChildren;
     }
-    //ExEnd:DynamicEntity
-    #endregion
-
+	//ExEnd:DynamicEntity
+	#endregion
+	public class EmailDataSourcesObjects
+	{
+		public object DataSource { get; set; }
+		public string Sender { get; set; }
+		public List<string> Recipients { get; set; }
+		public string CC { get; set; }
+		public string Subject { get; set; }
+		public string Title { get; set; }
+	}
+	public class EmailDataSourcesNames
+	{
+		public string Name { get; set; }
+		public string Sender { get; set; }
+		public string Recipients { get; set; }
+		public string CC { get; set; }
+		public string Subject { get; set; }
+		public string Title { get; set; }
+	}
 }
