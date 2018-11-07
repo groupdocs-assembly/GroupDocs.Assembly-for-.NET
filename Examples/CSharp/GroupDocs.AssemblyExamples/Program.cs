@@ -424,40 +424,53 @@ namespace GroupDocs.AssemblyExamples
 			//Insert Hyperlink Dynamically in Email Document
 			GenerateReport.DynamicHyperlinkInsertionEmail();
 
-			#endregion
+            #endregion
 
-			//Update fields/formulas in word processing or spreadsheet documents
-			//GenerateReport.UpdateWordDocFields("spreadsheet");
+            #region Support removal of paragraphs becoming empty after template syntax tags are removed or replaced with empty values
+            //Working with word processing document
+            //GenerateReport.EmptyParagraphInWordProcessing();
 
-			//Use of Next keyword in template syntax
-			//GenerateReport.NextIteration();
+            //Working with presentation document 
+            //GenerateReport.EmptyParagraphInPresentation();
 
-			//Generate report from excel data source 
-			//GenerateReport.UseSpreadsheetAsDataSource();
+            //Working with email documents 
+            GenerateReport.EmptyParagraphInEmail();
+            #endregion  
 
-			//Generate report from presentation data source
-			//GenerateReport.UsePresentationTableAsDataSource();
+            //Update fields/formulas in word processing or spreadsheet documents
+            //GenerateReport.UpdateWordDocFields("spreadsheet");
 
-			//Importing word processing table into presentation
-			//GenerateReport.ImportingWordProcessingTableIntoPresentation();
+            //Use of Next keyword in template syntax
+            //GenerateReport.NextIteration();
 
-			//Importing spread table into html
-			//GenerateReport.ImportingSpreadsheetIntoHtmlDocument();
+            //Generate report from excel data source 
+            //GenerateReport.UseSpreadsheetAsDataSource();
 
-			//Load document table set using default options
-			//GenerateReport.LoadDocTableSet("Multiple Tables Data.docx");
+            //Generate report from presentation data source
+            //GenerateReport.UsePresentationTableAsDataSource();
 
-			//Load document table set using custom options
-			//GenerateReport.LoadDocTableSetWithCustomOptions("Multiple Tables Data.docx");
+            //Importing word processing table into presentation
+            //GenerateReport.ImportingWordProcessingTableIntoPresentation();
 
-			//Using DocumentTableSet as Data Source
-			//GenerateReport.UseDocumentTableSetAsDataSource("Multiple Tables Data.docx", "Using Document Table Set as Data Source.pptx");
-			//GenerateReport.DefiningDocumentTableRelations("Related Tables Data.xlsx", "Using Document Table Relations.docx");
-			//GenerateReport.ChangingDocumentTableColumnType("Presentation Templates/Changing Document Table Column Type.pptx");
+            //Importing spread table into html
+            //GenerateReport.ImportingSpreadsheetIntoHtmlDocument();
 
-			//GenerateReport.UsingStringAsTemplate();
+            //Load document table set using default options
+            //GenerateReport.LoadDocTableSet("Multiple Tables Data.docx");
 
-			Console.WriteLine();
+            //Load document table set using custom options
+            //GenerateReport.LoadDocTableSetWithCustomOptions("Multiple Tables Data.docx");
+
+            //Using DocumentTableSet as Data Source
+            //GenerateReport.UseDocumentTableSetAsDataSource("Multiple Tables Data.docx", "Using Document Table Set as Data Source.pptx");
+            //GenerateReport.DefiningDocumentTableRelations("Related Tables Data.xlsx", "Using Document Table Relations.docx");
+            //GenerateReport.ChangingDocumentTableColumnType("Presentation Templates/Changing Document Table Column Type.pptx");
+
+            //GenerateReport.UsingStringAsTemplate();
+
+
+
+            Console.WriteLine();
         }
     }
 }

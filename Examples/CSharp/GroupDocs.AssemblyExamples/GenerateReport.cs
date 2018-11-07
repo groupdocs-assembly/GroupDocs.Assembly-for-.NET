@@ -547,11 +547,90 @@ namespace GroupDocs.AssemblyExamples
 					break;
 			}
 		}
-		/// <summary>
-		/// Insert Hyperlink Dynamically in Email Document
-		/// Feature is supported by version 18.7 or greater
-		/// </summary>
-		public static void DynamicHyperlinkInsertionEmail()
+
+        public static void EmptyParagraphInEmail()
+        {
+            //setting up source 
+            const String strDocumentTemplate = "Email Templates/Empty Paragraph.msg";
+            //Setting up destination 
+            const String strDocumentReport = "Email Reports/Empty Paragraph.msg";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler
+                {
+                    //Apply Remove Empty Paragraph option
+                    Options = DocumentAssemblyOptions.RemoveEmptyParagraphs
+                };
+                //Call AssembleDocument to assemble document 
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                                           CommonUtilities.SetDestinationDocument(strDocumentReport),
+                                           new DataSourceInfo("dummy", "dummy"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        public static void EmptyParagraphInPresentation()
+        {
+            //setting up source 
+            const String strDocumentTemplate = "Presentation Templates/Empty Paragraph.pptx";
+            //Setting up destination 
+            const String strDocumentReport = "Presentation Reports/Empty Paragraph.pptx";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler
+                {
+                    //Apply Remove Empty Paragraph option
+                    Options = DocumentAssemblyOptions.RemoveEmptyParagraphs
+                };
+                //Call AssembleDocument to assemble document 
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                                           CommonUtilities.SetDestinationDocument(strDocumentReport),
+                                           new DataSourceInfo("dummy", "dummy"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Supports removal of paragraphs becoming empty after template syntax tags are removed or replaced with empty values for Word Processing documents s
+        /// </summary>
+        public static void EmptyParagraphInWordProcessing()
+        {
+            //setting up source 
+            const String strDocumentTemplate = "Word Templates/Empty Paragraph.docx";
+            //Setting up destination 
+            const String strDocumentReport = "Word Reports/Empty Paragraph.docx";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler
+                {
+                    //Apply Remove Empty Paragraph option
+                    Options = DocumentAssemblyOptions.RemoveEmptyParagraphs
+                };
+                //Call AssembleDocument to assemble document 
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), 
+                                           CommonUtilities.SetDestinationDocument(strDocumentReport), 
+                                           new DataSourceInfo("dummy", "dummy"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Insert Hyperlink Dynamically in Email Document
+        /// Feature is supported by version 18.7 or greater
+        /// </summary>
+        public static void DynamicHyperlinkInsertionEmail()
 		{
 			//setting up source 
 			const String strDocumentTemplate = "Email Templates/Dynamic Hyperlink.msg";
