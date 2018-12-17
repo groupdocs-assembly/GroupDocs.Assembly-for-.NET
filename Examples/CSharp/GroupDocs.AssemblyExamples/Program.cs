@@ -18,15 +18,16 @@ namespace GroupDocs.AssemblyExamples
              *  Please uncomment the statement if you do have license.
              */
             CommonUtilities.ApplyLicense();
-			//ExEnd:ApplyingLicense
 
-			#region Change Target File Format
+            //ExEnd:ApplyingLicense
 
-			//Change target file format using the file extension
-			GenerateReport.ChangeTargetFileFormat();
+            #region Change Target File Format
+
+            //Change target file format using the file extension
+            //GenerateReport.ChangeTargetFileFormat();
 
 			//Change target file format using explicit specifying
-			GenerateReport.ChangeTargetFileFormatUsingExplicitSpecifying();
+			//GenerateReport.ChangeTargetFileFormatUsingExplicitSpecifying();
 			#endregion
 
 			#region Generating Bubble Chart Report
@@ -354,21 +355,27 @@ namespace GroupDocs.AssemblyExamples
 			//Outer document insertion in a report
 			//GenerateReport.OuterDocumentInsertion();
 
-			#endregion
+            //Insert nested external output documents in word
+            //GenerateReport.InsertNestedExternalDocumentsInWord();
 
-			#region Barcode Insertion 
+            //Insert nested external output documents in email
+            //GenerateReport.InsertNestedExternalDocumentsInEmail();
 
-			//add barcode in word processing documents
-			//GenerateReport.AddBarCodes("document");
-			//add barcode in spreadsheet documents
-			//GenerateReport.AddBarCodes("spreadsheet");
-			//add barcode in persentation documents 
-			//GenerateReport.AddBarCodes("presentation");
+            #endregion
 
-			#endregion
+            #region Barcode Insertion 
 
-			#region Ability to remove selective chart series
-			GenerateReport.RemoveSelectiveChartSeries();
+            //add barcode in word processing documents
+            //GenerateReport.AddBarCodes("document");
+            //add barcode in spreadsheet documents
+            //GenerateReport.AddBarCodes("spreadsheet");
+            //add barcode in persentation documents 
+            //GenerateReport.AddBarCodes("presentation");
+
+            #endregion
+
+            #region Ability to remove selective chart series
+            GenerateReport.RemoveSelectiveChartSeries();
             #endregion
 
             #region Dynamic Chart Axis Title 
