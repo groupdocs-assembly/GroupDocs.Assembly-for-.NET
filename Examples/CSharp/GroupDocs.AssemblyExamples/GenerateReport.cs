@@ -547,6 +547,54 @@ namespace GroupDocs.AssemblyExamples
 					break;
 			}
 		}
+        /// <summary>
+        /// This method inertes nested external doucments in email document
+        /// </summary>
+        public static void InsertNestedExternalDocumentsInEmail()
+        {
+            //Setting up source open document template
+            const String strDocumentTemplate = "Email Templates/Nested External Document.msg";
+            //Setting up destination open document report 
+            const String strDocumentReport = "Email Reports/Nested External Document.msg";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler();
+                //Call AssembleDocument to generate  Report in open document format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                                           CommonUtilities.SetDestinationDocument(strDocumentReport),
+                                           new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// This method inertes nested external doucments in word document
+        /// </summary>
+        public static void InsertNestedExternalDocumentsInWord()
+        {
+            //Setting up source open document template
+            const String strDocumentTemplate = "Word Templates/Nested External Document.docx";
+            //Setting up destination open document report 
+            const String strDocumentReport = "Word Reports/Nested External Document.docx";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler();
+                //Call AssembleDocument to generate  Report in open document format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                                           CommonUtilities.SetDestinationDocument(strDocumentReport),
+                                           new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+        }
 
         public static void EmptyParagraphInEmail()
         {
@@ -7102,7 +7150,9 @@ namespace GroupDocs.AssemblyExamples
 				//Instantiate DocumentAssembler class
 				DocumentAssembler assembler = new DocumentAssembler();
 				//Call AssembleDocument to generate  Report in open document format
-				assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
+				assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), 
+                                           CommonUtilities.SetDestinationDocument(strDocumentReport), 
+                                           new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
 			}
 			catch (Exception ex)
 			{
