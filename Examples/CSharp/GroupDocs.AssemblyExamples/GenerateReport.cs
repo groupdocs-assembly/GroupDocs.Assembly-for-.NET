@@ -7354,5 +7354,111 @@ namespace GroupDocs.AssemblyExamples
 			//ExEnd:ImportingSpreadsheetIntoHtmlDocument
 		}
 
-	}
+        /// <summary>
+		///Change target file format using explicit specifying
+		/// Features is supported by version 19.1 or greater
+		/// </summary>
+		public static void TableCellsMergingInWordProcessing()
+        {
+            //ExStart:TableCellsMergingInWordProcessing
+            //Setting up source document template
+            const String strDocumentTemplate = "Word Templates/Merging Cells Dynamically.docx";
+            //Setting up destination PDF report 
+            const String strDocumentReport = "PDF Reports/Merging Cells Dynamically Report.pdf";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler();
+                //Call AssembleDocument to Merging Cells Dynamically Report in document format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new LoadSaveOptions(FileFormat.Pdf), new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:TableCellsMergingInWordProcessing
+        }
+        /// <summary>
+		///Change target file format using explicit specifying
+		/// Features is supported by version 19.1 or greater
+		/// </summary>
+        public static void TableCellsMergingInPresentations()
+        {
+            //ExStart:TableCellsMergingInPresentations
+            //Setting up source presentation template
+            const String strDocumentTemplate = "Presentation Templates/Merging Cells Dynamically.pptx";
+            //Setting up destination PDF report 
+            const String strDocumentReport = "PDF Reports/Merging Cells Dynamically Report.pdf";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler();
+                //Call AssembleDocument to Merging Cells Dynamically Report in document format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new LoadSaveOptions(FileFormat.Pdf), new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:TableCellsMergingInPresentations
+        }
+        /// <summary>
+		///Change target file format using explicit specifying
+		/// Features is supported by version 19.1 or greater
+		/// </summary>
+        public static void TableCellsMergingInSpreadsheets()
+        {
+            //ExStart:TableCellsMergingInSpreadsheets
+            //Setting up source spreadsheet template
+            const String strDocumentTemplate = "Spreadsheet Templates/Merging Cells Dynamically.xlsx";
+            //Setting up destination PDF report 
+            const String strDocumentReport = "PDF Reports/Merging Cells Dynamically Report.pdf";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler();
+                //Call AssembleDocument to Merging Cells Dynamically Report in document format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new LoadSaveOptions(FileFormat.Pdf), new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:TableCellsMergingInSpreadsheets
+        }
+        /// <summary>
+		///Change target file format using explicit specifying
+		/// Features is supported by version 19.1 or greater
+		/// </summary>
+        public static void TableCellsMergingInEmails()
+        {
+            //ExStart:TableCellsMergingInEmails
+            //Setting up source email template
+            const String strEmailTemplate = "Email Templates/Merging Cells Dynamically.msg";
+            //Setting up destination email report 
+            const String strEmailReport = "Email Reports/Merging Cells Dynamically Report.msg";
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                var dataSources = DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.PopulateData());
+                var dataSourcesNames = DataLayer.EmailDataSourceName(".msg", "customers");
+
+                //Call AssembleDocument to generate In-Table List Report in email format
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate),
+                    CommonUtilities.SetDestinationDocument(strEmailReport),
+                    new DataSourceInfo(dataSources.DataSource, dataSourcesNames.Name),
+                    new DataSourceInfo(dataSources.Sender, dataSourcesNames.Sender),
+                    new DataSourceInfo(dataSources.Recipients, dataSourcesNames.Recipients),
+                    new DataSourceInfo(dataSources.CC, dataSourcesNames.CC),
+                    new DataSourceInfo(dataSources.Subject, dataSourcesNames.Subject)
+                    );
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:TableCellsMergingInEmails
+        }
+    }
 }

@@ -32,7 +32,7 @@ namespace GroupDocs.AssemblyExamples
 
 			#region Generating Bubble Chart Report
 			//Generate a bubble chart report in document processing format
-			GenerateReport.GenerateBubbleChart("document", false, false, false, true);
+			//GenerateReport.GenerateBubbleChart("document", false, false, false, true);
 
 			//Generate a Bulleted List report in spreadsheet format
 			//GenerateReport.GenerateBubbleChart("spreadsheet", false, false, false, true);
@@ -375,7 +375,7 @@ namespace GroupDocs.AssemblyExamples
             #endregion
 
             #region Ability to remove selective chart series
-            GenerateReport.RemoveSelectiveChartSeries();
+           // GenerateReport.RemoveSelectiveChartSeries();
             #endregion
 
             #region Dynamic Chart Axis Title 
@@ -442,7 +442,21 @@ namespace GroupDocs.AssemblyExamples
 
             //Working with email documents 
             GenerateReport.EmptyParagraphInEmail();
-            #endregion  
+            #endregion
+
+            #region Merging table cells dynamically
+            // Merging table cells dynamically in Word Processing
+            GenerateReport.TableCellsMergingInWordProcessing();
+
+            // Merging table cells dynamically in Presentations
+            //GenerateReport.TableCellsMergingInPresentations();
+
+            // Merging table cells dynamically in Spreadsheets
+            //GenerateReport.TableCellsMergingInSpreadsheets();
+
+            // Merging table cells dynamically in Email
+            // GenerateReport.TableCellsMergingInEmails();
+            #endregion
 
             //Update fields/formulas in word processing or spreadsheet documents
             //GenerateReport.UpdateWordDocFields("spreadsheet");
@@ -467,6 +481,7 @@ namespace GroupDocs.AssemblyExamples
 
             //Load document table set using custom options
             //GenerateReport.LoadDocTableSetWithCustomOptions("Multiple Tables Data.docx");
+
 
             //Using DocumentTableSet as Data Source
             //GenerateReport.UseDocumentTableSetAsDataSource("Multiple Tables Data.docx", "Using Document Table Set as Data Source.pptx");
