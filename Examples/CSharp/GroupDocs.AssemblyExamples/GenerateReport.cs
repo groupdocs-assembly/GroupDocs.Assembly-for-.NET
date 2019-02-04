@@ -7369,7 +7369,7 @@ namespace GroupDocs.AssemblyExamples
             {
                 //Instantiate DocumentAssembler class
                 DocumentAssembler assembler = new DocumentAssembler();
-                //Call AssembleDocument to Merging Cells Dynamically Report in document format
+                //Call AssembleDocument to Merging Cells Dynamically Report in PDF format
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new LoadSaveOptions(FileFormat.Pdf), new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
             }
             catch (Exception ex)
@@ -7393,7 +7393,7 @@ namespace GroupDocs.AssemblyExamples
             {
                 //Instantiate DocumentAssembler class
                 DocumentAssembler assembler = new DocumentAssembler();
-                //Call AssembleDocument to Merging Cells Dynamically Report in document format
+                //Call AssembleDocument to Merging Cells Dynamically Report in PDF format
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new LoadSaveOptions(FileFormat.Pdf), new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
             }
             catch (Exception ex)
@@ -7417,7 +7417,7 @@ namespace GroupDocs.AssemblyExamples
             {
                 //Instantiate DocumentAssembler class
                 DocumentAssembler assembler = new DocumentAssembler();
-                //Call AssembleDocument to Merging Cells Dynamically Report in document format
+                //Call AssembleDocument to Merging Cells Dynamically Report in PDF format
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new LoadSaveOptions(FileFormat.Pdf), new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
             }
             catch (Exception ex)
@@ -7444,7 +7444,7 @@ namespace GroupDocs.AssemblyExamples
                 var dataSources = DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.PopulateData());
                 var dataSourcesNames = DataLayer.EmailDataSourceName(".msg", "customers");
 
-                //Call AssembleDocument to generate In-Table List Report in email format
+                //Call AssembleDocument to generate Merging Cells Dynamically Report in email format
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate),
                     CommonUtilities.SetDestinationDocument(strEmailReport),
                     new DataSourceInfo(dataSources.DataSource, dataSourcesNames.Name),
