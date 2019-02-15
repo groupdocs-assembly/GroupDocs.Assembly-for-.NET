@@ -7355,7 +7355,7 @@ namespace GroupDocs.AssemblyExamples
 		}
 
         /// <summary>
-		///Change target file format using explicit specifying
+		/// Table Cell Merging in Word Processing Documents
 		/// Features is supported by version 19.1 or greater
 		/// </summary>
 		public static void TableCellsMergingInWordProcessing()
@@ -7379,7 +7379,7 @@ namespace GroupDocs.AssemblyExamples
             //ExEnd:TableCellsMergingInWordProcessing
         }
         /// <summary>
-		///Change target file format using explicit specifying
+		/// Table Cell Merging in Presentations
 		/// Features is supported by version 19.1 or greater
 		/// </summary>
         public static void TableCellsMergingInPresentations()
@@ -7403,7 +7403,7 @@ namespace GroupDocs.AssemblyExamples
             //ExEnd:TableCellsMergingInPresentations
         }
         /// <summary>
-		///Change target file format using explicit specifying
+		/// Table Cell Merging in Spreadsheets
 		/// Features is supported by version 19.1 or greater
 		/// </summary>
         public static void TableCellsMergingInSpreadsheets()
@@ -7427,7 +7427,7 @@ namespace GroupDocs.AssemblyExamples
             //ExEnd:TableCellsMergingInSpreadsheets
         }
         /// <summary>
-		///Change target file format using explicit specifying
+		/// Table Cell Merging in Emails
 		/// Features is supported by version 19.1 or greater
 		/// </summary>
         public static void TableCellsMergingInEmails()
