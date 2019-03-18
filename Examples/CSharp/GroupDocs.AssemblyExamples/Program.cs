@@ -446,7 +446,7 @@ namespace GroupDocs.AssemblyExamples
 
             #region Merging table cells dynamically
             // Merging table cells dynamically in Word Processing
-            GenerateReport.TableCellsMergingInWordProcessing();
+            //GenerateReport.TableCellsMergingInWordProcessing();
 
             // Merging table cells dynamically in Presentations
             //GenerateReport.TableCellsMergingInPresentations();
@@ -490,6 +490,8 @@ namespace GroupDocs.AssemblyExamples
 
             //GenerateReport.UsingStringAsTemplate();
 
+            // Demonstrate how to enable in-line syntax errors in the template without throw any exception
+            //GenerateReport.DemoInLineSyntaxError();
 
 
             Console.WriteLine();

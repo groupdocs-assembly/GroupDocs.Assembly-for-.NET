@@ -7460,5 +7460,40 @@ namespace GroupDocs.AssemblyExamples
             }
             //ExEnd:TableCellsMergingInEmails
         }
+        /// <summary>
+        /// In-lining syntax error messages into templates
+        /// Features is supported by version 19.3 or greater
+        /// </summary>
+        public static void DemoInLineSyntaxError()
+        {
+            //ExStart:DemoInLineSyntaxError_19.3
+            //Setting up source document template
+            const String strDocumentTemplate = "Word Templates/Inline Error Demo.docx";
+            //Setting up destination PDF report 
+            const String strDocumentReport = "PDF Reports/Inline Error Demo.pdf";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                //Enable the In-line error messaging
+                assembler.Options |= DocumentAssemblyOptions.InlineErrorMessages;
+
+                //Call AssembleDocument to show the demo Report and save the report in PDF format
+                //The AssembleDocument will return a boolean value to indicate the success or failed with inline error.
+                if (assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new LoadSaveOptions(FileFormat.Pdf), new DataSourceInfo(DataLayer.GetCustomerData(), "customer")))
+                {
+                    Console.WriteLine("No error found in template");
+                }else
+                {
+                    Console.WriteLine("Do something with a report containing a template syntax error.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:DemoInLineSyntaxError_19.3
+        }
     }
 }
