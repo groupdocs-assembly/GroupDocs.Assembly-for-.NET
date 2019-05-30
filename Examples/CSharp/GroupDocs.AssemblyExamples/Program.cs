@@ -441,7 +441,7 @@ namespace GroupDocs.AssemblyExamples
             //GenerateReport.EmptyParagraphInPresentation();
 
             //Working with email documents 
-            GenerateReport.EmptyParagraphInEmail();
+            //GenerateReport.EmptyParagraphInEmail();
             #endregion
 
             #region Merging table cells dynamically
@@ -493,8 +493,17 @@ namespace GroupDocs.AssemblyExamples
             // Demonstrate how to enable in-line syntax errors in the template without throw any exception
             //GenerateReport.DemoInLineSyntaxError();
 
+            //Loading of template documents from HTML(with relative path) with resources
+            //GenerateReport.LoadDocFromHTMLWithResource();
 
-            Console.WriteLine();
+            // Loading of template documents from HTML with resources from an explicitly specified folder
+            //GenerateReport.LoadDocFromHTMLWithResource_ExplicitFolder();
+
+            //Saving of external resource files at relative path 
+            //GenerateReport.SaveDocToHTMLWithResource();
+
+            // Saving of external resource files in a specified folder at relative path while saving output to HTML
+            //GenerateReport.SaveDocToHTMLWithResource_ExplicitFolder();
         }
     }
 }

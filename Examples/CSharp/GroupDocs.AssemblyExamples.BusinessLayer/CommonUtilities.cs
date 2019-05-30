@@ -16,6 +16,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
     {
 
         public const string sourceFolderPath = "../../../../Data/Source/";
+        public const string dataFolderPath = "../../../../Data/";
         public const string destinationFolderPath = "../../../../Data/Destination/";
         public const string dataSourcesFolderPath = "../../../../Data/Data Sources/";
         //ExStart:LicenseFilePath
@@ -33,6 +34,13 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         public static string GetSourceDocument(string sourceFileName)
         {
             return Path.Combine(Path.GetFullPath(sourceFolderPath), sourceFileName);
+        }
+        /// <summary>
+        /// Takes source folder name as argument. 
+        /// </summary>
+        public static string GetSourceFolder(string sourceFolder)
+        {
+            return Path.Combine(Path.GetFullPath(dataFolderPath), sourceFolder);
         }
         /// <summary>
         /// Takes output file name as argument. 

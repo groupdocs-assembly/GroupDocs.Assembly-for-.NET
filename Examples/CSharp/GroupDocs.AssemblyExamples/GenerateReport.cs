@@ -7495,5 +7495,112 @@ namespace GroupDocs.AssemblyExamples
             }
             //ExEnd:DemoInLineSyntaxError_19.3
         }
+
+        /// <summary>
+        /// Loading of template documents from HTML with resources
+        /// Features is supported by version 19.5 or greater
+        /// </summary>
+        public static void LoadDocFromHTMLWithResource()
+        {
+            //ExStart:LoadDocFromHTMLWithResource_19.5
+
+            //Setting up resource directory for input template and output
+            String strDirectoryPath = CommonUtilities.GetSourceFolder("ResourceLoad/");
+            
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+                
+                //Assemble the document using relative directory path and file names.
+                assembler.AssembleDocument(strDirectoryPath + "TestWordsResourceLoad.htm", strDirectoryPath + "TestWordsResourceLoad_Out.docx", new DataSourceInfo("It should be a jeep image.", "value"));
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:LoadDocFromHTMLWithResource_19.5
+        }
+        /// <summary>
+        /// Loading of template documents from HTML with resources from an explicitly specified folder
+        /// Features is supported by version 19.5 or greater
+        /// </summary>
+        public static void LoadDocFromHTMLWithResource_ExplicitFolder()
+        {
+            //ExStart:LoadDocFromHTMLWithResource_ExplicitFolder_19.5
+
+            //Setting up resource directory for input template and output
+            String strDirectoryPath = CommonUtilities.GetSourceFolder("ResourceLoad/");
+
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                //Initialize LoadSaveOptions
+                LoadSaveOptions loadSaveOptions = new LoadSaveOptions();
+                
+                //Resolve URIs from the specified alternative folder.
+                loadSaveOptions.ResourceLoadBaseUri = strDirectoryPath + "Alternative";
+
+                assembler.AssembleDocument(strDirectoryPath + "TestWordsResourceLoad.htm", strDirectoryPath + "TestWordsResourceLoad_Out.docx", loadSaveOptions, new DataSourceInfo("It should be a sport car image.", "value"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:LoadDocFromHTMLWithResource_ExplicitFolder_19.5
+        }
+        /// <summary>
+        /// Saving of external resource files at relative path while an assembled document loaded from a non-HTML format is being saved to HTML
+        /// Features is supported by version 19.5 or greater
+        /// </summary>
+        public static void SaveDocToHTMLWithResource()
+        {
+            //ExStart:SaveDocToHTMLWithResource_19.5
+
+            //Setting up resource directory for input template and output
+            String strDirectoryPath = CommonUtilities.GetSourceFolder("ResourceSave/");
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                //Assemble the document using relative directory path and file names.
+                assembler.AssembleDocument(strDirectoryPath + "TestCellsResourceSaveOneSheet.xlsx", strDirectoryPath + "TestCellsResourceSaveOneSheet_Out.htm", new DataSourceInfo("Hello!", "value"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SaveDocToHTMLWithResource_19.5
+        }
+        /// <summary>
+        /// Saving of external resource files in a specified folder at relative path while saving output to HTML
+        /// Features is supported by version 19.5 or greater
+        /// </summary>
+        public static void SaveDocToHTMLWithResource_ExplicitFolder()
+        {
+            //ExStart:SaveDocToHTMLWithResource_ExplicitFolder_19.5
+
+            //Setting up resource directory for input template and output
+            String strDirectoryPath = CommonUtilities.GetSourceFolder("ResourceSave/");
+
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                //Initialize LoadSaveOptions
+                LoadSaveOptions loadSaveOptions = new LoadSaveOptions();
+
+                //Resolve URIs from the specified alternative folder.
+                loadSaveOptions.ResourceSaveFolder = strDirectoryPath + "Alternative";
+
+                assembler.AssembleDocument(strDirectoryPath + "TestWordsResourceSave.docx", strDirectoryPath + "TestWordsResourceSave_Out.htm", loadSaveOptions, new DataSourceInfo("Hello!", "value"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SaveDocToHTMLWithResource_ExplicitFolder_19.5
+        }
     }
 }
