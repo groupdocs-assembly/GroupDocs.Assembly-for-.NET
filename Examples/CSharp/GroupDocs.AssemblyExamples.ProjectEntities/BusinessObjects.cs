@@ -35,6 +35,9 @@ namespace GroupDocs.AssemblyExamples.ProjectEntities
             public DateTime OrderDate { get; set; }
             public int OrderNumber { get; set; }
             public DateTime ShippingDate { get; set; }
+            public IEnumerable<Service> Services { get; set; }
+
+
         }
         public class Product
         {
@@ -43,6 +46,12 @@ namespace GroupDocs.AssemblyExamples.ProjectEntities
             public int Discount { get; set; }
             public string ProductPrice { get; set; }
         }
+        public class Service
+        {
+            public string ServiceName { get; set; }
+            
+        }
+
         //ExEnd:ProjectEntities
     }
 }

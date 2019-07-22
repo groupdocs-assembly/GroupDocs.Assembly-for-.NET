@@ -89,9 +89,13 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
             Metered metered = new Metered();
             metered.SetMeteredKey("PublicKey", "PrivateKey");
 
-            // Ensure that the product is licensed.
-            License license = new License();
-            Debug.Assert(license.IsLicensed);
+            //Do something here....
+
+            // and get consumption quantity
+            decimal consumptionQuantitiy = GroupDocs.Assembly.Metered.GetConsumptionQuantity();
+
+            // get consumption credit (Supported since version 19.7)
+            decimal consumptionCredit = GroupDocs.Assembly.Metered.GetConsumptionCredit();
         }
         //ExEnd:metered licensing 
         #endregion
