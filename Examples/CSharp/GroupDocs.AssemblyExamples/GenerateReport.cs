@@ -6561,5 +6561,109 @@ namespace GroupDocs.AssemblyExamples
             }
             //ExEnd:SaveDocToHTMLWithResource_ExplicitFolder_19.5
         }
+        /// <summary>
+        /// Saving an assembled Markdown document to a Word Processing format using file extension.
+        /// Features is supported by version 19.8 or greater
+        /// </summary>
+        public static void SaveMdtoWord_UsingExtension()
+        {
+            //ExStart:SaveMdtoWord_UsingExtension_19.8
+
+            //Setting up source document template
+            const String strDocumentTemplate = "Markdown Templates/ReadMe.md";
+            //Setting up destination Markdown reports 
+            const String strDocumentReport = "Word Reports/ReadMe Out.docx";
+            //Setting up description variable
+            const string description = "GroupDocs.Assembly for .NET is a class library that enables you to generate documents in popular " +
+                                          "office and email file formats based upon template documents and data obtained from various sources " +
+                                          "including databases, XML, JSON, OData, objects of custom .NET types, external documents, and more.";
+
+            try
+            {
+                
+
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                assembler.AssembleDocument(
+                    CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                    CommonUtilities.SetDestinationDocument(strDocumentReport),
+                    new DataSourceInfo("GroupDocs.Assembly for .NET", "product"),
+                    new DataSourceInfo(description, "description"));
+                               
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SaveMdtoWord_UsingExtension_19.8
+        }
+        /// <summary>
+        /// Saving an assembled Word Processing document or email to Markdown using file extension.
+        /// Features is supported by version 19.8 or greater
+        /// </summary>
+        public static void SaveWordOrEmailtoMD_UsingExtension()
+        {
+            //ExStart:SaveWordtoMD_UsingExtension_19.8
+
+            //Setting up source document template (Email or Word Document)
+            const String strDocumentTemplate = "Word Templates/ReadMe.docx";
+
+            //Setting up destination Markdown reports 
+            const String strDocumentReport = "Markdown Reports/ReadMe Out.md";
+            //Setting up description variable
+            const string description = "GroupDocs.Assembly for .NET is a class library that enables you to generate documents in popular " +
+                                          "office and email file formats based upon template documents and data obtained from various sources " +
+                                          "including databases, XML, JSON, OData, objects of custom .NET types, external documents, and more.";
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                assembler.AssembleDocument(
+                    CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                    CommonUtilities.SetDestinationDocument(strDocumentReport),
+                    new DataSourceInfo("GroupDocs.Assembly for .NET", "product"),
+                    new DataSourceInfo(description, "description"));
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SaveWordtoMD_UsingExtension_19.8
+        }
+        /// <summary>
+        /// Saving an assembled Word Processing document or email to Markdown using explicit specifying.
+        /// Features is supported by version 19.8 or greater
+        /// </summary>
+        public static void SaveWordOrEmailtoMD_Explicit()
+        {
+            //ExStart:SaveWordtoMD_Explicit_19.8
+           
+            try
+            {
+                //Setting up source document template (Email or Word Document)
+                Stream sourceStream = File.OpenRead(CommonUtilities.GetSourceDocument("Word Templates/ReadMe.docx"));
+                //Setting up destination Markdown Reports 
+                FileStream targetStream = File.Create(CommonUtilities.SetDestinationDocument("Markdown Reports/ReadMe Out.md"));
+
+                //Setting up description variable
+                const string description = "GroupDocs.Assembly for .NET is a class library that enables you to generate documents in popular " +
+                                              "office and email file formats based upon template documents and data obtained from various sources " +
+                                              "including databases, XML, JSON, OData, objects of custom .NET types, external documents, and more.";
+
+                DataSourceInfo dataSourceInfo1 = new DataSourceInfo("GroupDocs.Assembly for .NET(Using Stream)", "product");
+                DataSourceInfo dataSourceInfo2 = new DataSourceInfo(description, "description");
+
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                assembler.AssembleDocument(sourceStream, targetStream, new LoadSaveOptions(FileFormat.Markdown), dataSourceInfo1,dataSourceInfo2);
+               
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SaveWordtoMD_UsingExtension_19.8
+        }
     }
 }

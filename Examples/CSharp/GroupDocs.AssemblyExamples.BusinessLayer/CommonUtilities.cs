@@ -149,7 +149,17 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
                 return Convert.ToBase64String(File.ReadAllBytes(path));
             }
         }
+       public enum DocumentFormat
+        {
+            Word = 0,
+            Email = 1,
+            Presentation = 2,
+            Markdown = 3,
+            Spreadsheet = 4
+            
+        }
     }
+   
 
     //ExEnd:CommonUtilities
 }

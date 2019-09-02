@@ -465,6 +465,17 @@ namespace GroupDocs.AssemblyExamples
             // GenerateReport.TableCellsMergingInEmails();
             #endregion
 
+            #region Using Markdown File Format
+            //Saving an assembled Markdown document to a Word Processing format using file extension.
+            //GenerateReport.SaveMdtoWord_UsingExtension();
+
+            //Saving an assembled Word Processing document or email to Markdown using file extension.
+            //GenerateReport.SaveWordOrEmailtoMD_UsingExtension();
+
+            //Saving an assembled Word Processing document or email to Markdown using file extension.
+            //GenerateReport.SaveWordOrEmailtoMD_Explicit();
+            #endregion
+
             //Update fields/formulas in word processing or spreadsheet documents
             //GenerateReport.UpdateWordDocFields("spreadsheet");
 
