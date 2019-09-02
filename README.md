@@ -11,6 +11,12 @@ GroupDocs.Assembly for .NET is a .NET API engine designed to generate documents 
   </a>
 </p>
 
+Directory | Description
+--------- | -----------
+[Examples](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Examples)  | Contains the package of all .NET examples and sample files that will help you learn how to use product features. 
+[Plugins](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Plugins)  | Analyze the progress of GroupDocs.Assembly and WinWard while generating the reports, compare code and template preparation. 
+[Showcases](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Showcases)  | Web Report Generator is an ASP.NET Web Forms Application that demonstrates the core functionalities provided by GroupDocs.Assembly for .NET.
+
 ## How to Run the Examples
 
 + You can either clone the repository using your favorite GitHub client or download the ZIP file from the above button.
@@ -24,12 +30,6 @@ GroupDocs.Assembly for .NET is a .NET API engine designed to generate documents 
 + Uncomment the examples you want to run from within the project.
 
 Please find more details for how to run the examples [here](https://docs.groupdocs.com/display/assemblynet/How+to+Run+Examples).
-
-Directory | Description
---------- | -----------
-[Examples](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Examples)  | Contains the package of all .NET examples and sample files that will help you learn how to use product features. 
-[Plugins](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Plugins)  | Analyze the progress of GroupDocs.Assembly and WinWard while generating the reports, compare code and template preparation. 
-[Showcases](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Showcases)  | Web Report Generator is an ASP.NET Web Forms Application that demonstrates the core functionalities provided by GroupDocs.Assembly for .NET.
 
 ## Resources
 
