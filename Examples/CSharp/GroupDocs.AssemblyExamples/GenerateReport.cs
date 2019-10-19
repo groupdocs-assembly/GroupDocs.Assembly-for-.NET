@@ -6665,5 +6665,102 @@ namespace GroupDocs.AssemblyExamples
             }
             //ExEnd:SaveWordtoMD_UsingExtension_19.8
         }
+        /// <summary>
+        /// Working with JSON data sources
+        /// Features is supported by version 19.10 or greater
+        /// </summary>
+        public static void SimpleJsonDS_Demo()
+        {
+            //ExStart:SimpleJsonDS_Demo_19.10
+
+            try
+            {
+                //Setting up source document template (Email or Word Document)
+                const String strDocumentTemplate = "Word Templates/SimpleDatasetDemo.docx";
+
+                //Setting up destination for reports 
+                const String strDocumentReport = "Word Reports/SimpleJsonDSDemo Out.docx";
+
+                //Setting up destination Markdown reports 
+                const String strDataSource = "JSON DataSource/ManagerData.json";
+
+
+                //initialize data source
+                JsonDataSource dataSource = new JsonDataSource(CommonUtilities.GetDataSourceDocument(strDataSource));
+
+            DocumentAssembler assembler = new DocumentAssembler();
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),CommonUtilities.SetDestinationDocument(strDocumentReport), new DataSourceInfo(dataSource, "managers"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SimpleJsonDS_Demo_19.10
+        }
+        /// <summary>
+        /// Working with XML data sources
+        /// Features is supported by version 19.10 or greater
+        /// </summary>
+        public static void SimpleXMLDS_Demo()
+        {
+            //ExStart:SimpleXMLDS_Demo_19.10
+
+            try
+            {
+                //Setting up source document template (Email or Word Document)
+                const String strDocumentTemplate = "Word Templates/SimpleDatasetDemo.docx";
+
+                //Setting up destination for reports 
+                const String strDocumentReport = "Word Reports/SimpleXMLDSDemo Out.docx";
+
+                //Setting up destination Markdown reports 
+                const String strDataSource = "XML DataSource/Managers.xml";
+
+
+                //initialize data source
+                XmlDataSource dataSource = new XmlDataSource(CommonUtilities.GetDataSourceDocument(strDataSource));
+
+                DocumentAssembler assembler = new DocumentAssembler();
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new DataSourceInfo(dataSource, "managers"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SimpleXMLDS_Demo_19.10
+        }
+        /// <summary>
+        /// Working with XML data sources
+        /// Features is supported by version 19.10 or greater
+        /// </summary>
+        public static void SimpleCsvDS_Demo()
+        {
+            //ExStart:SimpleCsvDS_Demo_19.10
+
+            try
+            {
+                //Setting up source document template (Email or Word Document)
+                const String strDocumentTemplate = "Text Templates/CsvDatasetDemo.txt";
+
+                //Setting up destination for reports 
+                const String strDocumentReport = "Word Reports/SimpleCsvDSDemo Out.docx";
+
+                //Setting up destination Markdown reports 
+                const String strDataSource = "Excel DataSource/Person.csv";
+
+                CsvDataLoadOptions options = new CsvDataLoadOptions(true);
+             
+                //initialize data source
+                CsvDataSource dataSource = new CsvDataSource(CommonUtilities.GetDataSourceDocument(strDataSource), options);
+
+                DocumentAssembler assembler = new DocumentAssembler();
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new DataSourceInfo(dataSource, "persons"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SimpleCsvDS_Demo_19.10
+        }
     }
 }

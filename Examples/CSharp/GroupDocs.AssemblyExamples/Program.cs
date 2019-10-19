@@ -521,6 +521,16 @@ namespace GroupDocs.AssemblyExamples
 
             // Saving of external resource files in a specified folder at relative path while saving output to HTML
             //GenerateReport.SaveDocToHTMLWithResource_ExplicitFolder();
+
+            //Working with JSON data sources
+            //GenerateReport.SimpleJsonDS_Demo();
+
+            //Working with XML data sources
+            //GenerateReport.SimpleXMLDS_Demo();
+
+            //Working with csv data sources
+            //GenerateReport.SimpleCsvDS_Demo();
+
             Console.WriteLine("Done...");
             Console.ReadKey();
         }
