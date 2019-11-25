@@ -6713,7 +6713,7 @@ namespace GroupDocs.AssemblyExamples
                 //Setting up destination for reports 
                 const String strDocumentReport = "Word Reports/SimpleXMLDSDemo Out.docx";
 
-                //Setting up destination Markdown reports 
+                //Setting up Data Source file
                 const String strDataSource = "XML DataSource/Managers.xml";
 
 
@@ -6730,7 +6730,7 @@ namespace GroupDocs.AssemblyExamples
             //ExEnd:SimpleXMLDS_Demo_19.10
         }
         /// <summary>
-        /// Working with XML data sources
+        /// Working with csv data sources
         /// Features is supported by version 19.10 or greater
         /// </summary>
         public static void SimpleCsvDS_Demo()
@@ -6748,13 +6748,17 @@ namespace GroupDocs.AssemblyExamples
                 //Setting up destination Markdown reports 
                 const String strDataSource = "Excel DataSource/Person.csv";
 
+                //Setting up CSV data load options
                 CsvDataLoadOptions options = new CsvDataLoadOptions(true);
              
                 //initialize data source
                 CsvDataSource dataSource = new CsvDataSource(CommonUtilities.GetDataSourceDocument(strDataSource), options);
 
+                //Assemble the document
                 DocumentAssembler assembler = new DocumentAssembler();
-                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new DataSourceInfo(dataSource, "persons"));
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), 
+                    CommonUtilities.SetDestinationDocument(strDocumentReport),
+                    new DataSourceInfo(dataSource, "persons"));
             }
             catch (Exception ex)
             {
