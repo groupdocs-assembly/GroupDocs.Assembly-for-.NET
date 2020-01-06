@@ -6565,14 +6565,14 @@ namespace GroupDocs.AssemblyExamples
         /// Saving an assembled Markdown document to a Word Processing format using file extension.
         /// Features is supported by version 19.8 or greater
         /// </summary>
-        public static void SaveMdtoWord_UsingExtension()
+        public static void SaveMdtoWord_UsingExtension(String DocumentName)
         {
             //ExStart:SaveMdtoWord_UsingExtension_19.8
 
             //Setting up source document template
-            const String strDocumentTemplate = "Markdown Templates/ReadMe.md";
+            String strDocumentTemplate = "Markdown Templates/"+ DocumentName;
             //Setting up destination Markdown reports 
-            const String strDocumentReport = "Word Reports/ReadMe Out.docx";
+            String strDocumentReport = "Word Reports/"+ DocumentName + " Out.docx";
             //Setting up description variable
             const string description = "GroupDocs.Assembly for .NET is a class library that enables you to generate documents in popular " +
                                           "office and email file formats based upon template documents and data obtained from various sources " +
