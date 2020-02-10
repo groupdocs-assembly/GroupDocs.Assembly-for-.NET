@@ -779,12 +779,63 @@ namespace GroupDocs.AssemblyExamples
 				Console.WriteLine(ex.Message);
 			}
 		}
-
-		/// <summary>
-		/// Sets colors of chart series point color dynamically based upon expressions
-		/// Feature is supported by version 18.6 or greater
+        /// <summary>
+		/// Insert Bookmarks Dynamically in Word Document
+		/// Feature is supported by version 20.1 or greater
 		/// </summary>
-		public static void DynamicChartSeriesPointColorEmail()
+		public static void DynamicBookmarkInsertionWord()
+        {
+            //setting up source 
+            const String strDocumentTemplate = "Word Templates/Dynamic bookmarks.docx";
+            //Setting up destination 
+            const String strDocumentReport = "Word Reports/Dynamic bookmarks.docx";
+            //Setting up Uri Expression
+            const String bookmark_expression = "gd_bookmark";
+            //Setting up Display Text Expression
+            const String displayTextExpression = "GroupDocs";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler();
+                //Call AssembleDocument to assemble document 
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new DataSourceInfo(bookmark_expression, "bookmark_expression"), new DataSourceInfo(displayTextExpression, "displayTextExpression"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+        /// <summary>
+		/// Insert Bookmarks Dynamically in Excel Document
+		/// Feature is supported by version 20.1 or greater
+		/// </summary>
+		public static void DynamicBookmarkInsertionExcel()
+        {
+            //setting up source 
+            const String strDocumentTemplate = "Spreadsheet Templates/Dynamic Cell Range.xlsx";
+            //Setting up destination 
+            const String strDocumentReport = "Spreadsheet Reports/Dynamic Cell Range.xlsx";
+            //Setting up Uri Expression
+            const String bookmark_expression = "gd_bookmark";
+            //Setting up Display Text Expression
+            const String displayTextExpression = "GroupDocs";
+            try
+            {
+                //Instantiate DocumentAssembler class
+                DocumentAssembler assembler = new DocumentAssembler();
+                //Call AssembleDocument to assemble document 
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new DataSourceInfo(bookmark_expression, "bookmark_expression"), new DataSourceInfo(displayTextExpression, "displayTextExpression"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+        /// <summary>
+        /// Sets colors of chart series point color dynamically based upon expressions
+        /// Feature is supported by version 18.6 or greater
+        /// </summary>
+        public static void DynamicChartSeriesPointColorEmail()
 		{
 			//setting up source 
 			const String strDocumentTemplate = "Email Templates/Dynamic Chart Point Series Color.msg";

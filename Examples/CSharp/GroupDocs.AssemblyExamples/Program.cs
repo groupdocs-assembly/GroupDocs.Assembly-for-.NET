@@ -535,6 +535,12 @@ namespace GroupDocs.AssemblyExamples
             //Working with csv data sources
             //GenerateReport.SimpleCsvDS_Demo();
 
+            //Insert Bookmarks Dynamically in Word Document
+            //GenerateReport.DynamicBookmarkInsertionWord();
+
+            //Insert Bookmarks Dynamically in Word Document
+            GenerateReport.DynamicBookmarkInsertionExcel();
+
             Console.WriteLine("Done...");
             Console.ReadKey();
         }
