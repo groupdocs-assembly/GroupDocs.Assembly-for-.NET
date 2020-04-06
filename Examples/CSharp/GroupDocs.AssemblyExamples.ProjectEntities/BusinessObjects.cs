@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
+
 namespace GroupDocs.AssemblyExamples.ProjectEntities
 {
     public class BusinessObjects
@@ -36,6 +37,8 @@ namespace GroupDocs.AssemblyExamples.ProjectEntities
             public int OrderNumber { get; set; }
             public DateTime ShippingDate { get; set; }
             public IEnumerable<Service> Services { get; set; }
+
+            
 
 
         }

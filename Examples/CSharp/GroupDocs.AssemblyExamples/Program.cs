@@ -539,7 +539,17 @@ namespace GroupDocs.AssemblyExamples
             //GenerateReport.DynamicBookmarkInsertionWord();
 
             //Insert Bookmarks Dynamically in Word Document
-            GenerateReport.DynamicBookmarkInsertionExcel();
+            // GenerateReport.DynamicBookmarkInsertionExcel();
+
+            //Insert Image Dynamically in Word Document
+            //GenerateReport.InsertImageDynamicallyInWord();
+
+            // Set checkbox value dynamically in Word document
+            //GenerateReport.SetCheckboxValueDynamicallyInWord(true);
+
+            // Insert Document Dynamically in Word Document
+            //GenerateReport.InsertDocumentDynamicallyInWord();
+
 
             Console.WriteLine("Done...");
             Console.ReadKey();

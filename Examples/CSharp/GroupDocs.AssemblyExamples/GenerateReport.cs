@@ -6817,5 +6817,92 @@ namespace GroupDocs.AssemblyExamples
             }
             //ExEnd:SimpleCsvDS_Demo_19.10
         }
+        /// <summary>
+        /// Insert Image Dynamically in Word Document
+        /// Features is supported by version 20.3 or greater
+        /// </summary>
+        public static void InsertImageDynamicallyInWord()
+        {
+            //ExStart:InsertImageDynamicallyInWord_20.3
+
+            try
+            {
+                //Setting up source document template (Email or Word Document)
+                const String strDocumentTemplate = "Word Templates/DynamicImageDemo.docx";
+
+                //Setting up destination for reports 
+                const String strDocumentReport = "Word Reports/DynamicImageDemo Out.docx";
+
+                //Assemble the document
+                DocumentAssembler assembler = new DocumentAssembler();
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), 
+                    CommonUtilities.SetDestinationDocument(strDocumentReport), new DataSourceInfo(CommonUtilities.GetImageFolder("no-photo.jpg"),"expression")); 
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+            //ExEnd:InsertImageDynamicallyInWord_20.3
+        }
+
+        /// <summary>
+        /// Insert Document Dynamically in Word Document
+        /// Features is supported by version 20.3 or greater
+        /// </summary>
+        public static void InsertDocumentDynamicallyInWord()
+        {
+            //ExStart:InsertImageDynamicallyInWord_20.3
+
+            try
+            {
+                //Setting up source document template (Email or Word Document)
+                const String strDocumentTemplate = "Word Templates/DynamicDocInsert.docx";
+
+                //Setting up destination for reports 
+                const String strDocumentReport = "Word Reports/DynamicDocInsert Out.docx";
+
+                //Assemble the document
+                DocumentAssembler assembler = new DocumentAssembler();
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                    CommonUtilities.SetDestinationDocument(strDocumentReport), new DataSourceInfo(CommonUtilities.GetOuterDocumentFolder("OuterDocument.docx"), "document_expression"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:InsertImageDynamicallyInWord_20.3
+        }
+
+
+        /// <summary>
+        /// Set checkbox value dynamically in Word document
+        /// Features is supported by version 20.3 or greater
+        /// </summary>
+        public static void SetCheckboxValueDynamicallyInWord(Boolean boolVal)
+        {
+            //ExStart:SetCheckboxValueDynamicallyInWord_20.3
+
+            try
+            {
+                //Setting up source document template (Email or Word Document)
+                const String strDocumentTemplate = "Word Templates/CheckBoxValueSetDemo.docx";
+
+                //Setting up destination for reports 
+                const String strDocumentReport = "Word Reports/CheckBoxValueSetDemo Out.docx";
+
+                //Assemble the document
+                DocumentAssembler assembler = new DocumentAssembler();
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                    CommonUtilities.SetDestinationDocument(strDocumentReport), new DataSourceInfo(boolVal, "conditional_expression"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SetCheckboxValueDynamicallyInWord_20.3
+        }
+
     }
+    
 }
+

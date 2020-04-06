@@ -19,6 +19,8 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         public const string dataFolderPath = "../../../../Data/";
         public const string destinationFolderPath = "../../../../Data/Destination/";
         public const string dataSourcesFolderPath = "../../../../Data/Data Sources/";
+        public const string imageFolderPath = "../../../../Data/Images/";
+        public const string docFolderPath = "../../../../Data/OuterDocuments/";
         //ExStart:LicenseFilePath
         public const string licensePath = "D:/GroupDocs.Total.NET.lic";
         //ExEnd:LicenseFilePath
@@ -41,6 +43,20 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         public static string GetSourceFolder(string sourceFolder)
         {
             return Path.Combine(Path.GetFullPath(dataFolderPath), sourceFolder);
+        }
+        /// <summary>
+        /// Takes Image folder name as argument. 
+        /// </summary>
+        public static string GetImageFolder(string imageFolder)
+        {
+            return Path.Combine(Path.GetFullPath(imageFolderPath), imageFolder);
+        }
+        /// <summary>
+        /// Takes Document folder name as argument. 
+        /// </summary>
+        public static string GetOuterDocumentFolder(string DocumentPath)
+        {
+            return Path.Combine(Path.GetFullPath(docFolderPath), DocumentPath);
         }
         /// <summary>
         /// Takes output file name as argument. 
