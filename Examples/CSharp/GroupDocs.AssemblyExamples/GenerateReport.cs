@@ -798,7 +798,8 @@ namespace GroupDocs.AssemblyExamples
                 //Instantiate DocumentAssembler class
                 DocumentAssembler assembler = new DocumentAssembler();
                 //Call AssembleDocument to assemble document 
-                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), new DataSourceInfo(bookmark_expression, "bookmark_expression"), new DataSourceInfo(displayTextExpression, "displayTextExpression"));
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), CommonUtilities.SetDestinationDocument(strDocumentReport), 
+                    new DataSourceInfo(bookmark_expression, "bookmark_expression"), new DataSourceInfo(displayTextExpression, "displayTextExpression"));
             }
             catch (Exception ex)
             {
@@ -6836,7 +6837,7 @@ namespace GroupDocs.AssemblyExamples
                 //Assemble the document
                 DocumentAssembler assembler = new DocumentAssembler();
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate), 
-                    CommonUtilities.SetDestinationDocument(strDocumentReport), new DataSourceInfo(CommonUtilities.GetImageFolder("no-photo.jpg"),"expression")); 
+                    CommonUtilities.SetDestinationDocument(strDocumentReport), new DataSourceInfo(CommonUtilities.GetImageFolder("no-photo.jpg"),"image_expression")); 
         }
         catch (Exception ex)
         {
@@ -6851,7 +6852,7 @@ namespace GroupDocs.AssemblyExamples
         /// </summary>
         public static void InsertDocumentDynamicallyInWord()
         {
-            //ExStart:InsertImageDynamicallyInWord_20.3
+            //ExStart:InsertDocumentDynamicallyInWord_20.3
 
             try
             {
@@ -6870,7 +6871,7 @@ namespace GroupDocs.AssemblyExamples
             {
                 Console.WriteLine(ex.Message);
             }
-            //ExEnd:InsertImageDynamicallyInWord_20.3
+            //ExEnd:InsertDocumentDynamicallyInWord_20.3
         }
 
 
