@@ -26,10 +26,10 @@ To build a report from a template, you can use one of the `ReportingEngine.Build
 *   XML
 *   OData
 *   JSON
-*   An object of a custom visible type: [Using Types](Template%2BSyntax%2B-%2BPart%2B1%2Bof%2B2.html#TemplateSyntax-Part1of2-UsingTypes){{< alert style="success" >}}For more details on supported Data Formats and Data Manipulation capabilities, please visit Data Sources.{{< /alert >}}
+*   An object of a custom visible type: [Using Types]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#using-types" >}}#TemplateSyntax-Part1of2-UsingTypes){{< alert style="success" >}}For more details on supported Data Formats and Data Manipulation capabilities, please visit Data Sources.{{< /alert >}}
 
  |
-| dataSourceName | The identifier of the specified data source object within the specified template. You can omit this identifier, if the template uses the [contextual object member access](Template%2BSyntax%2B-%2BPart%2B1%2Bof%2B2.html#TemplateSyntax-Part1of2-UsingContextualObjectMemberAccess) when dealing with the data source. |
+| dataSourceName | The identifier of the specified data source object within the specified template. You can omit this identifier, if the template uses the [contextual object member access]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#using-contextual-object-member-access" >}}#TemplateSyntax-Part1of2-UsingContextualObjectMemberAccess) when dealing with the data source. |
 
 Given a template to be populated with a data from a DataSet instance that is identified as "ds" within the template, you can use the following code to build the corresponding report.
 
@@ -63,7 +63,7 @@ assembler.AssembleDocument(strDocumentTemplate, strDocumentReport, new DataSourc
 
 ### Setting up Known External Types
 
-GroupDocs.Assembly Engine must be aware of custom external types that you reference in your template before the engine processes the template. You can set up external types known by the engine through the ReportingEngine.KnownTypes property. The property represents an unordered set (that is, a collection of unique items) of [Type](http://msdn.microsoft.com/en-us/library/system.type(v=vs.110).aspx) objects. Every type in the set must meet requirements declared at [Working with Types](Template%2BSyntax%2B-%2BPart%2B1%2Bof%2B2.html#TemplateSyntax-Part1of2-UsingTypes).
+GroupDocs.Assembly Engine must be aware of custom external types that you reference in your template before the engine processes the template. You can set up external types known by the engine through the ReportingEngine.KnownTypes property. The property represents an unordered set (that is, a collection of unique items) of [Type](http://msdn.microsoft.com/en-us/library/system.type(v=vs.110).aspx) objects. Every type in the set must meet requirements declared at [Working with Types]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#using-types" >}}#TemplateSyntax-Part1of2-UsingTypes).
 
 **Note:** Aliases of simple types like int, string, and others are known by the engine by default.
 

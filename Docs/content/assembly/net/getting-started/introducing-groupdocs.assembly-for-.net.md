@@ -64,7 +64,7 @@ GroupDocs.Assembly for .NET supports the following data sources:
 *   JSON
 *   Custom .NET Objects
 
-Furthermore, GroupDocs.Assembly for .NET support various Data Manipulation features. For more information, please visit [Data Sources](Features%2BOverview.html#FeaturesOverview-DataSources).
+Furthermore, GroupDocs.Assembly for .NET support various Data Manipulation features. For more information, please visit [Data Sources]({{< ref "assembly/net/getting-started/features-overview.md#data-sources" >}}#FeaturesOverview-DataSources).
 
 ## Technical Support Channels
 

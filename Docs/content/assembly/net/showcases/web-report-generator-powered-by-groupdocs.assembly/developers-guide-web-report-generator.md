@@ -64,4 +64,4 @@ Here is a sample report in Microsoft Word Document Format for 'Products' table
 *   [Business Case of a Shopping Store]({{< ref "assembly/net/developer-guide/working-with-a-business-case/business-case-of-a-shopping-store.md" >}})
 *   [The Business Layer]({{< ref "assembly/net/developer-guide/working-with-a-business-case/the-business-layer.md" >}})
 
-**Note:** This business case covers almost all the [Supported Data Formats](Features%2BOverview.html#FeaturesOverview-DataFormats)
+**Note:** This business case covers almost all the [Supported Data Formats]({{< ref "assembly/net/getting-started/features-overview.md#data-formats" >}}#FeaturesOverview-DataFormats)

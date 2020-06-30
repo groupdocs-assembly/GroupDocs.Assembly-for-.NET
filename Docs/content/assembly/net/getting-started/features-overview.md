@@ -70,15 +70,15 @@ A new overload [**DocumentAssembler.AssembleDocument**](https://apireference.gro
 
 #### Word Processing Document Formats
 
-Word Processing Document formats including Microsoft Word Document and OpenOffice document formats are supported. For more details, please visit [Support for Word Processing Document Formats](Supported%2BDocument%2BFormats.html#SupportedDocumentFormats-SupportforWordProcessingDocumentFormats).
+Word Processing Document formats including Microsoft Word Document and OpenOffice document formats are supported. For more details, please visit [Support for Word Processing Document Formats]({{< ref "assembly/net/getting-started/supported-document-formats.md#supportfor-word-processing-document-formats" >}}#SupportedDocumentFormats-SupportforWordProcessingDocumentFormats).
 
 #### Spreadsheet Document Formats
 
-Spreadsheet Document formats including Microsoft Excel Workbook and OpenOffice spreadsheet document formats are supported. For more details, please visit [Support for Spreadsheet Document Formats](Supported%2BDocument%2BFormats.html#SupportedDocumentFormats-SupportforSpreadsheetDocumentFormats).
+Spreadsheet Document formats including Microsoft Excel Workbook and OpenOffice spreadsheet document formats are supported. For more details, please visit [Support for Spreadsheet Document Formats]({{< ref "assembly/net/getting-started/supported-document-formats.md#supportfor-spreadsheet-document-formats" >}}#SupportedDocumentFormats-SupportforSpreadsheetDocumentFormats).
 
 #### Presentation Document Formats
 
-Presentation Document formats including Microsoft PowerPoint Presentation and OpenOffice presentation document formats are supported. For more details, please visit [Support for Presentation Document Formats](Supported%2BDocument%2BFormats.html#SupportedDocumentFormats-SupportforPresentationDocumentFormats).
+Presentation Document formats including Microsoft PowerPoint Presentation and OpenOffice presentation document formats are supported. For more details, please visit [Support for Presentation Document Formats]({{< ref "assembly/net/getting-started/supported-document-formats.md#supportfor-presentation-document-formats" >}}#SupportedDocumentFormats-SupportforPresentationDocumentFormats).
 
 #### Email Document Formats
 
@@ -86,7 +86,7 @@ Email Document formats is supported. For more details, please visit [Support for
 
 #### More Document Formats
 
-HTML and Plain Text document formats are supported by the GroupDocs.Assembly API. More Document formats including PDF, Epub and XPS document formats will be supported in the future releases. For more details, please visit [Support for more Document Formats](Supported%2BDocument%2BFormats.html#SupportedDocumentFormats-SupportformoreDocumentFormats).
+HTML and Plain Text document formats are supported by the GroupDocs.Assembly API. More Document formats including PDF, Epub and XPS document formats will be supported in the future releases. For more details, please visit [Support for more Document Formats]({{< ref "assembly/net/getting-started/supported-document-formats.md#supportformore-document-formats" >}}#SupportedDocumentFormats-SupportformoreDocumentFormats).
 
 #### Dynamic Merging of Table Cells
 
