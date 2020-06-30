@@ -1,6 +1,6 @@
 ---
 id: development-environment-installation-and-configuration
-url: assembly/net/installation
+url: assembly/net/development-environment-installation-and-configuration
 title: Development Environment Installation and Configuration
 weight: 6
 description: ""
@@ -9,8 +9,6 @@ productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
 # Development Environment, Installation and Configuration
-
-<table class="sectionMacro" border="0" cellpadding="5" cellspacing="0" width="100%"><tbody><tr><td valign="top" width="50%"><div class="panel" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px;"><div class="panelHeader" style="border-bottom-width: 1px; background-color: rgb(176, 196, 222);"><b>Contents Summary</b></div><div class="panelContent"><style type="text/css">div.rbtoc1593026663962 { padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; }div.rbtoc1593026663962 ul { list-style-type: none; list-style-image: none; margin-left: 0px; }div.rbtoc1593026663962 li { margin-left: 0px; padding-left: 0px; }</style><div class="toc rbtoc1593026663962"><ul class="toc-indentation"><li><span class="TOCOutline">1</span> <a href="#DevelopmentEnvironment,InstallationandConfiguration-DevelopmentEnvironment">Development Environment</a></li><li><span class="TOCOutline">2</span> <a href="#DevelopmentEnvironment,InstallationandConfiguration-InstallingGroupDocs.Assemblyfor.NETthroughNuGet">Installing GroupDocs.Assembly for .NET through NuGet</a><ul class="toc-indentation"><li><span class="TOCOutline">2.1</span> <a href="#DevelopmentEnvironment,InstallationandConfiguration-UsingPackageManagerGUI">Using Package Manager GUI</a></li><li><span class="TOCOutline">2.2</span> <a href="#DevelopmentEnvironment,InstallationandConfiguration-UsingPackageManagerConsole">Using Package Manager Console</a></li><li><span class="TOCOutline">2.3</span> <a href="#DevelopmentEnvironment,InstallationandConfiguration-VideoDemo">Video Demo</a></li></ul></li></ul></div></div></div></td><td valign="top">&nbsp;</td></tr></tbody></table>
 
 ## Development Environment
 

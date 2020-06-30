@@ -31,7 +31,7 @@ This release of GroupDocs.Assembly brings a new powerful feature: Abilities to c
 
 ## Ability to change the target file format of an assembled document 
 
-Starting from the 18.9 version, GroupDocs.Assembly provides abilities to change target file format of an assembled document using file extension or explicit specification. Supported output file formats depending on input file formats can be found at [this page](https://docs.groupdocs.com/display/assemblynet/Introducing+GroupDocs.Assembly+for+.NET#IntroducingGroupDocs.Assemblyfor.NET-SupportedOutputFileFormatsDependingonInputFileFormats).
+Starting from the 18.9 version, GroupDocs.Assembly provides abilities to change target file format of an assembled document using file extension or explicit specification. Supported output file formats depending on input file formats can be found at [this page]({{< ref "assembly/net/getting-started/introducing-groupdocs.assembly-for-.net.md#supported-output-file-formats-depending-on-input-file-formats" >}}).
 
 ### Changing target file format using the file extension
 
