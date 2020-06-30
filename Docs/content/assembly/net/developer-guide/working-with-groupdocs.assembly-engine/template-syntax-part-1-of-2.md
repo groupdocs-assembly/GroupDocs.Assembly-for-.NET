@@ -66,9 +66,9 @@ The following table describes lexical tokens that you can use in template expres
 You can use the following identifiers that are not preceded by a member access operator in template expressions:
 
 *   The name of a passed data source object
-*   The name of an iteration variable within its scope (see [Outputting Sequential Data]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#outputting-sequential-data" >}}#TemplateSyntax-Part2of2-OutputtingSequentialData) for more information)
+*   The name of an iteration variable within its scope (see [Outputting Sequential Data]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#outputting-sequential-data" >}}) for more information)
 *   The name of a lambda function parameter within the scope of the lambda function
-*   A fully or partially qualified name of a type that is known by the engine (see [Setting up Known External Types]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/groupdocs.assembly-engine-apis.md#settingup-known-external-types" >}}#GroupDocs.AssemblyEngineAPIs-SettingupKnownExternalTypes) for more information)
+*   A fully or partially qualified name of a type that is known by the engine (see [Setting up Known External Types]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/groupdocs.assembly-engine-apis.md#settingup-known-external-types" >}}) for more information)
 *   The name of a member of an object that is determined as follows:
     *   Inside a data band body, the object is resolved to the innermost iteration variable.
     *   Outside a data band body, the object is resolved to a passed data source.
@@ -87,7 +87,7 @@ However, you can use the identifier of a visible type in template expressions on
 
 **Note:** Whereas using of generic types' identifiers is forbidden in template expressions, you can use identifiers of nullable types in the shorthand `"T?"` form.
 
-Also, the engine enables you to use anonymous types in template expressions. Such types are useful while composing expressions with grouping by multiple keys. See [Enumeration Extension Methods]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#enumeration-extension-methods" >}}#TemplateSyntax-Part2of2-EnumerationExtensionMethods) for the examples.
+Also, the engine enables you to use anonymous types in template expressions. Such types are useful while composing expressions with grouping by multiple keys. See [Enumeration Extension Methods]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#enumeration-extension-methods" >}}) for the examples.
 
 #### Type Members
 
@@ -115,8 +115,8 @@ The engine supports the following features when dealing with functional members:
 
 GroupDocs.Assembly Engine enables you to use the following built-in extension methods in template expressions:
 
-*   Extension methods mimicking the ones for `IEnumerable<T>` (see [Enumeration Extension Methods]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#enumeration-extension-methods" >}}#TemplateSyntax-Part2of2-EnumerationExtensionMethods) for more information)
-*   Extension methods for iteration variables (see [Extension Methods of Iteration Variables]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#extension-methodsof-iteration-variables" >}}#TemplateSyntax-Part2of2-ExtensionMethodsofIterationVariables) for more information)
+*   Extension methods mimicking the ones for `IEnumerable<T>` (see [Enumeration Extension Methods]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#enumeration-extension-methods" >}}) for more information)
+*   Extension methods for iteration variables (see [Extension Methods of Iteration Variables]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#extension-methodsof-iteration-variables" >}}) for more information)
 
 **Note:** Extension methods, other than the built-in ones, can be used only in the form of plain static methods in template expressions.
 
@@ -159,7 +159,7 @@ Also, the engine enables you to use lifted operators in template expressions.
 
 ### Using Lambda Functions
 
-GroupDocs.Assembly Engine enables you to use lambda functions only as arguments of built-in enumeration extension methods in template expressions. See [Enumeration Extension Methods]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#enumeration-extension-methods" >}}#TemplateSyntax-Part2of2-EnumerationExtensionMethods) for more information.
+GroupDocs.Assembly Engine enables you to use lambda functions only as arguments of built-in enumeration extension methods in template expressions. See [Enumeration Extension Methods]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#enumeration-extension-methods" >}}) for more information.
 
 **Note:** Lambda functions declared within template expressions are not interchangeable with delegates. Thus, you can not pass delegates as arguments to built-in enumeration extension methods.
 
@@ -182,9 +182,9 @@ ds.Persons
 
 #### DataTable and DataView Objects
 
-GroupDocs.Assembly Engine enables you to treat `DataTable` and `DataView` objects in template expressions as enumerations of their rows. That is, you can use template expressions evaluated to such objects in `foreach` tags (see [Outputting Sequential Data]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#outputting-sequential-data" >}}#TemplateSyntax-Part2of2-OutputtingSequentialData) for more information).
+GroupDocs.Assembly Engine enables you to treat `DataTable` and `DataView` objects in template expressions as enumerations of their rows. That is, you can use template expressions evaluated to such objects in `foreach` tags (see [Outputting Sequential Data]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#outputting-sequential-data" >}}) for more information).
 
-Also, you can normally apply enumeration extension methods (see [Enumeration Extension Methods]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#enumeration-extension-methods" >}}#TemplateSyntax-Part2of2-EnumerationExtensionMethods) for more information) to `DataTable` and `DataView` objects in template expressions. For example, given that persons is a `DataTable` or `DataView` instance, you can count its rows using the following syntax.
+Also, you can normally apply enumeration extension methods (see [Enumeration Extension Methods]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#enumeration-extension-methods" >}}) for more information) to `DataTable` and `DataView` objects in template expressions. For example, given that persons is a `DataTable` or `DataView` instance, you can count its rows using the following syntax.
 
 ```csharp
 persons.Count()
@@ -254,7 +254,7 @@ However, you can not use IDataReader implementors in template expressions in con
 
 Document Assembler enables you to access field values of a particular `IDataRecord` implementor by field names using the "." operator in template expressions. To use this feature, one of the following conditions must be met:
 
-*   The `IDataRecord` implementor represents an iteration variable upon enumerating an `IDataReader` implementor (see [Outputting Sequential Data]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#outputting-sequential-data" >}}#TemplateSyntax-Part2of2-OutputtingSequentialData) for more information).
+*   The `IDataRecord` implementor represents an iteration variable upon enumerating an `IDataReader` implementor (see [Outputting Sequential Data]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#outputting-sequential-data" >}}) for more information).
 *   The `IDataRecord` implementor does not implement the `IDataReader` interface.
 
 The following example shows, how to use this feature. Given that r is an `IDataRecord` implementor that has a field named "Name", you can access the field's value using the following syntax.

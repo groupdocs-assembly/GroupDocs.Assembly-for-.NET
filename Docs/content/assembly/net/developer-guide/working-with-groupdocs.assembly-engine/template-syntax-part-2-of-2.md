@@ -62,10 +62,10 @@ An opening `foreach` tag defines a `foreach` statement enclosed by brackets. The
 
 | Element | Optional? | Remarks |
 | --- | --- | --- |
-| **Iteration Variable Type** | Yes | You can specify the type of an iteration variable explicitly. This type must be known by the engine (see [Setting up Known External Types]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/groupdocs.assembly-engine-apis.md#settingup-known-external-types" >}}#GroupDocs.AssemblyEngineAPIs-SettingupKnownExternalTypes) for more information).
+| **Iteration Variable Type** | Yes | You can specify the type of an iteration variable explicitly. This type must be known by the engine (see [Setting up Known External Types]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/groupdocs.assembly-engine-apis.md#settingup-known-external-types" >}}) for more information).
 If you do not specify the type explicitly, it is determined implicitly by the engine depending on the type of the corresponding sequence. |
 | **Iteration Variable Name** | Yes | You can specify the name of an iteration variable to use it while accessing the variable's members. The name must be unique within the scope of the corresponding `foreach` tag.  
-If you do not specify the name, you can access the variable's members using the contextual object member access syntax (see [Using Contextual Object]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#using-contextual-object-member-access" >}}#TemplateSyntax-Part1of2-UsingContextualObjectMemberAccess) Member Access" for more information). |
+If you do not specify the name, you can access the variable's members using the contextual object member access syntax (see [Using Contextual Object]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#using-contextual-object-member-access" >}}) Member Access" for more information). |
 | **"in" Keyword** | No | 
  |
 | **Sequence Expression** | No | A sequence expression must return an [IEnumerable](http://msdn.microsoft.com/en-us/library/system.collections.ienumerable(v=vs.110).aspx) implementor. |
@@ -653,7 +653,7 @@ GroupDocs.Assembly Engine enables you to perform common manipulations on a seque
 
 Below table describes the built-in extension methods. The following notation conventions are used within the table:
 
-*   `Selector` stands for a lambda function returning a value and taking an enumeration item as its single argument. See [Using Lambda Functions]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#using-lambda-functions" >}}#TemplateSyntax-Part1of2-UsingLambdaFunctions) for more information.
+*   `Selector` stands for a lambda function returning a value and taking an enumeration item as its single argument. See [Using Lambda Functions]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#using-lambda-functions" >}}) for more information.
 *   `ComparableSelector` stands for `Selector` returning [IComparable](http://msdn.microsoft.com/en-US/library/system.icomparable(v=vs.110).aspx).
 *   `Predicate` stands for `Selector` returning a Boolean value.
 
