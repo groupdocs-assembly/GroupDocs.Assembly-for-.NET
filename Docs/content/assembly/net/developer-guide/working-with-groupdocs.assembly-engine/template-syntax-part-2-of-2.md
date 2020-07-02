@@ -158,7 +158,7 @@ Given that orders is an enumeration of Order instances, you could try to use the
 
 But then, a result document would look as follows.
 
-```
+```csharp
 Jane Doe (445 Mount Eden Road Mount Eden Auckland 1024)
 
    1. Regular Cleaning
@@ -183,7 +183,7 @@ That is, there would be a single numbered list across all orders, which is not a
 
 Then, a result document looks as follows.
 
-```
+```csharp
 Jane Doe (445 Mount Eden Road Mount Eden Auckland 1024)
 
    1. Regular Cleaning
