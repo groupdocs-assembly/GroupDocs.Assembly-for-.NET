@@ -62,12 +62,9 @@ An opening `foreach` tag defines a `foreach` statement enclosed by brackets. The
 
 | Element | Optional? | Remarks |
 | --- | --- | --- |
-| **Iteration Variable Type** | Yes | You can specify the type of an iteration variable explicitly. This type must be known by the engine (see [Setting up Known External Types]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/groupdocs.assembly-engine-apis.md#settingup-known-external-types" >}}) for more information).
-If you do not specify the type explicitly, it is determined implicitly by the engine depending on the type of the corresponding sequence. |
-| **Iteration Variable Name** | Yes | You can specify the name of an iteration variable to use it while accessing the variable's members. The name must be unique within the scope of the corresponding `foreach` tag.  
-If you do not specify the name, you can access the variable's members using the contextual object member access syntax (see [Using Contextual Object]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#using-contextual-object-member-access" >}}) Member Access" for more information). |
-| **"in" Keyword** | No | 
- |
+| **Iteration Variable Type** | Yes | You can specify the type of an iteration variable explicitly. This type must be known by the engine (see [Setting up Known External Types]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/groupdocs.assembly-engine-apis.md#settingup-known-external-types" >}}) for more information). If you do not specify the type explicitly, it is determined implicitly by the engine depending on the type of the corresponding sequence. |
+| **Iteration Variable Name** | Yes | You can specify the name of an iteration variable to use it while accessing the variable's members. The name must be unique within the scope of the corresponding `foreach` tag. If you do not specify the name, you can access the variable's members using the contextual object member access syntax (see [Using Contextual Object]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#using-contextual-object-member-access" >}}) Member Access" for more information). |
+| **"in" Keyword** | No |  |
 | **Sequence Expression** | No | A sequence expression must return an [IEnumerable](http://msdn.microsoft.com/en-us/library/system.collections.ienumerable(v=vs.110).aspx) implementor. |
 
 The complete syntax of a `foreach` tag (including optional elements) is as follows.
@@ -80,8 +77,6 @@ data_band_body
 ```
 
 ### Common Data Bands
-
-{{< alert style="info" >}}See Bulleted List template using Common Data Bands in it.{{< /alert >}}
 
 A common data band is a data band which body starts and ends within paragraphs that belong to a single story or table cell.
 
@@ -104,122 +99,11 @@ When the body of a common data band starts and ends within different paragraphs,
 
 | Template | Report |
 | --- | --- |
-| 
-```csharp
-prefix <<foreach [item in items]>><<[item]>>¶
-<</foreach>>suffix
-```
-
-
-
- | 
-
-```csharp
-prefix item1¶
-item2¶
-item3¶
-suffix
-```
-
-
-
- |
-| 
-
-```csharp
-prefix<<foreach [item in items]>>¶
-<<[item]>><</foreach>> suffix
-```
-
-
-
- | 
-
-```csharp
-prefix¶
-item1¶
-item2¶
-item3 suffix
-```
-
-
-
- |
-| 
-
-```csharp
-prefix¶
-<<foreach [item in items]>><<[item]>>¶
-<</foreach>>suffix
-```
-
-
-
- | 
-
-```csharp
-prefix¶
-item1¶
-item2¶
-item3¶
-suffix
-```
-
-
-
- |
-| 
-
-```csharp
-prefix<<foreach [item in items]>>¶
-<<[item]>><</foreach>>¶
-suffix
-```
-
-
-
- | 
-
-```csharp
-prefix¶
-item1¶
-item2¶
-item3¶
-suffix
-```
-
-
-
- |
-| 
-
-```csharp
-prefix¶
-<<foreach [item in items]>>¶
-<<[item]>>¶
-<</foreach>>¶
-suffix
-```
-
-
-
- | 
-
-```csharp
-prefix¶
-¶
-item1¶
-¶
-item2¶
-¶
-item3¶
-¶
-suffix
-```
-
-
-
- |
+| `prefix <<foreach [item in items]>><<[item]>>¶`<br/>`<</foreach>>suffix` | `prefix item1¶`<br/>`item2¶`<br/>`item3¶`<br/>`suffix` |
+| `prefix<<foreach [item in items]>>¶`<br/>`<<[item]>><</foreach>> suffix` | `prefix¶`<br/>`item1¶`<br/>`item2¶`<br/>`item3 suffix` |
+| `prefix¶`<br/>`<<foreach [item in items]>><<[item]>>¶`<br/>`<</foreach>>suffix` | `prefix¶`<br/>`item1¶`<br/>`item2¶`<br/>`item3¶`<br/>`suffix` |
+| `prefix<<foreach [item in items]>>¶`<br/>`<<[item]>><</foreach>>¶`<br/>`suffix` | `prefix¶`<br/>`item1¶`<br/>`item2¶`<br/>`item3¶`<br/>`suffix` |
+| `prefix¶`<br/>`<<foreach [item in items]>>¶`<br/>`<<[item]>>¶`<br/>`<</foreach>>¶`<br/>`suffix` | `prefix¶`<br/>`¶`<br/>`item1¶`<br/>`¶`<br/>`item2¶`<br/>`¶`<br/>`item3¶`<br/>`¶`<br/>`suffix` |
 
 While building a report, duplicated paragraph breaks derive common attributes from their template prototypes. In particular, this fact enables you to build numbered or bulleted lists in reports dynamically. For example, given the above declaration of items, you can get a report with their numbered list using the following template.
 
