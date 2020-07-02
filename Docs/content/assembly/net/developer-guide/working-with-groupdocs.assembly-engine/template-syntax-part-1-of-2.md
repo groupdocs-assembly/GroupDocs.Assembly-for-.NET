@@ -55,11 +55,7 @@ The following table describes lexical tokens that you can use in template expres
 | Token | Restrictions |
 | --- | --- |
 | **Keyword** | Only the following tokens are reserved as keywords: `true`, `false`, `null`, `new`, and `in` |
-| **Identifier** | 
-*   The feature of keyword escaping through the "@" character is not supported.
-*   Unicode character escapes are not permitted in identifiers.
-
- |
+| **Identifier** | <ul><li>The feature of keyword escaping through the "@" character is not supported.</li><li>Unicode character escapes are not permitted in identifiers.</li></ul> |
 | **Literal** | None |
 | **Operator** | See [Using Operators]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md" >}}) |
 
