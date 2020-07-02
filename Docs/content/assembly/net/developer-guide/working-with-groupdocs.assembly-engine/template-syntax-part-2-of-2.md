@@ -158,7 +158,7 @@ Given that orders is an enumeration of Order instances, you could try to use the
 
 But then, a result document would look as follows.
 
-Jane Doe (445 Mount Eden Road Mount Eden Auckland 1024)<br/>  1. Regular Cleaning<br/>  2. Oven Cleaning<br/>John Smith (43 Vogel Street Roslyn Palmerston North 4414)<br/>  3. Regular Cleaning<br/>  4. Oven Cleaning<br/>  5. Carpet Cleaning
+Jane Doe (445 Mount Eden Road Mount Eden Auckland 1024)<br/><br/>&nbsp;&nbsp;1. Regular Cleaning<br/>&nbsp;&nbsp;2. Oven Cleaning<br/><br/>John Smith (43 Vogel Street Roslyn Palmerston North 4414)<br/><br/>&nbsp;&nbsp;3. Regular Cleaning<br/>&nbsp;&nbsp;4. Oven Cleaning<br/>&nbsp;&nbsp;5. Carpet Cleaning
 
 That is, there would be a single numbered list across all orders, which is not applicable for this scenario. However, you can make list numbering to restart for every order by putting a restartNum tag into your template before a corresponding foreach tag as follows.
 
