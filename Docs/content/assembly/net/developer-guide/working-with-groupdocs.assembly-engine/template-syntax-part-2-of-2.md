@@ -32,7 +32,7 @@ If `html` switch is present, the expression result is considered to be a HTML bl
 <<["<b>Bold</b> and <i>italic</i> text"] -html>>
 ```
 
-To format a numeric or date-time expression result, you can specify a format string as an element of the corresponding expression tag. Such format strings are the same as the ones that you pass to `[IFormattable.ToString](http://msdn.microsoft.com/en-us/library/system.iformattable.tostring(v=vs.110).aspx)` method implementors. That is, for example, given that `d` is a `DateTime` value, you can use the following template to format the value using the "yyyy.MM.dd" pattern.
+To format a numeric or date-time expression result, you can specify a format string as an element of the corresponding expression tag. Such format strings are the same as the ones that you pass to [`IFormattable.ToString`](http://msdn.microsoft.com/en-us/library/system.iformattable.tostring(v=vs.110).aspx) method implementors. That is, for example, given that `d` is a `DateTime` value, you can use the following template to format the value using the "yyyy.MM.dd" pattern.
 
 ```csharp
 <<[d]:"yyyy.MM.dd">>

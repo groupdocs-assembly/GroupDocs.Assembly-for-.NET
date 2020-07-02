@@ -16,7 +16,7 @@ A typical template for GroupDocs.Assembly Engine is composed of common document 
 
 A tag body must meet the following requirements:
 
-*   A tag body must be surrounded by "<<" and ">>" character sequences.
+*   A tag body must be surrounded by "`<<`" and "`>>`" character sequences.
 *   A tag body must contain only text nodes.
 *   A tag body must not be located inside markup document nodes.
 
@@ -24,7 +24,7 @@ A tag body typically consists of the following elements:
 
 *   A tag name
 *   An expression surrounded by brackets
-*   A set of switches available for the tag, each of which is preceded by the "-" character
+*   A set of switches available for the tag, each of which is preceded by the "`-`" character
 
 ```csharp
 <<tag_name [expression] -switch1 -switch2 ...>>
@@ -38,7 +38,7 @@ An optional comment can be written to provide a human-readable explanation.
 
 {{< alert style="warning" >}}The optional comment feature is supported by version 19.1 or greater{{< /alert >}}
 
-Particular tags can have additional elements. Some tags require closing counterparts. A closing tag has the "/" character that precedes its name. This tag's name must match to the name of the corresponding opening tag.
+Particular tags can have additional elements. Some tags require closing counterparts. A closing tag has the "`/`" character that precedes its name. This tag's name must match to the name of the corresponding opening tag.
 
 ```csharp
 <</tag_name>>
@@ -165,7 +165,7 @@ You can use both explicit and implicit lambda function signatures in template ex
 
 #### DataSet Objects
 
-{{< alert style="info" >}}This link will explain you how we utilized the DataSet Objects in Business Layer.{{< /alert >}}
+{{< alert style="info" >}}[This link](https://docs.groupdocs.com/assembly/net/the-business-layer/#dataset-source) will explain you how we utilized the DataSet Objects in Business Layer.{{< /alert >}}
 
 GroupDocs.Assembly Engine enables you to access `DataTable` objects contained within a particular `DataSet` instance by table names using the "." operator in template expressions. That is, for example, given that `ds` is a `DataSet` instance that contains a `DataTable` named "Persons", you can access the table using the following syntax.
 
@@ -189,50 +189,17 @@ persons.Count()
 
 #### DataRow and DataRowView Objects
 
-GroupDocs.Assembly Engine enables you to access a data associated with a particular DataRow or DataRowView instance in template expressions using the "." operator. The following table describes, which identifiers you can use to access different kinds of the data.
+GroupDocs.Assembly Engine enables you to access a data associated with a particular `DataRow` or `DataRowView` instance in template expressions using the "." operator. The following table describes, which identifiers you can use to access different kinds of the data.
 
 | Data Kind | Identifier | Examples of Template Expressions |
 | --- | --- | --- |
-| **Field Value** | Field name | Given that r is a row that has a field named "Name", you can access the field’s value using the following syntax.
-```csharp
-r.Name
-```
-
-
-
-
-
- |
-| **Single Parent or Child Row** | Parent (child) table name | Given that r is a row of a *DataTable* that has a parent (child) *DataTable* named "City", you can access the single parent (child) row of r using the following syntax.
-
-```csharp
-r.City
-```
-
-Given that the "City" *DataTable* has a field named "Name", you can access the field’s value for the single parent (child) row using the following syntax.
-
-```csharp
-r.City.Name
-```
-
- |
-| **Enumeration of Child or Parent Rows** | Child (parent) table name | Given that r is a row of a *DataTable* that has a child (parent) *DataTable* named "Persons", you can access the enumeration of the child (parent) rows of r using the following syntax.
-
-```csharp
-r.Persons
-```
-
-Given that the "Persons" *DataTable* has a field named "Age", you can count the child (parent) rows that correspond to persons over thirty years old using the following syntax.
-
-```csharp
-r.Persons.Count(p => p.Age > 30)
-```
-
- |
+| **Field Value** | Field name | Given that `r` is a row that has a field named "Name", you can access the field’s value using the following syntax: `r.Name`. |
+| **Single Parent or Child Row** | Parent (child) table name | Given that `r` is a row of a `DataTable` that has a parent (child) `DataTable` named "City", you can access the single parent (child) row of `r` using the following syntax: `r.City`. Given that the "City" `DataTable` has a field named "Name", you can access the field’s value for the single parent (child) row using the following syntax:`r.City.Name`. |
+| **Enumeration of Child or Parent Rows** | Child (parent) table name | Given that `r` is a row of a `DataTable` that has a child (parent) `DataTable` named "Persons", you can access the enumeration of the child (parent) rows of `r` using the following syntax: `r.Persons`. Given that the "Persons" `DataTable` has a field named "Age", you can count the child (parent) rows that correspond to persons over thirty years old using the following syntax: `r.Persons.Count(p => p.Age > 30)`. |
 
 {{< alert style="warning" >}} Field and table names are case-insensitive.{{< /alert >}}
 
-To determine parent-child relationships for a particular *DataTable* instance, the engine uses *[DataRelation](http://msdn.microsoft.com/en-us/library/system.data.datarelation(v=vs.110).aspx)* objects contained within the corresponding *DataSet* instance. Thus, you can manage these relationships in a common way.
+To determine parent-child relationships for a particular `DataTable` instance, the engine uses *[DataRelation](http://msdn.microsoft.com/en-us/library/system.data.datarelation(v=vs.110).aspx)* objects contained within the corresponding `DataSet` instance. Thus, you can manage these relationships in a common way.
 
 {{< alert style="warning" >}}Instead of using of table names to access data of child or parent rows, you can also use relation names, which is useful when you deal with multiple relations to the same table.{{< /alert >}}
 
@@ -240,20 +207,18 @@ To determine parent-child relationships for a particular *DataTable* instance,
 
 #### IDataReader Implementors
 
-GroupDocs.Assembly Engine enables you to treat IDataReader implementors as enumerations of IDataRecord implementors in template expressions. That is, you can use IDataReader implementors in template expressions in the same way as DataTable objects. See [Working with DataTable and DataView Objects]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md" >}}) for more information.
+GroupDocs.Assembly Engine enables you to treat `IDataReader` implementors as enumerations of `IDataRecord` implementors in template expressions. That is, you can use `IDataReader` implementors in template expressions in the same way as `DataTable` objects. See [Working with DataTable and DataView Objects]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md" >}}) for more information.
 
 However, you can not use IDataReader implementors in template expressions in conjunction with enumeration operations that require a caching of enumeration items. The examples of such operations are grouping and sorting. To work around this restriction, use DataTable objects instead.
 
 #### IDataRecord Implementors
-
-{{< alert style="info" >}}See In-Table Master-Detail template using IDataRecord Implementors.{{< /alert >}}
 
 Document Assembler enables you to access field values of a particular `IDataRecord` implementor by field names using the "." operator in template expressions. To use this feature, one of the following conditions must be met:
 
 *   The `IDataRecord` implementor represents an iteration variable upon enumerating an `IDataReader` implementor (see [Outputting Sequential Data]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#outputting-sequential-data" >}}) for more information).
 *   The `IDataRecord` implementor does not implement the `IDataReader` interface.
 
-The following example shows, how to use this feature. Given that r is an `IDataRecord` implementor that has a field named "Name", you can access the field's value using the following syntax.
+The following example shows, how to use this feature. Given that `r` is an `IDataRecord` implementor that has a field named "Name", you can access the field's value using the following syntax.
 
 ```csharp
 r.Name
@@ -262,8 +227,6 @@ r.Name
 **Note** Field names are case-insensitive.
 
 ### Using Images
-
-{{< alert style="info" >}}See Common List with Image template using images in it.{{< /alert >}}
 
 You can insert images to your reports dynamically using image tags. To declare a dynamically inserted image within your template, please follow these steps:
 
@@ -279,10 +242,10 @@ You can insert images to your reports dynamically using image tags. To declare a
 
 The expression declared within an image tag is used by the engine to build an image to be inserted. The expression must return a value of one of the following types:
 
-*   *   A byte array containing an image data
-    *   A [Stream](http://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx) instance able to read an image data
-    *   An [Image](http://msdn.microsoft.com/en-us/library/system.drawing.image(v=vs.110).aspx) object
-    *   A string containing an image URI, path, or Base64-encoded image data
+*   A byte array containing an image data
+*   A [Stream](http://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx) instance able to read an image data
+*   An [Image](http://msdn.microsoft.com/en-us/library/system.drawing.image(v=vs.110).aspx) object
+*   A string containing an image URI, path, or Base64-encoded image data
 
 While building a report, the following procedure is applied to an image tag:
 
@@ -329,8 +292,6 @@ By default, the assembler stretches an image filling a textbox to the size of th
 
 ### Inserting Documents
 
-{{< alert style="info" >}}See Inserting Documents Dynamically for more details.{{< /alert >}}
-
 You can insert contents of outer documents to your reports dynamically using doc tags. A doc tag denotes a placeholder within a template for a document to be inserted during runtime.
 
 Syntax of a doc tag is defined as follows.
@@ -366,8 +327,6 @@ When a build switch is used, the assembler treats a document being inserted as a
 *   Known external types 
 
 ### Setting Checkbox Values Dynamically
-
-{{< alert style="info" >}}See Set Checkbox Values Dynamically for more details.{{< /alert >}}
 
 You can set checkbox values to either checked or unchecked in your reports dynamically by taking the following steps:
 
@@ -410,8 +369,6 @@ If the insertion of the link to cell A1 is required:
 
 ### Using Contextual Object Member Access
 
-{{< alert style="info" >}}See In-Table List with Filtering, Grouping, and Ordering template Contextual Object Member Access in it.{{< /alert >}}
-
 You can make your templates less cumbersome using the contextual object member access feature. This feature enables you to access members of some objects without specifying the objects' identifiers in template expressions. An object to which the feature can be applied is determined depending on a context as follows:
 
 *   Inside a data band body, the object is resolved to the innermost iteration variable.
@@ -423,91 +380,15 @@ Consider the following example. Given that `ds` is a `DataSet` instance containi
 
 | No. | Name | Age |
 | --- | --- | --- |
-| 
-```csharp
-<<foreach [p
-        in ds.Persons]>><<[
-    p.NumberOf()]>>
-```
-
-
-
- | 
-
-```csharp
-<<[p.Name]>>
-```
-
-
-
- | 
-
-```csharp
-<<[p.Age]>><</
-foreach>>
-```
-
-
-
- |
-| 
-
-```csharp
-Count: <<[ds.Persons.Count()]>>
-```
-
-
-
- | 
-
- | 
-
- |
+| `<<foreach [p in ds.Persons]>><<[p.NumberOf()]>>` | `<<[p.Name]>>` | `<<[p.Age]>><</foreach>>` |
+| `Count: <<[ds.Persons.Count()]>>` |  |  |
 
 Alternatively, you can use the following template involving the contextual object member access syntax to get the same results.
 
 | No. | Name | Age |
 | --- | --- | --- |
-| 
-```csharp
- <<foreach [
-        in Persons]>><<[
-    NumberOf()]>>
-```
-
-
-
- | 
-
-```csharp
-<<[Name]>> 
-```
-
-
-
- | 
-
-```csharp
-<<[Age]>><</
-foreach>> 
-```
-
-
-
- |
-| 
-
-```csharp
-Count: <<[Persons.Count()]>> 
-```
-
-
-
- | 
-
- | 
-
- |
+| `<<foreach [in Persons]>><<[NumberOf()]>>` | `<<[Name]>>` | `<<[Age]>><</foreach>>` |
+| `Count: <<[Persons.Count()]>>` |  |  |
 
 ### Using Conditional Blocks
 
@@ -532,8 +413,6 @@ default_template_option
 
 #### Common Conditional Blocks
 
-{{< alert style="info" >}}See Multicolored Numbered List template using Common Conditional Blocks in it.{{< /alert >}}
-
 A common conditional block is a conditional block which body starts and ends within paragraphs that belong to a single story or table cell.  
 If a conditional block belongs to a single paragraph, it can be used as a replacement for an expression tag that involves the ternary "?:" operator. For example, given that items is an enumeration, you can use the following template to represent the count of elements in the enumeration:
 
@@ -546,9 +425,11 @@ You have chosen <<if [!items.Any()]>>no items<<else>><<[items.Count()]>> item(s)
 
 You can normally use common conditional blocks within data bands. For example, given that items is an enumeration of the strings "item1", "item2", and "item3", you can use the following template to enumerate them and apply different formatting for even and odd elements:
 
+```csharp
 <<foreach \[item in items\]>><<if \[IndexOf() % 2 == 0\]>><<\[item\]>>  
 <<else>><<\[item\]>>  
 <</if>><</foreach>>
+```
 
 In this case, the engine produces a report as follows:
 
@@ -567,12 +448,8 @@ You can use data bands within common conditional blocks as well. For example, gi
 
 #### Table-Row Conditional Block
 
-{{< alert style="info" >}}See In-Table List with Highlighted Rows template using Table-Row Conditional Block.{{< /alert >}}
-
 A table-row conditional block is a conditional block which body occupies single or multiple rows of a single document table. The body of such a block (as well as the body of its every template option) starts at the beginning of the first occupied row and ends at the end of the last occupied row as follows:  
 **Note:** Table rows occupied by different template options in the following template are highlighted with different colors.
-
-td { border-bottom-color: rgb(0, 0, 0); border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: rgb(0, 0, 0); border-left-style: solid; border-left-width: 0.75pt; border-right-color: rgb(0, 0, 0); border-right-style: solid; border-right-width: 0.75pt; border-top-color: rgb(0, 0, 0); border-top-style: solid; border-top-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: top; }
 
 <table cellspacing="0" cellpadding="0" style="border-collapse: collapse; margin-left: 0pt;"><tbody><tr><td style="background-color: rgb(242, 242, 242);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">&nbsp;</span></p></td><td style="background-color: rgb(242, 242, 242);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">&nbsp;</span></p></td><td style="background-color: rgb(242, 242, 242);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">&nbsp;</span></p></td></tr><tr><td style="background-color: rgb(226, 239, 217);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">&lt;&lt;if ...&gt;&gt; ...</span></p></td><td style="background-color: rgb(226, 239, 217);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">...</span></p></td><td style="background-color: rgb(226, 239, 217);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">...</span></p></td></tr><tr><td style="background-color: rgb(226, 239, 217);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">...</span></p></td><td style="background-color: rgb(226, 239, 217);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">...</span></p></td><td style="background-color: rgb(226, 239, 217);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">...</span></p></td></tr><tr><td style="background-color: rgb(255, 242, 204);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">&lt;&lt;elseif ...&gt;&gt; ...</span></p></td><td style="background-color: rgb(255, 242, 204);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">...</span></p></td><td style="background-color: rgb(255, 242, 204);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">...</span></p></td></tr><tr><td style="background-color: rgb(255, 242, 204);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">...</span></p></td><td style="background-color: rgb(255, 242, 204);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">...</span></p></td><td style="background-color: rgb(255, 242, 204);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">...</span></p></td></tr><tr><td style="background-color: rgb(222, 234, 246);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">&lt;&lt;else&gt;&gt; ...</span></p></td><td style="background-color: rgb(222, 234, 246);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">...</span></p></td><td style="background-color: rgb(222, 234, 246);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">...</span></p></td></tr><tr><td style="background-color: rgb(222, 234, 246);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">...</span></p></td><td style="background-color: rgb(222, 234, 246);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">...</span></p></td><td style="background-color: rgb(222, 234, 246);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">...</span></p></td></tr><tr><td style="background-color: rgb(222, 234, 246);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">...</span></p></td><td style="background-color: rgb(222, 234, 246);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">...</span></p></td><td style="background-color: rgb(222, 234, 246);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">... &lt;&lt;/if&gt;&gt;</span></p></td></tr><tr><td style="background-color: rgb(242, 242, 242);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">&nbsp;</span></p></td><td style="background-color: rgb(242, 242, 242);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">&nbsp;</span></p></td><td style="background-color: rgb(242, 242, 242);"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="color: rgb(127, 127, 127); font-family: &quot;Courier New&quot;; font-size: 11pt; font-weight: bold;">&nbsp;</span></p></td></tr></tbody></table>
 
