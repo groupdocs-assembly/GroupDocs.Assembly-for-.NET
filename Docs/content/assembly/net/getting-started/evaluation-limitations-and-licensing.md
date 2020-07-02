@@ -17,13 +17,8 @@ You can easily download GroupDocs.Assembly for evaluation. The evaluation downlo
 | Document | Spreadsheet | Presentation |
 | --- | --- | --- |
 | GroupDocs.Assembly (without a license specified) generates the document reports with full product functionality, but it inserts an evaluation watermark at the top of the document | When a Spreadsheet report is generated it contains an extra worksheet with Evaluation Copyright Warning on it, you can't hide the Evaluation Copyright Warning (the extra worksheet) | When a presentation report is generated using GroupDocs.Assembly, an Evaluation Watermark is injected at the center of each slide |
-| It limits the maximum document size to several hundred paragraphs | When running your program, you can only generate 100 Spreadsheet reports using GroupDocs.Assembly. If your application exceeds this number, an exception will be thrown | 
- |
-| 
-
- | You can't re-specify the script path (e.g in the web.config file) | 
-
- |
+| It limits the maximum document size to several hundred paragraphs | When running your program, you can only generate 100 Spreadsheet reports using GroupDocs.Assembly. If your application exceeds this number, an exception will be thrown |  |
+|  | You can't re-specify the script path (e.g in the web.config file) |  |
 
 ## Licensing 
 
@@ -56,11 +51,11 @@ The following example shows how to load a license from a stream.
 Here are the simple steps to use the `Metered` class.
 
 1.  Create an instance of `Metered` class.
-2.  Pass public & private keys to S`etMeteredKey` method.
+2.  Pass public & private keys to `SetMeteredKey` method.
 3.  Do processing (perform task).
-4.  call method G`etConsumptionQuantity` of the `Metered` class.
+4.  call method `GetConsumptionQuantity` of the `Metered` class.
 5.  It will return the amount/quantity of API requests that you have consumed so far.
-6.  call method G`etConsumptionCredit` of the `Metered` class (Since version 19.7).
+6.  call method `GetConsumptionCredit` of the `Metered` class (Since version 19.7).
 7.  It will return the credit that you have consumed so far.
 
 Following is the sample code demonstrating how to use `Metered` class.

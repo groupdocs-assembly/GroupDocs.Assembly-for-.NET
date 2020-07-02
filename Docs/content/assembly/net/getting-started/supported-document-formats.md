@@ -81,7 +81,7 @@ The following table shows which output file formats are supported by GroupDocs.A
 | --- | --- | --- | --- | --- | --- |
 | **Word Processing (DOC, DOCX, DOCM, DOT, DOTX, DOTM, WordprocessingML, RTF, ODT, OTT)** | Supported | Not Supported | Not Supported | Supported | Supported |
 | **Spreadsheet (XLS, XLSX, XLSM, XLTX, XLTM, XLSB, SpreadsheetML, ODS)** | Not Supported | Supported | Not Supported | Not Supported | Not Supported |
-| **Presentation (PPT, PPTX, PPTM, PPS, PPSX, PPSM, **POT,** POTX, POTM, ODP, OTP)** | Not Supported | Not Supported | Supported | Not Supported | Not Supported |
+| **Presentation (PPT, PPTX, PPTM, PPS, PPSX, PPSM, POT, POTX, POTM, ODP, OTP)** | Not Supported | Not Supported | Supported | Not Supported | Not Supported |
 | **Email (EML, EMLX, MSG)** | Not Supported | Not Supported | Not Supported | Supported | Not Supported |
 | **HTML, PDF, XPS, TIFF** | Supported | Supported | Supported | Supported | Supported |
 | **MHTML** | Supported | Supported | Not Supported | Supported | Supported |

@@ -12,26 +12,26 @@ hideChildren: False
 
 GroupDocs.Assembly for .NET is an API that allows you to generate documents in popular *microsoft office* and email file formats based upon template documents and data obtained from various sources including databases, XML, JSON, OData, objects of custom .NET types, external documents, and more. The following is the list of salient features which are offered by the GroupDocs.Assembly API:
 
-*   *   Multiple data formats support
-    *   Use formulae & perform sequential data operations
-    *   Apply upper, lower, capital, firstcap formatting to strings in template syntax
-    *   Template syntax support formatting of ordinal, cardinal, alphabetic numeric nature
-    *   Support template documents with custom variables & text comments within template syntax tags
-    *   Dynamically insert out document content in report
-    *   Dynamically configure background color of html documents & generate barcode in reports
-    *   Dynamically insert hyperlinks in reports & apply attributes to email message body
-    *   Dynamically attach email attachments
-    *   Support of next field analogue of Microsoft Word
-    *   Update fields during word processing document assembly
-    *   Apply formula during spreadsheet assembly
-    *   Template formatting for numeric, text, image, date-time, chart elements
-    *   Conditional formatting of template text elements
-    *   Linq-based template syntax
-    *   Change format of assembled file using explicit specifications or file extension
-    *   Auto-removal of empty paragraphs
-    *   Generate various report types, e.g., charts, image, tables, lists and more
-    *   Inline template syntax errors in generated documents instead of exception throwing.
-    *   Load template documents from html with resources and save assembled Word, Excel, PowerPoint & emails to html with resources
+*   Multiple data formats support
+*   Use formulae & perform sequential data operations
+*   Apply upper, lower, capital, firstcap formatting to strings in template syntax
+*   Template syntax support formatting of ordinal, cardinal, alphabetic numeric nature
+*   Support template documents with custom variables & text comments within template syntax tags
+*   Dynamically insert out document content in report
+*   Dynamically configure background color of html documents & generate barcode in reports
+*   Dynamically insert hyperlinks in reports & apply attributes to email message body
+*   Dynamically attach email attachments
+*   Support of next field analogue of Microsoft Word
+*   Update fields during word processing document assembly
+*   Apply formula during spreadsheet assembly
+*   Template formatting for numeric, text, image, date-time, chart elements
+*   Conditional formatting of template text elements
+*   Linq-based template syntax
+*   Change format of assembled file using explicit specifications or file extension
+*   Auto-removal of empty paragraphs
+*   Generate various report types, e.g., charts, image, tables, lists and more
+*   Inline template syntax errors in generated documents instead of exception throwing.
+*   Load template documents from html with resources and save assembled Word, Excel, PowerPoint & emails to html with resources
 
 Following is the detail given about how the features are offered with their usage and limits.
 
