@@ -160,8 +160,7 @@ But then, a result document would look as follows.
 
 Jane Doe (445 Mount Eden Road Mount Eden Auckland 1024)
 1. Regular Cleaning
-2. Oven Cleaning
-John Smith (43 Vogel Street Roslyn Palmerston North 4414)
+2. Oven Cleaning<br/>John Smith (43 Vogel Street Roslyn Palmerston North 4414)
 3. Regular Cleaning
 4. Oven Cleaning
 5. Carpet Cleaning
@@ -254,7 +253,7 @@ You can normally use common data bands nested to table-row data bands as well li
 
 | Manager | Clients |
 | --- | --- |
-| `<<foreach [m in ds.Managers]>><<[m.Name]>>` | `<<foreach [c in m.Contracts]>><<[c.Clients.Name]>><br/><</foreach>><</foreach>> |
+| `<<foreach [m in ds.Managers]>><<[m.Name]>>` | `<<foreach [c in m.Contracts]>><<[c.Clients.Name]>><br/><</foreach>><</foreach>>` |
 
 In this case, the engine produces a report as follows.
 
@@ -430,7 +429,7 @@ public class Person
 | `First(Predicate)` | `persons.First(p => p.Age > 30)` |
 | `FirstOrDefault()` | `persons.FirstOrDefault()` |
 | `FirstOrDefault(Predicate)` | `persons.FirstOrDefault(p => p.Age > 30)` |
-| `GroupBy(Selector)` | `persons.GroupBy(p => p.Age)`<br/>Or<br/>`persons.GroupBy(p => new { Age = p.Age, Count = p.Children.Count() })`<br/>This method returns an enumeration of group objects. Each group has a unique key defined by the input selector and contains items of the source enumeration associated with this key. You can access the key of a group instance using the Key property. You can treat a group itself as an enumeration of items that the group contains. |
+| `GroupBy(Selector)` | `persons.GroupBy(p => p.Age)`<br/>Or<br/>`persons.GroupBy(p => new { Age = p.Age, Count = p.Children.Count() })`<br/>This method returns an enumeration of group objects. Each group has a unique key defined by the input selector and contains items of the source enumeration associated with this key. You can access the key of a group instance using the `Key` property. You can treat a group itself as an enumeration of items that the group contains. |
 | `Last()` | `persons.Last()` |
 | `Last(Predicate)` | `persons.Last(p => p.Age > 100)` |
 | `LastOrDefault()` | `persons.LastOrDefault()` |
