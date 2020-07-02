@@ -160,7 +160,7 @@ But then, a result document would look as follows.
 
 Jane Doe (445 Mount Eden Road Mount Eden Auckland 1024)
 1. Regular Cleaning
-2. Oven Cleaning<br/>John Smith (43 Vogel Street Roslyn Palmerston North 4414)
+2. Oven Cleaning<p style="text-indent: 0">John Smith (43 Vogel Street Roslyn Palmerston North 4414)</p>
 3. Regular Cleaning
 4. Oven Cleaning
 5. Carpet Cleaning
