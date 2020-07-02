@@ -159,12 +159,12 @@ Given that orders is an enumeration of Order instances, you could try to use the
 But then, a result document would look as follows.
 
 Jane Doe (445 Mount Eden Road Mount Eden Auckland 1024)
-     1. Regular Cleaning
-     2. Oven Cleaning
+1. Regular Cleaning
+2. Oven Cleaning
 John Smith (43 Vogel Street Roslyn Palmerston North 4414)
-     3. Regular Cleaning
-     4. Oven Cleaning
-     5. Carpet Cleaning
+3. Regular Cleaning
+4. Oven Cleaning
+5. Carpet Cleaning
 
 That is, there would be a single numbered list across all orders, which is not applicable for this scenario. However, you can make list numbering to restart for every order by putting a restartNum tag into your template before a corresponding foreach tag as follows.
 
@@ -194,11 +194,9 @@ John Smith (43 Vogel Street Roslyn Palmerston North 4414)
 
 ### Table-Row Data Bands
 
-{{< alert style="info" >}}See In-Table List With Alternate Content template using Table-Row Data Bands in it.{{< /alert >}}
-
 A table-row data band is a data band which body occupies single or multiple rows of a single document table. The body of such a band starts at the beginning of the first occupied row and ends at the end of the last occupied row as follows.
 
-<table class="confluenceTable"><tbody><tr><td class="confluenceTd"><p>&nbsp;</p></td><td class="confluenceTd"><p>&nbsp;</p></td><td class="confluenceTd"><p>&nbsp;</p></td></tr><tr><td class="confluenceTd"><p><code>&lt;&lt;foreach ...</code>&gt;&gt; ...</p></td><td class="confluenceTd"><p>...</p></td><td class="confluenceTd"><p>...</p></td></tr><tr><td class="confluenceTd"><p>...</p></td><td class="confluenceTd"><p>...</p></td><td class="confluenceTd"><p>...</p></td></tr><tr><td class="confluenceTd"><p>...</p></td><td class="confluenceTd"><p>...</p></td><td class="confluenceTd"><p><code>... &lt;&lt;/foreach&gt;&gt;</code></p></td></tr><tr><td class="confluenceTd"><p>&nbsp;</p></td><td class="confluenceTd"><p>&nbsp;</p></td><td class="confluenceTd"><p>&nbsp;</p></td></tr></tbody></table>
+<table class="confluenceTable"><tbody><tr><td class="confluenceTd"><p>&nbsp;</p></td><td class="confluenceTd"><p>&nbsp;</p></td><td class="confluenceTd"><p>&nbsp;</p></td></tr><tr><td class="confluenceTd"><p><code>&lt;&lt;foreach ...&gt;&gt;</code> ...</p></td><td class="confluenceTd"><p>...</p></td><td class="confluenceTd"><p>...</p></td></tr><tr><td class="confluenceTd"><p>...</p></td><td class="confluenceTd"><p>...</p></td><td class="confluenceTd"><p>...</p></td></tr><tr><td class="confluenceTd"><p>...</p></td><td class="confluenceTd"><p>...</p></td><td class="confluenceTd"><p><code>... &lt;&lt;/foreach&gt;&gt;</code></p></td></tr><tr><td class="confluenceTd"><p>&nbsp;</p></td><td class="confluenceTd"><p>&nbsp;</p></td><td class="confluenceTd"><p>&nbsp;</p></td></tr></tbody></table>
 
 The following examples in this section are given using `ds`, a `DataSet` instance containing `DataTable` and `DataRelation` objects according to the following data model.
 
@@ -208,47 +206,8 @@ The most common use case of a table-row data band is the building of a document 
 
 | Client | Manager | Contract Price |
 | --- | --- | --- |
-| 
-```csharp
-<<foreach [
-    c in ds.Contracts
-]>><<[c.Clients.Name]>>
-```
-
-
-
- | 
-
-```csharp
-<<[c.Managers.Name]>>
-```
-
-
-
- | 
-
-```csharp
-<<[c.Price]>><</
-foreach>>
-```
-
-
-
- |
-| Total: | 
-
- | 
-
-```csharp
-<<[ds
-    .Contracts
-    .Sum(c =>
-        c.Price)]>>
-```
-
-
-
- |
+| `<<foreach [c in ds.Contracts]>><<[c.Clients.Name]>>` | `<<[c.Managers.Name]>>` | `<<[c.Price]>><</foreach>>` |
+| Total: |  | `<<[ds.Contracts.Sum(c => c.Price)]>>` |
 
 In this case, the engine produces a report as follows.
 
@@ -263,65 +222,15 @@ In this case, the engine produces a report as follows.
 | H Group | July James | 250000 |
 | I & Sons | July James | 100000 |
 | J Ent. | July James | 100000 |
-| Total: | 
- | 4300000 |
+| Total: |  | 4300000 |
 
 To populate a document table with a master-detail data, you can use nested table-row data bands like in the following template.
 
 | Manager/Client | Contract Price |
 | --- | --- |
-| 
-```csharp
-<<foreach [
-    m in ds.Managers
-]>><<[m.Name]>>
-```
-
-
-
- | 
-
-```csharp
-<<[m.Contracts.Sum(
-    c => c.Price)]>>
-```
-
-
-
- |
-| 
-
-```csharp
-<<foreach [
-    c in m.Contracts
-]>> <<[c.Clients.Name]>>
-```
-
-
-
- | 
-
-```csharp
-<<[c.Price]>><</
-foreach>><</
-foreach>>
-```
-
-
-
- |
-| Total: | 
-
-```csharp
-<<[ds
-    .Contracts
-    .Sum(c =>
-        c.Price)]>>
-```
-
-
-
- |
+| `<<foreach [m in ds.Managers]>><<[m.Name]>>` | `<<[m.Contracts.Sum(c => c.Price)]>>` |
+| `<<foreach [c in m.Contracts]>>   <<[c.Clients.Name]>>` | `<<[c.Price]>><</foreach>><</foreach>>` |
+| Total: | `<<[ds.Contracts.Sum(c => c.Price)]>>` |
 
 In this case, the engine produces a report as follows.
 
@@ -345,45 +254,17 @@ You can normally use common data bands nested to table-row data bands as well li
 
 | Manager | Clients |
 | --- | --- |
-| 
-```csharp
-<<foreach [
-    m in ds.Managers
-]>><<[m.Name]>>
-```
-
-
-
- | 
-
-```csharp
-<<foreach [
-    c in m.Contracts
-]>><<[c.Clients.Name]>>
-<</foreach>><</foreach>>
-```
-
-
-
- |
+| `<<foreach [m in ds.Managers]>><<[m.Name]>>` | `<<foreach [c in m.Contracts]>><<[c.Clients.Name]>><br/><</foreach>><</foreach>> |
 
 In this case, the engine produces a report as follows.
 
 | Manager | Clients |
 | --- | --- |
-| John Smith | A Company  
-B Ltd.  
-C & D |
-| Tony Anderson | E Corp.  
-F & Partners |
-| July James | G & Co.  
-H Group  
-I & Sons  
-J Ent. |
+| John Smith | A Company<br/>B Ltd.<br/>C & D<br/> |
+| Tony Anderson | E Corp.<br/>F & Partners<br/> |
+| July James | G & Co.<br/>H Group<br/>I & Sons<br/>J Ent.<br/> |
 
 ### Extension Methods of Iteration Variables
-
-{{< alert style="info" >}}See Multicolored Numbered List template using Extension Methods of Iteration Variable in it.{{< /alert >}}
 
 GroupDocs.Assembly Engine provides special extension methods for iteration variables of any type. You can normally use these extension methods in template expressions. The following list describes the extension methods.
 
@@ -412,24 +293,7 @@ Returns the one-based index of a sequence item that is represented by the corres
 
 | No. | Item |
 | --- | --- |
-| 
-```csharp
-<<foreach [item
-in items]>><<[
-item.NumberOf()]>>
-```
-
-
-
- | 
-
-```csharp
-<<[item]>><</foreach>>
-```
-
-
-
- |
+| `<<foreach [item in items]>><<[item.NumberOf()]>>` | `<<[item]>><</foreach>>` |
 
 In this case, the engine produces a report as follows.
 
@@ -440,8 +304,6 @@ In this case, the engine produces a report as follows.
 | 3 | item3 |
 
 ### Charts Representing Sequential Data
-
-{{< alert style="info" >}}See Bubble Chart template representing Sequential Data in it.{{< /alert >}}
 
 GroupDocs.Assembly Engine enables you to use charts to represent your sequential data. To declare a chart that is going to be populated with data dynamically within your template, do the following steps:
 
@@ -457,11 +319,10 @@ GroupDocs.Assembly Engine enables you to use charts to represent your sequential
     
     ```
     
-    1.  For a scatter or bubble chart, you can go one of the following ways:
-        1.  To use the same x-value expression for all chart series, add a single x tag to the chart title after the corresponding foreachtag.
-        2.  To use different x-value expressions for every chart series, add multiple x tags to chart series' names – one for each chart series.  
-            An x-value expression for a scatter or bubble chart must return a numeric value.
-    2.  For a chart of another type, add a single x tag to the chart title after the corresponding foreach tag. In this case, an x-value expression must return a numeric, date, or string value.
+    * For a scatter or bubble chart, you can go one of the following ways:
+        - To use the same x-value expression for all chart series, add a single x tag to the chart title after the corresponding foreachtag.
+        - To use different x-value expressions for every chart series, add multiple x tags to chart series' names – one for each chart series. An x-value expression for a scatter or bubble chart must return a numeric value.
+    * For a chart of another type, add a single x tag to the chart title after the corresponding foreach tag. In this case, an x-value expression must return a numeric, date, or string value.
 7.  For a chart of any type, add y tags to chart series' names as follows.
     
     ```csharp
@@ -482,8 +343,8 @@ GroupDocs.Assembly Engine enables you to use charts to represent your sequential
     
 9.  For a chart with dynamic data, you can select which series to include into it dynamically based upon conditions. In particular, this feature is useful when you need to restrict access to sensitive data in chart series for some users of your application. To use the feature, do the following steps:
     
-    1.  Declare a chart with dynamic data in the usual way
-    2.  For series to be removed from the chart based upon conditions dynamically, define the conditions in names of these series using removeif tags having the following syntax
+    * Declare a chart with dynamic data in the usual way
+    * For series to be removed from the chart based upon conditions dynamically, define the conditions in names of these series using removeif tags having the following syntax
     
     ```csharp
     <<removeif [conditional_expression]>>
@@ -556,333 +417,36 @@ public class Person
 
 | Extension Method | Examples and Notes |
 | --- | --- |
-| `All(Predicate)` | 
-```csharp
-persons.All(p => p.Age < 50)
-```
-
-
-
- |
-| `Any()` | 
-
-```csharp
-persons.Any()
-```
-
-
-
- |
-| `Any(Predicate)` | 
-
-```csharp
-persons.Any(p => p.Name == "John Smith")
-```
-
-
-
- |
-| `Average(Selector)` | 
-
-```csharp
-persons.Average(p => p.Age)
-```
-
-The input selector must return a value of any type that has predefined or user-defined addition and division operators. |
-| `Concat(IEnumerable)` | 
-
-```csharp
-persons.Concat(otherPersons)
-```
-
-An implicit reference conversion must exist between types of items of concatenated enumerations. |
-| `Contains(Object)` | 
-
-```csharp
-persons.Contains(otherPersons.First())
-```
-
-
-
- |
-| `Count()` | 
-
-```csharp
-persons.Count()
-```
-
-
-
- |
-| `Count(Predicate)` | 
-
-```csharp
-persons.Count(p => p.Age > 30)
-```
-
-
-
- |
-| `Distinct()` | 
-
-```csharp
-persons.Distinct()
-```
-
-
-
- |
-| `First()` | 
-
-```csharp
-persons.First()
-```
-
-
-
- |
-| `First(Predicate)` | 
-
-```csharp
-persons.First(p => p.Age > 30)
-```
-
-
-
- |
-| `FirstOrDefault()` | 
-
-```csharp
-persons.FirstOrDefault()
-```
-
-
-
- |
-| `FirstOrDefault(Predicate)` | 
-
-```csharp
-persons.FirstOrDefault(p => p.Age > 30)
-```
-
-
-
- |
-| `GroupBy(Selector)` | 
-
-```csharp
-persons.GroupBy(p => p.Age)
-```
-
-Or
-
-```csharp
-persons.GroupBy(
-    p => new
-    {
-        Age = p.Age,
-        Count = p.Children.Count()
-    })
-```
-
-This method returns an enumeration of group objects. Each group has a unique key defined by the input selector and contains items of the source enumeration associated with this key. You can access the key of a group instance using the Key property. You can treat a group itself as an enumeration of items that the group contains. |
-| `Last()` | 
-
-```csharp
-persons.Last()
-```
-
-
-
- |
-| `Last(Predicate)` | 
-
-```csharp
-persons.Last(p => p.Age > 100)
-```
-
-
-
- |
-| `LastOrDefault()` | 
-
-```csharp
-persons.LastOrDefault()
-```
-
-
-
- |
-| `LastOrDefault(Predicate)` | 
-
-```csharp
-persons.LastOrDefault(p => p.Age > 100)
-```
-
-
-
- |
-| `Max(ComparableSelector)` | 
-
-```csharp
-persons.Max(p => p.Age)
-```
-
-
-
- |
-| `Min(ComparableSelector)` | 
-
-```csharp
-persons.Min(p => p.Age)
-```
-
-
-
- |
-| `OrderBy(ComparableSelector)` | 
-
-```csharp
-persons.OrderBy(p => p.Age)
-```
-
-Or
-
-```csharp
-persons.OrderBy(p => p.Age)
-    .ThenByDescending(p => p.Name)
-```
-
-Or
-
-```csharp
-persons.OrderBy(p => p.Age)
-    .ThenByDescending(p => p.Name)
-    .ThenBy(p => p.Children.Count())
-```
-
-This method returns an enumeration ordered by a single key. To specify additional ordering keys, you can use the following extension methods of an ordered enumeration:
-
-*   `ThenBy(ComparableSelector)`
-*   `ThenByDescending(ComparableSelector)`
-
- |
-| `OrderByDescending(ComparableSelector)` | 
-
-```csharp
-persons.OrderByDescending(p => p.Age)
-```
-
-Or
-
-```csharp
-persons.OrderByDescending(p => p.Age)
-    .ThenByDescending(p => p.Name)
-```
-
-Or
-
-```csharp
-persons.OrderByDescending(p => p.Age)
-    .ThenByDescending(p => p.Name)
-    .ThenBy(p => p.Children.Count())
-```
-
-See the previous note. |
-| `Single()` | 
-
-```csharp
-persons.Single()
-```
-
-
-
- |
-| `Single(Predicate)` | 
-
-```csharp
-persons.Single(
-    p => p.Name == "John Smith")
-```
-
-
-
- |
-| `SingleOrDefault()` | 
-
-```csharp
-persons.SingleOrDefault()
-```
-
-
-
- |
-| `SingleOrDefault(Predicate)` | 
-
-```csharp
-persons.SingleOrDefault(
-    p => p.Name == "John Smith")
-```
-
-
-
- |
-| `Skip(int)` | 
-
-```csharp
-persons.Skip(10)
-```
-
-
-
- |
-| `SkipWhile(Predicate)` | 
-
-```csharp
-persons.SkipWhile(p => p.Age < 21)
-```
-
-
-
- |
-| `Sum(Selector)` | 
-
-```csharp
-persons.Sum(p => p.Children.Count())
-```
-
-The input selector must return a value of any type that has a predefined or user-defined addition operator. |
-| `Take(int)` | 
-
-```csharp
-persons.Take(5)
-```
-
-
-
- |
-| `TakeWhile(Predicate)` | 
-
-```csharp
-persons.TakeWhile(p => p.Age < 50)
-```
-
-
-
- |
-| `Union(IEnumerable)` | 
-
-```csharp
-persons.Union(otherPersons)
-```
-
-An implicit reference conversion must exist between types of items of united enumerations. |
-| `Where(Predicate)` | 
-
-```csharp
-persons.Where(p => p.Age > 18)
-```
-
-
-
- |
+| `All(Predicate)` | `persons.All(p => p.Age < 50)` |
+| `Any()` | `persons.Any()` |
+| `Any(Predicate)` | `persons.Any(p => p.Name == "John Smith")` |
+| `Average(Selector)` | `persons.Average(p => p.Age)`<br/>The input selector must return a value of any type that has predefined or user-defined addition and division operators. |
+| `Concat(IEnumerable)` | `persons.Concat(otherPersons)`<br/>An implicit reference conversion must exist between types of items of concatenated enumerations. |
+| `Contains(Object)` | `persons.Contains(otherPersons.First())` |
+| `Count()` | `persons.Count()` |
+| `Count(Predicate)` | `persons.Count(p => p.Age > 30)` |
+| `Distinct()` | `persons.Distinct()` |
+| `First()` | `persons.First()` |
+| `First(Predicate)` | `persons.First(p => p.Age > 30)` |
+| `FirstOrDefault()` | `persons.FirstOrDefault()` |
+| `FirstOrDefault(Predicate)` | `persons.FirstOrDefault(p => p.Age > 30)` |
+| `GroupBy(Selector)` | `persons.GroupBy(p => p.Age)`<br/>Or<br/>`persons.GroupBy(p => new { Age = p.Age, Count = p.Children.Count() })`<br/>This method returns an enumeration of group objects. Each group has a unique key defined by the input selector and contains items of the source enumeration associated with this key. You can access the key of a group instance using the Key property. You can treat a group itself as an enumeration of items that the group contains. |
+| `Last()` | `persons.Last()` |
+| `Last(Predicate)` | `persons.Last(p => p.Age > 100)` |
+| `LastOrDefault()` | `persons.LastOrDefault()` |
+| `LastOrDefault(Predicate)` | `persons.LastOrDefault(p => p.Age > 100)` |
+| `Max(ComparableSelector)` | `persons.Max(p => p.Age)` |
+| `Min(ComparableSelector)` | `persons.Min(p => p.Age)` |
+| `OrderBy(ComparableSelector)` | `persons.OrderBy(p => p.Age)`<br/>Or<br/>`persons.OrderBy(p => p.Age).ThenByDescending(p => p.Name)`<br/>Or<br/>`persons.OrderBy(p => p.Age).ThenByDescending(p => p.Name).ThenBy(p => p.Children.Count())`<br/>This method returns an enumeration ordered by a single key. To specify additional ordering keys, you can use the following extension methods of an ordered enumeration: <ul><li>`ThenBy(ComparableSelector)`</li><li>`ThenByDescending(ComparableSelector)`</li></ul> |
+| `OrderByDescending(ComparableSelector)` | `persons.OrderByDescending(p => p.Age)`<br/>Or<br/>`persons.OrderByDescending(p => p.Age).ThenByDescending(p => p.Name)`<br/>Or<br/>`persons.OrderByDescending(p => p.Age).ThenByDescending(p => p.Name).ThenBy(p => p.Children.Count())`<br/>See the previous note. |
+| `Single()` | `persons.Single()` |
+| `Single(Predicate)` | `persons.Single(p => p.Name == "John Smith")` |
+| `SingleOrDefault()` | `persons.SingleOrDefault()` |
+| `SingleOrDefault(Predicate)` | `persons.SingleOrDefault(p => p.Name == "John Smith")` |
+| `Skip(int)` | `persons.Skip(10)` |
+| `SkipWhile(Predicate)` | `persons.SkipWhile(p => p.Age < 21)` |
+| `Sum(Selector)` | `persons.Sum(p => p.Children.Count())`<br/>The input selector must return a value of any type that has a predefined or user-defined addition operator. |
+| `Take(int)` | `persons.Take(5)` |
+| `TakeWhile(Predicate)` | `persons.TakeWhile(p => p.Age < 50)` |
+| `Union(IEnumerable)` | `persons.Union(otherPersons)`<br/>An implicit reference conversion must exist between types of items of united enumerations. |
+| `Where(Predicate)` | `persons.Where(p => p.Age > 18)` |
