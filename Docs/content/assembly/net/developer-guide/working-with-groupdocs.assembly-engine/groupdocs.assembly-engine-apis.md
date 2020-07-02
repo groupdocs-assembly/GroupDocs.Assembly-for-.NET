@@ -21,14 +21,7 @@ To build a report from a template, you can use one of the `ReportingEngine.Build
 | Parameter | Description |
 | --- | --- |
 | document | A template document. At runtime, this document instance is populated with a data from the specified source and becomes a ready report. |
-| dataSource | An object providing a data to populate the specified template. The object must be of one of the following types:
-*   A traditional data source: [DataSet](http://msdn.microsoft.com/en-us/library/system.data.dataset(v=vs.110).aspx), [DataTable](http://msdn.microsoft.com/en-us/library/system.data.datatable(v=vs.110).aspx)
-*   XML
-*   OData
-*   JSON
-*   An object of a custom visible type: [Using Types]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#using-types" >}}){{< alert style="success" >}}For more details on supported Data Formats and Data Manipulation capabilities, please visit Data Sources.{{< /alert >}}
-
- |
+| dataSource | An object providing a data to populate the specified template. The object must be of one of the following types:<ul><li>A traditional data source: [DataSet](http://msdn.microsoft.com/en-us/library/system.data.dataset(v=vs.110).aspx), [DataTable](http://msdn.microsoft.com/en-us/library/system.data.datatable(v=vs.110).aspx)</li><li>XML</li><li>OData</li><li>JSON</li><li>An object of a custom [visible type]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#using-types" >}})</li></ul> |
 | dataSourceName | The identifier of the specified data source object within the specified template. You can omit this identifier, if the template uses the [contextual object member access]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#using-contextual-object-member-access" >}}) when dealing with the data source. |
 
 Given a template to be populated with a data from a DataSet instance that is identified as "ds" within the template, you can use the following code to build the corresponding report.
