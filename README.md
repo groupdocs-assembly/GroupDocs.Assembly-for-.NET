@@ -1,8 +1,6 @@
-# GroupDocs.Assembly for .NET
+# .NET Document Automation & Reporting API
 
-This package contains [Examples](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Examples), [Plugins](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Plugins) and [Showcases](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Showcases) for [GroupDocs.Assembly for .NET](https://products.groupdocs.com/assembly/net) that will help you in understanding the API's working and writing your own applications.
-
-GroupDocs.Assembly for .NET is a .NET API engine designed to generate documents based on templates. In essence, the engine accepts a template document and some data, assembles data with the template document as per syntax defined by the template document and then, generates the output document in the same format as of the template document format.
+An on-premise [Document Automation Engine](https://products.groupdocs.com/assembly/net) that accepts a template document and some data to assemble documents as per syntax defined by the template. Data can be fetched from various sources including CSV, XML, OData, JSON, .NET Objects & more.
 
 <p align="center">
 
@@ -17,27 +15,81 @@ Directory | Description
 [Plugins](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Plugins)  | Analyze the progress of GroupDocs.Assembly and WinWard while generating the reports, compare code and template preparation. 
 [Showcases](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Showcases)  | Web Report Generator is an ASP.NET Web Forms Application that demonstrates the core functionalities provided by GroupDocs.Assembly for .NET.
 
-## How to Run the Examples
+## Report Generation via .NET
 
-+ You can either clone the repository using your favorite GitHub client or download the ZIP file from the above button.
-+ Extract the contents of the ZIP file to any folder on your computer. All the examples are located in the Examples folder.
-+ In the extracted files and folders, you can see solution file for C# Project..
-+ The project is created in Visual Studio 2013, but the solution file is compatible with Visual Studio 2010 SP1 and higher.
-+ Open the solution file in Visual Studio and build the project.
-+ On the first run, the dependencies will automatically be downloaded via NuGet.
-+ Data folder at the root folder of Examples contains some sample input templates used in code examples. It is mandatory that you download the Data folder along with the examples project.
-+ Open Program.cs file, all the examples are called from here.
-+ Uncomment the examples you want to run from within the project.
+- Wide range of supported [document formats](https://docs.groupdocs.com/display/assemblynet/Supported+Document+Formats).
+- Capable to manipulate data using formulae & [sequential data](https://docs.groupdocs.com/display/assemblynet/Template+Syntax+-+Part+2+of+2#TemplateSyntax-Part2of2-OutputtingSequentialData) operations.
+- Supports upper, lower, capital, first-cap formatting.
+- Apply Ordinal, Cardinal, Alphabetic & Numeric formatting in template syntax.
+- Dynamically insert document content & hyperlinks in reports.
+- Apply attributes to email message body and dynamically add email attachments.
+- [Generate barcode labels](https://docs.groupdocs.com/display/assemblynet/Working+with+Barcode+Image+Generation) in reports.
+- Dynamically set background color of HTML documents.
+- Apply formatting to numeric, text, image, date-time & chart elements in template.
+- Apply conditional formatting on text elements.
+- LINQ-based template syntax.
+- Supports NEXT field analogue of Microsoft Word.
+- Update fields during Word document assembly.
+- Apply & calculate formula during Excel file assembly.
+- Automatically remove empty paragraphs.
+- Generate various report types, such as, charts, lists, tables etc.
+- Load templates from HTML as well as save assembled documents to HTML with resources.
 
-Please find more details for how to run the examples [here](https://docs.groupdocs.com/display/assemblynet/How+to+Run+Examples).
+## Read & Write Microsoft Office Formats
 
-## Resources
+**Microsoft Word:** DOC, DOT, DOCX, DOCM, DOTX, DOTM, RTF\
+**Microsoft Excel:** XLSX, XLSM, XLTX, XLTM, XLSB, XLS, XLT\
+**Microsoft PowerPoint:** PPTX, PPTM, PPSX, PPSM, POT, POTX, POTM, PPT, PPS
 
-+ **Website:** [www.groupdocs.com](https://www.groupdocs.com/)
-+ **Product Home:** [GroupDocs.Assembly for .NET](https://products.groupdocs.com/assembly/net)
-+ **Installation:** [GroupDocs.Assembly for .NET NuGet Package](https://www.nuget.org/packages/GroupDocs.Assembly/)
-+ **API Reference:** [GroupDocs.Assembly for .NET API Reference](https://apireference.groupdocs.com/net/assembly)
-+ **Documentation:** [GroupDocs.Assembly for .NET Documentation](https://docs.groupdocs.com/display/assemblynet/Home)
-+ **Free Support:** [GroupDocs.Assembly for .NET Free Support Forum](https://forum.groupdocs.com/c/assembly)
-+ **Paid Support:** [GroupDocs.Assembly for .NET Paid Support Helpdesk](https://helpdesk.groupdocs.com/)
-+ **Blog:** [GroupDocs.Assembly for .NET Blog](https://blog.groupdocs.com/category/groupdocs-assembly-product-family/)
+## Other Supported Formats
+
+**OpenOffice:** ODS, ODT, OTT, OTP, ODP, OXPS\
+**Email:** EML, MSG, EMLX\
+**Fixed Layout:** PDF, XPS\
+**Web:** HTML, MHTML\
+**Images:** TIFF, SVG\
+**Other:** XML, XAML, TXT, EPUB, PS, PCL, MD
+
+## Platform Independence
+
+GroupDocs.Assembly  for .NET can be used to build applications for Windows, Mac OS X as well as for Linux. Developers may code in PHP, VBScript, Delphi & C++ programming languages while using GroupDocs.Assembly for .BET via COM Interop.
+
+## Getting Started with GroupDocs.Assembly for .NET
+
+Are you ready to give GroupDocs.Assembly for .NET a try? Simply execute `Install-Package GroupDocs.Assembly` from Package Manager Console in Visual Studio to fetch & reference GroupDocs.Assembly assembly in your project. If you already have GroupDocs.Assembly for .Net and want to upgrade it, please execute `Update-Package GroupDocs.Assembly` to get the latest version.
+
+## Generate DOCX from Markdown (MD) Template via C# Code
+
+```csharp
+//Setting up source document template
+const String strDocumentTemplate = "Markdown Templates/ReadMe.md";
+//Setting up destination Markdown reports
+const String strDocumentReport = "Word Reports/ReadMe Out.docx";
+//Setting up description variable
+const string description = "GroupDocs.Assembly for .NET is a class library that enables you to generate documents in popular " +
+    "office and email file formats based upon template documents and data obtained from various sources " +
+    "including databases, XML, JSON, OData, objects of custom .NET types, external documents, and more.";
+
+DocumentAssembler assembler = new DocumentAssembler();
+//Assemble Document
+assembler.AssembleDocument(
+CommonUtilities.GetSourceDocument(strDocumentTemplate),
+CommonUtilities.SetDestinationDocument(strDocumentReport),
+new DataSourceInfo("GroupDocs.Assembly for .NET", "product"),
+new DataSourceInfo(description, "description"));
+}
+```
+
+## Use Excel File as a Data Source to Assemble a Document
+
+```csharp
+string strDocumentTemplate = "Word Templates/Using Spreadsheet as Table of Data.docx";
+string strDocumentReport = "Word Reports/Using Spreadsheet as Table of Data_Output.docx";
+// Assemble a document using the external document table as a data source.
+DocumentAssembler assembler = new DocumentAssembler();
+assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                           CommonUtilities.SetDestinationDocument(strDocumentReport),
+                           new DataSourceInfo(DataLayer.ExcelData(), "contracts"));
+```
+
+[Product Page](https://products.groupdocs.com/assembly/net) | [Documentation](https://docs.groupdocs.com/display/assemblynet/Home) | [Demo](https://products.groupdocs.app/assembly/family) | [API Reference](https://apireference.groupdocs.com/net/assembly) | [Examples](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-.NET) | [Blog](https://blog.groupdocs.com/category/assembly/) | [Free Support](https://forum.groupdocs.com/c/assembly) | [Temporary License](https://purchase.groupdocs.com/temporary-license)
