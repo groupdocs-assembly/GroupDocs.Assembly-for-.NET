@@ -1,39 +1,36 @@
 # .NET Document Automation & Reporting API
 
-An on-premise [Document Automation Engine](https://products.groupdocs.com/assembly/net) that accepts template document and data to assemble reports as per syntax defined by the template. Data can be merged from various sources including CSV, XML, OData, JSON, .NET Objects & more.
+An on-premise [Document Automation Engine](https://products.groupdocs.com/assembly/net) that accepts a template document and data to generate documents as per syntax defined by the template. Data can be merged from various sources including CSV, XML, OData, JSON, .NET Objects & more.
 
 <p align="center">
 
-  <a title="Download complete GroupDocs.Assembly for .NET source code" href="https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/archive/master.zip">
+  <a title="Download GroupDocs.Assembly for .NET Sources" href="https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/archive/master.zip">
 	<img src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" />
   </a>
 </p>
 
 Directory | Description
 --------- | -----------
-[Examples](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Examples)  | Contains the package of all .NET examples and sample files that will help you learn how to use product features. 
-[Plugins](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Plugins)  | Analyze the progress of GroupDocs.Assembly and WinWard while generating the reports, compare code and template preparation. 
+[Examples](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Examples)  | Contain package of all .NET examples and sample files that will help you learn how to use GroupDocs.Assembly for NET to its full extent. 
+[Plugins](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Plugins)  | Analyze the progress while generating reports, compare code and template preparation. 
 [Showcases](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/tree/master/Showcases)  | Web Report Generator is an ASP.NET Web Forms Application that demonstrates the core functionalities provided by GroupDocs.Assembly for .NET.
 
 ## Report Generation via .NET
 
 - Wide range of supported [document formats](https://docs.groupdocs.com/display/assemblynet/Supported+Document+Formats).
-- Capable to manipulate data using formulae & [sequential data](https://docs.groupdocs.com/display/assemblynet/Template+Syntax+-+Part+2+of+2#TemplateSyntax-Part2of2-OutputtingSequentialData) operations.
-- Supports upper, lower, capital, first-cap formatting.
-- Apply Ordinal, Cardinal, Alphabetic & Numeric formatting in template syntax.
-- Dynamically insert document content & hyperlinks in reports.
-- Apply attributes to email message body and dynamically add email attachments.
-- [Generate barcode labels](https://docs.groupdocs.com/display/assemblynet/Working+with+Barcode+Image+Generation) in reports.
-- Dynamically set background color of HTML documents.
-- Apply formatting to numeric, text, image, date-time & chart elements in template.
-- Apply conditional formatting on text elements.
+- Document generation using data from [various sources](https://docs.groupdocs.com/assembly/net/working-with-multiple-data-sources/).
 - LINQ-based template syntax.
+- Manipulate data using formulae & [sequential data](https://docs.groupdocs.com/display/assemblynet/Template+Syntax+-+Part+2+of+2#TemplateSyntax-Part2of2-OutputtingSequentialData) operations.
+- Supports Upper, Lower, Capital, First-Cap content formatting.
+- Apply Ordinal, Cardinal, Alphabetic & Numeric formatting to template syntax.
+- Apply attributes to email message body and dynamically add attachments.
+- [Generate barcode labels](https://docs.groupdocs.com/display/assemblynet/Working+with+Barcode+Image+Generation) in reports.
+- Apply conditional formatting & formatting based on type such as numeric, text, image & date-time.
 - Supports NEXT field analogue of Microsoft Word.
 - Update fields during Word document assembly.
 - Apply & calculate formula during Excel file assembly.
-- Automatically remove empty paragraphs.
-- Generate various report types, such as, charts, lists, tables etc.
-- Load templates from HTML as well as save assembled documents to HTML with resources.
+- Generate various report types, such as, Charts, Lists, Tables etc.
+- Load templates from HTML as well as save assembled documents as HTML with resources.
 
 ## Read & Write Microsoft Office Formats
 
@@ -52,11 +49,11 @@ Directory | Description
 
 ## Platform Independence
 
-GroupDocs.Assembly  for .NET can be used to build applications for Windows, Mac OS X as well as for Linux. Developers may code in PHP, VBScript, Delphi & C++ programming languages while using GroupDocs.Assembly for .NET via COM Interop.
+GroupDocs.Assembly  for .NET can be used to build applications for Windows, Mac OS X as well as for Linux. Developers may code in PHP, VBScript, Delphi & C++ programming languages while using GroupDocs.Assembly for .BET via COM Interop.
 
 ## Getting Started with GroupDocs.Assembly for .NET
 
-Are you ready to give GroupDocs.Assembly for .NET a try? Simply execute `Install-Package GroupDocs.Assembly` from Package Manager Console in Visual Studio to fetch & reference GroupDocs.Assembly assembly in your project. If you already have GroupDocs.Assembly for .NET and want to upgrade it, please execute `Update-Package GroupDocs.Assembly` to get the latest version.
+Are you ready to give GroupDocs.Assembly for .NET a try? Simply execute `Install-Package GroupDocs.Assembly` from Package Manager Console in Visual Studio to fetch & reference GroupDocs.Assembly assembly in your project. If you already have GroupDocs.Assembly for .Net and want to upgrade it, please execute `Update-Package GroupDocs.Assembly` to get the latest version.
 
 ## Generate DOCX from Markdown (MD) Template via C# Code
 
