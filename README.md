@@ -1,6 +1,6 @@
 # .NET Document Automation & Reporting API
 
-An on-premise [Document Automation Engine](https://products.groupdocs.com/assembly/net) that accepts a template document and some data to assemble documents as per syntax defined by the template. Data can be fetched from various sources including CSV, XML, OData, JSON, .NET Objects & more.
+An on-premise [Document Automation Engine](https://products.groupdocs.com/assembly/net) that accepts template document and data to assemble reports as per syntax defined by the template. Data can be merged from various sources including CSV, XML, OData, JSON, .NET Objects & more.
 
 <p align="center">
 
@@ -52,11 +52,11 @@ Directory | Description
 
 ## Platform Independence
 
-GroupDocs.Assembly  for .NET can be used to build applications for Windows, Mac OS X as well as for Linux. Developers may code in PHP, VBScript, Delphi & C++ programming languages while using GroupDocs.Assembly for .BET via COM Interop.
+GroupDocs.Assembly  for .NET can be used to build applications for Windows, Mac OS X as well as for Linux. Developers may code in PHP, VBScript, Delphi & C++ programming languages while using GroupDocs.Assembly for .NET via COM Interop.
 
 ## Getting Started with GroupDocs.Assembly for .NET
 
-Are you ready to give GroupDocs.Assembly for .NET a try? Simply execute `Install-Package GroupDocs.Assembly` from Package Manager Console in Visual Studio to fetch & reference GroupDocs.Assembly assembly in your project. If you already have GroupDocs.Assembly for .Net and want to upgrade it, please execute `Update-Package GroupDocs.Assembly` to get the latest version.
+Are you ready to give GroupDocs.Assembly for .NET a try? Simply execute `Install-Package GroupDocs.Assembly` from Package Manager Console in Visual Studio to fetch & reference GroupDocs.Assembly assembly in your project. If you already have GroupDocs.Assembly for .NET and want to upgrade it, please execute `Update-Package GroupDocs.Assembly` to get the latest version.
 
 ## Generate DOCX from Markdown (MD) Template via C# Code
 
