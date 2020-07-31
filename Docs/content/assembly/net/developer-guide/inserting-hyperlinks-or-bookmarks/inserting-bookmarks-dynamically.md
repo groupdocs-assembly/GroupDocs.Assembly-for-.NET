@@ -40,4 +40,3 @@ Template syntax and usage of Document Assembler is same as above section for dyn
 
 *   [Dynamic Bookmarks.docx](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-.NET/blob/master/Examples/Data/Source/Word%20Templates/Dynamic%20Hyperlink.docx)
 *   [Dynamic Cell Ranges.xlsx](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-.NET/blob/master/Examples/Data/Source/Word%20Templates/Dynamic%20Hyperlink.docx)
- 
