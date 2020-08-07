@@ -77,16 +77,14 @@ new DataSourceInfo(description, "description"));
 }
 ```
 
-## Use Excel File as a Data Source to Assemble a Document
+## Use Word Table as a Source to Assemble a Document
 
 ```csharp
-string strDocumentTemplate = "Word Templates/Using Spreadsheet as Table of Data.docx";
-string strDocumentReport = "Word Reports/Using Spreadsheet as Table of Data_Output.docx";
-// Assemble a document using the external document table as a data source.
+// assemble a document using the external document table as a data source.
 DocumentAssembler assembler = new DocumentAssembler();
 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                            CommonUtilities.SetDestinationDocument(strDocumentReport),
                            new DataSourceInfo(DataLayer.ExcelData(), "contracts"));
 ```
 
-[Product Page](https://products.groupdocs.com/assembly/net) | [Documentation](https://docs.groupdocs.com/display/assemblynet/Home) | [Demo](https://products.groupdocs.app/assembly/family) | [API Reference](https://apireference.groupdocs.com/net/assembly) | [Examples](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-.NET) | [Blog](https://blog.groupdocs.com/category/assembly/) | [Free Support](https://forum.groupdocs.com/c/assembly) | [Temporary License](https://purchase.groupdocs.com/temporary-license)
+[Home](https://www.groupdocs.com/) | [Product Page](https://products.groupdocs.com/assembly/net) | [Documentation](https://docs.groupdocs.com/assembly/net/) | [Demo](https://products.groupdocs.app/assembly/family) | [API Reference](https://apireference.groupdocs.com/assembly/net) | [Examples](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-.NET) | [Blog](https://blog.groupdocs.com/category/assembly/) | [Free Support](https://forum.groupdocs.com/c/assembly) | [Temporary License](https://purchase.groupdocs.com/temporary-license)
