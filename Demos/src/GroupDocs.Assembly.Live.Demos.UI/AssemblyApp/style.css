@@ -1,0 +1,19 @@
+.navbar-inverse, .skin-inverse .navbar {
+    background-color: #000b1b;
+    border-color: #00040f
+}
+
+#DynabicMenuInnerDiv .topheader {
+    z-index: 1000;
+}
+
+.btn-group.saveformat
+{
+    margin-bottom: 10px;
+}
+
+.btn-group.saveformat,
+.btn-group.saveformat input {
+    width: 100px;
+}
+
