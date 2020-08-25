@@ -91,6 +91,8 @@ To specify a barcode type within a barcode tag, you can use one of the predefine
 | dkix | Dutch KIX barcode |
 | codablockF | Codablock F barcode |
 | codablockFGS1 | GS1 Codablock F barcode |
+| code128GS1UPCA | GS1-128 AI 8102 Coupon Extended barcode |
+| databarGS1UPCA | UPCA & GS1 Databar Coupon barcode |
 
 ### Scaling Barcode Symbols
 
@@ -157,12 +159,11 @@ To disable the auto-correction making the engine throw an exception in case of a
 
 ### Setting Barcode Image Resolution
 
-You can set horizontal and vertical resolution for dynamically inserted barcode images in DPI (dots per inch) using the **DocumentAssembler.BarcodeSettings.XResolution** and **DocumentAssembler.BarcodeSettings.YResolution** properties respectively. That is, for example, to set both horizontal and vertical resolution to 300 DPI, you can use the following code:
+You can set horizontal and vertical resolution for dynamically inserted barcode images in DPI (dots per inch) using the **DocumentAssembler.BarcodeSettings.Resolution** property. That is, for example, to set both horizontal and vertical resolution to 300 DPI, you can use the following code:
 
 ```csharp
 DocumentAssembler assembler = new DocumentAssembler();
-assembler.BarcodeSettings.XResolution = 300;
-assembler.BarcodeSettings.YResolution = 300;
+assembler.BarcodeSettings.Resolution = 300;
 
 ```
 

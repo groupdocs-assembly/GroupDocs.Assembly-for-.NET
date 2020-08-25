@@ -2,7 +2,7 @@
 id: groupdocs-assembly-for-net-20-4-release-notes
 url: assembly/net/groupdocs-assembly-for-net-20-4-release-notes
 title: GroupDocs.Assembly for .NET 20.4 Release Notes
-weight: 2
+weight: 80
 description: ""
 keywords: 
 productName: GroupDocs.Assembly for .NET

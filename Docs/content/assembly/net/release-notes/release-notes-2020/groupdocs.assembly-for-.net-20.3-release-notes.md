@@ -2,7 +2,7 @@
 id: groupdocs-assembly-for-net-20-3-release-notes
 url: assembly/net/groupdocs-assembly-for-net-20-3-release-notes
 title: GroupDocs.Assembly for .NET 20.3 Release Notes
-weight: 3
+weight: 90
 description: ""
 keywords: 
 productName: GroupDocs.Assembly for .NET
