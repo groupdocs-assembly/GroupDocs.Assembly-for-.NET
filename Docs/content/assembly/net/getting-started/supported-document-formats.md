@@ -61,7 +61,6 @@ The following table indicates the input and output file formats supported by Gro
 | [MD](https://wiki.fileformat.com/word-processing/md/) | Markdown Documentation File | ![(tick)](assembly/net/images/check.png) | ![(tick)](assembly/net/images/check.png) | ![(tick)](assembly/net/images/check.png) |   |
 | [POT](https://wiki.fileformat.com/presentation/pot/) | PowerPoint template files created by PowerPoint 97-2003 versions | ![(tick)](assembly/net/images/check.png) | ![(tick)](assembly/net/images/check.png) | ![(tick)](assembly/net/images/check.png) |   |
 | [OTP](https://wiki.fileformat.com/presentation/otp/) | OpenDocument Presentation Template | ![(tick)](assembly/net/images/check.png) | ![(tick)](assembly/net/images/check.png) | ![(tick)](assembly/net/images/check.png) |   |
-| [MD](https://wiki.fileformat.com/presentation/md/) | Markdown Document Format | ![(tick)](assembly/net/images/check.png) | ![(tick)](assembly/net/images/check.png) | ![(tick)](assembly/net/images/check.png) |   |
 
 ### Supported Features Detail for Email File Formats
 
