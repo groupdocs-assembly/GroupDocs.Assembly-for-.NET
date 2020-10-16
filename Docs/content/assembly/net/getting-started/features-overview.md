@@ -31,8 +31,7 @@ GroupDocs.Assembly for .NET is an API that allows you to generate documents in p
 *   Auto-removal of empty paragraphs
 *   Generate various report types, e.g., charts, image, tables, lists and more
 *   Inline template syntax errors in generated documents instead of exception throwing.
-*   Load template documents from html with resources and save assembled Word, Excel, PowerPoint & emails to html with resources.
-*   Support to save Markdown documents to Word Processing formats and saving of assembled Word Processing documents and emails to Markdown.
+*   Load template documents from html with resources and save assembled Word, Excel, PowerPoint & emails to html with resources
 
 Following is the detail given about how the features are offered with their usage and limits.
 
@@ -75,25 +74,35 @@ Word Processing Document formats including Microsoft Word Document and OpenOffic
 
 #### Spreadsheet Document Formats
 
-Spreadsheet Document formats including Microsoft Excel Workbook and OpenOffice spreadsheet document formats are supported. For more details, please visit [Support for Spreadsheet Document Formats]({{< ref "assembly/net/supported-document-formats" >}}#SupportedDocumentFormats-SupportforSpreadsheetDocumentFormats).
+Spreadsheet Document formats including Microsoft Excel Workbook and OpenOffice spreadsheet document formats are supported. For more details, please visit [Support for Spreadsheet Document Formats]({{< ref "assembly/net/getting-started/supported-document-formats.md#supportfor-spreadsheet-document-formats" >}}#SupportedDocumentFormats-SupportforSpreadsheetDocumentFormats).
 
 #### Presentation Document Formats
 
-Presentation Document formats including Microsoft PowerPoint Presentation and OpenOffice presentation document formats are supported. For more details, please visit [Support for Presentation Document Formats]({{< ref "/assembly/net/supported-document-formats" >}}#SupportedDocumentFormats-SupportforPresentationDocumentFormats).
+Presentation Document formats including Microsoft PowerPoint Presentation and OpenOffice presentation document formats are supported. For more details, please visit [Support for Presentation Document Formats]({{< ref "assembly/net/getting-started/supported-document-formats.md#supportfor-presentation-document-formats" >}}#SupportedDocumentFormats-SupportforPresentationDocumentFormats).
 
 #### Email Document Formats
 
-Email Document formats is supported. For more details, please visit [Support for Email Document Formats](https://docs.groupdocs.com/assembly/net/supported-document-formats/#supported-features-detail-for-email-file-formats).
-
-#### Markdown Documents Formats
-Saving of assembled Markdown documents to Word Processing formats and saving of assembled Word Processing documents and emails to Markdown.
-[Using Markdown Documents ](https://docs.groupdocs.com/assembly/net/using-markdown-documents/).
+Email Document formats is supported. For more details, please visit [Support for Email Document Formats](https://docs.asposeptyltd.com/display/assemblynet/Supported+Document+Formats#SupportedDocumentFormats-EmailDocumentFormats).
 
 #### More Document Formats
 
-HTML and Plain Text document formats are supported by the GroupDocs.Assembly API. More Document formats including PDF, Epub and XPS document formats will be supported in the future releases. For more details, please visit [Support for more Document Formats]({{< ref "/assembly/net/supported-document-formats).
+HTML and Plain Text document formats are supported by the GroupDocs.Assembly API. More Document formats including PDF, Epub and XPS document formats will be supported in the future releases. For more details, please visit [Support for more Document Formats]({{< ref "assembly/net/getting-started/supported-document-formats.md#supportformore-document-formats" >}}#SupportedDocumentFormats-SupportformoreDocumentFormats).
 
+#### Dynamic Merging of Table Cells
 
+You can merge table cells with equal textual contents within your reports dynamically using **cellMerge** tag. For the detail, please visit [Merging Table Cells Dynamically]({{< ref "assembly/net/developer-guide/working-with-table-reports/merging-table-cells-dynamically.md" >}}).
+
+#### Textual Comments within Template Syntax Tags
+
+An optional comment providing a human-readable explanation ignored by the engine
+
+```csharp
+<<tag_name [expression] –switch1 –switch2 ... // optional_comment >>
+```
+
+#### In-lining of Syntax Error Messages into Templates 
+
+In-lining of syntax error messages into templates instead of exception throwing. For the detail, please visit [Use of In-line Syntax Error Messages into Templates]({{< ref "assembly/net/developer-guide/use-of-in-line-syntax-error-messages-into-templates.md" >}}).
 
 ### Template Elements
 
@@ -235,26 +244,11 @@ Load template documents from html with resources and save assembled Word, Excel,
 ### Numbering Restart in Nested Numbered List 
 
 The GroupDocs.Assembly engine allows restart list numbering within your documents dynamically using *<<restartNum>>* tags. In particular, this feature is useful when working with a nested numbered list within a data band. Please visit [this article]({{< ref "assembly/net/developer-guide/working-with-list-reports-numbered/numbered-list-in-word-processing-document.md#numbering-restart-in-nested-numbered-list" >}}) for more details
-#### Dynamic Merging of Table Cells
-
-You can merge table cells with equal textual contents within your reports dynamically using **cellMerge** tag. For the detail, please visit [Merging Table Cells Dynamically]({{< ref "assembly/net/developer-guide/working-with-table-reports/merging-table-cells-dynamically.md" >}}).
-
-### Textual Comments within Template Syntax Tags
-
-An optional comment providing a human-readable explanation ignored by the engine
-
-```csharp
-<<tag_name [expression] –switch1 –switch2 ... // optional_comment >>
-```
-
-### In-lining of Syntax Error Messages into Templates 
-
-In-lining of syntax error messages into templates instead of exception throwing. For the detail, please visit [Use of In-line Syntax Error Messages into Templates]({{< ref "assembly/net/developer-guide/use-of-in-line-syntax-error-messages-into-templates.md" >}}).
-
 
   
 
   
+
 ## Metered Licensing
 
 The GroupDocs.Assembly.Metered public class has been added to provide metered licensing. This feature is supported in GroupDocs.Assembly for .NET 16.12.0.
