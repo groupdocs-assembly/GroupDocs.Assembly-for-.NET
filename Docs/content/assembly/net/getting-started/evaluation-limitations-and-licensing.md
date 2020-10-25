@@ -29,20 +29,22 @@ The license can be loaded from a file or stream object. The easiest way to set 
 ### Applying License from File
 
 The code below will explain how to call the license file.
-
 {{< gist GroupDocsGists db63054e45146654ff4efeda01f556a2 >}}
-
-
 
 ### Applying License from Stream
 
 The following example shows how to load a license from a stream.
-
 {{< gist GroupDocsGists e6e23199ab4c88f7f60f191a65cdfdc6 >}}
 
+{{< alert style="info" >}}
 
+Calling License.SetLicense multiple times is not harmful but simply wastes processor time. If you are developing a Windows Forms or console application, call License.SetLicense in your startup code, before using GroupDocs.Assembly classes.
 
-{{< alert style="info" >}}Calling License.SetLicense multiple times is not harmful but simply wastes processor time. If you are developing a Windows Forms or console application, call License.SetLicense in your startup code, before using GroupDocs.Assembly classes. When developing an ASP.NET application, you can call License.SetLicense from the Global.asax.cs (Global.asax.vb) file in the Application_Start protected method. It is called once when the application starts. Do not call License.SetLicense from within Page_Load methods since it means the license will be loaded every time a web page is loaded.{{< /alert >}}{{< alert style="info" >}}See this video about applying the license.{{< /alert >}}
+When developing an ASP.NET application, you can call License.SetLicense from the Global.asax.cs (Global.asax.vb) file in the Application_Start protected method. It is called once when the application starts. Do not call License.SetLicense from within Page_Load methods since it means the license will be loaded every time a web page is loaded.
+
+{{< /alert >}}
+
+{{< alert style="info" >}}See this video about applying the license.{{< /alert >}}
 
 ### Applying Metered License
 
@@ -59,7 +61,4 @@ Here are the simple steps to use the `Metered` class.
 7.  It will return the credit that you have consumed so far.
 
 Following is the sample code demonstrating how to use `Metered` class.
-
- {{< gist GroupDocsGists 7d4158b476ad2d413f1e04b03ffc1794 >}}
-
-
+{{< gist GroupDocsGists 7d4158b476ad2d413f1e04b03ffc1794 >}}

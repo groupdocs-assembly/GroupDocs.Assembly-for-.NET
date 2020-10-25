@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Pie Chart report in Spreadsheet Document format based on the use case: Working with a Business Case.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Pie Chart report in Spreadsheet Document format based on the use case: [Working with a Business Case](https://docs.groupdocs.com/assembly/net/working-with-a-business-case/).{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}
 
 ## Pie Chart in Microsoft Excel Document
 
@@ -38,7 +38,6 @@ As a report developer, you are required to share your customers' orders details 
 ```csharp
 Total Order Price<<foreach [in customers]>>
 <<x [CustomerName]>>
-
 ```
 
 #### Chart Data
@@ -47,16 +46,15 @@ Total Order Price<<foreach [in customers]>>
 
 ```csharp
 ="Total Order Price<<y [Order.Sum(c => c.Price)]>>"
-
 ```
 
-{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine.{{< /alert >}}
+{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).{{< /alert >}}
 
-Download Pie Chart Template
+### Download Pie Chart Template
 
 Please download the sample Pie Chart document we created in this article:
 
-*   [Pie Chart.xlsx](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/blob/master/Examples/Data/Source/Spreadsheet%20Templates/Pie%20Chart.xlsx?raw=true) (Template for CustomObject and JSON examples) 
+*   [Pie Chart.xlsx](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/blob/master/Examples/Data/Source/Spreadsheet%20Templates/Pie%20Chart.xlsx?raw=true) (Template for CustomObject and JSON examples)
 *   [Pie Chart\_DB.xlsx](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/blob/master/Examples/Data/Source/Spreadsheet%20Templates/Pie%20Chart_DB.xlsx?raw=true) (Template for DataSet, DataBase and XML examples)
 
 ### Generating The Report

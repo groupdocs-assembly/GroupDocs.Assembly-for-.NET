@@ -46,6 +46,6 @@ In **GroupDocs.Assembly for .NET 1.3.0** user need to edit the template through 
 
 Code to generate reports has been shrunk to fewer lines in **GroupDocs.Assembly for .NET 3.0.0**. A user does not need to write the bulk of lines of code to generate big reports. Instead, he/she will have to write 2 to 3 lines of code to generate business documents and reports.
 
-{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer{{< /alert >}}{{< gist GroupDocsGists 73103f412435effbc30b8f2c5b2366ba >}}
+{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/){{< /alert >}}
 
-
+{{< gist GroupDocsGists 73103f412435effbc30b8f2c5b2366ba >}}

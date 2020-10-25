@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Common List Image report in Word Processing Document format based on the use case: Working with a Business Case.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Common List Image report in Word Processing Document format based on the use case: [Working with a Business Case](https://docs.groupdocs.com/assembly/net/working-with-a-business-case/).{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}
 
 ## Common List in Microsoft Word Document
 
@@ -27,13 +27,15 @@ As a report developer, you are required to represent the information of the cust
 *   A report must show multiple customers' picture and name.
 *   A report must be generated in the Word Processing Document.  
       
-    
+  
 
-{{< alert style="info" >}}See how to use images in MS Word here.{{< /alert >}}
+{{< alert style="info" >}}See how to use images in MS Word [here](https://www.youtube.com/watch?v=jIX01CSvo8Q&index=9&list=PL25CTxMCj5vOzsaE9Rwjwd4-OwvdaWmJ8).{{< /alert >}}
 
 ### Adding Syntax to be evaluated by GroupDocs.Assembly Engine
 
-{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine.{{< /alert >}}
+<img src="common-list-image-word-processing-document.png" alt="common-list-image-word-processing-document" style="width:230px"/>
+
+{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).{{< /alert >}}
 
 Download Common List Template
 
@@ -41,7 +43,6 @@ Please download the sample Common List document we created in this article:
 
 *   [Common List.docx](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/blob/master/Examples/Data/Source/Word%20Templates/Common%20List.docx?raw=true)  
       
-    
 
 {{< alert style="warning" >}}Use this template for DB, Dataset, JSON and XML examples also.{{< /alert >}}
 

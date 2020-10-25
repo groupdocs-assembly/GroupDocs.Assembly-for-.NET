@@ -41,7 +41,7 @@ GroupDocs.Assembly for .NET is capable to recognize and load multiple document f
 The following table shows which output file formats are supported by GroupDocs.Assembly depending on input file formats:
 
 | Input File Formats (from left to right) and Output File Formats (top down) | Word Processing (DOC, DOCX, DOCM, DOT, DOTX, DOTM, WordprocessingML, RTF, ODT, OTT) | Spreadsheet (XLS, XLSX, XLSM, XLTX, XLTM, XLSB, SpreadsheetML, ODS) | Presentation (PPT, PPTX, PPTM, PPS, PPSX, PPSM, POT, POTX, POTM, ODP, OTP) | Email (EML, EMLX, MSG) | HTML, Markdown, and Plain Text |
-| --- | --- | --- | --- | --- | --- |
+| :- | :- | :- | :- | :- | :- |
 | **Word Processing (DOC, DOCX, DOCM, DOT, DOTX, DOTM, WordprocessingML, RTF, ODT, OTT)** | Supported | Not Supported | Not Supported | Supported | Supported |
 | **Spreadsheet (XLS, XLSX, XLSM, XLTX, XLTM, XLSB, SpreadsheetML, ODS)** | Not Supported | Supported | Not Supported | Not Supported | Not Supported |
 | **Presentation (PPT, PPTX, PPTM, PPS, PPSX, PPSM, POT, POTX, POTM, ODP, OTP)** | Not Supported | Not Supported | Supported | Not Supported | Not Supported |

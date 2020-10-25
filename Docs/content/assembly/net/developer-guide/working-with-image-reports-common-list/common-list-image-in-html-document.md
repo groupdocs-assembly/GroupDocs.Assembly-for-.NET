@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Common List report in HTML Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}{{< alert style="info" >}}This feature is supported by version 17.03 or greater.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Common List report in HTML Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}{{< alert style="info" >}}This feature is supported by version 17.03 or greater.{{< /alert >}}
 
 ## Common List in HTML Document
 
@@ -20,6 +20,8 @@ As a report developer, you are required to share the following key requirements:
 *   A report must be generated in the HTML Document format.
 
 ### Adding Syntax to be evaluated by GroupDocs.Assembly Engine
+
+<img src="common-list-image-word-processing-document.png" alt="common-list-image-word-processing-document" style="width:230px"/>
 
 ### Download Common List Template
 

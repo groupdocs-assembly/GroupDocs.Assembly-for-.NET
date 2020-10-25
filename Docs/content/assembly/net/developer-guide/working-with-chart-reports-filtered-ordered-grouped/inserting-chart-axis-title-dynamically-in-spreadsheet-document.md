@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}{{< alert style="info" >}}This feature is supported by version 18.1 or greater.{{< /alert >}}
+{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}{{< alert style="info" >}}This feature is supported by version 18.1 or greater.{{< /alert >}}
 
 ## Column Chart in Microsoft Excel Document
 
@@ -40,7 +40,6 @@ As a report developer, you are required to share orders quantity of the customer
 .Where(c => c.OrderDate.Year == 2015)
 .GroupBy(c => c.Customer)
 .OrderBy(g => g.Key.CustomerName)]>><<x [Key.CustomerName]>>
-
 ```
 
 #### Chart Data
@@ -52,7 +51,6 @@ As a report developer, you are required to share orders quantity of the customer
 ="2nd Quarter<<y [Where(c => c.OrderDate.Month >= 4 && c.OrderDate.Month <= 6).Sum(c => c.ProductQuantity)]>>"
 ="3rd Quarter<<y [Where(c => c.OrderDate.Month >= 7 && c.OrderDate.Month <= 9).Sum(c => c.ProductQuantity)]>>"
 ="4th Quarter<<y [Where(c => c.OrderDate.Month >= 10 && c.OrderDate.Month <= 12).Sum(c => c.ProductQuantity)]>>"
-
 ```
 
 ### Download Template

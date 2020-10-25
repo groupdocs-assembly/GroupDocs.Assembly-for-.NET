@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}
 
 ## Bubble Chart in Microsoft Excel Document
 
@@ -20,7 +20,7 @@ Please follow below steps to create a Bubble Chart in MS Excel 2013:
 2.  Click on the workbook where you want to insert the chart, click the "Insert" tab, and then click "Insert Scatter Chart Icon" in the charts group.
 3.  A drop-down with charts will appear, select the "Bubble" and press "OK" to insert the chart.
 4.  Click on the chart you just inserted, then click the "Select Data" icon in Data group.
-5.  Add legend entries. See [Chart Data]({{< ref "assembly/net/developer-guide/working-with-chart-reports-bubble/bubble-chart-in-spreadsheet-document.md" >}})
+5.  Add legend entries. See [Chart Data]({{< ref "assembly/net/developer-guide/working-with-chart-reports-bubble/bubble-chart-in-spreadsheet-document.md" >}}).
 6.  Save your Document.
 
 ### Reporting Requirement
@@ -50,7 +50,7 @@ Orders Prices by Months<<foreach [in orders
 
 ```
 
-{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine.{{< /alert >}}
+{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).{{< /alert >}}
 
 ### Download Bubble Chart Template
 
