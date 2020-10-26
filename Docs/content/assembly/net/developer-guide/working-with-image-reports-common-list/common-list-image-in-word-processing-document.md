@@ -33,7 +33,7 @@ As a report developer, you are required to represent the information of the cust
 
 ### Adding Syntax to be evaluated by GroupDocs.Assembly Engine
 
-<img src="common-list-image-word-processing-document.png" alt="common-list-image-word-processing-document" style="width:230px"/>
+<img src="/assembly/net/images/common-list-image-word-processing-document.png" alt="common-list-image-word-processing-document" style="width:230px"/>
 
 {{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).{{< /alert >}}
 

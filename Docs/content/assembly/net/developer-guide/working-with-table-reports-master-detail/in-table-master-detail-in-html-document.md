@@ -50,7 +50,7 @@ As a report developer, you are required to represent customers' total orders pri
 
 {{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).{{< /alert >}}
 
-Download  In-Table Master-Detail Template
+### Download  In-Table Master-Detail Template
 
 Please download the sample In-Table Master-Detail document we created in this article:
 

@@ -21,7 +21,7 @@ As a report developer, you are required to share the following key requirements:
 
 ### Adding Syntax to be evaluated by GroupDocs.Assembly Engine
 
-<img src="common-list-image-word-processing-document.png" alt="common-list-image-word-processing-document" style="width:230px"/>
+<img src="/assembly/net/images/common-list-image-word-processing-document.png" alt="common-list-image-word-processing-document" style="width:230px"/>
 
 ### Download Common List Template
 

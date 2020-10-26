@@ -42,7 +42,6 @@ As a report developer, you are required to share the information of the products
 We provide support for the following products:
 <<foreach [in products]>>
 -          <<[ProductName]>><</foreach>>
-
 ```
 
 **Multiple-Cell List**
@@ -50,14 +49,12 @@ We provide support for the following products:
 ```csharp
 We provide support for the following products:
 <<foreach [in products]>>-          <<[ProductName]>>
-
 ```
 
 close the foreach loop in next column
 
 ```csharp
 <</foreach>>
-
 ```
 
 {{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).{{< /alert >}}
