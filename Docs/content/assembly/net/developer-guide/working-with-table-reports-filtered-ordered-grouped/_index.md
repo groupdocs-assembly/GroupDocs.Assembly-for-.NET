@@ -8,6 +8,4 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-# Working with Table Reports - Filtered, Ordered, Grouped
-
 ###### Articles in this section

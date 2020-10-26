@@ -26,25 +26,27 @@ As a report developer, you are required to represent the information of the cust
 
 <<foreach \[in customers\]>>
 
-![](data:image/jpeg;base64,<<[Photo]>>)
+<table class="gd-assembly1"cellspacing="0" cellpadding="0" style="border-collapse: collapse; float: bottom; margin-top: 0pt; margin-right: 9pt; margin-bottom: 0pt; margin-left: 9pt; width: 132.15pt; height: 132.15pt ">
+	<tbody>
+		<tr>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
 
-**<<\[CustomerName\]>>**
+**&lt;&lt;[CustomerName]>>**
 
 **Products:**
 
-**
+**&lt;&lt;foreach [in Order]>><<[IndexOf() != 0 ? ", " : ""]>>**
 
-<<foreach \[in Order\]>><<\[IndexOf() != 0 ? ", " : ""\]>>
+**&lt;&lt;[Product.ProductName]>>**
 
-<<\[Product.ProductName\]>>
+**&lt;&lt;/foreach>>**
 
-**
+&lt;&lt;/foreach>>
 
-**<</foreach>>**
-
-<</foreach>>
-
- {{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine{{< /alert >}}
+ {{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).{{< /alert >}}
 
 ### Download Common Master-Detail Template
 
@@ -54,6 +56,6 @@ Please download the sample Common master-detail document we created in this arti
 
 ### Generating The Report
 
-{{< alert style="info" >}}The code uses some of the objects defined in: The Business Layer{{< /alert >}}{{< gist rida-fatima-aspose 31319a8a70569c70ad671106eeb1404b >}}
+{{< alert style="info" >}}The code uses some of the objects defined in: [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}{{< gist rida-fatima-aspose 31319a8a70569c70ad671106eeb1404b >}}
 
 

@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Scatter Chart report in Spreadsheet Document format based on the use case: Working with a Business Case.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Scatter Chart report in Spreadsheet Document format based on the use case: [Working with a Business Case](https://docs.groupdocs.com/assembly/net/working-with-a-business-case/).{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}
 
 ## Scatter Chart in Microsoft Excel Document
 
@@ -20,7 +20,7 @@ Please follow below steps to create Scatter Chart in MS Excel 2013:
 2.  Click in the workbook where you want to insert the chart, click the "Insert" tab, and then click "Insert Scatter Chart Icon" in the charts group.
 3.  A drop-down with charts will appear, select the "Scatter" and press "OK" to insert the chart.
 4.  Click on the chart you just inserted, then click the "Change Data" icon in Data group.
-5.  Now add legend entries. See [Chart Data]({{< ref "assembly/net/developer-guide/working-with-chart-reports-scatter/scatter-chart-in-spreadsheet-document.md" >}})
+5.  Now add legend entries. See [Chart Data]({{< ref "assembly/net/developer-guide/working-with-chart-reports-scatter/scatter-chart-in-spreadsheet-document.md" >}}).
 6.  Save your Document.
 
 ### Reporting Requirement
@@ -38,7 +38,6 @@ As a report developer, you are required to show your customers' orders prices by
 ```csharp
 Total Order Prices by Months<<foreach [in orders
 .GroupBy(c => c.OrderDate.Month)]>>
-
 ```
 
 #### Chart Data
@@ -47,10 +46,9 @@ Total Order Prices by Months<<foreach [in orders
 
 ```csharp
 ="Total Order Price<<x [Key]>><<y [Sum(c => c.Price)]>>"
-
 ```
 
-{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine{{< /alert >}}
+{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).{{< /alert >}}
 
 ### Download Scatter Chart Template
 

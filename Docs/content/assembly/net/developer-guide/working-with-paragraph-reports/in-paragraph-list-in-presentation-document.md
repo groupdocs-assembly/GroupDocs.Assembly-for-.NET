@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a In-Paragraph List report in Presentation Document format based on the use case: Working with a Business Case.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a In-Paragraph List report in Presentation Document format based on the use case: [Working with a Business Case](https://docs.groupdocs.com/assembly/net/working-with-a-business-case/).{{< /alert >}}
 
 ## In-Paragraph List in Microsoft PowerPoint Document
 
@@ -35,10 +35,9 @@ We provide support for the following products:
 <<foreach [in products]>><<[IndexOf() != 0 ? ", " : ""]>>
 <<[ProductName]>>
 <</foreach>>
-
 ```
 
-{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine{{< /alert >}}
+{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).{{< /alert >}}
 
 ### Download In-Paragraph List Template
 
@@ -51,31 +50,31 @@ Please download the sample In-Paragraph List document we created in this article
 
 #### Custom Objects
 
-{{< alert style="info" >}}The code uses some of the objects defined in: The Business Layer{{< /alert >}}{{< gist atirtahirgroupdocs bd5557c6afce363c91b4 >}}
+{{< alert style="info" >}}The code uses some of the objects defined in: [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/){{< /alert >}}{{< gist atirtahirgroupdocs bd5557c6afce363c91b4 >}}
 
 
 
 #### Database Entities
 
-{{< alert style="info" >}}The code uses some of the objects defined in: The Business Layer{{< /alert >}}{{< gist atirtahirgroupdocs 7af1f7c4d8657f446fbb >}}
+{{< alert style="info" >}}The code uses some of the objects defined in: [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/){{< /alert >}}{{< gist atirtahirgroupdocs 7af1f7c4d8657f446fbb >}}
 
 
 
 #### Using DataSet
 
-{{< alert style="info" >}}The code uses some of the objects defined in: The Business Layer{{< /alert >}}{{< gist atirtahirgroupdocs 5eece4a7628ce469d578 >}}
+{{< alert style="info" >}}The code uses some of the objects defined in: [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/){{< /alert >}}{{< gist atirtahirgroupdocs 5eece4a7628ce469d578 >}}
 
 
 
 #### Using XML DataSource
 
-{{< alert style="info" >}}The code uses some of the objects defined in: The Business Layer{{< /alert >}}{{< gist atirtahirgroupdocs 93708a50854ca5c5bae8 >}}
+{{< alert style="info" >}}The code uses some of the objects defined in: [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/){{< /alert >}}{{< gist atirtahirgroupdocs 93708a50854ca5c5bae8 >}}
 
 
 
 #### Using JSON DataSource
 
-{{< alert style="info" >}}The code uses some of the objects defined in: The Business Layer{{< /alert >}}{{< gist atirtahirgroupdocs 213cf34e8727ab1d224a >}}
+{{< alert style="info" >}}The code uses some of the objects defined in: [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/){{< /alert >}}{{< gist atirtahirgroupdocs 213cf34e8727ab1d224a >}}
 
 
 
@@ -101,31 +100,31 @@ In this topic, we'll not reinvent the wheel to recreate a template for generatin
 
 #### Custom Objects
 
-{{< alert style="info" >}}The code uses some of the objects defined in: The Business Layer{{< /alert >}}{{< gist atirtahirgroupdocs 67b2109c81d174ecea7c >}}
+{{< alert style="info" >}}The code uses some of the objects defined in: [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/){{< /alert >}}{{< gist atirtahirgroupdocs 67b2109c81d174ecea7c >}}
 
 
 
 #### Database Entities
 
-{{< alert style="info" >}}The code uses some of the objects defined in: The Business Layer{{< /alert >}}{{< gist atirtahirgroupdocs 1ce821c079b3f54c1272 >}}
+{{< alert style="info" >}}The code uses some of the objects defined in: [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/){{< /alert >}}{{< gist atirtahirgroupdocs 1ce821c079b3f54c1272 >}}
 
 
 
 #### Using DataSet
 
-{{< alert style="info" >}}The code uses some of the objects defined in: The Business Layer{{< /alert >}}{{< gist atirtahirgroupdocs 464b40a30fc1fee5cd38 >}}
+{{< alert style="info" >}}The code uses some of the objects defined in: [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/){{< /alert >}}{{< gist atirtahirgroupdocs 464b40a30fc1fee5cd38 >}}
 
 
 
 #### Using XML DataSource
 
-{{< alert style="info" >}}The code uses some of the objects defined in: The Business Layer{{< /alert >}}{{< gist atirtahirgroupdocs 8123d5ed9e9d796def53 >}}
+{{< alert style="info" >}}The code uses some of the objects defined in: [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/){{< /alert >}}{{< gist atirtahirgroupdocs 8123d5ed9e9d796def53 >}}
 
 
 
 #### Using JSON DataSource
 
-{{< alert style="info" >}}The code uses some of the objects defined in: The Business Layer{{< /alert >}}{{< gist atirtahirgroupdocs 0342489311290a4fa12c >}}
+{{< alert style="info" >}}The code uses some of the objects defined in: [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/){{< /alert >}}{{< gist atirtahirgroupdocs 0342489311290a4fa12c >}}
 
 
 

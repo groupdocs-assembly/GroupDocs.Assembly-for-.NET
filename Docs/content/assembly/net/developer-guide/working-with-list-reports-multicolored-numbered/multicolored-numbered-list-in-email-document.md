@@ -34,8 +34,11 @@ As a report developer, you are required to represent the following key requireme
 ### Adding Syntax to be evaluated by GroupDocs.Assembly Engine
 
 We provide support for the following products:
+
 1.<<foreach \[in getClients()\]>><<if \[indexOf() % 2 == 0\]>>      <<\[numberOf()\]>>.    <<\[ProductName\]>>
+
 2.<p style="background-color: #FFFF00"> &lt;&lt;else>>      &lt;&lt;[numberOf()]>>.      &lt;&lt;[ProductName]>> </p>
+
 <</if>><</foreach>>
 
 {{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).{{< /alert >}}

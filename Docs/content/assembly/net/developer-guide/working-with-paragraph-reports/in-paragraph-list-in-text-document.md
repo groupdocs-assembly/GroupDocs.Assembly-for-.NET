@@ -29,10 +29,9 @@ We provide support for the following products:
 <<foreach [in products]>><<[IndexOf() != 0 ? ", " : ""]>>
 <<[ProductName]>>
 <</foreach>>
-
 ```
 
-{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine{{< /alert >}}
+{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).{{< /alert >}}
 
 ### Download In-Paragraph List Template
 
@@ -42,6 +41,4 @@ Please download the sample Common List document we created in this article:
 
 ### Generating The Report
 
-{{< alert style="info" >}}The code uses some of the objects defined in: The Business Layer{{< /alert >}}{{< gist rida-fatima-aspose 40e7c4bc866aaea56a060a956e99a6d1 >}}
-
-
+{{< alert style="info" >}}The code uses some of the objects defined in: [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}{{< gist rida-fatima-aspose 40e7c4bc866aaea56a060a956e99a6d1 >}}

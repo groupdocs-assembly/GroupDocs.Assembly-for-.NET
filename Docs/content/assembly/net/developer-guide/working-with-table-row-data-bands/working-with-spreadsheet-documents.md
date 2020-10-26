@@ -8,20 +8,32 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}This feature is supported by version 18.2 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}This feature is supported by version 18.2 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}
 
 ## Working with Spreadsheet Documents
 
 GroupDocs.Assembly allows you to use data bands in table rows in **Spreadsheet Documents**. A table-row data band is a data band which body occupies single or multiple rows of a single document table. The body of such a band starts at the beginning of the first occupied row and ends at the end of the last occupied row as follows. The syntax for using data bands in spreadsheet document is as follows:
 
-<table class="confluenceTable"><tbody><tr><td class="confluenceTd"><p><strong>Client</strong></p></td><td class="confluenceTd"><p><strong>Manager</strong></p></td><td class="confluenceTd"><p><strong>Contract Price</strong></p></td></tr><tr><td class="confluenceTd"><p><strong>&lt;&lt;foreach [</strong></p><p><strong>&nbsp;&nbsp;&nbsp; c in ds</strong></p><p><strong>]&gt;&gt;&lt;&lt;[c.Client]&gt;&gt;</strong></p></td><td class="confluenceTd"><p><strong>&lt;&lt;[c.Manager]&gt;&gt;</strong></p></td><td class="confluenceTd"><p><strong>&lt;&lt;[c.Price]&gt;&gt;&lt;&lt;/</strong></p><p><strong>foreach&gt;&gt;</strong></p></td></tr></tbody></table>
+<table class="gd-assembly">
+	<tbody>
+		<tr>
+			<td>Manager</td>
+			<td>Manager</td>
+			<td>Contract Price</td>
+		</tr>
+		<tr>
+			<td>&lt;&lt;foreach [c in ds]>>&lt;&lt;[c.Client]>></td>
+			<td>&lt;&lt;[c.Manager]>></td>
+			<td>&lt;&lt;[c.Price]>>&lt;&lt;/foreach>></td>
+		</tr>
+	</tbody>
+</table>
 
 ### Working with Table-Row Conditional Blocks
 
 You can also use a table-row conditional block which body occupies single or multiple rows of a single document table. The body of such a block (as well as the body of its every template option) starts at the beginning of the first occupied row and ends at the end of the last occupied row as follows:
 
 <table class="confluenceTable"><tbody><tr><td class="confluenceTd"><p><strong>&nbsp;</strong></p></td><td class="confluenceTd"><p><strong>&nbsp;</strong></p></td><td class="confluenceTd"><p><strong>&nbsp;</strong></p></td></tr><tr><td class="confluenceTd"><p><strong>&lt;&lt;if ...&gt;&gt; ...</strong></p></td><td class="confluenceTd"><p><strong>...</strong></p></td><td class="confluenceTd"><p><strong>...</strong></p></td></tr><tr><td class="confluenceTd"><p><strong>...</strong></p></td><td class="confluenceTd"><p><strong>...</strong></p></td><td class="confluenceTd"><p><strong>...</strong></p></td></tr><tr><td class="confluenceTd"><p><strong>&lt;&lt;elseif ...&gt;&gt; ...</strong></p></td><td class="confluenceTd"><p><strong>...</strong></p></td><td class="confluenceTd"><p><strong>...</strong></p></td></tr><tr><td class="confluenceTd"><p><strong>...</strong></p></td><td class="confluenceTd"><p><strong>...</strong></p></td><td class="confluenceTd"><p><strong>...</strong></p></td></tr><tr><td class="confluenceTd"><p><strong>&lt;&lt;else&gt;&gt; ...</strong></p></td><td class="confluenceTd"><p><strong>...</strong></p></td><td class="confluenceTd"><p><strong>...</strong></p></td></tr><tr><td class="confluenceTd"><p><strong>...</strong></p></td><td class="confluenceTd"><p><strong>...</strong></p></td><td class="confluenceTd"><p><strong>...</strong></p></td></tr><tr><td class="confluenceTd"><p><strong>...</strong></p></td><td class="confluenceTd"><p><strong>...</strong></p></td><td class="confluenceTd"><p><strong>... &lt;&lt;/if&gt;&gt;</strong></p></td></tr><tr><td class="confluenceTd"><p><strong>&nbsp;</strong></p></td><td class="confluenceTd"><p><strong>&nbsp;</strong></p></td><td class="confluenceTd"><p><strong>&nbsp;</strong></p><div><strong><br></strong></div></td></tr></tbody></table>
-
 ### Download
 
 #### Data Source Document

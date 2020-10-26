@@ -27,10 +27,9 @@ As a report developer, you are required to describe the services you are providi
 ```csharp
 We provide support for the following products: <<foreach [in products]>>
 <<[indexOf() != 0 ? ", " : ""]>><<[ProductName]>><</foreach>>
-
 ```
 
-{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine{{< /alert >}}
+{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).{{< /alert >}}
 
 ### Download In-Paragraph List Template
 
@@ -40,6 +39,6 @@ Please download the sample Common List document we created in this article:
 
 ### Generating The Report
 
-{{< alert style="info" >}}The code uses some of the objects defined in: The Business Layer{{< /alert >}}{{< gist rida-fatima-aspose ff54dc56129ac0115dd6f2d61dc9fa8c >}}
+{{< alert style="info" >}}The code uses some of the objects defined in: [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}{{< gist rida-fatima-aspose ff54dc56129ac0115dd6f2d61dc9fa8c >}}
 
 

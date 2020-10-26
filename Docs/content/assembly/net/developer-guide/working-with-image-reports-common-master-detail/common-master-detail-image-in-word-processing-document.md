@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Common Master-Detail Image report in Word Processing Document format based on the use case: Working with a Business Case{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Common Master-Detail Image report in Word Processing Document format based on the use case: [Working with a Business Case](https://docs.groupdocs.com/assembly/net/working-with-a-business-case/).{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}
 
 ## Common Master-Detail Image in Microsoft Word Document
 
@@ -28,23 +28,33 @@ As a report developer, you are required to represent the information of the cust
 *   It must associate the customers with their products.
 *   Report must be generated in the Word Processing Document.  
       
-    
+  
 
 {{< alert style="info" >}}See how to use images in MS Word here.{{< /alert >}}
 
 ### Adding Syntax to be evaluated by GroupDocs.Assembly Engine
 
-<<foreach \[in customers\]>>
+&lt;&lt;foreach \[in customers\]>>
 
-<table cellspacing="0" cellpadding="0" style="border-collapse: collapse; float: left; margin-top: 0pt; margin-right: 9pt; margin-bottom: 0pt; margin-left: 9pt; width: 132.15pt;"><tbody><tr style="height: 112pt;"><td style="border-bottom-color: rgb(0, 0, 0); border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: rgb(0, 0, 0); border-left-style: solid; border-left-width: 0.75pt; border-right-color: rgb(0, 0, 0); border-right-style: solid; border-right-width: 0.75pt; border-top-color: rgb(0, 0, 0); border-top-style: solid; border-top-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: top; width: 120.6pt;"><p style="font-size: 11pt; line-height: 108%; margin-top: 0pt; margin-right: 0pt; margin-bottom: 8pt; margin-left: 0pt;"><span style="font-family: Calibri; font-size: 11pt;">&lt;&lt;image [</span><span style="font-family: Calibri; font-size: 11pt;">customer.</span><span style="font-family: Calibri; font-size: 11pt;">Photo</span><span style="font-family: Calibri; font-size: 11pt;">]&gt;&gt;</span></p></td></tr></tbody></table>
+<table class="gd-assembly1"cellspacing="0" cellpadding="0" style="border-collapse: collapse; float: bottom; margin-top: 0pt; margin-right: 9pt; margin-bottom: 0pt; margin-left: 9pt; width: 132.15pt; height: 132.15pt ">
+	<tbody>
+		<tr>
+			<td style="vertical-align: top;">&lt;&lt;image [customer.Photo]>></td>
+		</tr>
+	</tbody>
+</table>
 
-<<\[CustomerName\]>>
+**&lt;&lt;[CustomerName]>>**
 
-Products: <<foreach \[in Order\]>><<\[IndexOf() != 0 ? ", " : ""\]>><<\[Product.ProductName\]>><</foreach>>
+**Products: &lt;&lt;foreach [in Order]>>&lt;&lt;[IndexOf() != 0 ? ", " : ""]>>&lt;&lt;[Product.ProductName]>>&lt;&lt;/foreach>>**
 
-<</foreach>>
+&lt;&lt;/foreach>>
 
-{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine{{< /alert >}}
+{{< alert style="success" >}}
+
+For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).
+
+{{< /alert >}}
 
 ### Download Common Master-DetailTemplate
 
@@ -57,7 +67,7 @@ Please download the sample Common Master-Detail document we created in this arti
 
 #### Custom Objects
 
-//<!\[CDATA\[ function debug() { } // \]\]>//<!\[CDATA\[ // \]\]>//<!\[CDATA\[ // \]\]>//<!\[CDATA\[ // \]\]>//<!\[CDATA\[ // \]\]>//<!\[CDATA\[ Cloak.closeHTML = "<img src=\\'/download/resources/net.customware.confluence.plugin.composition:toggle-cloak/img/navigate\_down\_10.gif\\'/>"; Cloak.openHTML = "<img src=\\'/download/resources/net.customware.confluence.plugin.composition:toggle-cloak/img/navigate\_right\_10.gif\\'/>"; Cloak.toggleZone = true; Cloak.memoryDuration = 0; Cloak.memoryPrefix = "contentId:34439204"; Cloak.memoryPath = "/"; // \]\]>.cloakToggle { cursor: pointer; }//<!\[CDATA\[ // \]\]>//<!\[CDATA\[ // \]\]>//<!\[CDATA\[ Deck.memoryDuration = 0; Deck.memoryPrefix = "contentId:34439204"; Deck.memoryPath = "/"; // \]\]>{{< gist GroupDocsGists f659589cae0f24c5500f9e2fd39c8ff5 >}}
+{{< gist GroupDocsGists f659589cae0f24c5500f9e2fd39c8ff5 >}}
 
 
 
