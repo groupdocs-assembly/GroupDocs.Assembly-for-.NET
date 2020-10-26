@@ -38,7 +38,7 @@ As a report developer, you are required to represent your products and their pri
 			<td>Products</td>
 			<td>Order Price</td>
 		</tr>
-		<tr>
+		<tr align="center">
 			<td colspan="2">&lt;&lt;if [!Any()]>>No data</td>
 		</tr>
 		<tr>
