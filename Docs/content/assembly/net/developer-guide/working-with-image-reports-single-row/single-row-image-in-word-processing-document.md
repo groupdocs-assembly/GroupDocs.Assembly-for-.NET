@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Single Row Image report in Word Processing Document format based on the use case: Working with a Business Case.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Single Row Image report in Word Processing Document format based on the use case: [Working with a Business Case](https://docs.groupdocs.com/assembly/net/working-with-a-business-case/).{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}
 
 ## Single Row Image in Microsoft Word Document
 
@@ -29,23 +29,22 @@ As a report developer, you are required to represent information of first single
 *   It must show Name and Contact Number of the customer
 *   The report must be generated in the Word Processing Document.  
       
-    
+  
 
-{{< alert style="info" >}}See how to use images in MS Word here.{{< /alert >}}
+{{< alert style="info" >}}See how to use images in MS Word [here](https://www.youtube.com/watch?v=vTef7N7NAvg&index=3&list=PLoVseBOSg-uQ2pLcb_hyZO2KRl0fKBQlE).{{< /alert >}}
 
 ### Adding Syntax to be evaluated by GroupDocs.Assembly Engine
 
 <table cellspacing="0" cellpadding="0" style="border-collapse: collapse; margin-left: 0pt;"><tbody><tr><td style="padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 118.25pt;"><table cellspacing="0" cellpadding="0" style="border-collapse: collapse; float: left; margin-top: 0pt; margin-right: 9pt; margin-bottom: 0pt; margin-left: 9pt; width: 122pt;"><tbody><tr style="height: 112pt;"><td style="border-bottom-color: rgb(0, 0, 0); border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: rgb(0, 0, 0); border-left-style: solid; border-left-width: 0.75pt; border-right-color: rgb(0, 0, 0); border-right-style: solid; border-right-width: 0.75pt; border-top-color: rgb(0, 0, 0); border-top-style: solid; border-top-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: top; width: 110.45pt;"><p style="font-size: 11pt; line-height: 108%; margin-top: 0pt; margin-right: 0pt; margin-bottom: 8pt; margin-left: 0pt;"><span style="font-family: Calibri; font-size: 11pt;">&lt;&lt;image [</span><span style="font-family: Calibri; font-size: 11pt;">customer.</span><span style="font-family: Calibri; font-size: 11pt;">Photo</span><span style="font-family: Calibri; font-size: 11pt;">]&gt;&gt;</span></p></td></tr></tbody></table><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"></p></td><td style="padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 316.1pt;"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="font-family: Calibri; font-size: 11pt;">&nbsp;</span></p><table cellspacing="0" cellpadding="0" style="border-collapse: collapse; margin-left: 0pt;"><tbody><tr><td style="padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 43.95pt;"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="font-family: Calibri; font-size: 14pt; font-weight: bold;">Name:</span></p></td><td style="padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 274.6pt;"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="font-family: Calibri; font-size: 16pt; font-weight: bold;">&lt;&lt;[</span><span style="font-family: Calibri; font-size: 16pt; font-weight: bold;">customer</span><span style="font-family: Calibri; font-size: 16pt; font-weight: bold;">.</span><span style="font-family: Calibri; font-size: 16pt; font-weight: bold;">Customer</span><span style="font-family: Calibri; font-size: 16pt; font-weight: bold;">Name</span><span style="font-family: Calibri; font-size: 16pt; font-weight: bold;">]&gt;&gt;</span></p></td></tr><tr><td style="padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 75.9pt;"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="font-family: Calibri; font-size: 16pt; font-weight: bold;">Contact Number</span><span style="font-family: Calibri; font-size: 16pt; font-weight: bold;">:</span></p></td><td style="padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 218.1pt;"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="font-family: Calibri; font-size: 16pt;">&lt;&lt;[</span><span style="font-family: Calibri; font-size: 16pt;">customer</span><span style="font-family: Calibri; font-size: 16pt;">.</span><span style="font-family: Calibri; font-size: 16pt;">CustomerContactNumber</span><span style="font-family: Calibri; font-size: 16pt;">]&gt;&gt;</span></p></td></tr></tbody></table><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"></p></td></tr></tbody></table>
+{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).{{< /alert >}}
 
-{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine.{{< /alert >}}
-
-Download Single Row Template
+### Download Single Row Template
 
 Please download the sample Single Row document we created in this article:
 
 *   [Single Row.docx](https://github.com/groupdocsassembly/GroupDocs_Assembly_NET/blob/master/Examples/Data/Source/Word%20Templates/Single%20Row.docx?raw=true)  
       
-    
+  
 
 {{< alert style="warning" >}}Use this template for DB, Dataset, JSON and XML examples also.{{< /alert >}}
 

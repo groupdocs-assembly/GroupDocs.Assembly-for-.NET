@@ -49,10 +49,9 @@ As a report developer, you are required to represent information of first single
 </td>
 </tr>
 </table>
-
 ```
 
-{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine{{< /alert >}}
+{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).{{< /alert >}}
 
 ### Download Single Row Image Template
 
@@ -62,6 +61,6 @@ Please download the single row image document we created in this article:
 
 ### Generating The Report
 
-{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer{{< /alert >}}{{< gist GroupDocsGists 9bbee318cdfc682815c7284ada1d94bf >}}
+{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}{{< gist GroupDocsGists 9bbee318cdfc682815c7284ada1d94bf >}}
 
 

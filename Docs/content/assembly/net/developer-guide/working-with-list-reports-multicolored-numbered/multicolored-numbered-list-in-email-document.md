@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Multicolored Numbered List report in Email Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}{{< alert style="info" >}}This feature is supported by version 17.8.0 or greater.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Multicolored Numbered List report in Email Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}{{< alert style="info" >}}This feature is supported by version 17.8.0 or greater.{{< /alert >}}
 
 ## Multicolored Numbered List in Email Document
 
@@ -35,13 +35,13 @@ As a report developer, you are required to represent the following key requireme
 
 We provide support for the following products:
 
-1. <<foreach \[in getClients()\]>><<if \[indexOf() % 2 == 0\]>>      <<\[numberOf()\]>>.    <<\[ProductName\]>>
+1. <<foreach \[in getClients()\]>><<if \[indexOf() % 2 == 0\]>>      <<\[numberOf()\]>>.    <<\[ProductName\]>>
 
-2. <<else>>      <<\[numberOf()\]>>.    <<\[ProductName\]>>
+2. <p style="background-color: #FFFF00"> &lt;&lt;else>>      &lt;&lt;[numberOf()]>>.      &lt;&lt;[ProductName]>> </p>
 
 <</if>><</foreach>>
 
-{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine.{{< /alert >}}
+{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).{{< /alert >}}
 
 Download Multicolored Numbered List Template
 

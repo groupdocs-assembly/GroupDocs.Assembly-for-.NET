@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Numbered List report in Spreadsheet Document format based on the use case: Working with a Business Case.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Numbered List report in Spreadsheet Document format based on the use case: [Working with a Business Case](https://docs.groupdocs.com/assembly/net/working-with-a-business-case/).{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}
 
 ## Numbered List in Microsoft Excel Document
 
@@ -40,14 +40,12 @@ As a report developer, you are required to describe the services you are providi
 ```csharp
 "We provide support for the following products:<<foreach [in products]>>
 <<[NumberOf()]>>.         <<[ProductName]>><</foreach>>"
-
 ```
 
 **Multiple-cell List**
 
 ```csharp
 <<foreach [in products]>><<[NumberOf()]>>.         <<[ProductName]>>
-
 ```
 
 and close foreach in next column,
@@ -56,7 +54,7 @@ and close foreach in next column,
 <</foreach>>
 ```
 
-{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine.{{< /alert >}}
+{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).{{< /alert >}}
 
 Download Numbered List Template
 

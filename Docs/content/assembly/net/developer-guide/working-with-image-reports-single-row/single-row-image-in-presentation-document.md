@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Single Row Image report in Presentation Document format based on the use case: Working with a Business Case.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Single Row Image report in Presentation Document format based on the use case: [Working with a Business Case](https://docs.groupdocs.com/assembly/net/working-with-a-business-case/).{{< /alert >}}
 
 ## Single Row in Microsoft PowerPoint Document
 
@@ -26,18 +26,29 @@ Please follow below steps to create Single Row Image in MS PowerPoint 2013:
 
 As a report developer, you are required to represent information of first single customer with the following key requirements:
 
-*   Report must show image of the customer
-*   It must show Name and Contact Number of the customer
+*   Report must show image of the customer.
+*   It must show Name and Contact Number of the customer.
 *   Report must be generated in the Presentation Document.
 
 ### Adding Syntax to be evaluated by GroupDocs.Assembly Engine
 
-{{< alert style="warning" >}}At the moment, GroupDocs.Assembly does not support images in PowerPoint Presentation.{{< /alert >}}  
-  
+{{< alert style="warning" >}}At the moment, GroupDocs.Assembly does not support images in PowerPoint Presentation.{{< /alert >}}
 
-<table cellspacing="0" cellpadding="0" style="border-collapse: collapse; margin-left: 0pt; width: 505.45pt;"><tbody><tr><td rowspan="4" style="padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 201.6pt;"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="font-family: &quot;Calibri Light&quot;; font-size: 44pt;">Click to add</span><span style="font-family: &quot;Calibri Light&quot;; font-size: 44pt;"> title</span></p></td><td style="padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 31.2pt;"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="font-family: Calibri; font-size: 16pt;">Name:</span></p></td><td colspan="2" style="padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 240.25pt;"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="font-family: Calibri; font-size: 16pt;">&lt;&lt;[</span><span style="font-family: Calibri; font-size: 16pt;">customer.CustomerName</span><span style="font-family: Calibri; font-size: 16pt;">]&gt;&gt;</span></p></td></tr><tr><td style="padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 31.2pt;"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="font-family: Calibri; font-size: 16pt;">Contact Details:</span></p></td><td colspan="2" style="padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 240.25pt;"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="font-family: Calibri; font-size: 16pt;">&lt;</span><span style="font-family: Calibri; font-size: 16pt;">&lt;[</span><span style="font-family: Calibri; font-size: 16pt;">customer.</span></p><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="font-family: Calibri; font-size: 16pt;">CustomerContactNumber</span><span style="font-family: Calibri; font-size: 16pt;">]&gt;&gt;</span></p></td></tr><tr><td style="padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 31.2pt;"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="font-family: Calibri; font-size: 11pt;">&nbsp;</span></p></td><td colspan="2" style="padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 240.25pt;"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="font-family: Calibri; font-size: 11pt;">&nbsp;</span></p></td></tr><tr style="height: 61.1pt;"><td colspan="2" style="padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 259.4pt;"><p style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt; margin-left: 0pt;"><span style="font-family: Calibri; font-size: 11pt;">&nbsp;</span></p></td><td style="vertical-align: top;"></td></tr><tr style="height: 0pt;"><td style="width: 197.55pt; border-top-color: initial; border-top-style: none; border-top-width: initial; border-right-color: initial; border-right-style: none; border-right-width: initial; border-bottom-color: initial; border-bottom-style: none; border-bottom-width: initial; border-left-color: initial; border-left-style: none; border-left-width: initial;"></td><td style="width: 61pt; border-top-color: initial; border-top-style: none; border-top-width: initial; border-right-color: initial; border-right-style: none; border-right-width: initial; border-bottom-color: initial; border-bottom-style: none; border-bottom-width: initial; border-left-color: initial; border-left-style: none; border-left-width: initial;"></td><td style="width: 225.5pt; border-top-color: initial; border-top-style: none; border-top-width: initial; border-right-color: initial; border-right-style: none; border-right-width: initial; border-bottom-color: initial; border-bottom-style: none; border-bottom-width: initial; border-left-color: initial; border-left-style: none; border-left-width: initial;"></td><td style="width: 21.4pt; border-top-color: initial; border-top-style: none; border-top-width: initial; border-right-color: initial; border-right-style: none; border-right-width: initial; border-bottom-color: initial; border-bottom-style: none; border-bottom-width: initial; border-left-color: initial; border-left-style: none; border-left-width: initial;"></td></tr></tbody></table>
+<table class="iksweb">
+	<tbody>
+		<tr>
+			<td rowspan="2" style="font-size: 44pt">Click to<br> add title</td>
+			<td>Name:</td>
+			<td><<[customer.CustomerName]>></td>
+		</tr>
+		<tr>
+			<td>Contact Details:</td>
+			<td><<[customer. CustomerContactNumber]>></td>
+		</tr>
+	</tbody>
+</table>
 
-{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine{{< /alert >}}
+{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).{{< /alert >}}
 
 ### Download Single Row Template
 

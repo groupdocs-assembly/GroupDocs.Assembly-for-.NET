@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}This feature is supported by version 19.5. or greater{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}This feature is supported by version 19.5. or greater{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}
 
 Since version 19.5, The GroupDocs.Assembly provides a great feature which is saving of external resource files while an assembled document loaded from a non-HTML format is being saved to HTML.
 

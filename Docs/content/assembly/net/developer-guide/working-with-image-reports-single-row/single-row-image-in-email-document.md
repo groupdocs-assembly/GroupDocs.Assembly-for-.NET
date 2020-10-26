@@ -28,7 +28,6 @@ As a report developer, you are required to represent information of first single
 ```csharp
 Name:	<<[customer.CustomerName]>>
 Contact Number:	<<[customer.CustomerContactNumber]>>
-
 ```
 
 ### Download Single Row Image Template
@@ -37,10 +36,10 @@ Please download the sample template we created in this article:
 
 *   [Single Row Image.msg](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-.NET/raw/master/Examples/Data/Source/Email%20Templates/Single%20Row.msg?raw=true)
 
-{{< alert style="success" >}}For detailed technical information about syntax,expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine{{< /alert >}}
+{{< alert style="success" >}}For detailed technical information about syntax,expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).{{< /alert >}}
 
 ### Generating The Report
 
-{{< alert style="info" >}}The code uses some of the objects defined in: The Business Layer{{< /alert >}}{{< gist rida-fatima-aspose d1b17449056fb2f542e302e6015014c8 >}}
+{{< alert style="info" >}}The code uses some of the objects defined in: [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}{{< gist rida-fatima-aspose d1b17449056fb2f542e302e6015014c8 >}}
 
 

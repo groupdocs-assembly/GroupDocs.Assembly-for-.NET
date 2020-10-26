@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate In-Table Master-Detail report in HTML Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}{{< alert style="info" >}}This feature is supported by version 17.03 or greater.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate In-Table Master-Detail report in HTML Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}{{< alert style="info" >}}This feature is supported by version 17.03 or greater.{{< /alert >}}
 
 ## In-Table Master-Detail in HTML Document
 
@@ -24,15 +24,31 @@ As a report developer, you are required to represent customers' total orders pri
 
 ### Adding Syntax to be evaluated by GroupDocs.Assembly Engine
 
-<<foreach \[in customers\]>> <<foreach \[in Order\]>> <</foreach>> <</foreach>>
+<table class="tbl1">
+	<tbody>
+		<tr>
+			<td colspan="2"> &lt;&lt;foreach [in customers]>> &lt;&lt;foreach [in Order]>> &lt;&lt;/foreach>> &lt;&lt;/foreach>></td>
+		</tr>
+		<tr>
+			<td>Customer</td>
+			<td>Order Price</td>
+		</tr>
+		<tr>
+			<td><<[CustomerName]>>
+</td>
+			<td><<[Order.Sum(c => c.Price)]>></td>
+		</tr>
+		<tr>
+			<td colspan="2">  <<[Product.ProductName]>> <<[Price]>></td>
+		</tr>
+		<tr>
+			<td>Total:</td>
+			<td><<[Sum( m => m.Order.Sum( c => c.Price))]>></td>
+		</tr>
+	</tbody>
+</table>
 
-| Customer | Order Price |
-| --- | --- |
-| **<<\[CustomerName\]>>** | <<\[Order.Sum(c => c.Price)\]>> |
-| *  <<\[Product.ProductName\]>>* | <<\[Price\]>> |
-| **Total:** | <<\[Sum( m => m.Order.Sum( c => c.Price))\]>> |
-
-{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine.{{< /alert >}}
+{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).{{< /alert >}}
 
 Download  In-Table Master-Detail Template
 

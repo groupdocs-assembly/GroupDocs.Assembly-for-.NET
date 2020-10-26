@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Numbered List report in Email Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}{{< alert style="info" >}}This feature is supported by version 17.8.0 or greater.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Numbered List report in Email Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}{{< alert style="info" >}}This feature is supported by version 17.8.0 or greater.{{< /alert >}}
 
 ## Numbered List in Email Document
 
@@ -35,12 +35,11 @@ As a report developer, you are required to represent the following key requireme
 We provide support for the following products:
 <<foreach [in products]>><<[NumberOf()]>>. <<[ProductName]>>
 <</foreach>>
-
 ```
 
-{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine.{{< /alert >}}
+{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).{{< /alert >}}
 
-Download Numbered List Template
+### Download Numbered List Template
 
 Please download the sample Numbered List document we created in this article:
 
@@ -50,20 +49,16 @@ Please download the sample Numbered List document we created in this article:
 
 {{< gist GroupDocsGists a41628c2748f0237a84b710d9538fc4f >}}
 
-
-
 ## Numbering Restart in Nested Numbered List 
 
 {{< alert style="info" >}}This feature is supported by version 19.7 or greater.{{< /alert >}}
 
-  
+
 The GroupDocs.Assembly engine allows restart list numbering within your documents dynamically using *<<restartNum>>* tags. In particular, this feature is useful when working with a nested numbered list within a data band.
 
 Assume that we are picking *Order* and *Service* classes as defined in the following *Custom Objects* of our business use case.
 
 {{< gist GroupDocsGists cd8768711ff88414192c3f50a9b7c918 >}}
-
-
 
 Given that orders is an enumeration of Order instances, you could try to use the following template to output information on several orders in one document.
 
@@ -75,6 +70,7 @@ Given that orders is an enumeration of Order instances, you could try to use the
 
 The generated report will look as follows:
 
+```
 Jane Doe (+9211874)
 	1.	Regular Cleaning
 	2.	Oven Cleaning
@@ -87,6 +83,7 @@ John Smith (+458789)
 	7.	Carpet Cleaning
 John Smith (+458789)
 	8.	Oven Cleaning
+```
 
 However, there would be a single numbered list across all orders, which is not applicable for this scenario. Hence, you can make the list numbering to restart for every order by putting a *<<restartNum>>* tag into your template before a corresponding *<<foreach>>* tag as follows:
 
@@ -98,6 +95,7 @@ However, there would be a single numbered list across all orders, which is not a
 
  Then, the generated report will look as follows:
 
+```
 Jane Doe (+9211874)
 	1.	Regular Cleaning
 	2.	Oven Cleaning
@@ -110,8 +108,9 @@ John Smith (+458789)
 	2.	Carpet Cleaning
 John Smith (+458789)
 	1.	Oven Cleaning
+```
 
-Download Numbered List Template
+## Download Numbered List Template
 
 Please download the sample Numbered List template we created in this article:
 

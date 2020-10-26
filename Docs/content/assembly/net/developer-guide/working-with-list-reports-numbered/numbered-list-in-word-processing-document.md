@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Numbered List report in Word Processing Document format based on the use case: Working with a Business Case.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Numbered List report in Word Processing Document format based on the use case: [Working with a Business Case](https://docs.groupdocs.com/assembly/net/working-with-a-business-case/).{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}
 
 ## Numbered List in Microsoft Word Document
 
@@ -36,7 +36,7 @@ We provide support for the following products:
 
 ```
 
-{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine.{{< /alert >}}
+{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).{{< /alert >}}
 
 Download Numbered List Template
 
@@ -138,14 +138,12 @@ In order to check compatibility of ODT between Microsoft Office 2010 and Apache 
 
 {{< alert style="info" >}}This feature is supported by version 19.7 or greater.{{< /alert >}}
 
-  
+
 The GroupDocs.Assembly engine allows restart list numbering within your documents dynamically using *<<restartNum>>* tags. In particular, this feature is useful when working with a nested numbered list within a data band.  
 
 Assume that we are picking *Order* and *Service* classes as defined in the following *Custom Objects* of our business use case.
 
 {{< gist GroupDocsGists cd8768711ff88414192c3f50a9b7c918 >}}
-
-
 
 Given that orders is an enumeration of Order instances, you could try to use the following template to output information on several orders in one document.
 
@@ -157,6 +155,7 @@ Given that orders is an enumeration of Order instances, you could try to use the
 
 The generated report will look as follows:
 
+```
 Jane Doe (+9211874)
 	1.	Regular Cleaning
 	2.	Oven Cleaning
@@ -169,6 +168,7 @@ John Smith (+458789)
 	7.	Carpet Cleaning
 John Smith (+458789)
 	8.	Oven Cleaning
+```
 
 However, there would be a single numbered list across all orders, which is not applicable for this scenario. Hence, you can make the list numbering to restart for every order by putting a *<<restartNum>>* tag into your template before a corresponding *<<foreach>>* tag as follows:
 
@@ -180,6 +180,7 @@ However, there would be a single numbered list across all orders, which is not a
 
  Then, the generated report will look as follows:
 
+```
 Jane Doe (+9211874)
 	1.	Regular Cleaning
 	2.	Oven Cleaning
@@ -192,8 +193,9 @@ John Smith (+458789)
 	2.	Carpet Cleaning
 John Smith (+458789)
 	1.	Oven Cleaning
+```
 
-Download Numbered List Template
+## Download Numbered List Template
 
 Please download the sample Numbered List template we created in this article:
 
