@@ -8,11 +8,11 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}This feature is supported by version 20.3 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}This feature is supported by version 20.3 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}
 
 You can insert contents of outer documents to your reports dynamically using doc tags. A doc tag denotes a placeholder within a template for a document to be inserted during run time.
 
-Syntax of a doc tag is defined as follows.
+Syntax of a doc tag is defined as follows:
 
 ```csharp
 <<doc [document_expression]>>
@@ -21,8 +21,6 @@ Syntax of a doc tag is defined as follows.
 And simply call the assembler method to generate report like following code snippets:
 
 {{< gist GroupDocsGists b06d6c5655c84fc772c6411d66016943 InsertDocumentDynamicallyInWord_20.3.cs >}}
-
-
 
 {{< alert style="warning" >}}A doc tag can be used almost anywhere in a template document except textboxes and charts.{{< /alert >}}
 
@@ -37,7 +35,7 @@ While building a report, an expression declared within a doc tag is evaluated an
 
 {{< alert style="warning" >}}If an expression declared within a doc tag returns a stream object, then the stream is closed by the assembler as soon as a corresponding document is loaded.{{< /alert >}}
 
-By default, a document being inserted is not checked against template syntax and is not populated with data. However, you can enable this by using a build switch as follows.
+By default, a document being inserted is not checked against template syntax and is not populated with data. However, you can enable this by using a build switch as follows:
 
 ```csharp
 <<doc [document_expression] -build>>

@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}This feature is supported by version 20.3 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}This feature is supported by version 20.3 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}
 
 You can insert images to your reports dynamically using image tags. To declare a dynamically inserted image within your template, do the following steps:
 
@@ -23,10 +23,6 @@ You can insert images to your reports dynamically using image tags. To declare a
 And simply call the assembler method to generate report like following code snippets:
 
 {{< gist GroupDocsGists b06d6c5655c84fc772c6411d66016943 InsertImageDynamicallyInWord_20.3.cs >}}
-
-
-
-  
 
 The expression declared within an image tag is used by the assembler to build an image to be inserted. The expression must return a value of one of the following types:
 
@@ -46,31 +42,31 @@ While building a report, the following procedure is applied to an image tag:
 By default, the assembler stretches an image filling a textbox to the size of the textbox. However, you can change this behavior in the following ways:
 
 *   To keep the size of the textbox and stretch the image within bounds of the textbox preserving the ratio of the image, use the *keepRatio* switch as follows:
-    
+  
     ```csharp
     <<image [image_expression] -keepRatio>>
     ```
     
 *   To keep the width of the textbox and change its height preserving the ratio of the image, use the fitHeight switch as follows.
-    
+  
     ```csharp
     <<image [image_expression] -fitHeight>>
     ```
     
 *   To keep the height of the textbox and change its width preserving the ratio of the image, use the fitWidth switch as follows.
-    
+  
     ```csharp
     <<image [image_expression] -fitWidth>>
     ```
     
 *   To change the size of the textbox according to the size of the image, use the fitSize switch as follows.
-    
+  
     ```csharp
     <<image [image_expression] -fitSize>>
     ```
     
 *   To change the size of the textbox according to the size of the image without increasing the size of the textbox, use the fitSizeLim switch as follows.
-    
+  
     ```csharp
     <<image [image_expression] -fitSizeLim>>
     ```

@@ -38,8 +38,6 @@ Here is a sample report in Microsoft Word Document Format for 'Products' table
 
 ## Code Walkthrough
 
-//<!\[CDATA\[ function debug() { } // \]\]>//<!\[CDATA\[ // \]\]>//<!\[CDATA\[ // \]\]>//<!\[CDATA\[ // \]\]>//<!\[CDATA\[ // \]\]>//<!\[CDATA\[ Cloak.closeHTML = "<img src=\\'/download/resources/net.customware.confluence.plugin.composition:toggle-cloak/img/navigate\_down\_10.gif\\'/>"; Cloak.openHTML = "<img src=\\'/download/resources/net.customware.confluence.plugin.composition:toggle-cloak/img/navigate\_right\_10.gif\\'/>"; Cloak.toggleZone = true; Cloak.memoryDuration = 0; Cloak.memoryPrefix = "contentId:34439193"; Cloak.memoryPath = "/"; // \]\]>.cloakToggle { cursor: pointer; }//<!\[CDATA\[ // \]\]>//<!\[CDATA\[ // \]\]>//<!\[CDATA\[ Deck.memoryDuration = 0; Deck.memoryPrefix = "contentId:34439193"; Deck.memoryPath = "/"; // \]\]>
-
 #### Default.aspx.cs
 
 {{< gist atirtahirgroupdocs 202a1a7ed0fa355b5fe0 >}}

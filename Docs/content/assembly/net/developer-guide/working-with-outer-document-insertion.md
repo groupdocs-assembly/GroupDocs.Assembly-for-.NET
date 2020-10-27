@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}This feature is supported by version 3.2.0 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}This feature is supported by version 3.2.0 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}
 
 ## Inserting Documents Dynamically
 
@@ -42,9 +42,7 @@ When a build switch is used, the engine treats a document being inserted a
 *   A contextual object (see "[Using Contextual Object Member Access](https://docs.aspose.com/display/wordsnet/Template+Syntax#nowhere)" for more information)
 *   Known external types (see "[Setting up Known External Types](https://docs.aspose.com/display/wordsnet/Template+Syntax#nowhere)"for more information)
 
-  
-
-{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine{{< /alert >}}
+{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/){{< /alert >}}
 
 ### Working with Outer Document Insertion 
 
@@ -58,8 +56,6 @@ Get designed and outer templates from here.
 #### The Code
 
 {{< gist GroupDocsGists d86e65933ed173d59f1e5109ff20d33b >}}
-
-
 
 ### Outer Document Insertion in Word Processing Formats
 
@@ -76,8 +72,6 @@ Get designed and outer templates from here.
 
 {{< gist GroupDocsGists db91bbaafa91669b04f305bbf909a9cd >}}
 
-
-
 ### Outer Document Insertion in Email Formats
 
 {{< alert style="info" >}}This feature is supported by version 18.12 or greater.{{< /alert >}}
@@ -92,5 +86,3 @@ Get designed and outer templates from here.
 #### The Code
 
 {{< gist GroupDocsGists 54701f594999260d10a4e6d66fa069e7 >}}
-
-

@@ -10,15 +10,11 @@ hideChildren: False
 ---
 {{< alert style="info" >}}This feature is supported by version 17.12 or greater{{< /alert >}}
 
-## Changing Background Color Dynamically
-
 You can set text background color for document contents dynamically using backColor tags.
 
 ### The Code
 
-{{< alert style="info" >}}The code uses some of the objects defined in: The Business Layer{{< /alert >}}{{< gist GroupDocsGists ee5d086fa3fa545f0b9f78647054674b >}}
-
-
+{{< alert style="info" >}}The code uses some of the objects defined in: [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/){{< /alert >}}{{< gist GroupDocsGists ee5d086fa3fa545f0b9f78647054674b >}}
 
 ### Download
 

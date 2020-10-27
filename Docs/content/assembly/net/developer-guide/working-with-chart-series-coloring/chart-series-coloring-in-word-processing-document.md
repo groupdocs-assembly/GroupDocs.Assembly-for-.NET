@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}This feature is supported by version 18.5 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}This feature is supported by version 18.5 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}
 
 ## Chart Series Coloring in Word Processing Document
 
@@ -38,7 +38,6 @@ As a report developer, you are required to share contract price by manager dynam
 ```csharp
 <Total Contract Prices by Managers<<foreach [m in
 managers]>><<x [m.Manager]>>
-
 ```
 
 #### Chart Data (Excel)
@@ -50,7 +49,7 @@ managers]>><<x [m.Manager]>>
 | Category 3 | 3.5 |
 | Category 4 | 4.5 |
 
-{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine{{< /alert >}}
+{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/){{< /alert >}}
 
 ### Download Template
 
@@ -64,7 +63,7 @@ For a chart with dynamic data, you can set colors of chart series dynamically 
 
 *   Declare a chart with dynamic data in the usual way
 *   For chart series to be colored dynamically, define corresponding color expressions in names of these series using **seriesColor** tags having the following syntax:
-    
+  
     ```csharp
     <<seriesColor [color_expression]>>
     ```

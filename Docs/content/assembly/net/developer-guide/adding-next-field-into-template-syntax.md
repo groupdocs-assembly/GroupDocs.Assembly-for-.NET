@@ -8,11 +8,9 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}This feature is only compatible with GroupDocs.Assembly for .NET 3.3.0 or later releases.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}This feature is only compatible with GroupDocs.Assembly for .NET 3.3.0 or later releases.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}
 
-## Adding NEXT Field into Template Syntax
-
-### Adding Syntax to be evaluated by GroupDocs.Assembly Engine
+## Adding Syntax to be evaluated by GroupDocs.Assembly Engine
 
 **Template Syntax**
 
@@ -20,10 +18,9 @@ hideChildren: False
 We provide support for the following products:
 . <<foreach [in products]>><<next>><<[ProductName]>>
 <</foreach>>
-
 ```
 
-### The Recipe
+## The Recipe
 
 *   Set up the source document template path
 *   Set up destination report path
@@ -39,5 +36,3 @@ Get the template from here.
 ### The Code
 
 {{< gist GroupDocsGists 5b2f5abf4f1a745b99baba52177f4db3 >}}
-
-

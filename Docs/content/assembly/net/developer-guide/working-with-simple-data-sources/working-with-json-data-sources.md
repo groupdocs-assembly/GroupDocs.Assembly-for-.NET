@@ -26,8 +26,8 @@ documents. For more convenience, the set of simple JSON types is extended as fol
 In template documents, if a top-level JSON element is an array or an object having only one property of an array type, a JsonDataSource instance should be treated in the same way as if it was a DataTable instance (see "[Working with DataTable and DataView Objects]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#datatable-and-dataview-objects" >}})" for more information) .
 
 Suppose we have Json data like:
-
-\[ 
+```
+[ 
    { 
       Name:"John Doe",
       Age:30,
@@ -43,12 +43,13 @@ Suppose we have Json data like:
       Age:51,
       Birth:"1968-03-08 1:00:00 pm"
    }
-\]
+]
+```
 
 or alternative JSON like:
-
+```
 { 
-   Persons:\[ 
+   Persons:[ 
       { 
          Name:"John Doe",
          Age:30,
@@ -64,23 +65,24 @@ or alternative JSON like:
          Age:51,
          Birth:"1968-03-08 1:00:00 pm"
       }
-   \]
+   ]
 }
+```
 
 If we use the template like following:
-
+```
 <<foreach \[in persons\]>>Name: <<\[Name\]>>, Age: <<\[Age\]>>, Date of Birth: <<\[Birth\]:"dd.MM.yyyy">>
 <</foreach>>
 Average age: <<\[persons.Average(p => p.Age)\]>>
-
-  
+```
 
 The results will be produced for both pieces of JSON data like:
-
+```
 Name: John Doe, Age: 30, Date of Birth: 01.04.1989
 Name: Jane Doe, Age: 27, Date of Birth: 31.01.1992
 Name: John Smith, Age: 51, Date of Birth: 08.03.1968
 Average age: 36
+```
 
 {{< alert style="warning" >}}Using of the custom date-time format becomes possible, because text values of Birth properties are automatically converted to DateTime?.{{< /alert >}}
 
@@ -89,45 +91,49 @@ Average age: 36
 If a top-level JSON element represents an object, a *JsonDataSource* instance should be treated in template documents in the same way as if it was a *DataRow* instance (see "[Working with *DataRow* and *DataRowView* Objects]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#datatable-and-dataview-objects" >}})" for more information). If a top-level JSON object has a single property that is also an object, then this nested object is accessed by the assembler instead.
 
 Suppose we have Json data like:
-
+```
 { 
    Name:"John Doe",
    Age:30,
    Birth:"1989-04-01 4:00:00 pm",
-   Child:\[ 
+   Child:[ 
       "Ann Doe",
       "Charles Doe"
-   \]
+   ]
 }
+```
 
 or alternatively like:
-
+```
 { 
    Person:{ 
       Name:"John Doe",
       Age:30,
       Birth:"1989-04-01 4:00:00 pm",
-      Child:\[ 
+      Child:[ 
          "Ann Doe",
          "Charles Doe"
-      \]
+      ]
    }
 }
+```
 
 If we use the template like following:
-
+```
 Name: <<\[Name\]>>, Age: <<\[Age\]>>, Date of Birth:
 <<\[Birth\]:"dd.MM.yyyy">>
 Children:
 <<foreach \[in Child\]>><<\[Child\_Text\]>>
 <</foreach>>
+```
 
 The results will be produced for both pieces of JSON data like:
-
+```
 Name: John Doe, Age: 30, Date of Birth: 01.04.1989
 Children:
 Ann Doe
 Charles Doe
+```
 
 {{< alert style="warning" >}}To reference a JSON object property that is an array of simple-type values, the name of the property (for example, "Child") should be used in a template document, whereas the same name with the "_Text" suffix (for example, "Child_Text") should be used to reference the value of an item of this array.{{< /alert >}}
 
@@ -136,11 +142,11 @@ Charles Doe
 The following example sums up typical scenarios involving nested JSON objects and arrays.
 
 #### JSON
-
-\[ 
+```
+[ 
    { 
       Name:"John Smith",
-      Contract:\[ 
+      Contract:[ 
          { 
             Client:{ 
                Name:"A Company"
@@ -159,11 +165,11 @@ The following example sums up typical scenarios involving nested JSON objects an
             },
             Price:350000
          }
-      \]
+      ]
    },
    { 
       Name:"Tony Anderson",
-      Contract:\[ 
+      Contract:[ 
          { 
             Client:{ 
                Name:"E Corp."
@@ -176,11 +182,11 @@ The following example sums up typical scenarios involving nested JSON objects an
             },
             Price:550000
          }
-      \]
+      ]
    },
    { 
       Name:"July James",
-      Contract:\[ 
+      Contract:[ 
          { 
             Client:{ 
                Name:"G & Co."
@@ -205,28 +211,26 @@ The following example sums up typical scenarios involving nested JSON objects an
             },
             Price:100000
          }
-      \]
+      ]
    }
-\]
+]
+```
 
 #### Template document
-
-<<foreach \[in managers\]>>Manager: <<\[Name\]>>
+```
+<<foreach [in managers]>>Manager: <<[Name]>>
 Contracts:
-<<foreach \[in Contract\]>>- <<\[Client.Name\]>> ($<<\[Price\]>>)
+<<foreach [in Contract]>>- <<[Client.Name]>> ($<<[Price]>>)
 <</foreach>>
 <</foreach>>
+```
 
 #### Source code
 
 {{< gist GroupDocsGists 330892e76bb1958b9199e3d223962e27 >}}
 
-
-
-  
-
 #### Result document
-
+```
 Manager: John Smith
 Contracts:
 - A Company ($1200000)
@@ -242,6 +246,7 @@ Contracts:
 - H Group ($250000)
 - I & Sons ($100000)
 - J Ent. ($100000)
+```
 
 ### Download
 

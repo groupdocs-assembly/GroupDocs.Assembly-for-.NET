@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a report. This report will fetch data from multiple data sources.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a report. This report will fetch data from multiple data sources.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}
 
 ## Generating Report in Microsoft PowerPoint Document
 
@@ -29,9 +29,9 @@ As a report developer, you are required to generate a report that fetches data f
 
 {{< alert style="warning" >}}There is no way to use an image inside a foreach tag in Microsoft PowerPoint.{{< /alert >}}
 
-NOTE: There is no way to use images inside a foreach tag in PowerPoint.
+**NOTE: There is no way to use images inside a foreach tag in PowerPoint.**
 
-<<foreach \[in customers\]>><<\[CustomerName\]>>
+<<foreach \[in customers\]>>**<<\[CustomerName\]>>**
 
 <</foreach\>>
 
@@ -39,10 +39,9 @@ NOTE: There is no way to use images inside a foreach tag in PowerPoint.
 We provide support for the following products:
 <<foreach [in products]>><<[ProductName]>>
 <</foreach>>
-
 ```
 
-{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine{{< /alert >}}
+{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/){{< /alert >}}
 
 ### Download Template
 

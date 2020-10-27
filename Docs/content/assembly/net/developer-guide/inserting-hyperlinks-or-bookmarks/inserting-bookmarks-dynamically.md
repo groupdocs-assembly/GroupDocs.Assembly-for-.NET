@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}This feature is supported by version 20.1 or greater{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}This feature is supported by version 20.1 or greater{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}
 
 ## Inserting Hyperlinks Dynamically
 
@@ -30,13 +30,11 @@ The following code snippet shows how simple you call the document assembler to g
 
 {{< gist GroupDocsGists fe5688b6d99e17223084d5098e9324fa DynamicBookmarkInsertionWord.cs >}}
 
-
-
 ### Dynamic naming of cell ranges for Spreadsheet documents
 
 Template syntax and usage of Document Assembler is same as above section for dynamic naming of cell ranges for Spreadsheet documents. The difference is that it results to insertion of named cell ranges instead of bookmarks.
 
-#### Download Templates
+### Download Templates
 
 *   [Dynamic Bookmarks.docx](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-.NET/blob/master/Examples/Data/Source/Word%20Templates/Dynamic%20Hyperlink.docx)
 *   [Dynamic Cell Ranges.xlsx](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-.NET/blob/master/Examples/Data/Source/Word%20Templates/Dynamic%20Hyperlink.docx)

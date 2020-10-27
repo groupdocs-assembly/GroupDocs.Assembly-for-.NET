@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}This feature is supported by version 18.5 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}This feature is supported by version 18.5 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}
 
 ## Individual Series Point Coloring in Spreadsheet Document
 
@@ -36,19 +36,16 @@ As a report developer, you are required to share your customers' orders details 
 ```csharp
 Total Order Price<<foreach [in customers]>>
 <<x [CustomerName]>>
-
 ```
 
-####   
-Chart Data
-
+####  Chart Data
 **Legend Entries**
 
 ```csharp
 ="Total Order Price<<y [Order.Sum(c => c.Price)]>><<pointColor[color]>>"
 ```
 
-{{< alert style="success" >}}For detailed technical information about syntax,expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine{{< /alert >}}
+{{< alert style="success" >}}For detailed technical information about syntax,expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/){{< /alert >}}
 
 ### Download Pie Chart Template
 
@@ -62,7 +59,7 @@ For a chart with dynamic data, you can set colors of individual chart series p
 
 *   Declare a chart with dynamic data in the usual way
 *   For chart series with points to be colored dynamically, define corresponding color expressions in names of these series using **pointColor** tags having the following syntax:
-    
+  
     ```csharp
     <<pointColor [color_expression]>>
     ```

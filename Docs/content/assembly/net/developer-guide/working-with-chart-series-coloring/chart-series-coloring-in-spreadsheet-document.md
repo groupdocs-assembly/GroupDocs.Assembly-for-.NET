@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}This feature is supported by version 18.5 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}This feature is supported by version 18.5 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}
 
 ## Chart Series Coloring in Spreadsheet Document 
 
@@ -22,7 +22,7 @@ Practising the following steps, you can insert a Column Chart in  MS Excel 201
 4.  Edit the Worksheet with your data to update the chart. See [Chart Data]({{< ref "assembly/net/developer-guide/working-with-chart-series-coloring/chart-series-coloring-in-spreadsheet-document.md" >}}).
 5.  Save your Document.  
       
-    
+  
 
 ### Reporting Requirement
 
@@ -40,7 +40,6 @@ As a report developer, you are required to share contract price by manager dynam
 ```csharp
 <Total Contract Prices by Managers<<foreach [m in
 managers]>><<x [m.Manager]>>
-
 ```
 
 #### Legend Entries
@@ -49,7 +48,7 @@ managers]>><<x [m.Manager]>>
 ="Total Contract Price<<y [m.Total_Contract_Price]>><<seriesColor [color]>>"
 ```
 
-{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine{{< /alert >}}
+{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/){{< /alert >}}
 
 ### Download Template
 
@@ -63,7 +62,7 @@ For a chart with dynamic data, you can set colors of chart series dynamically 
 
 *   Declare a chart with dynamic data in the usual way
 *   For chart series to be colored dynamically, define corresponding color expressions in names of these series using **seriesColor** tags having the following syntax:
-    
+  
     ```csharp
     <<seriesColor [color_expression]>>
     ```

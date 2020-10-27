@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}This feature is supported by version 19.8 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}This feature is supported by version 19.8 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}
 
 ## Markdown Documents (MD) 
 
@@ -61,8 +61,6 @@ The following code snippet demonstrates the saving this MD document to a Word Pr
 
 {{< gist GroupDocsGists b06d6c5655c84fc772c6411d66016943 SaveMdtoWord_UsingExtension_19.8.cs >}}
 
-
-
 The resultant word document ([ReadMe Out.docx](attachments/85230860/85426210.docx)) is available for download.
 
 ### Saving an Assembled Word Processing Document or Email to Markdown
@@ -71,11 +69,9 @@ The resultant word document ([ReadMe Out.docx](attachments/85230860/85426210.doc
 
 Suppose, we have a Word Processing template([ReadMe.docx](attachments/85230860/85426212.docx)) having the same content as above Markdown template.
 
- The following code snippet demonstrates the saving this assembled Word Processing document to a Markdown file.
+The following code snippet demonstrates the saving this assembled Word Processing document to a Markdown file.
 
 {{< gist GroupDocsGists b06d6c5655c84fc772c6411d66016943 SaveWordtoMD_UsingExtension_19.8.cs >}}
-
-
 
 The resultant word document ([ReadMe Out.md](attachments/85230860/85426213.md)) is available for download.
 
@@ -84,5 +80,3 @@ The resultant word document ([ReadMe Out.md](attachments/85230860/85426213.md)) 
 The following code snippet shows the saving of an assembled Word Processing document or email to Markdown using explicit specifying:
 
 {{< gist GroupDocsGists b06d6c5655c84fc772c6411d66016943 SaveWordtoMD_Explicit_19.8.cs >}}
-
-

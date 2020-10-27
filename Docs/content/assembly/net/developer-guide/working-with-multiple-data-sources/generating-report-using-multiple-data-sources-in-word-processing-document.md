@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a report. This report will fetch data from multiple data sources.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a report. This report will fetch data from multiple data sources.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}
 
 ## Generating Report in Microsoft Word Document
 
@@ -28,16 +28,29 @@ As a report developer, you are required to generate a report that fetches data f
 
 ### Adding Syntax to be evaluated by GroupDocs.Assembly Engine
 
+&lt;&lt;foreach [in customers]>>
+
+<table class="gd-assembly1"cellspacing="0" cellpadding="0" style="border-collapse: collapse; float: bottom; margin-top: 0pt; margin-right: 9pt; margin-bottom: 0pt; margin-left: 9pt; width: 132.15pt; height: 132.15pt ">
+	<tbody>
+		<tr>
+			<td style="vertical-align: top;">&lt;&lt;image [customer.Photo]>></td>
+		</tr>
+	</tbody>
+</table>
+
+**&lt;&lt;[CustomerName]>>**
+
+&lt;&lt;/foreach>>
+
 **List of Products**
 
 ```csharp
 We provide support for the following products:
 . <<foreach [in products]>><<[ProductName]>>
 <</foreach>>
-
 ```
 
-{{< alert style="success" >}}For detailed technical information about syntax,expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine{{< /alert >}}
+{{< alert style="success" >}}For detailed technical information about syntax,expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/){{< /alert >}}
 
 ### Download Template
 
