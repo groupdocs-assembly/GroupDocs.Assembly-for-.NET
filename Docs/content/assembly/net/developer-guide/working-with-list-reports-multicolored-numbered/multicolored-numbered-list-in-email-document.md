@@ -35,9 +35,10 @@ As a report developer, you are required to represent the following key requireme
 
 We provide support for the following products:
 
-1. <<foreach \[in getClients()\]>><<if \[indexOf() % 2 == 0\]>>      <<\[numberOf()\]>>.    <<\[ProductName\]>>
-
-2. &lt;&lt;else>>      &lt;&lt;[numberOf()]>>.      &lt;&lt;[ProductName]>>
+<ol>
+<li>&lt;&lt;foreach [in getClients()]>>&lt;&lt;if [indexOf() % 2 == 0]>>      &lt;&lt;[numberOf()]>>.    &lt;&lt;[ProductName]>></li>
+<li style="background-color: #ffff00">&lt;&lt;else>>      &lt;&lt;[numberOf()]>>.   &lt;&lt;[ProductName]>></li>
+</ol>
 
 <</if>><</foreach>>
 

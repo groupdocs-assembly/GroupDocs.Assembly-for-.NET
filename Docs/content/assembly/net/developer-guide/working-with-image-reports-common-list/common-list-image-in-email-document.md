@@ -25,7 +25,6 @@ As a report developer, you are required to share the following key requirements:
 ```csharp
 <<foreach [in customers]>><<[CustomerName]>>
 <</foreach>>
-
 ```
 
 {{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).{{< /alert >}}

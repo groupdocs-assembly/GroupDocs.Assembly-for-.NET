@@ -8,8 +8,6 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-# In-Table List with Filtering, Grouping, and Ordering in Email Document
-
 {{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a In-Table List with Filtering, Grouping, and Ordering report in Email Document format.{{< /alert >}}
 
 ## In-Table List with Filtering, Grouping, and Ordering in Email Document

@@ -32,8 +32,8 @@ As a report developer, you are required to represent the information of the cust
 {{< alert style="warning" >}}There is no way to use an image inside a foreach tag in Microsoft PowerPoint.{{< /alert >}}
 
 ```csharp
-<<foreach \[in customers\]>><<\[CustomerName\]>>
-<</foreach\>>
+<<foreach [in customers]>><<[CustomerName]>>
+<</foreach>>
 ```
 
 {{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/).{{< /alert >}}

@@ -53,7 +53,6 @@ A data band body is defined between the corresponding opening and closing `forea
 <<foreach ...>>
 data_band_body
 <</foreach>>
-
 ```
 
 You can reference an element of the corresponding sequence in template expressions within a data band body using an iteration variable. At runtime, an iteration variable represents a sequence element for which an iteration is currently being performed. You can declare an iteration variable within the corresponding opening `foreach` tag.
@@ -73,7 +72,6 @@ The complete syntax of a `foreach` tag (including optional elements) is as follo
 <<foreach [variable_type variable_name in sequence_expression]>>
 data_band_body
 <</foreach>>
-
 ```
 
 ### Common Data Bands
@@ -84,7 +82,6 @@ In particular, a common data band can be entirely located within a single paragr
 
 ```csharp
 The items are: <<foreach [item in items]>><<[item]>>, <</foreach>>and others.
-
 ```
 
 In this case, the engine produces a report as follows.
@@ -114,7 +111,6 @@ While building a report, duplicated paragraph breaks derive common attributes fr
 ```csharp
 1. <<foreach [item in items]>><<[item]>>
 <</foreach>>
-
 ```
 
 In this case, the engine produces a report as follows.
@@ -123,7 +119,6 @@ In this case, the engine produces a report as follows.
 1. item1
 2. item2
 3. item3
-
 ```
 
 #### Dynamic list numbering restart
@@ -203,7 +198,6 @@ John Smith (43 Vogel Street Roslyn Palmerston North 4414)
 A table-row data band is a data band which body occupies single or multiple rows of a single document table. The body of such a band starts at the beginning of the first occupied row and ends at the end of the last occupied row as follows.
 
 <table class="confluenceTable"><tbody><tr><td class="confluenceTd"><p>&nbsp;</p></td><td class="confluenceTd"><p>&nbsp;</p></td><td class="confluenceTd"><p>&nbsp;</p></td></tr><tr><td class="confluenceTd"><p><code>&lt;&lt;foreach ...&gt;&gt;</code> ...</p></td><td class="confluenceTd"><p>...</p></td><td class="confluenceTd"><p>...</p></td></tr><tr><td class="confluenceTd"><p>...</p></td><td class="confluenceTd"><p>...</p></td><td class="confluenceTd"><p>...</p></td></tr><tr><td class="confluenceTd"><p>...</p></td><td class="confluenceTd"><p>...</p></td><td class="confluenceTd"><p><code>... &lt;&lt;/foreach&gt;&gt;</code></p></td></tr><tr><td class="confluenceTd"><p>&nbsp;</p></td><td class="confluenceTd"><p>&nbsp;</p></td><td class="confluenceTd"><p>&nbsp;</p></td></tr></tbody></table>
-
 The following examples in this section are given using `ds`, a `DataSet` instance containing `DataTable` and `DataRelation` objects according to the following data model.
 
 <link to the DB diagram>
@@ -283,14 +277,12 @@ The items are: <<foreach [
     item in items]>><<[item.IndexOf() != 0
         ? ", "
         : ""]>><<[item]>><</foreach>>.
-
 ```
 
 In this case, the engine produces a report as follows.
 
 ```csharp
 The items are: item1, item2, item3.
-
 ```
 
 *   `NumberOf()`
@@ -319,10 +311,9 @@ GroupDocs.Assembly Engine enables you to use charts to represent your sequential
 4.  Add a title to the chart, if missing.
 5.  Add an opening foreach tag to the chart title.
 6.  Depending on the type of the chart, add x tags to the chart title or chart series' names as follows.
-    
+  
     ```csharp
     <<x [x_value_expression]>>
-    
     ```
     
     * For a scatter or bubble chart, you can go one of the following ways:
@@ -330,31 +321,28 @@ GroupDocs.Assembly Engine enables you to use charts to represent your sequential
         - To use different x-value expressions for every chart series, add multiple x tags to chart series' names – one for each chart series. An x-value expression for a scatter or bubble chart must return a numeric value.
     * For a chart of another type, add a single x tag to the chart title after the corresponding foreach tag. In this case, an x-value expression must return a numeric, date, or string value.
 7.  For a chart of any type, add y tags to chart series' names as follows.
-    
+  
     ```csharp
     <<y [y_value_expression]>>
-    
     ```
     
     An y-value expression must return a numeric value.
     
 8.  For a bubble chart, add size tags to chart series' names as follows.
-    
+  
     ```csharp
     <<size [bubble_size_expression]>>
-    
     ```
     
     A bubble-size expression must return a numeric value.
     
 9.  For a chart with dynamic data, you can select which series to include into it dynamically based upon conditions. In particular, this feature is useful when you need to restrict access to sensitive data in chart series for some users of your application. To use the feature, do the following steps:
-    
+  
     * Declare a chart with dynamic data in the usual way
     * For series to be removed from the chart based upon conditions dynamically, define the conditions in names of these series using removeif tags having the following syntax
     
     ```csharp
     <<removeif [conditional_expression]>>
-    
     ```
     
     A conditional expression must return a Boolean value.
@@ -385,7 +373,6 @@ During runtime, a chart with a foreach tag in its title is processed by the engi
         public float Price { get { ... } }
         ...
     }
-    
     ```
     
     Given that managers is an enumeration of Manager instances, you can use the following template to represent total contract prices achieved by managers in a column chart.  
@@ -418,7 +405,6 @@ public class Person
     public IEnumerable<Person> Children { get { ... } }
     ...
 }
-
 ```
 
 | Extension Method | Examples and Notes |

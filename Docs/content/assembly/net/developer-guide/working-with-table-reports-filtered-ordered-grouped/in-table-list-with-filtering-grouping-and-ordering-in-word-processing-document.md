@@ -8,8 +8,6 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-# In-Table List with Filtering, Grouping, and Ordering in Word Processing Document
-
 {{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a In-Table List with Filtering, Grouping, and Ordering report in Word Processing Document format based on the use case: [Working with a Business Case](https://docs.groupdocs.com/assembly/net/working-with-a-business-case/).{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}
 
 ## In-Table List with Filtering, Grouping, and Ordering in Microsoft Word Document
