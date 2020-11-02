@@ -8,8 +8,6 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-# In-Table List with Filtering, Grouping, and Ordering in HTML Document
-
 {{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate an In-Table Master-Detail report in HTML Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/).{{< /alert >}}
 
 ## In-Table Master-Detail in HTML Document
