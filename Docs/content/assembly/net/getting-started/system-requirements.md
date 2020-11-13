@@ -8,7 +8,6 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-## Overview
 
 GroupDocs.Assembly for .NET does not require any external software or third party tool to be installed. Just follow one of the way as described in [Development Environment, Installation and Configuration]({{< ref "assembly/net/getting-started/development-environment-installation-and-configuration.md" >}}).
 

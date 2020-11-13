@@ -62,7 +62,7 @@ The following table indicates the input and output file formats supported by Gro
 | [POT](https://wiki.fileformat.com/presentation/pot/) | PowerPoint template files created by PowerPoint 97-2003 versions | ![(tick)](assembly/net/images/check.png) | ![(tick)](assembly/net/images/check.png) | ![(tick)](assembly/net/images/check.png) |   |
 | [OTP](https://wiki.fileformat.com/presentation/otp/) | OpenDocument Presentation Template | ![(tick)](assembly/net/images/check.png) | ![(tick)](assembly/net/images/check.png) | ![(tick)](assembly/net/images/check.png) |   |
 
-### Supported Features Detail for Email File Formats
+## Supported Features Detail for Email File Formats
 
 The following table provides information on those GroupDocs.Assembly features that are partially supported or not supported at all for email file formats.  
 
@@ -73,7 +73,7 @@ The following table provides information on those GroupDocs.Assembly features th
 | Inserting Images Dynamically | Supported | Supported | Supported | Not supported |
 | Inserting Barcodes Dynamically | Supported | Supported | To be supported | Not supported |
 
-### Supported Output File Formats Depending on Input File Formats
+## Supported Output File Formats Depending on Input File Formats
 
 The following table shows which output file formats are supported by GroupDocs.Assembly depending on input file formats:
 

@@ -8,7 +8,6 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-## Features Overview
 
 GroupDocs.Assembly for .NET is an API that allows you to generate documents in popular *microsoft office* and email file formats based upon template documents and data obtained from various sources including databases, XML, JSON, OData, objects of custom .NET types, external documents, and more. The following is the list of salient features which are offered by the GroupDocs.Assembly API:
 
@@ -62,7 +61,7 @@ Following is the detail given about how the features are offered with their usag
 
 ### Explicit Support for Multiple Data Sources
 
-A new overload [**DocumentAssembler.AssembleDocument**](https://apireference.groupdocs.com/net/assembly/groupdocs.assembly/documentassembler/methods/assembledocument/index) is added in the new release. Using this overload user can reference multiple data source objects and their members in the template. Overload accepts an array of data source names and an array of data sources. Learn more about support of multiple data sources in [this]({{< ref "assembly/net/developer-guide/working-with-multiple-data-sources/_index.md" >}}) article.
+A new overload [**DocumentAssembler.AssembleDocument**](https://apireference.groupdocs.com/net/assembly/groupdocs.assembly/documentassembler/methods/assembledocument/index) is added in the new release. Using this overload user can reference multiple data source objects and their members in the template. Overload accepts an array of data source names and an array of data sources. Learn more about support of multiple data sources in [this](https://docs.groupdocs.com/assembly/net/working-with-multiple-data-sources/) article.
 
 ## Template Formats, Elements and Syntax
 
@@ -90,7 +89,7 @@ HTML and Plain Text document formats are supported by the GroupDocs.Assembly API
 
 #### Dynamic Merging of Table Cells
 
-You can merge table cells with equal textual contents within your reports dynamically using **cellMerge** tag. For the detail, please visit [Merging Table Cells Dynamically]({{< ref "assembly/net/developer-guide/working-with-table-reports/merging-table-cells-dynamically.md" >}}).
+You can merge table cells with equal textual contents within your reports dynamically using **cellMerge** tag. For the detail, please visit [Merging Table Cells Dynamically](https://docs.groupdocs.com/assembly/net/merging-table-cells-dynamically/).
 
 #### Textual Comments within Template Syntax Tags
 
@@ -102,7 +101,7 @@ An optional comment providing a human-readable explanation ignored by the engine
 
 #### In-lining of Syntax Error Messages into Templates 
 
-In-lining of syntax error messages into templates instead of exception throwing. For the detail, please visit [Use of In-line Syntax Error Messages into Templates]({{< ref "assembly/net/developer-guide/use-of-in-line-syntax-error-messages-into-templates.md" >}}).
+In-lining of syntax error messages into templates instead of exception throwing. For the detail, please visit [Use of In-line Syntax Error Messages into Templates](https://docs.groupdocs.com/assembly/net/use-of-in-line-syntax-error-messages-into-templates/).
 
 ### Template Elements
 
@@ -168,7 +167,7 @@ This feature allows user to implement a new <<next>> tag. The tag should be supp
 
 ### Setting Background Color Dynamically
 
-For [HTML documents]({{< ref "assembly/net/developer-guide/working-with-list-reports-bulleted/bulleted-list-in-html-document.md" >}}), a background color can not be set dynamically using the backColor tag
+For [HTML documents](https://docs.groupdocs.com/assembly/net/bulleted-list-in-html-document/), a background color can not be set dynamically using the backColor tag
 
 ```csharp
 <<backColor ["red"]>>text with red background<</backColor>>
@@ -227,7 +226,7 @@ API allows users to calculate formula while assembling Spreadsheet documents.
 
 | Feature | Support in GroupDocs.Assembly for .NET |
 | --- | --- |
-| [LINQ-based]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md" >}}) | Supported |
+| [LINQ-based](https://docs.groupdocs.com/assembly/net/template-syntax-part-1-of-2/) | Supported |
 | [Mustache](https://mustache.github.io/mustache.5.html) | To be supported |
 
 ### Changing Output File Format 
@@ -238,12 +237,12 @@ GroupDocs.Assembly provides a powerful feature to change the target file format 
 
 Load template documents from html with resources and save assembled Word, Excel, PowerPoint & emails to html with resources. Please visit the following articles for the detail:
 
-*   [Loading of template documents from HTML with resources]({{< ref "assembly/net/developer-guide/loading-and-saving-with-external-resource-files/loading-of-template-documents-from-html-with-resources.md" >}})
-*   [Saving to HTML with External Resource Files]({{< ref "assembly/net/developer-guide/loading-and-saving-with-external-resource-files/saving-to-html-with-external-resource-files.md" >}})
+*   [Loading of template documents from HTML with resources](https://docs.groupdocs.com/assembly/net/loading-of-template-documents-from-html-with-resources/)
+*   [Saving to HTML with External Resource Files](https://docs.groupdocs.com/assembly/net/saving-to-html-with-external-resource-files/)
 
 ### Numbering Restart in Nested Numbered List 
 
-The GroupDocs.Assembly engine allows restart list numbering within your documents dynamically using *<<restartNum>>* tags. In particular, this feature is useful when working with a nested numbered list within a data band. Please visit [this article]({{< ref "assembly/net/developer-guide/working-with-list-reports-numbered/numbered-list-in-word-processing-document.md#numbering-restart-in-nested-numbered-list" >}}) for more details
+The GroupDocs.Assembly engine allows restart list numbering within your documents dynamically using *<<restartNum>>* tags. In particular, this feature is useful when working with a nested numbered list within a data band. Please visit [this article](https://docs.groupdocs.com/assembly/net/numbered-list-in-word-processing-document/#numbering-restart-in-nested-numbered-list) for more details
 
   
 

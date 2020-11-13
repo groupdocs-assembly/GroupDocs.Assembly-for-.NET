@@ -42,24 +42,20 @@ Here is a sample report in Microsoft Word Document Format for 'Products' table
 
 {{< gist atirtahirgroupdocs 202a1a7ed0fa355b5fe0 >}}
 
-
-
 #### ReportGenerator.cs
 
 {{< gist atirtahirgroupdocs 500c9be730a4fd553344 >}}
-
-
 
 ## Technical References
 
 ### Creating Templates
 
-*   [Template Syntax - Part 1 of 2]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md" >}})
-*   [Template Syntax - Part 2 of 2]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md" >}})
+*   [Template Syntax - Part 1 of 2](https://docs.groupdocs.com/assembly/net/template-syntax-part-1-of-2/)
+*   [Template Syntax - Part 2 of 2](https://docs.groupdocs.com/assembly/net/template-syntax-part-2-of-2/)
 
 ### An Example Business Case
 
-*   [Business Case of a Shopping Store]({{< ref "assembly/net/developer-guide/working-with-a-business-case/business-case-of-a-shopping-store.md" >}})
-*   [The Business Layer]({{< ref "assembly/net/developer-guide/working-with-a-business-case/the-business-layer.md" >}})
+*   [Business Case of a Shopping Store](https://docs.groupdocs.com/assembly/net/business-case-of-a-shopping-store/)
+*   [The Business Layer](https://docs.groupdocs.com/assembly/net/the-business-layer/)
 
-**Note:** This business case covers almost all the [Supported Data Formats]({{< ref "assembly/net/getting-started/features-overview.md#data-formats" >}}#FeaturesOverview-DataFormats)
+**Note:** This business case covers almost all the [Supported Data Formats](https://docs.groupdocs.com/assembly/net/features-overview/#data-sources)

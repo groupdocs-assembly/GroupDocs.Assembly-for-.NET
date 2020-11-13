@@ -33,15 +33,15 @@ From now, the following identifiers can be used to generate GS1-128 AI 8102 Coup
 | code128GS1UPCA | GS1-128 AI 8102 Coupon Extended barcode |
 | databarGS1UPCA | UPCA & GS1 Databar Coupon barcode |
 
-For more information on dynamic insertion of barcodes, see [Barcodes Syntax and Properties]({{< ref "assembly/net/developer-guide/working-with-barcode-image-generation/barcodes-syntax-and-properties.md" >}}).
+For more information on dynamic insertion of barcodes, see [Barcodes Syntax and Properties](https://docs.groupdocs.com/assembly/net/barcodes-syntax-and-properties/).
 
 ### Improved barcode scaling
 
-Starting from this version, barcode scaling is supported for the most of barcode types. For more information on scaling of barcodes, see [Scaling Barcode Symbols]({{< ref "assembly/net/developer-guide/working-with-barcode-image-generation/barcodes-syntax-and-properties.md#scaling-barcode-symbols" >}}).
+Starting from this version, barcode scaling is supported for the most of barcode types. For more information on scaling of barcodes, see [Scaling Barcode Symbols](https://docs.groupdocs.com/assembly/net/barcodes-syntax-and-properties/#scaling-barcode-symbols).
 
 ### Changed API for working with barcode image resolution
 
-Starting from the 20.8 version, GroupDocs.Assembly introduces a single property to deal with both vertical and horizontal barcode image resolutions. For more information, see [Setting Barcode Image Resolution]({{< ref "assembly/net/developer-guide/working-with-barcode-image-generation/barcodes-syntax-and-properties.md#setting-barcode-image-resolution" >}}).
+Starting from the 20.8 version, GroupDocs.Assembly introduces a single property to deal with both vertical and horizontal barcode image resolutions. For more information, see [Setting Barcode Image Resolution](https://docs.groupdocs.com/assembly/net/barcodes-syntax-and-properties/#setting-barcode-image-resolution).
 
 #### New members of BarcodeSettings
 
