@@ -17,7 +17,7 @@ Please follow below steps to can create Pie Chart in MS Word 2013.
 1.  Click in the document where you want to insert the chart, click the "Insert" tab, and then click "Chart" in the illustrations group to open the "Insert Chart" dialog box.
 2.  Select "Pie".
 3.  Preview "Pie" and press OK to insert the chart and Worksheet template to your document.
-4.  Edit the Worksheet with your data to update the chart. See [Chart Data (Excel)]({{< ref "assembly/net/developer-guide/working-with-individual-series-point-coloring/individual-series-point-coloring-in-word-processing-document.md" >}})
+4.  Edit the Worksheet with your data to update the chart. See [Chart Data (Excel)](https://docs.groupdocs.com/assembly/net/individual-series-point-coloring-in-word-processing-document/#adding-syntax-to-be-evaluated-by-groupdocsassembly-engine)
 5.  Save the template.
 
 ### Reporting Requirement
