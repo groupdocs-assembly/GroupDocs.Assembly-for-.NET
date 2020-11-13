@@ -12,6 +12,3 @@ hideChildren: False
 Generate documents based on a data source and template, or create reports fast and easy with our intuitive and powerful API just with few lines of code.
 
 Let's look at a scenario for working with a business case and working with GroupDocs.Assembly Engine.
-
-- [Working with a Business Case](https://docs.groupdocs.com/assembly/net/working-with-a-business-case/)
-- [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/net/working-with-groupdocs-assembly-engine/)
