@@ -29,7 +29,7 @@ Supported unordered lists for Markdown and access to related DataTable using rel
 
 ### Supported access to related DataTable using relation name
 
-The Document Assembly Engine enables you to access a data associated with a particular *DataRow* or *DataRowView* instance in template expressions using the "." operator. See "[Working with DataTable and DataView Objects]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#datatable-and-dataview-objects" >}})" for more information.
+The Document Assembly Engine enables you to access a data associated with a particular *DataRow* or *DataRowView* instance in template expressions using the "." operator. See "[Working with DataTable and DataView Objects](https://docs.groupdocs.com/assembly/net/template-syntax-part-1-of-2/#using-data-sources)" for more information.
 
 ### Supported unordered lists for Markdown
 

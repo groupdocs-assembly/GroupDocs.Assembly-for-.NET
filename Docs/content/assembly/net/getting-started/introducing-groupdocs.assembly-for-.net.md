@@ -8,11 +8,10 @@ keywords:
 productName: GroupDocs.Assembly for .NET
 hideChildren: False
 ---
-## Introduction to GroupDocs.Assembly for .NET
 
 GroupDocs.Assembly for .NET is a document automation and reports generation API designed to create custom documents from templates. This .NET reporting API intelligently assembles the given data with the defined template document and it is a **report generator** which generates an output document based on the data source, in the template's format as or in the specified output format. Since GroupDocs.Assembly for .NET can generate documents based on a data source, essentially it serves two purposes: Document Automation and Report Generation.
 
-### Document Automation Concept
+## Document Automation Concept
 
 As per Wikipedia, Document Automation can be described as:
 
@@ -22,7 +21,7 @@ As per Wikipedia, Document Automation can be described as:
 
 For more information, please visit: [https://en.wikipedia.org/wiki/Document\_automation](https://en.wikipedia.org/wiki/Document_automation)
 
-### Report Generation Concept
+## Report Generation Concept
 
 As per Wikipedia, Report Generation can be described as:
 
@@ -52,7 +51,7 @@ The following table shows which output file formats are supported by GroupDocs.A
 
 ## Supported Template Syntax
 
-Essentially, the GroupDocs.Assembly for .NET engine supports LINQ but it does not support the actual LINQ syntax. Instead, the engine supports the underlying C# syntax for LINQ queries which is actually shorter than LINQ. This basically means that the developers can use the familiar and well documented C# syntax to write data binding/traversal queries right in the document templates. As a result, developers can enjoy many benefits including short and concise reporting syntax and binding to any type of supported data source including business objects. For more information about the supported LINQ based syntax, please visit [Template Syntax]({{< ref "assembly/net/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md" >}}). In future, [Mustache](https://mustache.github.io/mustache.5.html) template support is also planned.
+Essentially, the GroupDocs.Assembly for .NET engine supports LINQ but it does not support the actual LINQ syntax. Instead, the engine supports the underlying C# syntax for LINQ queries which is actually shorter than LINQ. This basically means that the developers can use the familiar and well documented C# syntax to write data binding/traversal queries right in the document templates. As a result, developers can enjoy many benefits including short and concise reporting syntax and binding to any type of supported data source including business objects. For more information about the supported LINQ based syntax, please visit [Template Syntax](https://docs.groupdocs.com/assembly/net/template-syntax-part-1-of-2/). In future, [Mustache](https://mustache.github.io/mustache.5.html) template support is also planned.
 
 ## Supported Data Sources
 
