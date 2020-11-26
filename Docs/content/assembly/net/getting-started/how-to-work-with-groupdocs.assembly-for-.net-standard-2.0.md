@@ -14,11 +14,11 @@ A recommended way to deal with these and other GroupDocs.Assembly for .NET Stand
 
 Depending on OS you work on, you may need to install some additional dependencies as explained further.
 
-## Use GroupDocs.Assembly for .NET Standard 2.0 in Windows
+## Using GroupDocs.Assembly for .NET Standard 2.0 in Windows
 
 No additional dependencies arise.
 
-## Use GroupDocs.Assembly for .NET Standard 2.0 in Linux
+## Using GroupDocs.Assembly for .NET Standard 2.0 in Linux
 
 In addition to GroupDocs.Assembly NuGet package dependencies, [SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/) should be installed. Also, installing of additional components is required as shown by the following commands:
 
@@ -30,10 +30,10 @@ apt-get update && apt-get install -y libfontconfig1
 apt-get update && apt-get install -y --allow-unauthenticated libc6-dev libgdiplus libx11-dev
 ```
 
-## Use GroupDocs.Assembly for .NET Standard 2.0 in macOS
+## Using GroupDocs.Assembly for .NET Standard 2.0 in macOS
 
 In addition to GroupDocs.Assembly NuGet package dependencies, [runtime.osx.10.10-x64.CoreCompat.System.Drawing](https://www.nuget.org/packages/runtime.osx.10.10-x64.CoreCompat.System.Drawing/) should be installed.
 
-## Use GroupDocs.Assembly for .NET Standard 2.0 in Docker
+## Using GroupDocs.Assembly for .NET Standard 2.0 in Docker
 
 Additional steps required to use GroupDocs.Assembly for .NET Standard 2.0 in Docker correspond to a type of containers being used. For example, for Linux containers, you should take the same additional steps as per "Using GroupDocs.Assembly for .NET Standard 2.0 in Linux" section.
