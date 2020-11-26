@@ -1,6 +1,6 @@
 ---
 id: how-to-work-with-groupdocs-assembly-for-net-standard-2-0
-url: assembly/net/how-to-work-with-groupdocs.assembly-for-.net-standard-2.0
+url: assembly/net/how-to-work-with-groupdocs.assembly-for-net-standard-2.0/
 title: How to Work with GroupDocs.Assembly for .NET Standard 2.0
 weight: 7
 description: "Learn what additional dependencies you may need to install to work with GroupDocs.Assembly for .NET Standard 2.0 in your project, depending on your OS."
