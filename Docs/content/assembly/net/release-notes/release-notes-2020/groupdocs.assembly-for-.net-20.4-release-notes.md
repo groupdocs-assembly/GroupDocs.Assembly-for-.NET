@@ -21,9 +21,9 @@ Provided an option to fit an image within textbox bounds while maintaining ratio
 | ASSEMBLYNET-151  | Provide an option to fit an image within textbox bounds while maintaining ratio for Spreadsheet documents  | Feature  |
 | ASSEMBLYNET-152  | Provide an option to fit an image within textbox bounds while maintaining ratio for Presentation documents  | Feature  |
 
-{{< alert style="info" >}}This section lists public API changes that were introduced in GroupDocs.Assembly for .NET 20.4. It includes not only new and obsoleted public methods, but also a description of any changes in the behavior behind the scenes in GroupDocs.Assembly which may affect existing code. Any behavior introduced that could be seen as a regression and modifies existing behavior is especially important and is documented here.{{< /alert >}}
+## Public API and Backward Incompatible Changes
 
-## Public API and Backward Incompatible Changes 
+{{< alert style="info" >}}This section lists public API changes that were introduced in GroupDocs.Assembly for .NET 20.4. It includes not only new and obsoleted public methods, but also a description of any changes in the behavior behind the scenes in GroupDocs.Assembly which may affect existing code. Any behavior introduced that could be seen as a regression and modifies existing behavior is especially important and is documented here.{{< /alert >}}
 
 ### Provided an option to fit an image within textbox bounds while maintaining ratio
 

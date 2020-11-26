@@ -21,9 +21,9 @@ Supported dynamic insertion of bookmarks for Word Processing documents and email
 | ASSEMBLYNET-141  | Support dynamic naming of cell ranges for Spreadsheet documents  | Feature  |
 | ASSEMBLYNET-142  | Simple-type array with one element does not work for JsonDataSource  | Bug  |
 
-{{< alert style="info" >}}This section lists public API changes that were introduced in GroupDocs.Assembly for .NET 20.1. It includes not only new and obsoleted public methods, but also a description of any changes in the behavior behind the scenes in GroupDocs.Assembly which may affect existing code. Any behavior introduced that could be seen as a regression and modifies existing behavior is especially important and is documented here.{{< /alert >}}
+## Public API and Backward Incompatible Changes
 
-## Public API and Backward Incompatible Changes 
+{{< alert style="info" >}}This section lists public API changes that were introduced in GroupDocs.Assembly for .NET 20.1. It includes not only new and obsoleted public methods, but also a description of any changes in the behavior behind the scenes in GroupDocs.Assembly which may affect existing code. Any behavior introduced that could be seen as a regression and modifies existing behavior is especially important and is documented here.{{< /alert >}}
 
 ### Supported dynamic insertion of bookmarks for Word Processing documents and emails with HTML and RTF bodies
 
