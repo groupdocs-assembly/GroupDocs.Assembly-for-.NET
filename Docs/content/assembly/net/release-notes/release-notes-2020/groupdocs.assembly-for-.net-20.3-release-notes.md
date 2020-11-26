@@ -20,9 +20,9 @@ Supported dynamic insertion of documents and images from Base64-encoded bytes an
 | ASSEMBLYNET-147  | Support dynamic image and document insertion from Base64-encoded bytes  | Feature  |
 | ASSEMBLYNET-148  | ArgumentException is thrown if image or document expression returns an empty string  | Bug  |
 
-{{< alert style="info" >}}This section lists public API changes that were introduced in GroupDocs.Assembly for .NET 20.3. It includes not only new and obsoleted public methods, but also a description of any changes in the behavior behind the scenes in GroupDocs.Assembly which may affect existing code. Any behavior introduced that could be seen as a regression and modifies existing behavior is especially important and is documented here.{{< /alert >}}
+## Public API and Backward Incompatible Changes
 
-## Public API and Backward Incompatible Changes 
+{{< alert style="info" >}}This section lists public API changes that were introduced in GroupDocs.Assembly for .NET 20.3. It includes not only new and obsoleted public methods, but also a description of any changes in the behavior behind the scenes in GroupDocs.Assembly which may affect existing code. Any behavior introduced that could be seen as a regression and modifies existing behavior is especially important and is documented here.{{< /alert >}}
 
 ### Supported dynamic insertion of documents and images from Base64-encoded bytes and dynamic checkbox value setting
 

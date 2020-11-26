@@ -2,7 +2,7 @@
 id: how-to-run-examples
 url: assembly/net/how-to-run-examples
 title: How to Run Examples
-weight: 7
+weight: 10
 description: ""
 keywords: 
 productName: GroupDocs.Assembly for .NET
