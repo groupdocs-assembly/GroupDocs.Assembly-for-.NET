@@ -30,7 +30,7 @@ GroupDocs.Assembly for .NET 20.11 comes up with support of .NET Standard 2.0 as 
 
 ## Public API and Backward Incompatible Changes 
 
-{{< alert style="info" >}}This section lists public API changes that were introduced in GroupDocs.Assembly for .NET 20.9. It includes not only new and obsoleted public methods, but also a description of any changes in the behavior behind the scenes in GroupDocs.Assembly which may affect existing code. Any behavior introduced that could be seen as a regression and modifies existing behavior is especially important and is documented here.{{< /alert >}}
+{{< alert style="info" >}}This section lists public API changes that were introduced in GroupDocs.Assembly for .NET 20.11. It includes not only new and obsoleted public methods, but also a description of any changes in the behavior behind the scenes in GroupDocs.Assembly which may affect existing code. Any behavior introduced that could be seen as a regression and modifies existing behavior is especially important and is documented here.{{< /alert >}}
 
 ### Supported Inline Links and Inline Images for Markdown
 
@@ -46,4 +46,4 @@ GroupDocs.Assembly is built on top of several Aspose products. Some of the produ
 
 A recommended way to deal with these and other GroupDocs.Assembly for .NET Standard 2.0 dependencies is installing of [GroupDocs.Assembly NuGet package](https://www.nuget.org/packages/GroupDocs.Assembly/). Otherwise, you can install all dependencies listed at [the NuGet package page](https://www.nuget.org/packages/GroupDocs.Assembly/) manually.
 
-Depending on OS you work on, you may need to install some additional dependencies. Learn more about these dependencies in the article ["How to Work with GroupDocs.Assembly for .NET Standard 2.0"](https://docs.groupdocs.com/assembly/net/how-to-work-with-groupdocs.assembly-for-.net-standard-2.0/).
+Depending on OS you work on, you may need to install some additional dependencies. Learn more about these dependencies in the article ["How to Work with GroupDocs.Assembly for .NET Standard 2.0"](https://docs.groupdocs.com/assembly/net/how-to-work-with-groupdocs.assembly-for-net-standard-2.0/).
