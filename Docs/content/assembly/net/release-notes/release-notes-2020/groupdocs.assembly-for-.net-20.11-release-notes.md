@@ -19,7 +19,7 @@ GroupDocs.Assembly for .NET 20.11 comes up with support of .NET Standard 2.0 as 
 | ASSEMBLYNET-153 | Support for .NET Core 3.0                                    | Feature  |
 | ASSEMBLYNET-172 | Support inline links for Markdown                            | Feature  |
 | ASSEMBLYNET-173 | Support inline images for Markdown                           | Feature  |
-| ASSEMBLYNET-178 | API support for .NET Core 5.0                                | Feature  |
+| ASSEMBLYNET-178 | API support for .NET 5.0                                | Feature  |
 | ASSEMBLYNET-165 | Nullable int is not recognized for JsonDataSource            | Bug      |
 | ASSEMBLYNET-166 | Chart legend entries removed in a template appear in a result Word Processing document | Bug      |
 | ASSEMBLYNET-167 | Tag "removeif" throws NullReferenceException for a Word Processing document | Bug      |
