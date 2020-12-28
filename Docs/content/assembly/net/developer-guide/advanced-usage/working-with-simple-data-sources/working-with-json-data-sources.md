@@ -248,7 +248,7 @@ Contracts:
 - J Ent. ($100000)
 ```
 
-### Loose and strict modes of recognition of JSON simple values
+### Recognition of JSON simple values
 
 For recognition of JSON simple values (null, boolean, number, integer, and string), the engine provides two modes: *loose* and *strict*. In the loose mode, types of JSON simple values are determined upon parsing of their string representations. In the strict mode, types of JSON simple values are determined from JSON notation itself. To see the main difference between the modes, consider the following JSON snippet.
 
