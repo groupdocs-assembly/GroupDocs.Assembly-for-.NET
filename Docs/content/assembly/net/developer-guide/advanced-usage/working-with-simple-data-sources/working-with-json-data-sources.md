@@ -261,7 +261,9 @@ In the loose mode, the type of prop is determined as integer, whereas in the str
 The loose mode is used by the engine by default to support more typed data representation options. However, in some scenarios, it can be more preferable to disable recognition of numbers and other JSON simple values from strings, for example, when you need to keep leading padding zeros in a string value representing a number. In this case, you can switch to the strict mode as shown in following code snippet.
 
 ```
-JsonDataLoadOptions options = new JsonDataLoadOptions(); options.SimpleValueParseMode = JsonSimpleValueParseMode.Strict; JsonDataSource dataSource = new JsonDataSource(..., options);
+JsonDataLoadOptions options = new JsonDataLoadOptions();
+options.SimpleValueParseMode = JsonSimpleValueParseMode.Strict;
+JsonDataSource dataSource = new JsonDataSource(..., options);
 ```
 
 **Note –** Parsing of date-time values does not depend on whether the loose or strict mode is used.
@@ -277,7 +279,9 @@ Recognition of date-time values is a special case, because [JSON specification](
 Although this approach is quite flexible, in some scenarios, you may need to restrict strings to be recognized as date-time values. You can achieve this by specifying an exact format in the context of the current culture to be used while parsing date-time values from strings as shown in the following example.
 
 ```
-JsonDataLoadOptions options = new JsonDataLoadOptions(); options.ExactDateTimeParseFormat = "MM/dd/yyyy"; JsonDataSource dataSource = new JsonDataSource(..., options);
+JsonDataLoadOptions options = new JsonDataLoadOptions();
+options.ExactDateTimeParseFormat = "MM/dd/yyyy";
+JsonDataSource dataSource = new JsonDataSource(..., options);
 ```
 
 In this example, strings conforming the format "MM/dd/yyyy" are going to be recognized as date-time values while loading JSON, whereas the others are not (but see the following note).

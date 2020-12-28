@@ -26,7 +26,7 @@ Provided options to control JSON simple values’ recognition and supported work
 
 ### Provided Options to Control JSON Simple Values’ Recognition
 
-A detailed description of this feature can be found in the ["Working with JSON Data Sources"](https://docs.groupdocs.com/assembly/net/working-with-json-data-sources/#loose-and-strict-modes-of-recognition-of-JSON-simple-values) section.
+A detailed description of this feature can be found in the ["Working with JSON Data Sources"](https://docs.groupdocs.com/assembly/net/working-with-json-data-sources/#loose-and-strict-modes-of-recognition-of-json-simple-values) section.
 
 ### Supported Working with the XLT Spreadsheet Document Format
 
