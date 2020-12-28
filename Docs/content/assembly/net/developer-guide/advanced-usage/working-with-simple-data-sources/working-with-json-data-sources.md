@@ -248,6 +248,44 @@ Contracts:
 - J Ent. ($100000)
 ```
 
+### Loose and strict modes of recognition of JSON simple values
+
+For recognition of JSON simple values (null, boolean, number, integer, and string), the engine provides two modes: *loose* and *strict*. In the loose mode, types of JSON simple values are determined upon parsing of their string representations. In the strict mode, types of JSON simple values are determined from JSON notation itself. To see the main difference between the modes, consider the following JSON snippet.
+
+```
+{ prop: "123" }
+```
+
+In the loose mode, the type of prop is determined as integer, whereas in the strict mode, it is determined as string.
+
+The loose mode is used by the engine by default to support more typed data representation options. However, in some scenarios, it can be more preferable to disable recognition of numbers and other JSON simple values from strings, for example, when you need to keep leading padding zeros in a string value representing a number. In this case, you can switch to the strict mode as shown in following code snippet.
+
+```
+JsonDataLoadOptions options = new JsonDataLoadOptions(); options.SimpleValueParseMode = JsonSimpleValueParseMode.Strict; JsonDataSource dataSource = new JsonDataSource(..., options);
+```
+
+**Note –** Parsing of date-time values does not depend on whether the loose or strict mode is used.
+
+Recognition of date-time values is a special case, because [JSON specification](https://www.json.org) does not define a format for their representation. So, by default, while parsing date-time values from strings, the engine tries several formats in the following order:
+
+1. [The ISO-8601 format](https://en.wikipedia.org/wiki/ISO_8601) (for values like "2015-03-02T13:56:04Z")
+2. [The Microsoft® JSON date-time format](https://docs.microsoft.com/en-us/previous-versions/dotnet/articles/bb299886(v=msdn.10)#from-javascript-literals-to-json) (for values like "/Date(1224043200000)/")
+3. All date-time formats supported for the current culture
+4. All date-time formats supported for the English USA culture
+5. All date-time formats supported for the English New Zealand culture
+
+Although this approach is quite flexible, in some scenarios, you may need to restrict strings to be recognized as date-time values. You can achieve this by specifying an exact format in the context of the current culture to be used while parsing date-time values from strings as shown in the following example.
+
+```
+JsonDataLoadOptions options = new JsonDataLoadOptions(); options.ExactDateTimeParseFormat = "MM/dd/yyyy"; JsonDataSource dataSource = new JsonDataSource(..., options);
+```
+
+In this example, strings conforming the format "MM/dd/yyyy" are going to be recognized as date-time values while loading JSON, whereas the others are not (but see the following note).
+
+In some scenarios, you may need to disable recognition of date-time values at all, for example, when you deal with strings containing already formatted date-time values, which you do not want to re-format using the engine. You can achieve this by setting the exact date-time parse format to an empty string (but see the following note).
+
+**Note –** Strings conforming the Microsoft® JSON date-time format (for example, "/Date(1224043200000)/") are always recognized as date-time values regardless of the exact date-time parse format.
+
 ### Download
 
 #### Data Source Document
