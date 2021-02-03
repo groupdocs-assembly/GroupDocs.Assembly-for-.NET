@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 using System.IO;
 using Newtonsoft.Json;
@@ -16,30 +14,30 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
     //ExStart:DataLayer
     public static class DataLayer
     {
-        public const string productXMLfile = "../../../../Data/Data Sources/XML DataSource/Products.xml";
-        public const string customerXMLfile = "../../../../Data/Data Sources/XML DataSource/Customers.xml";
-        public const string orderXMLfile = "../../../../Data/Data Sources/XML DataSource/Orders.xml";
-        public const string productOrderXMLfile = "../../../../Data/Data Sources/XML DataSource/ProductOrders.xml";
-        public const string jsonFile = "../../../../Data/Data Sources/JSON DataSource/CustomerData-Json.json";
-        public const string wordDataFile = "../../../../Data/Data Sources/Word DataSource/Managers Data.docx";
-        public const string excelDataFile = "../../../../Data/Data Sources/Excel DataSource/Contracts Data.xlsx";
-        public const string presentationDataFile = "../../../../Data/Data Sources/Presentation DataSource/Managers Data.pptx";
+        public const string ProductXmlFile = "../../../../Data/Data Sources/XML DataSource/Products.xml";
+        public const string CustomerXmlFile = "../../../../Data/Data Sources/XML DataSource/Customers.xml";
+        public const string OrderXmlFile = "../../../../Data/Data Sources/XML DataSource/Orders.xml";
+        public const string ProductOrderXmlFile = "../../../../Data/Data Sources/XML DataSource/ProductOrders.xml";
+        public const string JsonFile = "../../../../Data/Data Sources/JSON DataSource/CustomerData-Json.json";
+        public const string WordDataFile = "../../../../Data/Data Sources/Word DataSource/Managers Data.docx";
+        public const string ExcelDataFile = "../../../../Data/Data Sources/Excel DataSource/Contracts Data.xlsx";
+        public const string PresentationDataFile = "../../../../Data/Data Sources/Presentation DataSource/Managers Data.pptx";
 
         #region DataInitialization
         //ExStart:PopulateData
         /// <summary>
         /// This function initializes/populates the data. 
-        /// Initialize Customer information, product information and order information
+        /// Initialize Customer information, product information and order information.
         /// </summary>
-        /// <returns>Returns customer's complete information</returns>
+        /// <returns>Returns customer's complete information.</returns>
         public static IEnumerable<BusinessObjects.Customer> PopulateData()
         {
             BusinessObjects.Customer customer = new BusinessObjects.Customer { CustomerName = "Jane Doe", CustomerContactNumber = "+9211874", ShippingAddress = "Flat # 1, Kiyani Plaza ISB", Barcode = "123456789qwertyu0025" };
             
-            customer.Order = new BusinessObjects.Order[]
+            customer.Order = new[]
             {
                   new BusinessObjects.Order { Product = new BusinessObjects.Product { ProductName ="Lumia 525" }, Customer = customer, Price= 170, ProductQuantity = 5, OrderDate = new DateTime(2015, 1, 1),
-                    Services= new BusinessObjects.Service[] 
+                    Services= new[] 
                     {
                         new BusinessObjects.Service { ServiceName="Regular Cleaning"},
                         new BusinessObjects.Service { ServiceName="Oven Cleaning"}
@@ -47,14 +45,14 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
                   }
 
             };
-            yield return customer; //yield return statement will return one data at a time
+            yield return customer;
 
 
             customer = new BusinessObjects.Customer { CustomerName = "John Smith", CustomerContactNumber = "+458789", ShippingAddress = "Quette House, Park Road, ISB", Barcode = "123456789qwertyu0025" };
-            customer.Order = new BusinessObjects.Order[]
+            customer.Order = new[]
             {
                   new BusinessObjects.Order { Product = new BusinessObjects.Product { ProductName = "Lenovo G50" }, Customer = customer, Price = 480, ProductQuantity = 2, OrderDate = new DateTime(2015, 2, 1),
-                   Services= new BusinessObjects.Service[]
+                   Services= new[]
                     {
                         new BusinessObjects.Service { ServiceName="Regular Cleaning"},
                         new BusinessObjects.Service { ServiceName="Oven Cleaning"},
@@ -62,7 +60,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
                     }
                   },
                   new BusinessObjects.Order { Product = new BusinessObjects.Product { ProductName = "Pavilion G6"}, Customer = customer, Price = 400, ProductQuantity = 1, OrderDate = new DateTime(2015, 10, 1),
-                   Services= new BusinessObjects.Service[]
+                   Services= new[]
                     {
                         new BusinessObjects.Service { ServiceName="Regular Cleaning"},
                          new BusinessObjects.Service { ServiceName="Carpet Cleaning"}
@@ -70,13 +68,13 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
                     }
                   },
                   new BusinessObjects.Order { Product = new BusinessObjects.Product { ProductName = "Nexus 5"}, Customer = customer, Price = 320, ProductQuantity = 3, OrderDate = new DateTime(2015, 6, 1),
-                   Services= new BusinessObjects.Service[]
+                   Services= new[]
                     {
                         new BusinessObjects.Service { ServiceName="Oven Cleaning"}
                     }
                   }
             };
-            yield return customer; //yield return statement will return one data at a time 
+            yield return customer;
         }
         //ExEnd:PopulateData
         #endregion
@@ -84,15 +82,15 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #region GetOrders
         //ExStart:GetOrdersData
         /// <summary>
-        /// Fetches order from PopulateData
+        /// Fetches order from PopulateData.
         /// </summary>
-        /// <returns>Returns order details, one data at a time</returns>
+        /// <returns>Returns order details, one data at a time.</returns>
         public static IEnumerable<BusinessObjects.Order> GetOrdersData()
         {
             foreach (BusinessObjects.Customer customer in PopulateData())
             {
                 foreach (BusinessObjects.Order order in customer.Order)
-                    yield return order; //yield return statement returns one data at a time
+                    yield return order;
             }
         }
         //ExEnd:GetOrdersData
@@ -101,9 +99,9 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #region GetProducts
         //ExStart:GetProductsData
         /// <summary>
-        /// Fetches products from PopulateData
+        /// Fetches products from PopulateData.
         /// </summary>
-        /// <returns>Returns product details, one data at a time</returns>
+        /// <returns>Returns product details, one data at a time.</returns>
         public static IEnumerable<BusinessObjects.Product> GetProductsData()
         {
             foreach (BusinessObjects.Customer customer in PopulateData())
@@ -118,14 +116,15 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #region GetSingleCustomerData
         //ExStart:GetSingleCustomerData
         /// <summary>
-        /// Fetches customer details of very first customer
+        /// Fetches customer details of very first customer.
         /// </summary>
-        /// <returns>Returns first customer's infromation</returns>
+        /// <returns>Returns first customer's information.</returns>
         public static BusinessObjects.Customer GetCustomerData()
         {
             IEnumerator<BusinessObjects.Customer> customer = PopulateData().GetEnumerator();
             customer.MoveNext();
             customer.MoveNext();
+
             return customer.Current;
         }
         //ExEnd:GetSingleCustomerData
@@ -134,10 +133,10 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #region GetOrdersDataDB
         //ExStart:GetOrdersDataDB
         /// <summary>
-        /// Fetches orders from database
+        /// Fetches orders from database.
         /// </summary>
-        /// <returns>Returns order details, one data at a time</returns>
-        public static IEnumerable<Order> GetOrdersDataDB()
+        /// <returns>Returns order details, one data at a time.</returns>
+        public static IEnumerable<Order> GetOrdersDataDb()
         {
             //create object of data context
             DatabaseEntitiesDataContext dbEntities = new DatabaseEntitiesDataContext();
@@ -149,10 +148,10 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #region GetProductsDataDB
         //ExStart:GetProductsDataDB
         /// <summary>
-        /// Fetches products from database 
+        /// Fetches products from database.
         /// </summary>
-        /// <returns>Returns products information, one data at a time </returns>
-        public static IEnumerable<Product> GetProductsDataDB()
+        /// <returns>Returns products information, one data at a time.</returns>
+        public static IEnumerable<Product> GetProductsDataDb()
         {
             //create object of data context
             DatabaseEntitiesDataContext dbEntities = new DatabaseEntitiesDataContext();
@@ -164,10 +163,10 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #region GetCustomersDataDB
         //ExStart:GetCustomersDataDB
         /// <summary>
-        /// Fetches customers from database
+        /// Fetches customers from database.
         /// </summary>
-        /// <returns>Returns customers information, one data at a time</returns>
-        public static IEnumerable<Customer> GetCustomersDataDB()
+        /// <returns>Returns customers information, one data at a time.</returns>
+        public static IEnumerable<Customer> GetCustomersDataDb()
         {
             //create object of data context
             DatabaseEntitiesDataContext dbEntities = new DatabaseEntitiesDataContext();
@@ -179,14 +178,13 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #region GetSingleCustomerDataDB
         //ExStart:GetSingleCustomerDataDB
         /// <summary>
-        /// Fetches single customer data
+        /// Fetches single customer data.
         /// </summary>
-        /// <returns>Return single, first customer's data</returns>
-        public static Customer GetSingleCustomerDataDB()
+        /// <returns>Return single, first customer's data.</returns>
+        public static Customer GetSingleCustomerDataDb()
         {
             //create object of data context
-            DatabaseEntitiesDataContext dbEntites = new DatabaseEntitiesDataContext();
-            IEnumerator<Customer> customer = GetCustomersDataDB().GetEnumerator();
+            IEnumerator<Customer> customer = GetCustomersDataDb().GetEnumerator();
             customer.MoveNext();
             return customer.Current;
         }
@@ -196,27 +194,28 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #region GetProductsDataDT
         //ExStart:GetProductsDataDT
         /// <summary>
-        /// Fetches Products and ProductOrders information, store them in DataTables and load DataTable to DataSet
+        /// Fetches Products and ProductOrders information, store them in DataTables and load DataTable to DataSet.
         /// </summary>
-        /// <returns>Returns DataSet</returns>
-        public static DataSet GetProductsDT()
+        /// <returns>Returns DataSet.</returns>
+        public static DataSet GetProductsDt()
         {
-            DatabaseEntitiesDataContext dbEntities = new DatabaseEntitiesDataContext();
-            var products = (from c in dbEntities.Products
-                            select c).AsEnumerable();
-            var productOrders = (from c in dbEntities.ProductOrders
-                                 select c).AsEnumerable();
-            DataTable Products = new DataTable();
-            //ToADOTable function converts query results into DataTable
-            Products = products.ToADOTable(rec => new object[] { products });
-            DataTable ProductOrders = new DataTable();
-            ProductOrders = productOrders.ToADOTable(rec => new object[] { productOrders });
-            ProductOrders.TableName = "ProductOrder";
-            Products.TableName = "products";
             DataSet dataSet = new DataSet();
-            //Adding DataTable in DataSet
-            dataSet.Tables.Add(Products);
-            dataSet.Tables.Add(ProductOrders);
+            DatabaseEntitiesDataContext dbEntities = new DatabaseEntitiesDataContext();
+            
+            IEnumerable<Product> products = (from c in dbEntities.Products
+                            select c).AsEnumerable();
+            IEnumerable<ProductOrder> productOrders = (from c in dbEntities.ProductOrders
+                                 select c).AsEnumerable();
+            
+            // ToADOTable function converts query results into DataTable.
+            DataTable productsTable = products.ToADOTable(rec => new object[] { products });
+            productsTable.TableName = "Products";
+            dataSet.Tables.Add(productsTable);
+
+            DataTable productOrdersTable = productOrders.ToADOTable(rec => new object[] { productOrders });
+            productOrdersTable.TableName = "ProductOrder";
+            dataSet.Tables.Add(productOrdersTable);
+            
             return dataSet;
         }
         //ExEnd:GetProductsDataDT
@@ -225,12 +224,14 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #region GetSingleCustomerDataDT
         //ExStart:GetSingleCustomerDT
         /// <summary>
-        /// Fetches Customers from database
+        /// Fetches Customers from database.
         /// </summary>
-        /// <returns>Returns DataSet, very first record from the table</returns>
-        public static DataRow GetSingleCustomerDT()
+        /// <returns>Returns DataSet, very first record from the table.</returns>
+        public static DataRow GetSingleCustomerDt()
         {
+            DataSet dataSet = new DataSet();
             DatabaseEntitiesDataContext dbEntities = new DatabaseEntitiesDataContext();
+            
             var customers = (from c in dbEntities.Customers
                              select new
                              {
@@ -240,13 +241,11 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
                                  c.CustomerContactNumber,
                                  c.Photo
                              }).AsEnumerable();
-            DataTable Customers = new DataTable();
-            //ToADOTable function converts query results into DataTable
-            Customers = customers.ToADOTable(rec => new object[] { customers });
-            Customers.TableName = "Customers";
-            DataSet dataSet = new DataSet();
-            //Adding DataTable in DataSet
-            dataSet.Tables.Add(Customers);
+            
+            DataTable customersTable = customers.ToADOTable(rec => new object[] { customers });
+            customersTable.TableName = "Customers";
+            dataSet.Tables.Add(customersTable);
+
             return dataSet.Tables["Customers"].Rows[0];
         }
         //ExEnd:GetSingleCustomerDT
@@ -255,33 +254,33 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #region GetCustomersAndOrdersDataDT
         //ExStart:GetCustomersAndOrdersDataDT
         /// <summary>
-        /// Fetches Orders, ProductOrders and Customers from database
+        /// Fetches Orders, ProductOrders and Customers from database.
         /// </summary>
-        /// <returns>Returns DataSet</returns>
-        public static DataSet GetCustomersAndOrdersDataDT()
+        /// <returns>Returns DataSet.</returns>
+        public static DataSet GetCustomersAndOrdersDataDt()
         {
+            DataSet dataSet = new DataSet();
             DatabaseEntitiesDataContext dbEntities = new DatabaseEntitiesDataContext();
+            
             var orders = (from c in dbEntities.Orders
                           select c).AsEnumerable();
             var productOrders = (from c in dbEntities.ProductOrders
                                  select c).AsEnumerable();
             var customers = (from c in dbEntities.Customers
                              select c).AsEnumerable();
-            DataTable Orders = new DataTable();
-            //ToADOTable function converts query results into DataTable
-            Orders = orders.ToADOTable(rec => new object[] { orders });
-            DataTable ProductOrders = new DataTable();
-            ProductOrders = productOrders.ToADOTable(rec => new object[] { productOrders });
-            DataTable Customers = new DataTable();
-            Customers = customers.ToADOTable(rec => new object[] { customers });
-            ProductOrders.TableName = "ProductOrder";
-            Orders.TableName = "Orders";
-            Customers.TableName = "Customers";
-            DataSet dataSet = new DataSet();
-            //Adding DataTable in DataSet
-            dataSet.Tables.Add(Orders);
-            dataSet.Tables.Add(ProductOrders);
-            dataSet.Tables.Add(Customers);
+            
+            DataTable ordersTable = orders.ToADOTable(rec => new object[] { orders });
+            ordersTable.TableName = "Orders";
+            dataSet.Tables.Add(ordersTable);
+
+            DataTable productOrdersTable = productOrders.ToADOTable(rec => new object[] { productOrders });
+            productOrdersTable.TableName = "ProductOrder";
+            dataSet.Tables.Add(productOrdersTable);
+
+            DataTable customersTable = customers.ToADOTable(rec => new object[] { customers });
+            customersTable.TableName = "Customers";
+            dataSet.Tables.Add(customersTable);
+            
             return dataSet;
         }
         //ExEnd:GetCustomersAndOrdersDataDT
@@ -290,18 +289,17 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #region GetAllDataFromXML
         //ExStart:GetAllDataXML
         /// <summary>
-        /// Fetches the data from the XML files and store data in the DataSet
+        /// Fetches the data from the XML files and store data in the DataSet.
         /// </summary>
-        /// <returns>Returns the DataSet</returns>
-        public static DataSet GetAllDataFromXML()
+        /// <returns>Returns the DataSet.</returns>
+        public static DataSet GetAllDataFromXml()
         {
             try
             {
                 DataSet tempDs = new DataSet();
                 DataSet mainDs = new DataSet();
 
-
-                System.IO.FileStream fsReadXml = new System.IO.FileStream(customerXMLfile, System.IO.FileMode.Open);
+                FileStream fsReadXml = new FileStream(CustomerXmlFile, FileMode.Open);
 
                 tempDs.ReadXml(fsReadXml, XmlReadMode.ReadSchema);
                 tempDs.Tables[0].TableName = "Customers";
@@ -309,7 +307,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
                 mainDs.Merge(tempDs.Tables[0]);
                 tempDs = new DataSet();
 
-                fsReadXml = new System.IO.FileStream(orderXMLfile, System.IO.FileMode.Open);
+                fsReadXml = new FileStream(OrderXmlFile, FileMode.Open);
 
                 tempDs.ReadXml(fsReadXml, XmlReadMode.ReadSchema);
                 tempDs.Tables[0].TableName = "Orders";
@@ -317,7 +315,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
                 mainDs.Merge(tempDs.Tables[0]);
                 tempDs = new DataSet();
 
-                fsReadXml = new System.IO.FileStream(productOrderXMLfile, System.IO.FileMode.Open);
+                fsReadXml = new FileStream(ProductOrderXmlFile, FileMode.Open);
 
                 tempDs.ReadXml(fsReadXml, XmlReadMode.ReadSchema);
                 tempDs.Tables[0].TableName = "ProductOrders";
@@ -325,20 +323,19 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
                 mainDs.Merge(tempDs.Tables[0]);
                 tempDs = new DataSet();
 
-                fsReadXml = new System.IO.FileStream(productXMLfile, System.IO.FileMode.Open);
+                fsReadXml = new FileStream(ProductXmlFile, FileMode.Open);
 
                 tempDs.ReadXml(fsReadXml, XmlReadMode.ReadSchema);
                 tempDs.Tables[0].TableName = "Product";
 
                 mainDs.Merge(tempDs.Tables[0]);
 
-                //Defining relations between the tables
+                // Defining relations between the tables.
                 DataColumn productColumn, orderColumn, customerColumn, customerOrderColumn, productProductIDColumn, productOrderProductIDColumn;
                 orderColumn = mainDs.Tables["Orders"].Columns["OrderID"];
                 productColumn = mainDs.Tables["ProductOrders"].Columns["OrderID"];
                 customerColumn = mainDs.Tables["Customers"].Columns["CustomerID"];
                 customerOrderColumn = mainDs.Tables["Orders"].Columns["CustomerID"];
-
                 productOrderProductIDColumn = mainDs.Tables["ProductOrders"].Columns["ProductID"];
                 productProductIDColumn = mainDs.Tables["Product"].Columns["ProductID"];
 
@@ -361,32 +358,31 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #region GetSingleRowXML
         //ExStart:GetSingleCustomerXML
         /// <summary>
-        /// Fetches information from the xml file and add it to the DataSet
+        /// Fetches information from the xml file and add it to the DataSet.
         /// </summary>
-        /// <returns>Returns DataSet, first record from the table</returns>
-        public static DataRow GetSingleCustomerXML()
+        /// <returns>Returns DataSet, first record from the table.</returns>
+        public static DataRow GetSingleCustomerXml()
         {
             DataSet singleCustomer = new DataSet();
 
-            FileStream readProductXML = new FileStream(customerXMLfile, FileMode.Open);
-            singleCustomer.ReadXml(readProductXML, XmlReadMode.ReadSchema);
+            FileStream readProductXml = new FileStream(CustomerXmlFile, FileMode.Open);
+            singleCustomer.ReadXml(readProductXml, XmlReadMode.ReadSchema);
             singleCustomer.Tables[0].TableName = "Customers";
 
             return singleCustomer.Tables["Customers"].Rows[0];
         }
         //ExEnd:GetSingleCustomerXML
         #endregion
-
-
+        
         #region GetCustomerDataJson
         //ExStart:GetCustomerDataJson
         /// <summary>
-        /// Deserializes the json file, loop over the deserialized data
+        /// Deserializes the json file, loop over the deserialized data.
         /// </summary>
-        /// <returns>Returns deserialized data</returns>
+        /// <returns>Returns deserialized data.</returns>
         public static IEnumerable<BusinessObjects.Customer> GetCustomerDataFromJson()
         {
-            string rawData = File.ReadAllText(jsonFile);
+            string rawData = File.ReadAllText(JsonFile);
             BusinessObjects.Customer[] customers = JsonConvert.DeserializeObject<BusinessObjects.Customer[]>(rawData);
 
             foreach (BusinessObjects.Customer customer in customers)
@@ -400,12 +396,12 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #region GetCustomerOrderDataJson
         //ExStart:GetCustomerOrderDataJson
         /// <summary>
-        /// Deserializes the json file, loop over the deserialized data
+        /// Deserializes the json file, loop over the deserialized data.
         /// </summary>
-        /// <returns>Returns deserialized data</returns>
+        /// <returns>Returns deserialized data.</returns>
         public static IEnumerable<BusinessObjects.Order> GetCustomerOrderDataFromJson()
         {
-            string rawData = File.ReadAllText(jsonFile);
+            string rawData = File.ReadAllText(JsonFile);
             BusinessObjects.Customer[] customers = JsonConvert.DeserializeObject<BusinessObjects.Customer[]>(rawData);
 
             foreach (BusinessObjects.Customer customer in customers)
@@ -422,12 +418,12 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #region GetProductsJson
         //ExStart:GetProductsDataJson
         /// <summary>
-        /// Deserializes the json file, loop over the deserialized data
+        /// Deserializes the json file, loop over the deserialized data.
         /// </summary>
-        /// <returns>Returns deserialized data</returns>
+        /// <returns>Returns deserialized data.</returns>
         public static IEnumerable<BusinessObjects.Product> GetProductsDataJson()
         {
-            string rawData = File.ReadAllText(jsonFile);
+            string rawData = File.ReadAllText(JsonFile);
             BusinessObjects.Customer[] customers = JsonConvert.DeserializeObject<BusinessObjects.Customer[]>(rawData);
 
             foreach (BusinessObjects.Customer customer in customers)
@@ -442,31 +438,32 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         #region GetSingleCustomerDataJson
         //ExStart:GetSingleCustomerDataJson
         /// <summary>
-        /// Deserializes the json file, loop over the deserialized data
+        /// Deserializes the json file, loop over the deserialized data.
         /// </summary>
-        /// <returns>Returns deserialized data</returns>
+        /// <returns>Returns deserialized data.</returns>
         public static BusinessObjects.Customer GetSingleCustomerDataJson()
         {
-            string rawData = File.ReadAllText(jsonFile);
+            string rawData = File.ReadAllText(JsonFile);
             BusinessObjects.Customer[] customers = JsonConvert.DeserializeObject<BusinessObjects.Customer[]>(rawData);
 
             IEnumerator<BusinessObjects.Customer> customer = GetCustomerDataFromJson().GetEnumerator();
             customer.MoveNext();
+
             return customer.Current;
         }
         //ExEnd:GetSingleCustomerDataJson
         #endregion
+
         /// <summary>
-        /// Generate report from excel data source
+        /// Generate report from excel data source.
         /// </summary>
         /// <returns></returns>
-        public static GroupDocs.Assembly.Data.DocumentTable ExcelData()
+        public static DocumentTable ExcelData()
         {
-            DocumentTableOptions options = new DocumentTableOptions();
-            options.FirstRowContainsColumnNames = true;
+            DocumentTableOptions options = new DocumentTableOptions { FirstRowContainsColumnNames = true };
 
             // Use data of the _first_ worksheet.
-            DocumentTable table = new DocumentTable(excelDataFile, 0, options);
+            DocumentTable table = new DocumentTable(ExcelDataFile, 0, options);
 
             // Check column count, names, and types.
             Debug.Assert(table.Columns.Count == 3);
@@ -484,20 +481,19 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
             Debug.Assert(table.Columns[2].Type == typeof(double));
             return table;
         }
+
         /// <summary>
-        /// Import word doc to presentation
+        /// Import word doc to presentation.
         /// </summary>
         /// <returns></returns>
-        public static GroupDocs.Assembly.Data.DocumentTable ImportingWordDocToPresentation()
+        public static DocumentTable ImportingWordDocToPresentation()
         {
-
             // Do not extract column names from the first row, so that the first row to be treated as a data row.
             // Limit the largest row index, so that only the first four data rows to be loaded.
-            DocumentTableOptions options = new DocumentTableOptions();
-            options.MaxRowIndex = 3;
+            DocumentTableOptions options = new DocumentTableOptions { MaxRowIndex = 3 };
 
             // Use data of the _second_ table in the document.
-            DocumentTable table = new DocumentTable(wordDataFile, 1, options);
+            DocumentTable table = new DocumentTable(WordDataFile, 1, options);
 
             // Check column count and names.
             Debug.Assert(table.Columns.Count == 2);
@@ -509,19 +505,17 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         }
 
         /// <summary>
-        /// Import spread sheet to html document
+        /// Import spread sheet to html document.
         /// </summary>
         /// <returns></returns>
-        public static GroupDocs.Assembly.Data.DocumentTable ImportingSpreadsheetToHtml()
+        public static DocumentTable ImportingSpreadsheetToHtml()
         {
-
             // Do not extract column names from the first row, so that the first row to be treated as a data row.
             // Limit the largest row index, so that only the first four data rows to be loaded.
-            DocumentTableOptions options = new DocumentTableOptions();
-            //options.MaxRowIndex = 3;
+            DocumentTableOptions options = new DocumentTableOptions { MaxRowIndex = 3 };
 
             // Use data of the _second_ table in the document.
-            DocumentTable table = new DocumentTable(excelDataFile, 0);
+            DocumentTable table = new DocumentTable(ExcelDataFile, 0);
 
             // Check column count and names.
             Debug.Assert(table.Columns.Count == 3);
@@ -534,19 +528,17 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         }
 
         /// <summary>
-        /// Presentation file data source
+        /// Presentation file data source.
         /// </summary>
         /// <returns></returns>
-        public static GroupDocs.Assembly.Data.DocumentTable PresentationData()
+        public static DocumentTable PresentationData()
         {
-
             // Do not extract column names from the first row, so that the first row to be treated as a data row.
             // Limit the largest row index, so that only the first four data rows to be loaded.
-            DocumentTableOptions options = new DocumentTableOptions();
-            options.MaxRowIndex = 3;
+            DocumentTableOptions options = new DocumentTableOptions { MaxRowIndex = 3 };
 
             // Use data of the _second_ table in the document.
-            DocumentTable table = new DocumentTable(presentationDataFile, 1, options);
+            DocumentTable table = new DocumentTable(PresentationDataFile, 1, options);
 
             // Check column count and names.
             Debug.Assert(table.Columns.Count == 2);
@@ -558,25 +550,25 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         }
 
         /// <summary>
-        /// Creates an Email data source object
+        /// Creates an Email data source object.
         /// </summary>
-        /// <param name="fileName">Name of the template file</param>
-        /// <param name="dataSource">data source</param>
+        /// <param name="fileName">Name of the template file.</param>
+        /// <param name="dataSource">data source.</param>
         /// <returns></returns>
-
         public static EmailDataSourcesObjects EmailDataSourceObject(string fileName, object dataSource, string title = "")
         {
 			//ExStart:EmailDataSourceObject
 			EmailDataSourcesObjects dataSources = new EmailDataSourcesObjects();
             string extension = Path.GetExtension(fileName);
 
-            if ((extension == ".msg") || (extension == ".eml"))
+            if (extension == ".msg" || extension == ".eml")
             {
-                List<string> recipients = new List<string>();
-                recipients.Add("Named Recipient <named@example.com>");
-                recipients.Add("unnamed@example.com");
+                List<string> recipients = new List<string>
+                {
+                    "Named Recipient <named@example.com>", "unnamed@example.com"
+                };
 
-				dataSources.DataSource = dataSource;
+                dataSources.DataSource = dataSource;
 				dataSources.Sender = "Example Sender <sender@example.com>";
 				dataSources.Recipients = recipients;
 				dataSources.CC = "cc@example.com";
@@ -588,6 +580,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
             {
 				dataSources.DataSource = dataSource;
             }
+
             return dataSources;
             //ExEnd:EmailDataSourceObject
         }
@@ -596,7 +589,8 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         {
 			//ExStart:EmailDataSourceName
 			EmailDataSourcesNames dataSourceNames = new EmailDataSourcesNames();
-			if ((extension == ".msg") || (extension == ".eml"))
+			
+            if (extension == ".msg" || extension == ".eml")
 			{
 				dataSourceNames.Name = name;
 				dataSourceNames.Sender = "sender";
@@ -607,6 +601,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
 				if (title != "")
 					dataSourceNames.Title = title;
 			}
+
             return dataSourceNames;
             //ExEnd:EmailDataSourceName
         }
@@ -614,9 +609,10 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
     }
     //ExEnd:DataLayer
     #endregion DataLayer
+
     #region LazyAndRecursiveAccess
     //ExStart:DynamicEntity
-    public interface IPropertyProvider<T>
+    public interface IPropertyProvider<out T>
     {
         T this[string propertyName] { get; }
     }
@@ -626,50 +622,34 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
         /// <summary>
         /// Gets a property value by its name.
         /// </summary>
-        public string this[string propertyName]
-        {
-            get
-            {
-                // In this example, we simply return a property name as its value.
-                // In a real-life application, a real property value should be returned.
-                // This value can be cached using for example a Dictionary, or fetched
-                // every time the property is requested.
-                return propertyName + " Value";
-            }
-        }
+        public string this[string propertyName] =>
+            // In this example, we simply return a property name as its value.
+            // In a real-life application, a real property value should be returned.
+            // This value can be cached using for example a Dictionary, or fetched
+            // every time the property is requested.
+            propertyName + " Value";
 
         /// <summary>
         /// Provides access to individual related <see cref="DynamicEntity"/> instances
         /// by their names.
         /// </summary>
-        public IPropertyProvider<DynamicEntity> Entities
-        {
-            get { return mEntities; }
-        }
+        public IPropertyProvider<DynamicEntity> Entities => mEntities;
 
         /// <summary>
         /// Provides access to enumerations of related <see cref="DynamicEntity"/> instances
         /// by their names.
         /// </summary>
-        public IPropertyProvider<IEnumerable<DynamicEntity>> Children
-        {
-            get { return mChildren; }
-        }
+        public IPropertyProvider<IEnumerable<DynamicEntity>> Children => mChildren;
 
         private class ReferencedEntities : IPropertyProvider<DynamicEntity>
         {
-            public DynamicEntity this[string propertyName]
-            {
-                get
-                {
-                    // In this example, we simply return the root entity.
-                    // In a real-life application, a DynamicEntity instance corresponding
-                    // to propertyName for the given root entity should be returned.
-                    // This instance can be cached using for example a Dictionary,
-                    // or fetched every time the referenced entity is requested.
-                    return mRootEntity;
-                }
-            }
+            public DynamicEntity this[string propertyName] =>
+                // In this example, we simply return the root entity.
+                // In a real-life application, a DynamicEntity instance corresponding
+                // to propertyName for the given root entity should be returned.
+                // This instance can be cached using for example a Dictionary,
+                // or fetched every time the referenced entity is requested.
+                mRootEntity;
 
             public ReferencedEntities(DynamicEntity rootEntity)
             {
@@ -726,6 +706,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
     }
 	//ExEnd:DynamicEntity
 	#endregion
+
 	public class EmailDataSourcesObjects
 	{
 		public object DataSource { get; set; }
@@ -735,6 +716,7 @@ namespace GroupDocs.AssemblyExamples.BusinessLayer
 		public string Subject { get; set; }
 		public string Title { get; set; }
 	}
+
 	public class EmailDataSourcesNames
 	{
 		public string Name { get; set; }
