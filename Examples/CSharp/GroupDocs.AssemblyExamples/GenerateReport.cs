@@ -1774,18 +1774,15 @@ namespace GroupDocs.AssemblyExamples
                     else if (isJson)
                     {
                         //ExStart:GenerateChartWithFilteringGroupingAndOrderingFromJsoninWord
-                        //setting up source 
                         const string strDocumentTemplate =
                             "Word Templates/Chart with Filtering, Grouping, and Ordering.docx";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Word Reports/Chart with Filtering, Grouping, and Ordering_Json Report.docx";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Chart with Filtering, Grouping, and Ordering report in document format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate Chart with Filtering, Grouping, and Ordering report in document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerOrderDataFromJson(), "orders"));
@@ -1800,17 +1797,15 @@ namespace GroupDocs.AssemblyExamples
                     else
                     {
                         //ExStart:GenerateChartWithFilteringGroupingAndOrderinginOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate =
                             "Word Templates/Chart with Filtering, Grouping, and Ordering.docx";
-                        //Setting up destination open document report 
                         const string strDocumentReport =
                             "Word Reports/Chart with Filtering, Grouping, and Ordering Report.docx";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in document format
+                            // Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetOrdersDataDb(), "orders"));
@@ -1829,17 +1824,15 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateChartWithFilteringGroupingAndOrderingFromDatabaseinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/Chart with Filtering, Grouping, and Ordering_DB.xlsx";
-                        //Setting up destination open document report 
                         const string strSpreadsheetReport =
                             "Spreadsheet Reports/Chart with Filtering, Grouping, and Ordering_DB Report.xlsx";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in spreadsheet format
+                            // Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetOrdersDataDb(), "orders"));
@@ -1854,17 +1847,16 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSet)
                     {
                         //ExStart:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/Chart with Filtering, Grouping, and Ordering_DB.xlsx";
-                        //Setting up destination open document report 
                         const string strSpreadsheetReport =
                             "Spreadsheet Reports/Chart with Filtering, Grouping, and Ordering_DT Report.xlsx";
+                        
                         try
                         {
                             //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in spreadsheet format
+                            // Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetCustomersAndOrdersDataDt()));
@@ -1873,23 +1865,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinOpenSpreadsheetFormat
                     }
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateChartWithFilteringGroupingAndOrderingFromXMLinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/Chart with Filtering, Grouping, and Ordering_XML.xlsx";
-                        //Setting up destination open document report 
                         const string strSpreadsheetReport =
                             "Spreadsheet Reports/Chart with Filtering, Grouping, and Ordering_XML Report.xlsx";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in spreadsheet format
+                            // Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -1898,24 +1887,21 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromXMLinOpenSpreadsheetFormat
                     }
                     else if (isJson)
                     {
                         //ExStart:GenerateChartWithFilteringGroupingAndOrderingFromJsoninSpreadsheet
-                        //setting up source 
                         const string strDocumentTemplate =
                             "Spreadsheet Templates/Chart with Filtering, Grouping, and Ordering.xlsx";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Spreadsheet Reports/Chart with Filtering, Grouping, and Ordering_Json Report.xlsx";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Chart with Filtering, Grouping, and Ordering report in spreadsheet format
+                                assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate Chart with Filtering, Grouping, and Ordering report in spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerOrderDataFromJson(), "orders"));
@@ -1924,23 +1910,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromJsoninSpreadsheet
                     }
                     else
                     {
                         //ExStart:GenerateChartWithFilteringGroupingAndOrderinginOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/Chart with Filtering, Grouping, and Ordering.xlsx";
-                        //Setting up destination open document report 
                         const string strSpreadsheetReport =
                             "Spreadsheet Reports/Chart with Filtering, Grouping, and Ordering Report.xlsx";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in spreadsheet format
+                            // Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetOrdersData(), "orders"));
@@ -1949,7 +1932,6 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateChartWithFilteringGroupingAndOrderinginOpenSpreadsheetFormat
                     }
 
@@ -1959,17 +1941,15 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateChartWithFilteringGroupingAndOrderingFromDatabaseinOpenPresentationFormat
-                        //Setting up source open spreadsheet template
                         const string strPresentationTemplate =
                             "Presentation Templates/Chart with Filtering, Grouping, and Ordering_DB.pptx";
-                        //Setting up destination open document report 
                         const string strPresentationReport =
                             "Presentation Reports/Chart with Filtering, Grouping, and Ordering_DB Report.pptx";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in presentation format
+                            // Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetOrdersDataDb(), "orders"));
@@ -1978,23 +1958,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDatabaseinOpenPresentationFormat
                     }
                     else if (isDataSet)
                     {
                         //ExStart:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinOpenPresentationFormat
-                        //Setting up source open spreadsheet template
                         const string strPresentationTemplate =
                             "Presentation Templates/Chart with Filtering, Grouping, and Ordering_DB.pptx";
-                        //Setting up destination open document report 
                         const string strPresentationReport =
                             "Presentation Reports/Chart with Filtering, Grouping, and Ordering_DT Report.pptx";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in presentation format
+                            // Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetCustomersAndOrdersDataDt()));
@@ -2003,23 +1980,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromDataSetinOpenPresentationFormat
                     }
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateChartWithFilteringGroupingAndOrderingFromXMLinOpenPresentationFormat
-                        //Setting up source open spreadsheet template
                         const string strPresentationTemplate =
                             "Presentation Templates/Chart with Filtering, Grouping, and Ordering_XML.pptx";
-                        //Setting up destination open document report 
                         const string strPresentationReport =
                             "Presentation Reports/Chart with Filtering, Grouping, and Ordering_XML Report.pptx";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in presentation format
+                            // Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -2028,24 +2002,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromXMLinOpenPresentationFormat
                     }
                     else if (isJson)
                     {
                         //ExStart:GenerateChartWithFilteringGroupingAndOrderingFromJsoninPresentation
-                        //setting up source 
                         const string strDocumentTemplate =
                             "Presentation Templates/Chart with Filtering, Grouping, and Ordering.pptx";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Presentation Reports/Chart with Filtering, Grouping, and Ordering_Json Report.pptx";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Chart with Filtering, Grouping, and Ordering report in presentation format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate Chart with Filtering, Grouping, and Ordering report in presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerOrderDataFromJson(), "orders"));
@@ -2054,23 +2024,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateChartWithFilteringGroupingAndOrderingFromJsoninPresentation
                     }
                     else
                     {
                         //ExStart:GenerateChartWithFilteringGroupingAndOrderinginOpenPresentationFormat
-                        //Setting up source open spreadsheet template
                         const string strPresentationTemplate =
                             "Presentation Templates/Chart with Filtering, Grouping, and Ordering.pptx";
-                        //Setting up destination open document report 
                         const string strPresentationReport =
                             "Presentation Reports/Chart with Filtering, Grouping, and Ordering Report.pptx";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in presentation format
+                            // Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetOrdersData(), "orders"));
@@ -2079,7 +2046,6 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateChartWithFilteringGroupingAndOrderinginOpenPresentationFormat
                     }
 
@@ -2087,20 +2053,18 @@ namespace GroupDocs.AssemblyExamples
                 case "email":
                 {
                     //ExStart:GenerateChartWithFilteringGroupingAndOrderinginEmailFormat
-                    //Setting up source email template
                     const string strEmailTemplate = "Email Templates/Chart with Filtering, Grouping, and Ordering.msg";
-                    //Setting up destination email report 
                     const string strEmailReport =
                         "Email Reports/Chart with Filtering, Grouping, and Ordering Report.msg";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
 
                         var dataSources = DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetOrdersData());
                         var dataSourcesNames = DataLayer.EmailDataSourceName(".msg", "orders");
 
-                        //Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in email format
+                        // Call AssembleDocument to generate Chart report with Filtering, Grouping, and Ordering in email format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate),
                             CommonUtilities.SetDestinationDocument(strEmailReport),
                             new DataSourceInfo(dataSources.DataSource, dataSourcesNames.Name),
@@ -2114,7 +2078,6 @@ namespace GroupDocs.AssemblyExamples
                     {
                         Console.WriteLine(ex.Message);
                     }
-
                     //ExEnd:GenerateChartWithFilteringGroupingAndOrderinginEmailFormat
                 }
                     break;
@@ -2131,15 +2094,13 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateCommonListFromDatabaseinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/Common List_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/Common List_DB Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common List Report in open document format
+                            // Call AssembleDocument to generate Common List Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomersDataDb(), "customers"));
@@ -2148,21 +2109,18 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonListFromDatabaseinOpenDocumentProcessingFormat
                     }
                     else if (isDataSet)
                     {
                         //ExStart:GenerateCommonListFromDataSetinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/Common List_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/Common List_DT Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common List Report in open document format
+                            // Call AssembleDocument to generate Common List Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomersAndOrdersDataDt()));
@@ -2171,21 +2129,18 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonListFromDataSetinOpenDocumentProcessingFormat
                     }
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateCommonListFromXMLinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/Common List_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/Common List_XML Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common List Report in open document format
+                            // Call AssembleDocument to generate Common List Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -2194,22 +2149,18 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonListFromXMLinOpenDocumentProcessingFormat
                     }
                     else if (isJson)
                     {
                         //ExStart:GenerateCommonListReportFromJsoninOpenWord
-                        //setting up source 
                         const string strDocumentTemplate = "Word Templates/Common List_OpenDocument.odt";
-                        //Setting up destination 
                         const string strDocumentReport = "Word Reports/Common List_OpenDocument_Json Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Common List report in open document format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate Common List report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerDataFromJson(), "customers"));
@@ -2218,21 +2169,18 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonListReportFromJsoninOpenWord
                     }
                     else
                     {
                         //ExStart:GenerateCommonListinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/Common List_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/Common List Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common List Report in open document format
+                            // Call AssembleDocument to generate Common List Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.PopulateData(), "customers"));
@@ -2241,7 +2189,6 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonListinOpenDocumentProcessingFormat
                     }
 
@@ -2251,15 +2198,13 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateCommonListFromDatabaseinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate = "Spreadsheet Templates/Common List_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/Common List_DB Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common List Report in open spreadsheet format
+                            // Call AssembleDocument to generate Common List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetCustomersDataDb(), "customers"));
@@ -2268,21 +2213,18 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonListFromDatabaseinOpenSpreadsheetFormat
                     }
                     else if (isDataSet)
                     {
                         //ExStart:GenerateCommonListFromDataSetinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate = "Spreadsheet Templates/Common List_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/Common List_DT Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common List Report in open spreadsheet format
+                            // Call AssembleDocument to generate Common List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetCustomersAndOrdersDataDt()));
@@ -2291,21 +2233,18 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonListFromDataSetinOpenSpreadsheetFormat
                     }
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateCommonListFromXMLinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate = "Spreadsheet Templates/Common List_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/Common List_XML Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common List Report in open spreadsheet format
+                            // Call AssembleDocument to generate Common List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -2314,22 +2253,18 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonListFromXMLinOpenSpreadsheetFormat
                     }
                     else if (isJson)
                     {
                         //ExStart:GenerateCommonListReportFromJsoninOpenSpreadsheet
-                        //setting up source 
                         const string strDocumentTemplate = "Spreadsheet Templates/Common List_OpenDocument.ods";
-                        //Setting up destination 
                         const string strDocumentReport = "Spreadsheet Reports/Common List_OpenDocument_Json Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Common List report in open spreadsheet format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate Common List report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerDataFromJson(), "customers"));
@@ -2338,21 +2273,18 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonListReportFromJsoninOpenSpreadsheet
                     }
                     else
                     {
                         //ExStart:GenerateCommonListinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate = "Spreadsheet Templates/Common List_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/Common List Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common List Report in open spreadsheet format
+                            // Call AssembleDocument to generate Common List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.PopulateData(), "customers"));
@@ -2361,7 +2293,6 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonListinOpenSpreadsheetFormat
                     }
 
@@ -2371,15 +2302,13 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateCommonListFromDatabaseinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate = "Presentation Templates/Common List_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport = "Presentation Reports/Common List_DB Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common List Report in open presentation format
+                            // Call AssembleDocument to generate Common List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetCustomersDataDb(), "customers"));
@@ -2388,21 +2317,18 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonListFromDatabaseinOpenPresentationFormat
                     }
                     else if (isDataSet)
                     {
                         //ExStart:GenerateCommonListFromDataSetinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate = "Presentation Templates/Common List_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport = "Presentation Reports/Common List_DT Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common List Report in open presentation format
+                            // Call AssembleDocument to generate Common List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetCustomersAndOrdersDataDt()));
@@ -2411,21 +2337,18 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonListFromDataSetinOpenPresentationFormat
                     }
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateCommonListFromXMLinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate = "Presentation Templates/Common List_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport = "Presentation Reports/Common List_XML Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common List Report in open presentation format
+                            // Call AssembleDocument to generate Common List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -2434,23 +2357,19 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonListFromXMLinOpenPresentationFormat
                     }
                     else if (isJson)
                     {
                         //ExStart:GenerateCommonListReportFromJsoninOpenPresentation
-                        //setting up source 
                         const string strDocumentTemplate = "Presentation Templates/Common List_OpenDocument.odp";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Presentation Reports/Common List_OpenDocument_Json Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Common List report in open presentation format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate Common List report in open presentation format.s
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerDataFromJson(), "customers"));
@@ -2459,21 +2378,18 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonListReportFromJsoninOpenPresentation
                     }
                     else
                     {
                         //ExStart:GenerateCommonListinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate = "Presentation Templates/Common List_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport = "Presentation Reports/Common List Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common List Report in open presentation format
+                            // Call AssembleDocument to generate Common List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.PopulateData(), "customers"));
@@ -2482,7 +2398,6 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonListinOpenPresentationFormat
                     }
 
@@ -2491,15 +2406,13 @@ namespace GroupDocs.AssemblyExamples
                 case "html":
                 {
                     //ExStart:GenerateCommonListinHtmlFormat
-                    //Setting up source html template
                     const string strDocumentTemplate = "HTML Templates/Common List.html";
-                    //Setting up destination html report 
                     const string strDocumentReport = "HTML Reports/Common List Report.html";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Common List Report in html format
+                        // Call AssembleDocument to generate Common List Report in html format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                             CommonUtilities.SetDestinationDocument(strDocumentReport),
                             new DataSourceInfo(DataLayer.PopulateData(), "customers"));
@@ -2508,22 +2421,19 @@ namespace GroupDocs.AssemblyExamples
                     {
                         Console.WriteLine(ex.Message);
                     }
-
                     //ExEnd:GenerateCommonListinHtmlFormat
                 }
                     break;
                 case "text":
                 {
                     //ExStart:GenerateCommonListinTextFormat
-                    //Setting up source text document template
                     const string strTxtDocumentTemplate = "Text Templates/Common List.txt";
-                    //Setting up destination text document report 
                     const string strTxtDocumentReport = "Text Reports/Common List Report.txt";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Common List Report in text document format
+                        // Call AssembleDocument to generate Common List Report in text document format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strTxtDocumentTemplate),
                             CommonUtilities.SetDestinationDocument(strTxtDocumentReport),
                             new DataSourceInfo(DataLayer.PopulateData(), "customers"));
@@ -2532,26 +2442,23 @@ namespace GroupDocs.AssemblyExamples
                     {
                         Console.WriteLine(ex.Message);
                     }
-
                     //ExEnd:GenerateCommonListinTextFormat
                 }
                     break;
                 case "email":
                 {
                     //ExStart:GenerateCommonListinEmailFormat
-                    //Setting up source email template
                     const string strEmailDocumentTemplate = "Email Templates/Common List.msg";
-                    //Setting up destination email report 
                     const string strEmailDocumentReport = "Email Reports/Common List Report.msg";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
 
                         var dataSources =
                             DataLayer.EmailDataSourceObject(strEmailDocumentTemplate, DataLayer.PopulateData());
                         var dataSourcesNames = DataLayer.EmailDataSourceName(".msg", "customers");
-                        //Call AssembleDocument to generate Common List Report in email document format
+                        // Call AssembleDocument to generate Common List Report in email document format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailDocumentTemplate),
                             CommonUtilities.SetDestinationDocument(strEmailDocumentReport),
                             new DataSourceInfo(dataSources.DataSource, dataSourcesNames.Name),
@@ -2565,7 +2472,6 @@ namespace GroupDocs.AssemblyExamples
                     {
                         Console.WriteLine(ex.Message);
                     }
-
                     //ExEnd:GenerateCommonListinEmailFormat
                 }
                     break;
@@ -2581,15 +2487,13 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateCommonMasterDetailFromDatabaseinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/Common Master-Detail_DB_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/Common Master-Detail_DB Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common Master-Detail Report in open document format
+                            // Call AssembleDocument to generate Common Master-Detail Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomersDataDb(), "customers"));
@@ -2598,21 +2502,18 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonMasterDetailFromDatabaseinOpenDocumentProcessingFormat
                     }
                     else if (isDataSet)
                     {
                         //ExStart:GenerateCommonMasterDetailFromDataSetinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/Common Master-Detail_DB_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/Common Master-Detail_DT Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common Master-Detail Report in open document format
+                            // Call AssembleDocument to generate Common Master-Detail Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomersAndOrdersDataDt()));
@@ -2621,21 +2522,18 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonMasterDetailFromDataSetinOpenDocumentProcessingFormat
                     }
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateCommonMasterDetailFromXMLinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/Common Master-Detail_DB_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/Common Master-Detail_XML Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common Master-Detail Report in open document format
+                            // Call AssembleDocument to generate Common Master-Detail Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -2644,23 +2542,19 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonMasterDetailFromXMLinOpenDocumentProcessingFormat
                     }
                     else if (isJson)
                     {
                         //ExStart:GenerateCommonMasterDetailReportFromJsoninOpenWord
-                        //setting up source 
                         const string strDocumentTemplate = "Word Templates/Common Master-Detail_OpenDocument.odt";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Word Reports/Common Master-Detail_OpenDocument_Json Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Common master-detail report in open document format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate Common master-detail report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerDataFromJson(), "customers"));
@@ -2669,21 +2563,18 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonMasterDetailReportFromJsoninOpenWord
                     }
                     else
                     {
                         //ExStart:GenerateCommonMasterDetailinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/Common Master-Detail_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/Common Master-Detail Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common Master-Detail Report in open document format
+                            // Call AssembleDocument to generate Common Master-Detail Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.PopulateData(), "customers"));
@@ -2702,16 +2593,14 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateCommonMasterDetailFromDatabaseinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/Common Master-Detail_DB_OpenDocument.ods";
-                        //Setting up destination open document report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/Common Master-Detail_DB Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common List Report in open spreadsheet format
+                            // Call AssembleDocument to generate Common List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetCustomersDataDb(), "customers"));
@@ -2720,22 +2609,19 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonMasterDetailFromDatabaseinOpenSpreadsheetFormat
                     }
                     else if (isDataSet)
                     {
                         //ExStart:GenerateCommonMasterDetailFromDataSetinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/Common Master-Detail_DB_OpenDocument.ods";
-                        //Setting up destination open document report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/Common Master-Detail_DT Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common List Report in open spreadsheet format
+                            // Call AssembleDocument to generate Common List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetCustomersAndOrdersDataDt()));
@@ -2744,22 +2630,19 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonMasterDetailFromDataSetinOpenSpreadsheetFormat
                     }
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateCommonMasterDetailFromXMLinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/Common Master-Detail_DB_OpenDocument.ods";
-                        //Setting up destination open document report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/Common Master-Detail_XML Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common List Report in open spreadsheet format
+                            // Call AssembleDocument to generate Common List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -2768,24 +2651,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonMasterDetailFromXMLinOpenSpreadsheetFormat
                     }
                     else if (isJson)
                     {
                         //ExStart:GenerateCommonMasterDetailReportFromJsoninOpenSpreadsheet
-                        //setting up source 
                         const string strDocumentTemplate =
                             "Spreadsheet Templates/Common Master-Detail_OpenDocument.ods";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Spreadsheet Reports/Common Master-Detail_OpenDocument_Json Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Common master-detail report in open spreadsheet format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate Common master-detail report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerDataFromJson(), "customers"));
@@ -2794,22 +2673,19 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonMasterDetailReportFromJsoninOpenSpreadsheet
                     }
                     else
                     {
                         //ExStart:GenerateCommonMasterDetailinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/Common Master-Detail_OpenDocument.ods";
-                        //Setting up destination open document report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/Common Master-Detail Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common List Report in open spreadsheet format
+                            // Call AssembleDocument to generate Common List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.PopulateData(), "customers"));
@@ -2818,7 +2694,6 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonMasterDetailinOpenSpreadsheetFormat
                     }
 
@@ -2828,16 +2703,14 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateCommonMasterDetailFromDatabaseinOpenPresentationFormat
-                        //Setting up source open spreadsheet template
                         const string strPresentationTemplate =
                             "Presentation Templates/Common Master-Detail_DB_OpenDocument.odp";
-                        //Setting up destination open document report 
                         const string strPresentationReport = "Presentation Reports/Common Master-Detail_DB Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common List Report in open presentation format
+                            // Call AssembleDocument to generate Common List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetCustomersDataDb(), "customers"));
@@ -2846,22 +2719,19 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonMasterDetailFromDatabaseinOpenPresentationFormat
                     }
                     else if (isDataSet)
                     {
                         //ExStart:GenerateCommonMasterDetailFromDataSetinOpenPresentationFormat
-                        //Setting up source open spreadsheet template
                         const string strPresentationTemplate =
                             "Presentation Templates/Common Master-Detail_DB_OpenDocument.odp";
-                        //Setting up destination open document report 
                         const string strPresentationReport = "Presentation Reports/Common Master-Detail_DT Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common List Report in open presentation format
+                            // Call AssembleDocument to generate Common List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetCustomersAndOrdersDataDt()));
@@ -2870,22 +2740,19 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonMasterDetailFromDataSetinOpenPresentationFormat
                     }
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateCommonMasterDetailFromXMLinOpenPresentationFormat
-                        //Setting up source open spreadsheet template
                         const string strPresentationTemplate =
                             "Presentation Templates/Common Master-Detail_DB_OpenDocument.odp";
-                        //Setting up destination open document report 
                         const string strPresentationReport = "Presentation Reports/Common Master-Detail_XML Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common List Report in open presentation format
+                            // Call AssembleDocument to generate Common List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -2894,24 +2761,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonMasterDetailFromXMLinOpenPresentationFormat
                     }
                     else if (isJson)
                     {
                         //ExStart:GenerateCommonMasterDetailReportFromJsoninOpenPresentation
-                        //setting up source 
                         const string strDocumentTemplate =
                             "Presentation Templates/Common Master-Detail_OpenDocument.odp";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Presentation Reports/Common Master-Detail_OpenDocument_Json Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Common master-detail report in open presentation format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate Common master-detail report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerDataFromJson(), "customers"));
@@ -2920,22 +2783,19 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonMasterDetailReportFromJsoninOpenPresentation
                     }
                     else
                     {
                         //ExStart:GenerateCommonMasterDetailinOpenPresentationFormat
-                        //Setting up source open spreadsheet template
                         const string strPresentationTemplate =
                             "Presentation Templates/Common Master-Detail_OpenDocument.odp";
-                        //Setting up destination open document report 
                         const string strPresentationReport = "Presentation Reports/Common Master-Detail Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Common List Report in open presentation format
+                            // Call AssembleDocument to generate Common List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.PopulateData(), "customers"));
@@ -2944,7 +2804,6 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateCommonMasterDetailinOpenPresentationFormat
                     }
 
@@ -2953,18 +2812,15 @@ namespace GroupDocs.AssemblyExamples
                 case "html":
                 {
                     //ExStart:GenerateCommonMasterDetailinHtmlFormat
-                    //Setting up source html template
                     const string strDocumentTemplate = "HTML Templates/Common Master-Detail.html";
-                    //Setting up destination html report 
                     const string strDocumentReport = "HTML Reports/Common Master-Detail Report.html";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
                         // This is needed solely for images in HTML documents.
-                        assembler.KnownTypes.Add(
-                            typeof(GroupDocs.AssemblyExamples.BusinessLayer.CommonUtilities.FileUtil));
-                        //Call AssembleDocument to generate Common Master-Detail Report in html format
+                        assembler.KnownTypes.Add(typeof(CommonUtilities.FileUtil));
+                        // Call AssembleDocument to generate Common Master-Detail Report in html format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                             CommonUtilities.SetDestinationDocument(strDocumentReport),
                             new DataSourceInfo(DataLayer.PopulateData(), "customers"));
@@ -2973,22 +2829,19 @@ namespace GroupDocs.AssemblyExamples
                     {
                         Console.WriteLine(ex.Message);
                     }
-
                     //ExEnd:GenerateCommonMasterDetailinHtmlFormat
                 }
                     break;
                 case "text":
                 {
                     //ExStart:GenerateCommonMasterDetailinTextFormat
-                    //Setting up source text document template
                     const string strTxtDocumentTemplate = "Text Templates/Common Master-Detail.txt";
-                    //Setting up destination text document report 
                     const string strTxtDocumentReport = "Text Reports/Common Master-Detail Report.txt";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Common Master-Detail Report in text document format
+                        // Call AssembleDocument to generate Common Master-Detail Report in text document format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strTxtDocumentTemplate),
                             CommonUtilities.SetDestinationDocument(strTxtDocumentReport),
                             new DataSourceInfo(DataLayer.PopulateData(), "customers"));
@@ -2997,27 +2850,24 @@ namespace GroupDocs.AssemblyExamples
                     {
                         Console.WriteLine(ex.Message);
                     }
-
                     //ExEnd:GenerateCommonMasterDetailinTextFormat
                 }
                     break;
                 case "email":
                 {
                     //ExStart:GenerateCommonMasterDetailinEmailFormat
-                    //Setting up source email document template
                     const string strEmailDocumentTemplate = "Email Templates/Common Master-Detail.msg";
-                    //Setting up destination email document report 
                     const string strEmailDocumentReport = "Email Reports/Common Master-Detail Report.msg";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
 
                         var dataSources =
                             DataLayer.EmailDataSourceObject(strEmailDocumentTemplate, DataLayer.PopulateData());
                         var dataSourcesNames = DataLayer.EmailDataSourceName(".msg", "customers");
 
-                        //Call AssembleDocument to generate Common Master-Detail Report in email document format
+                        // Call AssembleDocument to generate Common Master-Detail Report in email document format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailDocumentTemplate),
                             CommonUtilities.SetDestinationDocument(strEmailDocumentReport),
                             new DataSourceInfo(dataSources.DataSource, dataSourcesNames.Name),
@@ -3031,7 +2881,6 @@ namespace GroupDocs.AssemblyExamples
                     {
                         Console.WriteLine(ex.Message);
                     }
-
                     //ExEnd:GenerateCommonMasterDetailinEmailFormat
                 }
                     break;
@@ -3047,15 +2896,13 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateInParagraphListFromDatabaseinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/In-Paragraph List_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/In-Paragraph List_DB Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Paragraph List Report in open document format
+                            // Call AssembleDocument to generate In-Paragraph List Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetProductsDataDb(), "products"));
@@ -3064,21 +2911,18 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInParagraphListFromDatabaseinOpenDocumentProcessingFormat
                     }
                     else if (isDataSet)
                     {
                         //ExStart:GenerateInParagraphListFromDataSetinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/In-Paragraph List_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/In-Paragraph List_DT Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Paragraph List Report in open document format
+                            // Call AssembleDocument to generate In-Paragraph List Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetProductsDt()));
@@ -3087,21 +2931,18 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInParagraphListFromDataSetinOpenDocumentProcessingFormat
                     }
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateInParagraphListFromXMLinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/In-Paragraph List_XML_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/In-Paragraph List_XML Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Paragraph List Report in open document format
+                            // Call AssembleDocument to generate In-Paragraph List Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -3110,22 +2951,18 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInParagraphListFromXMLinOpenDocumentProcessingFormat
                     }
                     else if (isJson)
                     {
                         //ExStart:GenerateInParagraphListReportFromJsoninOpenWord
-                        //setting up source 
                         const string strDocumentTemplate = "Word Templates/In-Paragraph List_OpenDocument.odt";
-                        //Setting up destination 
                         const string strDocumentReport = "Word Reports/In-Paragraph List_OpenDocument_Json Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Paragraph List report in open document format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate In-Paragraph List report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetProductsDataJson(), "products"));
@@ -3134,21 +2971,18 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInParagraphListReportFromJsoninOpenWord
                     }
                     else
                     {
                         //ExStart:GenerateInParagraphListinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/In-Paragraph List_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/In-Paragraph List Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Paragraph List Report in open document format
+                            // Call AssembleDocument to generate In-Paragraph List Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetProductsData(), "products"));
@@ -3157,7 +2991,6 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInParagraphListinOpenDocumentProcessingFormat
                     }
 
@@ -3167,16 +3000,14 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateInParagraphListFromDatabaseinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/In-Paragraph List_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/In-Paragraph List_DB Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Paragraph List Report in open spreadsheet format
+                            // Call AssembleDocument to generate In-Paragraph List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetProductsDataDb(), "products"));
@@ -3185,22 +3016,19 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInParagraphListFromDatabaseinOpenSpreadsheetFormat
                     }
                     else if (isDataSet)
                     {
                         //ExStart:GenerateInParagraphListFromDataSetinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/In-Paragraph List_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/In-Paragraph List_DT Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Paragraph List Report in open spreadsheet format
+                            // Call AssembleDocument to generate In-Paragraph List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetProductsDt()));
@@ -3209,22 +3037,19 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInParagraphListFromDataSetinOpenSpreadsheetFormat
                     }
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateInParagraphListFromXMLinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/In-Paragraph List_XML_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/In-Paragraph List_XML Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Paragraph List Report in open spreadsheet format
+                            // Call AssembleDocument to generate In-Paragraph List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -3233,23 +3058,19 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInParagraphListFromXMLinOpenSpreadsheetFormat
                     }
                     else if (isJson)
                     {
                         //ExStart:GenerateInParagraphListReportFromJsoninOpenExcel
-                        //setting up source 
                         const string strDocumentTemplate = "Spreadsheet Templates/In-Paragraph List_OpenDocument.ods";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Spreadsheet Reports/In-Paragraph List_OpenDocument_Json Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Paragraph List report in open spreadsheet format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate In-Paragraph List report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetProductsDataJson(), "products"));
@@ -3258,22 +3079,19 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInParagraphListReportFromJsoninOpenExcel
                     }
                     else
                     {
                         //ExStart:GenerateInParagraphListinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/In-Paragraph List_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/In-Paragraph List Report.ods";
+                        
                         try
-                        {
-                            //Instantiate DocumentAssembler class
+                        {  
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Paragraph List Report in open spreadsheet format
+                            // Call AssembleDocument to generate In-Paragraph List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetProductsData(), "products"));
@@ -3282,7 +3100,6 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInParagraphListinOpenSpreadsheetFormat
                     }
 
@@ -3292,16 +3109,14 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateInParagraphListFromDatabaseinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/In-Paragraph List_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport = "Presentation Reports/In-Paragraph List_DB Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Paragraph List Report in open presentation format
+                            // Call AssembleDocument to generate In-Paragraph List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetProductsDataDb(), "products"));
@@ -3310,22 +3125,19 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInParagraphListFromDatabaseinOpenPresentationFormat
                     }
                     else if (isDataSet)
                     {
                         //ExStart:GenerateInParagraphListFromDataSetinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/In-Paragraph List_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport = "Presentation Reports/In-Paragraph List_DT Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Paragraph List Report in open presentation format
+                            // Call AssembleDocument to generate In-Paragraph List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetProductsDt()));
@@ -3334,22 +3146,19 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInParagraphListFromDataSetinOpenPresentationFormat
                     }
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateInParagraphListFromXMLinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/In-Paragraph List_XML_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport = "Presentation Reports/In-Paragraph List_XML Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Paragraph List Report in open presentation format
+                            // Call AssembleDocument to generate In-Paragraph List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -3358,23 +3167,19 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInParagraphListFromXMLinOpenPresentationFormat
                     }
                     else if (isJson)
                     {
                         //ExStart:GenerateInParagraphListReportFromJsoninOpenPresentation
-                        //setting up source 
                         const string strDocumentTemplate = "Presentation Templates/In-Paragraph List_OpenDocument.odp";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Presentation Reports/In-Paragraph List_OpenDocument_Json Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Paragraph List report in open presentation format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate In-Paragraph List report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetProductsDataJson(), "products"));
@@ -3383,22 +3188,19 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInParagraphListReportFromJsoninOpenPresentation
                     }
                     else
                     {
                         //ExStart:GenerateInParagraphListinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/In-Paragraph List_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport = "Presentation Reports/In-Paragraph List Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Paragraph List Report in open presentation format
+                            // Call AssembleDocument to generate In-Paragraph List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetProductsData(), "products"));
@@ -3407,7 +3209,6 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInParagraphListinOpenPresentationFormat
                     }
 
@@ -3415,15 +3216,13 @@ namespace GroupDocs.AssemblyExamples
                 case "html":
                 {
                     //ExStart:GenerateInParagraphListinHtmlFormat
-                    //Setting up source html template
                     const string strDocumentTemplate = "HTML Templates/In-Paragraph List.html";
-                    //Setting up destination html report 
                     const string strDocumentReport = "HTML Reports/In-Paragraph List Report.html";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Paragraph List Report in htmlformat
+                        // Call AssembleDocument to generate In-Paragraph List Report in htmlformat.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                             CommonUtilities.SetDestinationDocument(strDocumentReport),
                             new DataSourceInfo(DataLayer.GetProductsData(), "products"));
@@ -3432,7 +3231,6 @@ namespace GroupDocs.AssemblyExamples
                     {
                         Console.WriteLine(ex.Message);
                     }
-
                     //ExEnd:GenerateInParagraphListinHtmlFormat
                 }
                     break;
@@ -3440,15 +3238,13 @@ namespace GroupDocs.AssemblyExamples
                 case "text":
                 {
                     //ExStart:GenerateInParagraphListinTextFormat
-                    //Setting up source text document template
                     const string strDocumentTemplate = "Text Templates/In-Paragraph List.txt";
-                    //Setting up destination text document report 
                     const string strDocumentReport = "Text Reports/In-Paragraph List Report.txt";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Paragraph List Report in text document format
+                        // Call AssembleDocument to generate In-Paragraph List Report in text document format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                             CommonUtilities.SetDestinationDocument(strDocumentReport),
                             new DataSourceInfo(DataLayer.GetProductsData(), "products"));
@@ -3457,27 +3253,24 @@ namespace GroupDocs.AssemblyExamples
                     {
                         Console.WriteLine(ex.Message);
                     }
-
                     //ExEnd:GenerateInParagraphListinTextFormat
                 }
                     break;
                 case "email":
                 {
                     //ExStart:GenerateInParagraphListinEmailFormat
-                    //Setting up source email document template
                     const string strEmailDocumentTemplate = "Email Templates/In-Paragraph List.msg";
-                    //Setting up destination email document report 
                     const string strEmailDocumentReport = "Email Reports/In-Paragraph List Report.msg";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
 
                         var dataSources =
                             DataLayer.EmailDataSourceObject(strEmailDocumentTemplate, DataLayer.GetProductsData());
                         var dataSourcesNames = DataLayer.EmailDataSourceName(".msg", "products");
 
-                        //Call AssembleDocument to generate In-Paragraph List Report in email document format
+                        // Call AssembleDocument to generate In-Paragraph List Report in email document format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailDocumentTemplate),
                             CommonUtilities.SetDestinationDocument(strEmailDocumentReport),
                             new DataSourceInfo(dataSources.DataSource, dataSourcesNames.Name),
@@ -3491,7 +3284,6 @@ namespace GroupDocs.AssemblyExamples
                     {
                         Console.WriteLine(ex.Message);
                     }
-
                     //ExEnd:GenerateInParagraphListinEmailFormat
                 }
                     break;
@@ -3507,17 +3299,15 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateInTableListWithAlternateContentFromDatabaseinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate =
                             "Word Templates/In-Table List with Alternate Content_DB_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport =
                             "Word Reports/In-Table List with Alternate Content_DB Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in open document format
+                            // Call AssembleDocument to generate In-Table List with Alternate Content Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetProductsDataDb(), "products"));
@@ -3526,23 +3316,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithAlternateContentFromDatabaseinOpenDocumentProcessingFormat
                     }
                     else if (isDataSet)
                     {
                         //ExStart:GenerateInTableListWithAlternateContentFromDataSetinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate =
                             "Word Templates/In-Table List with Alternate Content_DT_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport =
                             "Word Reports/In-Table List with Alternate Content_DT Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in open document format
+                            // Call AssembleDocument to generate In-Table List with Alternate Content Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetProductsDt(), "ds"));
@@ -3551,23 +3338,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithAlternateContentFromDataSetinOpenDocumentProcessingFormat
                     }
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateInTableListWithAlternateContentFromXMLinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate =
                             "Word Templates/In-Table List with Alternate Content_XML_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport =
                             "Word Reports/In-Table List with Alternate Content_XML Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in open document format
+                            // Call AssembleDocument to generate In-Table List with Alternate Content Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -3576,24 +3360,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithAlternateContentFromXMLinOpenDocumentProcessingFormat
                     }
                     else if (isJson)
                     {
                         //ExStart:GenerateInTableListwithAlternateContentReportFromJsoninOpenWord
-                        //setting up source 
                         const string strDocumentTemplate =
                             "Word Templates/In-Table List with Alternate Content_OpenDocument.odt";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Word Reports/In-Table List with Alternate Content_OpenDocument_Json Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List with Alternate Content report in open document format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate In-Table List with Alternate Content report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerOrderDataFromJson(), "orders"));
@@ -3602,22 +3382,19 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListwithAlternateContentReportFromJsoninOpenWord
                     }
                     else
                     {
                         //ExStart:GenerateInTableListWithAlternateContentinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate =
                             "Word Templates/In-Table List with Alternate Content_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/In-Table List with Alternate Content Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in open document format
+                            // Call AssembleDocument to generate In-Table List with Alternate Content Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetOrdersData(), "orders"));
@@ -3626,7 +3403,6 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithAlternateContentinOpenDocumentProcessingFormat
                     }
 
@@ -3636,17 +3412,15 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateInTableListWithAlternateContentFromDatabaseinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/In-Table List with Alternate Content_DB_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport =
                             "Spreadsheet Reports/In-Table List with Alternate Content_DB Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in open spreadsheet format
+                            // Call AssembleDocument to generate In-Table List with Alternate Content Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetProductsDataDb(), "products"));
@@ -3655,23 +3429,21 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithAlternateContentFromDatabaseinOpenSpreadsheetFormat
                     }
                     else if (isDataSet)
                     {
                         //ExStart:GenerateInTableListWithAlternateContentFromDataSetinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/In-Table List with Alternate Content_DT_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport =
                             "Spreadsheet Reports/In-Table List with Alternate Content_DT Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in open spreadsheet format
+                            
+                            // Call AssembleDocument to generate In-Table List with Alternate Content Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetProductsDt(), "ds"));
@@ -3680,23 +3452,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithAlternateContentFromDataSetinOpenSpreadsheetFormat
                     }
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateInTableListWithAlternateContentFromXMLinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/In-Table List with Alternate Content_XML_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport =
                             "Spreadsheet Reports/In-Table List with Alternate Content_XML Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in open spreadsheet format
+                            // Call AssembleDocument to generate In-Table List with Alternate Content Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -3705,24 +3474,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithAlternateContentFromXMLinOpenSpreadsheetFormat
                     }
                     else if (isJson)
                     {
                         //ExStart:GenerateInTableListwithAlternateContentReportFromJsoninOpenExcel
-                        //setting up source 
                         const string strDocumentTemplate =
                             "Spreadsheet Templates/In-Table List with Alternate Content_OpenDocument.ods";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Spreadsheet Reports/In-Table List with Alternate Content_OpenDocument_Json Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List with Alternate Content report in open spreadsheet format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate In-Table List with Alternate Content report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerOrderDataFromJson(), "orders"));
@@ -3731,23 +3496,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListwithAlternateContentReportFromJsoninOpenExcel
                     }
                     else
                     {
                         //ExStart:GenerateInTableListWithAlternateContentinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/In-Table List with Alternate Content_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport =
                             "Spreadsheet Reports/In-Table List with Alternate Content Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in open spreadsheet format
+                            // Call AssembleDocument to generate In-Table List with Alternate Content Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetOrdersData(), "orders"));
@@ -3756,7 +3518,6 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithAlternateContentinOpenSpreadsheetFormat
                     }
 
@@ -3766,17 +3527,15 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateInTableListWithAlternateContentFromDatabaseinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/In-Table List with Alternate Content_DB_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport =
                             "Presentation Reports/In-Table List with Alternate Content_DB Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in open presentation format
+                            // Call AssembleDocument to generate In-Table List with Alternate Content Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetProductsDataDb(), "products"));
@@ -3785,23 +3544,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithAlternateContentFromDatabaseinOpenPresentationFormat
                     }
                     else if (isDataSet)
                     {
                         //ExStart:GenerateInTableListWithAlternateContentFromDataSetinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/In-Table List with Alternate Content_DT_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport =
                             "Presentation Reports/In-Table List with Alternate Content_DT Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in open presentation format
+                            // Call AssembleDocument to generate In-Table List with Alternate Content Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetProductsDt(), "ds"));
@@ -3810,23 +3566,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithAlternateContentFromDataSetinOpenPresentationFormat
                     }
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateInTableListWithAlternateContentFromXMLinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/In-Table List with Alternate Content_XML_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport =
                             "Presentation Reports/In-Table List with Alternate Content_XML Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in open presentation format
+                            // Call AssembleDocument to generate In-Table List with Alternate Content Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -3835,24 +3588,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithAlternateContentFromXMLinOpenPresentationFormat
                     }
                     else if (isJson)
                     {
                         //ExStart:GenerateInTableListwithAlternateContentReportFromJsoninOpenPresentation
-                        //setting up source 
                         const string strDocumentTemplate =
                             "Presentation Templates/In-Table List with Alternate Content_OpenDocument.odp";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Presentation Reports/In-Table List with Alternate Content_OpenDocument_Json Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List with Alternate Content report in presentation format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate In-Table List with Alternate Content report in presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerOrderDataFromJson(), "orders"));
@@ -3861,23 +3610,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListwithAlternateContentReportFromJsoninOpenPresentation
                     }
                     else
                     {
                         //ExStart:GenerateInTableListWithAlternateContentinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/In-Table List with Alternate Content_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport =
                             "Presentation Reports/In-Table List with Alternate Content Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Alternate Content Report in open presentation format
+                            // Call AssembleDocument to generate In-Table List with Alternate Content Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetOrdersData(), "orders"));
@@ -3886,7 +3632,6 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithAlternateContentinOpenPresentationFormat
                     }
 
@@ -3895,15 +3640,13 @@ namespace GroupDocs.AssemblyExamples
 
                 {
                     //ExStart:GenerateInTableListWithAlternateContentinHtmlFormat
-                    //Setting up source html template
                     const string strHtmlTemplate = "HTML Templates/In-Table List with Alternate Content.html";
-                    //Setting up destination html report 
                     const string strHtmlReport = "HTML Reports/In-Table List with Alternate Content Report.html";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table List with Alternate Content Report in html format
+                        // Call AssembleDocument to generate In-Table List with Alternate Content Report in html format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate),
                             CommonUtilities.SetDestinationDocument(strHtmlReport),
                             new DataSourceInfo(DataLayer.GetOrdersData(), "orders"));
@@ -3912,7 +3655,6 @@ namespace GroupDocs.AssemblyExamples
                     {
                         Console.WriteLine(ex.Message);
                     }
-
                     //ExEnd:GenerateInTableListWithAlternateContentinHtmlFormat
                 }
                     break;
@@ -3921,19 +3663,17 @@ namespace GroupDocs.AssemblyExamples
 
                 {
                     //ExStart:GenerateInTableListWithAlternateContentinEmailFormat
-                    //Setting up source email template
                     const string strEmailTemplate = "Email Templates/In-Table List with Alternate Content.msg";
-                    //Setting up destination email report 
                     const string strEmailReport = "Email Reports/In-Table List with Alternate Content Report.msg";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
 
                         var dataSources = DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetOrdersData());
                         var dataSourcesNames = DataLayer.EmailDataSourceName(".msg", "orders");
 
-                        //Call AssembleDocument to generate In-Table List with Alternate Content Report in email format
+                        // Call AssembleDocument to generate In-Table List with Alternate Content Report in email format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate),
                             CommonUtilities.SetDestinationDocument(strEmailReport),
                             new DataSourceInfo(dataSources.DataSource, dataSourcesNames.Name),
@@ -3947,7 +3687,6 @@ namespace GroupDocs.AssemblyExamples
                     {
                         Console.WriteLine(ex.Message);
                     }
-
                     //ExEnd:GenerateInTableListWithAlternateContentinEmailFormat
                 }
                     break;
@@ -3963,17 +3702,15 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinDocumentProcessingDocument
-                        //Setting up source open document template
                         const string strDocumentTemplate =
                             "Word Templates/In-Table List with Filtering, Grouping, and Ordering_DB_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport =
                             "Word Reports/In-Table List with Filtering, Grouping, and Ordering_DB Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open document format
+                            // Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetOrdersDataDb(), "orders"));
@@ -3982,23 +3719,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinDocumentProcessingDocument
                     }
                     else if (isDataSet)
                     {
                         //ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinDocumentProcessingDocument
-                        //Setting up source open document template
                         const string strDocumentTemplate =
                             "Word Templates/In-Table List with Filtering, Grouping, and Ordering_DB_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport =
                             "Word Reports/In-Table List with Filtering, Grouping, and Ordering_DT Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open document format
+                            // Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomersAndOrdersDataDt()));
@@ -4007,23 +3741,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinDocumentProcessingDocument
                     }
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinDocumentProcessingDocument
-                        //Setting up source open document template
                         const string strDocumentTemplate =
                             "Word Templates/In-Table List with Filtering, Grouping, and Ordering_XML_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport =
                             "Word Reports/In-Table List with Filtering, Grouping, and Ordering_XML Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open document format
+                            // Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -4032,24 +3763,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinDocumentProcessingDocument
                     }
                     else if (isJson)
                     {
                         //ExStart:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninOpenWord
-                        //setting up source 
                         const string strDocumentTemplate =
                             "Word Templates/In-Table List with Filtering, Grouping, and Ordering_OpenDocument.odt";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Word Reports/In-Table List with Filtering, Grouping, and Ordering_OpenDocument_Json Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering report in open document format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerOrderDataFromJson(), "orders"));
@@ -4058,23 +3785,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninOpenWord
                     }
                     else
                     {
                         //ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginDocumentProcessingDocument
-                        //Setting up source open document template
                         const string strDocumentTemplate =
                             "Word Templates/In-Table List with Filtering, Grouping, and Ordering_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport =
                             "Word Reports/In-Table List with Filtering, Grouping, and Ordering Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open document format
+                            // Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetOrdersData(), "orders"));
@@ -4083,7 +3807,6 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderinginDocumentProcessingDocument
                     }
 
@@ -4093,17 +3816,15 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/In-Table List with Filtering, Grouping, and Ordering_DB_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport =
                             "Spreadsheet Reports/In-Table List with Filtering, Grouping, and Ordering_DB Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open spreadsheet format
+                            // Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetOrdersDataDb(), "orders"));
@@ -4112,23 +3833,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinOpenSpreadsheetFormat
                     }
                     else if (isDataSet)
                     {
                         //ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/In-Table List with Filtering, Grouping, and Ordering_DB_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport =
                             "Spreadsheet Reports/In-Table List with Filtering, Grouping, and Ordering_DT Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open spreadsheet format
+                            // Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetCustomersAndOrdersDataDt()));
@@ -4137,23 +3855,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinOpenSpreadsheetFormat
                     }
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/In-Table List with Filtering, Grouping, and Ordering_XML_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport =
                             "Spreadsheet Reports/In-Table List with Filtering, Grouping, and Ordering_XML Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open spreadsheet format
+                            // Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -4162,24 +3877,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinOpenSpreadsheetFormat
                     }
                     else if (isJson)
                     {
                         //ExStart:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninOpenSpreadsheet
-                        //setting up source 
                         const string strDocumentTemplate =
                             "Spreadsheet Templates/In-Table List with Filtering, Grouping, and Ordering_OpenDocument.ods";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Spreadsheet Reports/In-Table List with Filtering, Grouping, and Ordering_OpenDocument_Json Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering report in open spreadsheet format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerOrderDataFromJson(), "orders"));
@@ -4188,23 +3899,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninOpenSpreadsheet
                     }
                     else
                     {
                         //ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/In-Table List with Filtering, Grouping, and Ordering_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport =
                             "Spreadsheet Reports/In-Table List with Filtering, Grouping, and Ordering Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open spreadsheet format
+                            // Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetOrdersData(), "orders"));
@@ -4213,7 +3921,6 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderinginOpenSpreadsheetFormat
                     }
 
@@ -4223,17 +3930,15 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/In-Table List with Filtering, Grouping, and Ordering_DB_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport =
                             "Presentation Reports/In-Table List with Filtering, Grouping, and Ordering_DB Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open presentation format
+                            // Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetOrdersDataDb(), "orders"));
@@ -4242,23 +3947,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDatabaseinOpenPresentationFormat
                     }
                     else if (isDataSet)
                     {
                         //ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/In-Table List with Filtering, Grouping, and Ordering_DB_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport =
                             "Presentation Reports/In-Table List with Filtering, Grouping, and Ordering_DT Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open presentation format
+                            // Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetCustomersAndOrdersDataDt()));
@@ -4267,23 +3969,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromDataSetinOpenPresentationFormat
                     }
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/In-Table List with Filtering, Grouping, and Ordering_XML_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport =
                             "Presentation Reports/In-Table List with Filtering, Grouping, and Ordering_XML Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open presentation format
+                            // Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -4292,24 +3991,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderingFromXMLinOpenPresentationFormat
                     }
                     else if (isJson)
                     {
                         //ExStart:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninOpenPresentation
-                        //setting up source 
                         const string strDocumentTemplate =
                             "Presentation Templates/In-Table List with Filtering, Grouping, and Ordering_OpenDocument.odp";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Presentation Reports/In-Table List with Filtering, Grouping, and Ordering_OpenDocument_Json Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering report in open presentation format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerOrderDataFromJson(), "orders"));
@@ -4318,23 +4013,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListwithFilteringGroupingAndOrderingReportFromJsoninOpenPresentation
                     }
                     else
                     {
                         //ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/In-Table List with Filtering, Grouping, and Ordering_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport =
                             "Presentation Reports/In-Table List with Filtering, Grouping, and Ordering Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open presentation format
+                            // Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetOrdersData(), "orders"));
@@ -4343,7 +4035,6 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderinginOpenPresentationFormat
                     }
 
@@ -4351,17 +4042,15 @@ namespace GroupDocs.AssemblyExamples
                 case "html":
                 {
                     //ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginHtmlDocument
-                    //Setting up source html template
                     const string strHtmlTemplate =
                         "HTML Templates/In-Table List with Filtering, Grouping, and Ordering.html";
-                    //Setting up destination html report 
                     const string strHtmlReport =
                         "HTML Reports/In-Table List with Filtering, Grouping, and Ordering Report.html";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in html format
+                        // Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in html format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate),
                             CommonUtilities.SetDestinationDocument(strHtmlReport),
                             new DataSourceInfo(DataLayer.GetOrdersData(), "orders"));
@@ -4370,7 +4059,6 @@ namespace GroupDocs.AssemblyExamples
                     {
                         Console.WriteLine(ex.Message);
                     }
-
                     //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderinginHtmlDocument
                 }
                     break;
@@ -4378,21 +4066,19 @@ namespace GroupDocs.AssemblyExamples
                 case "email":
                 {
                     //ExStart:GenerateInTableListWithFilteringGroupingAndOrderinginEmailDocument
-                    //Setting up source email template
                     const string strEmailTemplate =
                         "Email Templates/In-Table List with Filtering, Grouping, and Ordering.msg";
-                    //Setting up destination email report 
                     const string strEmailReport =
                         "Email Reports/In-Table List with Filtering, Grouping, and Ordering Report.msg";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
 
                         var dataSources = DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetOrdersData());
                         var dataSourcesNames = DataLayer.EmailDataSourceName(".msg", "orders");
 
-                        //Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in email format
+                        // Call AssembleDocument to generate In-Table List with Filtering, Grouping, and Ordering Report in email format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate),
                             CommonUtilities.SetDestinationDocument(strEmailReport),
                             new DataSourceInfo(dataSources.DataSource, dataSourcesNames.Name),
@@ -4406,7 +4092,6 @@ namespace GroupDocs.AssemblyExamples
                     {
                         Console.WriteLine(ex.Message);
                     }
-
                     //ExEnd:GenerateInTableListWithFilteringGroupingAndOrderinginEmailDocument
                 }
                     break;
@@ -4423,17 +4108,15 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateInTableListWithHighlightedRowsFromDatabaseinDocumentProcessingDocument
-                        //Setting up source open document template
                         const string strDocumentTemplate =
                             "Word Templates/In-Table List with Highlighted Rows_DB_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport =
                             "Word Reports/In-Table List with Highlighted Rows_DB Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open document format
+                            // Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetOrdersDataDb(), "orders"));
@@ -4442,23 +4125,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithHighlightedRowsFromDatabaseinDocumentProcessingDocument
                     }
                     else if (isDataSet)
                     {
                         //ExStart:GenerateInTableListWithHighlightedRowsFromDataSetinDocumentProcessingDocument
-                        //Setting up source open document template
                         const string strDocumentTemplate =
                             "Word Templates/In-Table List with Highlighted Rows_DT_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport =
                             "Word Reports/In-Table List with Highlighted Rows_DT Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open document format
+                            // Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomersAndOrdersDataDt(), "ds"));
@@ -4467,23 +4147,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithHighlightedRowsFromDataSetinDocumentProcessingDocument
                     }
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateInTableListWithHighlightedRowsFromXMLinDocumentProcessingDocument
-                        //Setting up source open document template
                         const string strDocumentTemplate =
                             "Word Templates/In-Table List with Highlighted Rows_XML_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport =
                             "Word Reports/In-Table List with Highlighted Rows_XML Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open document format
+                            // Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -4492,24 +4169,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithHighlightedRowsFromXMLinDocumentProcessingDocument
                     }
                     else if (isJson)
                     {
                         //ExStart:GenerateInTableListwithHighlightedRowsReportFromJsoninOpenWord
-                        //setting up source 
                         const string strDocumentTemplate =
                             "Word Templates/In-Table List with Highlighted Rows_OpenDocument.odt";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Word Reports/In-Table List with Highlighted Rows_OpenDocument_Json Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List with Highlighted Rows report in open document format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate In-Table List with Highlighted Rows report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerOrderDataFromJson(), "orders"));
@@ -4518,22 +4191,19 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListwithHighlightedRowsReportFromJsoninOpenWord
                     }
                     else
                     {
                         //ExStart:GenerateInTableListWithHighlightedRowsinDocumentProcessingDocument
-                        //Setting up source open document template
                         const string strDocumentTemplate =
                             "Word Templates/In-Table List with Highlighted Rows_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/In-Table List with Highlighted Rows Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open document format
+                            // Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetOrdersData(), "orders"));
@@ -4542,7 +4212,6 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithHighlightedRowsinDocumentProcessingDocument
                     }
 
@@ -4552,17 +4221,15 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateInTableListWithHighlightedRowsFromDatabaseinSpreadsheetDocument
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/In-Table List with Highlighted Rows_DB_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport =
                             "Spreadsheet Reports/In-Table List with Highlighted Rows_DB Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open spreadsheet format
+                            // all AssembleDocument to generate In-Table List with Highlighted Rows Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetOrdersDataDb(), "orders"));
@@ -4571,23 +4238,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithHighlightedRowsFromDatabaseinSpreadsheetDocument
                     }
                     else if (isDataSet)
                     {
                         //ExStart:GenerateInTableListWithHighlightedRowsFromDataSetinSpreadsheetDocument
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/In-Table List with Highlighted Rows_DT_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport =
                             "Spreadsheet Reports/In-Table List with Highlighted Rows_DT Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open spreadsheet format
+                            // Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetCustomersAndOrdersDataDt(), "ds"));
@@ -4596,23 +4260,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithHighlightedRowsFromDataSetinSpreadsheetDocument
                     }
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateInTableListWithHighlightedRowsFromXMLinSpreadsheetDocument
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/In-Table List with Highlighted Rows_XML_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport =
                             "Spreadsheet Reports/In-Table List with Highlighted Rows_XML Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open spreadsheet format
+                            // Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -4621,24 +4282,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithHighlightedRowsFromXMLinSpreadsheetDocument
                     }
                     else if (isJson)
                     {
                         //ExStart:GenerateInTableListwithHighlightedRowsReportFromJsoninOpenSpreadsheet
-                        //setting up source 
                         const string strDocumentTemplate =
                             "Spreadsheet Templates/In-Table List with Highlighted Rows_OpenDocument.ods";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Spreadsheet Reports/In-Table List with Highlighted Rows_OpenDocument_Json Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List with Highlighted Rows report in open spreadsheet format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate In-Table List with Highlighted Rows report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerOrderDataFromJson(), "orders"));
@@ -4647,23 +4304,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListwithHighlightedRowsReportFromJsoninOpenSpreadsheet
                     }
                     else
                     {
                         //ExStart:GenerateInTableListWithHighlightedRowsinSpreadsheetDocument
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/In-Table List with Highlighted Rows_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport =
                             "Spreadsheet Reports/In-Table List with Highlighted Rows Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open spreadsheet format
+                            // Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetOrdersData(), "orders"));
@@ -4672,7 +4326,6 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithHighlightedRowsinSpreadsheetDocument
                     }
 
@@ -4682,17 +4335,15 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateInTableListWithHighlightedRowsFromDatabaseinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/In-Table List with Highlighted Rows_DB_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport =
                             "Presentation Reports/In-Table List with Highlighted Rows_DB Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open presentation format
+                            // Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetOrdersDataDb(), "orders"));
@@ -4701,23 +4352,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithHighlightedRowsFromDatabaseinOpenPresentationFormat
                     }
                     else if (isDataSet)
                     {
                         //ExStart:GenerateInTableListWithHighlightedRowsFromDataSetinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/In-Table List with Highlighted Rows_DT_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport =
                             "Presentation Reports/In-Table List with Highlighted Rows_DT Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open presentation format
+                            // Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetCustomersAndOrdersDataDt(), "ds"));
@@ -4726,23 +4374,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithHighlightedRowsFromDataSetinOpenPresentationFormat
                     }
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateInTableListWithHighlightedRowsFromXMLinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/In-Table List with Highlighted Rows_XML_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport =
                             "Presentation Reports/In-Table List with Highlighted Rows_XML Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open presentation format
+                            // Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -4751,24 +4396,20 @@ namespace GroupDocs.AssemblyExamples
                         {
                             Console.WriteLine(ex.Message);
                         }
-
                         //ExEnd:GenerateInTableListWithHighlightedRowsFromXMLinOpenPresentationFormat
                     }
                     else if (isJson)
                     {
                         //ExStart:GenerateInTableListwithHighlightedRowsReportFromJsoninOpenPresentation
-                        //setting up source 
                         const string strDocumentTemplate =
                             "Presentation Templates/In-Table List with Highlighted Rows_OpenDocument.odp";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Presentation Reports/In-Table List with Highlighted Rows_OpenDocument_Json Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List with Highlighted Rows report in open presentation format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate In-Table List with Highlighted Rows report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerOrderDataFromJson(), "orders"));
@@ -4782,17 +4423,15 @@ namespace GroupDocs.AssemblyExamples
                     else
                     {
                         //ExStart:GenerateInTableListWithHighlightedRowsinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/In-Table List with Highlighted Rows_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport =
                             "Presentation Reports/In-Table List with Highlighted Rows Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open presentation format
+                            // Call AssembleDocument to generate In-Table List with Highlighted Rows Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetOrdersData(), "orders"));
@@ -4809,15 +4448,13 @@ namespace GroupDocs.AssemblyExamples
                 case "html":
                 {
                     //ExStart:GenerateInTableListWithHighlightedRowsinHtmlDocument
-                    //Setting up source html template
                     const string strHtmlTemplate = "HTML Templates/In-Table List with Highlighted Rows.html";
-                    //Setting up destination html report 
                     const string strHtmlReport = "HTML Reports/In-Table List with Highlighted Rows Report.html";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in html format
+                        // Call AssembleDocument to generate In-Table List with Highlighted Rows Report in html format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate),
                             CommonUtilities.SetDestinationDocument(strHtmlReport),
                             new DataSourceInfo(DataLayer.GetOrdersData(), "orders"));
@@ -4832,19 +4469,17 @@ namespace GroupDocs.AssemblyExamples
                 case "email":
                 {
                     //ExStart:GenerateInTableListWithHighlightedRowsinEmailDocument
-                    //Setting up source email template
                     const string strEmailTemplate = "Email Templates/In-Table List with Highlighted Rows.msg";
-                    //Setting up destination email report 
                     const string strEmailReport = "Email Reports/In-Table List with Highlighted Rows Report.msg";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
 
                         var dataSources = DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetOrdersData());
                         var dataSourcesNames = DataLayer.EmailDataSourceName(".msg", "orders");
 
-                        //Call AssembleDocument to generate In-Table List with Highlighted Rows Report in email format
+                        // Call AssembleDocument to generate In-Table List with Highlighted Rows Report in email format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate),
                             CommonUtilities.SetDestinationDocument(strEmailReport),
                             new DataSourceInfo(dataSources.DataSource, dataSourcesNames.Name),
@@ -4874,15 +4509,13 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateInTableListFromDatabaseinDocumentProcessingDocument
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/In-Table List_DB_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/In-Table List_DB Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List Report in open document format
+                            // Call AssembleDocument to generate In-Table List Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomersDataDb(), "customers"));
@@ -4896,15 +4529,13 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSet)
                     {
                         //ExStart:GenerateInTableListFromDataSetinDocumentProcessingDocument
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/In-Table List_DT_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/In-Table List_DT Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List Report in open document format
+                            // Call AssembleDocument to generate In-Table List Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomersAndOrdersDataDt(), "ds"));
@@ -4918,15 +4549,13 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateInTableListFromXMLinDocumentProcessingDocument
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/In-Table List_XML_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/In-Table List_XML Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List Report in open document format
+                            // Call AssembleDocument to generate In-Table List Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -4940,16 +4569,13 @@ namespace GroupDocs.AssemblyExamples
                     else if (isJson)
                     {
                         //ExStart:GenerateInTableListReportFromJsoninOpenWord
-                        //setting up source 
                         const string strDocumentTemplate = "Word Templates/In-Table List_OpenDocument.odt";
-                        //Setting up destination 
                         const string strDocumentReport = "Word Reports/In-Table List_OpenDocument_Json Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List report in open document format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate In-Table List report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerDataFromJson(), "customers"));
@@ -4963,15 +4589,13 @@ namespace GroupDocs.AssemblyExamples
                     else
                     {
                         //ExStart:GenerateInTableListinDocumentProcessingDocument
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/In-Table List_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/In-Table List Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List Report in open document format
+                            // Call AssembleDocument to generate In-Table List Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.PopulateData(), "customers"));
@@ -4989,15 +4613,13 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateInTableListFromDatabaseinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List_DB_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/In-Table List_DB Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List Report in open spreadsheet format
+                            // Call AssembleDocument to generate In-Table List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetCustomersDataDb(), "customers"));
@@ -5011,15 +4633,13 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSet)
                     {
                         //ExStart:GenerateInTableListFromDataSetinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List_DT_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/In-Table List_DT Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List Report in open spreadsheet format
+                            // Call AssembleDocument to generate In-Table List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetCustomersAndOrdersDataDt(), "ds"));
@@ -5033,16 +4653,14 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateInTableListFromXMLinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/In-Table List_XML_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/In-Table List_XML Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List Report in open spreadsheet format
+                            // Call AssembleDocument to generate In-Table List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -5056,17 +4674,14 @@ namespace GroupDocs.AssemblyExamples
                     else if (isJson)
                     {
                         //ExStart:GenerateInTableListReportFromJsoninOpenSpreadsheet
-                        //setting up source 
                         const string strDocumentTemplate = "Spreadsheet Templates/In-Table List_OpenDocument.ods";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Spreadsheet Reports/In-Table List_OpenDocument_Json Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List report in open spreadsheet format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate In-Table List report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerDataFromJson(), "customers"));
@@ -5080,15 +4695,13 @@ namespace GroupDocs.AssemblyExamples
                     else
                     {
                         //ExStart:GenerateInTableListinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate = "Spreadsheet Templates/In-Table List_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/In-Table List Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List Report in open spreadsheet format
+                            // Call AssembleDocument to generate In-Table List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.PopulateData(), "customers"));
@@ -5106,16 +4719,14 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateInTableListFromDatabaseinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/In-Table List_DB_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport = "Presentation Reports/In-Table List_DB Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List Report in open presentation format
+                            // Call AssembleDocument to generate In-Table List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetCustomersDataDb(), "customers"));
@@ -5129,16 +4740,14 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSet)
                     {
                         //ExStart:GenerateInTableListFromDataSetinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/In-Table List_DT_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport = "Presentation Reports/In-Table List_DT Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List Report in open presentation format
+                            // Call AssembleDocument to generate In-Table List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetCustomersAndOrdersDataDt(), "ds"));
@@ -5152,16 +4761,14 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateInTableListFromXMLinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/In-Table List_XML_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport = "Presentation Reports/In-Table List_XML Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List Report in open presentation format
+                            // Call AssembleDocument to generate In-Table List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -5175,17 +4782,14 @@ namespace GroupDocs.AssemblyExamples
                     else if (isJson)
                     {
                         //ExStart:GenerateInTableListReportFromJsoninOpenPresentation
-                        //setting up source 
                         const string strDocumentTemplate = "Presentation Templates/In-Table List_OpenDocument.odp";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Presentation Reports/In-Table List_OpenDocument_Json Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table List report in open presentation format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate In-Table List report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerDataFromJson(), "customers"));
@@ -5199,15 +4803,13 @@ namespace GroupDocs.AssemblyExamples
                     else
                     {
                         //ExStart:GenerateInTableListinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate = "Presentation Templates/In-Table List_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport = "Presentation Reports/In-Table List Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table List Report in open presentation format
+                            // Call AssembleDocument to generate In-Table List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.PopulateData(), "customers"));
@@ -5224,15 +4826,13 @@ namespace GroupDocs.AssemblyExamples
                 case "html":
                 {
                     //ExStart:GenerateInTableListinHtmlDocument
-                    //Setting up source html template
                     const string strHtmlTemplate = "HTML Templates/In-Table List.html";
-                    //Setting up destination html report 
                     const string strHtmlReport = "HTML Reports/In-Table List Report.html";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table List Report in html format
+                        // Call AssembleDocument to generate In-Table List Report in html format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate),
                             CommonUtilities.SetDestinationDocument(strHtmlReport),
                             new DataSourceInfo(DataLayer.PopulateData(), "customers"));
@@ -5247,19 +4847,17 @@ namespace GroupDocs.AssemblyExamples
                 case "email":
                 {
                     //ExStart:GenerateInTableListinEmailDocument
-                    //Setting up source email template
                     const string strEmailTemplate = "Email Templates/In-Table List.msg";
-                    //Setting up destination email report 
                     const string strEmailReport = "Email Reports/In-Table List Report.msg";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
 
                         var dataSources = DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.PopulateData());
                         var dataSourcesNames = DataLayer.EmailDataSourceName(".msg", "customers");
 
-                        //Call AssembleDocument to generate In-Table List Report in email format
+                        // Call AssembleDocument to generate In-Table List Report in email format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate),
                             CommonUtilities.SetDestinationDocument(strEmailReport),
                             new DataSourceInfo(dataSources.DataSource, dataSourcesNames.Name),
@@ -5288,15 +4886,13 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateInTableMasterDetailFromDatabaseinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/In-Table Master-Detail_DB_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/In-Table Master-Detail_DB Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table Master-Detail Report in open document format
+                            // Call AssembleDocument to generate In-Table Master-Detail Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomersDataDb(), "customers"));
@@ -5310,15 +4906,13 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSet)
                     {
                         //ExStart:GenerateInTableMasterDetailFromDataSetinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/In-Table Master-Detail_DT_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/In-Table Master-Detail_DT Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table Master-Detail Report in open document format
+                            // Call AssembleDocument to generate In-Table Master-Detail Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomersAndOrdersDataDt(), "ds"));
@@ -5332,15 +4926,13 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateInTableMasterDetailFromXMLinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/In-Table Master-Detail_XML_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/In-Table Master-Detail_XML Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table Master-Detail Report in open document format
+                            // Call AssembleDocument to generate In-Table Master-Detail Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -5354,17 +4946,14 @@ namespace GroupDocs.AssemblyExamples
                     else if (isJson)
                     {
                         //ExStart:GenerateInTableMasterDetailReportFromJsoninOpenWord
-                        //setting up source 
                         const string strDocumentTemplate = "Word Templates/In-Table Master-Detail_OpenDocument.odt";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Word Reports/In-Table Master-Detail_OpenDocument_Json Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table Master-Detail report in open document format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate In-Table Master-Detail report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerDataFromJson(), "customers"));
@@ -5378,15 +4967,13 @@ namespace GroupDocs.AssemblyExamples
                     else
                     {
                         //ExStart:GenerateInTableMasterDetailinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/In-Table Master-Detail_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/In-Table Master-Detail Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table Master-Detail Report in open document format
+                            // Call AssembleDocument to generate In-Table Master-Detail Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.PopulateData(), "customers"));
@@ -5404,16 +4991,14 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateInTableMasterDetailFromDatabaseinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/In-Table Master-Detail_DB_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/In-Table Master-Detail_DB Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table Master-Detail Report in open spreadsheet format
+                            // Call AssembleDocument to generate In-Table Master-Detail Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetCustomersDataDb(), "customers"));
@@ -5427,16 +5012,14 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSet)
                     {
                         //ExStart:GenerateInTableMasterDetailFromDataSetinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/In-Table Master-Detail_DT_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/In-Table Master-Detail_DT Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table Master-Detail Report in open spreadsheet format
+                            // Call AssembleDocument to generate In-Table Master-Detail Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetCustomersAndOrdersDataDt(), "ds"));
@@ -5450,16 +5033,14 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateInTableMasterDetailFromXMLinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/In-Table Master-Detail_XML_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/In-Table Master-Detail_XML Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table Master-Detail Report in open spreadsheet format
+                            // Call AssembleDocument to generate In-Table Master-Detail Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -5473,18 +5054,15 @@ namespace GroupDocs.AssemblyExamples
                     else if (isJson)
                     {
                         //ExStart:GenerateInTableMasterDetailReportFromJsoninOpenSpreadsheet
-                        //setting up source 
                         const string strDocumentTemplate =
                             "Spreadsheet Templates/In-Table Master-Detail_OpenDocument.ods";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Spreadsheet Reports/In-Table Master-Detail_OpenDocument_Json Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table Master-Detail report in open spreadsheet format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate In-Table Master-Detail report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerDataFromJson(), "customers"));
@@ -5498,16 +5076,14 @@ namespace GroupDocs.AssemblyExamples
                     else
                     {
                         //ExStart:GenerateInTableMasterDetailinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/In-Table Master-Detail_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/In-Table Master-Detail Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table Master-Detail Report in open spreadsheet format
+                            // Call AssembleDocument to generate In-Table Master-Detail Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.PopulateData(), "customers"));
@@ -5525,17 +5101,15 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateInTableMasterDetailFromDatabaseinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/In-Table Master-Detail_DB_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport =
                             "Presentation Reports/In-Table Master-Detail_DB Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table Master-Detail Report in open presentation format
+                            // Call AssembleDocument to generate In-Table Master-Detail Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetCustomersDataDb(), "customers"));
@@ -5549,17 +5123,15 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSet)
                     {
                         //ExStart:GenerateInTableMasterDetailFromDataSetinOpenPresentationFormat
-                        //Setting up source open spreadsheet template
                         const string strPresentationTemplate =
                             "Presentation Templates/In-Table Master-Detail_DT_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport =
                             "Presentation Reports/In-Table Master-Detail_DT Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table Master-Detail Report in open presentation format
+                            // Call AssembleDocument to generate In-Table Master-Detail Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetCustomersAndOrdersDataDt(), "ds"));
@@ -5573,17 +5145,15 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateInTableMasterDetailFromXMLinOpenPresentationFormat
-                        //Setting up source open spreadsheet template
                         const string strPresentationTemplate =
                             "Presentation Templates/In-Table Master-Detail_XML_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport =
                             "Presentation Reports/In-Table Master-Detail_XML Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table Master-Detail Report in open presentation format
+                            // Call AssembleDocument to generate In-Table Master-Detail Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -5597,18 +5167,15 @@ namespace GroupDocs.AssemblyExamples
                     else if (isJson)
                     {
                         //ExStart:GenerateInTableMasterDetailReportFromJsoninOpenPresentation
-                        //setting up source 
                         const string strDocumentTemplate =
                             "Presentation Templates/In-Table Master-Detail_OpenDocument.odp";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Presentation Reports/In-Table Master-Detail_OpenDocument_Json Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate In-Table Master-Detail report in open presentation format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // all AssembleDocument to generate In-Table Master-Detail report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetCustomerDataFromJson(), "customers"));
@@ -5622,16 +5189,14 @@ namespace GroupDocs.AssemblyExamples
                     else
                     {
                         //ExStart:GenerateInTableMasterDetailinOpenPresentationFormat
-                        //Setting up source open spreadsheet template
                         const string strPresentationTemplate =
                             "Presentation Templates/In-Table Master-Detail_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport = "Presentation Reports/In-Table Master-Detail Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate In-Table Master-Detail Report in open presentation format
+                            // Call AssembleDocument to generate In-Table Master-Detail Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.PopulateData(), "customers"));
@@ -5647,15 +5212,13 @@ namespace GroupDocs.AssemblyExamples
                 case "html":
                 {
                     //ExStart:GenerateInTableMasterDetailinHtmlFormat
-                    //Setting up source html template
                     const string strHtmlTemplate = "HTML Templates/In-Table Master-Detail.html";
-                    //Setting up destination html report 
                     const string strHtmlReport = "HTML Reports/In-Table Master-Detail Report.html";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table Master-Detail Report in html format
+                        // Call AssembleDocument to generate In-Table Master-Detail Report in html format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate),
                             CommonUtilities.SetDestinationDocument(strHtmlReport),
                             new DataSourceInfo(DataLayer.PopulateData(), "customers"));
@@ -5670,19 +5233,17 @@ namespace GroupDocs.AssemblyExamples
                 case "email":
                 {
                     //ExStart:GenerateInTableMasterDetailinEmailFormat
-                    //Setting up source email template
                     const string strEmailTemplate = "Email Templates/In-Table Master-Detail.msg";
-                    //Setting up destination email report 
                     const string strEmailReport = "Email Reports/In-Table Master-Detail Report.msg";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
 
                         var dataSources = DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.PopulateData());
                         var dataSourcesNames = DataLayer.EmailDataSourceName(".msg", "customers");
 
-                        //Call AssembleDocument to generate In-Table Master-Detail Report in email format
+                        // Call AssembleDocument to generate In-Table Master-Detail Report in email format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate),
                             CommonUtilities.SetDestinationDocument(strEmailReport),
                             new DataSourceInfo(dataSources.DataSource, dataSourcesNames.Name),
@@ -5709,18 +5270,17 @@ namespace GroupDocs.AssemblyExamples
             {
                 case "document":
                     //ExStart:GenerateInTableListWithProgressiveTotalinOpenDocumentProcessingFormat
-                    //Setting up source open document template
                     const string strDocumentTemplate =
                         "Word Templates/In-Table List with Running (Progressive) Total.docx";
-                    //Setting up destination open document report 
                     const string strDocumentReport =
                         "Word Reports/In-Table List with Running (Progressive) Total Report.docx";
+                    
                     try
                     {
                         var testData = DataLayer.GetOrdersData();
-                        //Instantiate DocumentAssembler class
+                        
                         DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table List with Progressive(Running) total Report in open document format
+                        // Call AssembleDocument to generate In-Table List with Progressive(Running) total Report in open document format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                             CommonUtilities.SetDestinationDocument(strDocumentReport),
                             new DataSourceInfo(DataLayer.GetOrdersData(), "orders"));
@@ -5736,17 +5296,15 @@ namespace GroupDocs.AssemblyExamples
                 case "spreadsheet":
                 {
                     //ExStart:GenerateInTableListWithProgressiveTotalinOpenSpreadsheetFormat
-                    //Setting up source open spreadsheet template
                     const string strSpreadsheetTemplate =
                         "Spreadsheet Templates/In-Table List with Running (Progressive) Total.xlsx";
-                    //Setting up destination open spreadsheet report 
                     const string strSpreadsheetReport =
                         "Spreadsheet Reports/In-Table List with Running (Progressive) Total Report.xlsx";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table List with Progressive(Running) total Report in open spreadsheet format
+                        // Call AssembleDocument to generate In-Table List with Progressive(Running) total Report in open spreadsheet format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                             CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                             new DataSourceInfo(DataLayer.GetOrdersData(), "orders"));
@@ -5762,17 +5320,15 @@ namespace GroupDocs.AssemblyExamples
                 case "presentation":
                 {
                     //ExStart:GenerateInTableListWithProgressiveTotalinOpenPresentationFormat
-                    //Setting up source open presentation template
                     const string strPresentationTemplate =
                         "Presentation Templates/In-Table List with Running (Progressive) Total.pptx";
-                    //Setting up destination open presentation report 
                     const string strPresentationReport =
                         "Presentation Reports/In-Table List with Running (Progressive) Total Report.pptx";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table List with Progressive(running) total Report in open presentation format
+                        // Call AssembleDocument to generate In-Table List with Progressive(running) total Report in open presentation format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                             CommonUtilities.SetDestinationDocument(strPresentationReport),
                             new DataSourceInfo(DataLayer.GetOrdersData(), "orders"));
@@ -5787,15 +5343,13 @@ namespace GroupDocs.AssemblyExamples
                 case "html":
                 {
                     //ExStart:GenerateInTableListWithProgressiveTotalinHtmlFormat
-                    //Setting up source html template
                     const string strHtmlTemplate = "HTML Templates/In-Table List with Running (Progressive) Total.html";
-                    //Setting up destination html report 
                     const string strHtmlReport = "HTML Reports/In-Table List with Running (Progressive) Total.html";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate In-Table List with Progressive(Running) Total Report in html format
+                        // Call AssembleDocument to generate In-Table List with Progressive(Running) Total Report in html format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strHtmlTemplate),
                             CommonUtilities.SetDestinationDocument(strHtmlReport),
                             new DataSourceInfo(DataLayer.GetOrdersData(), "orders"));
@@ -5810,20 +5364,18 @@ namespace GroupDocs.AssemblyExamples
                 case "email":
                 {
                     //ExStart:GenerateInTableListWithProgressiveTotalinEmailFormat
-                    //Setting up source email template
                     const string strEmailTemplate =
                         "Email Templates/In-Table List with Running (Progressive) Total.msg";
-                    //Setting up destination email report 
                     const string strEmailReport = "Email Reports/In-Table List with Running (Progressive) Total.msg";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
 
                         var dataSources = DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.GetOrdersData());
                         var dataSourcesNames = DataLayer.EmailDataSourceName(".msg", "orders");
 
-                        //Call AssembleDocument to generate In-Table List with Progressive(Running) Total Report in email format
+                        // Call AssembleDocument to generate In-Table List with Progressive(Running) Total Report in email format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate),
                             CommonUtilities.SetDestinationDocument(strEmailReport),
                             new DataSourceInfo(dataSources.DataSource, dataSourcesNames.Name),
@@ -5852,15 +5404,13 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateMulticoloredNumberedListFromDatabaseinOpenDocumentProcessingDocument
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/Multicolored Numbered List_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/Multicolored Numbered List_DB Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Multicolored Numbered List Report in open document format
+                            // Call AssembleDocument to generate Multicolored Numbered List Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetProductsDataDb(), "products"));
@@ -5874,15 +5424,13 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSet)
                     {
                         //ExStart:GenerateMulticoloredNumberedListFromDataSetinOpenDocumentProcessingDocument
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/Multicolored Numbered List_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/Multicolored Numbered List_DT Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Multicolored Numbered List Report in open document format
+                            // Call AssembleDocument to generate Multicolored Numbered List Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetProductsDt()));
@@ -5896,16 +5444,14 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateMulticoloredNumberedListFromXMLinOpenDocumentProcessingDocument
-                        //Setting up source open document template
                         const string strDocumentTemplate =
                             "Word Templates/Multicolored Numbered List_XML_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/Multicolored Numbered List_XML Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Multicolored Numbered List Report in open document format
+                            // Call AssembleDocument to generate Multicolored Numbered List Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -5919,17 +5465,14 @@ namespace GroupDocs.AssemblyExamples
                     else if (isJson)
                     {
                         //ExStart:GenerateMulticoloredNumberedListReportFromJsoninOpenWord
-                        //setting up source 
                         const string strDocumentTemplate = "Word Templates/Multicolored Numbered List_OpenDocument.odt";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Word Reports/Multicolored Numbered List_OpenDocument_Json Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Multicolored Numbered List report in open document format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate Multicolored Numbered List report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetProductsDataJson(), "products"));
@@ -5943,15 +5486,13 @@ namespace GroupDocs.AssemblyExamples
                     else
                     {
                         //ExStart:GenerateMulticoloredNumberedListinOpenDocumentProcessingDocument
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/Multicolored Numbered List_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/Multicolored Numbered List Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Multicolored Numbered List Report in open document format
+                            // Call AssembleDocument to generate Multicolored Numbered List Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetProductsData(), "products"));
@@ -5969,17 +5510,15 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateMulticoloredNumberedListFromDatabaseinOpenSpreadsheetDocument
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/Multicolored Numbered List_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport =
                             "Spreadsheet Reports/Multicolored Numbered List_DB Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Multicolored Numbered List Report in open spreadsheet format
+                            // Call AssembleDocument to generate Multicolored Numbered List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetProductsDataDb(), "products"));
@@ -5993,17 +5532,15 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSet)
                     {
                         //ExStart:GenerateMulticoloredNumberedListFromDataSetinOpenSpreadsheetDocument
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/Multicolored Numbered List_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport =
                             "Spreadsheet Reports/Multicolored Numbered List_DT Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Multicolored Numbered List Report in open spreadsheet format
+                            // Call AssembleDocument to generate Multicolored Numbered List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetProductsDt()));
@@ -6017,17 +5554,15 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateMulticoloredNumberedListFromXMLinOpenSpreadsheetDocument
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/Multicolored Numbered List_XML_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport =
                             "Spreadsheet Reports/Multicolored Numbered List_XML Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Multicolored Numbered List Report in open spreadsheet format
+                            // Call AssembleDocument to generate Multicolored Numbered List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -6041,18 +5576,15 @@ namespace GroupDocs.AssemblyExamples
                     else if (isJson)
                     {
                         //ExStart:GenerateMulticoloredNumberedListReportFromJsoninOpenSpreadsheet
-                        //setting up source 
                         const string strDocumentTemplate =
                             "Spreadsheet Templates/Multicolored Numbered List_OpenDocument.ods";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Spreadsheet Reports/Multicolored Numbered List_OpenDocument_Json Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Multicolored Numbered List report in open spreadsheet format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate Multicolored Numbered List report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetProductsDataJson(), "products"));
@@ -6066,16 +5598,14 @@ namespace GroupDocs.AssemblyExamples
                     else
                     {
                         //ExStart:GenerateMulticoloredNumberedListinOpenSpreadsheetDocument
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/Multicolored Numbered List_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/Multicolored Numbered List Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Multicolored Numbered List Report in open spreadsheet format
+                            // Call AssembleDocument to generate Multicolored Numbered List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetProductsData(), "products"));
@@ -6093,17 +5623,15 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateMulticoloredNumberedListFromDatabaseinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/Multicolored Numbered List_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport =
                             "Presentation Reports/Multicolored Numbered List_DB Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Multicolored Numbered List Report in open presentation format
+                            // Call AssembleDocument to generate Multicolored Numbered List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetProductsDataDb(), "products"));
@@ -6117,17 +5645,15 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSet)
                     {
                         //ExStart:GenerateMulticoloredNumberedListFromDataSetinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/Multicolored Numbered List_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport =
                             "Presentation Reports/Multicolored Numbered List_DT Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Multicolored Numbered List Report in open presentation format
+                            // Call AssembleDocument to generate Multicolored Numbered List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetProductsDt()));
@@ -6141,17 +5667,15 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateMulticoloredNumberedListFromXMLinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/Multicolored Numbered List_XML_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport =
                             "Presentation Reports/Multicolored Numbered List_XML Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Multicolored Numbered List Report in open presentation format
+                            // Call AssembleDocument to generate Multicolored Numbered List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -6165,18 +5689,15 @@ namespace GroupDocs.AssemblyExamples
                     else if (isJson)
                     {
                         //ExStart:GenerateMulticoloredNumberedListReportFromJsoninOpenPresentation
-                        //setting up source 
                         const string strDocumentTemplate =
                             "Presentation Templates/Multicolored Numbered List_OpenDocument.odp";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Presentation Reports/Multicolored Numbered List_OpenDocument_Json Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Multicolored Numbered List report in open presentation format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate Multicolored Numbered List report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetProductsDataJson(), "products"));
@@ -6190,17 +5711,15 @@ namespace GroupDocs.AssemblyExamples
                     else
                     {
                         //ExStart:GenerateMulticoloredNumberedListinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/Multicolored Numbered List_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport =
                             "Presentation Reports/Multicolored Numbered List Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Multicolored Numbered List Report in open presentation format
+                            // Call AssembleDocument to generate Multicolored Numbered List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetProductsData(), "products"));
@@ -6216,15 +5735,13 @@ namespace GroupDocs.AssemblyExamples
                 case "html":
                 {
                     //ExStart:GenerateMulticoloredNumberedListinHtml
-                    //Setting up source html template
                     const string strDocumentTemplate = "HTML Templates/Multicolored Numbered List.html";
-                    //Setting up destination html report 
                     const string strDocumentReport = "HTML Reports/Multicolored Numbered List Report.html";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Multicolored Numbered List Report in html format
+                        // Call AssembleDocument to generate Multicolored Numbered List Report in html format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                             CommonUtilities.SetDestinationDocument(strDocumentReport),
                             new DataSourceInfo(DataLayer.GetProductsData(), "products"));
@@ -6239,19 +5756,18 @@ namespace GroupDocs.AssemblyExamples
                 case "email":
                 {
                     //ExStart:GenerateMulticoloredNumberedListinEmail
-                    //Setting up source email template
                     const string strEmailDocumentTemplate = "Email Templates/Multicolored Numbered List.msg";
-                    //Setting up destination email report 
                     const string strEmailDocumentReport = "Email Reports/Multicolored Numbered List Report.msg";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
+                        
                         var dataSources =
                             DataLayer.EmailDataSourceObject(strEmailDocumentTemplate, DataLayer.GetProductsData());
                         var dataSourcesNames = DataLayer.EmailDataSourceName(".msg", "products");
 
-                        //Call AssembleDocument to generate Multicolored Numbered List Report in html format
+                        // Call AssembleDocument to generate Multicolored Numbered List Report in html format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailDocumentTemplate),
                             CommonUtilities.SetDestinationDocument(strEmailDocumentReport),
                             new DataSourceInfo(dataSources.DataSource, dataSourcesNames.Name),
@@ -6279,15 +5795,13 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateNumberedListFromDatabaseinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/Numbered List_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/Numbered List_DB Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Numbered List Report in open document format
+                            // Call AssembleDocument to generate Numbered List Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetProductsDataDb(), "products"));
@@ -6301,15 +5815,13 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSet)
                     {
                         //ExStart:GenerateNumberedListFromDataSetinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/Numbered List_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/Numbered List_DT Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Numbered List Report in open document format
+                            // Call AssembleDocument to generate Numbered List Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetProductsDt()));
@@ -6323,15 +5835,13 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateNumberedListFromXMLinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/Numbered List_XML_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/Numbered List_XML Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Numbered List Report in open document format
+                            // Call AssembleDocument to generate Numbered List Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -6345,16 +5855,13 @@ namespace GroupDocs.AssemblyExamples
                     else if (isJson)
                     {
                         //ExStart:GenerateNumberedListReportFromJsoninOpenWord
-                        //setting up source 
                         const string strDocumentTemplate = "Word Templates/Numbered List_OpenDocument.odt";
-                        //Setting up destination 
                         const string strDocumentReport = "Word Reports/Numbered List_OpenDocument_Json Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Numbered List report in open document format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate Numbered List report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetProductsDataJson(), "products"));
@@ -6368,15 +5875,13 @@ namespace GroupDocs.AssemblyExamples
                     else
                     {
                         //ExStart:GenerateNumberedListinOpenDocumentProcessingFormat
-                        //Setting up source open document template
                         const string strDocumentTemplate = "Word Templates/Numbered List_OpenDocument.odt";
-                        //Setting up destination open document report 
                         const string strDocumentReport = "Word Reports/Numbered List Report.odt";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Numbered List Report in open document format
+                            // Call AssembleDocument to generate Numbered List Report in open document format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetProductsData(), "products"));
@@ -6394,15 +5899,13 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateNumberedListFromDatabaseinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate = "Spreadsheet Templates/Numbered List_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/Numbered List_DB Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Numbered List Report in open spreadsheet format
+                            // Call AssembleDocument to generate Numbered List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetProductsDataDb(), "products"));
@@ -6416,15 +5919,13 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSet)
                     {
                         //ExStart:GenerateNumberedListFromDataSetinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate = "Spreadsheet Templates/Numbered List_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/Numbered List_DT Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Numbered List Report in open spreadsheet format
+                            // Call AssembleDocument to generate Numbered List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetProductsDt()));
@@ -6438,16 +5939,14 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateNumberedListFromXMLinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate =
                             "Spreadsheet Templates/Numbered List_XML_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/Numbered List_XML Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Numbered List Report in open spreadsheet format
+                            // Call AssembleDocument to generate Numbered List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -6461,17 +5960,14 @@ namespace GroupDocs.AssemblyExamples
                     else if (isJson)
                     {
                         //ExStart:GenerateNumberedListReportFromJsoninOpenSpreadsheet
-                        //setting up source 
                         const string strDocumentTemplate = "Spreadsheet Templates/Numbered List_OpenDocument.ods";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Spreadsheet Reports/Numbered List_OpenDocument_Json Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Numbered List report in open spreadsheet format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate Numbered List report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetProductsDataJson(), "products"));
@@ -6485,15 +5981,13 @@ namespace GroupDocs.AssemblyExamples
                     else
                     {
                         //ExStart:GenerateNumberedListinOpenSpreadsheetFormat
-                        //Setting up source open spreadsheet template
                         const string strSpreadsheetTemplate = "Spreadsheet Templates/Numbered List_OpenDocument.ods";
-                        //Setting up destination open spreadsheet report 
                         const string strSpreadsheetReport = "Spreadsheet Reports/Numbered List Report.ods";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Numbered List Report in open spreadsheet format
+                            // Call AssembleDocument to generate Numbered List Report in open spreadsheet format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                                 CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                                 new DataSourceInfo(DataLayer.GetProductsData(), "products"));
@@ -6511,15 +6005,13 @@ namespace GroupDocs.AssemblyExamples
                     if (isDatabase)
                     {
                         //ExStart:GenerateNumberedListFromDatabaseinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate = "Presentation Templates/Numbered List_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport = "Presentation Reports/Numbered List_DB Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Numbered List Report in open presentation format
+                            // Call AssembleDocument to generate Numbered List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetProductsDataDb(), "products"));
@@ -6533,15 +6025,13 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSet)
                     {
                         //ExStart:GenerateNumberedListFromDataSetinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate = "Presentation Templates/Numbered List_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport = "Presentation Reports/Numbered List_DT Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Numbered List Report in open presentation format
+                            // Call AssembleDocument to generate Numbered List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetProductsDt()));
@@ -6555,16 +6045,14 @@ namespace GroupDocs.AssemblyExamples
                     else if (isDataSourceXML)
                     {
                         //ExStart:GenerateNumberedListFromXMLinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate =
                             "Presentation Templates/Numbered List_XML_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport = "Presentation Reports/Numbered List_XML Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Numbered List Report in open presentation format
+                            // Call AssembleDocument to generate Numbered List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -6578,17 +6066,14 @@ namespace GroupDocs.AssemblyExamples
                     else if (isJson)
                     {
                         //ExStart:GenerateNumberedListReportFromJsoninOpenPresentation
-                        //setting up source 
                         const string strDocumentTemplate = "Presentation Templates/Numbered List_OpenDocument.odp";
-                        //Setting up destination 
                         const string strDocumentReport =
                             "Presentation Reports/Numbered List_OpenDocument_Json Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
-                            DocumentAssembler
-                                assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                            //Call AssembleDocument to generate Numbered List report in open presentation format
+                            DocumentAssembler assembler = new DocumentAssembler();
+                            // Call AssembleDocument to generate Numbered List report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                                 CommonUtilities.SetDestinationDocument(strDocumentReport),
                                 new DataSourceInfo(DataLayer.GetProductsDataJson(), "products"));
@@ -6602,15 +6087,13 @@ namespace GroupDocs.AssemblyExamples
                     else
                     {
                         //ExStart:GenerateNumberedListinOpenPresentationFormat
-                        //Setting up source open presentation template
                         const string strPresentationTemplate = "Presentation Templates/Numbered List_OpenDocument.odp";
-                        //Setting up destination open presentation report 
                         const string strPresentationReport = "Presentation Reports/Numbered List Report.odp";
+                        
                         try
                         {
-                            //Instantiate DocumentAssembler class
                             DocumentAssembler assembler = new DocumentAssembler();
-                            //Call AssembleDocument to generate Numbered List Report in open presentation format
+                            // Call AssembleDocument to generate Numbered List Report in open presentation format.
                             assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                                 CommonUtilities.SetDestinationDocument(strPresentationReport),
                                 new DataSourceInfo(DataLayer.GetProductsData(), "products"));
@@ -6627,15 +6110,13 @@ namespace GroupDocs.AssemblyExamples
                 case "html":
                 {
                     //ExStart:GenerateNumberedListinHtmlFormat
-                    //Setting up source html template
                     const string strDocumentTemplate = "HTML Templates/Numbered List.html";
-                    //Setting up destination html report 
                     const string strDocumentReport = "HTML Reports/Numbered List Report.html";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Numbered List Report in html format
+                        // Call AssembleDocument to generate Numbered List Report in html format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                             CommonUtilities.SetDestinationDocument(strDocumentReport),
                             new DataSourceInfo(DataLayer.GetProductsData(), "products"));
@@ -6650,15 +6131,13 @@ namespace GroupDocs.AssemblyExamples
                 case "text":
                 {
                     //ExStart:GenerateNumberedListinTextFormat
-                    //Setting up source text document template
                     const string strDocumentTemplate = "Text Templates/Numbered List.txt";
-                    //Setting up destination text document report 
                     const string strDocumentReport = "Text Reports/Numbered List Report.txt";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate Numbered List Report in text document  format
+                        // Call AssembleDocument to generate Numbered List Report in text document  format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                             CommonUtilities.SetDestinationDocument(strDocumentReport),
                             new DataSourceInfo(DataLayer.GetProductsData(), "products"));
@@ -6673,20 +6152,18 @@ namespace GroupDocs.AssemblyExamples
                 case "email":
                 {
                     //ExStart:GenerateNumberedListinEmailFormat
-                    //Setting up source email template
                     const string strEmailDocumentTemplate = "Email Templates/Numbered List.msg";
-                    //Setting up destination email report 
                     const string strEmailDocumentReport = "Email Reports/Numbered List Report.msg";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
 
                         var dataSources =
                             DataLayer.EmailDataSourceObject(strEmailDocumentTemplate, DataLayer.GetProductsData());
                         var dataSourcesNames = DataLayer.EmailDataSourceName(".msg", "products");
 
-                        //Call AssembleDocument to generate Numbered List Report in email format
+                        // Call AssembleDocument to generate Numbered List Report in email format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailDocumentTemplate),
                             CommonUtilities.SetDestinationDocument(strEmailDocumentReport),
                             new DataSourceInfo(dataSources.DataSource, dataSourcesNames.Name),
@@ -6709,15 +6186,13 @@ namespace GroupDocs.AssemblyExamples
         public static void GenerateNumberedListRestartNum_Documents()
         {
             //ExStart:GenerateNumberedListRestartNum
-            //setting up source 
             const string strDocumentTemplate = "Word Templates/Numbered List_RestartNum.docx";
-            //Setting up destination 
             const string strDocumentReport = "Word Reports/Numbered List_RestartNum.docx";
+            
             try
             {
-                //Instantiate DocumentAssembler class
-                DocumentAssembler assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                //Call AssembleDocument to generate Numbered List report in open document format
+                DocumentAssembler assembler = new DocumentAssembler();
+                // Call AssembleDocument to generate Numbered List report in open document format.
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                     CommonUtilities.SetDestinationDocument(strDocumentReport),
                     new DataSourceInfo(DataLayer.GetOrdersData(), "orders"));
@@ -6733,15 +6208,13 @@ namespace GroupDocs.AssemblyExamples
         public static void GenerateNumberedListRestartNum_Email()
         {
             //ExStart:GenerateNumberedListRestartNum
-            //setting up source 
             const string strDocumentTemplate = "Email Templates/Numbered List_RestartNum.msg";
-            //Setting up destination 
             const string strDocumentReport = "Email Reports/Numbered List_RestartNum.msg";
+            
             try
             {
-                //Instantiate DocumentAssembler class
-                DocumentAssembler assembler = new DocumentAssembler(); //initialize object of DocumentAssembler class 
-                //Call AssembleDocument to generate Numbered List report in open document format
+                DocumentAssembler assembler = new DocumentAssembler();
+                // Call AssembleDocument to generate Numbered List report in open document format.
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                     CommonUtilities.SetDestinationDocument(strDocumentReport),
                     new DataSourceInfo(DataLayer.GetOrdersData(), "orders"));
@@ -6756,17 +6229,15 @@ namespace GroupDocs.AssemblyExamples
         public static void GenerateReportLazilyAndRecursively()
         {
             //ExStart:GeneratingReportbyRecursivelyandLazilyAccessingtheData
-            //Setting up source open document template
             const string strDocumentTemplate = "Word Templates/Lazy And Recursive.docx";
-            //Setting up destination open document report 
             const string strDocumentReport = "Word Reports/Lazy And Recursive Report.docx";
+            
             try
             {
-                //Instantiate DynamicEntity class
                 DynamicEntity dentity = new DynamicEntity(Guid.NewGuid());
-                //Instantiate DocumentAssembler class
+                
                 DocumentAssembler assembler = new DocumentAssembler();
-                //Call AssembleDocument to generate Single Row Report in open document format
+                // Call AssembleDocument to generate Single Row Report in open document format.
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                     CommonUtilities.SetDestinationDocument(strDocumentReport), new DataSourceInfo(dentity, "root"));
             }
@@ -6782,15 +6253,13 @@ namespace GroupDocs.AssemblyExamples
             if (strDocumentFormat == "document")
             {
                 //ExStart:GeneratingReportUsingMultipleDataSourcesdocumentprocessing
-                //Setting up source open document template
                 const string strDocumentTemplate = "Word Templates/Multiple DS.odt";
-                //Setting up destination open document report 
                 const string strDocumentReport = "Word Reports/Multiple DS.odt";
+                
                 try
                 {
-                    //Instantiate DocumentAssembler class
                     DocumentAssembler assembler = new DocumentAssembler();
-                    //Call AssembleDocument to generate report
+                    // Call AssembleDocument to generate report.
                     assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                         CommonUtilities.SetDestinationDocument(strDocumentReport),
                         new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"),
@@ -6805,15 +6274,13 @@ namespace GroupDocs.AssemblyExamples
             else if (strDocumentFormat == "spreadsheet")
             {
                 //ExStart:GeneratingReportUsingMultipleDataSourcesspreadsheet
-                //Setting up source open document template
                 const string strDocumentTemplate = "Spreadsheet Templates/Multiple DS.ods";
-                //Setting up destination open document report 
                 const string strDocumentReport = "Spreadsheet Reports/Multiple DS.ods";
+                
                 try
                 {
-                    //Instantiate DocumentAssembler class
                     DocumentAssembler assembler = new DocumentAssembler();
-                    //Call AssembleDocument to generate report
+                    // Call AssembleDocument to generate report.
                     assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                         CommonUtilities.SetDestinationDocument(strDocumentReport),
                         new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"),
@@ -6828,21 +6295,17 @@ namespace GroupDocs.AssemblyExamples
             else if (strDocumentFormat == "presentation")
             {
                 //ExStart:GeneratingReportUsingMultipleDataSourcespresentation
-                //Setting up source open document template
                 const string strDocumentTemplate = "Presentation Templates/Multiple DS.odp";
-                //Setting up destination open document report 
                 const string strDocumentReport = "Presentation Reports/Multiple DS.odp";
+                
                 try
                 {
-                    //Instantiate DocumentAssembler class
-                    DocumentAssembler assembler = new DocumentAssembler();
-                    //Create an array of data source objects
                     object[] dataSourceObj = new object[]
                         {DataLayer.GetAllDataFromXml(), DataLayer.GetProductsDataJson()};
-                    //Create an array of data source string
                     string[] dataSourceString = new string[] {"ds", "products"};
 
-                    //Call AssembleDocument to generate report
+                    DocumentAssembler assembler = new DocumentAssembler();
+                    // Call AssembleDocument to generate report.
                     assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                         CommonUtilities.SetDestinationDocument(strDocumentReport),
                         new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"),
@@ -6860,15 +6323,13 @@ namespace GroupDocs.AssemblyExamples
         public static void TemplateSyntaxFormatting()
         {
             //ExStart:TemplateSyntaxFormatting 
-            //Setting up source open document template
             const string strDocumentTemplate = "Word Templates/String_Numeric_Formatting.odt";
-            //Setting up destination open document report 
             const string strDocumentReport = "Word Reports/String_Numeric_Formatting Report.odt";
+            
             try
             {
-                //Instantiate DocumentAssembler class
                 DocumentAssembler assembler = new DocumentAssembler();
-                //Call AssembleDocument to generate   Report in open document format
+                // Call AssembleDocument to generate   Report in open document format.
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                     CommonUtilities.SetDestinationDocument(strDocumentReport),
                     new DataSourceInfo(DataLayer.GetOrdersData(), "orders"));
@@ -6883,15 +6344,13 @@ namespace GroupDocs.AssemblyExamples
         public static void OuterDocumentInsertion()
         {
             //ExStart:OuterDocumentInsertion
-            //Setting up source open document template
             const string strDocumentTemplate = "Word Templates/OuterDocInsertion.odt";
-            //Setting up destination open document report 
             const string strDocumentReport = "Word Reports/OuterDocInsertion Report.odt";
+            
             try
             {
-                //Instantiate DocumentAssembler class
                 DocumentAssembler assembler = new DocumentAssembler();
-                //Call AssembleDocument to generate  Report in open document format
+                // Call AssembleDocument to generate  Report in open document format.
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                     CommonUtilities.SetDestinationDocument(strDocumentReport),
                     new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
@@ -6903,25 +6362,19 @@ namespace GroupDocs.AssemblyExamples
             //ExEnd:OuterDocumentInsertion
         }
 
-        /// <summary>
-        /// Generate barcodes
-        /// </summary>
-        /// <param name="strDocumentFormat"></param>
         public static void AddBarCodes(string strDocumentFormat)
         {
             switch (strDocumentFormat)
             {
                 case "document":
                     //ExStart:AddBarCodesDocumentProcessingFormat
-                    //Setting up source open document template
                     const string strDocumentTemplate = "Word Templates/Barcode.docx";
-                    //Setting up destination open document report 
                     const string strDocumentReport = "Word Reports/Barcode.docx";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate   Report in open document format
+                        // Call AssembleDocument to generate   Report in open document format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                             CommonUtilities.SetDestinationDocument(strDocumentReport),
                             new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
@@ -6935,15 +6388,13 @@ namespace GroupDocs.AssemblyExamples
 
                 case "spreadsheet":
                     //ExStart:AddBarCodesSpreadsheet
-                    //Setting up source open spreadsheet template
                     const string strSpreadsheetTemplate = "Spreadsheet Templates/Barcode.xlsx";
-                    //Setting up destination open spreadsheet report 
                     const string strSpreadsheetReport = "Spreadsheet Reports/Barcode.xlsx";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate  Report in open spreadsheet format
+                        // Call AssembleDocument to generate  Report in open spreadsheet format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strSpreadsheetTemplate),
                             CommonUtilities.SetDestinationDocument(strSpreadsheetReport),
                             new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
@@ -6957,15 +6408,13 @@ namespace GroupDocs.AssemblyExamples
 
                 case "presentation":
                     //ExStart:AddBarCodesPowerPoint
-                    //Setting up source open presentation template
                     const string strPresentationTemplate = "Presentation Templates/Barcode.pptx";
-                    //Setting up destination open presentation report 
                     const string strPresentationReport = "Presentation Reports/Barcode.pptx";
+                    
                     try
                     {
-                        //Instantiate DocumentAssembler class
                         DocumentAssembler assembler = new DocumentAssembler();
-                        //Call AssembleDocument to generate  Report in open presentation format
+                        // Call AssembleDocument to generate  Report in open presentation format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strPresentationTemplate),
                             CommonUtilities.SetDestinationDocument(strPresentationReport),
                             new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
@@ -6979,19 +6428,14 @@ namespace GroupDocs.AssemblyExamples
             }
         }
 
-        /// <summary>
-        /// Update word processing documents fields while assembling 
-        /// </summary>
-        /// <param name="documentType"></param>
         public static void UpdateWordDocFields(string documentType)
         {
             if (documentType == "document")
             {
                 //ExStart:UpdateWordDocFields
-                //Setting up source document template
                 const string strDocumentTemplate = "Word Templates/Update_Field_XML.docx";
-                //Setting up destination document report 
                 const string strDocumentReport = "Word Reports/Update_Field_XML Report.docx";
+                
                 DocumentAssembler assembler = new DocumentAssembler();
                 assembler.Options |= DocumentAssemblyOptions.UpdateFieldsAndFormulas;
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
@@ -7002,10 +6446,9 @@ namespace GroupDocs.AssemblyExamples
             else if (documentType == "spreadsheet")
             {
                 //ExStart:updateformula
-                //Setting up source document template
                 const string strDocumentTemplate = "Spreadsheet Templates/Update-Fomula.xlsx";
-                //Setting up destination document report 
                 const string strDocumentReport = "Spreadsheet Reports/Update-Fomula Report.xlsx";
+                
                 DocumentAssembler assembler = new DocumentAssembler();
                 assembler.Options |= DocumentAssemblyOptions.UpdateFieldsAndFormulas;
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
@@ -7016,20 +6459,18 @@ namespace GroupDocs.AssemblyExamples
         }
 
         /// <summary>
-        /// Support for Analogue of Microsoft Word NEXT Field
+        /// Support for Analogue of Microsoft Word NEXT Field.
         /// </summary>
         public static void NextIteration()
         {
             //ExStart:nextiteration
-            //Setting up source document template
             const string strDocumentTemplate = "Word Templates/Using Next.docx";
-            //Setting up destination document report
             const string strDocumentReport = "Word Reports/Using Next Report.docx";
+            
             try
             {
-                //Instantiate DocumentAssembler class
                 DocumentAssembler assembler = new DocumentAssembler();
-                //Call AssembleDocument to generate Report 
+                // Call AssembleDocument to generate Report.
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                     CommonUtilities.SetDestinationDocument(strDocumentReport),
                     new DataSourceInfo(DataLayer.GetAllDataFromXml(), "ds"));
@@ -7042,7 +6483,7 @@ namespace GroupDocs.AssemblyExamples
         }
 
         /// <summary>
-        /// Generate report from excel data source
+        /// Generate report from excel data source.
         /// </summary>
         public static void UseSpreadsheetAsDataSource()
         {
@@ -7059,7 +6500,7 @@ namespace GroupDocs.AssemblyExamples
         }
 
         /// <summary>
-        /// Generate report from presentation data source
+        /// Generate report from presentation data source.
         /// </summary>
         public static void UsePresentationTableAsDataSource()
         {
@@ -7074,7 +6515,7 @@ namespace GroupDocs.AssemblyExamples
         }
 
         /// <summary>
-        /// Import word proccessing table into presentation
+        /// Import word proccessing table into presentation.
         /// </summary>
         public static void ImportingWordProcessingTableIntoPresentation()
         {
@@ -7092,7 +6533,7 @@ namespace GroupDocs.AssemblyExamples
         }
 
         /// <summary>
-        /// Import Spreadsheet into HTML Document
+        /// Import Spreadsheet into HTML Document.
         /// </summary>
         public static void ImportingSpreadsheetIntoHtmlDocument()
         {
@@ -7117,21 +6558,19 @@ namespace GroupDocs.AssemblyExamples
         }
 
         /// <summary>
-        /// Table Cell Merging in Word Processing Documents
-        /// Features is supported by version 19.1 or greater
+        /// Table Cell Merging in Word Processing documents
+        /// features is supported by version 19.1 or greater.
         /// </summary>
         public static void TableCellsMergingInWordProcessing()
         {
             //ExStart:TableCellsMergingInWordProcessing
-            //Setting up source document template
             const string strDocumentTemplate = "Word Templates/Merging Cells Dynamically.docx";
-            //Setting up destination PDF report 
             const string strDocumentReport = "PDF Reports/Merging Cells Dynamically Report.pdf";
+            
             try
             {
-                //Instantiate DocumentAssembler class
                 DocumentAssembler assembler = new DocumentAssembler();
-                //Call AssembleDocument to Merging Cells Dynamically Report in PDF format
+                // Call AssembleDocument to Merging Cells Dynamically Report in PDF format.
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                     CommonUtilities.SetDestinationDocument(strDocumentReport), new LoadSaveOptions(FileFormat.Pdf),
                     new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
@@ -7145,20 +6584,18 @@ namespace GroupDocs.AssemblyExamples
 
         /// <summary>
         /// Table Cell Merging in Presentations
-        /// Features is supported by version 19.1 or greater
+        /// features is supported by version 19.1 or greater.
         /// </summary>
         public static void TableCellsMergingInPresentations()
         {
             //ExStart:TableCellsMergingInPresentations
-            //Setting up source presentation template
             const string strDocumentTemplate = "Presentation Templates/Merging Cells Dynamically.pptx";
-            //Setting up destination PDF report 
             const string strDocumentReport = "PDF Reports/Merging Cells Dynamically Report.pdf";
+            
             try
             {
-                //Instantiate DocumentAssembler class
                 DocumentAssembler assembler = new DocumentAssembler();
-                //Call AssembleDocument to Merging Cells Dynamically Report in PDF format
+                // Call AssembleDocument to Merging Cells Dynamically Report in PDF format.
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                     CommonUtilities.SetDestinationDocument(strDocumentReport), new LoadSaveOptions(FileFormat.Pdf),
                     new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
@@ -7172,20 +6609,18 @@ namespace GroupDocs.AssemblyExamples
 
         /// <summary>
         /// Table Cell Merging in Spreadsheets
-        /// Features is supported by version 19.1 or greater
+        /// features is supported by version 19.1 or greater.
         /// </summary>
         public static void TableCellsMergingInSpreadsheets()
         {
             //ExStart:TableCellsMergingInSpreadsheets
-            //Setting up source spreadsheet template
             const string strDocumentTemplate = "Spreadsheet Templates/Merging Cells Dynamically.xlsx";
-            //Setting up destination PDF report 
             const string strDocumentReport = "PDF Reports/Merging Cells Dynamically Report.pdf";
+            
             try
             {
-                //Instantiate DocumentAssembler class
                 DocumentAssembler assembler = new DocumentAssembler();
-                //Call AssembleDocument to Merging Cells Dynamically Report in PDF format
+                // Call AssembleDocument to Merging Cells Dynamically Report in PDF format.
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                     CommonUtilities.SetDestinationDocument(strDocumentReport), new LoadSaveOptions(FileFormat.Pdf),
                     new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
@@ -7199,15 +6634,14 @@ namespace GroupDocs.AssemblyExamples
 
         /// <summary>
         /// Table Cell Merging in Emails
-        /// Features is supported by version 19.1 or greater
+        /// features is supported by version 19.1 or greater.
         /// </summary>
         public static void TableCellsMergingInEmails()
         {
             //ExStart:TableCellsMergingInEmails
-            //Setting up source email template
             const string strEmailTemplate = "Email Templates/Merging Cells Dynamically.msg";
-            //Setting up destination email report 
             const string strEmailReport = "Email Reports/Merging Cells Dynamically Report.msg";
+            
             try
             {
                 DocumentAssembler assembler = new DocumentAssembler();
@@ -7215,7 +6649,7 @@ namespace GroupDocs.AssemblyExamples
                 var dataSources = DataLayer.EmailDataSourceObject(strEmailTemplate, DataLayer.PopulateData());
                 var dataSourcesNames = DataLayer.EmailDataSourceName(".msg", "customers");
 
-                //Call AssembleDocument to generate Merging Cells Dynamically Report in email format
+                // Call AssembleDocument to generate Merging Cells Dynamically Report in email format.
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strEmailTemplate),
                     CommonUtilities.SetDestinationDocument(strEmailReport),
                     new DataSourceInfo(dataSources.DataSource, dataSourcesNames.Name),
@@ -7234,25 +6668,23 @@ namespace GroupDocs.AssemblyExamples
 
         /// <summary>
         /// In-lining syntax error messages into templates
-        /// Features is supported by version 19.3 or greater
+        /// features is supported by version 19.3 or greater.
         /// </summary>
         public static void DemoInLineSyntaxError()
         {
             //ExStart:DemoInLineSyntaxError_19.3
-            //Setting up source document template
             const string strDocumentTemplate = "Word Templates/Inline Error Demo.docx";
-            //Setting up destination PDF report 
             const string strDocumentReport = "PDF Reports/Inline Error Demo.pdf";
+            
             try
             {
-                //Instantiate DocumentAssembler class
                 DocumentAssembler assembler = new DocumentAssembler();
 
-                //Enable the In-line error messaging
+                // Enable the In-line error messaging.
                 assembler.Options |= DocumentAssemblyOptions.InlineErrorMessages;
 
-                //Call AssembleDocument to show the demo Report and save the report in PDF format
-                //The AssembleDocument will return a boolean value to indicate the success or failed with inline error.
+                // Call AssembleDocument to show the demo Report and save the report in PDF format.
+                // The AssembleDocument will return a boolean value to indicate the success or failed with inline error.
                 if (assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                     CommonUtilities.SetDestinationDocument(strDocumentReport), new LoadSaveOptions(FileFormat.Pdf),
                     new DataSourceInfo(DataLayer.GetCustomerData(), "customer")))
@@ -7272,20 +6704,19 @@ namespace GroupDocs.AssemblyExamples
         }
 
         /// <summary>
-        /// Loading of template documents from HTML with resources
-        /// Features is supported by version 19.5 or greater
+        /// Loading of template documents from HTML with resources.
+        /// Features is supported by version 19.5 or greater.
         /// </summary>
         public static void LoadDocFromHTMLWithResource()
         {
             //ExStart:LoadDocFromHTMLWithResource_19.5
-            //Setting up resource directory for input template and output
             string strDirectoryPath = CommonUtilities.GetSourceFolder("ResourceLoad/");
 
             try
             {
                 DocumentAssembler assembler = new DocumentAssembler();
 
-                //Assemble the document using relative directory path and file names.
+                // Assemble the document using relative directory path and file names.
                 assembler.AssembleDocument(strDirectoryPath + "TestWordsResourceLoad.htm",
                     strDirectoryPath + "TestWordsResourceLoad_Out.docx",
                     new DataSourceInfo("It should be a jeep image.", "value"));
@@ -7299,23 +6730,21 @@ namespace GroupDocs.AssemblyExamples
         }
 
         /// <summary>
-        /// Loading of template documents from HTML with resources from an explicitly specified folder
-        /// Features is supported by version 19.5 or greater
+        /// Loading of template documents from HTML with resources from an explicitly specified folder.
+        /// Features is supported by version 19.5 or greater.
         /// </summary>
         public static void LoadDocFromHTMLWithResource_ExplicitFolder()
         {
             //ExStart:LoadDocFromHTMLWithResource_ExplicitFolder_19.5
-            //Setting up resource directory for input template and output
             string strDirectoryPath = CommonUtilities.GetSourceFolder("ResourceLoad/");
 
             try
             {
                 DocumentAssembler assembler = new DocumentAssembler();
 
-                //Initialize LoadSaveOptions
                 LoadSaveOptions loadSaveOptions = new LoadSaveOptions();
 
-                //Resolve URIs from the specified alternative folder.
+                // Resolve URIs from the specified alternative folder.
                 loadSaveOptions.ResourceLoadBaseUri = strDirectoryPath + "Alternative";
 
                 assembler.AssembleDocument(strDirectoryPath + "TestWordsResourceLoad.htm",
@@ -7330,19 +6759,19 @@ namespace GroupDocs.AssemblyExamples
         }
 
         /// <summary>
-        /// Saving of external resource files at relative path while an assembled document loaded from a non-HTML format is being saved to HTML
-        /// Features is supported by version 19.5 or greater
+        /// Saving of external resource files at relative path while an assembled document loaded from a non-HTML format is being saved to HTML.
+        /// Features is supported by version 19.5 or greater.
         /// </summary>
         public static void SaveDocToHTMLWithResource()
         {
             //ExStart:SaveDocToHTMLWithResource_19.5
-            //Setting up resource directory for input template and output
             string strDirectoryPath = CommonUtilities.GetSourceFolder("ResourceSave/");
+            
             try
             {
                 DocumentAssembler assembler = new DocumentAssembler();
 
-                //Assemble the document using relative directory path and file names.
+                // Assemble the document using relative directory path and file names.
                 assembler.AssembleDocument(strDirectoryPath + "TestCellsResourceSaveOneSheet.xlsx",
                     strDirectoryPath + "TestCellsResourceSaveOneSheet_Out.htm", new DataSourceInfo("Hello!", "value"));
             }
@@ -7354,24 +6783,23 @@ namespace GroupDocs.AssemblyExamples
         }
 
         /// <summary>
-        /// Saving of external resource files in a specified folder at relative path while saving output to HTML
-        /// Features is supported by version 19.5 or greater
+        /// Saving of external resource files in a specified folder at relative path while saving output to HTML.
+        /// Features is supported by version 19.5 or greater.
         /// </summary>
         public static void SaveDocToHTMLWithResource_ExplicitFolder()
         {
             //ExStart:SaveDocToHTMLWithResource_ExplicitFolder_19.5
-            //Setting up resource directory for input template and output
             string strDirectoryPath = CommonUtilities.GetSourceFolder("ResourceSave/");
 
             try
             {
                 DocumentAssembler assembler = new DocumentAssembler();
 
-                //Initialize LoadSaveOptions
-                LoadSaveOptions loadSaveOptions = new LoadSaveOptions();
-
-                //Resolve URIs from the specified alternative folder.
-                loadSaveOptions.ResourceSaveFolder = strDirectoryPath + "Alternative";
+                LoadSaveOptions loadSaveOptions = new LoadSaveOptions
+                {
+                    // Resolve URIs from the specified alternative folder.
+                    ResourceSaveFolder = strDirectoryPath + "Alternative"
+                };
 
                 assembler.AssembleDocument(strDirectoryPath + "TestWordsResourceSave.docx",
                     strDirectoryPath + "TestWordsResourceSave_Out.htm", loadSaveOptions,
@@ -7386,16 +6814,13 @@ namespace GroupDocs.AssemblyExamples
 
         /// <summary>
         /// Saving an assembled Markdown document to a Word Processing format using file extension.
-        /// Features is supported by version 19.8 or greater
+        /// Features is supported by version 19.8 or greater.
         /// </summary>
         public static void SaveMdtoWord_UsingExtension(string DocumentName)
         {
             //ExStart:SaveMdtoWord_UsingExtension_19.8
-            //Setting up source document template
             string strDocumentTemplate = "Markdown Templates/" + DocumentName;
-            //Setting up destination Markdown reports 
             string strDocumentReport = "Word Reports/" + DocumentName + " Out.docx";
-            //Setting up description variable
             const string description =
                 "GroupDocs.Assembly for .NET is a class library that enables you to generate documents in popular " +
                 "office and email file formats based upon template documents and data obtained from various sources " +
@@ -7403,8 +6828,6 @@ namespace GroupDocs.AssemblyExamples
 
             try
             {
-
-
                 DocumentAssembler assembler = new DocumentAssembler();
 
                 assembler.AssembleDocument(
@@ -7423,21 +6846,18 @@ namespace GroupDocs.AssemblyExamples
 
         /// <summary>
         /// Saving an assembled Word Processing document or email to Markdown using file extension.
-        /// Features is supported by version 19.8 or greater
+        /// Features is supported by version 19.8 or greater.
         /// </summary>
         public static void SaveWordOrEmailtoMD_UsingExtension()
         {
             //ExStart:SaveWordtoMD_UsingExtension_19.8
-            //Setting up source document template (Email or Word Document)
             const string strDocumentTemplate = "Word Templates/ReadMe.docx";
-
-            //Setting up destination Markdown reports 
             const string strDocumentReport = "Markdown Reports/ReadMe Out.md";
-            //Setting up description variable
             const string description =
                 "GroupDocs.Assembly for .NET is a class library that enables you to generate documents in popular " +
                 "office and email file formats based upon template documents and data obtained from various sources " +
                 "including databases, XML, JSON, OData, objects of custom .NET types, external documents, and more.";
+            
             try
             {
                 DocumentAssembler assembler = new DocumentAssembler();
@@ -7458,20 +6878,17 @@ namespace GroupDocs.AssemblyExamples
 
         /// <summary>
         /// Saving an assembled Word Processing document or email to Markdown using explicit specifying.
-        /// Features is supported by version 19.8 or greater
+        /// Features is supported by version 19.8 or greater.
         /// </summary>
         public static void SaveWordOrEmailtoMD_Explicit()
         {
             //ExStart:SaveWordtoMD_Explicit_19.8
             try
             {
-                //Setting up source document template (Email or Word Document)
                 Stream sourceStream = File.OpenRead(CommonUtilities.GetSourceDocument("Word Templates/ReadMe.docx"));
-                //Setting up destination Markdown Reports 
                 FileStream targetStream =
                     File.Create(CommonUtilities.SetDestinationDocument("Markdown Reports/ReadMe Out.md"));
 
-                //Setting up description variable
                 const string description =
                     "GroupDocs.Assembly for .NET is a class library that enables you to generate documents in popular " +
                     "office and email file formats based upon template documents and data obtained from various sources " +
@@ -7495,25 +6912,18 @@ namespace GroupDocs.AssemblyExamples
         }
 
         /// <summary>
-        /// Working with JSON data sources
-        /// Features is supported by version 19.10 or greater
+        /// Working with JSON data sources.
+        /// Features is supported by version 19.10 or greater.
         /// </summary>
         public static void SimpleJsonDS_Demo()
         {
             //ExStart:SimpleJsonDS_Demo_19.10
             try
             {
-                //Setting up source document template (Email or Word Document)
                 const string strDocumentTemplate = "Word Templates/SimpleDatasetDemo.docx";
-
-                //Setting up destination for reports 
                 const string strDocumentReport = "Word Reports/SimpleJsonDSDemo Out.docx";
-
-                //Setting up destination Markdown reports 
                 const string strDataSource = "JSON DataSource/ManagerData.json";
 
-
-                //initialize data source
                 JsonDataSource dataSource = new JsonDataSource(CommonUtilities.GetDataSourceDocument(strDataSource));
 
                 DocumentAssembler assembler = new DocumentAssembler();
@@ -7529,25 +6939,18 @@ namespace GroupDocs.AssemblyExamples
         }
 
         /// <summary>
-        /// Working with XML data sources
-        /// Features is supported by version 19.10 or greater
+        /// Working with XML data sources.
+        /// Features is supported by version 19.10 or greater.
         /// </summary>
         public static void SimpleXMLDS_Demo()
         {
             //ExStart:SimpleXMLDS_Demo_19.10
             try
             {
-                //Setting up source document template (Email or Word Document)
                 const string strDocumentTemplate = "Word Templates/SimpleDatasetDemo.docx";
-
-                //Setting up destination for reports 
                 const string strDocumentReport = "Word Reports/SimpleXMLDSDemo Out.docx";
-
-                //Setting up Data Source file
                 const string strDataSource = "XML DataSource/Managers.xml";
-
-
-                //initialize data source
+                
                 XmlDataSource dataSource = new XmlDataSource(CommonUtilities.GetDataSourceDocument(strDataSource));
 
                 DocumentAssembler assembler = new DocumentAssembler();
@@ -7563,31 +6966,22 @@ namespace GroupDocs.AssemblyExamples
         }
 
         /// <summary>
-        /// Working with csv data sources
-        /// Features is supported by version 19.10 or greater
+        /// Working with csv data sources.
+        /// Features is supported by version 19.10 or greater.
         /// </summary>
         public static void SimpleCsvDS_Demo()
         {
             //ExStart:SimpleCsvDS_Demo_19.10
             try
             {
-                //Setting up source document template (Email or Word Document)
                 const string strDocumentTemplate = "Text Templates/CsvDatasetDemo.txt";
-
-                //Setting up destination for reports 
                 const string strDocumentReport = "Word Reports/SimpleCsvDSDemo Out.docx";
-
-                //Setting up destination Markdown reports 
                 const string strDataSource = "Excel DataSource/Person.csv";
 
-                //Setting up CSV data load options
                 CsvDataLoadOptions options = new CsvDataLoadOptions(true);
-
-                //initialize data source
                 CsvDataSource dataSource =
                     new CsvDataSource(CommonUtilities.GetDataSourceDocument(strDataSource), options);
 
-                //Assemble the document
                 DocumentAssembler assembler = new DocumentAssembler();
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                     CommonUtilities.SetDestinationDocument(strDocumentReport),
@@ -7601,21 +6995,17 @@ namespace GroupDocs.AssemblyExamples
         }
 
         /// <summary>
-        /// Insert Image Dynamically in Word Document
-        /// Features is supported by version 20.3 or greater
+        /// Insert Image Dynamically in Word Document.
+        /// Features is supported by version 20.3 or greater.
         /// </summary>
         public static void InsertImageDynamicallyInWord()
         {
             //ExStart:InsertImageDynamicallyInWord_20.3
             try
             {
-                //Setting up source document template (Email or Word Document)
                 const string strDocumentTemplate = "Word Templates/DynamicImageDemo.docx";
-
-                //Setting up destination for reports 
                 const string strDocumentReport = "Word Reports/DynamicImageDemo Out.docx";
 
-                //Assemble the document
                 DocumentAssembler assembler = new DocumentAssembler();
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                     CommonUtilities.SetDestinationDocument(strDocumentReport),
@@ -7629,21 +7019,17 @@ namespace GroupDocs.AssemblyExamples
         }
 
         /// <summary>
-        /// Insert Document Dynamically in Word Document
-        /// Features is supported by version 20.3 or greater
+        /// Insert Document Dynamically in Word Document.
+        /// Features is supported by version 20.3 or greater.
         /// </summary>
         public static void InsertDocumentDynamicallyInWord()
         {
             //ExStart:InsertDocumentDynamicallyInWord_20.3
             try
             {
-                //Setting up source document template (Email or Word Document)
                 const string strDocumentTemplate = "Word Templates/DynamicDocInsert.docx";
-
-                //Setting up destination for reports 
                 const string strDocumentReport = "Word Reports/DynamicDocInsert Out.docx";
 
-                //Assemble the document
                 DocumentAssembler assembler = new DocumentAssembler();
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                     CommonUtilities.SetDestinationDocument(strDocumentReport),
@@ -7659,21 +7045,17 @@ namespace GroupDocs.AssemblyExamples
 
 
         /// <summary>
-        /// Set checkbox value dynamically in Word document
-        /// Features is supported by version 20.3 or greater
+        /// Set checkbox value dynamically in Word document.
+        /// Features is supported by version 20.3 or greater.
         /// </summary>
         public static void SetCheckboxValueDynamicallyInWord(bool boolVal)
         {
             //ExStart:SetCheckboxValueDynamicallyInWord_20.3
             try
             {
-                //Setting up source document template (Email or Word Document)
                 const string strDocumentTemplate = "Word Templates/CheckBoxValueSetDemo.docx";
-
-                //Setting up destination for reports 
                 const string strDocumentReport = "Word Reports/CheckBoxValueSetDemo Out.docx";
 
-                //Assemble the document
                 DocumentAssembler assembler = new DocumentAssembler();
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                     CommonUtilities.SetDestinationDocument(strDocumentReport),
@@ -7687,4 +7069,3 @@ namespace GroupDocs.AssemblyExamples
         }
     }
 }
-
