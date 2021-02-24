@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using GroupDocs.AssemblyExamples.BusinessLayer;
-using GroupDocs.Assembly;
 
 namespace GroupDocs.AssemblyExamples
 {
@@ -470,8 +465,10 @@ namespace GroupDocs.AssemblyExamples
             //GenerateReport.SaveMdtoWord_UsingExtension("ReadMe.md");
 
             //Unordered lists demo for Markdown
-            GenerateReport.SaveMdtoWord_UsingExtension("List_demo.md");
+            //GenerateReport.SaveMdtoWord_UsingExtension("List_demo.md");
 
+            //Ordered lists demo for Markdown
+            //GenerateReport.SaveMdtoWord_UsingExtension("Ordered list.md");
 
             //Saving an assembled Word Processing document or email to Markdown using file extension.
             //GenerateReport.SaveWordOrEmailtoMD_UsingExtension();
@@ -550,6 +547,17 @@ namespace GroupDocs.AssemblyExamples
             // Insert Document Dynamically in Word Document
             //GenerateReport.InsertDocumentDynamicallyInWord();
 
+            #region Using Markdown File Format
+
+            // Loading templates POT and OTP Presentation documents.
+            //GenerateReport.SavePOTtoPPTX();
+            //GenerateReport.SaveOTPtoPPTX();
+            // Saving of assembled Presentation documents to POT and OTP formats.
+            //GenerateReport.SavePPTXtoOTP();
+            //GenerateReport.SavePPTXtoPOT();
+            GenerateReport.SavePPTXtoPOTOTPAsStream();
+
+            #endregion
 
             Console.WriteLine("Done...");
             Console.ReadKey();

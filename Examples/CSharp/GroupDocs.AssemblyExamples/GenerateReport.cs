@@ -5,6 +5,7 @@ using GroupDocs.AssemblyExamples.BusinessLayer;
 using System.Diagnostics;
 using GroupDocs.Assembly.Data;
 using System.IO;
+using System.Xml;
 
 namespace GroupDocs.AssemblyExamples
 {
@@ -7066,6 +7067,157 @@ namespace GroupDocs.AssemblyExamples
                 Console.WriteLine(ex.Message);
             }
             //ExEnd:SetCheckboxValueDynamicallyInWord_20.3
+        }
+
+        /// <summary>
+        /// Saving template POT presentation document to assembled Presentation document.
+        /// Features is supported by version 20.6 or greater.
+        /// </summary>
+        public static void SavePOTtoPPTX()
+        {
+            //ExStart:SavePOTtoPPTX_20.6
+            const string strDocumentTemplate = "Presentation Templates/template.pot";
+            const string strDocumentReport = "Presentation Reports/template.pot Out.pptx";
+
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                assembler.AssembleDocument(
+                    CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                    CommonUtilities.SetDestinationDocument(strDocumentReport),
+                    new DataSourceInfo("GroupDocs.Assembly for .NET", "product"));
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SavePOTtoPPTX_20.6
+        }
+
+        /// <summary>
+        /// Saving template OTP presentation document to assembled Presentation document.
+        /// Features is supported by version 20.6 or greater.
+        /// </summary>
+        public static void SaveOTPtoPPTX()
+        {
+            //ExStart:SaveOTPtoPPTX_20.6
+            const string strDocumentTemplate = "Presentation Templates/template.otp";
+            const string strDocumentReport = "Presentation Reports/template.otp Out.pptx";
+
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                assembler.AssembleDocument(
+                    CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                    CommonUtilities.SetDestinationDocument(strDocumentReport),
+                    new DataSourceInfo("GroupDocs.Assembly for .NET", "product"));
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SaveOTPtoPPTX_20.6
+        }
+
+        /// <summary>
+        /// Saving assembled Presentation document to template OTP presentation document.
+        /// Features is supported by version 20.6 or greater.
+        /// </summary>
+        public static void SavePPTXtoOTP()
+        {
+            //ExStart:SavePPTXtoOTP_20.6
+            const string strDocumentTemplate = "Presentation Templates/template.pptx";
+            const string strDocumentReport = "Presentation Reports/template.pptx Out.otp";
+
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                assembler.AssembleDocument(
+                    CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                    CommonUtilities.SetDestinationDocument(strDocumentReport),
+                    new DataSourceInfo("GroupDocs.Assembly for .NET", "product"));
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SavePPTXtoOTP_20.6
+        }
+
+        /// <summary>
+        /// Saving assembled Presentation document to template OTP presentation document.
+        /// Features is supported by version 20.6 or greater.
+        /// </summary>
+        public static void SavePPTXtoPOT()
+        {
+            //ExStart:SavePPTXtoPOT_20.6
+            const string strDocumentTemplate = "Presentation Templates/template.pptx";
+            const string strDocumentReport = "Presentation Reports/template.pptx Out.pot";
+
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                assembler.AssembleDocument(
+                    CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                    CommonUtilities.SetDestinationDocument(strDocumentReport),
+                    new DataSourceInfo("GroupDocs.Assembly for .NET", "product"));
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SavePPTXtoPOT_20.6
+        }
+
+        /// <summary>
+        /// Saving assembled Presentation document to template OTP presentation document (stream).
+        /// Features is supported by version 20.6 or greater.
+        /// </summary>
+        public static void SavePPTXtoPOTOTPAsStream()
+        {
+            //ExStart:SavePPTXtoPOTAsStream_20.6
+            Stream templateStream = new FileStream(CommonUtilities.GetSourceDocument("Presentation Templates/template.pptx"), FileMode.Open);
+            Stream resultPotStream = new FileStream(CommonUtilities.SetDestinationDocument("Presentation Reports/template.pptx Out.pot"), FileMode.CreateNew);
+            
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                assembler.AssembleDocument(templateStream, resultPotStream, new LoadSaveOptions(FileFormat.Pot),
+                    new DataSourceInfo("GroupDocs.Assembly for .NET", "product"));
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SavePPTXtoPOTAsStream_20.6
+
+            //ExStart:SavePPTXtoOTPAsStream_20.6
+            templateStream.Seek(0, SeekOrigin.Begin);
+            Stream resultOtpStream = new FileStream(CommonUtilities.SetDestinationDocument("Presentation Reports/template.pptx Out.otp"), FileMode.CreateNew);
+
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                assembler.AssembleDocument(templateStream, resultOtpStream, new LoadSaveOptions(FileFormat.Otp),
+                    new DataSourceInfo("GroupDocs.Assembly for .NET", "product"));
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SavePPTXtoOTPAsStream_20.6
         }
     }
 }
