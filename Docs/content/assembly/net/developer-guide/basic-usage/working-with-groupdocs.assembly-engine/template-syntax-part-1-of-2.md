@@ -372,7 +372,7 @@ Also, you can normally use `item` tags within data bands to add a combobox or dr
 <<foreach [client in clients]>><<item [client.Name]>><</foreach>>
 ```
 
-An `item` tag can also be combined with an `if tag to add a combobox or dropdown list item depending on a condition as shown in the following snippet.
+An `item` tag can also be combined with an `if` tag to add a combobox or dropdown list item depending on a condition as shown in the following snippet.
 
 ```csharp
 <<if ...>><<item ...>><</if>>

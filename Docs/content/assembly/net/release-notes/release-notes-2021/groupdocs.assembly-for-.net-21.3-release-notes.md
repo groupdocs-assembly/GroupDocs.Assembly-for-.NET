@@ -25,7 +25,7 @@ Supported section breaks inside data bands and conditional blocks, and provided 
 
 {{< alert style="info" >}}This section lists public API changes that were introduced in GroupDocs.Assembly for .NET 21.3. It includes not only new and obsoleted public methods, but also a description of any changes in the behavior behind the scenes in GroupDocs.Assembly which may affect existing code. Any behavior introduced that could be seen as a regression and modifies existing behavior is especially important and is documented here.{{< /alert >}}
 
-### Supported dynamic adding of combobox and dropdown list items for Word Processing documents
+### Supported Dynamic Adding of Combobox and Dropdown List Items for Word Processing Documents
 
 {{< alert style="warning" >}}
 
