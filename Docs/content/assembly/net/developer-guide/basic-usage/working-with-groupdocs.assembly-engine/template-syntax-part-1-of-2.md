@@ -378,7 +378,7 @@ An `item` tag can also be combined with an `if` tag to add a combobox or dropdow
 <<if ...>><<item ...>><</if>>
 ```
 
-Existing combobox and dropdown list items are not affected by `item tags. Thus, you can combine both ways of adding combobox and dropdown list items using a template: static and dynamic.
+Existing combobox and dropdown list items are not affected by `item` tags. Thus, you can combine both ways of adding combobox and dropdown list items using a template: static and dynamic.
 
 **Note –** While inserting a combobox or dropdown list, Microsoft Word adds a default item that has to be removed manually, if the item is unwanted.
 
