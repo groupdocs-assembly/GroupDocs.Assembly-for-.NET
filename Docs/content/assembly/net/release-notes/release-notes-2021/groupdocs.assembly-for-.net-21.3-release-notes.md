@@ -27,11 +27,11 @@ Supported section breaks inside data bands and conditional blocks, and provided 
 
 ### Supported dynamic adding of combobox and dropdown list items for Word Processing documents
 
-{{% alert color="primary" %}}
+{{< alert style="warning" >}}
 
 The feature is available for Word Processing documents only.
 
-{{% /alert %}}
+{{< /alert >}}
 
 A detailed description of this feature can be found in the ["Adding Combobox and Dropdown List Items Dynamically"](https://docs.groupdocs.com/assembly/net/template-syntax-part-1-of-2/#adding-combobox-and-dropdown-list-items-dynamically) section.
 
