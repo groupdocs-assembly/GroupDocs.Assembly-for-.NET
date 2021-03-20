@@ -7219,5 +7219,40 @@ namespace GroupDocs.AssemblyExamples
             }
             //ExEnd:SavePPTXtoOTPAsStream_20.6
         }
+
+        /// <summary>
+        /// Changing the resulution of barcode images while saving the document.
+        /// Uniform resolution in DPI across both the X and Y axes is supported by version 20.8 or greater.
+        /// </summary>
+        //ExStart:SetBarcodeResolution_20.8
+        public static void SetBarcodeResolution()
+        {
+            const string strDocumentTemplate = "Word Templates/Barcode.docx";
+            string strDocumentReport = "Word Reports/Barcode.72dpi.docx";
+
+            AssembleDocumentSetBarcodeResolution(72, strDocumentTemplate, strDocumentReport);
+
+            strDocumentReport = "Word Reports/Barcode.1600dpi.docx";
+
+            AssembleDocumentSetBarcodeResolution(1600, strDocumentTemplate, strDocumentReport);
+        }
+
+        private static void AssembleDocumentSetBarcodeResolution(float resolution, string sourceTemplateFilename, string outputReportFilename)
+        {
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+                assembler.BarcodeSettings.Resolution = resolution;
+
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(sourceTemplateFilename),
+                    CommonUtilities.SetDestinationDocument(outputReportFilename),
+                    new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+        //ExEnd:SetBarcodeResolution_20.8
     }
 }

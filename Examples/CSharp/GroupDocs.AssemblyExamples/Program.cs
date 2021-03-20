@@ -547,6 +547,9 @@ namespace GroupDocs.AssemblyExamples
             // Insert Document Dynamically in Word Document
             //GenerateReport.InsertDocumentDynamicallyInWord();
 
+            // Set barcode resolution while saving.
+            //GenerateReport.SetBarcodeResolution();
+
             #region Using Markdown File Format
 
             // Loading templates POT and OTP Presentation documents.
