@@ -550,6 +550,9 @@ namespace GroupDocs.AssemblyExamples
             // Set barcode resolution while saving.
             //GenerateReport.SetBarcodeResolution();
 
+            // Set barcode scaling.
+            //GenerateReport.SetBarcodeScale();
+
             #region Using Markdown File Format
 
             // Loading templates POT and OTP Presentation documents.
@@ -558,11 +561,11 @@ namespace GroupDocs.AssemblyExamples
             // Saving of assembled Presentation documents to POT and OTP formats.
             //GenerateReport.SavePPTXtoOTP();
             //GenerateReport.SavePPTXtoPOT();
-            GenerateReport.SavePPTXtoPOTOTPAsStream();
+            //GenerateReport.SavePPTXtoPOTOTPAsStream();
 
             #endregion
 
-            Console.WriteLine("Done...");
+            Console.WriteLine("Done!\nPress any key to continue...");
             Console.ReadKey();
         }
     }

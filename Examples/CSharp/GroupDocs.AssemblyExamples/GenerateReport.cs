@@ -7254,5 +7254,32 @@ namespace GroupDocs.AssemblyExamples
             }
         }
         //ExEnd:SetBarcodeResolution_20.8
+
+        /// <summary>
+        /// Changing the scaling of the barcode image within its containing shape while saving the document.
+        /// </summary>
+        public static void SetBarcodeScale()
+        {
+            //ExStart:SetBarcodeScale_20.8
+            const string strDocumentTemplate = "Word Templates/Barcode.docx";
+            string strDocumentReport = "Word Reports/Barcode.docx";
+
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                assembler.BarcodeSettings.BaseXDimension *= 0.5f;
+                assembler.BarcodeSettings.BaseYDimension *= 0.5f;
+
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                    CommonUtilities.SetDestinationDocument(strDocumentReport),
+                    new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SetBarcodeScale_20.8
+        }
     }
 }
