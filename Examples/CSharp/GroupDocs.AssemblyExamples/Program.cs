@@ -550,6 +550,9 @@ namespace GroupDocs.AssemblyExamples
             // Save Markdown tables to Word Document
             //GenerateReport.MarkdownTables();
 
+            // Save Markdown autolinks to Word Document
+            //GenerateReport.MarkdownAutolinks();
+
             #region Using Markdown File Format
 
             // Loading templates POT and OTP Presentation documents.

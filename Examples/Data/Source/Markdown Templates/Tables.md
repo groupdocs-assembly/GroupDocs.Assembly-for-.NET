@@ -1,8 +1,12 @@
+## Table
+
 | Item | Price |
 | - | - |
 | Apple | $1.50 |
 | Banana | $1.10 |
 | Carrot | $0.75 |
+
+## Justified Table
 
 | Syntax      | Description | Test Text     |
 | :---        |    :----:   |          ---: |

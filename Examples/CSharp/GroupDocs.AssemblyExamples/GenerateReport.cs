@@ -7245,5 +7245,31 @@ namespace GroupDocs.AssemblyExamples
             }
             //ExEnd:SaveMarkdownTablesToDocx_20.9
         }
+
+        /// <summary>
+        /// Saving Markdown Autolinks to Word document.
+        /// Feature is supported by version 20.9 or greater.
+        /// </summary>
+        public static void MarkdownAutolinks()
+        {
+            //ExStart:SaveMarkdownAutolinksToDocx_20.9
+            string strDocumentTemplate = "Markdown Templates/Autolinks.md";
+            string strDocumentReport = "Word Reports/Autolinks.docx";
+
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                assembler.AssembleDocument(
+                    CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                    CommonUtilities.SetDestinationDocument(strDocumentReport),
+                    new DataSourceInfo("GroupDocs.Assembly for .NET", "product"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SaveMarkdownAutolinksToDocx_20.9
+        }
     }
 }
