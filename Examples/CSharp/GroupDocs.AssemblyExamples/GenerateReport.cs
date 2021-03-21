@@ -7219,5 +7219,31 @@ namespace GroupDocs.AssemblyExamples
             }
             //ExEnd:SavePPTXtoOTPAsStream_20.6
         }
+
+        /// <summary>
+        /// Saving Markdown tables to Word document.
+        /// Feature is supported by version 20.9 or greater.
+        /// </summary>
+        public static void MarkdownTables()
+        {
+            //ExStart:SaveMarkdownTablesToDocx_20.9
+            string strDocumentTemplate = "Markdown Templates/Tables.md";
+            string strDocumentReport = "Word Reports/Tables.docx";
+
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                assembler.AssembleDocument(
+                    CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                    CommonUtilities.SetDestinationDocument(strDocumentReport),
+                    new DataSourceInfo("GroupDocs.Assembly for .NET", "product"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SaveMarkdownTablesToDocx_20.9
+        }
     }
 }
