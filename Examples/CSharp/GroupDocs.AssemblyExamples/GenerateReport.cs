@@ -6378,7 +6378,9 @@ namespace GroupDocs.AssemblyExamples
                         // Call AssembleDocument to generate   Report in open document format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                             CommonUtilities.SetDestinationDocument(strDocumentReport),
-                            new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
+                            new DataSourceInfo(DataLayer.GetCustomerData().CustomerName, "customer_name"),
+                            new DataSourceInfo(DataLayer.GetCustomerData().ShippingAddress, "shipping_address"),
+                            new DataSourceInfo(DataLayer.GetCustomerData().CustomerContactNumber, "customer_contact_number"));
                     }
                     catch (Exception ex)
                     {
@@ -7245,7 +7247,10 @@ namespace GroupDocs.AssemblyExamples
                 assembler.BarcodeSettings.Resolution = resolution;
 
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(sourceTemplateFilename),
-                    CommonUtilities.SetDestinationDocument(outputReportFilename));
+                    CommonUtilities.SetDestinationDocument(outputReportFilename),
+                    new DataSourceInfo(DataLayer.GetCustomerData().CustomerName, "customer_name"),
+                    new DataSourceInfo(DataLayer.GetCustomerData().ShippingAddress, "shipping_address"),
+                    new DataSourceInfo(DataLayer.GetCustomerData().CustomerContactNumber, "customer_contact_number"));
             }
             catch (Exception ex)
             {
@@ -7271,7 +7276,10 @@ namespace GroupDocs.AssemblyExamples
                 assembler.BarcodeSettings.BaseYDimension *= 0.5f;
 
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
-                    CommonUtilities.SetDestinationDocument(strDocumentReport));
+                    CommonUtilities.SetDestinationDocument(strDocumentReport),
+                    new DataSourceInfo(DataLayer.GetCustomerData().CustomerName, "customer_name"),
+                    new DataSourceInfo(DataLayer.GetCustomerData().ShippingAddress, "shipping_address"),
+                    new DataSourceInfo(DataLayer.GetCustomerData().CustomerContactNumber, "customer_contact_number"));
             }
             catch (Exception ex)
             {
