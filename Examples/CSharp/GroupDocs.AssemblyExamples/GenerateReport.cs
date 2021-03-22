@@ -7245,8 +7245,7 @@ namespace GroupDocs.AssemblyExamples
                 assembler.BarcodeSettings.Resolution = resolution;
 
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(sourceTemplateFilename),
-                    CommonUtilities.SetDestinationDocument(outputReportFilename),
-                    new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
+                    CommonUtilities.SetDestinationDocument(outputReportFilename));
             }
             catch (Exception ex)
             {
@@ -7272,8 +7271,7 @@ namespace GroupDocs.AssemblyExamples
                 assembler.BarcodeSettings.BaseYDimension *= 0.5f;
 
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
-                    CommonUtilities.SetDestinationDocument(strDocumentReport),
-                    new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
+                    CommonUtilities.SetDestinationDocument(strDocumentReport));
             }
             catch (Exception ex)
             {
