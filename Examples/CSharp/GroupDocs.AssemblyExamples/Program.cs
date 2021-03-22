@@ -547,6 +547,12 @@ namespace GroupDocs.AssemblyExamples
             // Insert Document Dynamically in Word Document
             //GenerateReport.InsertDocumentDynamicallyInWord();
 
+            // Save Markdown inline links to Word Document
+            //GenerateReport.MarkdownInlineLinks();
+
+            // Save Markdown inline images to Word Document
+            //GenerateReport.MarkdownInlineImages();
+
             #region Using Markdown File Format
 
             // Loading templates POT and OTP Presentation documents.
@@ -555,7 +561,7 @@ namespace GroupDocs.AssemblyExamples
             // Saving of assembled Presentation documents to POT and OTP formats.
             //GenerateReport.SavePPTXtoOTP();
             //GenerateReport.SavePPTXtoPOT();
-            GenerateReport.SavePPTXtoPOTOTPAsStream();
+            //GenerateReport.SavePPTXtoPOTOTPAsStream();
 
             #endregion
 
