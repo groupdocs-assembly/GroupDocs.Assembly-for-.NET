@@ -7237,7 +7237,9 @@ namespace GroupDocs.AssemblyExamples
                 assembler.AssembleDocument(
                     CommonUtilities.GetSourceDocument(strDocumentTemplate),
                     CommonUtilities.SetDestinationDocument(strDocumentReport),
-                    new DataSourceInfo("GroupDocs.Assembly for .NET", "product"));
+                    new DataSourceInfo("GroupDocs.Assembly for .NET", "product"),
+                    new DataSourceInfo("This table contains pairs of strings and money values.", "table_1_description"),
+                    new DataSourceInfo("This table contains cells with different text alignment.", "table_2_description"));
             }
             catch (Exception ex)
             {
