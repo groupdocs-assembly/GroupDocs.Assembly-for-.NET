@@ -7221,6 +7221,68 @@ namespace GroupDocs.AssemblyExamples
         }
 
         /// <summary>
+        /// Changing the resulution of barcode images while saving the document.
+        /// Uniform resolution in DPI across both the X and Y axes is supported by version 20.8 or greater.
+        /// </summary>
+        //ExStart:SetBarcodeResolution_20.8
+        public static void SetBarcodeResolution()
+        {
+            const string strDocumentTemplate = "Word Templates/Barcode.docx";
+            string strDocumentReport = "Word Reports/Barcode.72dpi.docx";
+
+            AssembleDocumentSetBarcodeResolution(72, strDocumentTemplate, strDocumentReport);
+
+            strDocumentReport = "Word Reports/Barcode.1600dpi.docx";
+
+            AssembleDocumentSetBarcodeResolution(1600, strDocumentTemplate, strDocumentReport);
+        }
+
+        private static void AssembleDocumentSetBarcodeResolution(float resolution, string sourceTemplateFilename, string outputReportFilename)
+        {
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+                assembler.BarcodeSettings.Resolution = resolution;
+
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(sourceTemplateFilename),
+                    CommonUtilities.SetDestinationDocument(outputReportFilename),
+                    new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+        //ExEnd:SetBarcodeResolution_20.8
+
+        /// <summary>
+        /// Changing the scaling of the barcode image within its containing shape while saving the document.
+        /// </summary>
+        public static void SetBarcodeScale()
+        {
+            //ExStart:SetBarcodeScale_20.8
+            const string strDocumentTemplate = "Word Templates/Barcode.docx";
+            string strDocumentReport = "Word Reports/Barcode.docx";
+
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                assembler.BarcodeSettings.BaseXDimension *= 0.5f;
+                assembler.BarcodeSettings.BaseYDimension *= 0.5f;
+
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                    CommonUtilities.SetDestinationDocument(strDocumentReport),
+                    new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SetBarcodeScale_20.8
+        }
+
+        /// <summary>
         /// Saving Markdown tables to Word document.
         /// Feature is supported by version 20.9 or greater.
         /// </summary>
