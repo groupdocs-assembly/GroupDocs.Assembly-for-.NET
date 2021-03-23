@@ -547,6 +547,18 @@ namespace GroupDocs.AssemblyExamples
             // Insert Document Dynamically in Word Document
             //GenerateReport.InsertDocumentDynamicallyInWord();
 
+            // Set barcode resolution while saving.
+            //GenerateReport.SetBarcodeResolution();
+
+            // Set barcode scaling.
+            //GenerateReport.SetBarcodeScale();
+
+            // Save Markdown tables to Word Document
+            //GenerateReport.MarkdownTables();
+
+            // Save Markdown autolinks to Word Document
+            //GenerateReport.MarkdownAutolinks();
+
             // Save Markdown inline links to Word Document
             //GenerateReport.MarkdownInlineLinks();
 
@@ -565,7 +577,7 @@ namespace GroupDocs.AssemblyExamples
 
             #endregion
 
-            Console.WriteLine("Done...");
+            Console.WriteLine("Done!\nPress any key to continue...");
             Console.ReadKey();
         }
     }

@@ -7184,13 +7184,9 @@ namespace GroupDocs.AssemblyExamples
         public static void SavePPTXtoPOTOTPAsStream()
         {
             //ExStart:SavePPTXtoPOTAsStream_20.6
-            Stream templateStream =
-                new FileStream(CommonUtilities.GetSourceDocument("Presentation Templates/template.pptx"),
-                    FileMode.Open);
-            Stream resultPotStream =
-                new FileStream(CommonUtilities.SetDestinationDocument("Presentation Reports/template.pptx Out.pot"),
-                    FileMode.CreateNew);
-
+            Stream templateStream = new FileStream(CommonUtilities.GetSourceDocument("Presentation Templates/template.pptx"), FileMode.Open);
+            Stream resultPotStream = new FileStream(CommonUtilities.SetDestinationDocument("Presentation Reports/template.pptx Out.pot"), FileMode.CreateNew);
+            
             try
             {
                 DocumentAssembler assembler = new DocumentAssembler();
@@ -7207,9 +7203,7 @@ namespace GroupDocs.AssemblyExamples
 
             //ExStart:SavePPTXtoOTPAsStream_20.6
             templateStream.Seek(0, SeekOrigin.Begin);
-            Stream resultOtpStream =
-                new FileStream(CommonUtilities.SetDestinationDocument("Presentation Reports/template.pptx Out.otp"),
-                    FileMode.CreateNew);
+            Stream resultOtpStream = new FileStream(CommonUtilities.SetDestinationDocument("Presentation Reports/template.pptx Out.otp"), FileMode.CreateNew);
 
             try
             {
@@ -7225,6 +7219,123 @@ namespace GroupDocs.AssemblyExamples
             }
 
             //ExEnd:SavePPTXtoOTPAsStream_20.6
+        }
+
+        /// <summary>
+        /// Changing the resulution of barcode images while saving the document.
+        /// Uniform resolution in DPI across both the X and Y axes is supported by version 20.8 or greater.
+        /// </summary>
+        //ExStart:SetBarcodeResolution_20.8
+        public static void SetBarcodeResolution()
+        {
+            const string strDocumentTemplate = "Word Templates/Barcode.docx";
+            string strDocumentReport = "Word Reports/Barcode.72dpi.docx";
+
+            AssembleDocumentSetBarcodeResolution(72, strDocumentTemplate, strDocumentReport);
+
+            strDocumentReport = "Word Reports/Barcode.1600dpi.docx";
+
+            AssembleDocumentSetBarcodeResolution(1600, strDocumentTemplate, strDocumentReport);
+        }
+
+        private static void AssembleDocumentSetBarcodeResolution(float resolution, string sourceTemplateFilename, string outputReportFilename)
+        {
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+                assembler.BarcodeSettings.Resolution = resolution;
+
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(sourceTemplateFilename),
+                    CommonUtilities.SetDestinationDocument(outputReportFilename),
+                    new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+        //ExEnd:SetBarcodeResolution_20.8
+
+        /// <summary>
+        /// Changing the scaling of the barcode image within its containing shape while saving the document.
+        /// </summary>
+        public static void SetBarcodeScale()
+        {
+            //ExStart:SetBarcodeScale_20.8
+            const string strDocumentTemplate = "Word Templates/Barcode.docx";
+            string strDocumentReport = "Word Reports/Barcode.docx";
+
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                assembler.BarcodeSettings.BaseXDimension *= 0.5f;
+                assembler.BarcodeSettings.BaseYDimension *= 0.5f;
+
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                    CommonUtilities.SetDestinationDocument(strDocumentReport),
+                    new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SetBarcodeScale_20.8
+        }
+
+        /// <summary>
+        /// Saving Markdown tables to Word document.
+        /// Feature is supported by version 20.9 or greater.
+        /// </summary>
+        public static void MarkdownTables()
+        {
+            //ExStart:SaveMarkdownTablesToDocx_20.9
+            string strDocumentTemplate = "Markdown Templates/Tables.md";
+            string strDocumentReport = "Word Reports/Tables.docx";
+
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                assembler.AssembleDocument(
+                    CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                    CommonUtilities.SetDestinationDocument(strDocumentReport),
+                    new DataSourceInfo("Lettuce", "product_1_name"),
+                    new DataSourceInfo("Carrot", "product_2_name"),
+                    new DataSourceInfo("35", "product_1_quantity"),
+                    new DataSourceInfo("47", "product_2_quantity"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SaveMarkdownTablesToDocx_20.9
+        }
+
+        /// <summary>
+        /// Saving Markdown Autolinks to Word document.
+        /// Feature is supported by version 20.9 or greater.
+        /// </summary>
+        public static void MarkdownAutolinks()
+        {
+            //ExStart:SaveMarkdownAutolinksToDocx_20.9
+            string strDocumentTemplate = "Markdown Templates/Autolinks.md";
+            string strDocumentReport = "Word Reports/Autolinks.docx";
+
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                assembler.AssembleDocument(
+                    CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                    CommonUtilities.SetDestinationDocument(strDocumentReport),
+                    new DataSourceInfo("<https://forum.aspose.com/>", "url"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SaveMarkdownAutolinksToDocx_20.9
         }
 
         /// <summary>
