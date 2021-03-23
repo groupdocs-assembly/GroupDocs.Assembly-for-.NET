@@ -6378,9 +6378,7 @@ namespace GroupDocs.AssemblyExamples
                         // Call AssembleDocument to generate   Report in open document format.
                         assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                             CommonUtilities.SetDestinationDocument(strDocumentReport),
-                            new DataSourceInfo(DataLayer.GetCustomerData().CustomerName, "customer_name"),
-                            new DataSourceInfo(DataLayer.GetCustomerData().ShippingAddress, "shipping_address"),
-                            new DataSourceInfo(DataLayer.GetCustomerData().CustomerContactNumber, "customer_contact_number"));
+                            new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
                     }
                     catch (Exception ex)
                     {
@@ -7248,9 +7246,7 @@ namespace GroupDocs.AssemblyExamples
 
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(sourceTemplateFilename),
                     CommonUtilities.SetDestinationDocument(outputReportFilename),
-                    new DataSourceInfo(DataLayer.GetCustomerData().CustomerName, "customer_name"),
-                    new DataSourceInfo(DataLayer.GetCustomerData().ShippingAddress, "shipping_address"),
-                    new DataSourceInfo(DataLayer.GetCustomerData().CustomerContactNumber, "customer_contact_number"));
+                    new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
             }
             catch (Exception ex)
             {
@@ -7277,9 +7273,7 @@ namespace GroupDocs.AssemblyExamples
 
                 assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
                     CommonUtilities.SetDestinationDocument(strDocumentReport),
-                    new DataSourceInfo(DataLayer.GetCustomerData().CustomerName, "customer_name"),
-                    new DataSourceInfo(DataLayer.GetCustomerData().ShippingAddress, "shipping_address"),
-                    new DataSourceInfo(DataLayer.GetCustomerData().CustomerContactNumber, "customer_contact_number"));
+                    new DataSourceInfo(DataLayer.GetCustomerData(), "customer"));
             }
             catch (Exception ex)
             {
