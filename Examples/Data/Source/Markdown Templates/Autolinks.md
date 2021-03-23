@@ -6,4 +6,6 @@
 
 <JohnDoe@sample.com>
 
-Converted using <<[product]>>.
+## Template that may recieve an inline link
+
+<<[url]>>
