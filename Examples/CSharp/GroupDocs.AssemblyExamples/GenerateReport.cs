@@ -7217,6 +7217,7 @@ namespace GroupDocs.AssemblyExamples
             {
                 Console.WriteLine(ex.Message);
             }
+
             //ExEnd:SavePPTXtoOTPAsStream_20.6
         }
 
@@ -7335,6 +7336,69 @@ namespace GroupDocs.AssemblyExamples
                 Console.WriteLine(ex.Message);
             }
             //ExEnd:SaveMarkdownAutolinksToDocx_20.9
+        }
+
+        /// <summary>
+        /// Saving Markdown inline links to Word document.
+        /// Feature is supported by version 20.11 or greater.
+        /// </summary>
+        public static void MarkdownInlineLinks()
+        {
+            //ExStart:SaveMarkdownInlineLinksToDocx_20.11
+            string strDocumentTemplate = "Markdown Templates/Inline links.md";
+            string strDocumentReport = "Word Reports/Inline links.docx";
+
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                assembler.AssembleDocument(
+                    CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                    CommonUtilities.SetDestinationDocument(strDocumentReport),
+                    new DataSourceInfo("Aspose forums", "link_text"),
+                    new DataSourceInfo("https://forum.aspose.com/", "link"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SaveMarkdownInlineLinksToDocx_20.11
+        }
+
+        /// <summary>
+        /// Saving Markdown inline images to Word document.
+        /// Feature is supported by version 20.11 or greater.
+        /// </summary>
+        public static void MarkdownInlineImages()
+        {
+            //ExStart:SaveMarkdownInlineImagesToDocx_20.11
+            string strDocumentTemplate = "Markdown Templates/Inline image.md";
+            string strDocumentReport = "Word Reports/Inline image.docx";
+
+            // Ensure that the relative image URI points to an existing image when in the output document.
+            string imgDirectory = CommonUtilities.SetDestinationDocument(@"Word Reports\Images");
+
+            if (!Directory.Exists(imgDirectory))
+                Directory.CreateDirectory(imgDirectory);
+
+            File.Copy(CommonUtilities.GetSourceDocument(@"Markdown Templates\Images\Logo.jpg"), 
+                CommonUtilities.SetDestinationDocument(@"Word Reports\Images\Logo.jpg"));
+
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                assembler.AssembleDocument(
+                    CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                    CommonUtilities.SetDestinationDocument(strDocumentReport),
+                    new DataSourceInfo("Aspose Logo", "alt_text"),
+                    new DataSourceInfo("https://docs.aspose.com/images/Aspose-image-for-open-graph.jpg", "image_URI"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SaveMarkdownInlineImagesToDocx_20.11
         }
     }
 }
