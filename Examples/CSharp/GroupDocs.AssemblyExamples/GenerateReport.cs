@@ -7400,5 +7400,53 @@ namespace GroupDocs.AssemblyExamples
             }
             //ExEnd:SaveMarkdownInlineImagesToDocx_20.11
         }
+
+        /// <summary>
+        /// Load an XLT spreadsheet and save it to the XLSX format.
+        /// Feature is supported by version 20.12 or greater.
+        /// </summary>
+        public static void LoadXlt()
+        {
+            //ExStart:SaveXLTtoXLSX_20.12
+            Stream templateStream = new FileStream(CommonUtilities.GetSourceDocument("Spreadsheet Templates/Template.xlt"), FileMode.Open);
+            Stream resultPotStream = new FileStream(CommonUtilities.SetDestinationDocument("Spreadsheet Reports/Template.xlt Out.xlsx"), FileMode.Create);
+
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                assembler.AssembleDocument(templateStream, resultPotStream, new LoadSaveOptions(FileFormat.Xlsx),
+                    new DataSourceInfo("GroupDocs.Assembly for .NET", "product"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SaveXLTtoXLSX_20.12
+        }
+
+        /// <summary>
+        /// Load an XLSX spreadsheet and save it to the XLT format.
+        /// Feature is supported by version 20.12 or greater.
+        /// </summary>
+        public static void SaveXlt()
+        {
+            //ExStart:SaveXLSXtoXLT_20.12
+            Stream templateStream = new FileStream(CommonUtilities.GetSourceDocument("Spreadsheet Templates/Template.xlsx"), FileMode.Open);
+            Stream resultPotStream = new FileStream(CommonUtilities.SetDestinationDocument("Spreadsheet Reports/Template.xlsx Out.xlt"), FileMode.Create);
+
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                assembler.AssembleDocument(templateStream, resultPotStream, new LoadSaveOptions(FileFormat.Xlt),
+                    new DataSourceInfo("GroupDocs.Assembly for .NET", "product"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SaveXLSXtoXLT_20.12
+        }
     }
 }
