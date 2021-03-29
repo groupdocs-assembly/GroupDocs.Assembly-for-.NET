@@ -565,6 +565,9 @@ namespace GroupDocs.AssemblyExamples
             // Save Markdown inline images to Word Document
             //GenerateReport.MarkdownInlineImages();
 
+            // Import custom styles of a dynamically inserted Word Document
+            //GenerateReport.ImportStylesWhileInsertingDocument();
+
             #region Using Markdown File Format
 
             // Loading templates POT and OTP Presentation documents.

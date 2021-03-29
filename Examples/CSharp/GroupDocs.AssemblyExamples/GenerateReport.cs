@@ -7400,5 +7400,26 @@ namespace GroupDocs.AssemblyExamples
             }
             //ExEnd:SaveMarkdownInlineImagesToDocx_20.11
         }
+
+        public static void ImportStylesWhileInsertingDocument()
+        {
+            //ExStart:ImportStylesWhileDynamicallyInsertingDocument_21.1
+            try
+            {
+                const string strDocumentTemplate = "Word Templates/DynamicDocInsert.docx";
+                const string strDocumentReport = "Word Reports/Document Insertion Template Out.docx";
+
+                DocumentAssembler assembler = new DocumentAssembler();
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                    CommonUtilities.SetDestinationDocument(strDocumentReport),
+                    new DataSourceInfo(CommonUtilities.GetOuterDocumentFolder("Custom Styles.docx"),
+                        "document_expression"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:ImportStylesWhileDynamicallyInsertingDocument_21.1
+        }
     }
 }
