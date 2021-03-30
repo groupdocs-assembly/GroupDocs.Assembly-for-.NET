@@ -564,6 +564,15 @@ namespace GroupDocs.AssemblyExamples
 
             // Save Markdown inline images to Word Document
             //GenerateReport.MarkdownInlineImages();
+            
+            // Load an XLT spreadsheet and save it to XLSX.
+            //GenerateReport.LoadXlt();
+
+            // Load an XLSX spreadsheet and save it to XLT.
+            //GenerateReport.SaveXlt();
+
+            // Import custom styles of a dynamically inserted Word Document
+            //GenerateReport.ImportStylesWhileInsertingDocument();
 
             // Set drop down list item values dynamically in Word document
             //GenerateReport.SetDropDownValuesDynamicallyInWord();
@@ -580,7 +589,6 @@ namespace GroupDocs.AssemblyExamples
             //GenerateReport.SavePPTXtoOTP();
             //GenerateReport.SavePPTXtoPOT();
             //GenerateReport.SavePPTXtoPOTOTPAsStream();
-
             #endregion
 
             Console.WriteLine("Done!\nPress any key to continue...");

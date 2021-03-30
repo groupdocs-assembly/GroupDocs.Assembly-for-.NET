@@ -7402,6 +7402,75 @@ namespace GroupDocs.AssemblyExamples
         }
 
         /// <summary>
+        /// Load an XLT spreadsheet and save it to the XLSX format.
+        /// Feature is supported by version 20.12 or greater.
+        /// </summary>
+        public static void LoadXlt()
+        {
+            //ExStart:SaveXLTtoXLSX_20.12
+            Stream templateStream = new FileStream(CommonUtilities.GetSourceDocument("Spreadsheet Templates/Spreadsheet Template.xlt"), FileMode.Open);
+            Stream resultPotStream = new FileStream(CommonUtilities.SetDestinationDocument("Spreadsheet Reports/Spreadsheet Template.xlt Out.xlsx"), FileMode.Create);
+
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                assembler.AssembleDocument(templateStream, resultPotStream, new LoadSaveOptions(FileFormat.Xlsx),
+                    new DataSourceInfo("GroupDocs.Assembly for .NET", "product"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SaveXLTtoXLSX_20.12
+        }
+
+        /// <summary>
+        /// Load an XLSX spreadsheet and save it to the XLT format.
+        /// Feature is supported by version 20.12 or greater.
+        /// </summary>
+        public static void SaveXlt()
+        {
+            //ExStart:SaveXLSXtoXLT_20.12
+            Stream templateStream = new FileStream(CommonUtilities.GetSourceDocument("Spreadsheet Templates/Spreadsheet.xlsx"), FileMode.Open);
+            Stream resultPotStream = new FileStream(CommonUtilities.SetDestinationDocument("Spreadsheet Reports/Spreadsheet.xlsx Out.xlt"), FileMode.Create);
+
+            try
+            {
+                DocumentAssembler assembler = new DocumentAssembler();
+
+                assembler.AssembleDocument(templateStream, resultPotStream, new LoadSaveOptions(FileFormat.Xlt),
+                    new DataSourceInfo("GroupDocs.Assembly for .NET", "product"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SaveXLSXtoXLT_20.12
+        }
+
+        public static void ImportStylesWhileInsertingDocument()
+        {
+            //ExStart:ImportStylesWhileDynamicallyInsertingDocument_21.1
+            try
+            {
+                const string strDocumentTemplate = "Word Templates/DynamicDocInsert.docx";
+                const string strDocumentReport = "Word Reports/Document Insertion Template Out.docx";
+
+                DocumentAssembler assembler = new DocumentAssembler();
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                    CommonUtilities.SetDestinationDocument(strDocumentReport),
+                    new DataSourceInfo(CommonUtilities.GetOuterDocumentFolder("Custom Styles.docx"),
+                        "document_expression"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:ImportStylesWhileDynamicallyInsertingDocument_21.1
+        }
+
+        /// <summary>
         /// Set the values of drop down list items dynamically in Word document.
         /// Features is supported by version 21.3 or greater.
         /// </summary>
