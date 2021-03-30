@@ -565,6 +565,12 @@ namespace GroupDocs.AssemblyExamples
             // Save Markdown inline images to Word Document
             //GenerateReport.MarkdownInlineImages();
 
+            // Load an XLT spreadsheet and save it to XLSX.
+            //GenerateReport.LoadXlt();
+
+            // Load an XLSX spreadsheet and save it to XLT.
+            //GenerateReport.SaveXlt();
+
             #region Using Markdown File Format
 
             // Loading templates POT and OTP Presentation documents.
@@ -574,7 +580,6 @@ namespace GroupDocs.AssemblyExamples
             //GenerateReport.SavePPTXtoOTP();
             //GenerateReport.SavePPTXtoPOT();
             //GenerateReport.SavePPTXtoPOTOTPAsStream();
-
             #endregion
 
             Console.WriteLine("Done!\nPress any key to continue...");
