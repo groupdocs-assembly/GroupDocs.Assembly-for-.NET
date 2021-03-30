@@ -7400,5 +7400,63 @@ namespace GroupDocs.AssemblyExamples
             }
             //ExEnd:SaveMarkdownInlineImagesToDocx_20.11
         }
+
+        /// <summary>
+        /// Set the values of drop down list items dynamically in Word document.
+        /// Features is supported by version 21.3 or greater.
+        /// </summary>
+        public static void SetDropDownValuesDynamicallyInWord()
+        {
+            //ExStart:SetDropDownValuesDynamicallyInWord_21.3
+            try
+            {
+                const string strDocumentTemplate = "Word Templates/Drop down list.docx";
+                const string strDocumentReport = "Word Reports/Drop down list Out.docx";
+
+                DocumentAssembler assembler = new DocumentAssembler();
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                    CommonUtilities.SetDestinationDocument(strDocumentReport),
+                    new DataSourceInfo("Green apple", "choice_one"),
+                    new DataSourceInfo("Yellow banana", "choice_two"),
+                    new DataSourceInfo("Red cherry", "choice_three"),
+                    new DataSourceInfo("Apple", "choice_one_display_name"),
+                    new DataSourceInfo("Banana", "choice_two_display_name"),
+                    new DataSourceInfo("Cherry", "choice_three_display_name"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SetDropDownValuesDynamicallyInWord_21.3
+        }
+
+        /// <summary>
+        /// Set the values of combo box item values dynamically in Word document.
+        /// Features is supported by version 21.3 or greater.
+        /// </summary>
+        public static void SetComboBoxValuesDynamicallyInWord()
+        {
+            //ExStart:SetComboBoxValuesDynamicallyInWord_21.3
+            try
+            {
+                const string strDocumentTemplate = "Word Templates/Combo Box.docx";
+                const string strDocumentReport = "Word Reports/Combo box Out.docx";
+
+                DocumentAssembler assembler = new DocumentAssembler();
+                assembler.AssembleDocument(CommonUtilities.GetSourceDocument(strDocumentTemplate),
+                    CommonUtilities.SetDestinationDocument(strDocumentReport),
+                    new DataSourceInfo("Green apple", "choice_one"),
+                    new DataSourceInfo("Yellow banana", "choice_two"),
+                    new DataSourceInfo("Red cherry", "choice_three"),
+                    new DataSourceInfo("Apple", "choice_one_display_name"),
+                    new DataSourceInfo("Banana", "choice_two_display_name"),
+                    new DataSourceInfo("Cherry", "choice_three_display_name"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //ExEnd:SetComboBoxValuesDynamicallyInWord_21.3
+        }
     }
 }
