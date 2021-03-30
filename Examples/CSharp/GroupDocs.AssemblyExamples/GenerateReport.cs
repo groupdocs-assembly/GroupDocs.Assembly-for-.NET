@@ -7408,8 +7408,8 @@ namespace GroupDocs.AssemblyExamples
         public static void LoadXlt()
         {
             //ExStart:SaveXLTtoXLSX_20.12
-            Stream templateStream = new FileStream(CommonUtilities.GetSourceDocument("Spreadsheet Templates/Template.xlt"), FileMode.Open);
-            Stream resultPotStream = new FileStream(CommonUtilities.SetDestinationDocument("Spreadsheet Reports/Template.xlt Out.xlsx"), FileMode.Create);
+            Stream templateStream = new FileStream(CommonUtilities.GetSourceDocument("Spreadsheet Templates/Spreadsheet Template.xlt"), FileMode.Open);
+            Stream resultPotStream = new FileStream(CommonUtilities.SetDestinationDocument("Spreadsheet Reports/Spreadsheet Template.xlt Out.xlsx"), FileMode.Create);
 
             try
             {
@@ -7432,8 +7432,8 @@ namespace GroupDocs.AssemblyExamples
         public static void SaveXlt()
         {
             //ExStart:SaveXLSXtoXLT_20.12
-            Stream templateStream = new FileStream(CommonUtilities.GetSourceDocument("Spreadsheet Templates/Template.xlsx"), FileMode.Open);
-            Stream resultPotStream = new FileStream(CommonUtilities.SetDestinationDocument("Spreadsheet Reports/Template.xlsx Out.xlt"), FileMode.Create);
+            Stream templateStream = new FileStream(CommonUtilities.GetSourceDocument("Spreadsheet Templates/Spreadsheet.xlsx"), FileMode.Open);
+            Stream resultPotStream = new FileStream(CommonUtilities.SetDestinationDocument("Spreadsheet Reports/Spreadsheet.xlsx Out.xlt"), FileMode.Create);
 
             try
             {
