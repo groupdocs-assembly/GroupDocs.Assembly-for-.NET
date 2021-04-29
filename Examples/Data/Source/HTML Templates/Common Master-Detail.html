@@ -1,9 +1,0 @@
-<html>
-<body>
-&lt;&lt;foreach [in managers]&gt;&gt;
-<img height="100" width="100" src="data:image/jpeg;base64,&lt;&lt;[FileUtil.GetBytesAsBase64(Photo)]&gt;&gt;"/>
-<h2>&lt;&lt;[Name]&gt;&gt;</h2>
-<p><b>Clients: &lt;&lt;foreach [in Contracts]&gt;&gt;&lt;&lt;[IndexOf() != 0 ? ", " : ""]&gt;&gt;&lt;&lt;[Client.Name]&gt;&gt;&lt;&lt;/foreach&gt;&gt;</b></p>
-&lt;&lt;/foreach&gt;&gt;
-</body>
-</html>

@@ -1,2 +1,0 @@
-Name:	<<[customer.CustomerName]>>
-Age:	<<[customer.CustomerContactNumber]>>

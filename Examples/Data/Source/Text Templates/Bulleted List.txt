@@ -1,3 +1,0 @@
-We provide support for the following products:
-<<foreach [in products]>>•	<<[ProductName]>>
-<</foreach>>
