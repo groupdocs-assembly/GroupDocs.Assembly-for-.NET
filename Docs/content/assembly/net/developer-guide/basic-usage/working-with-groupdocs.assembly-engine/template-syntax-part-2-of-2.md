@@ -104,6 +104,54 @@ When the body of a common data band starts and ends within different paragraphs,
 
 While building a report, duplicated paragraph breaks derive common attributes from their template prototypes. In particular, this fact enables you to build numbered or bulleted lists in reports dynamically. For example, given the above declaration of items, you can get a report with their numbered list using the following template.
 
+### Merging Table Cells Dynamically
+
+You can merge table cells with equal textual contents within your reports dynamically using `cellMerge` tags. Syntax of a `cellMerge` tag is defined as follows.
+
+```
+<<cellMerge>>
+```
+
+By default, a `cellMerge` tag causes a cell merging operation only in a vertical direction during runtime. However, you can alter this behavior in the following ways:
+
+- To merge cells only in a horizontal direction, use the `horz` switch as follows.
+  `<<cellMerge -horz>>`
+
+- To merge cells in both – vertical and horizontal – directions, use the `both` switch as follows.
+  `<<cellMerge -both>>`
+
+For two or more successive table cells to be merged dynamically in either direction by the engine, the following requirements must be met:
+
+- Each of the cells must contain a `cellMerge` tag denoting a cell merging operation in the same direction (or directions).
+- Each of the cells must not be already merged in another direction. This requirement does not apply when a `both` switch is used.
+- The cells must have equal textual contents ignoring leading and trailing whitespaces.
+
+Consider the following template.
+
+| **...** | **...**                       | **...** |
+| ------- | ----------------------------- | ------- |
+| **...** | **<<cellMerge>><<[value1]>>** | **...** |
+| **...** | **<<cellMerge>><<[value2]>>** | **...** |
+| **...** | **...**                       | **...** |
+
+If `value1` and `value2` have the same value, say “Hello”, table cells containing `cellMerge` tags are successfully merged during runtime and a result report looks as follows then.
+
+| **...** | **...**   | **...** |
+| ------- | --------- | ------- |
+| **...** | **Hello** | **...** |
+| **...** | **...**   |         |
+| **...** | **...**   | **...** |
+
+If `value1` and `value2` have different values, say “Hello” and “World”, table cells containing `cellMerge` tags are not merged during runtime and a result report looks as follows then.
+
+| **...** | **...**   | **...** |
+| ------- | --------- | ------- |
+| **...** | **Hello** | **...** |
+| **...** | **World** | **...** |
+| **...** | **...**   | **...** |
+
+**Note –** A cellMerge tag can be normally used within a table data band.
+
 ### Numbered Lists
 
  "1. " in the above template stands for a numbered list label.
