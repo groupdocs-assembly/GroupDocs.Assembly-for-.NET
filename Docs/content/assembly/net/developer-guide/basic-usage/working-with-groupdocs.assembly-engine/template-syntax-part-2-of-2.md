@@ -136,11 +136,29 @@ Consider the following template.
 
 If `value1` and `value2` have the same value, say “Hello”, table cells containing `cellMerge` tags are successfully merged during runtime and a result report looks as follows then.
 
-| **...** | **...**   | **...** |
-| ------- | --------- | ------- |
-| **...** | **Hello** | **...** |
-| **...** | **...**   |         |
-| **...** | **...**   | **...** |
+<table style="font-weight: bold">
+	<tbody>
+		<tr>
+			<td>...</td>
+			<td>...</td>
+			<td>...</td>
+		</tr>
+		<tr>
+			<td>...</td>
+			<td rowspan="2">Hello</td>
+			<td>...</td>
+		</tr>
+		<tr>
+			<td>...</td>
+			<td>...</td>
+		</tr>
+		<tr>
+			<td>...</td>
+			<td>...</td>
+			<td>...</td>
+		</tr>
+	</tbody>
+</table>
 
 If `value1` and `value2` have different values, say “Hello” and “World”, table cells containing `cellMerge` tags are not merged during runtime and a result report looks as follows then.
 
@@ -151,6 +169,101 @@ If `value1` and `value2` have different values, say “Hello” and “World”,
 | **...** | **...**   | **...** |
 
 **Note –** A cellMerge tag can be normally used within a table data band.
+
+You can define an additional restriction on dynamic merging of table cells by providing an expression for a`cellMerge` tag using the following syntax.
+
+```
+<<cellMerge [expression]>>
+```
+
+During runtime, expressions defined for `cellMerge` tags are evaluated and dynamic cell merging is discarded for those tags, which expressions return unequal values, even if all other conditions for merging such as equal cell textual contents are met. In particular, this feature is useful when cells corresponding to different data band sequence elements should not be merged as shown in the following example.
+
+Assume that you have the `Invoice` and `InvoiceItem` classes defined in your application as follows.
+
+```csharp
+public class Invoice
+{
+	public int Number { get { ... } }
+	public IEnumerable<InvoiceItem> Items { get { ... } }
+	...
+}
+public class InvoiceItem
+{
+	public String Ware { get { ... } }
+	public String Pack { get { ... } }
+	public int Quantity { get { ... } }
+	...
+}
+```
+
+Given that `invoices` is an enumeration of `Invoice` instances, you could use the following template to output information on several invoices in one table.
+
+| **#**                                                        | **Ware**                         | **Pack**            | **Quantity**                                    |
+| ------------------------------------------------------------ | -------------------------------- | ------------------- | ----------------------------------------------- |
+| **<<foreach [invoice in invoices]>><<foreach [item in invoice.Items]>><<[invoice.Number]>><<cellMerge>>** | **<<[item.Ware]>><<cellMerge>>** | **<<[item.Pack]>>** | **<<[item.Quantity]>><</foreach>><</foreach>>** |
+
+A result document would look as follows then.
+
+<table style="font-weight: bold">
+	<tbody>
+		<tr>
+			<td>#</td>
+			<td>Ware</td>
+			<td>Pack</td>
+			<td>Quantity</td>
+		</tr>
+		<tr>
+			<td rowspan="2">11342</td>
+			<td rowspan="3">Natural Mineral Water</td>
+			<td>Bottle 1.0 L</td>
+			<td>30</td>
+		</tr>
+		<tr>
+			<td>Bottle 0.5 L</td>
+			<td>50</td>
+		</tr>
+		<tr>
+			<td>15385</td>
+			<td>Bottle 1.0 L</td>
+			<td>110</td>
+		</tr>
+	</tbody>
+</table>
+
+That is, cells corresponding to the same wares at different invoices would be merged, which is unwanted. To prevent this from happening, you can use the following template instead.
+
+| **#**                                                        | **Ware**                                             | **Pack**            | **Quantity**                                    |
+| ------------------------------------------------------------ | ---------------------------------------------------- | ------------------- | ----------------------------------------------- |
+| **<<foreach [invoice in invoices]>><<foreach [item in invoice.Items]>><<[invoice.Number]>><<cellMerge>>** | **<<[item.Ware]>><<cellMerge [invoice.IndexOf()]>>** | **<<[item.Pack]>>** | **<<[item.Quantity]>><</foreach>><</foreach>>** |
+
+Then, a result document looks as follows.
+
+<table style="font-weight: bold">
+	<tbody>
+		<tr>
+			<td>#</td>
+			<td>Ware</td>
+			<td>Pack</td>
+			<td>Quantity</td>
+		</tr>
+		<tr>
+			<td rowspan="2">11342</td>
+			<td rowspan="2">Natural Mineral Water</td>
+			<td>Bottle 1.0 L</td>
+			<td>30</td>
+		</tr>
+		<tr>
+			<td>Bottle 0.5 L</td>
+			<td>50</td>
+		</tr>
+		<tr>
+			<td>15385</td>
+      <td>Natural Mineral Water</td>
+			<td>Bottle 1.0 L</td>
+			<td>110</td>
+		</tr>
+	</tbody>
+</table>
 
 ### Numbered Lists
 
