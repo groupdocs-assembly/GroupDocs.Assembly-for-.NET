@@ -43,7 +43,7 @@ namespace AssemblyExamples
         internal static void SetUnlimitedLicense()
         {
             // This is where the test license is on my development machine.
-            string testLicenseFileName = Path.Combine(LicenseDir, "GroupDocs.Total for .NET.lic");
+            string testLicenseFileName = Path.Combine(LicenseDir, "GroupDocs.Assembly for .NET.lic");
 
             if (File.Exists(testLicenseFileName))
             {
