@@ -1,0 +1,24 @@
+using System;
+using System.IO;
+using GroupDocs.Assembly;
+using GroupDocs.Assembly.Examples.CSharp.Data;
+
+namespace GroupDocs.Assembly.Examples.CSharp.BasicUsage
+{
+    public static class AssembleSpreadsheetFromJson
+    {
+        public static void Run()
+        {
+            Console.WriteLine("\n--------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("[Example Basic Usage] # AssembleSpreadsheetFromJson : Assemble spreadsheet from JSON data source \n");
+
+            DocumentAssembler assembler = new DocumentAssembler();
+
+            assembler.AssembleDocument(Path.Combine(Constants.TemplatesPath, "Table row.docx"),
+                Path.Combine(Constants.OutputPath, "AssembleSpreadsheetFromJson.docx"),
+                new DataSourceInfo(DataLayer.ExcelData(), "contracts"));
+        }
+    }
+}
+
+
