@@ -40,10 +40,16 @@ namespace GroupDocs.Assembly.Examples.CSharp.Core
             AssembleFromObject.Run();
             AssembleFromJson.Run();
             AssembleFromXml.Run();
+            AssembleFromStringTemplate.Run();
 
             AssembleSpreadsheetFromJson.Run();
             AssemblePresentationFromJson.Run();
             AssembleInParagraphListHtml.Run();
+
+            AssembleTableReport.Run();
+            AssembleBulletedList.Run();
+            AssembleCommonList.Run();
+            AssembleNumberedList.Run();
 
             // Advanced Usage
             InsertImageDynamically.Run();

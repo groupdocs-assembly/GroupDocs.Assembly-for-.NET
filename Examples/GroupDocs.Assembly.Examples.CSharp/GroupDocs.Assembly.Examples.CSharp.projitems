@@ -9,6 +9,11 @@
     <Import_RootNamespace>GroupDocs.Assembly.Examples.CSharp</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\AssembleBulletedList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\AssembleCommonList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\AssembleFromStringTemplate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\AssembleNumberedList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\AssembleTableReport.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)QuickStart\HelloWorld.cs" />
