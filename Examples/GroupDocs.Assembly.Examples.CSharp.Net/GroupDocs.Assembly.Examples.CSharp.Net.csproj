@@ -10,9 +10,9 @@
   <Import Project="..\GroupDocs.Assembly.Examples.CSharp\GroupDocs.Assembly.Examples.CSharp.projitems" Label="Shared" />
 
   <ItemGroup>
-    <PackageReference Include="Aspose.Drawing.Common" Version="24.6.0" />
+    <PackageReference Include="Aspose.Drawing.Common" Version="25.7.0" />
     <PackageReference Include="GroupDocs.Assembly" Version="25.6.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
-    <PackageReference Include="System.Text.Encoding.CodePages" Version="8.0.0.0" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="9.0.2" />
   </ItemGroup>
 </Project>
