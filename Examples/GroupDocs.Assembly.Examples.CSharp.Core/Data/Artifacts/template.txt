@@ -1,1 +1,0 @@
-Hello, {{Name}}! Today is {{Now:dd MMM yyyy}}.

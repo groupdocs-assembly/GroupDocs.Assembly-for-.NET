@@ -7,6 +7,9 @@ namespace GroupDocs.Assembly.Examples.CSharp
     {
         private static readonly string BasePath = FindBasePath();
 
+        public const string LicensePath = "./Resources/GroupDocs.Assembly.lic";
+        public const string ENV_LICENSE_FILE = "GROUPDOCS_ASSEMBLY_LICENSE";
+
         private static string GetBaseDirectory()
         {
             // Use AppContext.BaseDirectory for .NET Core/.NET 6.0 (available in .NET Framework 4.6+)

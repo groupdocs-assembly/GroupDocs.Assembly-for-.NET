@@ -135,6 +135,11 @@ publish/
 *.pubxml
 *.publishproj
 
+# Local NuGet feed/credential config (e.g. GitLab package registry source + tokens) - do not commit
+nuget.config
+NuGet.Config
+!**/.nuget/NuGet.Config
+
 # NuGet Packages
 *.nupkg
 # The packages folder can be ignored because of Package Restore

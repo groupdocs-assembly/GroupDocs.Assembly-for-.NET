@@ -41,12 +41,12 @@ namespace GroupDocs.ReportGenerator.BusinessLayer
         {
             try
             {
-                License lic = new License();
+                GroupDocs.Assembly.License lic = new GroupDocs.Assembly.License();
                 //lic.SetLicense(_LicensePath);
                 //Instantiate DocumentAssembler class
                 DocumentAssembler assembler = new DocumentAssembler();
                 //Call AssembleDocument to generate Common List Report in open document format
-                assembler.AssembleDocument(_TemplateSourcePath, _ReportDestinationPath, ds);
+                assembler.AssembleDocument(_TemplateSourcePath, _ReportDestinationPath, new DataSourceInfo(ds));
             }
             catch (Exception ex)
             {

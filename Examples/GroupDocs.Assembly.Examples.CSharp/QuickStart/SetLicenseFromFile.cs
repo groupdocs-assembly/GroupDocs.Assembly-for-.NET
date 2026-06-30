@@ -14,9 +14,27 @@ namespace GroupDocs.Assembly.Examples.CSharp.QuickStart
 
             try
             {
-                License license = new License();
-                license.SetLicense(licenseFileName);
-                Console.WriteLine($"License set successfully from: {licenseFileName}");
+                string? envLicense = Environment.GetEnvironmentVariable(Constants.ENV_LICENSE_FILE);
+
+                if (File.Exists(Constants.LicensePath))
+                {
+                    License license = new License();
+                    license.SetLicense(Constants.LicensePath);
+                    Console.WriteLine("License set successfully.");
+                }
+                else if (!string.IsNullOrEmpty(envLicense) && File.Exists(envLicense))
+                {
+                    License license = new License();
+                    license.SetLicense(envLicense);
+                    Console.WriteLine("License set successfully.");
+                }
+                else
+                {
+                    Console.WriteLine("\nWe do not ship any license with this example. " +
+                                      "\nVisit the GroupDocs site to obtain either a temporary or permanent license. " +
+                                      "\nLearn more about licensing at https://purchase.groupdocs.com/faqs/licensing. " +
+                                      "\nLear how to request temporary license at https://purchase.groupdocs.com/temporary-license.");
+                }
             }
             catch (Exception ex)
             {
