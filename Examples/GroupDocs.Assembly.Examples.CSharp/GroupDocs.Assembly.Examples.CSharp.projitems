@@ -25,6 +25,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\AssembleInParagraphListHtml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\AssemblePresentationFromJson.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\AssembleSpreadsheetFromJson.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\AssembleUsingInterfaceDataModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\AssembleUsingCustomDataRowFunction.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\ChangeTargetFileFormat.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\InsertImageDynamically.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\MultipleDataSources.cs" />

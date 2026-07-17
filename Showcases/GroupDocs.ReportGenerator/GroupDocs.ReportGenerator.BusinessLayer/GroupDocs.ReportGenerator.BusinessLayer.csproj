@@ -30,7 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="GroupDocs.Assembly" Version="26.6.0" />
+    <PackageReference Include="GroupDocs.Assembly" Version="26.7.0" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

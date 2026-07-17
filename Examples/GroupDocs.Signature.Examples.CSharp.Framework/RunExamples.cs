@@ -55,6 +55,8 @@ namespace GroupDocs.Assembly.Examples.CSharp.Framework
             UseMarkdownTemplate.Run();
             RemoveEmptyParagraphs.Run();
             ChangeTargetFileFormat.Run();
+            AssembleUsingInterfaceDataModel.Run();
+            AssembleUsingCustomDataRowFunction.Run();
 
             Console.WriteLine();
             Console.WriteLine("All done.");

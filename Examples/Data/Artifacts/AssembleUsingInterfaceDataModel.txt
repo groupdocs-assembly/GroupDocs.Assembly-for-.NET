@@ -1,0 +1,3 @@
+Enabled features in Release 2026:
+- Cloud sync (Sync)
+- Dark theme (UI)
